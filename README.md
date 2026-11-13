@@ -38,6 +38,7 @@ python3.12 -m venv .venv
 | 火星 | MGS MOLA 地形（MEGDR） | NASA PDS Geosciences Node | 16 像素／度（3.7 km） | 不需要 |
 | 火星 | MGS TES 夜間熱慣量 | NASA PDS Geosciences Node | 20 像素／度（3.0 km） | 不需要 |
 | 火星 | SWIM 2.0 地下水冰一致性（淺層 <1 m、深層 1–5 m） | SWIM（NASA 資助，swim.psi.edu） | 20 像素／度，涵蓋南北緯 60 度 | 不需要 |
+| 火星 | 沙塵柱光學厚度氣候（MY34 全球沙塵暴年、MY35 平常年；TES/THEMIS/MCS 觀測） | Montabone et al. v2，LMD | 3 度 | 不需要 |
 
 比較面向（與隊友定案，分為四大主題與子項目）：
 

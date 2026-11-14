@@ -30,7 +30,7 @@ python3.12 -m venv .venv
 - `analog/terrain.py`：可跨行星比較的地形量（坡度、區塊統計）。
 - `analog/swim.py`、`analog/dust.py`：SWIM 2.0 地下水冰與 Montabone 沙塵氣候讀取。
 - `scripts/`：下載與檢查用的腳本。
-- `docs/`：簡報架構（`presentation_outline.md`）、類比極限（`mars_limits.md`）與地球端資料整理（`earth_data_plan.md`）。
+- `docs/`：簡報架構（`presentation_outline.md`）、類比極限（`mars_limits.md`）、地球端資料規劃（`earth_data_plan.md`）與跨行星對照表（`cross_reference.md`）。
 - `data/`：下載與處理後的資料，不進版控，用腳本重建。
 
 ## 資料來源
@@ -50,7 +50,7 @@ python3.12 -m venv .venv
 4. **大氣與沙塵（Air）**：懸浮沙塵與沙塵暴（影響太陽能與設備）；子題包含**風力與風蝕地形**（沙丘、雅丹）及**大氣成分與氣壓**（0.6 kPa CO₂）。
 - **地球無法複製的限制**（0.38 g 重力、低氣壓、強輻射與高氯酸鹽土壤等）將於各場址分析中明確標註。
 
-地球端資料已透過 `earthaccess` 完成 2023–2024 兩年全球網格下載並分類至 `data/raw/earth/`（共 ~7.6 GB，見 `docs/earth_data_plan.md`）：`SRTMGL30`（地形）、`MOD11C3`（溫度）、`GPM_3IMERGM` + `GLDAS_NOAH025_M` + `MOD13C2`（水／冰與植被）、`M2TMNXAER`（MERRA-2 沙塵 AOT），待隊友 A 接入相似度計算管線。支援與子題佐證另搭配 ESA CCI Permafrost、Copernicus 與 NASA Worldview。
+地球端資料已透過 `earthaccess` 與合作太空機構公開歸檔完成下載並分類至 `data/raw/earth/`（共 ~7.6 GB，見 `docs/earth_data_plan.md` 與 `docs/cross_reference.md`）：`SRTMGL30`（地形）、`MOD11C3`（溫度）、`GPM_3IMERGM` + `GLDAS_NOAH025_M` + `MOD13C2` + **ESA CCI Permafrost v4.0**（水／冰與永凍土／植被）、`M2TMNXAER`（MERRA-2 沙塵 AOT），待隊友 A 接入相似度計算管線。支援與子題佐證另搭配 ESA Copernicus、CSA RADARSAT、JAXA G-Portal 與 NASA Worldview。
 
 ## 尺度對齊
 
@@ -63,3 +63,4 @@ python3.12 -m venv .venv
 
 - 2026-11-13：使用 Cursor（Claude）整理挑戰說明與資料來源、建立專案骨架、撰寫火星資料的下載與讀取程式及測試。
 - 2026-11-14：使用 Gemini 整理 2026 挑戰規範與評分重點、確定聚焦地球與火星類比（排除月球）、整併四大主題與子題，撰寫「地球無法複製的火星條件」、7 頁簡報架構與地球端資料下載規劃（`docs/`），並透過 `earthaccess` 下載分類 2023–2024 兩年地球端四大面向全球資料（`SRTMGL30`、`MOD11C3`、`GPM_3IMERGM`、`GLDAS_NOAH025_M`、`MOD13C2`、`M2TMNXAER`）。
+- 2026-11-14：使用 Claude Code 授權 Earthdata Login 資料中心應用程式（LP DAAC、NSIDC）、以 Homebrew 安裝 Python 3.12 並建立 `.venv`、監看下載範圍與容量，逐一開啟驗證 144 個地球端資料檔，並修正 `docs/` 中的資料讀取說明與資料集名稱。

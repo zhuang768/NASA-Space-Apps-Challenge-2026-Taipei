@@ -248,3 +248,10 @@ Validation correction: the first targeted test invocation failed during import a
 
 The team chose the Worker `nasa-space-apps-challenge-2026-taipei` in the team (zizi) Cloudflare account as the only official site (https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev). Its first upload held unbuilt source and rendered blank; it was redeployed from a local build of `main` and checked in the browser (three-view layout, no console errors). Added root `wrangler.jsonc`, retargeted the GitHub Actions workflow from the personal Pages project to `wrangler deploy` with release verification at the new URL, and retired the `pages.dev` link. Pending: set `CLOUDFLARE_ACCOUNT_ID` to the team account ID and replace `CLOUDFLARE_API_TOKEN` with a team-account Workers token. Claude Code assisted.
 
+
+
+### 2026-11-14: Participant-guide review
+
+Read the English Project Submission, Judging & Awards and Team Formation guide copies in the user-provided Drive collection, plus relevant FAQ/Connect sections. [The English rules digest](docs/submission/official_rules_digest.md) now records the actual submission fields, separate demo/final-project links, English requirements, 7-slide/30-second limits, SI disclosure/marking, five judging criteria, eligibility and award dates. This supersedes earlier statements that no complete general submission guide had been obtained; the challenge-specific full text and local event instructions are separate checks.
+
+The Chinese PDFs identify themselves as unofficial translations. The official explainer video's exported transcript was Japanese auto-generated/translated captions, so exact rules were grounded in the English PDFs. The Chinese-dubbed MP4 was identified by metadata, not independently watched. Direct canonical web pages remained inaccessible; the provided guide copies were not independently matched against a fresh official download. Older 2023/2024 organizer materials were excluded from 2026 timing/rules. No documents were republished in full, no team declarations accepted and no submission made. OpenAI Codex assisted source review and English documentation.

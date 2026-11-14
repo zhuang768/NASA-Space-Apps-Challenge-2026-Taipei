@@ -25,9 +25,9 @@
 
 ---
 
-## 2. 地球端已下載之 Core 資料清單（2023–2024 兩年完整網格，共 ~7.6 GB）
+## 2. 地球端已下載之 Core 資料清單（2023–2024 兩年完整網格＋2021 永凍土，共 ~7.6 GB）
 
-以下資料已透過 `earthaccess` 下載並分類至 `data/raw/earth/`（不進 Git）：
+以下資料已下載並分類至 `data/raw/earth/`（不進 Git）；NASA 資料透過 `earthaccess`，永凍土資料來自 ESA CCI 公開歸檔：
 
 | 面向 | 資料夾 (`data/raw/earth/`) | 資料集（Shortname） | 檔案數與容量 | 原始解析度／網格 | 關鍵變數與讀取備註 |
 | --- | --- | --- | --- | --- | --- |
@@ -36,11 +36,12 @@
 | **3. 水／冰（乾旱度）** | `water_ice/gpm/` | **`GPM_3IMERGM`** (v07, 2023–2024) | 24 個 `.HDF5`（444 MB） | 0.1° 月平均（`1800×3600`） | `xarray(..., group='Grid')` 讀取 `precipitation` |
 | **3. 水／冰（土壤濕度）** | `water_ice/gldas/` | **`GLDAS_NOAH025_M`** (v2.1, 2023–2024) | 24 個 `.nc4`（584 MB） | 0.25° 月平均（`600×1440`） | `xarray` 直接讀取 `SoilMoi0_10cm_inst`（取代原規劃的每日 9 km 衛星觀測 `SPL3SMP_E`；注意 GLDAS 為陸面模式輸出，非衛星直接觀測，涵蓋 60°S–90°N） |
 | **3. 水／冰（植被扣分）** | `water_ice/ndvi/` | **`MOD13C2`** (v061, 2023–2024) | 24 個 `.hdf`（2.6 GB） | 0.05° 月平均（~5.6 km） | MODIS Terra NDVI `CMG 0.05 Deg Monthly NDVI`（HDF4 格式，用 `netCDF4.Dataset` 讀取；檔內無 lat/lon 變數） |
+| **3. 水／冰（永凍土）** | `water_ice/permafrost/` | **ESA CCI Permafrost** (v4.0, 2021) | 1 個 `.nc`（12 MB） | 0.01° 規則經緯網格（`6000×36000`），僅 25°N–85°N | `xarray` 直接讀取 `PFR`（永凍土比例 %）與 `PFR_uncertainty`；只有 2021 單一年份，且僅北半球，無法做全球評分 |
 | **4. 大氣與沙塵** | `air/` | **`M2TMNXAER`** (MERRA-2, 2023–2024) | 24 個 `.nc4`（1.9 GB） | 0.5° × 0.625°（`361×576`） | `xarray` 直接讀取 `DUEXTTAU`（純沙塵消光 AOT，取代原規劃的 `MOD08_M3` 總 AOD；注意 MERRA-2 為再分析資料，非衛星直接觀測） |
 
 > [!NOTE]
-> **格式讀取備註**（144 個檔案已全部實測可開啟）：
-> - `GPM_3IMERGM`（需 `group='Grid'`）、`GLDAS_NOAH025_M` 與 `M2TMNXAER` 可用 `xarray` 直接開啟，並帶有 lat/lon 座標。
+> **格式讀取備註**（145 個檔案已全部實測可開啟）：
+> - `GPM_3IMERGM`（需 `group='Grid'`）、`GLDAS_NOAH025_M`、`M2TMNXAER` 與 ESA CCI Permafrost 可用 `xarray` 直接開啟，並帶有 lat/lon 座標。
 > - `MOD11C3` 與 `MOD13C2` 為 NASA HDF4-EOS 格式：`xarray` 與內建 `rasterio` wheel（無 HDF4 驅動）都無法開啟，但專案 `.venv` 內的 `netCDF4.Dataset(path)` 可直接讀取，**不需另裝 `pyhdf`**。
 > - MODIS CMG 檔案**沒有 lat/lon 變數**，需自行建立 0.05° 網格（3600×7200）：lat 由 89.975 遞減至 −89.975，lon 由 −179.975 遞增至 179.975（皆為格點中心）。
 > - `SRTMGL30` 的 27 個 zip 只含 `.DEM`、沒有 `.HDR`，需依檔名定位；其中一塊檔名為大寫 `W020N40`，其餘為小寫，以檔名比對時請忽略大小寫。

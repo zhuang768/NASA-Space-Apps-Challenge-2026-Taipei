@@ -62,5 +62,5 @@ python3.12 -m venv .venv
 提交時必須說明 AI 工具的用途，請在這裡持續記錄。
 
 - 2026-11-13：使用 Cursor（Claude）整理挑戰說明與資料來源、建立專案骨架、撰寫火星資料的下載與讀取程式及測試。
-- 2026-11-14：使用 Gemini 整理 2026 挑戰規範與評分重點、確定聚焦地球與火星類比（排除月球）、整併四大主題與子題，撰寫「地球無法複製的火星條件」、7 頁簡報架構、地球端資料下載規劃與跨行星對照表（`docs/`），並下載分類 2023–2024 兩年地球端四大面向全球資料（`SRTMGL30`、`MOD11C3`、`GPM_3IMERGM`、`GLDAS_NOAH025_M`、`MOD13C2`、`M2TMNXAER` 與 `ESA CCI Permafrost v4.0`）。
-- 2026-11-14：使用 Claude Code 授權 Earthdata Login 資料中心應用程式（LP DAAC、NSIDC）、以 Homebrew 安裝 Python 3.12 並建立 `.venv`、監看下載範圍與容量，逐一開啟驗證 144 個地球端資料檔，並修正 `docs/` 中的資料讀取說明與資料集名稱。
+- 2026-11-14：使用 Gemini 整理 2026 挑戰規範與評分重點、確定聚焦地球與火星類比（排除月球）、整併四大主題與子題，撰寫「地球無法複製的火星條件」、7 頁簡報架構、地球端資料下載規劃與跨行星對照表（`docs/`），並下載分類地球端四大面向資料：2023–2024 兩年全球網格（`MOD11C3`、`GPM_3IMERGM`、`GLDAS_NOAH025_M`、`MOD13C2`、`M2TMNXAER`）、地形 `SRTMGL30`，以及 2021 年北半球 `ESA CCI Permafrost v4.0`。
+- 2026-11-14：使用 Claude Code 授權 Earthdata Login 資料中心應用程式（LP DAAC、NSIDC）、以 Homebrew 安裝 Python 3.12 並建立 `.venv`、監看下載範圍與容量，逐一開啟驗證 145 個地球端資料檔，並修正 `docs/` 中的資料讀取說明與資料集名稱。

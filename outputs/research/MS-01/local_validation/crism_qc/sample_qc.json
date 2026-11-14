@@ -1,0 +1,114 @@
+{
+  "product_id": "TOD0000B701_02_IF204L_TRR3",
+  "date_taipei": "2026-11-15",
+  "source_files": [
+    {
+      "filename": "tod0000b701_02_if204l_trr3.img",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2102/trdr/2008/2008_191/tod0000b701/tod0000b701_02_if204l_trr3.img",
+      "bytes": 1346560,
+      "sha256": "0f27759e6ad0e243283e5871b4786b93c41118e2bd8aac9e20eb45971271ec87"
+    },
+    {
+      "filename": "tod0000b701_02_if204l_trr3.lbl",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2102/trdr/2008/2008_191/tod0000b701/tod0000b701_02_if204l_trr3.lbl",
+      "bytes": 9507,
+      "sha256": "565b9d85eb34d9fc41abe6c1ed34b9f7a371d0a74fa19463a63412eeabd563fe"
+    },
+    {
+      "filename": "tod0000b701_02_if204l_trr3.xml",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2102/trdr/2008/2008_191/tod0000b701/tod0000b701_02_if204l_trr3.xml",
+      "bytes": 27573,
+      "sha256": "6a4ff4f525217a132a9a1e986a233117f8f866d5f079628581bc5cbfd042788e"
+    }
+  ],
+  "observation_type": "TOD tracking optical depth",
+  "period_utc": {
+    "start": "2008-07-09T13:28:46.446",
+    "stop": "2008-07-09T13:28:49.383"
+  },
+  "solar_longitude_deg": 96.352471,
+  "unit": "I_OVER_F;dimensionless radiometrically calibrated spectral data",
+  "depth_support": "Surface/atmospheric reflected-signal product;no subsurface depth measurement",
+  "spatial_resolution_m": "unknown in this check;PIXEL_AVERAGING_WIDTH=10 is not metres/pixel",
+  "pixel_averaging_width": 10,
+  "calibration_flags": {
+    "ATMO_CORRECTION_FLAG": "OFF",
+    "THERMAL_CORRECTION_MODE": "OFF",
+    "PHOTOCLIN_CORRECTION_FLAG": "OFF",
+    "SPATIAL_RESAMPLING_FLAG": "OFF",
+    "SPECTRAL_RESAMPLING_FLAG": "OFF"
+  },
+  "wavelength_file_required": "CDR410803692813_WA0300000L_3.IMG",
+  "wavelength_file_acquired": false,
+  "per_pixel_DDR_geolocation_acquired": false,
+  "quality": {
+    "spectral_array_shape_line_band_sample": [
+      12,
+      438,
+      64
+    ],
+    "spectral_array_bytes": 1345536,
+    "whole_file_bytes": 1346560,
+    "detector_table_offset_bytes": 1345536,
+    "detector_table_rows": 438,
+    "detector_table_bytes": 876,
+    "trailing_padding_bytes": 148,
+    "spectral_sample_count": 336384,
+    "spatial_spectrum_count": 768,
+    "finite_samples": 336384,
+    "nonfinite_samples": 0,
+    "declared_missing_constant": 65535.0,
+    "missing_constant_samples": 21747,
+    "missing_constant_fraction": 0.06464932933789955,
+    "remaining_finite_samples": 314637,
+    "negative_remaining_samples": 4354,
+    "remaining_over_1_samples": 283,
+    "remaining_over_10_samples": 253,
+    "remaining_min": -24079.05078125,
+    "remaining_max": 56367.3203125,
+    "remaining_quantiles": {
+      "0": -24079.05078125,
+      "0.01": -0.001499534584581852,
+      "0.5": 0.07879697531461716,
+      "0.99": 0.16463738679885864,
+      "1": 56367.3203125
+    },
+    "spectra_with_any_missing": 768,
+    "spectra_with_all_bands_missing": 48,
+    "missing_bands_per_spectrum_min": 1,
+    "missing_bands_per_spectrum_max": 438,
+    "detector_row_min": 0,
+    "detector_row_max": 445,
+    "detector_rows_unique": 438,
+    "controls": "Array layout independently agrees between PDS3 LBL and PDS4 XML;finite does not mean valid:65535 is explicit missing_constant;negative/>1 counts are descriptive flags,not calibrated physical rejection thresholds."
+  },
+  "interpretation_status": {
+    "ROI_water_ice_band_detection": "not evaluated",
+    "local_ice_presence": "not determined from this sample",
+    "ice_depth": "not measured",
+    "ice_abundance": "not measured"
+  },
+  "limits": [
+    "Catalogue footprint intersection does not identify pixel coordinates or valid spectra within the ROI.",
+    "TOD is an optical-depth observation mode,not a validated surface-ice mapping experiment.",
+    "Wavelength CDR and per-pixel DDR not obtained;no wavelength-based indices or ROI spectrum assigned.",
+    "Atmospheric,thermal andphotoclinometric correction flags areOFF;these are separate from radiometric calibration.",
+    "Global cube values include explicit missing and extreme values;do not average the cube as MS01 reflectance or classify ice from those statistics.",
+    "No independent atmospheric/surface controls or repeat-scene spectral comparison performed."
+  ],
+  "catalogue_metadata": {
+    "Footprint_geometry": "POLYGON ((72.8248 56.8891, 72.8118 56.9453, 72.7888 57.0434, 72.424 57.0174, 72.448 56.9194, 72.4616 56.8632, 72.8248 56.8891))",
+    "Footprint_souce": "Corresponding DDR Footprint",
+    "UTC_start_time": "2008-07-09T13:28:46.446Z",
+    "UTC_stop_time": "2008-07-09T13:28:49.383Z",
+    "Solar_longitude": "96.352471",
+    "Incidence_angle": "46.2273483276367",
+    "Emission_angle": "0.148757293820381",
+    "Description": "A CRISM Targeted Reduced Data Record (TRDR) is a radiometrically calibrated EDR. This TRDR IR product is a version 3 tracking optical depth observation in units of spectral reflectance.",
+    "scope_note": "Root catalogue has positive ROI polygon overlap;no individual pixel geolocation has been verified."
+  },
+  "catalogue_source": {
+    "path": "ode_CRISM_TRDR.json",
+    "sha256": "ae039fd64bf126a84ee95233b0fc52521ca16a38a1594723388b4097cbb6f0a6"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "source": {
+    "source_url": "https://ntrs.nasa.gov/api/citations/20090033138/downloads/20090033138.pdf?attachment=true",
+    "source_record": "https://ntrs.nasa.gov/citations/20090033138",
+    "source_sha256": "e04a20230d1b40e67502c4775cd7dbe100d69a6d657d8feefcfb10bb3257547c",
+    "source_type": "NASA NTRS author preprint;71PDFpages",
+    "title": "The Thermal Electrical Conductivity Probe (TECP) for Phoenix",
+    "authors": [
+      "Aaron P. Zent",
+      "Michael H. Hecht",
+      "Doug R. Cobos",
+      "Gaylon S. Campbell",
+      "Colin S. Campbell",
+      "Greg Cardell",
+      "Marc C. Foote",
+      "Stephen E. Wood",
+      "Manish Mehta"
+    ],
+    "version": "Submitted2007-11-30;revised2008-07-30;PDFcreation2009-09-10",
+    "doi": "not verified in downloaded preprint;do not infer from memory"
+  },
+  "claims": [
+    {
+      "id": "TECP-site",
+      "kind": "author-reported field context",
+      "value": "-77.84;160.6575",
+      "unit": "deg latitude;deg east longitude",
+      "period": "2007–2008 deployment",
+      "depth": "surface deployment;ice interface separately reported~0.25m",
+      "resolution": "pointsite;representative footprint not specified",
+      "locator": "PDFp35§IV.B andp36§IV.B.1 lines718–736",
+      "support": "Beacon Valley TECP010;77°50′24″S160°39′27″E,1400m;silica-rich sand,BeaconSandstone,doleritefragments andsalts",
+      "limit": "No proof co-location withLiu2018thermalprofile;surfacecomposition qualitativelydescribed,not quantifiedk/rho/Cp forUV"
+    },
+    {
+      "id": "TECP-ice",
+      "kind": "author-reported local context;measurementmethod notprovidedhere",
+      "value": 0.25,
+      "unit": "m",
+      "period": "Jan2008 fieldtest",
+      "depth": "groundice depth",
+      "resolution": "sitepoint;uncertainty notgiven",
+      "locator": "PDFp38§IV.B.2 lines771–776",
+      "support": "Authorsstate groundice~25cm beneath sublimationtill aboveicecementedpermafrost",
+      "limit": "Not independent current remeasurement;notmassivevs poreice abundance;notUV/W/M/D/Sinterface"
+    },
+    {
+      "id": "TECP-sequence",
+      "kind": "reported field acquisition",
+      "value": "Jan2 2008~2100–0400h;followingday1540–1940h",
+      "unit": "clockhours",
+      "period": "Jan2008;clock timezone notstated",
+      "depth": "15mm needles instrumentgeometry;actualfieldinsertiondepth notexplicitlyreported",
+      "resolution": "Fig14 time series;rawsamplecadence notestablished",
+      "locator": "PDFp37§IV.B.1 lines745–747;PDFp56Fig2caption for15mm needles",
+      "support": "Two periods;rawDN calibratedwithTECP010CalibrationReport",
+      "limit": "No rawseriesdownloaded;do notassignUTC;notcontinuousannualrecord"
+    },
+    {
+      "id": "TECP-shadow",
+      "kind": "observed/reported boundaryconditions",
+      "value": "rock30×19×17cm;valleyshadow0400–0800h;tent1700–1730h",
+      "unit": "cm;clockhours",
+      "period": "Jan2008 austral summer",
+      "depth": "surface",
+      "resolution": "oneTECPsite",
+      "locator": "PDFp36–37§IV.B.1 lines732–745",
+      "support": "Continuoussun butinstrument/soilrockintermittentillumination;rockshadows,steepvalleywalls,tent pass",
+      "limit": "Not controlledice-depthcontrast;surfaceboundarydifferentfromUV;noicefreepairedcontrol"
+    },
+    {
+      "id": "TECP-coupling",
+      "kind": "laboratory characterization",
+      "value": "qualitative dependence",
+      "unit": "notapplicable",
+      "period": "preflight;exactdatesnotstated",
+      "depth": "needlecontact",
+      "resolution": "water/agar,drysiltloam,EPS samples",
+      "locator": "PDFp32§IV.A.1 lines635–655",
+      "support": "Needletemperaturemaydifferfromregolithbecausebodycouplinginlowkmedia;material-dependentcorrectionneedsindependentk",
+      "limit": "CannotreuseTECPcalibrationasUVsensorcorrection;instrumentsdifferent"
+    },
+    {
+      "id": "TECP-placement",
+      "kind": "controlled laboratory characterization",
+      "value": "compactiontestedup to3mm;voidsdominatebeyond0.25mmlateralmovement",
+      "unit": "mm",
+      "period": "preflight;exactdatesnotstated",
+      "depth": "localneedlecontact",
+      "resolution": "laboratorysoilsandcontrolledpositioning;Fig13",
+      "locator": "PDFp33–35§IV.A.2 lines657–703",
+      "support": "Insertion/compaction/voidschangemeasuredheatcapacityandderivedconductivity;kresponsecomplicatedbyinversion",
+      "limit": "Scale/contactconstraint,notbulkfieldkforUVorLiuBeaconprofile;noquantitativeUVmodeltestjustified"
+    },
+    {
+      "id": "TECP-waterhypothesis",
+      "kind": "authorshypothesis/modelconversion",
+      "value": "watermigrationhypothesis;not adopted asmeasurement",
+      "unit": "notapplicable",
+      "period": "Jan2008 nighttime sequence",
+      "depth": "near-surfacefilms",
+      "resolution": "singledeployment",
+      "locator": "PDFp38–39§IV.B.2 lines768–793",
+      "support": "Electricalandthermalresponsesmayinvolveunfrozenwatermigrationfromwarmrockside;authorsrequestfurtheranalysis",
+      "limit": "Dielectric-to-waterconversionassumeswateristhechangingvariable;notuniqueevidenceoficeabundance;do notuseauthors0.25%conversionasindependenttruth"
+    }
+  ]
+}

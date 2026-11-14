@@ -1,0 +1,98 @@
+[
+  {
+    "id": "CZ-datacite-parent",
+    "url": "https://api.datacite.org/dois/10.18738/T8/DUCOYB",
+    "output": "cz_parent.json",
+    "route_basis": "Data Availability dataset DOI; has-part file DOI from parent metadata"
+  },
+  {
+    "id": "CZ-datacite-data",
+    "url": "https://api.datacite.org/dois/10.18738/T8/DUCOYB/J9K4HL",
+    "output": "cz_data.json",
+    "route_basis": "Data Availability dataset DOI; has-part file DOI from parent metadata"
+  },
+  {
+    "id": "CZ-datacite-headers",
+    "url": "https://api.datacite.org/dois/10.18738/T8/DUCOYB/E4MMUE",
+    "output": "cz_headers.json",
+    "route_basis": "Data Availability dataset DOI; has-part file DOI from parent metadata"
+  },
+  {
+    "id": "CZ-datacite-si",
+    "url": "https://api.datacite.org/dois/10.18738/T8/DUCOYB/UEQNS2",
+    "output": "cz_si.json",
+    "route_basis": "Data Availability dataset DOI; has-part file DOI from parent metadata"
+  },
+  {
+    "id": "CZ-export",
+    "url": "https://dataverse.tdl.org/api/datasets/export?exporter=dataverse_json&persistentId=doi:10.18738/T8/DUCOYB",
+    "output": "cz_export.json",
+    "route_basis": "Documented public Dataverse metadata export; not previously tested endpoint"
+  },
+  {
+    "id": "CZ-access",
+    "url": "https://dataverse.tdl.org/api/access/datafile/:persistentId?persistentId=doi:10.18738/T8/DUCOYB/J9K4HL",
+    "output": "cz_data.tab",
+    "route_basis": "Documented public access-by-file-DOI route without extra trailing slash"
+  },
+  {
+    "id": "CZ-oai",
+    "url": "https://dataverse.tdl.org/oai?verb=GetRecord&metadataPrefix=oai_dc&identifier=doi:10.18738/T8/DUCOYB",
+    "output": "cz_oai.xml",
+    "route_basis": "Standard public OAI metadata route; not evidence that raw data are present"
+  },
+  {
+    "id": "D-dataentry",
+    "url": "https://data.usgs.gov/datacatalog/data/USGS.5f99f0b8d34e198cb786e8e7",
+    "output": "dundas_entry.html",
+    "route_basis": "USGS data catalog alternate public landing entry identified by official FGDC ID"
+  },
+  {
+    "id": "D-item-json",
+    "url": "https://www.sciencebase.gov/catalog/item/5f99f0b8d34e198cb786e8e7?format=json",
+    "output": "dundas_item.json",
+    "route_basis": "Known official item; retrieval retry in this supplement recorded separately from earlier failures"
+  },
+  {
+    "id": "D-items-query",
+    "url": "https://www.sciencebase.gov/catalog/items?format=json&filter=id%3D5f99f0b8d34e198cb786e8e7",
+    "output": "dundas_search.json",
+    "route_basis": "Public catalog search alternative to single item; file links need confirmation"
+  },
+  {
+    "id": "D-direct",
+    "url": "https://www.sciencebase.gov/catalog/file/get/5f99f0b8d34e198cb786e8e7?name=TableS4.csv",
+    "output": "dundas_tableS4.csv",
+    "route_basis": "Filename in official FGDC; public file-get route"
+  },
+  {
+    "id": "D-publisher",
+    "url": "https://agupubs.onlinelibrary.wiley.com/doi/suppl/10.1029/2020JE006617/supinfo/2020JE006617-sup-0005-Table%20SI-S04.csv",
+    "output": "dundas_publisher.csv",
+    "route_basis": "Publisher advertises Table SI-S04; standard direct supporting-file route"
+  },
+  {
+    "id": "L-xls",
+    "url": "https://agupubs.onlinelibrary.wiley.com/doi/suppl/10.1029/2008JE003273/supinfo/jgre2606-sup-0003-ds01.xls",
+    "output": "levy_ds01.xls",
+    "route_basis": "XLS version explicitly listed as same Data Set S1 on publisher page"
+  },
+  {
+    "id": "L-txt",
+    "url": "https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2008JE003273&file=jgre2606-sup-0002-ds01.txt",
+    "output": "levy_ds01.txt",
+    "route_basis": "Exact publisher supporting material link"
+  },
+  {
+    "id": "L-author-brown",
+    "url": "https://www.planetary.brown.edu/html_pages/publications.html",
+    "output": "brown_publications.html",
+    "route_basis": "Author institution public publication directory; directory availability and actual links must be checked"
+  },
+  {
+    "id": "L-author-colgate",
+    "url": "https://www.colgate.edu/about/directory/jlevy",
+    "output": "colgate_levy.html",
+    "route_basis": "Author official faculty directory route; inspect outbound author data/publication links"
+  }
+]

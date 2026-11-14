@@ -25,7 +25,7 @@
     "six distinct SHARAD tracks",
     "analog_validation.csv rectangular",
     "no invented Mars geometry comparison",
-    "all available acquired bytes match recorded SHA256 (103)",
+    "all available acquired bytes match recorded SHA256 (79)",
     "all top-level JSON parse"
   ],
   "visual_review": [

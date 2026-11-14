@@ -4,6 +4,49 @@ Team zasa · 2026-11-14 · branch `reporting/team1-final-figures`.
 
 **F01–F03 are now rendered as PNG and PDF.** They are display editions for review, not final mainline acceptance. The user explicitly selected compute commit `14f65509bbf3358a50ef866c65e2b5d42fe8c467` (PR #5) for this continuation. The final `elephant_head_final/` package and `final_research_summary_en.md` remain unreceived; neither is marked as received or accepted.
 
+## Consolidated review handoff to Team 2 · 2026-11-14
+
+**Review package:** figure commit `08cb74af411f3f529951c8f49c0c40a576e1fa20`, branch `reporting/team1-final-figures`. The links below are pinned to the exact reviewed assets. This README update does not change those assets. Publishing this handoff does not mean it has been sent to another chat or acknowledged; consolidated review has not yet been received.
+
+### Review links and adopted versions
+
+| Figure | Exact image / PDF | Input and review focus |
+|---|---|---|
+| F01: Case context | [PNG](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/08cb74af411f3f529951c8f49c0c40a576e1fa20/outputs/research/final_figures/F01_case_context.png) · [PDF](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/08cb74af411f3f529951c8f49c0c40a576e1fa20/outputs/research/final_figures/F01_case_context.pdf) | Context main `ab1da69`, MR-v2 research card and EH1 Methods/Fig. 1. Check coordinate conventions, point-versus-cell distinction and conditional-use wording. |
+| F02: Temperatures | [PNG](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/08cb74af411f3f529951c8f49c0c40a576e1fa20/outputs/research/final_figures/F02_EH_temperatures.png) · [PDF](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/08cb74af411f3f529951c8f49c0c40a576e1fa20/outputs/research/final_figures/F02_EH_temperatures.pdf) | Compute `14f65509bbf3358a50ef866c65e2b5d42fe8c467`. Same exported hourly values and summer mask; separate panel, new typography/colours. Check depth labels, period, N and attribution. |
+| F03: Paired difference | [PNG](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/08cb74af411f3f529951c8f49c0c40a576e1fa20/outputs/research/final_figures/F03_EH_temperature_difference.png) · [PDF](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/08cb74af411f3f529951c8f49c0c40a576e1fa20/outputs/research/final_figures/F03_EH_temperature_difference.pdf) | Same compute commit and original same-row subtraction. Mean read from the supplied summary, not recomputed. Check subtraction sign and descriptive-mean wording. |
+
+Supporting material at the same figure commit: [manifest](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/08cb74af411f3f529951c8f49c0c40a576e1fa20/outputs/research/final_figures/figure_manifest.csv), [input lock](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/08cb74af411f3f529951c8f49c0c40a576e1fa20/outputs/research/final_figures/input_lock.json), [render checks](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/08cb74af411f3f529951c8f49c0c40a576e1fa20/outputs/research/final_figures/render_checks.json), [intact compute inputs and original combined plot](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/tree/08cb74af411f3f529951c8f49c0c40a576e1fa20/outputs/research/final_figures/inputs/14f6550). The archived templates are excluded from this review and from the result set.
+
+### Essential constraints for labels, captions and interpretation
+
+- **F01:** Mars I-02 center 53.75°N, 42.25°E, cell 53.5–54°N / 42–42.5°E, planetocentric/east-positive. Earth EH station anchor 79.820216667°S, 83.314333333°W, with unstated datum/positioning error. Both are coordinate locators with different spatial supports. No Earth trial polygon, shared physical scale, terrain basemap or image footprint is implied. No claim of best similarity, extractability or new site discovery.
+- **F02:** 3 cm is subsurface soil temperature; 49 cm is the historical installed ice-table probe. Teal/orange encode depth consistently. Both are station measurements, not land-surface skin temperature or Mars TES thermal inertia.
+- **F02/F03:** first printed time `[2017-12-01, 2018-03-01)`, 2,160 same-row hourly pairs; printed label “GMT-07:00”, UTC/solar-time meaning unresolved. No conversion, smoothing, filling or resampling. N is observational support, not independent replication.
+- **F03:** difference is 3 cm minus 49 cm. The supplied mean `+3.274851851851852°C` is displayed as `+3.2749°C` and explicitly descriptive. No confidence interval, causal effect, independent ice truth, ice-depth/quantity estimate or Mars equipment performance is supported by this plot.
+- Source measurements remain attributed to McKay et al. (2019), DOI `10.1017/S0954102019000269`, EH2 supplement. Compute QA and the figure owner's rendering checks are separate. No new raw-data parsing or statistical result is claimed.
+
+### One consolidated review checklist
+
+Team 2 should return one combined response for all three figures, using the pinned package above:
+
+- [ ] Check scientific labels, coordinate conventions, periods, units, N, difference sign and source attribution against the supplied records.
+- [ ] Check the interpretation boundaries above and identify any caption that would imply a stronger result.
+- [ ] Supply full English captions for F01, F02 and F03, retaining source credit and the necessary limitations.
+- [ ] Check legibility at the intended report/slides placement; name the target width and any label that needs enlargement. Current dimensions are 14 × 8 inches; PDF is vector. Smaller text has not been certified for every submission layout.
+- [ ] Return each change as `figure ID | exact label/caption location | proposed replacement | source/section | blocking or editorial`. For a figure with no requested edits, state “No changes requested” explicitly; silence does not count as approval.
+
+### Pending decisions and stopping boundary
+
+| Item | Current state / owner |
+|---|---|
+| Consolidated caption/science review | Pending Team 2; no approval is recorded. |
+| Final input acceptance | User selected `14f6550` for figure preparation. Main must confirm its final acceptance or identify a replacement. This handoff does not merge or accept PR #5. |
+| Final mainline files | `elephant_head_final/` and `final_research_summary_en.md` remain unreceived in this figure package. Do not mark them received on the basis of these display editions. |
+| Photos / orbital images | Not included. Acquisition date, precise footprint/product metadata and per-image reuse terms remain unresolved; these are optional asset gaps, not implied completed checks. |
+| One correction pass | Figure owner applies one concentrated pass after the combined feedback; Team 2 owns captions and science wording. No measurements, windows or conclusions are changed without the appropriate owner's decision. |
+| Integration | Main handles final merge. Branch delivery is not main integration. No new sites, analysis, imagery search or additional presentation work is opened by this handoff. |
+
 ## Figures and changes
 
 | ID | Files | Purpose and transformation |

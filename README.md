@@ -86,3 +86,11 @@ docs/         方法、資料規格、競賽準備與歷史紀錄
 [完整研究報告](docs/research_report_three_analogs_2026-11-14.md)與[可追溯證據](outputs/research/three_candidate_evidence.json)已建立。選出 Gale—39°N、75°E，以及 Arcadia—29°N、105°W、35°N、57°E，共三個地球候選、兩個火星目標。既有 Jezero 候選暫留地形參照，沒有強行宣稱乾燥環境匹配。
 
 本輪依既有特徵重算三個地形距離，均與既有值一致；統計四個配置的前二名保留次數為 4/4、3/4、2/4，不代表信賴度。來源、窗口、氣候背景與研究限制均附於報告。地質／礦物、地下冰、文獻新穎性與後勤尚待驗證，沒有重新排名或宣稱 NASA 認證。重現命令：`.venv/bin/python -m scripts.report_candidate_evidence`。
+
+### 2026-11-14：第一組候選地質與礦物查證
+
+已更新[研究報告第 3 節](docs/research_report_three_analogs_2026-11-14.md)。Bershaw et al.（2012）的三個 Oytag 泥岩、砂岩、石灰岩樣點均落在 39°N、75°E 的 100 km 窗口東側；[座標摘錄](outputs/research/oytag_literature_points.csv)及[雙重空間核對](outputs/research/oytag_overlap.json)已保存。
+
+這支持局部沉積岩研究。石膏仍是剖面級文獻證據，精確露頭未核對；蒙皂石與氧化鐵配對未確認，海相／河流背景也不能直接等同 Gale 湖泊。未新增礦物分數或改動排名。下一步優先取得地層圖與同露頭礦物鑑定，而非宣稱完整 Gale 類比已成立。
+
+實際執行：`.venv/bin/python -m scripts.check_oytag_overlap`，三點均通過局部 ±50 km 與既有多邊形包含檢查。座標 datum 未註明，結果只供研究尺度歸屬。AI 協助文獻核對、座標計算與中文報告；未產生衛星影像或礦物量測。

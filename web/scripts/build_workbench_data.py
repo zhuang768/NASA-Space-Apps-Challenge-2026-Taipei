@@ -6,6 +6,7 @@ results or re-running rankings.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import pathlib
 import shutil
@@ -18,6 +19,94 @@ PUB_FIGURES = pathlib.Path(__file__).resolve().parents[1] / "public" / "figures"
 def load_json(rel: str) -> dict:
     with open(ROOT / rel, encoding="utf-8") as f:
         return json.load(f)
+
+
+def file_ref(rel: str) -> dict:
+    return {"path": rel, "sha256": hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()}
+
+
+def build_research() -> dict:
+    """Featured deep-dive candidates and the Oytag literature overlay (gale-01)."""
+    evidence_rel = "outputs/research/three_candidate_evidence.json"
+    overlap_rel = "outputs/research/oytag_overlap.json"
+    transect_rel = "outputs/research/oytag_transect_check.json"
+    evidence = load_json(evidence_rel)
+    overlap = load_json(overlap_rel)
+    transect = load_json(transect_rel)
+    assert evidence.get("schema_version") == "1.0", "Regenerate research outputs first"
+
+    featured = {}
+    for r in evidence["records"]:
+        featured[r["candidate_id"]] = {
+            "candidate_id": r["candidate_id"],
+            "mars_target": r["mars_target"],
+            "top2_in_tested_configurations": r["top2_in_tested_configurations"],
+            "top2_count": r["top2_count"],
+            "configurations_count": r["configurations_count"],
+            "scale10km_rank": r["scale10km_rank"],
+            "prior_analog_literature": r["prior_analog_literature"],
+            "interpretation": r["interpretation"],
+        }
+
+    overlays = {
+        overlap["candidate_id"]: {
+            "candidate_id": overlap["candidate_id"],
+            "center": overlap["center"],
+            "window_km": overlap["window_km"],
+            "local_axes": overlap["local_axes"],
+            "coordinate_caveat": overlap["coordinate_caveat"],
+            "evidence_scope": overlap["evidence_scope"],
+            "samples": [
+                {
+                    k: s[k]
+                    for k in (
+                        "sample_id",
+                        "latitude_deg",
+                        "longitude_deg",
+                        "reported_rock_type",
+                        "source_doi",
+                        "source_locator",
+                        "coordinate_datum",
+                        "east_km",
+                        "north_km",
+                        "inside_local_100km_square",
+                    )
+                }
+                for s in overlap["samples"]
+            ],
+            "transect": {
+                "source_doi": transect["source_doi"],
+                "source_figures": transect["source_figures"],
+                "source_url": transect["source_url"],
+                "source_pdf_sha256": transect["source_pdf_sha256"],
+                "source_transport": transect["source_transport"],
+                "sensitivity": transect["sensitivity"],
+                "endpoints": [
+                    {
+                        k: e[k]
+                        for k in (
+                            "label",
+                            "approx_lat_deg",
+                            "approx_lon_deg",
+                            "east_km",
+                            "north_km",
+                            "inside",
+                        )
+                    }
+                    for e in transect["endpoints"]
+                ],
+            },
+            "claims": overlap["claims"] + transect["claims"],
+        }
+    }
+    assert set(overlays) <= set(featured), "Overlay candidate missing from featured records"
+    return {
+        "schema_version": evidence["schema_version"],
+        "source_commit": evidence["source_commit"],
+        "files": [file_ref(evidence_rel), file_ref(overlap_rel), file_ref(transect_rel)],
+        "featured": featured,
+        "oytag_overlays": overlays,
+    }
 
 
 def main() -> None:
@@ -45,6 +134,7 @@ def main() -> None:
         "sensitivity": sensitivity,
         "scale10km_counts": results_10km.get("counts"),
         "rover_temperature_context": mars_temp,
+        "research": build_research(),
     }
 
     for tid, tdata in results.get("targets", {}).items():

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { AlertCircle, MapPin } from "lucide-react";
+import { AlertCircle, BookOpen, MapPin } from "lucide-react";
 import type { CandidateItem } from "../types/workbench";
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
   onSelectCandidate: (c: CandidateItem) => void;
 }
 
-type FilterMode = "all" | "with_climate";
+type FilterMode = "all" | "with_climate" | "featured";
 
 export function CandidateList({
   candidates,
@@ -21,9 +21,14 @@ export function CandidateList({
     setFilter("all");
   }, [candidates]);
 
+  const featuredCount = candidates.filter((c) => c.featured).length;
+
   const filtered = useMemo(() => {
     if (filter === "with_climate") {
       return candidates.filter((c) => c.earth_climate_context?.status === "context_only_not_ranked");
+    }
+    if (filter === "featured") {
+      return candidates.filter((c) => c.featured);
     }
     return candidates;
   }, [candidates, filter]);
@@ -56,6 +61,15 @@ export function CandidateList({
         >
           With POWER (Top 2)
         </button>
+        <button
+          type="button"
+          className={`btn ${filter === "featured" ? "btn-active" : ""}`}
+          onClick={() => setFilter("featured")}
+          style={{ padding: "4px 9px", fontSize: "0.75rem" }}
+          title="Candidates with a research deep-dive in outputs/research/"
+        >
+          Deep-dive ({featuredCount})
+        </button>
       </div>
 
       {filtered.length === 0 ? (
@@ -75,7 +89,9 @@ export function CandidateList({
             No qualifying candidates
           </div>
           <p style={{ margin: "6px 0 0", color: "var(--text-muted)" }}>
-            No candidates for this Mars target match the selected filter. (For example, Jezero&apos;s Top-2 terrain matches receive 2.51–7.69 mm/day precipitation.)
+            {filter === "featured"
+              ? "No research deep-dive exists for this Mars target in outputs/research/."
+              : "No candidates for this Mars target match the selected filter."}
           </p>
         </div>
       ) : (
@@ -105,7 +121,11 @@ export function CandidateList({
                   <span className="mono" style={{ fontWeight: 700, fontSize: "0.86rem", color: isSel ? "var(--cyan)" : "var(--text-primary)" }}>
                     #{c.rank} · {c.candidate_id}
                   </span>
-                  <span className="badge badge-amber">{c.classification}</span>
+                  <span
+                    className={`badge ${c.classification === "Literature checked (partial)" ? "badge-cyan" : "badge-amber"}`}
+                  >
+                    {c.classification}
+                  </span>
                 </div>
 
                 <div className="mono" style={{ fontSize: "0.78rem", color: "var(--text-secondary)", display: "flex", alignItems: "center", gap: 5 }}>
@@ -131,6 +151,24 @@ export function CandidateList({
                     />
                   </div>
                 </div>
+
+                {c.featured && (
+                  <div
+                    style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap", fontSize: "0.72rem" }}
+                  >
+                    <span className="badge badge-neutral" style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
+                      <BookOpen size={11} aria-hidden="true" /> Deep-dive
+                    </span>
+                    <span
+                      className="mono"
+                      style={{ color: "var(--text-muted)" }}
+                      title="Configurations keeping this candidate in Top-2; not probability or confidence"
+                    >
+                      Top-2 in {c.featured.top2_count}/{c.featured.configurations_count} configs
+                      {c.oytagOverlay ? ` · ${c.oytagOverlay.samples.length} lit. samples in window` : ""}
+                    </span>
+                  </div>
+                )}
 
                 <div style={{ fontSize: "0.75rem", color: "var(--text-secondary)" }}>
                   <strong style={{ color: "#34d399" }}>Support:</strong> {c.keySupport}

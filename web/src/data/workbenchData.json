@@ -3528,5 +3528,271 @@
       "Rover motion/footprint changes across windows are not resolved",
       "Reported uncertainty is instrument standard deviation, not window confidence"
     ]
+  },
+  "research": {
+    "schema_version": "1.0",
+    "source_commit": "b221958271d69667de7bb36b847205d56f502a38",
+    "files": [
+      {
+        "path": "outputs/research/three_candidate_evidence.json",
+        "sha256": "d57250d192168cff09d929d4a84146948eca77a7cd40bd25c9033be38b4c7b35"
+      },
+      {
+        "path": "outputs/research/oytag_overlap.json",
+        "sha256": "81f4a4ba55f2af645521f0340b4d58aea48f846a88491aefba6866830e4af3e0"
+      },
+      {
+        "path": "outputs/research/oytag_transect_check.json",
+        "sha256": "5c68fd0cc37711b63997aa02f53df89ecbfc477d6470ab7f143614fca68ce2f9"
+      }
+    ],
+    "featured": {
+      "gale-01": {
+        "candidate_id": "gale-01",
+        "mars_target": "gale",
+        "top2_in_tested_configurations": {
+          "base_4km": true,
+          "alternative_10km": true,
+          "slope_emphasis": true,
+          "relief_emphasis": true
+        },
+        "top2_count": 4,
+        "configurations_count": 4,
+        "scale10km_rank": 2,
+        "prior_analog_literature": {
+          "status": "checked_partial",
+          "evidence_files": [
+            "outputs/research/oytag_overlap.json",
+            "outputs/research/oytag_transect_check.json"
+          ],
+          "claims": [
+            {
+              "id": "samples_inside_window",
+              "statement": "All 3 published sample coordinates fall inside the 100x100 km window",
+              "level": "VERIFIED",
+              "note": "Recomputed here; table datum unstated, so approximate overlap only"
+            },
+            {
+              "id": "reported_lithology",
+              "statement": "Samples are mudstone, limestone and sandstone",
+              "level": "EXTERNAL",
+              "note": "Rock types as reported by the publication; not re-measured",
+              "source": "doi:10.1016/j.jseaes.2011.04.020 Table 1"
+            },
+            {
+              "id": "transect_inside_window",
+              "statement": "Mapped A-B transect lies inside the candidate window",
+              "level": "INFERRED",
+              "note": "Approximate digitization of a published figure; not survey GPS",
+              "source": "doi:10.1016/j.tecto.2012.11.031 Fig.2"
+            },
+            {
+              "id": "gypsum_on_transect",
+              "statement": "A gypsum-bearing layer occurs along this transect",
+              "level": "EXTERNAL",
+              "note": "Section-level assignment by the paper; no sample-level location",
+              "source": "doi:10.1016/j.tecto.2012.11.031 Fig.3"
+            },
+            {
+              "id": "gypsum_gps",
+              "statement": "Exact gypsum outcrop coordinates",
+              "level": "UNVERIFIED",
+              "note": "Not located in any retrieved source"
+            },
+            {
+              "id": "same_outcrop_xrd",
+              "statement": "XRD of the same gypsum outcrop",
+              "level": "UNVERIFIED",
+              "note": "No sample-ID/location/mineral chain located"
+            },
+            {
+              "id": "gypsum_clay_iron_oxide_cooccurrence",
+              "statement": "Gypsum, clay (smectite) and iron oxide co-occur at one outcrop",
+              "level": "UNVERIFIED",
+              "note": "Required for a Gale mineral-assemblage analog claim; not established"
+            },
+            {
+              "id": "geology_polygons",
+              "statement": "Georeferenced geology polygons",
+              "level": "UNVERIFIED",
+              "note": "None available"
+            }
+          ]
+        },
+        "interpretation": "existing terrain shortlist; not calibrated confidence or a new ranking"
+      },
+      "arcadia-01": {
+        "candidate_id": "arcadia-01",
+        "mars_target": "arcadia",
+        "top2_in_tested_configurations": {
+          "base_4km": true,
+          "alternative_10km": false,
+          "slope_emphasis": true,
+          "relief_emphasis": true
+        },
+        "top2_count": 3,
+        "configurations_count": 4,
+        "scale10km_rank": null,
+        "prior_analog_literature": {
+          "status": "not_checked",
+          "evidence_files": [],
+          "claims": []
+        },
+        "interpretation": "existing terrain shortlist; not calibrated confidence or a new ranking"
+      },
+      "arcadia-02": {
+        "candidate_id": "arcadia-02",
+        "mars_target": "arcadia",
+        "top2_in_tested_configurations": {
+          "base_4km": true,
+          "alternative_10km": false,
+          "slope_emphasis": true,
+          "relief_emphasis": false
+        },
+        "top2_count": 2,
+        "configurations_count": 4,
+        "scale10km_rank": null,
+        "prior_analog_literature": {
+          "status": "not_checked",
+          "evidence_files": [],
+          "claims": []
+        },
+        "interpretation": "existing terrain shortlist; not calibrated confidence or a new ranking"
+      }
+    },
+    "oytag_overlays": {
+      "gale-01": {
+        "candidate_id": "gale-01",
+        "center": {
+          "lat": 39.0,
+          "lon": 75.0
+        },
+        "window_km": 100,
+        "local_axes": "east_km/north_km from the window centre (azimuthal equidistant)",
+        "coordinate_caveat": "Published table does not specify datum; approximate overlap only, not survey navigation",
+        "evidence_scope": "Selected published rock samples only; no mineral polygons or gypsum sample coordinates",
+        "samples": [
+          {
+            "sample_id": "PMR-03",
+            "latitude_deg": 38.9663,
+            "longitude_deg": 75.4494,
+            "reported_rock_type": "mudstone",
+            "source_doi": "10.1016/j.jseaes.2011.04.020",
+            "source_locator": "Table 1 p143",
+            "coordinate_datum": "not specified in table",
+            "east_km": 38.85314921414204,
+            "north_km": -3.6514057914579303,
+            "inside_local_100km_square": true
+          },
+          {
+            "sample_id": "PMR-27",
+            "latitude_deg": 38.9521,
+            "longitude_deg": 75.5061,
+            "reported_rock_type": "limestone",
+            "source_doi": "10.1016/j.jseaes.2011.04.020",
+            "source_locator": "Table 1 p143",
+            "coordinate_datum": "not specified in table",
+            "east_km": 43.763906576427985,
+            "north_km": -5.204646761044942,
+            "inside_local_100km_square": true
+          },
+          {
+            "sample_id": "PMR-38",
+            "latitude_deg": 38.9861,
+            "longitude_deg": 75.5037,
+            "reported_rock_type": "sandstone",
+            "source_doi": "10.1016/j.jseaes.2011.04.020",
+            "source_locator": "Table 1 p143",
+            "coordinate_datum": "not specified in table",
+            "east_km": 43.53546676451815,
+            "north_km": -1.4251929644564123,
+            "inside_local_100km_square": true
+          }
+        ],
+        "transect": {
+          "source_doi": "10.1016/j.tecto.2012.11.031",
+          "source_figures": "Fig.2 p28 and Fig.3 p29",
+          "source_url": "https://www.igg.cas.cn/zhuantilanmu/solid_earth/solid_earth_research/201307/W020130705569854459276.pdf",
+          "source_pdf_sha256": "a9a5fb373a03a15e3ff1c3556f65a587643769f117ea693ed3b9204c361e4d90",
+          "source_transport": {
+            "tls_certificate_validation": false,
+            "independent_hash_check": "pending",
+            "note": "Official institute public PDF retrieved with certificate validation disabled after local SSL error; verify DOI and hash independently"
+          },
+          "sensitivity": "Endpoint coordinates varied by +/-8 pixels independently; arbitrary diagnostic envelope, not confidence or true georeferencing accuracy",
+          "endpoints": [
+            {
+              "label": "A",
+              "approx_lat_deg": 38.960674157303366,
+              "approx_lon_deg": 75.4996687205409,
+              "east_km": 43.202551937815116,
+              "north_km": -4.254320471092828,
+              "inside": true
+            },
+            {
+              "label": "B",
+              "approx_lat_deg": 39.00280898876404,
+              "approx_lon_deg": 75.54786290754,
+              "east_km": 47.341302377468004,
+              "north_km": 0.45478946460573955,
+              "inside": true
+            }
+          ]
+        },
+        "claims": [
+          {
+            "id": "samples_inside_window",
+            "statement": "All 3 published sample coordinates fall inside the 100x100 km window",
+            "level": "VERIFIED",
+            "note": "Recomputed here; table datum unstated, so approximate overlap only"
+          },
+          {
+            "id": "reported_lithology",
+            "statement": "Samples are mudstone, limestone and sandstone",
+            "level": "EXTERNAL",
+            "note": "Rock types as reported by the publication; not re-measured",
+            "source": "doi:10.1016/j.jseaes.2011.04.020 Table 1"
+          },
+          {
+            "id": "transect_inside_window",
+            "statement": "Mapped A-B transect lies inside the candidate window",
+            "level": "INFERRED",
+            "note": "Approximate digitization of a published figure; not survey GPS",
+            "source": "doi:10.1016/j.tecto.2012.11.031 Fig.2"
+          },
+          {
+            "id": "gypsum_on_transect",
+            "statement": "A gypsum-bearing layer occurs along this transect",
+            "level": "EXTERNAL",
+            "note": "Section-level assignment by the paper; no sample-level location",
+            "source": "doi:10.1016/j.tecto.2012.11.031 Fig.3"
+          },
+          {
+            "id": "gypsum_gps",
+            "statement": "Exact gypsum outcrop coordinates",
+            "level": "UNVERIFIED",
+            "note": "Not located in any retrieved source"
+          },
+          {
+            "id": "same_outcrop_xrd",
+            "statement": "XRD of the same gypsum outcrop",
+            "level": "UNVERIFIED",
+            "note": "No sample-ID/location/mineral chain located"
+          },
+          {
+            "id": "gypsum_clay_iron_oxide_cooccurrence",
+            "statement": "Gypsum, clay (smectite) and iron oxide co-occur at one outcrop",
+            "level": "UNVERIFIED",
+            "note": "Required for a Gale mineral-assemblage analog claim; not established"
+          },
+          {
+            "id": "geology_polygons",
+            "statement": "Georeferenced geology polygons",
+            "level": "UNVERIFIED",
+            "note": "None available"
+          }
+        ]
+      }
+    }
   }
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Globe2, Info, ZoomIn, ZoomOut } from "lucide-react";
-import type { CandidateItem, TargetBundle } from "../types/workbench";
+import type { CandidateItem, OytagOverlay, TargetBundle } from "../types/workbench";
 import { WORKBENCH_META } from "../data/adapter";
 
 interface Props {
@@ -15,6 +15,115 @@ function projectEq(lat: number, lon: number, w: number, h: number): [number, num
   return [x, y];
 }
 
+const ROCK_COLORS: Record<string, string> = {
+  mudstone: "#f59e0b",
+  sandstone: "#facc15",
+  limestone: "#a5b4fc",
+};
+
+// Local footprint geometry: the 100 km window is a 170 px square centred at (cx, FOOT_Y).
+// With a literature overlay the square shifts left to make room for the detail inset.
+const FOOT_X_DEFAULT = 260;
+const FOOT_X_WITH_INSET = 140;
+const FOOT_Y = 120;
+const FOOT_PX_PER_KM = 1.7;
+
+/** Zoomed view of the Oytag literature points and the digitized A–B transect. */
+function OytagLayer({ overlay, cx }: { overlay: OytagOverlay; cx: number }) {
+  const footX = (eastKm: number) => cx + eastKm * FOOT_PX_PER_KM;
+  const footY = (northKm: number) => FOOT_Y - northKm * FOOT_PX_PER_KM;
+  const pts = [
+    ...overlay.samples.map((s) => [s.east_km, s.north_km]),
+    ...overlay.transect.endpoints.map((e) => [e.east_km, e.north_km]),
+  ];
+  const pad = 2.5;
+  const e0 = Math.min(...pts.map((p) => p[0])) - pad;
+  const e1 = Math.max(50, Math.max(...pts.map((p) => p[0]))) + pad;
+  const n0 = Math.min(...pts.map((p) => p[1])) - pad;
+  const n1 = Math.max(...pts.map((p) => p[1])) + pad;
+  // Inset panel (equal scale on both axes)
+  const IX = 272;
+  const IY = 26;
+  const IW = 236;
+  const k = IW / (e1 - e0);
+  const IH = (n1 - n0) * k;
+  const ix = (e: number) => IX + (e - e0) * k;
+  const iy = (n: number) => IY + (n1 - n) * k;
+  const [A, B] = overlay.transect.endpoints;
+
+  return (
+    <g aria-label="Oytag literature overlay">
+      {/* Extent of the inset, drawn in the footprint */}
+      <rect
+        x={footX(e0)}
+        y={footY(n1)}
+        width={(e1 - e0) * FOOT_PX_PER_KM}
+        height={(n1 - n0) * FOOT_PX_PER_KM}
+        fill="none"
+        stroke="#e2e8f0"
+        strokeWidth={0.8}
+        strokeDasharray="2 2"
+      />
+      <line x1={footX(e1)} y1={footY(n1)} x2={IX} y2={IY} stroke="#475569" strokeWidth={0.8} />
+      <line x1={footX(e1)} y1={footY(n0)} x2={IX} y2={IY + IH} stroke="#475569" strokeWidth={0.8} />
+      {overlay.samples.map((s) => (
+        <circle key={`f-${s.sample_id}`} cx={footX(s.east_km)} cy={footY(s.north_km)} r={1.8} fill={ROCK_COLORS[s.reported_rock_type] ?? "#e2e8f0"} />
+      ))}
+
+      {/* Inset */}
+      <rect x={IX} y={IY} width={IW} height={IH} fill="#0b1220" stroke="#475569" />
+      <text x={IX} y={IY - 5} fill="#cbd5e1" fontSize="9" fontFamily="monospace">
+        Oytag {(e1 - e0).toFixed(0)}×{(n1 - n0).toFixed(0)} km
+      </text>
+      <text x={IX + IW} y={IY - 5} fill="#fbbf24" fontSize="8.5" fontFamily="monospace" textAnchor="end">
+        gypsum GPS/XRD: unverified
+      </text>
+      {/* Window east boundary */}
+      <line x1={ix(50)} y1={IY} x2={ix(50)} y2={IY + IH} stroke="#22d3ee" strokeDasharray="3 2" strokeWidth={1} />
+      <text x={ix(50) - 3} y={IY + IH - 4} textAnchor="end" fill="#22d3ee" fontSize="8" fontFamily="monospace">
+        window edge
+      </text>
+      {/* A–B transect (approximate, inferred from a figure) */}
+      <line x1={ix(A.east_km)} y1={iy(A.north_km)} x2={ix(B.east_km)} y2={iy(B.north_km)} stroke="#2dd4bf" strokeWidth={1.6} strokeDasharray="4 2" />
+      {[A, B].map((e) => (
+        <g key={e.label}>
+          <circle cx={ix(e.east_km)} cy={iy(e.north_km)} r={2.4} fill="#2dd4bf" />
+          <text x={ix(e.east_km) + 4} y={iy(e.north_km) - 3} fill="#5eead4" fontSize="8.5" fontFamily="monospace">
+            {e.label}
+          </text>
+        </g>
+      ))}
+      {overlay.samples.map((s) => (
+        <g key={s.sample_id}>
+          <title>
+            {`${s.sample_id}: ${s.reported_rock_type} (${s.latitude_deg.toFixed(4)}°, ${s.longitude_deg.toFixed(4)}°; ${s.coordinate_datum}) — ${s.source_locator}`}
+          </title>
+          <circle cx={ix(s.east_km)} cy={iy(s.north_km)} r={3.4} fill={ROCK_COLORS[s.reported_rock_type] ?? "#e2e8f0"} stroke="#0f172a" />
+          <text x={ix(s.east_km) - 5} y={iy(s.north_km) + 11} fill="#e2e8f0" fontSize="8" fontFamily="monospace" textAnchor="middle">
+            {s.sample_id}
+          </text>
+        </g>
+      ))}
+
+      {/* Legend */}
+      <g fontSize="8.5" fontFamily="monospace">
+        {overlay.samples.map((s, i) => (
+          <g key={`lg-${s.sample_id}`}>
+            <circle cx={IX + 4 + i * 80} cy={IY + IH + 12} r={3} fill={ROCK_COLORS[s.reported_rock_type] ?? "#e2e8f0"} />
+            <text x={IX + 10 + i * 80} y={IY + IH + 15} fill="#cbd5e1">
+              {s.reported_rock_type}
+            </text>
+          </g>
+        ))}
+        <line x1={IX} y1={IY + IH + 26} x2={IX + 9} y2={IY + IH + 26} stroke="#2dd4bf" strokeWidth={1.6} strokeDasharray="4 2" />
+        <text x={IX + 12} y={IY + IH + 29} fill="#cbd5e1">
+          gypsum section A–B (approx.)
+        </text>
+      </g>
+    </g>
+  );
+}
+
 export function DualSideMap({ target, selectedCandidate, onSelectCandidate }: Props) {
   const [earthView, setEarthView] = useState<"global" | "local">("global");
   const [marsZoomKm, setMarsZoomKm] = useState<number>(100);
@@ -22,6 +131,7 @@ export function DualSideMap({ target, selectedCandidate, onSelectCandidate }: Pr
 
   const W = 520;
   const H = 260;
+  const footCx = selectedCandidate?.oytagOverlay ? FOOT_X_WITH_INSET : FOOT_X_DEFAULT;
   const excludedBoxes: [number, number, number, number, string][] =
     WORKBENCH_META.parameters?.excluded_boxes ?? [];
 
@@ -155,7 +265,7 @@ export function DualSideMap({ target, selectedCandidate, onSelectCandidate }: Pr
                     key={c.candidate_id}
                     role="button"
                     tabIndex={0}
-                    aria-label={`Select candidate #${c.rank} ${c.candidate_id} at ${c.lat.toFixed(1)}°, ${c.lon.toFixed(1)}°`}
+                    aria-label={`Select candidate #${c.rank} ${c.candidate_id} at ${c.lat.toFixed(1)}°, ${c.lon.toFixed(1)}°${c.featured ? " (research deep-dive)" : ""}`}
                     onClick={() => onSelectCandidate(c)}
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ") {
@@ -165,6 +275,9 @@ export function DualSideMap({ target, selectedCandidate, onSelectCandidate }: Pr
                     }}
                     style={{ cursor: "pointer" }}
                   >
+                    {c.featured && (
+                      <circle cx={cx} cy={cy} r={isSel ? 10.5 : 8} fill="none" stroke="#2dd4bf" strokeWidth={1.2} strokeDasharray="2 1.5" />
+                    )}
                     <circle
                       cx={cx}
                       cy={cy}
@@ -192,19 +305,20 @@ export function DualSideMap({ target, selectedCandidate, onSelectCandidate }: Pr
               style={{ display: "block", background: "#070c16", borderRadius: 6, border: "1px solid var(--border)" }}
             >
               {/* 100x100 km local polygon normalized into box */}
-              <rect x={175} y={45} width={170} height={170} fill="rgba(34,211,238,0.12)" stroke="#22d3ee" strokeWidth={2} />
-              <circle cx={260} cy={130} r={4} fill="#22d3ee" />
-              <text x={260} y={118} textAnchor="middle" fill="#f1f5f9" fontSize="11" fontFamily="monospace">
+              <rect x={footCx - 85} y={FOOT_Y - 85} width={170} height={170} fill="rgba(34,211,238,0.12)" stroke="#22d3ee" strokeWidth={2} />
+              <circle cx={footCx} cy={FOOT_Y} r={4} fill="#22d3ee" />
+              <text x={footCx} y={FOOT_Y - 12} textAnchor="middle" fill="#f1f5f9" fontSize="11" fontFamily="monospace">
                 {selectedCandidate.lat.toFixed(2)}°, {selectedCandidate.lon.toFixed(2)}°
               </text>
-              <text x={260} y={148} textAnchor="middle" fill="#94a3b8" fontSize="10" fontFamily="monospace">
-                100 × 100 km · 4 km grid (26×26 pts)
+              <text x={footCx} y={FOOT_Y + 18} textAnchor="middle" fill="#94a3b8" fontSize="10" fontFamily="monospace">
+                100 × 100 km · 4 km grid
               </text>
               {/* Scale bar */}
               <line x1={20} y1={235} x2={105} y2={235} stroke="#22d3ee" strokeWidth={2} />
               <text x={20} y={228} fill="#cbd5e1" fontSize="10" fontFamily="monospace">
                 Scale: 50 km (R_earth = 6,371.0 km · Δlat = {earthWindowLatDeg.toFixed(2)}° / 100 km)
               </text>
+              {selectedCandidate.oytagOverlay && <OytagLayer overlay={selectedCandidate.oytagOverlay} cx={footCx} />}
               {selectedCandidate.footprint?.length >= 4 && (() => {
                 const lons = selectedCandidate.footprint.map((p) => p[0]);
                 const lats = selectedCandidate.footprint.map((p) => p[1]);
@@ -213,7 +327,7 @@ export function DualSideMap({ target, selectedCandidate, onSelectCandidate }: Pr
                 const minLon = Math.min(...lons);
                 const maxLon = Math.max(...lons);
                 return (
-                  <text x={W - 16} y={228} textAnchor="end" fill="#94a3b8" fontSize="9.5" fontFamily="monospace">
+                  <text x={20} y={250} fill="#94a3b8" fontSize="9.5" fontFamily="monospace">
                     Bounds: [{minLat.toFixed(2)}°..{maxLat.toFixed(2)}° lat, {minLon.toFixed(2)}°..{maxLon.toFixed(2)}° lon]
                   </text>
                 );
@@ -222,7 +336,11 @@ export function DualSideMap({ target, selectedCandidate, onSelectCandidate }: Pr
           ) : null}
 
           <div style={{ marginTop: 8, fontSize: "0.74rem", color: "var(--text-muted)", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 6 }}>
-            <span>CRS: EPSG:4326 equirectangular · Excluded: Atacama, Iceland, Hawaii (rose dashed)</span>
+            <span>
+              {earthView === "local" && selectedCandidate?.oytagOverlay
+                ? "Literature points: published coordinates, datum not stated — approximate overlap, not survey positions"
+                : "CRS: EPSG:4326 equirectangular · Excluded: Atacama, Iceland, Hawaii (rose dashed) · Teal ring: research deep-dive"}
+            </span>
             <span className="mono">Layer: ETOPO 2022 + Natural Earth 110m</span>
           </div>
         </div>

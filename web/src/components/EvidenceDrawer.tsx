@@ -1,6 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { ExternalLink, FileCode2, ShieldCheck, X } from "lucide-react";
-import type { ComparisonRow } from "../types/workbench";
+import type { ClaimLevel, ComparisonRow } from "../types/workbench";
+
+const LEVEL_CLASS: Record<ClaimLevel, string> = {
+  VERIFIED: "badge badge-cyan",
+  INFERRED: "badge badge-amber",
+  EXTERNAL: "badge badge-neutral",
+  UNVERIFIED: "badge badge-danger",
+};
 
 interface EvidenceDrawerProps {
   row: ComparisonRow | null;
@@ -141,6 +148,30 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({ row, onClose }) 
               </dd>
             </div>
           </dl>
+
+          {evidence.claims && evidence.claims.length > 0 && (
+            <div className="limitations-box" style={{ marginBottom: 12 }}>
+              <h3>Claim-by-Claim Verification</h3>
+              <p style={{ margin: "0 0 8px", fontSize: "0.75rem", color: "var(--text-muted)" }}>
+                Level = how a claim is supported (VERIFIED: reproduced here · INFERRED: read from a figure ·
+                EXTERNAL: stated by the source · UNVERIFIED: not established). Not confidence.
+              </p>
+              <ul style={{ listStyle: "none", paddingLeft: 0, display: "grid", gap: 8 }}>
+                {evidence.claims.map((c) => (
+                  <li key={c.id} style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: 8, alignItems: "start" }}>
+                    <span className={LEVEL_CLASS[c.level]}>{c.level}</span>
+                    <span>
+                      {c.statement}
+                      <span style={{ display: "block", fontSize: "0.75rem", color: "var(--text-muted)" }}>
+                        {c.note}
+                        {c.source ? ` — ${c.source}` : ""}
+                      </span>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className="limitations-box">
             <h3>Limitations &amp; Verification Needs</h3>

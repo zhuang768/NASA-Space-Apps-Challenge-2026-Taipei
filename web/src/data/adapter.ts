@@ -2,6 +2,9 @@ import rawBundle from "./workbenchData.json";
 import type {
   CandidateItem,
   ComparisonRow,
+  FeaturedEvidence,
+  OytagOverlay,
+  ResearchClaim,
   TargetBundle,
   TargetId,
 } from "../types/workbench";
@@ -32,6 +35,28 @@ export const SCALE10KM_COUNTS = bundle.scale10km_counts as {
   water_window_exclusions?: number;
   valid_windows?: number;
 };
+
+export const RESEARCH = (bundle.research ?? {}) as {
+  schema_version?: string;
+  source_commit?: string;
+  files?: { path: string; sha256: string }[];
+  featured?: Record<string, FeaturedEvidence>;
+  oytag_overlays?: Record<string, OytagOverlay>;
+};
+
+function researchFile(suffix: string) {
+  return RESEARCH.files?.find((f) => f.path.endsWith(suffix));
+}
+
+/** Short label for a claim list: counts per level, e.g. "1 VERIFIED · 2 UNVERIFIED". */
+export function claimLevelSummary(claims: ResearchClaim[]): string {
+  const order = ["VERIFIED", "INFERRED", "EXTERNAL", "UNVERIFIED"] as const;
+  return order
+    .map((lvl) => [lvl, claims.filter((c) => c.level === lvl).length] as const)
+    .filter(([, n]) => n > 0)
+    .map(([lvl, n]) => `${n} ${lvl}`)
+    .join(" · ");
+}
 
 const TARGET_METADATA: Record<TargetId, { title: string; researchQuestion: string }> = {
   jezero: {
@@ -73,8 +98,18 @@ export function getTargetBundle(targetId: TargetId): TargetBundle | null {
       mainGap = `POWER context only (${precip.toFixed(2)} mm/day${typeof t2m === "number" ? `, T2M ${t2m.toFixed(1)} °C` : ""}); terrain-only match, no climate scoring`;
     }
 
+    const featured = RESEARCH.featured?.[c.candidate_id];
+    const oytagOverlay = RESEARCH.oytag_overlays?.[c.candidate_id];
+    const litStatus = featured?.prior_analog_literature.status ?? c.prior_analog_literature_status;
+    if (oytagOverlay) {
+      mainGap = "Lithology overlap only; gypsum location and same-outcrop mineralogy unverified";
+    }
+
     return {
       ...c,
+      prior_analog_literature_status: litStatus,
+      featured,
+      oytagOverlay,
       evidenceCompleteness: {
         scoredDomains: 1,
         totalDomains: 4,
@@ -82,7 +117,10 @@ export function getTargetBundle(targetId: TargetId): TargetBundle | null {
       },
       keySupport,
       mainGap,
-      classification: "Prior use unverified",
+      classification:
+        litStatus === "checked_partial" || litStatus === "checked"
+          ? "Literature checked (partial)"
+          : "Prior use unverified",
     } as CandidateItem;
   });
 
@@ -207,12 +245,15 @@ export function buildComparisonRows(
         measurementKind: "Design assumption / Missing",
         limitations: [
           "Regional DEMs cannot distinguish basalt, clays, sulfates, or caves",
-          "Prior analog literature for this candidate has not been checked",
+          candidate.oytagOverlay
+            ? "Published lithology points exist (see Prior Literature row) but no mineral polygons"
+            : "Prior analog literature for this candidate has not been checked",
         ],
         localFile: "data/raw/earth/terrain/landcover/MCD12C1.A2024001.061.2025216131527.hdf",
         checksumSha256: "Not recorded in results.json",
       },
     },
+    buildLiteratureRow(target, candidate),
 
     // 2. TEMPERATURE
     {
@@ -477,4 +518,94 @@ export function buildComparisonRows(
   ];
 
   return rows;
+}
+
+function buildLiteratureRow(target: TargetBundle, candidate: CandidateItem): ComparisonRow {
+  const overlay = candidate.oytagOverlay;
+  const lit = candidate.featured?.prior_analog_literature;
+  if (!overlay || !lit) {
+    return {
+      id: "terrain-prior-literature",
+      domain: "Terrain",
+      metricName: "Published Lithology & Prior Analog Literature",
+      earthQuantity: "Published sample points inside the 100 km window",
+      earthValue: "Not checked",
+      marsQuantity: `${target.title} mineral assemblage`,
+      marsValue: "No Mars mineral layer loaded",
+      periodAndSupport: "Not applicable",
+      methodAndThreshold: "No literature overlap check recorded in outputs/research/",
+      comparability: "Contextual",
+      status: "Not checked",
+      sourcePortalLabel: "Not checked",
+      evidence: {
+        id: "ev-prior-literature",
+        title: "Prior Analog Literature",
+        domain: "Terrain",
+        earthSummary: "No published sample or prior-analog check exists for this candidate.",
+        marsSummary: "CRISM/CheMin mineralogy is not integrated into this workbench.",
+        sourceUrl: UNTRACED,
+        productId: "Not applicable",
+        version: "Not applicable",
+        period: "Not applicable",
+        units: "Not applicable",
+        nativeResolution: "Not applicable",
+        analysisScale: "Not applicable",
+        processingMethod: "Not performed",
+        qaAndCoverage: "Not performed",
+        measurementKind: "Design assumption / Missing",
+        limitations: ["Absence of a check is not evidence of absence of prior analog use"],
+        localFile: "None",
+        checksumSha256: "Not applicable",
+      },
+    };
+  }
+
+  const samples = overlay.samples;
+  const rocks = samples.map((s) => `${s.reported_rock_type} (${s.sample_id})`).join(", ");
+  const overlapFile = researchFile("oytag_overlap.json");
+  const transectFile = researchFile("oytag_transect_check.json");
+  const tr = overlay.transect;
+  return {
+    id: "terrain-prior-literature",
+    domain: "Terrain",
+    metricName: "Published Lithology & Prior Analog Literature",
+    earthQuantity: "Bershaw et al. (2012) Table 1 sample points",
+    earthValue: `${samples.length} published samples in window: ${rocks}`,
+    marsQuantity: `${target.title} mineral assemblage`,
+    marsValue: "No Mars mineral layer loaded",
+    periodAndSupport: "Published coordinates (datum not stated) · approximate overlap",
+    methodAndThreshold: "Point-in-window check (azimuthal equidistant + stored polygon); no mineral matching",
+    comparability: "Contextual",
+    status: "Provisional",
+    sourcePortalLabel: "J. Asian Earth Sci. (2012) / Tectonophysics (2013)",
+    evidence: {
+      id: "ev-prior-literature",
+      title: "Oytag Sedimentary Literature Overlap (Bershaw et al. 2012; Sun et al. 2013)",
+      domain: "Terrain",
+      earthSummary: `${samples.length} published rock samples (${rocks}) fall inside the 100×100 km window, ${Math.min(...samples.map((s) => s.east_km)).toFixed(0)}–${Math.max(...samples.map((s) => s.east_km)).toFixed(0)} km east of centre. A gypsum-bearing section (Sun et al. 2013, ${tr.source_figures}) is approximately digitized inside the window.`,
+      marsSummary: `No Mars mineralogy is loaded; lithology is not compared against ${target.title}.`,
+      sourceUrl: `https://doi.org/${samples[0].source_doi} | https://doi.org/${tr.source_doi}`,
+      productId: `${samples[0].source_locator} / ${tr.source_figures}`,
+      version: `Research schema ${RESEARCH.schema_version ?? "unknown"} (source commit ${RESEARCH.source_commit?.slice(0, 7) ?? "unknown"})`,
+      period: "Published field samples (collection dates per source)",
+      units: "Reported rock type (categorical); local east/north (km)",
+      nativeResolution: "Point coordinates; transect digitized from a figure",
+      analysisScale: `${overlay.window_km}×${overlay.window_km} km window centred ${overlay.center.lat.toFixed(1)}°, ${overlay.center.lon.toFixed(1)}°`,
+      processingMethod: "Spherical azimuthal equidistant projection and independent stored-polygon containment",
+      qaAndCoverage: `${samples.filter((s) => s.inside_local_100km_square).length}/${samples.length} samples inside; transect ${tr.endpoints.every((e) => e.inside) ? "inside" : "partly outside"}; claims: ${claimLevelSummary(lit.claims)}`,
+      measurementKind: "Direct observation",
+      limitations: [
+        overlay.coordinate_caveat,
+        "Gypsum is section-level evidence only: no gypsum GPS or sample ID",
+        "Smectite/iron-oxide pairing with gypsum at one outcrop is unconfirmed",
+        "Not a verified Gale lacustrine or mineral-assemblage analog",
+        tr.source_transport.tls_certificate_validation
+          ? "Transect source retrieved with TLS validation"
+          : `Transect source PDF fetched without TLS validation; independent hash check: ${tr.source_transport.independent_hash_check}`,
+      ],
+      localFile: [overlapFile?.path, transectFile?.path].filter(Boolean).join(" | ") || UNTRACED,
+      checksumSha256: `overlap: ${overlapFile?.sha256 ?? "Unverified"} | transect: ${transectFile?.sha256 ?? "Unverified"} | source PDF: ${tr.source_pdf_sha256}`,
+      claims: lit.claims,
+    },
+  };
 }

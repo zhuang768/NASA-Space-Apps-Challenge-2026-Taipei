@@ -40,6 +40,75 @@ export interface SourceRecord {
   license?: string;
 }
 
+/** Support type of a research claim; not confidence. Mirrors analog/evidence_status.py. */
+export type ClaimLevel = "VERIFIED" | "INFERRED" | "EXTERNAL" | "UNVERIFIED";
+
+export interface ResearchClaim {
+  id: string;
+  statement: string;
+  level: ClaimLevel;
+  note: string;
+  source?: string;
+}
+
+export type LiteratureStatus = "not_checked" | "checked_partial" | "checked";
+
+export interface FeaturedEvidence {
+  candidate_id: string;
+  mars_target: TargetId;
+  top2_in_tested_configurations: Record<string, boolean>;
+  top2_count: number;
+  configurations_count: number;
+  /** Rank in the 10 km run; null = not among that run's 12 candidates. */
+  scale10km_rank: number | null;
+  prior_analog_literature: {
+    status: LiteratureStatus;
+    evidence_files: string[];
+    claims: ResearchClaim[];
+  };
+  interpretation: string;
+}
+
+export interface OytagSample {
+  sample_id: string;
+  latitude_deg: number;
+  longitude_deg: number;
+  reported_rock_type: string;
+  source_doi: string;
+  source_locator: string;
+  coordinate_datum: string;
+  east_km: number;
+  north_km: number;
+  inside_local_100km_square: boolean;
+}
+
+export interface OytagOverlay {
+  candidate_id: string;
+  center: { lat: number; lon: number };
+  window_km: number;
+  local_axes: string;
+  coordinate_caveat: string;
+  evidence_scope: string;
+  samples: OytagSample[];
+  transect: {
+    source_doi: string;
+    source_figures: string;
+    source_url: string;
+    source_pdf_sha256: string;
+    source_transport: { tls_certificate_validation: boolean; independent_hash_check: string; note: string };
+    sensitivity: string;
+    endpoints: {
+      label: string;
+      approx_lat_deg: number;
+      approx_lon_deg: number;
+      east_km: number;
+      north_km: number;
+      inside: boolean;
+    }[];
+  };
+  claims: ResearchClaim[];
+}
+
 export interface EvidenceRecord {
   id: string;
   title: string;
@@ -59,6 +128,7 @@ export interface EvidenceRecord {
   limitations: string[];
   localFile: string;
   checksumSha256: string;
+  claims?: ResearchClaim[];
 }
 
 export interface ComparisonRow {
@@ -120,7 +190,13 @@ export interface CandidateItem {
   };
   keySupport: string;
   mainGap: string;
-  classification: "Project-proposed" | "Established reference" | "Prior use unverified";
+  classification:
+    | "Project-proposed"
+    | "Established reference"
+    | "Prior use unverified"
+    | "Literature checked (partial)";
+  featured?: FeaturedEvidence;
+  oytagOverlay?: OytagOverlay;
 }
 
 export interface TargetBundle {

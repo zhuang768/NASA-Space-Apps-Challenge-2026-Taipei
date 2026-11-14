@@ -113,6 +113,22 @@ export const ComparisonPanel: React.FC<ComparisonPanelProps> = ({
           <span className="badge badge-neutral" title="Missing values are never coerced to 0">
             Missing data ≠ 0
           </span>
+          {candidate.featured && (
+            <span
+              className="badge badge-neutral"
+              title="Number of tested configurations keeping this candidate in Top-2; not probability or confidence"
+            >
+              Deep-dive · Top-2 in {candidate.featured.top2_count}/{candidate.featured.configurations_count} configs
+            </span>
+          )}
+          {candidate.oytagOverlay && (
+            <span
+              className="badge badge-cyan"
+              title="Published lithology points inside the window; gypsum location and same-outcrop mineralogy unverified"
+            >
+              Literature: lithology overlap (partial)
+            </span>
+          )}
         </div>
       </div>
 

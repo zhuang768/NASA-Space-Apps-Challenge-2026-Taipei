@@ -37,33 +37,48 @@
   "files": [
     {
       "path": "docs/research/MS-02/report.md",
-      "bytes": 18786,
-      "sha256": "ad28ae44dbc64789357ff6856efd5865cebb6da6434e9bb033248ea69a4c5110"
+      "bytes": 28147,
+      "sha256": "6ebef8b70d29f6a6d3fbf03e17102b879c47b3d186ae4e6f45b00251c4237232"
     },
     {
       "path": "outputs/research/MS-02/candidates.csv",
-      "bytes": 7294,
-      "sha256": "54ec401e10e5864f5f039361c5f1b7790d7f1cb6d8b0c4b8aa1186b6a2a2fb4b"
+      "bytes": 8051,
+      "sha256": "ed4f3fe42842f088b8029877b95bafd6ba9f5137477671d0fdee1d20c2da3450"
     },
     {
       "path": "outputs/research/MS-02/evidence.csv",
-      "bytes": 19731,
-      "sha256": "3874182346587cb2b79eb178878551e89fc7543307d4bfbc666984b2df45f9e8"
+      "bytes": 25451,
+      "sha256": "86366de6f32dbcee7c3f851b596bba68c1b548dfc8d930c214d854b3ff095ae3"
     },
     {
       "path": "outputs/research/MS-02/prior_work.csv",
-      "bytes": 9546,
-      "sha256": "8f89e74f8c107a101233facc06a2ae0dcf8571102c6910c93df63bc266e6e37a"
+      "bytes": 11508,
+      "sha256": "581b4beb6bf5fc6716ec779008c53116606b27eef3ab3411b061dc7e05dab2cb"
     },
     {
       "path": "outputs/research/MS-02/search_log.csv",
-      "bytes": 10783,
-      "sha256": "b65706552312071b6d146cad92c79a997672d0949bb7bb69fe59f3abbcd99a8a"
+      "bytes": 13772,
+      "sha256": "f58e70175815895b333f1415c7b249b3c6be45dc876bba365c306c010499948a"
+    },
+    {
+      "path": "outputs/research/MS-02/footprint.csv",
+      "bytes": 2983,
+      "sha256": "6ac85eb51dd5e72ad9eb6fabbdbbc239fd9a82f190bf620b5782c96b37b149a6"
+    },
+    {
+      "path": "outputs/research/MS-02/claims.csv",
+      "bytes": 5797,
+      "sha256": "7f7a9db9b9a322dcbef12c622f14987bba5241a43ee815d00c5053239c465dfe"
+    },
+    {
+      "path": "outputs/research/MS-02/figures/fig3_adventdalen_evidence_footprint.png",
+      "bytes": 266886,
+      "sha256": "25926715bfab3fc3c9c6135389878a848f35e186521700eda4bd1a16e06eb423"
     },
     {
       "path": "outputs/research/MS-02/verification.json",
-      "bytes": 7366,
-      "sha256": "6036a8d53044b6e548195e505f11e831b6291bef21f1a4f5598b1587ded41b34"
+      "bytes": 7895,
+      "sha256": "cdcb31b57ab970897b3d564c8eec7f31009154e0cfecbf07cd9c78bbd49b76d1"
     },
     {
       "path": "outputs/research/MS-02/figures/fig1_team_targets_context.png",
@@ -77,18 +92,18 @@
     },
     {
       "path": "scripts/research/ms02_earth_analogs/verify_ms02.py",
-      "bytes": 9489,
-      "sha256": "b55b2a136d15b4cd7c34d2388189f9a381d40ba54e23e99d430ecd5d36bd5bea"
+      "bytes": 10531,
+      "sha256": "d101d9e8cb823277d3e009bd3089cf114c5066778d19291e13b4f8909aee6de3"
     },
     {
       "path": "scripts/research/ms02_earth_analogs/build_tables.py",
-      "bytes": 56419,
-      "sha256": "03623cf018dd2d5d1da40dd4ed950e62c7ea02394dc6b1d251dd8fa9cfe6afdf"
+      "bytes": 77500,
+      "sha256": "a13d72c0177455ccd949e5ae5c31c40ae1162c9cddfb36e5c8b384ecd38f2c85"
     },
     {
       "path": "scripts/research/ms02_earth_analogs/make_figures.py",
-      "bytes": 5053,
-      "sha256": "82c6d68167f74f54ce9c9874f697cec08a8091fd0a4d85146cc9fe7de6840a0f"
+      "bytes": 10134,
+      "sha256": "9423c83e569886818f2d5c36c6d2e89ef12a828966e4fbff5f41e1bf0e9d7e1d"
     }
   ],
   "sources": [
@@ -127,6 +142,30 @@
     {
       "id": "ROTEM",
       "ref": "https://doi.org/10.5194/tc-17-3363-2023"
+    },
+    {
+      "id": "ROTEM_TC",
+      "ref": "https://tc.copernicus.org/articles/17/3363/2023/"
+    },
+    {
+      "id": "RASMUSSEN_PDF",
+      "ref": "https://backend.orbit.dtu.dk/ws/files/329047704/1_s2.0_S0277379123001853_main.pdf"
+    },
+    {
+      "id": "BRIGHI2026",
+      "ref": "https://meetingorganizer.copernicus.org/EPSC2026/EPSC2026-988.html"
+    },
+    {
+      "id": "HARRAR2025",
+      "ref": "https://meetingorganizer.copernicus.org/EPSC-DPS2025/EPSC-DPS2025-1457.html"
+    },
+    {
+      "id": "PLETTEMEIER_EGU25",
+      "ref": "https://meetingorganizer.copernicus.org/EGU25/EGU25-9766.html"
+    },
+    {
+      "id": "PLETTEMEIER_EGU23",
+      "ref": "https://meetingorganizer.copernicus.org/EGU23/EGU23-16376.html"
     },
     {
       "id": "ANDRES",
@@ -180,7 +219,7 @@
   "disposition_summary": {
     "MS-02-E01": "保留",
     "MS-02-E02": "待補證據",
-    "MS-02-E03": "保留",
+    "MS-02-E03": "降為一般方法參照 (CS-1 loess core retained only as a process analog of aeolian cover + syngenetic ice; the radar link is 證據不足)",
     "MS-02-E04": "待補證據"
   },
   "unresolved_gaps": [
@@ -198,7 +237,7 @@
     "SWIM composite resolution/units are not stated on the provider page.",
     "Marchant & Head 2007 and Sugden 1995 were not found or read.",
     "Beacon Valley depth ranges differ between sources (10-60 cm Heldmann; 40-80 cm Kowalewski) and were not reconciled.",
-    "No figure produced."
+    "Fourth-round Adventdalen audit: full Brighi et al. WISDOM paper (polygon-line coordinates, ground truth, ε derivation) not obtained (abstracts only); Rasmussen read chars 0-100,000 of 107,876 and Rotem 0-100,000 of 114,191 via extracted text; Rasmussen DOI and HAL record blocked; CS-1 coring date, CALM grid location and the WISDOM polygon location remain unknown."
   ],
   "not_claimed": [
     "No ice amount or probability for MS-02",

@@ -139,6 +139,18 @@ earth["E04_LiDAR_grids_latlon_from_UTM16N_Table3.1"] = {
     "ns_extent_km": gc_km(min(lats), lons[0], max(lats), lons[0], EARTH_R_M),
     "ew_extent_km_at_mean_lat": gc_km(sum(lats)/len(lats), min(lons), sum(lats)/len(lats), max(lons), EARTH_R_M),
     "note": "grids agree with Fig 1.8 (75.37N, -89.53) to ~0.01-0.1 deg; the p.6 coordinate is the impact-structure centre, a different anchor"}
+# Adventdalen evidence anchors (fourth-round audit): coordinates exactly as stated in the sources
+ADV = {"CS1_loess_core_Rasmussen2023": (78.201, 15.840),          # Rasmussen 2023 Sec. 3.2
+       "ADE_borehole_Rotem2023": (78.1722, 16.0613),             # Rotem 2023 Sec. 2
+       "valley_centre_reference_Rotem2023": (78.110, 16.180)}    # Rotem 2023 Sec. 2 (reference only)
+PANGAEA_BBOX = {"lat": (78.182, 78.206), "lon": (15.79, 16.559)}  # PANGAEA 921087 site table (8 sites)
+names = list(ADV)
+earth["E03_Adventdalen_anchor_separations_km"] = {
+    f"{a}__{b}": gc_km(*ADV[a], *ADV[b], EARTH_R_M) for i, a in enumerate(names) for b in names[i + 1:]}
+earth["E03_Adventdalen_anchor_separations_km"]["ADE_south_of_PANGAEA_bbox_lower_edge_km"] = (
+    PANGAEA_BBOX["lat"][0] - ADV["ADE_borehole_Rotem2023"][0]) * math.pi * EARTH_R_M / 180 / 1000
+earth["E03_Adventdalen_anchor_separations_km"]["note"] = (
+    "great-circle on stated coordinates; WISDOM polygon survey and CALM grid have no coordinates, so no distance is computed for them")
 # unit conversions used in the report (this-study calculation, Kelvin = Celsius + 273.15)
 earth["unit_conversions_K"] = {
     "UV_MAAT_-23.4C": -23.4 + 273.15, "UV_42cm_-24.1C": -24.1 + 273.15,

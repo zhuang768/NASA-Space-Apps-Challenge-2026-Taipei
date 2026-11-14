@@ -1,7 +1,8 @@
 """Write the MS-02 CSV tables (candidates, evidence, prior_work, search_log) and manifest.json.
 
 Every row records what was actually read; see the 'read_scope' / 'locator' columns.
-Run from repo root AFTER verify_ms02.py and after docs/research/MS-02/report.md exists:
+Run from repo root AFTER verify_ms02.py and after docs/research/MS-02/report.md exists.
+Order: verify_ms02.py -> build_tables.py -> make_figures.py (reads footprint.csv) -> build_tables.py again (refreshes hashes):
     python3 -I scripts/research/ms02_earth_analogs/build_tables.py
 """
 import csv, hashlib, json, pathlib, subprocess
@@ -10,6 +11,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[3]
 OUT = ROOT / "outputs/research/MS-02"
 OUT.mkdir(parents=True, exist_ok=True)
 DATE = "2026-11-14"
+DATE2 = "2026-11-15"   # fourth-round audit date
 
 BASE_SHA = "f7076c9fdc77e00244ed5d6863aad2bf78cfa28f"   # handoff/verified-data-20261114
 MAIN_SHA = "3cc8488577535e2fa4d146021fde51f8ff6cc667"   # origin/main at start
@@ -25,6 +27,12 @@ SRC = {
     "BRIGHI": "https://meetingorganizer.copernicus.org/EPSC-DPS2025/EPSC-DPS2025-710.html",
     "RASMUSSEN": "https://doi.org/10.1016/j.quascirev.2023.108137",
     "ROTEM": "https://doi.org/10.5194/tc-17-3363-2023",
+    "ROTEM_TC": "https://tc.copernicus.org/articles/17/3363/2023/",
+    "RASMUSSEN_PDF": "https://backend.orbit.dtu.dk/ws/files/329047704/1_s2.0_S0277379123001853_main.pdf",
+    "BRIGHI2026": "https://meetingorganizer.copernicus.org/EPSC2026/EPSC2026-988.html",
+    "HARRAR2025": "https://meetingorganizer.copernicus.org/EPSC-DPS2025/EPSC-DPS2025-1457.html",
+    "PLETTEMEIER_EGU25": "https://meetingorganizer.copernicus.org/EGU25/EGU25-9766.html",
+    "PLETTEMEIER_EGU23": "https://meetingorganizer.copernicus.org/EGU23/EGU23-16376.html",
     "ANDRES": "https://core.ac.uk/download/364350841.pdf",
     "HIBBARD": "https://ir.lib.uwo.ca/etd/8120",
     "PANGAEA_921087": "https://doi.pangaea.de/10.1594/PANGAEA.921087",
@@ -75,10 +83,10 @@ cands = [
   "Svalbard Airport climate 1912-1993 (Hauber Table 1 p.114); Adventdalen 'Polygons' MAAT -5.8 °C (Rotem 2023); HRSC-AX DEMs 0.5-1 m (Hauber pp.112-113); WISDOM GPR Mar 2022 (Brighi 2025); loess OSL record (Rasmussen 2023); PANGAEA polygon geomorphometry dataset (site table read; polygon values are in zip files that could not be downloaded); UNISCALM CALM active-layer series on a loess terrace (since 2000; AGU 2016 abstract)",
   "Ice-wedge polygons and mantled ground ice; aeolian silt cover (loess) building syngenetic permafrost; radar detection of ice beneath an active layer; polygon geometry vs Mars (Hauber)",
   "Latitude 78°N; thicker, wetter, vegetated-valley setting not described in what I read; MAAT -5.8 °C; saline/epigenetic permafrost part (Rotem); polygons 10-20 m vs Mars example 5-10 m (Hauber Fig 4)",
-  "保留",
-  "Best-documented case for the 'mantle + wind + ice detection' questions (H2, H3): measured loess accumulation rate, polygon-trough GPR ice reflector, and a published Mars mid-latitude landform comparison",
-  "Svalbard loess accumulation rates and active-layer depth cannot be transferred to Mars dust deposition or MS-02 cover thickness; GPR ε values are for Earth materials",
-  "Download the polygon zip files (PANGAEA 10.1594/PANGAEA.921087; blocked from this sandbox) and read Hauber Section 3 for polygon statistics; read the SESS 2018 report PDF (Zenodo 4777825; unreadable via the fetch tool) for Adventdalen borehole temperatures"],
+  "降為一般方法參照 (CS-1 loess core retained only as a process analog of aeolian cover + syngenetic ice; the radar link is 證據不足)",
+  "Fourth-round audit (2026-11-15): the three evidence sets are NOT co-located. Loess core CS-1 (78.201N 15.840E) is ~6.0 km from the ADE borehole (78.1722N 16.0613E); the WISDOM polygon-trough survey (March 2022) has no stated coordinates and no independent ice truth in the abstract (its stated 3D ground truth is for a glacier ice cave, a different terrain). Only CS-1 has a measured ice profile under a dated aeolian cover; Rasmussen's 0.35 cm/yr is an abstract-level maximum (body: >0.3 cm/yr in one ~150-yr phase; mostly 0.05-0.25), and Rotem's 60-100 cm active layer is a cited general range",
+  "Svalbard loess accumulation rates and active-layer depth cannot be transferred to Mars dust deposition or MS-02 cover thickness; GPR ε values are Earth-material model inputs; MS-02 dust optical depth (column, 9.3 µm) is not a surface accumulation rate; no Adventdalen result shows ice detection beneath an aeolian cover at one place",
+  "Obtain the full Brighi et al. WISDOM paper (coordinates of the polygon lines, borehole/probe truth, how ε was derived); check whether CS-1 and the polygon site share a terrace; get Rasmussen Sect. 6 text beyond char 100,000 and Rotem Table 1; download PANGAEA polygons and SESS 2018 borehole data (blocked here)"],
  ["MS-02-E04", "Haughton River Valley, Haughton impact structure, Devon Island, Nunavut (Canada)",
   75.37, -89.53,
   "Nine LiDAR grids (0.1-0.5 m/px) within ~3.9 km N-S x ~4.0 km E-W (this-study calc from Table 3.1 UTM 16N); valley ~1.5 km wide, elevation 75-151 m a.s.l.",
@@ -173,9 +181,9 @@ ev(S, "熱性質", "Mean annual air temperature", "Svalbard Airport -6.3 (SD 1.7
 ev(S, "水/冰", "Active-layer thickness, valley bottom", "60-100", "cm", "文獻(引用先前研究)", "present-day typical", "0-100 cm", "valley bottom sediments", SRC["ROTEM"], "text (cited studies)", "Secondary citation, not a direct measurement by Rotem")
 ev(S, "水/冰", "Permafrost thickness in major valleys", "~100", "m", "文獻", "n/a", "to ~100 m", "regional", SRC["HAUBER"], "p.113", "Regional estimate")
 ev(S, "水/冰", "GPR ice-like reflector in polygon trough: depth, permittivity (ice vs active layer)", "~1.5 m; ε≈3.2 vs ε≥7", "m; dimensionless", "實測+模擬", "March 2022", "~1.5 m", "4 parallel lines over 2 troughs; 0.5-3 GHz; cm resolution",
-   SRC["BRIGHI"], "abstract", "Abstract only; purpose was ExoMars WISDOM validation, not MS-02")
-ev(S, "大氣/沙塵", "Loess deposition rate / mass accumulation rate (max)", "up to 0.35 cm/yr; ~2900 g m-2 yr-1", "cm/yr; g m-2 yr-1", "實測(OSL core, 136 ages)", "last ~3000 years", "core", "single core, Adventdalen",
-   SRC["RASMUSSEN"], "abstract", "Earth dust source/wind regime; cannot be converted to Mars deposition; ice content increases with depth (syngenetic permafrost)")
+   SRC["BRIGHI"], "abstract", "Abstract only; purpose was ExoMars WISDOM validation, not MS-02. ε values are model inputs in the abstract; no coordinates, no stated borehole/probe truth for the polygon troughs")
+ev(S, "大氣/沙塵", "Loess deposition rate / mass accumulation rate (max)", "abstract/conclusions: up to 0.35 cm/yr; body text: >0.3 cm/yr and dMAR ~2900 g m-2 yr-1 only for c. 750-900 a before core date; ~0.25 cm/yr (~2000) c. 1900-2450 a; generally <=0.15 cm/yr below active layer; ~0.05 cm/yr (~400) c. 2700-3000 a", "cm/yr; g m-2 yr-1", "實測+模式(OSL core, 136 ages, ice-corrected)", "last ~3000 years", "core 0-3.1 m", "single core CS-1 (78.201N, 15.840E)",
+   SRC["RASMUSSEN_PDF"], "Abstract; Sec. 3.5, 4.5, 5.4, 6", "The 0.35 cm/yr value is not shown in the body text read (authors' body: 'exceeding 0.3'); dMAR called 'broad estimates' (density from 7 samples); a peak phase, not a long-term mean; local river-bar source; cannot be converted to Mars deposition")
 ev(S, "大氣/沙塵", "Annual precipitation, Svalbard Airport", "180.7 (SD 49.8; 86.4-317.0)", "mm", "實測", "1912-1993", "gauge", "airport", SRC["HAUBER"], "Table 1 p.114", "Atmosphere/pressure/humidity regime differ from Mars: 未知 for direct comparison")
 
 ev(S, "水/冰", "Active-layer thickness at UNISCALM (CALM site on a loess-covered terrace): early vs later period", "<1 m for the first six years (min 74 cm in 2005); ≥1 m since 2006; increasing over 17 years", "cm / m", "實測(機械探測+地溫內插)", "2000-2016 (abstract Dec 2016)", "active layer", "single CALM grid, Adventdalen",
@@ -265,8 +273,8 @@ P = [
 # ------------------------------------------------------------------ search log
 sl_cols = ["search_id", "date_taipei", "platform", "query_or_url", "purpose", "candidate", "records_used", "read_scope", "outcome"]
 S_ = []
-def sl(plat, q, purpose, cand, used, scope, out):
-    S_.append([f"S{len(S_)+1:02d}", DATE, plat, q, purpose, cand, used, scope, out])
+def sl(plat, q, purpose, cand, used, scope, out, date=DATE):
+    S_.append([f"S{len(S_)+1:02d}", date, plat, q, purpose, cand, used, scope, out])
 sl("WebFetch", SRC["SWIM"], "Confirm SWIM composite meaning", "MS-02", "SWIM2 products page", "page text", "Consistency, not abundance/probability; no resolution/units on page")
 sl("WebSearch(standard)", "Beacon Valley buried ice Mars analog sublimation till", "E02 precedents", "E02", "Heldmann 2013; Bannister (via later query)", "titles/URLs only", "leads")
 sl("WebSearch(standard)", "University Valley Antarctica ice-cemented ground Mars analog", "E01 precedents", "E01", "Marinova 2022; Heldmann 2013", "titles/URLs only", "leads")
@@ -320,6 +328,116 @@ sl("curl", "zenodo SESS2018 PDF; PANGAEA polygons_AD3.zip", "Try to download dat
 sl("WebFetch", "https://openpolar.no/Record/ftunivwestonta:oai:ir.lib.uwo.ca:etd-10632", "Hibbard dissertation record", "E04", "Hibbard 2021", "abstract record", "Year 2021; no named Arctic sites")
 sl("python", "scripts/research/ms02_earth_analogs/make_figures.py; dataviz validate_palette (blue/orange/aqua, light, all-pairs)", "Two context figures", "MS-02", "final_candidates.csv", "this-study", "Palette passes; aqua contrast WARN handled with visible value labels")
 
+# ================================================================== fourth round: Adventdalen three-evidence audit (2026-11-15)
+S = "MS-02-E03"
+RC = SRC["RASMUSSEN_PDF"]; RT = SRC["ROTEM_TC"]
+ev(S, "地形", "Loess core site CS-1 coordinates (flat vegetated Advent River terrace, lower Adventdalen)", "78.201°N, 15.840°E; weather station 78.203°N, 15.828°E; exposed section ~20 m NE of coring site", "degrees", "文獻", "coring date not extracted", "n/a", "point (cores CS-1-A/B/C); no polygon", RC, "Sec. 3.2; Table 1; Fig. 2", "Elevation not stated; ADE (Rotem) is ~5.97 km from CS-1 (this-study great-circle calc on stated coordinates)")
+ev(S, "水/冰", "CS-1 active-layer thickness and measured ice content profile", "AL 98 cm (stated to match CALM); gravimetric ice content 20-50% from permafrost table to ~155 cm, 60-80% at 155-188 cm, up to 250% near base", "cm; %", "實測(岩芯重量含水/冰量, 2 cm 間隔)", "core date not extracted", "0-3.1 m", "2 cm sampling interval; core CS-1-B 314.5 cm", RC, "Sec. 3.3, 4.2, Fig. 6", "Independent ice measurement for CS-1 only; mostly syngenetic cryostructures, reticulate zone 237-248 cm epigenetic; high ice affects OSL dosimetry (authors, Sec. 5.3)")
+ev(S, "地形", "Rotem ADE borehole coordinates and extent", "ADE 78.1722°N, 16.0613°E, 23 m a.s.l., 9.8 km up-valley from Adventfjorden; two cores 0.5 m apart (13 m and 9 m), March 2017; same S1 location as Gilbert et al. 2018; valley-centre reference point 78.110°N, 16.180°E", "degrees; m", "文獻", "March 2017", "0-13 m", "two cores; 0.5 m sampling", RT, "Sec. 2, 3; Fig. 1a-b", "ADE is ~1.1 km south of the PANGAEA HRSC-AX polygon bbox lower edge (78.182°N); valley-centre point is a reference, not a measurement site")
+ev(S, "水/冰", "ADE permafrost structure from cores (ground-ice chemistry paper)", "permafrost ~20 m thick; syngenetic 1.0-5.5 m; epigenetic below 5.5 m; frozen mixing zone 5.5-12 m; chloride ~15% of seawater at ~9-11 m", "m", "實測(鑽孔離子化學)+模式", "March 2017", "1-20 m", "two cores", RT, "Sec. 2, 4, 6.1, 7", "A freezing-model/chemistry study: no GPR, no permittivity, no ice-detection test; salinity interface depth (5.5-12 m) is deeper than the ~1.5 m radar reflector")
+ev(S, "水/冰", "Active-layer thickness quoted by Rotem", "60-100 cm 'commonly' in valley-bottom sediments", "cm", "文獻(引用先前研究)", "not stated", "0-1 m", "valley-bottom sediments (general)", RT, "Sec. 2", "A cited range, not a measurement at ADE; the modelled mid-Holocene 2 m active layer is a hypothetical, not data")
+ev(S, "地形", "WISDOM survey geometry in Adventdalen polygon terrain", "four parallel lines crossing two polygon troughs; 0.5-3 GHz; coordinates, line length and spacing not stated", "n/a", "未知(幾何)", "March 2022", "reflections ~1.5 m; 'a few meters' penetration", "2 troughs; extent unknown", SRC["BRIGHI"], "abstract", "No lat/lon, no map; same valley name does not establish the same site as CS-1 or ADE")
+ev(S, "水/冰", "Independent truth for WISDOM reflections", "polygon troughs: none stated in the abstract (3 reflections ~1.5 m; middle reflection said not explainable without an ice wedge by FDTD simulation). Stated 3D ground truth is for an ice cave in Longyearbreen glacier (~5 km SW of Longyearbyen), a different terrain", "n/a", "未知", "March 2022 (survey); 2015 cave survey", "n/a", "n/a", SRC["BRIGHI2026"] + " ; " + SRC["BRIGHI"], "EPSC2026-988 abstract; EPSC-DPS2025-710 abstract", "The 2025 abstract labels the dataset 'Adventdalen Valley', the 2026 abstract places the ice cave at Longyearbreen; I did not reconcile the two labels")
+ev(S, "水/冰", "Dielectric interfaces named by authors or simulation", "ice ε=3.2 beneath active-layer material ε>=7 (model inputs); snow/trough-interface reflections vanish on steep slopes; cave returns 'may have' multiple reflections; high circular polarization ratio is 'not necessarily' water ice (simulation, ε=3)", "dimensionless", "文獻(摘要)+模擬", "2022-2025 abstracts", "n/a", "n/a", SRC["BRIGHI"] + " ; " + SRC["HARRAR2025"] + " ; " + SRC["PLETTEMEIER_EGU25"], "abstracts", "Harrar 2025 is a simulation of generic icy subsurfaces, not Adventdalen data; Plettemeier 2025 notes antenna-ground coupling depends on environment; abstracts only")
+ev(S, "大氣/沙塵", "Dust source and transport interpretation at CS-1", "local Advent River fluvial bars deflated mainly in autumn by strong E/SE winds; two non-exclusive hypotheses (wind activity vs glaciofluvial sediment supply); authors state no independent evidence yet for the wind hypothesis", "n/a", "文獻(作者推論)", "~3000 years", "n/a", "terrace/river bars", RC, "Sec. 4.1, 5.4, 6", "Local source and wind regime; MS-02 column dust opacity (9.3 µm absorption, dimensionless) has no mass-flux meaning")
+
+# ------------------------------------------------------------------ footprint (evidence geometry)
+fp_cols = ["footprint_id", "evidence_set", "location", "lat_deg", "lon_deg_east", "geometry_type", "stated_extent",
+           "survey_or_sample_year", "depth_range_m", "measured_quantity", "source", "locator", "geometry_status"]
+FP = [
+ ["FP-01", "A 風成沉積/岩芯", "Loess core site CS-1 (Advent River terrace)", 78.201, 15.840, "point", "cores 310/314.5/322 cm; exposed section ~180 cm, 20 m NE of cores",
+  "coring date not extracted (record spans ~3000 yr)", "0-3.22", "OSL ages (136, 2 cm), gravimetric ice content, grain size, cryostructure", RC, "Sec. 3.2-3.5", "stated (point)"],
+ ["FP-02", "A 風成沉積/岩芯", "Weather station beside CS-1", 78.203, 15.828, "point", "n/a", "n/a", "air", "air temperature (context)", RC, "Table 1, Fig. 2", "stated (point)"],
+ ["FP-03", "B 活動層/鑽孔", "ADE borehole (Rotem; Gilbert S1 site)", 78.1722, 16.0613, "point", "two cores 0.5 m apart (13 m, 9 m)", "March 2017", "0-13 (permafrost ~20)", "pore-water chemistry (Cl-, Na+), cryostratigraphy for freezing model", RT, "Sec. 2-3", "stated (point)"],
+ ["FP-04", "B 活動層/鑽孔", "Adventdalen valley-centre reference point", 78.110, 16.180, "point (reference only)", "n/a", "n/a", "n/a", "none (reference coordinate in paper)", RT, "Sec. 2", "stated (reference, not a measurement)"],
+ ["FP-05", "B 活動層/鑽孔", "'Polygons' site (MAAT -5.8 °C), 7 km from fjord", "", "", "unknown", "not stated", "not stated", "air", "mean annual air temperature (cited)", RT, "Sec. 5.1", "unknown (no coordinates)"],
+ ["FP-06", "B 活動層/鑽孔", "UNISCALM CALM grid on a loess-covered terrace", "", "", "unknown", "single CALM grid; not stated", "2000-2016", "0-~1", "active-layer probing (min 74 cm 2005; >=1 m since 2006)", SRC["UNISCALM_AGU2016"], "abstract", "unknown (no coordinates read)"],
+ ["FP-07", "C WISDOM 雷達", "WISDOM polygon-trough survey, 'Adventdalen Valley'", "", "", "unknown (4 parallel lines over 2 troughs)", "line length/spacing not stated", "March 2022", "reflections ~1.5; penetration 'a few meters'", "GPR 0.5-3 GHz polarimetric radargrams + FDTD simulation", SRC["BRIGHI"], "abstract", "unknown (no coordinates, no map)"],
+ ["FP-08", "C WISDOM 雷達", "WISDOM ice-cave survey (Longyearbreen glacier, ~5 km SW of Longyearbyen)", "", "", "unknown", "cave meanders 6-10 m inside glacier; 3D cave survey as ground truth", "March 2022 (WISDOM); spring 2015 (cave survey)", "6-10 (cave)", "GPR vs cave survey", SRC["BRIGHI2026"], "EPSC2026-988 abstract", "unknown (distance from town only)"],
+ ["FP-09", "背景: 多邊形地貌", "HRSC-AX polygon-pattern sites (8)", "78.182-78.206 (bbox)", "15.79-16.559 (bbox)", "bbox of 8 sites", "individual polygon outlines in zip files (not obtained)", "flights 2008; mapped 2009", "surface", "polygon area, perimeter, length, width, circularity", SRC["PANGAEA_921087"], "dataset page", "bbox stated; site outlines not obtained"],
+]
+
+# ------------------------------------------------------------------ claims table
+cl_cols = ["claim_id", "claim", "claim_origin", "direct_evidence", "site_year_depth_of_direct_evidence", "independent_truth_for_the_claim",
+           "alternative_explanations_or_caveats", "status", "source_and_locator"]
+CL = [
+ ["C1", "Adventdalen aeolian silt cover and syngenetic ground ice coexist and grew together", "原作者結論 (Rasmussen 2023)",
+  "CS-1 cores: OSL ages every 2 cm; gravimetric ice 20-50% (to 155 cm), 60-80% (155-188 cm), up to 250% near base; mainly syngenetic cryostructures; ice content falls upward as sedimentation rises",
+  "CS-1 78.201N 15.840E; coring date not extracted; 0-3.2 m", "yes at CS-1 (gravimetric ice, cryostructure logs)",
+  "Authors: epigenetic ice/cryoturbation below ~275-295 cm and age inversions; reworking in 10-55 cm; dosimetric effects of high ice content",
+  "支持 (僅 CS-1)", RC + " Sec. 3.3, 4.2, 5.1, 5.3"],
+ ["C2", "Loess accumulation reached 0.35 cm/yr and ~2900 g m-2 yr-1", "原作者結論 (abstract/conclusions)",
+  "Body text: >0.3 cm/yr and dMAR ~2900 g m-2 yr-1 in c. 750-900 a; ~0.25 cm/yr (~2000) in 1900-2450 a; <=0.15 cm/yr below the active layer; ~0.05 cm/yr (~400) in 2700-3000 a",
+  "CS-1; last ~3000 yr", "no independent accumulation measurement; age model from OSL",
+  "Authors call dMAR 'broad estimates' (density from 7 samples); 0.35 not found in body text read; two non-exclusive drivers (wind vs glaciofluvial supply); local river-bar source",
+  "部分支持 (峰值期，非長期平均)", RC + " Abstract; Sec. 3.5, 4.5, 5.4, 6"],
+ ["C3", "Adventdalen active layer is 60-100 cm", "原作者引用 (Rotem) / 另一組實測 (Rasmussen, UNISCALM)",
+  "Rotem: 'commonly 60-100 cm' (cited). Rasmussen: 98 cm at CS-1, said to match CALM. UNISCALM: <1 m first six years (min 74 cm, 2005), >=1 m since 2006",
+  "three different places/periods (ADE cited; CS-1; CALM grid location unknown)", "probing/monitoring at CS-1 and CALM; none at ADE in the text read",
+  "Increasing trend means older 60-100 cm values may not describe 2022 conditions; interannual variability large (abstract)",
+  "數量級一致，非同址同年", RT + " Sec. 2; " + RC + " Sec. 2, 4.2; " + SRC["UNISCALM_AGU2016"]],
+ ["C4", "ADE borehole characterises permafrost under the valley floor", "原作者結論 (Rotem)",
+  "Two cores (13 m, 9 m), March 2017: syngenetic 1.0-5.5 m, epigenetic below; chloride interface 9-11 m",
+  "ADE 78.1722N 16.0613E; March 2017; 0-13 m", "borehole itself is the data; no radar, no co-located core",
+  "Chemistry may reflect sediment dissolution or ion exchange (authors); cryopegs/brine possible",
+  "支持 (ADE 結構；與 CS-1 相距 ~6.0 km，與雷達無關)", RT + " Sec. 2-4, 6.1"],
+ ["C5", "The ~1.5 m polygon-trough radar reflector is ice (ice wedge) under an active layer", "原作者結論 (Brighi 2025)",
+  "WISDOM radargrams, 3 reflections ~1.5 m; FDTD trough model with/without ice wedge; middle reflection 'cannot be explained without' an ice wedge",
+  "'Adventdalen Valley' (no coordinates); March 2022; ~1.5 m", "none stated for the polygon troughs (stated 3D ground truth is for a glacier ice cave)",
+  "Same abstract: snow/trough-interface reflections weaken on steep slopes; cave returns may be multiple reflections. Other hypotheses (this team, not authors'): ice-rich vs ice-poor sediment contrast (CS-1 ice content varies 20-250% with depth), frozen/thawed or lithologic boundary, antenna-ground coupling (Plettemeier 2025); CPR alone is not diagnostic of water ice (Harrar 2025, simulation)",
+  "作者結論；無獨立冰真值", SRC["BRIGHI"] + " abstract; " + SRC["BRIGHI2026"] + "; " + SRC["HARRAR2025"] + "; " + SRC["PLETTEMEIER_EGU25"]],
+ ["C6", "ε=3.2 (ice) and ε>=7 (active layer) were measured at Adventdalen", "本隊待查假設 (abstract wording is ambiguous)",
+  "Abstract lists the values as model inputs; how they were obtained is not stated",
+  "unknown", "none stated", "Treat as assumed model parameters until the full paper shows a measurement or calibration",
+  "未證實", SRC["BRIGHI"] + " abstract"],
+ ["C7", "Core, borehole and radar results are one coherent Adventdalen site", "本隊假設 (tested here)",
+  "CS-1 and ADE are ~5.97 km apart; WISDOM polygon lines have no coordinates; years differ (core undated here, 2017, 2022); ADE lies ~1.1 km south of the polygon-site bbox",
+  "see footprint.csv", "n/a", "Same valley name is not the same site; shared depth range 0-3 m is the only overlap",
+  "不成立 (不能當同址)", "footprint.csv FP-01..FP-09; verification.json"],
+ ["C8", "MS-02 column dust optical depth can stand in for ground cover accumulation", "本隊假設 (rejected)",
+  "MS-02 CDOD: 9.3 µm absorption column opacity, 3° grid, dimensionless (MY34 p95 0.240, MY35 p95 0.173). CS-1 dMAR: mass per area per year from a dated core",
+  "MS-02 3° cell centre (52.5N,168.0E); CS-1", "none", "No conversion from column opacity to surface deposition without wind, particle size and source data",
+  "不可轉換", SRC["HANDOFF"] + "final_candidates.csv; " + RC + " Sec. 3.5"],
+ ["C9", "Adventdalen results show ice can be detected beneath an aeolian cover at MS-02", "本隊假設 (rejected)",
+  "No single Adventdalen place combines dated aeolian cover, measured ice, and radar detection in the sources read; SWIM values at MS-02 are consistency, not abundance",
+  "n/a", "n/a", "MS-02 cover thickness, ice depth, and permittivity are unknown", "證據不足", "see C1-C7; verification.json"],
+]
+
+# ------------------------------------------------------------------ prior work additions
+P.extend([
+ ["PW-18", "MS-02-E03", "Brighi et al. 2026, Full-polarimetric capabilities evaluation of the ExoMars 2028 GPR on a 3D dataset acquired in Svalbard (EPSC2026-988)", SRC["BRIGHI2026"],
+  "Longyearbreen ice cave (~5 km SW of Longyearbyen)", "Validate polarimetric radar scatterer positions against a 3D cave survey", "用途不同 (radar method; different terrain from polygons)", "Abstract only",
+  "Instrument validation with a 3D ground truth vs MS-02 hypothesis", "Svalbard glacier cave", "WISDOM full-polarimetric 3D", "Scatterer-position comparison", "Provides the only stated ground truth in this WISDOM series; not for polygon troughs"],
+ ["PW-19", "MS-02-E03", "Harrar et al. 2025, Investigating the use of Circular Polarization Ratio for water ice detection by polarimetric GPR (EPSC-DPS2025-1457)", SRC["HARRAR2025"],
+  "none (simulation)", "Test whether CPR diagnoses water ice", "用途不同 (method caution)", "Abstract only",
+  "Simulation caution vs MS-02 ice question", "none", "Numerical simulation, ε=3 lossless medium", "FDTD", "States high CPR is not necessarily a footprint of water ice"],
+ ["PW-20", "MS-02-E03", "Plettemeier et al. 2025 (EGU25-9766) and 2023 (EGU23-16376), WISDOM field-test calibration and processing abstracts", SRC["PLETTEMEIER_EGU25"] + " ; " + SRC["PLETTEMEIER_EGU23"],
+  "Svalbard (site not named)", "Calibrate/process WISDOM field data", "用途不同 (method)", "Abstracts only",
+  "Processing caveats vs MS-02 hypothesis", "none", "WISDOM field data", "Calibration pipeline", "Antenna-ground coupling depends on environment; no site, permittivity or ground truth stated"],
+])
+for _r in P:
+    if _r[0] == "PW-05":
+        _r[7] = "Abstract only (re-read 2026-11-15; no coordinates, no stated polygon-trough ground truth)"
+    if _r[0] == "PW-06":
+        _r[7] = "Full text via fetch tool (DTU repository PDF, chars 0-100,000 of 107,876)"
+        _r[9] = "CS-1 core (78.201N, 15.840E), 136 OSL ages, ice-corrected rates"
+        _r[13 - 1] = "Provides Earth dust-accumulation rates (peak phase >0.3 cm/yr; abstract max 0.35 not in body) and a measured ice profile at CS-1"
+
+# ------------------------------------------------------------------ search log, round 4 (2026-11-15)
+sl("WebFetch", SRC["ROTEM_TC"] + " (doi.org redirect followed)", "Rotem 2023 sites, borehole, active layer", "E03", "Rotem 2023", "chars 0-100,000 of 114,191", "ADE coordinates; two cores Mar 2017; AL 60-100 cm cited; no GPR/permittivity", DATE2)
+sl("WebFetch", SRC["BRIGHI"], "Re-read WISDOM abstract for geometry/ground truth", "E03", "Brighi 2025", "abstract", "Mar 2022; 4 lines/2 troughs; ε inputs; no polygon ground truth stated", DATE2)
+sl("WebFetch", SRC["RASMUSSEN"], "Rasmussen 2023 full text via DOI", "E03", "none", "blocked (SITE_BLOCKED)", "Nothing read; not retried or bypassed", DATE2)
+sl("WebSearch(standard)", "Rasmussen 2023 Quaternary Science Reviews Adventdalen loess OSL dust accumulation Holocene Svalbard core", "Find readable Rasmussen text", "E03", "DTU repository PDF; AU/openpolar records", "titles/URLs only", "DTU PDF located", DATE2)
+sl("WebFetch", SRC["RASMUSSEN_PDF"], "Rasmussen 2023 coordinates, cores, rates, ice", "E03", "Rasmussen 2023", "chars 0-100,000 of 107,876", "CS-1 78.201N 15.840E; ice content; rates; 0.35 cm/yr only in abstract/conclusions", DATE2)
+sl("WebFetch", "openpolar.no Rasmussen record /Map", "Check for bbox/geometry", "E03", "none", "record page", "No coordinates or geometry", DATE2)
+sl("WebSearch(standard)", "Brighi WISDOM ground penetrating radar Svalbard Adventdalen polygon ice wedge analogue ExoMars TEMSI-FD polarimetry", "Find fuller WISDOM Svalbard sources", "E03", "EPSC2026-988; EGU25-9766; EGU23-16376; EPSC-DPS2025-1457", "titles/URLs only", "four more abstracts located", DATE2)
+sl("WebFetch", "https://hal-insu.archives-ouvertes.fr/insu-03914738", "HAL record of field-test paper", "E03", "none", "Access Denied (bot protection)", "Nothing read; not bypassed", DATE2)
+sl("WebFetch", SRC["PLETTEMEIER_EGU25"], "WISDOM calibration abstract", "E03", "Plettemeier 2025", "abstract", "No site/dates/permittivity/ground truth stated", DATE2)
+sl("WebFetch", SRC["BRIGHI2026"], "Ice-cave 3D ground truth abstract", "E03", "Brighi 2026", "abstract", "Longyearbreen cave ~5 km SW of Longyearbyen; 3D ground truth; Adventdalen not mentioned", DATE2)
+sl("WebFetch", SRC["PLETTEMEIER_EGU23"], "WISDOM field-test pipeline abstract", "E03", "Plettemeier 2023", "abstract", "No site, dates, permittivity or ground truth stated", DATE2)
+sl("WebFetch", SRC["HARRAR2025"], "CPR water-ice caution", "E03", "Harrar 2025", "abstract", "Simulation; high CPR not necessarily water ice", DATE2)
+sl("python", "scripts/research/ms02_earth_analogs/verify_ms02.py (E03 anchor separations); build_tables.py footprint.csv; make_figures.py fig3", "Distances and evidence-footprint figure", "E03", "stated coordinates only", "this-study calculation", "CS-1 to ADE 5.97 km; CS-1 to valley-centre ref 12.75 km; ADE 1.1 km south of PANGAEA bbox", DATE2)
+
 
 def write_csv(name, cols, rows):
     with open(OUT / name, "w", newline="", encoding="utf-8-sig") as f:
@@ -330,6 +448,8 @@ write_csv("candidates.csv", cand_cols, cands)
 write_csv("evidence.csv", ev_cols, E)
 write_csv("prior_work.csv", pw_cols, P)
 write_csv("search_log.csv", sl_cols, S_)
+write_csv("footprint.csv", fp_cols, FP)
+write_csv("claims.csv", cl_cols, CL)
 
 
 def sha(p):
@@ -338,6 +458,8 @@ def sha(p):
 files = ["docs/research/MS-02/report.md",
          "outputs/research/MS-02/candidates.csv", "outputs/research/MS-02/evidence.csv",
          "outputs/research/MS-02/prior_work.csv", "outputs/research/MS-02/search_log.csv",
+         "outputs/research/MS-02/footprint.csv", "outputs/research/MS-02/claims.csv",
+         "outputs/research/MS-02/figures/fig3_adventdalen_evidence_footprint.png",
          "outputs/research/MS-02/verification.json",
          "outputs/research/MS-02/figures/fig1_team_targets_context.png",
          "outputs/research/MS-02/figures/fig2_latitude_context.png",
@@ -375,7 +497,7 @@ manifest = {
         "SWIM composite resolution/units are not stated on the provider page.",
         "Marchant & Head 2007 and Sugden 1995 were not found or read.",
         "Beacon Valley depth ranges differ between sources (10-60 cm Heldmann; 40-80 cm Kowalewski) and were not reconciled.",
-        "No figure produced."],
+        "Fourth-round Adventdalen audit: full Brighi et al. WISDOM paper (polygon-line coordinates, ground truth, ε derivation) not obtained (abstracts only); Rasmussen read chars 0-100,000 of 107,876 and Rotem 0-100,000 of 114,191 via extracted text; Rasmussen DOI and HAL record blocked; CS-1 coring date, CALM grid location and the WISDOM polygon location remain unknown."],
     "not_claimed": ["No ice amount or probability for MS-02", "No Mars-likeness score/percentage", "No claim that any pairing was never studied"],
 }
 (OUT / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")

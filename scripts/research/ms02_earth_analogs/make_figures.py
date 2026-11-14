@@ -86,3 +86,74 @@ fig.tight_layout(rect=(0, 0.04, 1, 1))
 fig.savefig(OUT / "fig2_latitude_context.png", dpi=170, facecolor=SURFACE)
 plt.close(fig)
 print("wrote", sorted(p.name for p in OUT.iterdir()))
+
+
+# ---- fig3: Adventdalen evidence footprint (coordinates exactly as stated in sources; unknown geometry is NOT plotted)
+import math
+from matplotlib.patches import Rectangle
+from matplotlib.lines import Line2D
+
+# measurement-type roles (palette slots reused as roles in this figure only, not as MS-01/02/03 entities)
+C_SAMPLE, C_RADAR, C_MON = "#2a78d6", "#eb6834", "#1baf7a"
+ADE = (78.1722, 16.0613)
+def xy(lat, lon):  # km east / north of ADE, local equirectangular
+    k = math.pi * 6371.0 / 180
+    return (lon - ADE[1]) * k * math.cos(math.radians(ADE[0])), (lat - ADE[0]) * k
+
+fig, (ax, bx) = plt.subplots(1, 2, figsize=(13, 6.4), facecolor=SURFACE, gridspec_kw={"width_ratios": [1.35, 1]})
+ax.set_facecolor(SURFACE)
+x0, y0 = xy(78.182, 15.79); x1, y1 = xy(78.206, 16.559)
+ax.add_patch(Rectangle((x0, y0), x1 - x0, y1 - y0, facecolor=GRID, edgecolor=INK2, linestyle="--", linewidth=1, alpha=0.7))
+ax.text(x1, y0 - 0.35, "HRSC-AX polygon-site bounding box (8 sites, 2008-09; outlines not obtained)", ha="right", va="top", fontsize=8.5, color=INK2)
+cs = xy(78.201, 15.840); ad = xy(*ADE); vc = xy(78.110, 16.180)
+ax.plot(*cs, "o", color=C_SAMPLE, markersize=11, markeredgecolor=SURFACE, markeredgewidth=2)
+ax.text(cs[0] + 0.5, cs[1] + 1.0, "CS-1 loess core + met station\n78.201°N 15.840°E (Rasmussen 2023)\ncore date not extracted", fontsize=8.5, color=INK, va="bottom")
+ax.plot(*ad, "s", color=C_SAMPLE, markersize=10, markeredgecolor=SURFACE, markeredgewidth=2)
+ax.text(ad[0] + 0.5, ad[1] - 0.2, "ADE boreholes 78.1722°N 16.0613°E\nMarch 2017 (Rotem 2023)", fontsize=8.5, color=INK, va="top")
+ax.plot(*vc, "D", markerfacecolor=SURFACE, markeredgecolor=INK2, markersize=8, markeredgewidth=1.5)
+ax.text(vc[0] + 0.6, vc[1] + 0.3, "valley-centre reference point only\n(no measurement)", fontsize=8.5, color=INK2, va="center")
+ax.plot([cs[0], ad[0]], [cs[1], ad[1]], color=INK2, linewidth=1.2)
+mx, my = (cs[0] + ad[0]) / 2, (cs[1] + ad[1]) / 2
+ax.text(mx + 0.25, my, "5.97 km", fontsize=9.5, color=INK, ha="left", va="center", fontweight="bold")
+ax.set_aspect("equal"); ax.set_xlim(-12, 14); ax.set_ylim(-11.5, 8)
+ax.set_xlabel("km east of ADE (local scale; positions from stated coordinates)", color=INK2)
+ax.set_ylabel("km north of ADE", color=INK2)
+ax.grid(color=GRID, linewidth=0.8); ax.set_axisbelow(True)
+for s_ in ("top", "right"):
+    ax.spines[s_].set_visible(False)
+ax.text(-11.8, -11.2,
+        "NOT plotted (no coordinates in the sources read): WISDOM polygon-trough lines (Mar 2022), UNISCALM CALM grid,\n"
+        "'Polygons' MAAT site, Longyearbreen ice cave (ground truth for a different terrain).",
+        fontsize=8.3, color=C_RADAR, va="bottom", ha="left",
+        bbox=dict(boxstyle="round,pad=0.35", facecolor=SURFACE, edgecolor=C_RADAR, linestyle="--"))
+ax.set_title("Where each measurement was made", loc="left", fontsize=10.5, color=INK)
+
+# depth panel
+bx.set_facecolor(SURFACE)
+cats = ["CS-1 loess core\n(coring date n/a)", "ADE cores\n(Mar 2017)", "WISDOM polygon\ntroughs (Mar 2022)", "CALM probing\n(2000-16)"]
+bx.axhspan(0, 3.2, color=GRID, alpha=0.6, zorder=0)
+bx.text(3.55, 3.45, "shaded band 0-3.2 m: the only depth\nrange shared by core and radar", fontsize=8, color=INK2, ha="right", va="top")
+bx.bar(0, 3.22, width=0.5, color=C_SAMPLE, edgecolor=SURFACE, linewidth=2, zorder=2)
+bx.bar(1, 13, width=0.5, color=C_SAMPLE, edgecolor=SURFACE, linewidth=2, zorder=2)
+bx.bar(3, 1.0, width=0.5, color=C_MON, edgecolor=SURFACE, linewidth=2, zorder=2)
+bx.plot([2 - 0.25, 2 + 0.25], [1.5, 1.5], color=C_RADAR, linewidth=4, zorder=3)
+bx.text(2, 1.9, "3 reflections ~1.5 m\npenetration 'a few m'\n(not quantified)", fontsize=8, color=INK, ha="center", va="top")
+bx.text(0, 3.5, "0-3.22 m\nAL 98 cm; ice 20-250%", fontsize=8, color=INK, ha="center", va="top")
+bx.text(1.3, 6.5, "0-13 m\n(permafrost ~20 m)", fontsize=8, color=INK, ha="left", va="center")
+bx.text(3, 1.15, "AL 0.74 m (2005)\n>=1 m since 2006", fontsize=7.5, color=INK, ha="center", va="top")
+bx.set_ylim(14.2, 0); bx.set_xlim(-0.6, 3.6)
+bx.set_xticks(range(4)); bx.set_xticklabels(cats, fontsize=8.3)
+bx.set_ylabel("depth (m)", color=INK2); bx.yaxis.grid(True, color=GRID, linewidth=0.8); bx.set_axisbelow(True)
+for s_ in ("top", "right"):
+    bx.spines[s_].set_visible(False)
+bx.set_title("How deep each looked", loc="left", fontsize=10.5, color=INK)
+leg = [Line2D([0], [0], color=C_SAMPLE, linewidth=8, label="sampled directly"),
+       Line2D([0], [0], color=C_RADAR, linewidth=4, label="radar inference (unlocated)"),
+       Line2D([0], [0], color=C_MON, linewidth=8, label="monitoring (location unknown)")]
+bx.legend(handles=leg, loc="lower right", bbox_to_anchor=(1.0, 0.08), fontsize=8, frameon=False, handlelength=1.3)
+fig.suptitle("Adventdalen: the loess core, the borehole and the radar survey are three different places",
+             x=0.01, ha="left", fontsize=12, color=INK)
+fig.tight_layout(rect=(0, 0, 1, 0.95))
+fig.savefig(OUT / "fig3_adventdalen_evidence_footprint.png", dpi=170, facecolor=SURFACE)
+plt.close(fig)
+print("wrote", sorted(p.name for p in OUT.iterdir()))

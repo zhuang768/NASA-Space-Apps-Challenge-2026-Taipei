@@ -240,6 +240,13 @@
       "ew_extent_km_at_mean_lat": 4.04853047766084,
       "note": "grids agree with Fig 1.8 (75.37N, -89.53) to ~0.01-0.1 deg; the p.6 coordinate is the impact-structure centre, a different anchor"
     },
+    "E03_Adventdalen_anchor_separations_km": {
+      "CS1_loess_core_Rasmussen2023__ADE_borehole_Rotem2023": 5.9694541980050495,
+      "CS1_loess_core_Rasmussen2023__valley_centre_reference_Rotem2023": 12.751667317438534,
+      "ADE_borehole_Rotem2023__valley_centre_reference_Rotem2023": 7.429169081627858,
+      "ADE_south_of_PANGAEA_bbox_lower_edge_km": 1.0897102811165063,
+      "note": "great-circle on stated coordinates; WISDOM polygon survey and CALM grid have no coordinates, so no distance is computed for them"
+    },
     "unit_conversions_K": {
       "UV_MAAT_-23.4C": 249.74999999999997,
       "UV_42cm_-24.1C": 249.04999999999998,

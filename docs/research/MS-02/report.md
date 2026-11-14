@@ -10,7 +10,7 @@ Team zasa｜NASA Space Apps 2026｜研究日期：2026-11-14（Asia/Taipei）；
   - **E01 University Valley（南極）**：乾燥覆土下的冰膠結層，冰面深度、覆土與季節熱背景的耦合。
   - **E03 Adventdalen（斯瓦巴）**：風成粉砂覆土與同生永凍冰（僅 CS-1 岩芯一處有直接量測）；多邊形溝槽的雷達反射只有作者結論，無獨立冰真值；岩芯、鑽孔、雷達三組證據**不在同一地點**。
   - E02 Beacon Valley、E04 Haughton／Devon Island 是補充對照，目前證據不足以保留。
-- 在我搜尋過的平台與詞彙內，**未找到**「MS-02 這個點＋這幾個地球場址＋相同用途」的先例（見 §6）。這不等於從未有人研究過。
+- 在我搜尋過的平台與詞彙內，**未找到**「MS-02 這個點＋這幾個地球場址＋相同用途」的先例（見 §7）。這不等於從未有人研究過。
 - 本報告不計算任何「最像火星百分比」，也不為各面向設權重。
 
 ## 2. 資料基準與核對
@@ -80,7 +80,7 @@ E04 有兩個不同的錨點，並非矛盾：p.6 的 75°22′N、89°41′W �
 
 ## 7. 先例檢索與差異
 
-**檢索平台**：WebSearch（一般模式）與 WebFetch，日期 2026-11-14（S01–S52）與 2026-11-15（S53–S65，Adventdalen 查核）；完整字串與讀取範圍見 `outputs/research/MS-02/search_log.csv`。多數結果只讀到標題或摘要，已在 `prior_work.csv` 註明；只有 Hauber 2011、Marinova 2022、Andres 2020 、Nieto & Stewart 2003（CREWES 報告），以及第四輪的 Rasmussen 2023 與 Rotem 2023（各讀前 100,000 字元，萃取文字）讀到內文。
+**檢索平台**：WebSearch（一般模式）與 WebFetch，日期 2026-11-14（S01–S52）與 2026-11-15（S53–S65，Adventdalen 查核）；完整字串與讀取範圍見 `outputs/research/MS-02/search_log.csv`。多數結果只讀到標題或摘要，已在 `prior_work.csv` 註明；只有 Hauber 2011、Marinova 2022、Andres 2020、Nieto & Stewart 2003（CREWES 報告），以及第四輪的 Rasmussen 2023 與 Rotem 2023（各讀前 100,000 字元，萃取文字）讀到內文。
 
 | 先例 | 場址 | 分類 | 與本次差異 |
 |---|---|---|---|

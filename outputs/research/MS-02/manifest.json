@@ -37,8 +37,8 @@
   "files": [
     {
       "path": "docs/research/MS-02/report.md",
-      "bytes": 28147,
-      "sha256": "6ebef8b70d29f6a6d3fbf03e17102b879c47b3d186ae4e6f45b00251c4237232"
+      "bytes": 28146,
+      "sha256": "1f603ac5a125befdd34af97c14a0c24b3a3591f2b6289a07d4ea62abf7caa0f4"
     },
     {
       "path": "outputs/research/MS-02/candidates.csv",

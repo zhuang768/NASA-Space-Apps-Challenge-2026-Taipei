@@ -64,5 +64,30 @@
     "locator": "Original abstract/publisher index; dataset supplement link",
     "read_scope": "Indexed author abstract and PANGAEA original attribution; AWI author PDF returned Anubis access-denied; no full article claim",
     "access_date_taipei": "2026-11-14"
+  },
+  "U4": {
+    "url": "https://zenodo.org/records/10553882",
+    "locator": "VersionDOI10.5281/zenodo.10553882;concept10553881;WCampbell/Hobo files and six selected original notes/exports",
+    "read_scope": "API metadata and six actual MD5-verified downloads;two full calibrated text exports parsed;DOCXbody and Campbell notesPDF10pages read;not unprocessed logger bytes",
+    "access_date_taipei": "2026-11-15",
+    "license": "CC0 per version metadata"
+  },
+  "U5": {
+    "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/5B2E97EBA4C91035CAFCECC234A532A0/S0954102025100448a.pdf/summer-snow-determines-the-depth-to-ice-cemented-ground-under-dry-permafrost-in-antarctica.pdf",
+    "locator": "Environmental data printedp124",
+    "read_scope": "Original author article points W data to Zenodo10553881;used as identity bridge,not new model analysis",
+    "access_date_taipei": "2026-11-15"
+  },
+  "U6": {
+    "url": "https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0954102022000025/resource/name/S0954102022000025sup001.pdf",
+    "locator": "Publisher HTML Supplemental material and direct asset link",
+    "read_scope": "Asset direct download403;publisher describes Fig3 daily airT/RH/solar/wind averages;no downloaded supplement or multidepth series claimed",
+    "access_date_taipei": "2026-11-15"
+  },
+  "U7": {
+    "url": "https://nsidc.org/data/nsidc-0529/versions/1",
+    "locator": "Overview and access status",
+    "read_scope": "Official catalog:depth-to-ice survey,not W temperature series;not local raw archive retrieval",
+    "access_date_taipei": "2026-11-15"
   }
 }

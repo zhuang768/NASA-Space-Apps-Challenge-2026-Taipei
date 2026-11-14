@@ -34,3 +34,25 @@ prj=z.read('polygons_Act-IWS.prj').decode();assert 'WGS_1984_UTM_Zone_33N' in pr
 assert struct.unpack('<I',z.read('polygons_Act-IWS.dbf')[4:8])[0]==185
 for name in ['evidence.csv','candidates.csv','prior_work.csv','search_log.csv']:assert (out/name).stat().st_size>0
 print('PASS: IDs;coordinates;4themes;source crossrefs;CSV/JSON;native-vs-finalMS03;input hashes;EarthGIS ZIP/CRS/185records.')
+# Optional W follow-up: independent checks on serialized delivery and summary.
+uv=out/'uv_w'
+if (uv/'qa.json').exists():
+ import gzip,statistics,datetime as D
+ q=json.loads((uv/'qa.json').read_text());d=json.loads((uv/'download_manifest.json').read_text())
+ assert d['record_id']==10553882 and d['license']['id']=='cc-zero' and len(d['files'])==6
+ with gzip.open(uv/'hobo_W_temperatures.csv.gz','rt',newline='') as f:rr=list(csv.DictReader(f))
+ assert len(rr)==27553 and len({r['time_naive'] for r in rr})==len(rr)
+ assert all(r['time_label'].startswith('GMT+13:00') for r in rr)
+ assert rr[0]['T20_C']=='-8.530' and rr[0]['T42_C']=='-13.352'
+ assert rr[-1]['T20_C']=='-11.831' and rr[-1]['T42_C']=='-12.602'
+ window=[r for r in rr if '2010-01-01T00:00:00'<=r['time_naive']<'2011-01-01T00:00:00'];assert len(window)==8760
+ paired=[float(r['T20_C'])-float(r['T42_C']) for r in window if r['T20_C'] and r['T42_C']];assert len(paired)==8759
+ with (uv/'earth_only_2010_summary.csv').open() as f:summary={r['metric']:r for r in csv.DictReader(f)}
+ assert math.isclose(statistics.fmean(paired),float(summary['T20_minus_T42_C']['mean']),abs_tol=1e-12)
+ assert int(summary['T42_C']['finite_n'])==8759
+ assert q['records']['Campbell']['decimal_day_minus_timestamp_regimes'][-1]['offset_hours_decimal_minus_timestamp']==-5
+ assert q['records']['HOBO']['gaps']==[]
+ for f in d['files']:
+  raw=Path(d['raw_directory'])/f['filename']
+  if raw.exists():assert hashlib.md5(raw.read_bytes()).hexdigest()==f['md5'] and hashlib.sha256(raw.read_bytes()).hexdigest()==f['sha256']
+ print('PASS: W pinned6source hashes where local;header mapping first/last samples;27553rows;2010window8760;8759pairs;summary reproduction;clock limits retained.')

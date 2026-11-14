@@ -1,0 +1,249 @@
+{
+  "version": "MS03-UV-W-availability-v1",
+  "records": {
+    "Campbell": {
+      "file": "UniversityV_09_13_Campbell_data_all_calibrated.txt",
+      "headers": [
+        [
+          "TOA5",
+          " CR1000_2",
+          " CR1000",
+          " 28046",
+          " CR1000.Std.17",
+          " CPU:UniversityValley_MetStation.CR1",
+          " 53229",
+          " Table1",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          "  "
+        ],
+        [
+          "TIMESTAMP",
+          " decimalDaySinceJan1_2009",
+          "RECORD",
+          " BattV",
+          " T107_air",
+          "RH_wrt_water",
+          "RH_wrt_WaterIce",
+          " SlrW",
+          " WS_ms",
+          " WindDir",
+          " T107_surf",
+          " T107_10cm",
+          " T107_ice42cm",
+          " T107_InIce49cm",
+          " water_int",
+          " PA_mS_int",
+          " water20cm",
+          " PA_mS20cm",
+          " LW_kOhm",
+          " Echo "
+        ],
+        [
+          "TS",
+          " days",
+          "RN",
+          " Volts",
+          " Deg C",
+          "%",
+          "%",
+          " W/m^2",
+          " meters/second",
+          " Degrees",
+          " Deg C",
+          " Deg C",
+          " Deg C",
+          " Deg C",
+          " ",
+          " mSec",
+          " ",
+          " mSec",
+          " kOhms",
+          " mV/mV "
+        ],
+        [
+          "",
+          "",
+          " ",
+          " Smp",
+          " Smp",
+          " Smp",
+          " Smp",
+          " Smp",
+          " Smp",
+          " Smp",
+          " Smp",
+          " Smp",
+          " Smp",
+          " Smp",
+          " Smp",
+          " Smp",
+          " Smp",
+          " Smp",
+          " Smp",
+          "Smp "
+        ]
+      ],
+      "rows": 55346,
+      "first": "2009-12-04T19:30:00",
+      "last": "2013-01-31T00:00:00",
+      "duplicates": 0,
+      "step_minutes_counts": {
+        "30.0": 55344,
+        "270.0": 1
+      },
+      "nominal_step_minutes": 30,
+      "decimal_day_minus_timestamp_regimes": [
+        {
+          "start": "2009-12-04T19:30:00",
+          "offset_hours_decimal_minus_timestamp": -1.0
+        },
+        {
+          "start": "2012-10-28T10:30:00",
+          "offset_hours_decimal_minus_timestamp": -5.0
+        }
+      ],
+      "column_mapping_0based": {
+        "T_air_C": 4,
+        "T_surface_C": 10,
+        "T10_C": 11,
+        "T42_C": 12,
+        "T49_C": 13
+      },
+      "series": {
+        "T_air_C": {
+          "valid_n": 55338,
+          "missing_n": 8,
+          "min": -45.48,
+          "max": 0.4
+        },
+        "T_surface_C": {
+          "valid_n": 29142,
+          "missing_n": 26204,
+          "min": -47.8,
+          "max": 12.3
+        },
+        "T10_C": {
+          "valid_n": 55041,
+          "missing_n": 305,
+          "min": -44.4,
+          "max": 2.8
+        },
+        "T42_C": {
+          "valid_n": 55041,
+          "missing_n": 305,
+          "min": -37.2,
+          "max": -9.3
+        },
+        "T49_C": {
+          "valid_n": 55041,
+          "missing_n": 305,
+          "min": -36.6,
+          "max": -9.7
+        }
+      },
+      "gaps": [
+        {
+          "after": "2012-10-28T06:00:00",
+          "before": "2012-10-28T10:30:00",
+          "step_minutes": 270.0
+        }
+      ]
+    },
+    "HOBO": {
+      "file": "UniversityV_09_13_Hobo_WeatherStation_data_good_only_calibrated.txt",
+      "headers": [
+        [
+          "DateTime",
+          "DecimalDaySinceJan1_2009",
+          "Surf_T",
+          "Surf_RH",
+          "Surf_BatterIce",
+          "",
+          "cm20_T",
+          "cm20_RH",
+          "cm20_BatterIce",
+          "",
+          "ice42cm_T",
+          "ice42cm_RH",
+          "ice42cm_BatIce",
+          "ery "
+        ],
+        [
+          "GMT+13:00",
+          "days",
+          "degC",
+          "%",
+          "V",
+          "degC",
+          "%",
+          "V",
+          "degC",
+          "%",
+          "V "
+        ]
+      ],
+      "rows": 27553,
+      "first": "2009-12-10T00:00:00",
+      "last": "2013-01-31T00:00:00",
+      "duplicates": 0,
+      "step_minutes_counts": {
+        "60.0": 27552
+      },
+      "nominal_step_minutes": 60,
+      "decimal_day_minus_timestamp_regimes": [
+        {
+          "start": "2009-12-10T00:00:00",
+          "offset_hours_decimal_minus_timestamp": 0.0
+        }
+      ],
+      "column_mapping_0based": {
+        "T_surface_C": 2,
+        "T20_C": 5,
+        "T42_C": 8
+      },
+      "series": {
+        "T_surface_C": {
+          "valid_n": 8799,
+          "missing_n": 18754,
+          "min": -47.794,
+          "max": 7.544
+        },
+        "T20_C": {
+          "valid_n": 27553,
+          "missing_n": 0,
+          "min": -41.618,
+          "max": -2.8
+        },
+        "T42_C": {
+          "valid_n": 27550,
+          "missing_n": 3,
+          "min": -36.783,
+          "max": -9.269
+        }
+      },
+      "gaps": []
+    }
+  },
+  "HOBO_header_mapping": "Provider header has14 cells;units/data11;positions0time1decimal2surfaceT3surfaceRH4surfaceV5T20 6RH20 7V20 8T42 9RH42 10V42. Mapping supported by units,header fragments and Campbell deployment notes pp1-2;no silent 14-column shift.",
+  "author_processing": "Campbell QA note reports removed surface spikes,insertedNaNs and one interpolated42cm point;not unaltered logger bytes. Per-row intervention flags/time of interpolated Campbell point not supplied;do not assume it identifies any HOBO point.",
+  "clock_policy": "Keep clocks separate. The270min timestamp discontinuity coincides with the4h offset shift and is not classified as a physical observation gap. Campbell decimal-day offset changes from about-1h to-5h relative to printed timestamp;HOBO consistent within decimal rounding. Do not cross-join clocks or convert to UTC/solar time without correction history.",
+  "RH_policy": "Export retains author RH basis/calibration;no RH-derived water activity or new corrections in this analysis.",
+  "comparative_scope": "Same-W same-HOBO-depth description only. No same-time/same-quantity EarthMars comparison against coarse MCS or TES.",
+  "excluded": [
+    "subhourly extrema from daily means",
+    "repeated seven days as genuine independent observations",
+    "automatic outlier thresholds",
+    "cross-instrument time matching",
+    "thermal inertia/ice-depth inversion",
+    "ice quantity or equipment performance"
+  ],
+  "preliminary": true
+}

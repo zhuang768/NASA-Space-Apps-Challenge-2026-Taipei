@@ -1,13 +1,34 @@
 {
   "status": "passed",
+  "followup_date_taipei": "2026-11-15",
   "command": "python3 scripts/research/MS-03/validate.py",
-  "stdout": "PASS: IDs;coordinates;4themes;source crossrefs;CSV/JSON;native-vs-finalMS03;input hashes;EarthGIS ZIP/CRS/185records.",
-  "scope": "Handoff correctness and source/data structure;not physical validation",
-  "not_executed": [
-    "raw Mars reprocessing",
-    "Earth thermal statistics",
-    "new field experiment",
-    "Earth-Mars performance transfer"
+  "previous_validation": {
+    "status": "passed",
+    "command": "python3 scripts/research/MS-03/validate.py",
+    "stdout": "PASS: IDs;coordinates;4themes;source crossrefs;CSV/JSON;native-vs-finalMS03;input hashes;EarthGIS ZIP/CRS/185records.",
+    "scope": "Handoff correctness and source/data structure;not physical validation",
+    "not_executed": [
+      "raw Mars reprocessing",
+      "Earth thermal statistics",
+      "new field experiment",
+      "Earth-Mars performance transfer"
+    ],
+    "shared_file_validation": "Completed by actual Git-blob retrieval and ZIP/gzip/CSV checks;scientific Excel content not audited"
+  },
+  "new_checks": [
+    "6 downloaded files MD5+SHA256 verified",
+    "HOBO header mapping and first/last row samples",
+    "27553 unique hourly HOBO rows",
+    "2010window8760records;8759finite20/42pairs",
+    "paired summary independently checked against exported rows",
+    "Campbell clock discrepancy retained"
   ],
-  "shared_file_validation": "Completed by actual Git-blob retrieval and ZIP/gzip/CSV checks;scientific Excel content not audited"
+  "scope": "Data-structure and descriptive reproduction checks;not sensor recalibration or Mars validation",
+  "not_executed": [
+    "UTC or solar-time conversion",
+    "cross-instrument merge",
+    "gap filling or new calibration",
+    "ice-depth/TI inversion",
+    "causal or performance validation"
+  ]
 }

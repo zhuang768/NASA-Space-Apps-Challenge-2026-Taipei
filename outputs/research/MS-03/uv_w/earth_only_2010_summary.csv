@@ -1,0 +1,4 @@
+window_start_inclusive,window_end_exclusive,clock,metric,unit,finite_n,expected_hourly_n,mean,min,max,interpretation
+2010-01-01T00:00:00,2011-01-01T00:00:00,HOBO printed GMT+13:00;not converted,T20_C,degC,8760,8760,-24.974048972602738,-41.618,-2.859,"Earth-only descriptive values in author-calibrated export;not a new mechanism,ice depth,TI or Mars similarity"
+2010-01-01T00:00:00,2011-01-01T00:00:00,HOBO printed GMT+13:00;not converted,T42_C,degC,8759,8760,-24.730885146706246,-36.783,-9.816,"Earth-only descriptive values in author-calibrated export;not a new mechanism,ice depth,TI or Mars similarity"
+2010-01-01T00:00:00,2011-01-01T00:00:00,HOBO printed GMT+13:00;not converted,T20_minus_T42_C,degC,8759,8760,-0.24412501427103558,-7.0760000000000005,8.579999999999998,"Earth-only descriptive values in author-calibrated export;not a new mechanism,ice depth,TI or Mars similarity"

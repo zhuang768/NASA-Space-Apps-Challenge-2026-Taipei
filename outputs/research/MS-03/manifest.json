@@ -1,5 +1,5 @@
 {
-  "version": "MS03-EARTH-ANALOG-20261114-v1",
+  "version": "MS03-EARTH-ANALOG-20261115-v2",
   "baseline_main_commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
   "supplemental_handoff_commit": "f7076c9fdc77e00244ed5d6863aad2bf78cfa28f",
   "branch": "research/ms-03-earth-analogs",
@@ -147,6 +147,31 @@
       "locator": "Original abstract/publisher index; dataset supplement link",
       "read_scope": "Indexed author abstract and PANGAEA original attribution; AWI author PDF returned Anubis access-denied; no full article claim",
       "access_date_taipei": "2026-11-14"
+    },
+    "U4": {
+      "url": "https://zenodo.org/records/10553882",
+      "locator": "VersionDOI10.5281/zenodo.10553882;concept10553881;WCampbell/Hobo files and six selected original notes/exports",
+      "read_scope": "API metadata and six actual MD5-verified downloads;two full calibrated text exports parsed;DOCXbody and Campbell notesPDF10pages read;not unprocessed logger bytes",
+      "access_date_taipei": "2026-11-15",
+      "license": "CC0 per version metadata"
+    },
+    "U5": {
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/5B2E97EBA4C91035CAFCECC234A532A0/S0954102025100448a.pdf/summer-snow-determines-the-depth-to-ice-cemented-ground-under-dry-permafrost-in-antarctica.pdf",
+      "locator": "Environmental data printedp124",
+      "read_scope": "Original author article points W data to Zenodo10553881;used as identity bridge,not new model analysis",
+      "access_date_taipei": "2026-11-15"
+    },
+    "U6": {
+      "url": "https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0954102022000025/resource/name/S0954102022000025sup001.pdf",
+      "locator": "Publisher HTML Supplemental material and direct asset link",
+      "read_scope": "Asset direct download403;publisher describes Fig3 daily airT/RH/solar/wind averages;no downloaded supplement or multidepth series claimed",
+      "access_date_taipei": "2026-11-15"
+    },
+    "U7": {
+      "url": "https://nsidc.org/data/nsidc-0529/versions/1",
+      "locator": "Overview and access status",
+      "read_scope": "Official catalog:depth-to-ice survey,not W temperature series;not local raw archive retrieval",
+      "access_date_taipei": "2026-11-15"
     }
   },
   "downloaded_earth_asset": {
@@ -160,16 +185,19 @@
   "gaps": [
     "MS03 local ice depth/purity/material/morphology unknown",
     "No QA-qualified candidate-centred MCS temperature;nearest60N120W missing data",
-    "UV rawT/RH not obtained;exact sensor QA remains",
     "AD1 thermal raw and exact crosswalk to later sensors/GPR not obtained",
     "No dust-deposition/wind/pressure equivalence",
-    "No new-scientific-novelty or validated instrument performance established"
+    "No new-scientific-novelty or validated instrument performance established",
+    "W data now retrieved;Campbell clock history and author per-row intervention flags unresolved",
+    "No independent sensor recalibration or EarthMars common physical support established"
   ],
   "scope": "Independent literature and evidence pairing;no global reranking/new field or predictive test",
   "new_calculations": [
     "UV DMS decimal conversion",
     "EarthGIS structural record count/bbox/CRS",
-    "shared-file CRC/parse/hash checks"
+    "shared-file CRC/parse/hash checks",
+    "Wexport structure/time/missingness QA",
+    "Earth-only2010HOBO20/42cm same-row descriptive statistics"
   ],
   "data_not_transferred": [
     "I01I02 oldpairing",
@@ -179,43 +207,18 @@
   "outputs": [
     {
       "path": "docs/research/MS-03/report.md",
-      "bytes": 11149,
-      "sha256": "6b3e04fe2431ee195e9ee974e8537eb4e7c67b01bef26ea084aefd3e3042ed32"
-    },
-    {
-      "path": "scripts/research/MS-03/validate.py",
-      "bytes": 2884,
-      "sha256": "750b1638da2f54110432de3494db7ad31def228650b9d5f05d48d8363ceac445"
-    },
-    {
-      "path": "outputs/research/MS-03/sources.json",
-      "bytes": 3611,
-      "sha256": "bdfa65e1efc62ae2cb8abc685a87b4202746c84ffca680d79855a5623ce014a9"
-    },
-    {
-      "path": "outputs/research/MS-03/evidence.csv",
-      "bytes": 10756,
-      "sha256": "d824d34833c69789c8a62bf3265375211f9a854e65e9fc545a7b20997a35e666"
-    },
-    {
-      "path": "outputs/research/MS-03/prior_work.csv",
-      "bytes": 4220,
-      "sha256": "cf91fa75e8ef254be6d064cf1b3f2893bf56daf7c2fa3bf1281322c80370c0d5"
-    },
-    {
-      "path": "outputs/research/MS-03/polygons_Act-IWS_source.zip",
-      "bytes": 57636,
-      "sha256": "c75e7568c9fbfc67898f64e9c18681e5dc7e24a1ec272ceafa12c51377b8054e"
+      "bytes": 18137,
+      "sha256": "c3895c74c343b5f3905f406254790de94d33595a392ef2ca986d185d1a180f3c"
     },
     {
       "path": "outputs/research/MS-03/candidates.csv",
-      "bytes": 2748,
-      "sha256": "3883325fa3607344b7480ff99e1eaa4e0ce8660e9086408cc83eea0d44d6e3d4"
+      "bytes": 2850,
+      "sha256": "a0f410983e66dafc4cb3831dbbbb8f30afe5282798c1ba24b0312abd0247a602"
     },
     {
-      "path": "outputs/research/MS-03/validation.json",
-      "bytes": 584,
-      "sha256": "e3b9bf8eae689369b793ded05e2ac7d8ad7e68c98b37ea2189d4635aa0cac33e"
+      "path": "outputs/research/MS-03/evidence.csv",
+      "bytes": 14801,
+      "sha256": "20eef43aa62c08cfcdaaa317d2fcade6bf907eaa5a0b98e62a8cbfc74afa9f29"
     },
     {
       "path": "outputs/research/MS-03/mars_reference.json",
@@ -223,9 +226,78 @@
       "sha256": "014ca34cb9eca59fe1623b4e5cbe602097c6b4a42a8e41de52a9bb108f972348"
     },
     {
+      "path": "outputs/research/MS-03/polygons_Act-IWS_source.zip",
+      "bytes": 57636,
+      "sha256": "c75e7568c9fbfc67898f64e9c18681e5dc7e24a1ec272ceafa12c51377b8054e"
+    },
+    {
+      "path": "outputs/research/MS-03/prior_work.csv",
+      "bytes": 4344,
+      "sha256": "ee7bc2ecada4bef1b29ba994eb7907e28db87b578ea0b4993f806970e7c6d4de"
+    },
+    {
       "path": "outputs/research/MS-03/search_log.csv",
-      "bytes": 3167,
-      "sha256": "20f4f1893a3c7045145f2f1e5095038bb18808670cd10f8636d4103a0c59f984"
+      "bytes": 4298,
+      "sha256": "63f19ab043e34ece6456e9053a5eab25407df12d5802c78fc0e71b79b59a8ccd"
+    },
+    {
+      "path": "outputs/research/MS-03/sources.json",
+      "bytes": 5241,
+      "sha256": "01b1256e0ed89c2745947f333f08be06ad468661b669d56e5bd5d6c7ef7fd2ec"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/download_manifest.json",
+      "bytes": 3332,
+      "sha256": "ebd5294c47f2d76bc6d7d7121874b96bff400987eae8c741b69fd16e95b78770"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/earth_only_2010_summary.csv",
+      "bytes": 886,
+      "sha256": "f469d76f1c73ccfc5411ab6cebb760300e6823435d1f41c54942d7b15011932e"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/hobo_W_temperatures.csv.gz",
+      "bytes": 446674,
+      "sha256": "9fff2d2d959e4cbecd66c05d9c7904cf021e8c2a048050a24198477cf52ee157"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/monthly_coverage.csv",
+      "bytes": 30420,
+      "sha256": "ae5957c9449503a5cd0fe7d58a2e18061d5a929139eabefa72499830dfeeea5a"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/qa.json",
+      "bytes": 6462,
+      "sha256": "bc8c58c1f0d8913d49268a5d6e503b68304839acc886221df7f0c0e1acda4ad5"
+    },
+    {
+      "path": "outputs/research/MS-03/validation.json",
+      "bytes": 1383,
+      "sha256": "5c8a19dedafc9deb2991e8f414e52071a6077ce8191a8a6826caad054df09b94"
+    },
+    {
+      "path": "scripts/research/MS-03/inspect_uv_w.py",
+      "bytes": 8503,
+      "sha256": "ac287fe9be19d54526416734cde176855f77b4242942084fcce60bff3f73908b"
+    },
+    {
+      "path": "scripts/research/MS-03/validate.py",
+      "bytes": 4608,
+      "sha256": "03a67857e976f28a0f43366596fefc6be607914ace6b8d630cd45667d2fdca00"
     }
-  ]
+  ],
+  "followup_date_taipei": "2026-11-15",
+  "uv_followup": {
+    "version_record": 10553882,
+    "version_doi": "10.5281/zenodo.10553882",
+    "download_manifest": "outputs/research/MS-03/uv_w/download_manifest.json",
+    "qa": "outputs/research/MS-03/uv_w/qa.json",
+    "data": "outputs/research/MS-03/uv_w/hobo_W_temperatures.csv.gz",
+    "summary": "outputs/research/MS-03/uv_w/earth_only_2010_summary.csv",
+    "scope": "Earth-only same-HOBO-depth descriptive analysis;no cross-planet numerical matching",
+    "raw_downloads_tracked": false,
+    "parser": "scripts/research/MS-03/inspect_uv_w.py",
+    "clock_status": "Campbell decimal day / printed timestamp discontinuity unresolved;HOBO no time conversion",
+    "main_integration": false
+  }
 }

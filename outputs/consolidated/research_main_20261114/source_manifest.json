@@ -1,6 +1,6 @@
 {
   "version": "MR-20261114-v2",
-  "checked_taipei": "2026-11-14T20:08:22.200057+08:00",
+  "checked_taipei": "2026-11-14T20:20:01.569049+08:00",
   "remote_main_at_start": "409a2e77dbeb741486901f840da3643180bed2ac",
   "remote_source_main": "bc9fe3c0f352632a7117dbdab24df21b7450738e",
   "remote_source_tree": "ee4b92db79ac7ca1053ba96619a87e08652b3c66",
@@ -105,50 +105,62 @@
     },
     {
       "source_path": "docs/research/team1_earth_analog_matching.md",
-      "read_path": "outputs/consolidated/research_main_20261114/sources/v2_409a2e77/docs/research/team1_earth_analog_matching.md",
+      "read_path": "outputs/consolidated/research_main_20261114/sources/v2_b35a01de/docs/research/team1_earth_analog_matching.md",
       "role": "current_teammate_report_or_csv",
-      "remote_ref": "409a2e77dbeb741486901f840da3643180bed2ac",
-      "git_blob_sha": "fa7ffc099b6bd1c3e29d866f1bf0db82c4da234f",
-      "sha256": "b87a9089768ad312ffbceca9b23ab58f34dcc018d208bda1d24e31b178ea6cb3",
-      "bytes": 46881,
+      "remote_ref": "b35a01ded4d03132cea8ef141e0864dcf4ca39cc",
+      "git_blob_sha": "83d2136c797a494f9063dc49b23a082410cd251e",
+      "sha256": "647e7bca00cb9617db91b2fda445caa79311853cf78154d45d93599deff25aa7",
+      "bytes": 63184,
       "byte_identical_to_remote": true,
-      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/409a2e77dbeb741486901f840da3643180bed2ac/docs/research/team1_earth_analog_matching.md",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b35a01ded4d03132cea8ef141e0864dcf4ca39cc/docs/research/team1_earth_analog_matching.md",
       "raw_files_reread_by_mainline": false
     },
     {
       "source_path": "outputs/research/team1_earth_analog_candidates.csv",
-      "read_path": "outputs/consolidated/research_main_20261114/sources/v2_409a2e77/outputs/research/team1_earth_analog_candidates.csv",
+      "read_path": "outputs/consolidated/research_main_20261114/sources/v2_b35a01de/outputs/research/team1_earth_analog_candidates.csv",
       "role": "current_teammate_report_or_csv",
-      "remote_ref": "409a2e77dbeb741486901f840da3643180bed2ac",
-      "git_blob_sha": "77eea7e66c2be9860ec11415d982a055df627df1",
-      "sha256": "cb45ebafe1d7e43506462bdc467b402bc6f2446cea3c1d0f7b2ee52468ef107a",
-      "bytes": 26662,
+      "remote_ref": "b35a01ded4d03132cea8ef141e0864dcf4ca39cc",
+      "git_blob_sha": "894babc0373de43d841ac9dd0d0014ad855524c8",
+      "sha256": "07d3ccf7e26e0940a3c7753bfa07b8039184fe1151f772b8941b2b3557e123bd",
+      "bytes": 31113,
       "byte_identical_to_remote": true,
-      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/409a2e77dbeb741486901f840da3643180bed2ac/outputs/research/team1_earth_analog_candidates.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b35a01ded4d03132cea8ef141e0864dcf4ca39cc/outputs/research/team1_earth_analog_candidates.csv",
       "raw_files_reread_by_mainline": false
     },
     {
       "source_path": "docs/research/team2_novelty_audit.md",
-      "read_path": "outputs/consolidated/research_main_20261114/sources/v2_bc9fe3c0/docs/research/team2_novelty_audit.md",
+      "read_path": "outputs/consolidated/research_main_20261114/sources/v2_14be2d5b/docs/research/team2_novelty_audit.md",
       "role": "current_teammate_report_or_csv",
-      "remote_ref": "bc9fe3c0f352632a7117dbdab24df21b7450738e",
-      "git_blob_sha": "4da0ebf5cd4a53a89f04f27aa7a519ac36adf285",
-      "sha256": "796cb0509039a1ec1190c32c4a3a6cd5a94a3d80288562a475fa6194867d53a6",
-      "bytes": 88007,
+      "remote_ref": "14be2d5b46ec49ecf2d685af60d249c7a4fd97b7",
+      "git_blob_sha": "aa595880169307ebc8df0de4a61c401231145cd3",
+      "sha256": "336f0ccddce7ea58a593bd7ee7a5ef6041125061ad96676e3906a48ec89f7a47",
+      "bytes": 106754,
       "byte_identical_to_remote": true,
-      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/bc9fe3c0f352632a7117dbdab24df21b7450738e/docs/research/team2_novelty_audit.md",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/14be2d5b46ec49ecf2d685af60d249c7a4fd97b7/docs/research/team2_novelty_audit.md",
       "raw_files_reread_by_mainline": false
     },
     {
       "source_path": "outputs/research/team2_novelty_audit.csv",
-      "read_path": "outputs/consolidated/research_main_20261114/sources/v2_bc9fe3c0/outputs/research/team2_novelty_audit.csv",
+      "read_path": "outputs/consolidated/research_main_20261114/sources/v2_14be2d5b/outputs/research/team2_novelty_audit.csv",
       "role": "current_teammate_report_or_csv",
-      "remote_ref": "bc9fe3c0f352632a7117dbdab24df21b7450738e",
-      "git_blob_sha": "bd09e8eb2d05fb57037cef1b8af3b8fac872b8c3",
-      "sha256": "c8b9c7a551b412996429724a06e991e92842c46031ee914ac46a6f8fd5239ee8",
-      "bytes": 24016,
+      "remote_ref": "14be2d5b46ec49ecf2d685af60d249c7a4fd97b7",
+      "git_blob_sha": "ed9371daf19f92578f069f44433979b55c37e039",
+      "sha256": "b09390f3d58c82ceade22ceeaed67222f2f28032932d12e7828836a59099cc38",
+      "bytes": 28436,
       "byte_identical_to_remote": true,
-      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/bc9fe3c0f352632a7117dbdab24df21b7450738e/outputs/research/team2_novelty_audit.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/14be2d5b46ec49ecf2d685af60d249c7a4fd97b7/outputs/research/team2_novelty_audit.csv",
+      "raw_files_reread_by_mainline": false
+    },
+    {
+      "source_path": "outputs/research/team1_data_availability.csv",
+      "read_path": "outputs/consolidated/research_main_20261114/sources/v2_b35a01de/outputs/research/team1_data_availability.csv",
+      "role": "received_Team1_availability_manifest",
+      "remote_ref": "b35a01ded4d03132cea8ef141e0864dcf4ca39cc",
+      "git_blob_sha": "36a610cfe9bcc609dc5667e67165962155a19679",
+      "sha256": "24321bd5ea5e8660b39c50c93f6709d078db7a5a352bd26842a979d4e7a01a25",
+      "bytes": 21695,
+      "byte_identical_to_remote": true,
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b35a01ded4d03132cea8ef141e0864dcf4ca39cc/outputs/research/team1_data_availability.csv",
       "raw_files_reread_by_mainline": false
     }
   ],
@@ -162,9 +174,10 @@
   },
   "raw_access_boundary": "Mainline read teammate reports/CSVs and local science/QA/workbook, not EH rawPDF. Team2 executed EH full-table QA and delivered report/parser/summaryJSON; tidy row artifacts/plots not received by mainline. Do not attribute Team2 work to GPU.",
   "source_version_discrepancies": [
-    "Team1 latest prose adopted MR-v1; UV/EH CSV retains oldprovisional metadata; MR-v2 acknowledgment not received.",
-    "Team2 EARTH003 A-layer same-use and mainline overlap delivered at f54e107; do not reuse old missing-row statuses. Team1 has not yet acknowledged that later delivery in its current source.",
-    "LT25/45 citation chain known; cause/full1998text still insufficient; no unique truth selected."
+    "Team1 latest CSV now records MR-v1 and prior provisional history; its main-absent statements describe premerge context. MR-v2 acknowledgement pending.",
+    "Team1 availability manifest received; local_project_path all blank and raw hashes inherited/not recomputed in that round. Team2 EH transcription QA remains a separate delivered result.",
+    "Team2 LT/P6/P7 and QA received; remaining unknowns are depth-citation cause/full1998text, undefined new protocols and complete proposal inventory, not an entirely missing audit.",
+    "P8 supersedes historical presentation-unavailable statements only; unassigned alternative EZ geometry remains unknown. Mainline read Team2 receipt, not original71.8MB PDF."
   ],
   "excluded_current_inputs": [
     "retired Earth terrain ranking runs",
@@ -187,6 +200,15 @@
     {
       "main": "bc9fe3c0f352632a7117dbdab24df21b7450738e",
       "reason": "Team2 executed full EH transcription QA and descriptive reproduction; draft protocol received, not executed; update GPU handoff to reuse/export/accept and plot."
+    },
+    {
+      "main": "b35a01ded4d03132cea8ef141e0864dcf4ca39cc",
+      "reason": "Read actually preserved Team1 availability16rows/MRv1 response and Team2 P6/P7 scope update after PR merge."
+    },
+    {
+      "main": "14be2d5b46ec49ecf2d685af60d249c7a4fd97b7",
+      "reason": "Team2 P8 original45page Head presentation recovered; all alternative EZ crosswalk/boundaries unresolved; scoped P6 result unchanged and novelty uncleared."
     }
-  ]
+  ],
+  "current_receipt_main": "14be2d5b46ec49ecf2d685af60d249c7a4fd97b7"
 }

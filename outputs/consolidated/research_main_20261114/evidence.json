@@ -1,6 +1,6 @@
 {
   "version": "MR-20261114-v2",
-  "checked_taipei": "2026-11-14T20:08:22.200057+08:00",
+  "checked_taipei": "2026-11-14T20:20:01.569049+08:00",
   "workbook_sha256": "a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731",
   "status": "PASS",
   "executable_cell_checks": 44,
@@ -478,11 +478,14 @@
       "received": [
         "EARTH003 initial audit",
         "25/45 source chain",
-        "mainline archival description/mechanism overlap assessment"
+        "mainline archival description/mechanism overlap assessment",
+        "Team1 availability16row CSV andMRv1 response",
+        "Team2 NASA EMC P6/P7 scoped geometry",
+        "P8 original Head presentation acquisition record; alternative EZ boundaries still unresolved"
       ],
       "pending": [
         "1998fulltext or explicit correction/author explanation for depth cause",
-        "Team1 three-site raw-access and version-compliance followup",
+        "MRv2 recipient acknowledgments and raw row-artifact handoff",
         "future exact protocols if activated"
       ]
     },
@@ -550,5 +553,39 @@
       ]
     },
     "report_cross_engine_check": "Team2 reports all8922 row IDs,firsttimestamps andvalues identical between pypdf/PDFium; not independently rerun by mainline"
+  },
+  "receipt_main": "14be2d5b46ec49ecf2d685af60d249c7a4fd97b7",
+  "received_availability": {
+    "producer": "Team1",
+    "path": "outputs/research/team1_data_availability.csv",
+    "source_commit": "b35a01ded4d03132cea8ef141e0864dcf4ca39cc",
+    "rows": 16,
+    "candidate_counts": {
+      "EARTH-UV-001": 10,
+      "EARTH-002": 2,
+      "EARTH-003": 4
+    },
+    "all_local_project_paths_empty": true,
+    "raw_hashes_this_round": "inherited_or_not_obtained_not_independently_recomputed"
+  },
+  "received_Mars_geometry": {
+    "producer": "Team2",
+    "source_commit": "b35a01ded4d03132cea8ef141e0864dcf4ca39cc",
+    "catalog": "NASA EMC EZMars",
+    "ROI_polygons": 381,
+    "EZ_boundary_polygons": 51,
+    "I01_catalog_overlap": false,
+    "I02_catalog_overlap": false,
+    "overall_exact_same_purpose_status": "insufficient_data",
+    "mainline_recomputed_GIS": false,
+    "later_source_receipt": {
+      "producer": "Team2",
+      "source_commit": "14be2d5b46ec49ecf2d685af60d249c7a4fd97b7",
+      "check_id": "P8",
+      "original_presentation_pages": 45,
+      "original_PDF_reprocessed_by_mainline": false,
+      "alternative_EZ_crosswalk": "insufficient_data",
+      "changes_catalog_geometry_result": false
+    }
   }
 }

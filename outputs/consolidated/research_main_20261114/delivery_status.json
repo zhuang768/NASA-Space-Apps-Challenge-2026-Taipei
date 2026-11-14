@@ -1,14 +1,14 @@
 {
   "version": "MR-20261114-v2",
-  "updated_taipei": "2026-11-14T20:08:22.200057+08:00",
+  "updated_taipei": "2026-11-14T20:20:01.569049+08:00",
   "phase": "archive_QA_description_and_evidence_requirements",
   "remote_source_main": "bc9fe3c0f352632a7117dbdab24df21b7450738e",
   "branch": "codex/mars-research-mainline-20261114",
   "branch_head_before_update": "9e5c49ea7b4d7272972e7d409e6a298e6ef3da4a",
   "history_commit_MRv1": "9e5c49ea7b4d7272972e7d409e6a298e6ef3da4a",
-  "integration_status": "prepared_for_authorized_main_integration_pending_verification",
-  "integrated_into_main": false,
-  "integration_commit": null,
+  "integration_status": "verified_integrated_into_main",
+  "integrated_into_main": true,
+  "integration_commit": "b35a01ded4d03132cea8ef141e0864dcf4ca39cc",
   "local_main_synced": false,
   "preserve_other_local_changes": true,
   "excel_updated": false,
@@ -30,5 +30,23 @@
     "direct_messages_sent": false,
     "MRv2_recipient_acknowledgments": "pending"
   },
-  "record_semantics": "After publication, integration_commit records an actually verified main commit; source main identifies inputs, not the final main head."
+  "record_semantics": "After publication, integration_commit records an actually verified main commit; source main identifies inputs, not the final main head.",
+  "main_premerge_parent": "e040aef36a8940a937b5a17421d2bd824c164224",
+  "research_content_commit": "55881bf9fccb5465130a2f9dac61663a795534cf",
+  "pull_request": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/3",
+  "pull_request_merged": true,
+  "team1_availability_received": true,
+  "current_receipt_main": "14be2d5b46ec49ecf2d685af60d249c7a4fd97b7",
+  "own_diff_vs_actual_premerge_parent": "six owned file additions only",
+  "validation": {
+    "stable_requirement_ids": 27,
+    "duplicate_ids": 0,
+    "undefined_threshold_values_empty": true,
+    "dependency_cycles": 0,
+    "GPU08_current_target": "I-02/EARTH-002/EH2",
+    "Excel_unchanged": true,
+    "latest_teammate_blobs_preserved": true
+  },
+  "metadata_update_parent": "14be2d5b46ec49ecf2d685af60d249c7a4fd97b7",
+  "team2_P8_received": true
 }

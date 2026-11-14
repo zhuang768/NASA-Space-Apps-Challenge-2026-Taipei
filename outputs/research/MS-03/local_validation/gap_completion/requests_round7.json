@@ -1,0 +1,27 @@
+[
+  {
+    "identifier": "MOC_RDR_IMAGE",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mgs/moc/rdr/mgscim_1548/s17006/s1700607_na.img",
+    "filename": "s1700607_na.img",
+    "basis": "Exact RDR science image; label declares 10565x2728 unsigned8 and map projection",
+    "max_bytes": 30000000
+  },
+  {
+    "identifier": "RADAR_US_7965_DIR",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/rgram/s_0079xx/",
+    "filename": "rgram_0079xx.html",
+    "basis": "Official mapping links R_0796502 to s_00796502"
+  },
+  {
+    "identifier": "RADAR_CLUTTER_7965_DIR",
+    "url": "https://pds-geosciences.wustl.edu/mro/urn-nasa-pds-mro_sharad_simulations/data/s_0079xx/s_00796502/",
+    "filename": "clutter_00796502.html",
+    "basis": "Seek same-observation clutter simulation; no substitute from other tracks"
+  },
+  {
+    "identifier": "MOC_MAP_DEF",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mgs/moc/rdr/mgscim_1548/catalog/dsmap.cat",
+    "filename": "moc_dsmap.cat",
+    "basis": "Official PDS pixel origin and polar stereographic projection equations"
+  }
+]

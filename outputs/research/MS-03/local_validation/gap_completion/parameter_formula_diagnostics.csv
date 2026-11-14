@@ -1,0 +1,5 @@
+﻿diagnostic,comparison,unit,n,median,median_absolute,p95_absolute,max_absolute,interpretation
+documented_CAT74_multispectral_float64,calculated minus original official BD1500_2,dimensionless,13169,0.0007114219669197563,0.0018454319478774517,0.008408022752676884,0.019347334519968284,implementation comparison only; no scientific detection threshold
+same_CAT_formula_float32_precision_diagnostic,calculated minus original official BD1500_2,dimensionless,13169,0.0007114335894584656,0.0018454678356647491,0.008408001624047756,0.01934732124209404,implementation comparison only; no scientific detection threshold
+nominal_wavelengths_diagnostic_not_official_replacement,calculated minus original official BD1500_2,dimensionless,13169,0.0007205821691703695,0.0018449502279243024,0.00841771176825943,0.019352267552362468,implementation comparison only; no scientific detection threshold
+legacy_CAT_BD1500_different_parameter_not_replacement,calculated minus original official BD1500_2,dimensionless,13169,0.0054093462657316405,0.005410606023404263,0.013591196255282644,0.021631294475455753,implementation comparison only; no scientific detection threshold

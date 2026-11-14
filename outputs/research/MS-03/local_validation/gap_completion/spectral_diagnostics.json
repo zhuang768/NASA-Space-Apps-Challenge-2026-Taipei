@@ -1,0 +1,87 @@
+{
+  "input_files": [
+    {
+      "path": "official_resources/sources/t1811_mrral_60n243_0327_4_band28_rows.bin",
+      "sha256": "86deec26d04b0feb41b46a8b30496146b7ea9aae7c025d0b7ea46eb6dee34fd4"
+    },
+    {
+      "path": "official_resources/sources/t1811_mrral_60n243_0327_4_band33_rows.bin",
+      "sha256": "6aa651742100fe7553be4b91a0b85a708da28ee56d53dfc671b21a4ea531b131"
+    },
+    {
+      "path": "official_resources/sources/t1811_mrral_60n243_0327_4_band34_rows.bin",
+      "sha256": "77448278fa4d6ccd9fdc82eb58d0818b053e1cbbc6d75b4122869f94f442ebde"
+    },
+    {
+      "path": "official_resources/sources/t1811_mrral_60n243_0327_4_band39_rows.bin",
+      "sha256": "dab92d4861898a6ec4b60289137bf9a0122cb40c66b8cddbfa682d9819fdb5e8"
+    },
+    {
+      "path": "official_resources/sources/t1811_mrral_60n243_0327_4_band44_rows.bin",
+      "sha256": "85a21290617980c265bf8dd5b736e36e32e0b0552fafe9a6f4de265f3ad911ed"
+    },
+    {
+      "path": "official_resources/sources/t1811_mrral_60n243_0327_4_band45_rows.bin",
+      "sha256": "50b69c4473228cf7e622aa1bdb313188a6d5ccc7b00698b1195be07e7210bd34"
+    },
+    {
+      "path": "official_resources/sources/t1811_mrrsu_60n243_0327_4_band24_rows.bin",
+      "sha256": "e308a62cf0210368b8fcfec8d164dcf5792db9bdbe84731d2e810ccbadb7308c"
+    },
+    {
+      "path": "official_resources/sources/t1811_mrrsu_60n243_0327_4_band23_rows.bin",
+      "sha256": "53a90d03c24eabc70526802dcb672601133e9f108e99bb9f8b1297abcfffb76c"
+    },
+    {
+      "path": "official_resources/sources/t1811_mrrsu_60n243_0327_4_band25_rows.bin",
+      "sha256": "8087214362e36171d129008777e3f9953555e33c3ced96c31ce1adaa1c6da282"
+    },
+    {
+      "path": "official_resources/sources/t1811_mrrde_60n243_0327_4_band00_rows.bin",
+      "sha256": "3bc842f2a46967c744c522d7776a7012e2a0a684013e3072f58e75a2651e94b8"
+    },
+    {
+      "path": "official_resources/sources/t1811_mrrde_60n243_0327_4_band01_rows.bin",
+      "sha256": "b0552bd3d071b0e2a6063e9f139dfa2bd5df1b690ceb40658b152362465cd6f2"
+    },
+    {
+      "path": "official_resources/sources/t1811_mrrde_60n243_0327_4_band04_rows.bin",
+      "sha256": "804ad96dd66e3ccd03901d172c5c3c675cb69c94c55741007b6474109e10df3e"
+    },
+    {
+      "path": "official_resources/sources/t1811_mrrde_60n243_0327_4_band05_rows.bin",
+      "sha256": "ed063a1c88938d233fd3785a7cfb35b4e7597cbd6f343255543355d297fcdc28"
+    },
+    {
+      "path": "official_resources/sources/t1811_mrrde_60n243_0327_4_band09_rows.bin",
+      "sha256": "dc8018ff06e7fb79fd20cc49259fc249721017d0a32eae72f660630a289cbd23"
+    },
+    {
+      "path": "official_resources/sources/t1811_mrrde_60n243_0327_4_band10_rows.bin",
+      "sha256": "15df18fd712fea5416c6c2a937f719bea3516e873553958a5540036d60dcd536"
+    }
+  ],
+  "strict_source_centres": 13169,
+  "formula_source": "Official PDS CAT_v7_4_codeonly.zip: SummaryParams2014/crism_summary_bd1500_2.pro lines7\u201317; crism_sumutil_band_depth.pro lines47\u201357; July2026 reference pp1\u20132,5",
+  "cat_producer_binary_identity": "not established; CAT is an implementation reference, not the verified MRDR1.03.94 production execution",
+  "float32_minus_float64": {
+    "n": 13169,
+    "median": -4.444933310310262e-11,
+    "median_absolute": 2.57818115745323e-08,
+    "p95_absolute": 7.251382738715506e-08,
+    "max_absolute": 1.2601341747853212e-07
+  },
+  "official_ICER1_2_identity_residual": {
+    "n": 13169,
+    "median": 0.00011367135974449383,
+    "median_absolute": 0.00028533482346460026,
+    "p95_absolute": 0.0007257647654442589,
+    "max_absolute": 0.0018218913848282448
+  },
+  "root_cause": "unknown; diagnostics exclude some simple numerical explanations, not a replacement product",
+  "ice_presence": "unknown",
+  "actual_ice_depth_m": null,
+  "ice_fraction": null,
+  "cloud_frost_mask": "not validated",
+  "detection_threshold": null
+}

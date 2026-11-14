@@ -1,0 +1,14 @@
+[
+  {
+    "identifier": "LEVY_S1_PDF",
+    "url": "https://agupubs.onlinelibrary.wiley.com/doi/suppl/10.1029/2008JE003273/supinfo/jgre2606-sup-0004-ds01.pdf",
+    "filename": "levy_s1.pdf",
+    "basis": "Publisher-listed alternate PDF of exact original S1, not main Table1"
+  },
+  {
+    "identifier": "LEVY_LEGACY_AUX",
+    "url": "https://www.agu.org/journals/je/je0901/2008JE003273/2008je003273-ds01.txt",
+    "filename": "levy_legacy_aux.txt",
+    "basis": "Historical publisher auxiliary-file pattern; acceptance requires actual S1 content, not redirect or landing page"
+  }
+]

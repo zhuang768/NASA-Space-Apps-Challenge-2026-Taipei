@@ -1,5 +1,40 @@
 # MS-03 — local validation evidence notes
 
+## 2026-11-15：MS-03 全缺口逐項補查（MOC／同軌雷達／CAT／撞擊坑原表）
+
+- 起始 main：`ddd04cfcb5ea810d73304b1cf6ae064c1f77a1c5`；隔離分支 `codex/ms03-gap-completion-20261115`；保留其他人的工作與以下歷史查核。
+- [本輪資料與重現方式](../../../../outputs/research/MS-03/local_validation/gap_completion/README.md)；[逐項缺口／交接表](../../../../outputs/research/MS-03/local_validation/gap_completion/gap_status.csv)；[原始來源實讀範圍](../../../../outputs/research/MS-03/local_validation/gap_completion/source_read_log.csv)。
+- 本輪為資料、方法、表格、圖與條列筆記；不代寫正式報告、摘要、結論或簡報。
+- 整合時發現 main 已新增同類 CAT／歷史流程／run-artifact 查核；實讀其交接並完整保留。光譜診斷列為互核，不當新增獨立研究；[既有歷史流程查核](../../../../outputs/research/MS-03/local_validation/production_history/README.md)、[既有執行缺件查核](../../../../outputs/research/MS-03/local_validation/t1811_run_artifacts/README.md)。
+
+|項目|本輪確實取得／完成|仍不可推論|
+|---|---|---|
+|格內影像|MOC `S1700607_NA` 原始 RDR IMG／LBL；2006-04-08；完整檔案 SHA256 與 PDS 像素 checksum 核對；9,272,742個非零格內中心；3個固定512×512視窗實際開啟|3.00034m是投影網格，非實測解析力；沒有可靠閉合多邊形資料，不能說不存在；AD1維持方法參照|
+|既有冰暴露目錄|作者 Daubar2022 `6604912` 原 XLSX、provider MD5及CC-BY-4.0；1,203筆事件、固定格內0筆事件座標|只排除該目錄的事件點；不是影像足跡零相交、不是無冰／無研究，也不能代替Dundas2021 S4|
+|雷達中心線核對|官方 EDR→USRDR 對照、4條實際GEOM；`S_00796502`中心線0筆格內，`S_04624502`／`S_06059201`／`S_05882501`分別65／64／65筆|目錄足跡相交不保證中心線在格內；沒有對應列的兩條不代表官方完全無資料|
+|格內雷達＋雜波|取得`S_04624502_RGRAM`及同觀測combined simulation原始bytes；2016-06-07；65個格內中心、269個原始range rows；有圖和來源|模型不是獨立觀測，強度不能相減；無可信地下反射層pick、介電反演、冰深／含量；回波形狀差異原因未知|
+|光譜殘差|取得官方CAT7.4 source，核對multispectral分支；13,169個嚴格來源中心；float32/64差最大約1.26e−7，遠小於原參數殘差最大0.0193473|已排除精度差單獨解釋，未找到真正根因；舊BD1500是不同參數，不能拿來取代BD1500_2；雲霜／儀器QA及檢出界限仍未知|
+|三份原始表|本輪再試ScienceBase alternate API、TDL native API、Levy S1 PDF及歷史AGU入口，實際404／403|仍未取得Cohen-Zada原資料／headers、Levy全S1、Dundas全S4；格內成員未知，不填0|
+|UV時標|保留原始檔缺件與配時禁令；精確校準檔名搜尋未取得可用程式|未修正四小時差、未和HOBO配時、未用Earth數字反推Mars冰深|
+
+- [MOC影像／固定視窗圖](../../../../outputs/research/MS-03/local_validation/gap_completion/F-GAP01_MOC_in_cell_review.png)；[CAT參數QA圖](../../../../outputs/research/MS-03/local_validation/gap_completion/F-GAP02_spectral_implementation_QA.png)；[同軌雷達／雜波圖](../../../../outputs/research/MS-03/local_validation/gap_completion/F-GAP03_same_track_radar_clutter.png)。
+- MOC只實際判讀3個固定視窗：可見細碎紋理與大尺度明暗，未建立可重現的閉合多邊形邊界；不能把全格或全影像寫成已完成地貌普查。原始DN與遮罩crop保留，沒有增強或生成研究影像。
+- 原始XLSX的B／C括號方位單位寫反，未悄悄改來源；按Latitude／Longitude變數名稱解析，另以官方`PSP_007561_1290`中心約−50.602°N、305.990°E核對方向。該產品在格外，只作欄位方向查核，不作本格證據。
+- 雷達使用GEOM的planetocentric／east-positive座標選中心；`rtrn`的SpacecraftLat是geodetic，沒有混用。官方guide PDF p20／printed19範例確認Column減1、NadirLine直接作零起算row。
+- 原始雷達資料與模型網格相容不等於冰已確認。圖內觀測有彎曲重複紋理與低功率帶；本輪未查明其物理／處理原因，未將它們命名為冰層。模型的90km跨軌地形與128ppd來源也可能漏雜波；不能以「模型沒有」證明地下。
+- SHARAD 0.0375µs是採樣間隔，10MHz對應15m真空range resolution；不是本格淺冰深真值。現有圖不提供約0.10m熱模型界面的獨立深度驗證，也未宣稱任何薄冰都絕對不可偵測。
+- CAT source是可讀實作參照，沒有執行IDL或取得MRDR producer1.03.94的實際執行回條。參數資料與albedo可能經不同正規化是待查假說，未當根因。
+- 完整取得／失敗紀錄：[52次HTTP請求](../../../../outputs/research/MS-03/local_validation/gap_completion/retrievals.json)；HTTP200／206仍需內容與科學品質核對。原有搜尋log逐列保留並追加，前輪來源未刪。
+
+|對象|可以直接接續|仍需補件／決定|暫停的分析|
+|---|---|---|---|
+|主要對話／人類作者|採「固定格資料追溯、QA與可觀測性檢查」定位；使用新增圖與結構表，明列未知|決定是否值得啟用雷達專業判讀與同模式光譜控制；三原表或作者提供原件；新穎性只作有限搜尋結果|首次場址／首次類比、已證實地下冰、冰量、AD1具體幾何類比|
+|GPU|可讀相同USRDR／simulation原始range bytes、GEOM與欄位；用現有MRDR原bytes重現殘差|科學使用前處理surface／artefact／clutter與QA，若無可靠pick保留unknown；沒有冰ground truth不自行設threshold|不相減模型power、不把range row直接轉冰深、不追描無可靠邊界、不跨Campbell／HOBO自動配時|
+|地球配對／隊友1|AD1仍一般方法參照；UV仍已知界面與資料QA參照，無新候選|有可靠格內Mars邊界才設一致取樣／尺度比較；獨立材料／地下觀測才能討論成因|不把Earth多邊形或深度填入MS-03未知，不宣稱量化最像|
+
+- 本輪實際新增的是固定格的原始影像／雷達取得與檢查、可重跑目錄查詢和參數診斷；沒有新增獨立冰真值，未完成歷史完整的新穎性排除。
+- 下方各輪紀錄保留；「尚無同軌雜波／只有目錄」等舊取得狀態，僅適用其當時材料，由本節與新表補充；未將舊unknown改成不存在。
+
 ## 2026-11-15：T1811 執行設定、係數與配對中間資料補查
 
 - 起始main：`fee734610c6bacc57880eaaba1a1301f09fdd4d6`；只更新local_validation，保留以下歷史紀錄。

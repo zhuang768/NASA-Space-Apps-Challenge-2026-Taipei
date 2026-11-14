@@ -1,0 +1,20 @@
+[
+  {
+    "identifier": "MOC_PRODUCT",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mgs-m-moc-na_wa-2-sdp-l0-v1.0/mgsc_1548/s17006/s1700607.imq",
+    "filename": "s1700607.imq",
+    "basis": "Exact official ODE product-file URL for fixed-cell-intersecting S17/00607"
+  },
+  {
+    "identifier": "MOC_BROWSE",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mgs-m-moc-na_wa-2-sdp-l0-v1.0/mgsc_1548/extras/browse/s17006/s1700607.imq.jpg",
+    "filename": "s1700607.imq.jpg",
+    "basis": "Exact official ODE product-file URL for fixed-cell-intersecting S17/00607"
+  },
+  {
+    "identifier": "MOC_AUTHOR_GALLERY",
+    "url": "https://www.msss.com/moc_gallery/s13_s18/images/S17/S1700607.html",
+    "filename": "moc_gallery.html",
+    "basis": "MOC team public gallery naming convention; verify actual page/product ID, do not infer image quality from URL"
+  }
+]

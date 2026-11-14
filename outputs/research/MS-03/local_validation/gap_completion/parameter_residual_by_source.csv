@@ -1,0 +1,6 @@
+﻿target_id_hex,scope,n,median,median_absolute,p95_absolute,max_absolute,unit
+00003385,source DDR centres inside fixed ROI,3153,0.002962291179240406,0.002962291179240406,0.009806050524376886,0.011260017325737781,dimensionless; descriptor not calibrated error
+0001587c,source DDR centres inside fixed ROI,1,0.019347334519968284,0.019347334519968284,0.019347334519968284,0.019347334519968284,dimensionless; descriptor not calibrated error
+00018fda,source DDR centres inside fixed ROI,154,-0.003019135851650756,0.003069475700443358,0.005555931947741155,0.006377287537513432,dimensionless; descriptor not calibrated error
+00026a97,source DDR centres inside fixed ROI,9271,0.00028221497193570144,0.0017031607594762965,0.006054229489152102,0.012180012060168277,dimensionless; descriptor not calibrated error
+00031696,source DDR centres inside fixed ROI,590,0.0014016172766173618,0.0022843941063345197,0.008251480831965585,0.014993762062256333,dimensionless; descriptor not calibrated error

@@ -1,0 +1,7 @@
+﻿italian_product_id,US_crosswalk_basename,strict_GEOM_centre_hits,first_column_1based,last_column_1based,geom_source,scope
+R_0796502_001_SS19_700_A,s_00796502,0,,,sources/s_00796502_geom.tab,actual GEOM planetocentric centres; not full radar scattering footprint
+R_1768301_001_SS19_700_A,,,,,,not found in this downloaded crosswalk; archive-wide availability unknown
+R_4624502_001_SS19_700_A,s_04624502,65,2185,2249,sources/s_04624502_geom.tab,actual GEOM planetocentric centres; not full radar scattering footprint
+R_5476301_001_SS19_700_A,,,,,,not found in this downloaded crosswalk; archive-wide availability unknown
+R_6059201_001_SS19_700_A,s_06059201,64,2183,2246,sources/s_06059201_geom.tab,actual GEOM planetocentric centres; not full radar scattering footprint
+R_5882501_001_SS19_700_A,s_05882501,65,2388,2452,sources/s_05882501_geom.tab,actual GEOM planetocentric centres; not full radar scattering footprint

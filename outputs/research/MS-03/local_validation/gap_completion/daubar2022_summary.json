@@ -1,0 +1,43 @@
+{
+  "source_doi": "10.5281/zenodo.6604912",
+  "paper_doi": "10.1029/2021JE007145",
+  "source_sha256": "393ed99a157a7e68a77fc3adf332939ea368a15f2b7ac2589cb701e4f82291f6",
+  "license": "CC-BY-4.0 per author record metadata",
+  "original_headers": {
+    "A": "HiRISE Observation ID",
+    "B": "Latitude (deg E, centric)",
+    "C": "Longitude (deg N)",
+    "D": "Ls of image",
+    "E": "Date of image",
+    "F": "Mars Year of image",
+    "G": "Single or cluster",
+    "H": "Ice-exposing impact",
+    "I": "Halo",
+    "J": "Linear Rays",
+    "K": "Arcuate rays",
+    "L": "Dark-, Light-, or Dual-toned BZ",
+    "M": "Diameter (m)",
+    "N": "Before Image Instrument",
+    "O": "Before Image ID",
+    "P": "Before Image Date",
+    "Q": "After Image Instrument",
+    "R": "After Image ID",
+    "S": "After Image Date",
+    "T": "Reference for previously published diameter "
+  },
+  "original_header_issue": "B has Latitude (deg E, centric), C has Longitude (deg N): parenthetical cardinal-unit labels conflict with variable names. Coordinates read by variable name and independently checked against official HiRISE product PSP_007561_1290; original labels preserved.",
+  "rows": 1203,
+  "point_hits": 0,
+  "hits": [],
+  "original_ice_flag_counts": {
+    "n": 1135,
+    "possible": 20,
+    "y": 48
+  },
+  "interpretation": "No catalogued point in this bounded source is not no ice, no crater, no study, or no overlapping image.",
+  "selection_limit": "Paper sections2\u20132.1: dated new impacts with before/after constraints and crater-resolving HiRISE confirmation; not equivalent to Dundas2021 TableS4 selection.",
+  "Dundas_TableS4_replacement": false,
+  "ice_presence": "unknown",
+  "ice_depth_m": null,
+  "ice_fraction": null
+}

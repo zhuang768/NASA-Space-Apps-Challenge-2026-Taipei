@@ -1,0 +1,32 @@
+[
+  {
+    "identifier": "MOC_SOFTWARE_DIR",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mgs-m-moc-na_wa-2-sdp-l0-v1.0/mgsc_1548/software/",
+    "filename": "moc_software_directory.html",
+    "basis": "Original MOC volume software directory; find mission-provided decompressor rather than invent decoding"
+  },
+  {
+    "identifier": "MOC_RDR_DIR",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mgs/moc/rdr/mgscim_1548/",
+    "filename": "moc_rdr_directory.html",
+    "basis": "Adjacent official MOC RDR volume naming checked against published MOC RDR SIS; availability not assumed"
+  },
+  {
+    "identifier": "RADARGRAM_DIR",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/rgram/",
+    "filename": "sharad_rgram_directory.html",
+    "basis": "Actual official US radargram data-directory link"
+  },
+  {
+    "identifier": "CLUTTER_TRACK_DIR",
+    "url": "https://pds-geosciences.wustl.edu/mro/urn-nasa-pds-mro_sharad_simulations/data/s_0176xx/",
+    "filename": "sharad_clutter_track_directory.html",
+    "basis": "Official listing contains s_0176xx directory; look for actual same-orbit files, not adjacent orbit substitution"
+  },
+  {
+    "identifier": "RADAR_DOC_DIR",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/document/",
+    "filename": "sharad_document_directory.html",
+    "basis": "Official radargram product specification and sampling/resolution documentation"
+  }
+]

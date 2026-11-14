@@ -1,0 +1,423 @@
+{
+  "checks": [
+    {
+      "request_id": "CAT_CODE",
+      "http_status": 200,
+      "file": "sources/CAT_v7_4_codeonly.zip",
+      "classification": "original_source_archive_selected_functions_inspected_not_executed",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "PARAM_PDF",
+      "http_status": 200,
+      "file": "sources/summary_parameter_reference_202607.pdf",
+      "classification": "original_document_selected_pages_read_not_scientific_measurements",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "DAUBAR_META",
+      "http_status": 200,
+      "file": "sources/daubar2022_record.json",
+      "classification": "original_author_metadata_not_observation_rows",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "DAUBAR_TABLE",
+      "http_status": 200,
+      "file": "sources/Daubar_2022_catalog_tableS1.xlsx",
+      "classification": "original_author_XLSX_verified_and_all_rows_parsed",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "ODE_IIPT",
+      "http_status": 200,
+      "file": "sources/ode_iipt.json",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "SHARAD_PORTAL",
+      "http_status": 200,
+      "file": "sources/sharad_portal.html",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "MOC_NASDP",
+      "http_status": 200,
+      "file": "sources/moc_NASDP.json",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "MOC_NADSDP",
+      "http_status": 200,
+      "file": "sources/moc_NADSDP.json",
+      "classification": "bounded_catalogue_response_not_archive_wide_absence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "MOC_PRODUCT",
+      "http_status": 200,
+      "file": "sources/s1700607.imq",
+      "classification": "original_compressed_IMQ_acquired_not_decoded_or_used_as_pixels",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "MOC_BROWSE",
+      "http_status": 200,
+      "file": "sources/s1700607.imq.jpg",
+      "classification": "browse_JPEG_acquired_not_used_as_measurement",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "MOC_AUTHOR_GALLERY",
+      "http_status": 404,
+      "file": "sources/moc_gallery.html",
+      "classification": "request_failed_no_requested_scientific_payload",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "MOC_SOFTWARE_DIR",
+      "http_status": 200,
+      "file": "sources/moc_software_directory.html",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "MOC_RDR_DIR",
+      "http_status": 200,
+      "file": "sources/moc_rdr_directory.html",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "RADARGRAM_DIR",
+      "http_status": 200,
+      "file": "sources/sharad_rgram_directory.html",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "CLUTTER_TRACK_DIR",
+      "http_status": 200,
+      "file": "sources/sharad_clutter_track_directory.html",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "RADAR_DOC_DIR",
+      "http_status": 200,
+      "file": "sources/sharad_document_directory.html",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "MOC_RDR_SUBDIR",
+      "http_status": 200,
+      "file": "sources/moc_rdr_subdir.html",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "RADAR_US_TRACK_DIR",
+      "http_status": 200,
+      "file": "sources/sharad_us_track_directory.html",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "RADAR_EDR_US_MAP",
+      "http_status": 200,
+      "file": "sources/edr_to_usrdr.csv",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "RADAR_PROCESSING",
+      "http_status": 200,
+      "file": "sources/rgram_processing.html",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "MOC_RDR_LABEL",
+      "http_status": 200,
+      "file": "sources/s1700607_na.lbl",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "MOC_RDR_IMAGE",
+      "http_status": 200,
+      "file": "sources/s1700607_na.img",
+      "classification": "original_RDR_pixels_decoded_PDS_checksum_verified",
+      "science_or_model_array_decoded": true,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "RADAR_US_7965_DIR",
+      "http_status": 200,
+      "file": "sources/rgram_0079xx.html",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "RADAR_CLUTTER_7965_DIR",
+      "http_status": 200,
+      "file": "sources/clutter_00796502.html",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "MOC_MAP_DEF",
+      "http_status": 404,
+      "file": "sources/moc_dsmap.cat",
+      "classification": "request_failed_no_requested_scientific_payload",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "US_rgram.lbl",
+      "http_status": 200,
+      "file": "sources/s_00796502_rgram.lbl",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "US_rgram.xml",
+      "http_status": 200,
+      "file": "sources/s_00796502_rgram.xml",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "US_GEOM_DIR",
+      "http_status": 200,
+      "file": "sources/geom_0079xx.html",
+      "classification": "original_geometry_read_fixed_cell_centres_tested",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "CLUTTER_sim.xml",
+      "http_status": 200,
+      "file": "sources/s_00796502_sim.xml",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "CLUTTER_rtrn.xml",
+      "http_status": 200,
+      "file": "sources/s_00796502_rtrn.xml",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "MOC_CATALOG_DIR",
+      "http_status": 200,
+      "file": "sources/moc_catalog_dir.html",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "RADAR_geom.lbl",
+      "http_status": 200,
+      "file": "sources/s_00796502_geom.lbl",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "RADAR_geom.tab",
+      "http_status": 200,
+      "file": "sources/s_00796502_geom.tab",
+      "classification": "original_geometry_read_fixed_cell_centres_tested",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "RADAR_geom.xml",
+      "http_status": 200,
+      "file": "sources/s_00796502_geom.xml",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "CLUTTER_RETURNS",
+      "http_status": 200,
+      "file": "sources/s_00796502_rtrn.csv",
+      "classification": "modelled_geometry_and_return_indices_not_ice_measurements",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "MOC_DSMAP",
+      "http_status": 200,
+      "file": "sources/DSMAP.CAT",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "HIRISE_COORD_CHECK",
+      "http_status": 200,
+      "file": "sources/PSP_007561_1290.html",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "US_GEOM_04624502",
+      "http_status": 200,
+      "file": "sources/s_04624502_geom.tab",
+      "classification": "original_geometry_read_fixed_cell_centres_tested",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "US_GEOM_06059201",
+      "http_status": 200,
+      "file": "sources/s_06059201_geom.tab",
+      "classification": "original_geometry_read_fixed_cell_centres_tested",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "US_GEOM_05882501",
+      "http_status": 200,
+      "file": "sources/s_05882501_geom.tab",
+      "classification": "original_geometry_read_fixed_cell_centres_tested",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "US_46245_LABEL",
+      "http_status": 200,
+      "file": "sources/s_04624502_rgram.lbl",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "US_46245_GEOM_LABEL",
+      "http_status": 200,
+      "file": "sources/s_04624502_geom.lbl",
+      "classification": "original_geometry_read_fixed_cell_centres_tested",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "CLUTTER_46245_sim.xml",
+      "http_status": 200,
+      "file": "sources/s_04624502_sim.xml",
+      "classification": "source_metadata_or_directory_not_ice_evidence",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "CLUTTER_46245_rtrn.csv",
+      "http_status": 200,
+      "file": "sources/s_04624502_rtrn.csv",
+      "classification": "modelled_geometry_and_return_indices_not_ice_measurements",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "SCIENCEBASE_API_ALTERNATE",
+      "http_status": 404,
+      "file": "sources/dundas_api_alternate.json",
+      "classification": "request_failed_no_requested_scientific_payload",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "TEXAS_NATIVE_API",
+      "http_status": 403,
+      "file": "sources/cohen_tdl_native_api.json",
+      "classification": "request_failed_no_requested_scientific_payload",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "LEVY_S1_PDF",
+      "http_status": 403,
+      "file": "sources/levy_s1.pdf",
+      "classification": "request_failed_no_requested_scientific_payload",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "LEVY_LEGACY_AUX",
+      "http_status": 403,
+      "file": "sources/levy_legacy_aux.txt",
+      "classification": "request_failed_no_requested_scientific_payload",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "US_RADAR_PIXELS",
+      "http_status": 206,
+      "file": "sources/s_04624502_rgram_rows.bin",
+      "classification": "original_exact_HTTP206_array_bytes_verified_and_decoded",
+      "science_or_model_array_decoded": true,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "SAME_TRACK_CLUTTER",
+      "http_status": 206,
+      "file": "sources/s_04624502_sim_combined_rows.bin",
+      "classification": "original_exact_HTTP206_array_bytes_verified_and_decoded",
+      "science_or_model_array_decoded": true,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "CLUTTER_GUIDE",
+      "http_status": 200,
+      "file": "sources/clutter_userguide.pdf",
+      "classification": "original_document_selected_pages_read_not_scientific_measurements",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    },
+    {
+      "request_id": "RADAR_PDS4_NOTES",
+      "http_status": 200,
+      "file": "sources/rgram_pds4_notes.pdf",
+      "classification": "original_document_selected_pages_read_not_scientific_measurements",
+      "science_or_model_array_decoded": false,
+      "ice_confirmed": false
+    }
+  ],
+  "original_target_tables_acquired": 0,
+  "new_separate_Daubar_catalogue_acquired": true,
+  "ice_confirmed": false
+}

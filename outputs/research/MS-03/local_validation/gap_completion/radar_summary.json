@@ -1,0 +1,52 @@
+{
+  "product_id": "S_04624502_RGRAM",
+  "clutter_product": "s_04624502_sim.img combined array",
+  "source_observation_utc": [
+    "2016-06-07T22:23:51.611",
+    "2016-06-07T22:24:01.059"
+  ],
+  "source_inputs": [
+    {
+      "path": "sources/s_04624502_rgram_rows.bin",
+      "bytes": 3846700,
+      "sha256": "6840dd869bf287b6b704c1377c6c7627acde2cc1083db2133d87fbf68e5d3d83"
+    },
+    {
+      "path": "sources/s_04624502_sim_combined_rows.bin",
+      "bytes": 3846700,
+      "sha256": "bd08cbf3a62da1926c409bf0d4d92c941b6ecb59e4e862c9f0967f9fc3117599"
+    }
+  ],
+  "array_shape": [
+    269,
+    65
+  ],
+  "strict_roi_centre_count": 65,
+  "columns_1based": [
+    2185,
+    2249
+  ],
+  "original_rows_0based": [
+    2182,
+    2450
+  ],
+  "row_sampling_us": 0.0375,
+  "sampling_is_range_resolution": false,
+  "native_USRDR_bandwidth_MHz": 10,
+  "vacuum_range_resolution_m": 15,
+  "typical_material_vertical_resolution_m": "5\u20138 per official processing document; depends on dielectric model, not local measurement",
+  "maximum_power_row_minus_model_nadir_min_max": [
+    -67,
+    185
+  ],
+  "maximum_is_not_subsurface_pick": true,
+  "coordinates": "GEOM planetocentric/east-positive; rtrn geodetic latitude never used for ROI membership",
+  "index_convention_source": "Clutter user guide PDF p20 (printed19), Python example: Column minus1; NadirLine/FirstLine used directly as zero-based array indices",
+  "membership_scope": "65 footprint centres inside ROI; off-nadir scattering extends outside ROI",
+  "simulation_is_independent_observation": false,
+  "amplitude_subtraction_allowed": false,
+  "quality_limit": "Simulation predicts timing, not calibrated amplitude; 128ppd MOLA DSM interpolation can omit actual clutter. No validated subsurface reflector, SNR/detection calibration or dielectric inversion.",
+  "ice_presence": "unknown",
+  "actual_ice_depth_m": null,
+  "ice_fraction": null
+}

@@ -1,0 +1,32 @@
+{
+  "review_date_taipei": "2026-11-15",
+  "actually_opened": [
+    "MOC_detail_1_native_DN.png",
+    "MOC_detail_2_native_DN.png",
+    "MOC_detail_3_native_DN.png",
+    "F-GAP01_MOC_in_cell_review.png",
+    "F-GAP02_spectral_implementation_QA.png",
+    "F-GAP03_same_track_radar_clutter.png"
+  ],
+  "MOC": {
+    "scope": "three fixed512x512windows, not whole-cell complete feature census",
+    "observed": "fine mottled/textured surface and broad tonal contrasts; no confidently traced closed polygon network in these reviewed windows",
+    "not_concluded": [
+      "absence of polygons",
+      "absence/presence of ice",
+      "effective spatial resolving power",
+      "full-strip quality qualification"
+    ]
+  },
+  "radar": {
+    "scope": "same observation cropped269x65pixels; no quantitative inversion",
+    "observed": "Observed signal has repeated curved bands and a low-power zone; model image has different structure. Cause and relation to real subsurface unknown.",
+    "not_concluded": [
+      "physical cause of curved bands or low-power zone",
+      "validated subsurface reflector",
+      "ice depth or fraction",
+      "all observed features reproduced by model"
+    ]
+  },
+  "figure_QA": "Explicit east-positive footprint fixed; legend/footer and radar caption clipping corrected after actual opening; final images reopened."
+}

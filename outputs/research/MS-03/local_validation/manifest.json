@@ -1187,8 +1187,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/search_log.csv",
-      "bytes": 130897,
-      "sha256": "594472061ad263d13c6944afa26c1304bf6cb4f59b1150e82336905e9704b807"
+      "bytes": 155767,
+      "sha256": "803277e3bb947eb9dc23bf7ff3b35475bd0efda29e633b14877574d8a71abdb4"
     },
     {
       "path": "outputs/research/MS-03/local_validation/sharad_local_geometry.csv",
@@ -1807,8 +1807,8 @@
     },
     {
       "path": "docs/research/MS-03/local_validation/research_notes.md",
-      "bytes": 37077,
-      "sha256": "8f336fc159fe8e1bb2fea8a57d6abd2e7f6ea21e2a9d2433de8d496f147f7d6b"
+      "bytes": 43621,
+      "sha256": "a81eebffd855d3e3eb21d7bdec5d4101489bea619e775b60d2d20ba51f4f62e9"
     }
   ],
   "source_preservation_note": "Original acquired PDS labels, KML and XML retain provider whitespace/CRLF; git diff whitespace warnings for source bytes are intentionally not normalized. Authored Python/Markdown passed whitespace check.",
@@ -1858,5 +1858,7 @@
     "new_scientific_disposition": "unchanged; unknown morphology, independent local ice/depth/content unconfirmed",
     "validation": "original_tables_followup/validation.json",
     "timestamp_utc": "2026-11-14T19:55:16.073530+00:00"
-  }
+  },
+  "gap_completion_supplement": "gap_completion/manifest.json",
+  "gap_completion_starting_sha": "ddd04cfcb5ea810d73304b1cf6ae064c1f77a1c5"
 }

@@ -1,0 +1,505 @@
+{
+  "zip_sha256": "5e1ac8d658143f7b5cbef30b27598fa5ea68b0642054bb224910538215760da0",
+  "members": [
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/mro_crism_summary_flatten.pro",
+      "sha256": "5eb4cd4b5742d43e0d5e2d322882ad20edd2c7476b002c0a2139dbf9d67a11d1",
+      "bytes": 2857
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/mro_crism_summary_flatten_envi.pro",
+      "sha256": "cb8a6abe1c92eb198017f8745e27d392b48a9d099384b41653d153cc634c0afb",
+      "bytes": 8827
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/compute_summary_params_cev.pro",
+      "sha256": "f9062e829f2ff43b7ad484c8f334cb359f2f7f0ec06ada0ab8c7560f3baf6b29",
+      "bytes": 24767
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/create_library_cube.pro",
+      "sha256": "4adcd2f7827667fbc2f097b436a86f6ee72e1c35aa9f0b310fedca6028ebc5f4",
+      "bytes": 361
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_browse_maf.pro",
+      "sha256": "4c0bb9d9dc967586fdb24a63311ba18b8aa3ca74a1a1dbd329b09873d5e96033",
+      "bytes": 436
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd1300.pro",
+      "sha256": "ccc01b29066b8e644b52ef1ac7a871e82d9fc15cad87a29339f8f17b997f7784",
+      "bytes": 555
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd1400.pro",
+      "sha256": "d64e8c47d9e92f014654f77084dee717556af216b790cf8842e807781e526c67",
+      "bytes": 345
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd1435.pro",
+      "sha256": "c1f644f148107eeb0b043abdcd963a6441f1dc50143aa5cda1e20ba1c7517ed1",
+      "bytes": 284
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd1500.pro",
+      "sha256": "c2630ccd5e9fcfc124674cd7dd563022bb72b4afa06bc34b12d42c276061bd69",
+      "bytes": 1018
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd1500_2.pro",
+      "sha256": "be038c390f81eb5a978b8bac8831cb981f4d7bc4e9d88c4e86d63dcf589190f7",
+      "bytes": 1046
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd1750.pro",
+      "sha256": "097198ca16a4a3897d4a02c6254faaa05099abd6ada54b3a850339a54725678d",
+      "bytes": 585
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd1750_2.pro",
+      "sha256": "540fb1fb491d345f5be7fc69746e22fbd7815cb81c2b69a51386918c790df55d",
+      "bytes": 866
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd1900.pro",
+      "sha256": "6f2f75635ec5f4cacd2ac59b01d7f6e6ca5a93bbf2fcf07d8e8fdc2e0444dbab",
+      "bytes": 1046
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd1900_2.pro",
+      "sha256": "5cbd0d8b01052374381f4f87d28511c4497d520cf79472099abd04c6f6360849",
+      "bytes": 1366
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd1900r.pro",
+      "sha256": "fcc0961d9e55ae838c42a65fe2e4c32094aed45fb2bcb00cffad3cbf7656e153",
+      "bytes": 1814
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd1900r2.pro",
+      "sha256": "9bfa71d6e3dba731324bbb8f49dc4a02be2d624474b9e2037c68d437416c970f",
+      "bytes": 4755
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2100.pro",
+      "sha256": "71545dd9933384024919d04cc17e8cdaad81a28e9c590e2371bb0285f44e8656",
+      "bytes": 1584
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2100_2.pro",
+      "sha256": "093afc153776e95a87c8391cada5654df43a7b8acc3d50c0d7f0b84f0a14fe77",
+      "bytes": 1911
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2165.pro",
+      "sha256": "a57cf25efdf46185b2fb0c0a7b9bc7ed2d87f1d89cc171d213c79fb316d5fe90",
+      "bytes": 459
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2190.pro",
+      "sha256": "7649f80cf952d34aa55886ff4de14d67739b6d3ba30cc7b43259c425f166af35",
+      "bytes": 465
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2210.pro",
+      "sha256": "ef20fe844ccb86d7a6423cd075b779e571600f50e8fc544e0037a175de1e6392",
+      "bytes": 471
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2210_2.pro",
+      "sha256": "9c352f651b23db9fc1bb21d6b07ed1005545214114fbe391b365f2c57665bc31",
+      "bytes": 559
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2230.pro",
+      "sha256": "94c1f6e73863730f1776b432f5e3a8950cb230ea86a4fe49fef27c35e486e1ee",
+      "bytes": 335
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2250.pro",
+      "sha256": "2df1c9f9f60d1423aa3f652f3715d30f3bf835a4f697845904b5f5d846ac683d",
+      "bytes": 560
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2265.pro",
+      "sha256": "b1e65caf63d852e66f82430b3c099ac4690d1c6ece5c39cdd0abd6fee45b9a78",
+      "bytes": 615
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2290.pro",
+      "sha256": "e5af0eac5662e82af2a85a4d8fe3c9c6487e4fa94e0b1427fb5b66db369bd3d9",
+      "bytes": 686
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2350.pro",
+      "sha256": "ea02acc7306ced329728dab8b2b9d140ba76519e8ed31cd0c284ac258c7156e4",
+      "bytes": 1510
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2355.pro",
+      "sha256": "d7e611aff6a9555f865e182888684992d804e24176ab2dddfacf141e046dada8",
+      "bytes": 451
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2500_2.pro",
+      "sha256": "dcedb6e359358451a055f7de91eef62ec49abf55491e5f2029aa5a7694705b4e",
+      "bytes": 651
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2500h.pro",
+      "sha256": "7176df2ba9ecaace96342fe4b0a2ece295a1e555f0c61f3c932b146beb8fa0c6",
+      "bytes": 805
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2600.pro",
+      "sha256": "d406388d6bd671efe8859df9dd331e73b6cc126209fcce15d869bed862e19956",
+      "bytes": 441
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd2700.pro",
+      "sha256": "4db151da037f51a00911d67cf6d7875c1a36bece38c6082ee2b1b42ed964d138",
+      "bytes": 973
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd3000.pro",
+      "sha256": "4c665b23e4a8252ae9fa1be3847ed2610b811616c1b39e7d6502844064e57b76",
+      "bytes": 891
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd3100.pro",
+      "sha256": "3122d3b0967475003fbfa1994496957f0824a52564727b1dd7b898a1b6f5cb51",
+      "bytes": 543
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd3200.pro",
+      "sha256": "ef5057c6088bbf6877cdbf1bde209f76d3115e744032dc372ee96cb9bc28d694",
+      "bytes": 582
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd3400.pro",
+      "sha256": "5078b53080478bb6384201169a0644156c78dec815a6bdd35d7b7564af3f8ced",
+      "bytes": 1834
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd3400_2.pro",
+      "sha256": "c23b39ff2e0041a8bdeb2623dc9ba9a9ba5a18ecc4226e5c066cc11702743eb9",
+      "bytes": 1929
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd530.pro",
+      "sha256": "63624ad1dc8d7ed7f59373d8f7eeb96af53fe25801f6e04172d2881fd89bee21",
+      "bytes": 437
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd530_2.pro",
+      "sha256": "6b941c1a1bf4bf208f86643857a283e05e86d3bb5abf754182af54eb8be73184",
+      "bytes": 575
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd640.pro",
+      "sha256": "c9ecc154b49ea404d529fc5db2f6c4f99be041a6b61876c7271ea6135dc17ca8",
+      "bytes": 689
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd640_2.pro",
+      "sha256": "969e36903c01fa5a0be1cc7f10c914c465b2924f0ae5bb8b3637a4df7d724106",
+      "bytes": 775
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd860.pro",
+      "sha256": "b4c4ad00ed2ab822b2525c2c1725d1df3a9a8caedc87c8f83c849e0e632c7946",
+      "bytes": 546
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd860_2.pro",
+      "sha256": "dd0c005113131fda72ea024da6d2905af21adeac827147eca550603e71a72110",
+      "bytes": 812
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd920.pro",
+      "sha256": "f9544a62ca52e9e24c33c52f89f3a3ab7fbbc3c959cea243e8404956569005f0",
+      "bytes": 242
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd920_2.pro",
+      "sha256": "b7a1b3221c320be1efaf3bf408f51eb23558ca5f4b4fb1fd5c729b0672310e66",
+      "bytes": 669
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bdcarb.pro",
+      "sha256": "cb4e5c6c3a3f294b231e37b5784ef9de663a5bd0951e092e93f0d7d970436326",
+      "bytes": 3290
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bdi1000ir.pro",
+      "sha256": "ee6e5887e04e52a4369e0d6717da8b458394d5b2374241034a59fb9380f85cfe",
+      "bytes": 4081
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bdi1000vis.pro",
+      "sha256": "3ec27f9487a002567c5319234fab9ef091a020a0b9f3e9b34c428bae4238649e",
+      "bytes": 3082
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bdi2000.pro",
+      "sha256": "1a2f40cac7ce928634c7bb296877201d99328c727bbf981d88bb4b323bddae1c",
+      "bytes": 2946
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_cindex.pro",
+      "sha256": "c8500e20f0aa082c6abc855ff853fca7f616e1503a2579f98be77521eece586f",
+      "bytes": 2128
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_cindex2.pro",
+      "sha256": "9e92bc2f64790bf42f6832d6f934e285969bc7d2ca9f10c5a65bb330e8980570",
+      "bytes": 772
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_d2200.pro",
+      "sha256": "5e87cd3ea86be6d24405eb73c1885cef97806d5621b95fbab6b3bfeeb805149d",
+      "bytes": 1694
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_d2300.pro",
+      "sha256": "a0f97ecfea770e71eea6469a8695782df3ad6c74852191720e7570f3f24d7f7b",
+      "bytes": 2181
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_doub2200h.pro",
+      "sha256": "2df658298e97f84e01a07e56a41897ce6242c565d52ea8f71d0a399d94e46a46",
+      "bytes": 1210
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_hcpindex.pro",
+      "sha256": "7509f7ddaf2bdb9040bdc034874fd33efc3a5cbb9b7812e93a146ae4fb901832",
+      "bytes": 809
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_hcpindex2.pro",
+      "sha256": "bb45e9327ce3ee5a01099ce59a3a1b68684137fc8fec6bedc94e2f614a28a1c0",
+      "bytes": 3004
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_icer1.pro",
+      "sha256": "fe02f429227b81f76ad1df98e5a881c40e608c750ea43ae7a6dcb6276bbc66c8",
+      "bytes": 169
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_icer1_2.pro",
+      "sha256": "8e59e29163786b82ca0d0a4d52c952ab0739a7b0262112ae7ed7f92895be606d",
+      "bytes": 474
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_icer2.pro",
+      "sha256": "b15e766940e2fa9b086d4b9099fdf57878803c15251c669217b6b7bcc1eaca2a",
+      "bytes": 169
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_icer2_2.pro",
+      "sha256": "77f596c38832d1808ce46496ce1cc2c4237c9488a73060181b1b7340c8107242",
+      "bytes": 1208
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_irr1.pro",
+      "sha256": "0805232bb6153631c0c6663d1c0e638e7557b14f769f4b8e014d86d7a43c8b29",
+      "bytes": 217
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_irr2.pro",
+      "sha256": "fb67938cc4dac83a5ce42b37958b34776d3dce29f38023961063b6280e54af86",
+      "bytes": 168
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_irr3.pro",
+      "sha256": "3cf737aa1109e9a5b4f691b0974c5cbeb1ca48801d8d40d58de80da6bc082d56",
+      "bytes": 256
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_islope1.pro",
+      "sha256": "d3e1fe21edb83dca6dbd3e3f444e58ae65d4567132eec91e5ce47dcf597bdd8c",
+      "bytes": 820
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_lcpindex.pro",
+      "sha256": "5745e1f3f7d9e5142a28e0de30a63ba3660c751b8ef589faf857671bb0130bed",
+      "bytes": 800
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_lcpindex2.pro",
+      "sha256": "9f6d21388094a261f2de889f0c4408bcb7a568d02b60bbf25076d94268e33e4d",
+      "bytes": 2372
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_min2200.pro",
+      "sha256": "e9a8d4843a753ac48afe35b6b84baead1d9e702f158b4e8c1541722f2c5d2523",
+      "bytes": 784
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_min2250.pro",
+      "sha256": "d168100d933532bd34a7d8fea7646f0b76fdd34f4e6301c507569a6eaa528af8",
+      "bytes": 926
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_min2295_2480.pro",
+      "sha256": "dc5eee9ff905009ec6b035dc42e73cde5c45b67db0bbb8bb6e5df63fef0a04eb",
+      "bytes": 2077
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_min2345_2537.pro",
+      "sha256": "e6ab70ccd279ba35653d9336be6fab968d9e34b1e847ff6b2b6e5967ecff2026",
+      "bytes": 1798
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_olindex2.pro",
+      "sha256": "ad156f7e9a0669abdecc9b4499a4a45cfd72effd35619268041423914d9a1d17",
+      "bytes": 3524
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_olindex3.pro",
+      "sha256": "3198d77eba85f8e6b499a56b8657441e911820f489b87bcd93f2f77c430c334c",
+      "bytes": 4365
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_rbr.pro",
+      "sha256": "c72325437045455a5f6cfbd12f623efe708db1ffc85fe7bcf1e7bc47979ccc10",
+      "bytes": 165
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_rpeak1.pro",
+      "sha256": "9222a96620820f3d71cee912067ad18195878f37760e8920ba6ca0d9acea7d48",
+      "bytes": 5724
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_sh600.pro",
+      "sha256": "6b0c55a1b05ca687d955553926ea9b1c5ea985bede76161e4559451104b4de37",
+      "bytes": 923
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_sh600_2.pro",
+      "sha256": "b1005d240df907f2f29dba87bd15a552db6fce17f0f82ba0ce9c3f6d838a7554",
+      "bytes": 860
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_sh770.pro",
+      "sha256": "6008c2dd6981858990d28805075a94d01cfb639ed56046f1e4388c9353276870",
+      "bytes": 555
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_sindex.pro",
+      "sha256": "03ceabc7eab47860807579082f147bc21e9b883cccf0b922995e5117bdde2130",
+      "bytes": 942
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_sindex2.pro",
+      "sha256": "3966abfb386295a88ead113fa8c8d430fe5aea783802d54a94e5a03d8c6f0ae2",
+      "bytes": 743
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_var.pro",
+      "sha256": "3e3c26a46823501f1e21dfe56d253bf13bb046cea4756a4a5010481494d4abd7",
+      "bytes": 4166
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_sumutil_band_depth.pro",
+      "sha256": "11fc1b96ec69bb82b88d055042df2561c8b750892fe1bb31ad7cd62d51864ed4",
+      "bytes": 2605
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_sumutil_band_depth_invert.pro",
+      "sha256": "47c534b1639f072356446b5859e3ed1502997dd0f950bef1c18075a4b6fb93b1",
+      "bytes": 2696
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_sumutil_band_depth_min.pro",
+      "sha256": "bc2116b37370e81cc2a0d3da52e0cb5d7796be965042664062555c49ee012933",
+      "bytes": 2050
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_sumutil_bdicont.pro",
+      "sha256": "f09f0cb99df2238b743eabab39868744fb48af8ac1c291db2e33d15298405c5d",
+      "bytes": 6110
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_sumutil_from_nan.pro",
+      "sha256": "cd1eea3d48a1a67a245d6278636fabd07d02ec4603e44993afb4d91d7d850289",
+      "bytes": 440
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_sumutil_ratio.pro",
+      "sha256": "ea9639c9cd8fe92abc1ed2c5701b38dd1390bd7f936b007b41ca442656e22e12",
+      "bytes": 1002
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_sumutil_single.pro",
+      "sha256": "0d2aef68f9745155686d17dd2618c1f020f66eb0e334f98575b01f6a4491164e",
+      "bytes": 4236
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_sumutil_to_nan.pro",
+      "sha256": "87726dfbe82cb76d585bcfdffd9231f8cb05eb2c5ada1713800e0c016a027b0e",
+      "bytes": 623
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/mro_crism_summary_flatten_cev.pro",
+      "sha256": "180dab79d29a9ba9a6cb4a3ae9353f07f509da8869acd981c1e10ed0e90ed169",
+      "bytes": 2751
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/mro_crism_vnir_peak.pro",
+      "sha256": "ff16487688634b9c5f071db34626da059994b6e363893b643ea41aac291c16a2",
+      "bytes": 10028
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/mro_crism_wavelength_defaults.pro",
+      "sha256": "09557a48fc8cf38fe1e2539ef993d35eacab89b0e7fcee8b2e70c69aec26b810",
+      "bytes": 15373
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/sign_ternary.pro",
+      "sha256": "bc7b4be8f21f28e9e7b41e4c76b4858d949b89317b859ea78b6814fce7c93d37",
+      "bytes": 651
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/summary_band_names__define.pro",
+      "sha256": "f2baa0afde560e81523735b1baf0eff25623e62da4a2c0a7eb2c0bc937f969a6",
+      "bytes": 10477
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Event_handlers/mro_crism_summary_params_2014_event.pro",
+      "sha256": "9defa2548910c4d7966cbe84e8f0b2659ad5fee9b9a578278045b088e42530c7",
+      "bytes": 13726
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Event_handlers/mro_crism_summary_params_event.pro",
+      "sha256": "f1a020bdbe144660215e8ea2c7a0c133d8be22d9c26c9bdec850e663d7e28c5a",
+      "bytes": 16694
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Event_handlers/mro_crism_summary_params_hyper_event.pro",
+      "sha256": "b7d01c1b43e8314926cfaca22b7abe9dea750a9b7ba27cf7aec1633ab6d2dacf",
+      "bytes": 12940
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Supplementals/mro_crism_summary_params.pro",
+      "sha256": "3b625cd96d30af3145b00404c988fbd38007c3d31659277b76a055627b49093b",
+      "bytes": 67374
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Supplementals/mro_crism_summary_params_hyper.pro",
+      "sha256": "ad199bcddf62769eec527151b6de969dbde77c2306e3d430af7bf019181799a7",
+      "bytes": 11265
+    },
+    {
+      "name": "CAT_ENVI/save_add/CAT_programs/Supplementals/select_summary_params.pro",
+      "sha256": "abd58668188aae6085f5f35f00249110cc0806b89a7b7f61ba1998436173c1ea",
+      "bytes": 8660
+    }
+  ]
+}

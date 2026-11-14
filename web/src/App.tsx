@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import {
   buildComparisonRows,
+  getMarsDiscovery,
   getTargetBundle,
   getTargetIds,
 } from "./data/adapter";
@@ -16,7 +17,9 @@ import { CandidateList } from "./components/CandidateList";
 import { ComparisonPanel } from "./components/ComparisonPanel";
 import { EvidenceDrawer } from "./components/EvidenceDrawer";
 import { RobustnessPanel } from "./components/RobustnessPanel";
+import { MarsDiscoveryPanel } from "./components/MarsDiscoveryPanel";
 
+type WorkspaceMode = "discovery" | "workbench";
 type MobileTab = "maps" | "comparison" | "robustness";
 
 function buildDemoTargetBundle(base: TargetBundle): TargetBundle {
@@ -59,7 +62,14 @@ function buildDemoTargetBundle(base: TargetBundle): TargetBundle {
 }
 
 export function App() {
+  const discovery = useMemo(() => getMarsDiscovery(), []);
   const targetIds = useMemo(() => getTargetIds(), []);
+  const [workspaceMode, setWorkspaceMode] = useState<WorkspaceMode>(
+    discovery ? "discovery" : "workbench"
+  );
+  const [discoveryId, setDiscoveryId] = useState(
+    () => discovery?.cards[0]?.id ?? "I-01"
+  );
   const [activeTargetId, setActiveTargetId] = useState<TargetId>(
     targetIds[0] ?? "jezero"
   );
@@ -102,7 +112,6 @@ export function App() {
 
   const handleSelectTarget = (nextId: TargetId) => {
     setActiveTargetId(nextId);
-    // Clear previous target's candidate selection & open evidence drawer immediately
     setInspectedRowId(null);
     const nextBundle = getTargetBundle(nextId);
     const firstId = nextBundle?.candidates[0]?.candidate_id ?? null;
@@ -129,105 +138,186 @@ export function App() {
 
   return (
     <div className="app-shell">
-      <TargetMissionBar
-        targetIds={targetIds}
-        activeTargetId={activeTargetId}
-        target={activeBundle}
-        demoMode={demoMode}
-        onSelectTarget={handleSelectTarget}
-        onToggleDemoMode={handleToggleDemoMode}
-      />
+      <nav className="workspace-mode-nav" aria-label="Workspace mode">
+        <button
+          type="button"
+          className={`btn ${workspaceMode === "discovery" ? "btn-active" : ""}`}
+          aria-pressed={workspaceMode === "discovery"}
+          onClick={() => setWorkspaceMode("discovery")}
+          disabled={!discovery}
+        >
+          Mars discovery references
+        </button>
+        <button
+          type="button"
+          className={`btn ${workspaceMode === "workbench" ? "btn-active" : ""}`}
+          aria-pressed={workspaceMode === "workbench"}
+          onClick={() => setWorkspaceMode("workbench")}
+        >
+          Earth↔Mars workbench
+        </button>
+      </nav>
 
-      {!activeBundle ? (
-        <main className="panel" role="main">
-          <h2 className="panel-title">No Target Results Available</h2>
-          <p style={{ color: "var(--text-muted)", marginBottom: 0 }}>
-            No verified output bundle was found for target{" "}
-            <span className="mono">{activeTargetId}</span>. Previous target state
-            has been cleared.
-          </p>
-        </main>
+      {workspaceMode === "discovery" && discovery ? (
+        <>
+          <header className="panel" aria-label="Mars discovery header">
+            <div className="panel-header" style={{ marginBottom: 0 }}>
+              <div>
+                <h1 style={{ margin: 0, fontSize: "1.2rem", fontWeight: 700 }}>
+                  TerraMatch · Mars Site Discovery
+                </h1>
+                <p className="header-description">
+                  Team zasa reporting references from the GPT research handoff. Four themes retained;
+                  scores are experimental descriptors only.
+                </p>
+              </div>
+              <span className="badge badge-amber">Novelty unchecked</span>
+            </div>
+          </header>
+          <MarsDiscoveryPanel
+            discovery={discovery}
+            selectedId={discoveryId}
+            onSelectId={setDiscoveryId}
+          />
+        </>
       ) : (
         <>
-          <section className="reading-guide" aria-label="How to use this workbench">
-            <div><span className="eyebrow">Research workflow</span><h2>Find a region. Understand the evidence.</h2>
-            <p>Choose a Mars target above, select an Earth candidate, then inspect the match and its limits.</p></div>
-            <span className="scope-note">Terrain ranked · 3 other themes unscored</span>
-          </section>
-          <nav className="workspace-nav" aria-label="Analysis views">
-            {(
-              [
-                ["maps", "Overview & map"],
-                ["comparison", "Evidence & sources"],
-                ["robustness", "Sensitivity & gaps"],
-              ] as [MobileTab, string][]
-            ).map(([tab, label]) => (
-              <button
-                key={tab}
-                type="button"
-                className={`btn ${mobileTab === tab ? "btn-active" : ""}`}
-                aria-pressed={mobileTab === tab}
-                onClick={() => setMobileTab(tab)}
-              >
-                {label}
-              </button>
-            ))}
-          </nav>
+          <TargetMissionBar
+            targetIds={targetIds}
+            activeTargetId={activeTargetId}
+            target={activeBundle}
+            demoMode={demoMode}
+            onSelectTarget={handleSelectTarget}
+            onToggleDemoMode={handleToggleDemoMode}
+          />
 
-          <div className="workbench-grid">
-            {(
-              <CandidateList
-                candidates={activeBundle.candidates}
-                selectedCandidate={selectedCandidate}
-                onSelectCandidate={handleSelectCandidate}
-              />
-            )}
-
-            <main className="main-column" id="analysis-content">
-              <section className="panel selection-summary" aria-label="Selected candidate summary">
-                <div className="selection-heading"><div><span className="eyebrow">Selected Earth region</span>
-                  <h2>{selectedCandidate?.candidate_id ?? "No candidate selected"}</h2>
-                  <p className="mono">{selectedCandidate ? `${selectedCandidate.lat.toFixed(2)}°, ${selectedCandidate.lon.toFixed(2)}° · terrain rank #${selectedCandidate.rank}` : "Select an available candidate to continue."}</p>
-                </div>{selectedCandidate && <div className="distance-readout"><span className="mono">{selectedCandidate.terrain_distance.toFixed(4)}</span><small>Terrain distance · lower is closer</small></div>}</div>
-                {selectedCandidate && <div className="selection-findings">
-                  <div><h3>What supports this match</h3><p>{selectedCandidate.keySupport}</p></div>
-                  <div><h3>What remains unresolved</h3><p>{selectedCandidate.mainGap}</p></div>
-                </div>}
-                <p className="summary-limit">{demoMode ? "Synthetic preview only. Return to real results before interpreting any values." : "A regional terrain candidate, not a validated complete Mars analog or landing-safety assessment."}</p>
-                {mobileTab === "maps" && selectedCandidate && <button className="btn" onClick={() => setMobileTab("comparison")}>Inspect evidence and sources →</button>}
+          {!activeBundle ? (
+            <main className="panel" role="main">
+              <h2 className="panel-title">No Target Results Available</h2>
+              <p style={{ color: "var(--text-muted)", marginBottom: 0 }}>
+                No verified output bundle was found for target{" "}
+                <span className="mono">{activeTargetId}</span>. Previous target state
+                has been cleared.
+              </p>
+            </main>
+          ) : (
+            <>
+              <section className="reading-guide" aria-label="How to use this workbench">
+                <div>
+                  <span className="eyebrow">Research workflow</span>
+                  <h2>Find a region. Understand the evidence.</h2>
+                  <p>
+                    Choose a Mars target above, select an Earth candidate, then inspect the match
+                    and its limits. Do not reuse these rankings for the Mars discovery references.
+                  </p>
+                </div>
+                <span className="scope-note">Terrain ranked · 3 other themes unscored</span>
               </section>
-              {showSection("maps") && (
-                <DualSideMap
-                  target={activeBundle}
+              <nav className="workspace-nav" aria-label="Analysis views">
+                {(
+                  [
+                    ["maps", "Overview & map"],
+                    ["comparison", "Evidence & sources"],
+                    ["robustness", "Sensitivity & gaps"],
+                  ] as [MobileTab, string][]
+                ).map(([tab, label]) => (
+                  <button
+                    key={tab}
+                    type="button"
+                    className={`btn ${mobileTab === tab ? "btn-active" : ""}`}
+                    aria-pressed={mobileTab === tab}
+                    onClick={() => setMobileTab(tab)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </nav>
+
+              <div className="workbench-grid">
+                <CandidateList
+                  candidates={activeBundle.candidates}
                   selectedCandidate={selectedCandidate}
                   onSelectCandidate={handleSelectCandidate}
                 />
-              )}
 
-              {showSection("comparison") && (
-                <ComparisonPanel
-                  target={activeBundle}
-                  candidate={selectedCandidate}
-                  rows={comparisonRows}
-                  onInspectEvidence={(row) => setInspectedRowId(row.id)}
-                />
-              )}
+                <main className="main-column" id="analysis-content">
+                  <section
+                    className="panel selection-summary"
+                    aria-label="Selected candidate summary"
+                  >
+                    <div className="selection-heading">
+                      <div>
+                        <span className="eyebrow">Selected Earth region</span>
+                        <h2>{selectedCandidate?.candidate_id ?? "No candidate selected"}</h2>
+                        <p className="mono">
+                          {selectedCandidate
+                            ? `${selectedCandidate.lat.toFixed(2)}°, ${selectedCandidate.lon.toFixed(2)}° · terrain rank #${selectedCandidate.rank}`
+                            : "Select an available candidate to continue."}
+                        </p>
+                      </div>
+                      {selectedCandidate && (
+                        <div className="distance-readout">
+                          <span className="mono">
+                            {selectedCandidate.terrain_distance.toFixed(4)}
+                          </span>
+                          <small>Terrain distance · lower is closer</small>
+                        </div>
+                      )}
+                    </div>
+                    {selectedCandidate && (
+                      <div className="selection-findings">
+                        <div>
+                          <h3>What supports this match</h3>
+                          <p>{selectedCandidate.keySupport}</p>
+                        </div>
+                        <div>
+                          <h3>What remains unresolved</h3>
+                          <p>{selectedCandidate.mainGap}</p>
+                        </div>
+                      </div>
+                    )}
+                    <p className="summary-limit">
+                      {demoMode
+                        ? "Synthetic preview only. Return to real results before interpreting any values."
+                        : "A regional terrain candidate, not a validated complete Mars analog or landing-safety assessment."}
+                    </p>
+                    {mobileTab === "maps" && selectedCandidate && (
+                      <button className="btn" onClick={() => setMobileTab("comparison")}>
+                        Inspect evidence and sources →
+                      </button>
+                    )}
+                  </section>
+                  {showSection("maps") && (
+                    <DualSideMap
+                      target={activeBundle}
+                      selectedCandidate={selectedCandidate}
+                      onSelectCandidate={handleSelectCandidate}
+                    />
+                  )}
 
-              {showSection("robustness") && (
-                <RobustnessPanel
-                  target={activeBundle}
-                  selectedCandidate={selectedCandidate}
-                />
-              )}
-            </main>
-          </div>
+                  {showSection("comparison") && (
+                    <ComparisonPanel
+                      target={activeBundle}
+                      candidate={selectedCandidate}
+                      rows={comparisonRows}
+                      onInspectEvidence={(row) => setInspectedRowId(row.id)}
+                    />
+                  )}
+
+                  {showSection("robustness") && (
+                    <RobustnessPanel
+                      target={activeBundle}
+                      selectedCandidate={selectedCandidate}
+                    />
+                  )}
+                </main>
+              </div>
+            </>
+          )}
+
+          <EvidenceDrawer row={inspectedRow} onClose={() => setInspectedRowId(null)} />
         </>
       )}
-
-      <EvidenceDrawer
-        row={inspectedRow}
-        onClose={() => setInspectedRowId(null)}
-      />
     </div>
   );
 }

@@ -222,3 +222,60 @@ export interface TargetBundle {
     terrain_distance: number;
   }[];
 }
+
+/** GPT handoff reporting cards — Mars reference points, not Earth rankings. */
+export interface MarsDiscoverySource {
+  label: string;
+  url: string;
+}
+
+export interface MarsDiscoveryLayers {
+  slope: number;
+  relief: number;
+  thermal_inertia: number;
+  ice_shallow: number;
+  dust_cdod: number;
+}
+
+export interface MarsDiscoveryCard {
+  id: string;
+  purpose_key: string;
+  role: string;
+  lat: number;
+  lon: number;
+  intended_use: string;
+  treatment: string;
+  novelty_status: string;
+  prohibited_claims: string[];
+  weaknesses: string;
+  next_checks: string;
+  map_figure: string;
+  sources: string[];
+  descriptor_score: number;
+  json_order: number;
+  layers: MarsDiscoveryLayers;
+  excluded_known_sites: string[];
+  earth_analog: { status: string; note: string };
+  themes: {
+    terrain: { status: string; slope_deg: number; relief_m: number };
+    temperature: {
+      status: string;
+      thermal_inertia: number;
+      regional_surface_temperature: string;
+    };
+    water_ice: { status: string; ice_shallow: number };
+    atmosphere_dust: { status: string; dust_cdod_my35: number };
+  };
+}
+
+export interface MarsDiscoveryBundle {
+  schema_version: string;
+  earth_analog_pairing: string;
+  novelty_policy: string;
+  firm_rocky_status: string;
+  limitations: string[];
+  excluded_boxes: Record<string, unknown>;
+  source_index: Record<string, MarsDiscoverySource>;
+  files: { path: string; sha256: string }[];
+  cards: MarsDiscoveryCard[];
+}

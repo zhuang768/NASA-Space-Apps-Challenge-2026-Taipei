@@ -109,6 +109,77 @@ def build_research() -> dict:
     }
 
 
+def build_mars_discovery() -> dict:
+    """Package GPT handoff cards with layer values from the discovery JSON (no rerank)."""
+    discovery_rel = "outputs/mars_discovery/mars_site_discovery.json"
+    cards_rel = "outputs/mars_discovery/reporting_cards.json"
+    discovery = load_json(discovery_rel)
+    cards_doc = load_json(cards_rel)
+
+    by_coord = {}
+    for purpose_key, purpose in discovery.get("purposes", {}).items():
+        for order, pick in enumerate(purpose.get("picks", []), start=1):
+            by_coord[(round(pick["lat"], 2), round(pick["lon"], 2))] = {
+                "purpose_key": purpose_key,
+                "json_order": order,
+                "score": pick["score"],
+                "layers": pick["layers"],
+                "excluded_known_sites": pick.get("excluded_known_sites", []),
+            }
+
+    enriched = []
+    for card in cards_doc["cards"]:
+        key = (round(card["lat"], 2), round(card["lon"], 2))
+        match = by_coord.get(key)
+        if match is None:
+            raise SystemExit(f"Reporting card {card['id']} missing from discovery JSON")
+        enriched.append(
+            {
+                **card,
+                "descriptor_score": match["score"],
+                "json_order": match["json_order"],
+                "layers": match["layers"],
+                "excluded_known_sites": match["excluded_known_sites"],
+                "earth_analog": {
+                    "status": "unknown",
+                    "note": "Earth analog pairing is not completed for these Mars references; do not reuse old Earth terrain rankings.",
+                },
+                "themes": {
+                    "terrain": {
+                        "status": "displayed",
+                        "slope_deg": match["layers"]["slope"],
+                        "relief_m": match["layers"]["relief"],
+                    },
+                    "temperature": {
+                        "status": "partial",
+                        "thermal_inertia": match["layers"]["thermal_inertia"],
+                        "regional_surface_temperature": "unknown",
+                    },
+                    "water_ice": {
+                        "status": "displayed",
+                        "ice_shallow": match["layers"]["ice_shallow"],
+                    },
+                    "atmosphere_dust": {
+                        "status": "displayed",
+                        "dust_cdod_my35": match["layers"]["dust_cdod"],
+                    },
+                },
+            }
+        )
+
+    return {
+        "schema_version": cards_doc["schema_version"],
+        "earth_analog_pairing": cards_doc["earth_analog_pairing"],
+        "novelty_policy": cards_doc["novelty_policy"],
+        "firm_rocky_status": cards_doc["firm_rocky_status"],
+        "limitations": discovery.get("limitations", []),
+        "excluded_boxes": discovery.get("excluded_boxes", {}),
+        "source_index": cards_doc.get("source_index", {}),
+        "files": [file_ref(discovery_rel), file_ref(cards_rel)],
+        "cards": enriched,
+    }
+
+
 def main() -> None:
     results = load_json("outputs/analysis/results_with_context.json")
     results_10km = load_json("outputs/analysis_scale10km/results.json")
@@ -135,6 +206,7 @@ def main() -> None:
         "scale10km_counts": results_10km.get("counts"),
         "rover_temperature_context": mars_temp,
         "research": build_research(),
+        "mars_discovery": build_mars_discovery(),
     }
 
     for tid, tdata in results.get("targets", {}).items():
@@ -160,6 +232,11 @@ def main() -> None:
     fig_dir = ROOT / "outputs" / "analysis" / "figures"
     if fig_dir.exists():
         for png in fig_dir.glob("*.png"):
+            shutil.copy2(png, PUB_FIGURES / png.name)
+
+    discovery_fig_dir = ROOT / "outputs" / "mars_discovery" / "figures"
+    if discovery_fig_dir.exists():
+        for png in discovery_fig_dir.glob("*.png"):
             shutil.copy2(png, PUB_FIGURES / png.name)
 
     print(f"Wrote {OUT_JSON} ({OUT_JSON.stat().st_size / 1024:.1f} KB)")

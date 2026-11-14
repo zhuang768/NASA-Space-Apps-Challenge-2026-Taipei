@@ -3,6 +3,7 @@ import type {
   CandidateItem,
   ComparisonRow,
   FeaturedEvidence,
+  MarsDiscoveryBundle,
   OytagOverlay,
   ResearchClaim,
   TargetBundle,
@@ -43,6 +44,13 @@ export const RESEARCH = (bundle.research ?? {}) as {
   featured?: Record<string, FeaturedEvidence>;
   oytag_overlays?: Record<string, OytagOverlay>;
 };
+
+export const MARS_DISCOVERY = (bundle.mars_discovery ?? null) as MarsDiscoveryBundle | null;
+
+export function getMarsDiscovery(): MarsDiscoveryBundle | null {
+  if (!MARS_DISCOVERY?.cards?.length) return null;
+  return MARS_DISCOVERY;
+}
 
 function researchFile(suffix: string) {
   return RESEARCH.files?.find((f) => f.path.endsWith(suffix));

@@ -1,0 +1,170 @@
+{
+  "reviewed_on": "2026-11-14 (Asia/Taipei)",
+  "source_commit": "7df7f33",
+  "catalog": "outputs/mars_discovery/mars_site_discovery.json",
+  "catalog_sha256": "3c45d6af3c786394b856e36a726eada5cf00118e7a0cec39b24a88e8f992b7e9",
+  "reviewed_ranks": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "purposes": [
+    "isru_shallow_ice",
+    "dusty_flat_ops",
+    "firm_rocky_surface"
+  ],
+  "exact_site_novelty_clearance_count": 0,
+  "coordinate_search_engine": "system2",
+  "coordinate_domain_scope": [
+    "nasa.gov",
+    "hou.usra.edu",
+    "lpi.usra.edu",
+    "usgs.gov",
+    "esa.int",
+    "agupubs.onlinelibrary.wiley.com",
+    "sciencedirect.com",
+    "nature.com"
+  ],
+  "coordinate_query_groups": [
+    {
+      "purpose": "ice_1_3",
+      "queries": [
+        "Mars \"54.25\" \"1.25\" ice ISRU",
+        "Mars \"53.75\" \"42.25\" ice ISRU",
+        "Mars \"54.75\" \"86.25\" ice ISRU"
+      ]
+    },
+    {
+      "purpose": "ice_4_5",
+      "queries": [
+        "Mars \"55.75\" \"61.75\" ice ISRU",
+        "Mars \"53.75\" \"123.75\" ice ISRU"
+      ]
+    },
+    {
+      "purpose": "dust_1_3",
+      "queries": [
+        "Mars \"35.75\" \"126.75\" dust operations",
+        "Mars \"37.75\" \"114.75\" dust operations",
+        "Mars \"-46.25\" \"82.75\" dust"
+      ]
+    },
+    {
+      "purpose": "dust_4_5",
+      "queries": [
+        "Mars \"7.75\" \"154.25\" dust operations",
+        "Mars \"5.75\" \"145.75\" dust operations"
+      ]
+    },
+    {
+      "purpose": "firm_1_3",
+      "queries": [
+        "Mars \"52.25\" \"340.25\" thermal inertia landing",
+        "Mars \"-59.75\" \"3.75\" thermal inertia",
+        "Mars \"-54.75\" \"13.75\" thermal inertia"
+      ]
+    },
+    {
+      "purpose": "firm_4_5",
+      "queries": [
+        "Mars \"52.25\" \"332.25\" thermal inertia landing",
+        "Mars \"-58.25\" \"307.75\" thermal inertia"
+      ]
+    }
+  ],
+  "coordinate_query_interpretation": "Returned numerical matches were often unrelated. No absence-of-prior-work conclusion was drawn. These are not spatial overlays.",
+  "regional_search_engine": "system1",
+  "regional_query_groups": [
+    {
+      "id": "ice_regions",
+      "queries": [
+        "Mars Acidalia Planitia shallow ice ISRU exploration zone site 2015 2024",
+        "Mars Lyot northern plains ice resources landing site 50 55 30 40 longitude",
+        "Mars Utopia Planitia ice resources 50 60 north 80 120 east landing sites"
+      ]
+    },
+    {
+      "id": "dust_regions",
+      "queries": [
+        "Mars Hellas Planitia dust surface operations site dust storms 46 south 83 east",
+        "Mars Elysium Planitia Cerberus dust deposition operations InSight landing site",
+        "Mars Utopia Planitia dust storms landing site operations 35 38 north 115 127 east"
+      ]
+    },
+    {
+      "id": "firm_regions",
+      "queries": [
+        "Mars Acidalia Planitia thermal inertia indurated surface landing site 52 north 340 332 east",
+        "Mars Noachis Terra thermal inertia ground ice induration 55 60 south landing",
+        "Mars Argyre Planitia thermal inertia ice rocky surface exploration landing site"
+      ]
+    },
+    {
+      "id": "catalog",
+      "queries": [
+        "site:hou.usra.edu/meetings/explorationzone2015 Acidalia water ice",
+        "site:hou.usra.edu/meetings/explorationzone2015 Utopia ISRU",
+        "Mars thermal inertia bearing strength cemented ice not bedrock Putzig Mellon 2007"
+      ]
+    }
+  ],
+  "supplementary_system1_queries": [
+    "Mars human exploration landing site shallow ice \"Acidalia\"",
+    "Mars human exploration \"Utopia\" \"ice\" \"2015\"",
+    "Mars \"Hellas\" \"dust\" \"landing\" exploration",
+    "\"Subsurface Water Ice Mapping on Mars: A Probabilistic Approach\"",
+    "\"Mars\" \"54.25\" \"1.25\" ice",
+    "\"Mars\" \"53.75\" \"42.25\" ice"
+  ],
+  "spatial_check_method": {
+    "type": "great-circle center-to-center checks; no reranking",
+    "mars_spherical_radius_km": 3396,
+    "tian_2024_utopia_monitoring_circle": {
+      "lat": 17,
+      "lon_east": 107,
+      "radius_km": 2000,
+      "source": "https://doi.org/10.1029/2024EA003634",
+      "section": "2.1; not a landing ellipse"
+    },
+    "protonilus_2015_ez_center": {
+      "lat": 42.187,
+      "lon_east": 48.062,
+      "source": "https://www.hou.usra.edu/meetings/explorationzone2015/pdf/1053.pdf"
+    },
+    "insight_context_center": {
+      "lat": 4.5,
+      "lon_east": 135.9,
+      "source": "https://www.jpl.nasa.gov/news/press_kits/insight/landing/mission/landing-site/"
+    }
+  },
+  "access_limits": [
+    "Full 2015 NASA collected-abstract PDF was not inspected: retrieval exceeded the tool limit (11,448,452 bytes).",
+    "IOP full article 10.3847/PSJ/ae8904 was inaccessible; the USGS author/institutional abstract was read instead. Publisher search excerpts were not used to validate individual site footprints.",
+    "Workshop program.cfm was inaccessible; one specific primary Protonilus abstract was inspected. This is not a complete workshop inventory.",
+    "USGS sim/3096 full-page retrieval and the full Noachis article 10.1002/jgre.20083 returned access errors; no exact-site claim relies on them.",
+    "No exhaustive ADS/Scopus/non-English literature or complete proposal-polygon overlay was conducted.",
+    "No exact candidate was certified new or understudied. Region-level overlap is distinguished from exact same-purpose proposal overlap."
+  ],
+  "protected_files_sha256": {
+    "outputs/mars_discovery/mars_site_discovery.json": "3c45d6af3c786394b856e36a726eada5cf00118e7a0cec39b24a88e8f992b7e9",
+    "outputs/mars_discovery/figures/dusty_flat_ops_map.png": "a52121cb0f197a6b02f94b3d337925ccaeeb8d1faad07c286f639240cd7edb3f",
+    "outputs/mars_discovery/figures/firm_rocky_surface_map.png": "619adcdbd4426ca3b20400d742b644ec2ec71708dcfa1b3588ddd42601e2236c",
+    "outputs/mars_discovery/figures/isru_shallow_ice_map.png": "5a2776aea99d3930f5487028d691d903eb8369d654e6eb8cee7ab9f86895975e",
+    "analog/score.py": "c0622dc799b1c8802571d1ee76e64396e70a3fd648e32d8de3cd43a8dfef3195",
+    "analog/stack.py": "c7de207c9e7b1d3ad35e60c49bac9b3fff01e91b232acc045dc2728936e5bebb",
+    "scripts/discover_mars_sites.py": "eb7be014afac05cfb8a12d97b490e901d36624b1a9c2523230878818a1e2345f"
+  },
+  "validation": {
+    "csv_rows": 15,
+    "unique_candidate_ids": 15,
+    "copied_numeric_values_match_json": true,
+    "selected_card_values_match_json_to_6_decimals": true,
+    "local_markdown_links_checked": true,
+    "protected_file_hashes_match": true,
+    "scoring_and_discovery_code_unchanged": true,
+    "reranking_performed": false,
+    "new_physical_validation_performed": false
+  }
+}

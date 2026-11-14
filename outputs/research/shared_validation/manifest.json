@@ -1,0 +1,431 @@
+{
+  "version": "shared-validation-public-audit-v1",
+  "date_UTC": "2026-11-14T20:05:32.474001+00:00",
+  "branch": "research/shared-validation-gaps",
+  "initial_research_main_sha": "08d2740a23694a54bcc11cabf7120114d2e120fc",
+  "base_main_sha": "839aa35149dc1d32964062c1055c0bf9cc5b18f0",
+  "base_tree_sha": "0c01f2e26f5d29b45c78a26991c601d7e4d71bea",
+  "scope": [
+    "MS-01",
+    "MS-02",
+    "MS-03"
+  ],
+  "source_git_checks": [
+    {
+      "path": "outputs/research/MS-01/thermal_followup/station_metadata.csv",
+      "git_blob_sha": "44d24d4bb4c13293215ea11b85380baac4544182"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/deployment_paragraphs.json",
+      "git_blob_sha": "d9c37651e1835cb345f24437931b1e99d186d0f5"
+    }
+  ],
+  "source_catalog": "source_catalog.csv",
+  "data_acquisition_log": "http_attempts.json",
+  "search_log": "search_log.csv",
+  "files": [
+    {
+      "path": "outputs/research/shared_validation/analysis_checks.json",
+      "bytes": 1310,
+      "sha256": "29d62b3bacef61d2c725370b28a99ed8ccacf9d5416671bca042f7cefe04248a",
+      "git_blob_sha": "65987b3751fc5c30e8cf64c9eeb7d524a5bc09d0"
+    },
+    {
+      "path": "outputs/research/shared_validation/analyze.py",
+      "bytes": 8526,
+      "sha256": "2899b10037b63fec12b517d7fb76a86ad66b40b5481f984de6ea6529d3a08006",
+      "git_blob_sha": "28e44e8aa88c0d91356aa5a1956da0cdb80a355e"
+    },
+    {
+      "path": "outputs/research/shared_validation/build_evidence.py",
+      "bytes": 30810,
+      "sha256": "ce71bc6d2c2cde80566dafda12822da5c482561c89b34a409eda2a94d4b15add",
+      "git_blob_sha": "02d007465fe54b51c148d025747ba33acdf543d5"
+    },
+    {
+      "path": "outputs/research/shared_validation/control_evidence.csv",
+      "bytes": 5281,
+      "sha256": "25f403ebb1b15c09baa01fbe0e9fcae515738e203075b250fec581eb3388cc76",
+      "git_blob_sha": "049cd29d49b4558b66b836fb4adfef7657272108"
+    },
+    {
+      "path": "outputs/research/shared_validation/dependency_edges.csv",
+      "bytes": 5595,
+      "sha256": "9c6605d23dea83841d8c82f612bb565873872b7a426c8bbba49f3fac7d841829",
+      "git_blob_sha": "997d757d5d477847d478081c43bcb592ad6e1681"
+    },
+    {
+      "path": "outputs/research/shared_validation/gap_status.csv",
+      "bytes": 2094,
+      "sha256": "bf4a28211b0ff08a88e2d9badde9dc89e47980078eaade59967d0843e74cebcd",
+      "git_blob_sha": "0384411838162620d8fa1b0ab1eb611ae2902327"
+    },
+    {
+      "path": "outputs/research/shared_validation/http_attempts.json",
+      "bytes": 15291,
+      "sha256": "3b7cd6f123490d0094ec8a76d5c6f28d694b4b9032104adec9cfacc8398b80c0",
+      "git_blob_sha": "c1d838aa0e2f80662cfeff29ffad09e8230ccdb8"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/Lat.ascii",
+      "bytes": 2660,
+      "sha256": "e85e1881c73691ae5dd58f7e1e5dbb805e900776c72a8b82b6efed14b545f0e3",
+      "git_blob_sha": "7647a7bb5cf558a92d2860955a3f4854ac875593"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/Lon.ascii",
+      "bytes": 4820,
+      "sha256": "d0ad069f1f456b3291cc57f7116e75696ffdcaff69b40c38189e9807c23de86a",
+      "git_blob_sha": "2b093dd6be07f134800f304df2e5884f30f2008e"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/Notes.txt",
+      "bytes": 1926,
+      "sha256": "472a30fe9ce97f8e476eeceb5d42ac5e4ddb9cd55fb33f48a2741302cf3c75ca",
+      "git_blob_sha": "041d62e0b5be967178fff8d2fea63dfd8a534d3e"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/TI_SI.ascii.gz",
+      "bytes": 750157,
+      "sha256": "9dcbad4c54615f8b6bf747ed1ebc32285c291d39d9963e503fb4eb9441c4386c",
+      "git_blob_sha": "c8d560dc1ca96351fa185f6d5fa90156b73f7dfb"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/caltech_latest.json",
+      "bytes": 8822,
+      "sha256": "092aee7579b6b979cb50a2b63e07270ea8fc10e130e872e06c5b4f612d4b75f9",
+      "git_blob_sha": "feff4ab8dca11526fae8c2ae0f698648be8fb5c3"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/caltech_parent.json",
+      "bytes": 8822,
+      "sha256": "092aee7579b6b979cb50a2b63e07270ea8fc10e130e872e06c5b4f612d4b75f9",
+      "git_blob_sha": "feff4ab8dca11526fae8c2ae0f698648be8fb5c3"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/caltech_receipts.json",
+      "bytes": 2143,
+      "sha256": "98561011da47a982dac2b6d10b48c3638d5ca9695d926bf24c1cf87fe064cbac",
+      "git_blob_sha": "fdc0cab9960d957be10772af5fdaa6493340287b"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/current_caltech_record.json",
+      "bytes": 8822,
+      "sha256": "092aee7579b6b979cb50a2b63e07270ea8fc10e130e872e06c5b4f612d4b75f9",
+      "git_blob_sha": "feff4ab8dca11526fae8c2ae0f698648be8fb5c3"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/current_caltech_versions.json",
+      "bytes": 8002,
+      "sha256": "c01b352865d0c9a6ce0b32f29ecaaec788372a718dc264a8987239d87e15b683",
+      "git_blob_sha": "649fd7f805faceecf07bb7cd48f9cd7f091cdbab"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/d_m.ascii.gz",
+      "bytes": 545310,
+      "sha256": "61c5f701a0966a809e1b607dc88a0c0f36bad6881d60ebd38dd4fd585188a8dc",
+      "git_blob_sha": "cfe9984c09db281d932b13035eaadebd3b032863"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/deployment_paragraphs.json",
+      "bytes": 12371,
+      "sha256": "fe1f86860c3847d9263b8f43db70873258865cae83d86bdb7530e995d97d16eb",
+      "git_blob_sha": "d9c37651e1835cb345f24437931b1e99d186d0f5"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/outputs__research__MS-03__local_validation__piqueux_native_cell.csv",
+      "bytes": 501,
+      "sha256": "f22c4079294f6a6a4c4f138bd328a21c14875e13bb7728f6c0519994c63e273f",
+      "git_blob_sha": "ddfdf54645b26624b5a1876e23884fd4be12572f"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/outputs__research__MS-03__uv_w__campbell_clock_audit.json",
+      "bytes": 1224,
+      "sha256": "41da5b4508cc37e9b0c342ca37d1785a99b0dac49e5ff11829a482648792e376",
+      "git_blob_sha": "bc3002cbda6c73101cd286ca513b57676ed5a951"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/outputs__research__MS-03__uv_w__clock_search_followup.json",
+      "bytes": 1247,
+      "sha256": "3366ad1aeeaeac4a397a17f6831ece521f409ae27d7931bed9ad27c8670e5447",
+      "git_blob_sha": "64d30c44bc22d7dfedc5f5ad62ee9f933ced4417"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/outputs__research__MS-03__uv_w__download_manifest.json",
+      "bytes": 3332,
+      "sha256": "ebd5294c47f2d76bc6d7d7121874b96bff400987eae8c741b69fd16e95b78770",
+      "git_blob_sha": "c848a2fd4ea25f6f9ea620fe017a28b2cbc2ccd8"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/piqueux_SI.docx.error.html",
+      "bytes": 5942,
+      "sha256": "39b6b847f2456d4930dd304ce4455fa8b83a9298c418b32b7293badef23360c0",
+      "git_blob_sha": "8a43f8a793ef62750428d15fbf16bb04608de302"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/piqueux_SI_alt.docx.error.html",
+      "bytes": 5812,
+      "sha256": "40268e42cf3ceeb208a2d9b96ed27c30400bd5e17877e8c7558ab3eaed72295e",
+      "git_blob_sha": "8356928d9cb01db3a588c9dbabfebebba304b057"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/siegler_record.json",
+      "bytes": 12843,
+      "sha256": "7f36d51e86470a703f73a72885d73f33e5a9172a09e24146c51dc6910399b476",
+      "git_blob_sha": "827d0fa03ebae31c06eddd7fd51d371e59c13976"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/station_metadata.csv",
+      "bytes": 2865,
+      "sha256": "c0eacaec1c2b9cb2f88e4fd0cf2bad05b90b773b410ab4632e804f5e45bd51cf",
+      "git_blob_sha": "44d24d4bb4c13293215ea11b85380baac4544182"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/swim2.html.error.html",
+      "bytes": 7170,
+      "sha256": "c4c1b144d625b634b7f3f092ceb70cc1c59aad35c9ae8e6cc39725f846555e16",
+      "git_blob_sha": "87a39d120c8955f088b84e69e25290b0b06ebe35"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/swim2443.pdf.error.html",
+      "bytes": 5575,
+      "sha256": "87d7f14ee02ec637feaae9f68bd695c252a1da263bffa1c8982d8ff40c32ef06",
+      "git_blob_sha": "4601242fa028c770236d7965b34ebb3a52122213"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/swim2_http.html.error.html",
+      "bytes": 7170,
+      "sha256": "50c4d70f76c7ea532445c73d5bf0ea809acde5724ba85963de40636b3bbb68bf",
+      "git_blob_sha": "220ad8d3e9582a7301e7cffb96d9c10f7b8b2209"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/swim_thermal.html.error.html",
+      "bytes": 7170,
+      "sha256": "2782f940960d89fb538133e4f621391f05e6935652073261d3d2611c257c98f2",
+      "git_blob_sha": "235294716c44e9e6a344f50c3377043ac64cdb23"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/swimhome.html.error.html",
+      "bytes": 7170,
+      "sha256": "95927770e13731281014e53ebcc8391809b4422b39570c17ff41850d5043452d",
+      "git_blob_sha": "99303ca62d503b7e581829818b9e9393a16bb9f9"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/uv_all_hobos.xlsx.error.html",
+      "bytes": 763,
+      "sha256": "375cdb8a65eb76599b94dd6038e68ed889128817c7091eac7597082da931b842",
+      "git_blob_sha": "85b7dc59b05cbe212fb9f0a202749cc7aa5ccccc"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/uv_all_hobos_api.xlsx.error.html",
+      "bytes": 763,
+      "sha256": "92b5869cbc0aafbc0deeb55643661850f27650ee9799a2adc9d91b1276c167dd",
+      "git_blob_sha": "241017142bf2a6d9a9dfa2e3572a605b0c79dd7d"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/uv_concept.json.error.html",
+      "bytes": 763,
+      "sha256": "2e939ec419a4e3672dea78fbb80d1ae3d630fe3221a09f54aada9a55c769b184",
+      "git_blob_sha": "658d349290364cf8d8c1afe6caabd0e250319ca8"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/uv_deployment.docx.error.html",
+      "bytes": 763,
+      "sha256": "1ad7612b6d552d76167b93f65c192005fb5121ae41f4fda8f029b7d68684010d",
+      "git_blob_sha": "d07ac45482d5531ce6231892de0819213084edc8"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/uv_hobos_concept.xlsx.error.html",
+      "bytes": 763,
+      "sha256": "58ac9245c2059a2282f56de86e20dbb7ab2e00a299a787489b2d5deb8f2efd50",
+      "git_blob_sha": "09de52e23246149ffc67f46cb299b588887b20ce"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/uv_hobos_export.error.html",
+      "bytes": 763,
+      "sha256": "5ee4ad61c7a8fcaf787bc8737d6b8739e6c55e1738c3053fd0dee316a5407264",
+      "git_blob_sha": "5ef4804ff5eeb1531ec4359f7357aab6c87046a3"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/uv_qa.docx.error.html",
+      "bytes": 763,
+      "sha256": "1400a06e3cc8b3b6efb8e5fecaeda62dbe7437086ef6beeb552fcc5d36e19f44",
+      "git_blob_sha": "feffed6097834dadc7ae63c14d89671694cac37e"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/uv_record.html.error.html",
+      "bytes": 763,
+      "sha256": "fdd21f2311e651670acb0719829d43aa1599ba3942b459cdabe26f16d4463b28",
+      "git_blob_sha": "98c8eb9851393c4cbcadeff6e397b31892b63da7"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/zenodo_latest.json.error.html",
+      "bytes": 763,
+      "sha256": "2d1c90e58fa88bb3954eb3072b82b0968d4fecccc0199006dcc95b67a00bbb95",
+      "git_blob_sha": "36a6538b0d4295df77eaf28f4902d216a6ff53dc"
+    },
+    {
+      "path": "outputs/research/shared_validation/inputs/zenodo_record_api_alt.json.error.html",
+      "bytes": 763,
+      "sha256": "b0515b98d661e6cf6dc1fb88877afbfa6e9d662bf41a706a00f94f9c8e734002",
+      "git_blob_sha": "5c1f8f2033f854a2ccc2549af2f5cad323937346"
+    },
+    {
+      "path": "outputs/research/shared_validation/lab_runs.csv",
+      "bytes": 4907,
+      "sha256": "3035f6d28fd53052c4fd7fab9b5a17b648eb271a1f10bfb567b5eaff1f8ed313",
+      "git_blob_sha": "b8c5f75aa3f67eaf11540613d20fefafe8270840"
+    },
+    {
+      "path": "outputs/research/shared_validation/laboratory_control.png",
+      "bytes": 147367,
+      "sha256": "2e606564eef26a148701f4bb0a006f44de479f64542faaf7785f247e689c367d",
+      "git_blob_sha": "491e46ce112d3d1a36424c345cddc1f6b054a523"
+    },
+    {
+      "path": "outputs/research/shared_validation/laboratory_control.svg",
+      "bytes": 102856,
+      "sha256": "54e2d3a812addb33de5c95f2d62c915d735ba98c906780fc2867b1f5108d4ba6",
+      "git_blob_sha": "7a525ac5887307135fc23368776d31c64c1d3688"
+    },
+    {
+      "path": "outputs/research/shared_validation/method_constraints.csv",
+      "bytes": 1141,
+      "sha256": "2ca4d71ffdfbc40ec018bd138b7b509e0ddae043a0a4a6913e0161e56241a1bc",
+      "git_blob_sha": "0bb205301697c999064b846ce2cfb4eae7e70428"
+    },
+    {
+      "path": "outputs/research/shared_validation/missing_artifacts.csv",
+      "bytes": 3515,
+      "sha256": "5499ceef57a1cbd59956b7b36228074833b9e061922a8586727c0506052e5dd2",
+      "git_blob_sha": "1558056483bc6ddcb9def484a90448d3c134babf"
+    },
+    {
+      "path": "outputs/research/shared_validation/model_lineage.csv",
+      "bytes": 3749,
+      "sha256": "d920d432b39cbd2cee1bc157bd3fd7c9138b412327e5c8616dfbb3c54878fcd1",
+      "git_blob_sha": "b39e1b53f6979b73455319b26d44878d541b6a92"
+    },
+    {
+      "path": "outputs/research/shared_validation/native_model_cells.csv",
+      "bytes": 1901,
+      "sha256": "639e447ed2f074a162f73a2b804c198b7b2142945bb7530f7b3c253c780295fa",
+      "git_blob_sha": "9c40479ca0d7d781fd88e55a2cf0a341e20317b7"
+    },
+    {
+      "path": "outputs/research/shared_validation/observation_explanations.csv",
+      "bytes": 2221,
+      "sha256": "9c1cc88887fe1ae72285ae8c514861fed9243815780592877eb9c3056db17308",
+      "git_blob_sha": "88751ce2b1b6bea6951df1e7241498b13deaebc3"
+    },
+    {
+      "path": "outputs/research/shared_validation/preservation_check.json",
+      "bytes": 407,
+      "sha256": "2106ccdc2ccfd5f5015a10589b62b44ce9788f9e8a403ac9213c04ee89df1f46",
+      "git_blob_sha": "702075905853aa0d0a2836908640facb00367917"
+    },
+    {
+      "path": "outputs/research/shared_validation/prior_work.csv",
+      "bytes": 1404,
+      "sha256": "8ba55469b9e8d476d4ae268e25031d785b69074e5fe3d7d67209533b297773c3",
+      "git_blob_sha": "7883126355233aaf17558111448db665f4fdd8d5"
+    },
+    {
+      "path": "outputs/research/shared_validation/published_regression_evaluation.csv",
+      "bytes": 22908,
+      "sha256": "783b4bdbad8ab63d3702673952dd73683812429918a9bcbbb4c88c7032d0b624",
+      "git_blob_sha": "082d72efcfed886992dcb39f90bf130dfbbc1579"
+    },
+    {
+      "path": "outputs/research/shared_validation/search_log.csv",
+      "bytes": 4771,
+      "sha256": "2a1eb3e6e86324df4b5de18ca15f1e43951d98b2d9be62da30e2f7282bdc9950",
+      "git_blob_sha": "026352f37f2e07a482697880caf2cd380da79daf"
+    },
+    {
+      "path": "outputs/research/shared_validation/source_catalog.csv",
+      "bytes": 3018,
+      "sha256": "50815c7a0fc81fada3c1dd9a2f20a4b430a33de0641ba12dcd0dcfd868d5efed",
+      "git_blob_sha": "2d566caa41151edf1a61f44e7fd4d5761096142a"
+    },
+    {
+      "path": "outputs/research/shared_validation/swim_published_equations.csv",
+      "bytes": 960,
+      "sha256": "d725a2a83696d1985b05a393646af9521edd35eb14082362a93b18cd89d46205",
+      "git_blob_sha": "60a1d77fa23b55eb9a2169436a9f3386460b2da2"
+    },
+    {
+      "path": "outputs/research/shared_validation/uv_coordinate_crosswalk.csv",
+      "bytes": 3512,
+      "sha256": "b4a83288886f016f5e8b607059f18f0962a062ec2741d029b4ee8bcac42b80de",
+      "git_blob_sha": "ad8bb7cb59bad734fa185cd8742f8f4bb42368c4"
+    },
+    {
+      "path": "outputs/research/shared_validation/uv_time_eligibility.csv",
+      "bytes": 3389,
+      "sha256": "20132849ec6e7127ae8229c34e42922fc16644df4935413b876dca561f109f0e",
+      "git_blob_sha": "4f6c30dd2db77b05c23262f1c69dae59903edbc5"
+    },
+    {
+      "path": "outputs/research/shared_validation/verification.json",
+      "bytes": 2047,
+      "sha256": "2591369f9f84304e7524e6a60141f2a6e06a5055a2c18063ece7020e51b91921",
+      "git_blob_sha": "43c50c8e2db8bd54210e8ae6dd2e6e647f2d8d29"
+    },
+    {
+      "path": "outputs/research/shared_validation/verify.py",
+      "bytes": 2938,
+      "sha256": "fefd4a258cdeecbf9929e7c12f680ce0b75898422e1d64e1efc7258dfc69a467",
+      "git_blob_sha": "8ba84fa61e96124973a1c1549d99b9cdc413c677"
+    },
+    {
+      "path": "docs/research/shared_validation/research_notes.md",
+      "bytes": 12086,
+      "sha256": "d3778c939a1c2fb91f3546bdaedaf7be2b5a3e034374e99ec843a191837d3161",
+      "git_blob_sha": "bba9d70b6ff1fec836a9da884da6dd66207d3db3"
+    }
+  ],
+  "self_hash_excluded": true,
+  "raw_sources": {
+    "caltech_record": "https://data.caltech.edu/records/ym7fc-x0r93",
+    "caltech_five_files": "inputs/; grids losslessly gzip-compressed, MD5 checked on decompressed bytes",
+    "siegler_pdf": {
+      "url": "https://authors.library.caltech.edu/records/bf4f9-kz243/files/Siegler2012p17729J_Geophys_Res-Planet.pdf?download=1",
+      "actually_downloaded": true,
+      "bytes": 1271499,
+      "md5": "5308781324d45fc40b1af060e9bf790b",
+      "sha256": "006a548b614c0bc1894ebca84739fcc1a5555e74adf2bac027335ba749f05b7b",
+      "distribution": "metadata, factual transcription and checksum delivered; PDF not duplicated in git"
+    },
+    "UV_source_level": "previous fixed-SHA author-calibrated export audit and deployment text extraction; no unprocessed logger acquired",
+    "PSI_access": "cached primary web reading; direct host523; no SWIM2 intermediate raster download"
+  },
+  "analysis": {
+    "run_command": "MPLCONFIGDIR=/tmp/shared_mpl python3 outputs/research/shared_validation/analyze.py",
+    "dependencies": [
+      "Python3",
+      "numpy",
+      "matplotlib"
+    ],
+    "offline_reproducible": [
+      "archive5file MD5/shape/version checks",
+      "three-point native-grid extraction",
+      "source-coordinate distance",
+      "prior clock-boundary arithmetic only",
+      "published Table1 plot and published-regression evaluation"
+    ],
+    "not_performed": [
+      "new raw UV time-series audit",
+      "repeat prior four-station short window",
+      "new Mars thermal inversion",
+      "new laboratory experiment",
+      "automatic timestamp correction",
+      "same-material field validation"
+    ]
+  },
+  "unresolved_gaps": "gap_status.csv and missing_artifacts.csv (11 exact artifact requirements)",
+  "scientific_gaps_all_closed": false,
+  "formal_reports_modified": false,
+  "existing_work_preserved": "preservation_check.json",
+  "verification": "verification.json; final verify.py also checks manifest payload hashes"
+}

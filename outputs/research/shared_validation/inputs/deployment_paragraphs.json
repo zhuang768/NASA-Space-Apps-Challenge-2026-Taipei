@@ -1,0 +1,368 @@
+{
+  "UnivValley_Dec2009Deployment_HoboInfo.docx": {
+    "source_url": "https://zenodo.org/records/10553882/files/UnivValley_Dec2009Deployment_HoboInfo.docx?download=1",
+    "source_sha256": "9aa5e4a2f04754293466e3f17854ea3c91109059d03023df655c464dfe9fcc0d",
+    "locator_definition": "word/document.xml w:p ordinal, not a printed page number",
+    "paragraphs": [
+      {
+        "xml_w_p_ordinal_1based": 1,
+        "text": "University Valley, Antarctica"
+      },
+      {
+        "xml_w_p_ordinal_1based": 2,
+        "text": "Hobo instrumentation deployed in December 2009"
+      },
+      {
+        "xml_w_p_ordinal_1based": 3,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 4,
+        "text": "SENSOR DEPLOYMENT OVERVIEW"
+      },
+      {
+        "xml_w_p_ordinal_1based": 5,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 6,
+        "text": "Shallow Ground Ice Site - S77° 51.946’    E160° 43.720’; elevation: ~1697m"
+      },
+      {
+        "xml_w_p_ordinal_1based": 7,
+        "text": "• 4-channel external (3 temperature and 1 Echo sensor)"
+      },
+      {
+        "xml_w_p_ordinal_1based": 8,
+        "text": "• Hobo Pro v2 (temperature and RH)"
+      },
+      {
+        "xml_w_p_ordinal_1based": 9,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 10,
+        "text": "Medium Depth Ground Ice Site - S77° 51.773’    E160° 43.527’; elevation: ~1661m"
+      },
+      {
+        "xml_w_p_ordinal_1based": 11,
+        "text": "• 4-channel external (4 temperature sensors)"
+      },
+      {
+        "xml_w_p_ordinal_1based": 12,
+        "text": "• Hobo Pro v2 (temperature and RH) in soil"
+      },
+      {
+        "xml_w_p_ordinal_1based": 13,
+        "text": "• Hobo Pro v2 (temperature and RH) under rock with salt"
+      },
+      {
+        "xml_w_p_ordinal_1based": 14,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 15,
+        "text": "Deep Ground Ice Site - S77° 51.584’    E160° 43.019’; elevation: ~1684m"
+      },
+      {
+        "xml_w_p_ordinal_1based": 16,
+        "text": "• 4-channel external (4 temperature sensors)"
+      },
+      {
+        "xml_w_p_ordinal_1based": 17,
+        "text": "• Hobo Pro v2 (temperature and RH) in soil"
+      },
+      {
+        "xml_w_p_ordinal_1based": 18,
+        "text": "• Hobo Pro v2 (temperature and RH) under rock with salt"
+      },
+      {
+        "xml_w_p_ordinal_1based": 19,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 20,
+        "text": "Loggers"
+      },
+      {
+        "xml_w_p_ordinal_1based": 21,
+        "text": "4-Channel External Loggers"
+      },
+      {
+        "xml_w_p_ordinal_1based": 22,
+        "text": "Logger is placed in a water-resistant plastic box (tupperwear), covered with rocks. Leads of sensors come out of plastic box."
+      },
+      {
+        "xml_w_p_ordinal_1based": 23,
+        "text": "Hobo Pro v2 Temperature & RH Loggers"
+      },
+      {
+        "xml_w_p_ordinal_1based": 24,
+        "text": "Loggers are all set at 1 hour data collection intervals, have long white tube with sensor cord."
+      },
+      {
+        "xml_w_p_ordinal_1based": 25,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 26,
+        "text": "Shallow Ground Ice Site - S77° 51.946’    E160° 43.720’; elevation: ~1697m"
+      },
+      {
+        "xml_w_p_ordinal_1based": 27,
+        "text": "depth to ice-cemented ground 8 cm"
+      },
+      {
+        "xml_w_p_ordinal_1based": 28,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 29,
+        "text": "4 channel external logger:  3 temperature sensors and 1 Echo probe"
+      },
+      {
+        "xml_w_p_ordinal_1based": 30,
+        "text": "logger name = UniversityValley_closest2snowpack_shalow"
+      },
+      {
+        "xml_w_p_ordinal_1based": 31,
+        "text": "1 hour data collection interval, serial # 1122968"
+      },
+      {
+        "xml_w_p_ordinal_1based": 32,
+        "text": "New battery installed 8 Dec 2009, Hobo = non-industrial, placed inside Tupperware container"
+      },
+      {
+        "xml_w_p_ordinal_1based": 33,
+        "text": "Sensor #1 (temperature) = surface"
+      },
+      {
+        "xml_w_p_ordinal_1based": 34,
+        "text": "Sensor #2 (temperature) = at ground ice boundary (ice table; 8 cm depth)"
+      },
+      {
+        "xml_w_p_ordinal_1based": 35,
+        "text": "Sensor #3 (temperature) = 4 cm into soil **this should be 15cm In Ice"
+      },
+      {
+        "xml_w_p_ordinal_1based": 36,
+        "text": "Sensor #4 (Echo) = between ice table and soil, ~4 cm depth"
+      },
+      {
+        "xml_w_p_ordinal_1based": 37,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 38,
+        "text": "Hobo Pro v2 Temperature & RH Loggers:"
+      },
+      {
+        "xml_w_p_ordinal_1based": 39,
+        "text": "UniversityV_closest2snowpack_shalow_TRH, Serial # 2429439"
+      },
+      {
+        "xml_w_p_ordinal_1based": 40,
+        "text": "Deployed at 4 cm depth in dry soil (same location as Echo probe)"
+      },
+      {
+        "xml_w_p_ordinal_1based": 41,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 42,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 43,
+        "text": "Medium Depth Ground Ice Site - S77° 51.773’    E160° 43.527’; elevation: ~1661m"
+      },
+      {
+        "xml_w_p_ordinal_1based": 44,
+        "text": "Ground ice ~20 cm depth, located midway down valley."
+      },
+      {
+        "xml_w_p_ordinal_1based": 45,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 46,
+        "text": "4 channel external industrial logger:  4 temperature probes"
+      },
+      {
+        "xml_w_p_ordinal_1based": 47,
+        "text": "1 temperature probe = “HD” = sensor 2"
+      },
+      {
+        "xml_w_p_ordinal_1based": 48,
+        "text": "logger name = UniversityValley_Middle_20cmpermafrost"
+      },
+      {
+        "xml_w_p_ordinal_1based": 49,
+        "text": "1 hour data collection interval, serial #2432937"
+      },
+      {
+        "xml_w_p_ordinal_1based": 50,
+        "text": "4-channel external deployed near salt rock, measuring subsurface temperatures."
+      },
+      {
+        "xml_w_p_ordinal_1based": 51,
+        "text": "Sensor #1 = 10 cm deep."
+      },
+      {
+        "xml_w_p_ordinal_1based": 52,
+        "text": "Sensor #2 = 9 cm into drilled hole into ground ice in diagonal hole."
+      },
+      {
+        "xml_w_p_ordinal_1based": 53,
+        "text": "Sensor #3 = just below surface."
+      },
+      {
+        "xml_w_p_ordinal_1based": 54,
+        "text": "Sensor #4 = ground ice table."
+      },
+      {
+        "xml_w_p_ordinal_1based": 55,
+        "text": "Sensors 1 and 3 are in dry permafrost."
+      },
+      {
+        "xml_w_p_ordinal_1based": 56,
+        "text": "For deployment, a pit was dug at the site.  Drilled a hole diagonally into ground ice to insert sensor into ground ice.  Remaining probes inserted horizontally into side of pit, sensor 1 inserted 12 cm deep into side of pit."
+      },
+      {
+        "xml_w_p_ordinal_1based": 57,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 58,
+        "text": "Hobo Pro v2 Temperature & RH Loggers"
+      },
+      {
+        "xml_w_p_ordinal_1based": 59,
+        "text": "1) UniversityV_med_20cmpermafrost_rock_TRH, this sensor deployed under a rock with salt, serial # 2429436"
+      },
+      {
+        "xml_w_p_ordinal_1based": 60,
+        "text": "2) UniversityV_med_20cmpermafrost_soil_TRH, this sensor deployed where no rocks, just soil, serial # 2429434"
+      },
+      {
+        "xml_w_p_ordinal_1based": 61,
+        "text": "Salt rock is a dolorite rock.  Hobo (T and RH) placed 7 cm below bottom of rock, at 15 cm from soil surface, therefore rock is 8 cm into soil."
+      },
+      {
+        "xml_w_p_ordinal_1based": 62,
+        "text": "Another Hobo Pro v2 (T and RH) placed in soil next to the rock, 15 cm deep into soil."
+      },
+      {
+        "xml_w_p_ordinal_1based": 63,
+        "text": "Depth to permafrost at rock/soil location = 22 cm."
+      },
+      {
+        "xml_w_p_ordinal_1based": 64,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 65,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 66,
+        "text": "Deep Ground Ice Site - S77° 51.584’  E160° 43.019’; elevation: ~1684m"
+      },
+      {
+        "xml_w_p_ordinal_1based": 67,
+        "text": "Permafrost depth = 36 cm"
+      },
+      {
+        "xml_w_p_ordinal_1based": 68,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 69,
+        "text": "4-channel external industrial logger:  4 temperature probes"
+      },
+      {
+        "xml_w_p_ordinal_1based": 70,
+        "text": "logger name = UniversityValley_deep_40cmpermafrost"
+      },
+      {
+        "xml_w_p_ordinal_1based": 71,
+        "text": "1 hour data collection interval, serial # 2432936"
+      },
+      {
+        "xml_w_p_ordinal_1based": 72,
+        "text": "Sensor #1 = surface"
+      },
+      {
+        "xml_w_p_ordinal_1based": 73,
+        "text": "Sensor #2 = 10 cm depth, 8 cm into side of pit"
+      },
+      {
+        "xml_w_p_ordinal_1based": 74,
+        "text": "Sensor #3 = at ground ice boundary (ice table), ~4 cm into side of pit"
+      },
+      {
+        "xml_w_p_ordinal_1based": 75,
+        "text": "Sensor #4 = in ground ice, 11 cm diagonal"
+      },
+      {
+        "xml_w_p_ordinal_1based": 76,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 77,
+        "text": "Hobo Pro v2 Temperature & RH Loggers"
+      },
+      {
+        "xml_w_p_ordinal_1based": 78,
+        "text": "1) UniversityV_deep_40cmPermafrost_soil_TRH, place under rock with salt, serial # 2429437"
+      },
+      {
+        "xml_w_p_ordinal_1based": 79,
+        "text": "2) Placed Hobo Pro v2 (T and RH) under rock with salt, 5 cm below rock bottom, 11 3) cm below (soil) surface."
+      },
+      {
+        "xml_w_p_ordinal_1based": 80,
+        "text": "Probe also placed 15 cm below soil surface, no large overlying rocks."
+      }
+    ]
+  },
+  "UnivValley_HoboInfo_Dec2010_Update.docx": {
+    "source_url": "https://zenodo.org/records/10553882/files/UnivValley_HoboInfo_Dec2010_Update.docx?download=1",
+    "source_sha256": "c8b693f3fe406b65a3003419a5cfc1fd1d53e2abcbcfa9913ac1d0bae337d201",
+    "locator_definition": "word/document.xml w:p ordinal, not a printed page number",
+    "paragraphs": [
+      {
+        "xml_w_p_ordinal_1based": 1,
+        "text": "Jan 11, 2011 (marinova)"
+      },
+      {
+        "xml_w_p_ordinal_1based": 2,
+        "text": "Hobo Redeployment – University Valley Dec 2010"
+      },
+      {
+        "xml_w_p_ordinal_1based": 3,
+        "text": ""
+      },
+      {
+        "xml_w_p_ordinal_1based": 4,
+        "text": "All Hobo stations (shallow, medium, deep ice) were downloaded; all the data looks good."
+      },
+      {
+        "xml_w_p_ordinal_1based": 5,
+        "text": "All batteries were replaced at the shallow ice site with no problems or difficulties. All sensors were relaunched to record every 1 hr, but not to record their battery voltage; this allowed us to keep to same recording inverval, but to have them last for > 2 years."
+      },
+      {
+        "xml_w_p_ordinal_1based": 6,
+        "text": "At the medium ice site, the T/RH sensor under the rock stopped functioning after the battery was changed (showed -94C). This is likely due to a disconnect between the sensor and the circuit board, but this was not discovered at the time. The sensor will likely not record any useful data from that point on. The 4-channel external industrial refused to connect to the computer after the battery was changed. The reason for this is completely unknown. All sensors (that could be connected to) were relaunched with a 1 hr measuring interval and no recording of the battery voltage."
+      },
+      {
+        "xml_w_p_ordinal_1based": 7,
+        "text": "At the deep ice site, the 4-channel external industrial sensors had the same failure mode as that at the medium ice site. All other sensors functioned fine after the battery change. The sensors were relaunched to a 1 hr interval and no battery voltage recording."
+      },
+      {
+        "xml_w_p_ordinal_1based": 8,
+        "text": ""
+      }
+    ]
+  }
+}

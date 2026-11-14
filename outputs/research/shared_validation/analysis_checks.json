@@ -1,0 +1,47 @@
+{
+  "checks": [
+    {
+      "check": "archive_md5:Lat.ascii",
+      "pass": true,
+      "detail": "uncompressed bytes=2660"
+    },
+    {
+      "check": "archive_md5:Lon.ascii",
+      "pass": true,
+      "detail": "uncompressed bytes=4820"
+    },
+    {
+      "check": "archive_md5:Notes.txt",
+      "pass": true,
+      "detail": "uncompressed bytes=1926"
+    },
+    {
+      "check": "archive_md5:TI_SI.ascii",
+      "pass": true,
+      "detail": "uncompressed bytes=2484261"
+    },
+    {
+      "check": "archive_md5:d_m.ascii",
+      "pass": true,
+      "detail": "uncompressed bytes=2434482"
+    },
+    {
+      "check": "archive_shape_coordinates_versions",
+      "pass": true,
+      "detail": "360 latitude rows x 720 longitude columns; 0.5 degree; one listed version 1.0"
+    },
+    {
+      "check": "previous_clock_audit_arithmetic_only",
+      "pass": true,
+      "detail": "decimal boundary 30.096000 min vs printed 270 min; no raw re-audit/alignment"
+    }
+  ],
+  "native_cells": 3,
+  "raw_UV_time_series_recomputed": false,
+  "coordinate_conflict_separation_m": 724.3517276663933,
+  "clock_boundary_arithmetic_min": 30.095999999975902,
+  "laboratory_vapor_runs_transcribed": 8,
+  "new_laboratory_measurements": false,
+  "new_Mars_model_fit": false,
+  "scientific_gaps_solved_by_passing_checks": false
+}

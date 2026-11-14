@@ -1,0 +1,153 @@
+{
+  "task": "MS-02 Earth analog research, Team zasa, NASA Space Apps 2026",
+  "mars_point": {
+    "id": "MS-02",
+    "lat_deg_N": 52.75,
+    "lon_deg_E": 168.25,
+    "nominal_bounds": {
+      "lat": [
+        52.5,
+        53.0
+      ],
+      "lon": [
+        168.0,
+        168.5
+      ]
+    }
+  },
+  "created_taipei": "2026-11-14",
+  "branch": "research/ms-02-earth-analogs",
+  "base_commit_sha": "f7076c9fdc77e00244ed5d6863aad2bf78cfa28f",
+  "base_commit_ref": "origin/handoff/verified-data-20261114 (adds the verified workbook and full screening data to main)",
+  "origin_main_sha_at_start": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+  "base_choice_note": "No common SHA was specified. The hand-off branch is the only remote version containing both large files, so it was used as base; main's SHA is recorded as well.",
+  "common_data_check": {
+    "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx": {
+      "bytes": 23035176,
+      "sha256": "157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175",
+      "opened": "zip test OK; 33 sheets listed via openpyxl read-only"
+    },
+    "outputs/research/mars_reselection_20261114/screened_pool.csv.gz": {
+      "bytes": 7702846,
+      "sha256": "7c5559e40fca9fa304b7799e4490bfb4ff0d55ea0a02819c53f432377462ff92",
+      "opened": "gzip -t OK; 58,238 rows x 54 columns; MS-02 cell found"
+    },
+    "ms02_value_cross_check": "outputs/research/MS-02/verification.json (14 consistency checks, all pass)"
+  },
+  "files": [
+    {
+      "path": "docs/research/MS-02/report.md",
+      "bytes": 13778,
+      "sha256": "7aa7d756f7f042a8488bc2c0eca76d848e849b0e4de1155a7b264c056da223ec"
+    },
+    {
+      "path": "outputs/research/MS-02/candidates.csv",
+      "bytes": 5692,
+      "sha256": "74661cf0783f2b9f5278adb72ffe372d86c21548dc9c068c96c3527aa4dbaa7d"
+    },
+    {
+      "path": "outputs/research/MS-02/evidence.csv",
+      "bytes": 11553,
+      "sha256": "9752483a3b3b63f2bfec4bb134defd756d33e9209ad6173f1830605b402a809c"
+    },
+    {
+      "path": "outputs/research/MS-02/prior_work.csv",
+      "bytes": 5427,
+      "sha256": "2606dce6be5933273c29b584250a9e2ce72a74be4aaf993bceed49a00ca7ae85"
+    },
+    {
+      "path": "outputs/research/MS-02/search_log.csv",
+      "bytes": 5038,
+      "sha256": "48fe2f6b40006b6799d72ca928835509f370cf078932de69ad143a5dddb92559"
+    },
+    {
+      "path": "outputs/research/MS-02/verification.json",
+      "bytes": 5866,
+      "sha256": "c51c118420e0ada0d9d2a6015acb7badac44a86b8c79bcf9965e2841a6fc576f"
+    },
+    {
+      "path": "scripts/research/ms02_earth_analogs/verify_ms02.py",
+      "bytes": 7279,
+      "sha256": "1c75c5b91b6f311a6b8259c325b5db36ce337d787fd678bb05e78e4674d414c3"
+    },
+    {
+      "path": "scripts/research/ms02_earth_analogs/build_tables.py",
+      "bytes": 34061,
+      "sha256": "f891876a6346d33725d01054fe4e3773e4074ba9c124dffa3a87b2e6ed09211e"
+    }
+  ],
+  "sources": [
+    {
+      "id": "SWIM",
+      "ref": "https://swim.psi.edu/SWIM2Products.php"
+    },
+    {
+      "id": "MORGAN",
+      "ref": "https://doi.org/10.1038/s41550-020-01290-z"
+    },
+    {
+      "id": "HAUBER",
+      "ref": "https://doi.org/10.1144/SP356.7"
+    },
+    {
+      "id": "MARINOVA",
+      "ref": "https://doi.org/10.1017/S0954102022000025"
+    },
+    {
+      "id": "HELDMANN",
+      "ref": "https://doi.org/10.1016/j.pss.2013.05.019"
+    },
+    {
+      "id": "BANNISTER",
+      "ref": "https://doi.org/10.5281/zenodo.1154854"
+    },
+    {
+      "id": "BRIGHI",
+      "ref": "https://meetingorganizer.copernicus.org/EPSC-DPS2025/EPSC-DPS2025-710.html"
+    },
+    {
+      "id": "RASMUSSEN",
+      "ref": "https://doi.org/10.1016/j.quascirev.2023.108137"
+    },
+    {
+      "id": "ROTEM",
+      "ref": "https://doi.org/10.5194/tc-17-3363-2023"
+    },
+    {
+      "id": "ANDRES",
+      "ref": "https://core.ac.uk/download/364350841.pdf"
+    },
+    {
+      "id": "HIBBARD",
+      "ref": "https://ir.lib.uwo.ca/etd/8120"
+    },
+    {
+      "id": "HANDOFF",
+      "ref": "outputs/research/mars_reselection_20261114/"
+    }
+  ],
+  "disposition_summary": {
+    "MS-02-E01": "保留",
+    "MS-02-E02": "待補證據",
+    "MS-02-E03": "保留",
+    "MS-02-E04": "待補證據"
+  },
+  "unresolved_gaps": [
+    "docs/TEAM_START.md does not exist on main or the hand-off branch.",
+    "scripts/restore_team_data.py does not exist on main or the hand-off branch (data are committed directly on the hand-off branch, so no restore step was needed).",
+    "Raw PDS/SWIM/Montabone/Zenodo products could not be downloaded in the sandbox (HTTP 403 via proxy); MS-02 values were cross-checked among three hand-off files, not recomputed from raw rasters.",
+    "Whether MS-02 lies in Arcadia Planitia or another unit was not verified (no geologic-map lookup done).",
+    "No Earth-site thermal inertia, slope/relief or wind data were obtained for any candidate (marked 未知).",
+    "E02 and E04 rest on abstracts or partial text; E01 text partially read (first 100,000 of 121,921 chars); only Hauber 2011 was read in substantially full.",
+    "Haughton coordinates differ by ~4.3 km within Andres 2020 (p.6 vs Fig 1.8).",
+    "One literature page (Antarctic Science depth-to-ice paper via proxy URL) was access-denied and not read.",
+    "SWIM composite resolution/units are not stated on the provider page.",
+    "PANGAEA polygon dataset (Adventdalen) and Marchant & Head 2007 / Sugden 1995 were leads only, not read.",
+    "No figure produced."
+  ],
+  "not_claimed": [
+    "No ice amount or probability for MS-02",
+    "No Mars-likeness score/percentage",
+    "No claim that any pairing was never studied"
+  ]
+}

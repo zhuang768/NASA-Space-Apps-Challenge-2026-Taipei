@@ -1,0 +1,27 @@
+﻿search_id,date_taipei,platform,query_or_url,purpose,candidate,records_used,read_scope,outcome
+S01,2026-11-14,WebFetch,https://swim.psi.edu/SWIM2Products.php,Confirm SWIM composite meaning,MS-02,SWIM2 products page,page text,"Consistency, not abundance/probability; no resolution/units on page"
+S02,2026-11-14,WebSearch(standard),Beacon Valley buried ice Mars analog sublimation till,E02 precedents,E02,Heldmann 2013; Bannister (via later query),titles/URLs only,leads
+S03,2026-11-14,WebSearch(standard),University Valley Antarctica ice-cemented ground Mars analog,E01 precedents,E01,Marinova 2022; Heldmann 2013,titles/URLs only,leads
+S04,2026-11-14,WebSearch(standard),Devon Island Haughton crater ground ice polygons Mars analog,E04 precedents,E04,Andres thesis,titles/URLs only,leads
+S05,2026-11-14,WebSearch(standard),Svalbard Adventdalen ice-wedge polygons loess Mars analog,E03 precedents,E03,Hauber 2011; PANGAEA polygons dataset,titles/URLs only,leads
+S06,2026-11-14,WebSearch(standard),Arcadia Planitia ground ice mid-latitude northern plains SHARAD thermal inertia,Mars-side context,MS-02,Morgan 2021; SWIM abstracts,titles/URLs only,leads
+S07,2026-11-14,WebFetch,https://epic2-clone.awi.de/23057/1/Hau2010f.pdf,Read Hauber 2011,E03,Hauber 2011,pp.111-131 summary,"site list, Table 1, Fig 4, limits"
+S08,2026-11-14,WebFetch,https://cambridge.org/core/services/aop-cambridge-core/content/view/S0954102022000025,Read Marinova 2022,E01,Marinova 2022,"first 100,000 of 121,921 chars","Table II, ice table, a_w, limits"
+S09,2026-11-14,WebFetch,https://vufind-test.katalog.k.utb.cz/SummonRecord/FETCH-LOGICAL-c363t-2a3c1825fd50152c8509f6e9560ebde48abb9293d7fa6231df07c840826deaeb3,Record for Heldmann 2013,E01;E02,Heldmann 2013,abstract only,10-60 cm ice depth
+S10,2026-11-14,WebFetch,https://core.ac.uk/download/364350841.pdf,Read Andres thesis,E04,Andres 2020,"first 100,000 of 257,352 chars","coordinates, MAAT, ground ice general values, limits"
+S11,2026-11-14,WebFetch,https://link.springer.com/article/10.1038/s41550-020-01290-z,Check Morgan 2021 page,MS-02,Morgan 2021,page text (paywall),"regions, no depths"
+S12,2026-11-14,WebSearch(standard),Beacon Valley Mars analog massive ground ice Heldmann OR Marchant OR Sugden,More E02 precedents,E02,Bannister 2007 thesis; depth-to-ice paper lead,titles/URLs only,leads
+S13,2026-11-14,WebSearch(standard),Morgan 2021 Arcadia Planitia ice consistency Nature Astronomy mid-latitude Mars subsurface ice,Find Morgan 2021 open record,MS-02,USGS pubs record,titles/URLs only,lead
+S14,2026-11-14,WebSearch(standard),Svalbard Mars analog ground ice radar GPR Adventdalen permafrost mid-latitude,E03 GPR precedents,E03,Brighi 2025 EPSC-DPS abstract; SPLAM lead,titles/URLs only,leads
+S15,2026-11-14,WebFetch,https://pubs.usgs.gov/publication/70226786,Morgan 2021 abstract,MS-02,Morgan 2021,abstract,Arcadia/Deuteronilus; no depths
+S16,2026-11-14,WebFetch,Cambridge Core via ezproxy (depth-to-ice-cemented soils),Tried to read Antarctic Science depth-to-ice paper,E01;E02,none,not read,Denied by access control (proxy URL); not retried or bypassed
+S17,2026-11-14,WebFetch,https://meetingorganizer.copernicus.org/EPSC-DPS2025/EPSC-DPS2025-710.html,Read Brighi 2025 abstract,E03,Brighi 2025,abstract,"March 2022, ε≈3.2 vs ≥7 at ~1.5 m"
+S18,2026-11-14,WebFetch,https://openpolar.no/Record/ftzenodo:oai:zenodo.org:1154854,Bannister 2007 record,E02,Bannister 2007,abstract,Beacon Valley >100 m ice (undergrad thesis)
+S19,2026-11-14,WebSearch(standard),Adventdalen loess aeolian silt deposition permafrost active layer,E03 aeolian evidence,E03,Rasmussen 2023; Rotem 2023,titles/URLs only,leads
+S20,2026-11-14,WebSearch(standard),terrestrial analog for Arcadia Planitia Mars ground ice Earth analogue site,Find Arcadia-class Earth analog precedents,E04;MS-02,Hibbard thesis,titles/URLs only,lead
+S21,2026-11-14,WebSearch(standard),Haughton-Mars Project Devon Island permafrost active layer thickness ground temperature borehole,E04 ground-temperature data,E04,none usable,titles/URLs only,No Haughton-specific borehole data found
+S22,2026-11-14,WebFetch,https://ir.lib.uwo.ca/etd/8120,Read Hibbard thesis page,E04,Hibbard,abstract page,Arcadia + Canadian High Arctic; no coordinates/sites
+S23,2026-11-14,WebFetch,https://openpolar.no/Record/ftdtupubl:oai:pure.atira.dk:publications%2F600f63b0-8ab2-4bad-abef-3c49df1c8bea,Rasmussen 2023 record,E03,Rasmussen 2023,abstract,0.35 cm/yr; 2900 g m-2 yr-1
+S24,2026-11-14,WebFetch,https://tc.copernicus.org/articles/17/3363/2023/,Rotem 2023,E03,Rotem 2023,"first 100,000 of 114,191 chars","ADE coordinates, MAAT, active layer"
+S25,2026-11-14,git/bash,clone origin main; ls-remote; fetch handoff/verified-data-20261114,Data availability,MS-02,repo,tree + files,"xlsx 23,035,176 B and screened_pool 7,702,846 B present on handoff branch only"
+S26,2026-11-14,curl,HEAD https://swim.psi.edu/output/SWIM2/Global/Composite/SWIM2_c0_1.tif,Test raw-source access,MS-02,none,n/a,403 from sandbox proxy; raw products not recomputed

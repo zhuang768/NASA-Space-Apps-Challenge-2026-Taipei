@@ -1,0 +1,75 @@
+{
+  "source_url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Campbell_data_good_only_calibrated.txt?download=1",
+  "dataset_doi": "10.5281/zenodo.10553882",
+  "source_bytes": 2673975,
+  "sha256": "c46d93e3dd07c6c91d700a814214716f00caa0d5cc3a520f8969ce0af63ecafd",
+  "md5": "ae2133eac5c92c695c5f6ef93bcbbd25",
+  "provider_md5_observed_again_taipei": "2026-11-15",
+  "retained_source": "earth_raw/UniversityV_09_10_Campbell_data_good_only_calibrated.txt.gz",
+  "retained_gzip_sha256": "f2ab00f49fdfa9f64cb2e6fe15df3d32599f382292ba7b2e4b916f75c5f311f1",
+  "input_mode": "retained_lossless_gzip",
+  "retention": "Lossless gzip;mtime0;empty stored filename. Decompressed original bytes, line endings and timestamps unchanged. Attribution/license/full provenance in earth_raw/provenance.json.",
+  "original_acquisition": "Existing local bytes; prior provenance says browser download 2026-11-14; this task independently rehashed and rechecked online provider MD5",
+  "input_rows": 17705,
+  "input_printed_first": "2009-12-04T19:30:00",
+  "input_printed_last": "2010-12-08T15:30:00",
+  "selected_rows": 16032,
+  "selected_start_inclusive": "2010-01-01T00:00:00",
+  "selected_stop_exclusive": "2010-12-01T00:00:00",
+  "source_timestamp_formats": [
+    "ISO8601-like",
+    "month/day/year"
+  ],
+  "input_printed_cadence_minutes": 30,
+  "duplicate_printed_timestamps": 0,
+  "header_mapping": {
+    "air_temperature": {
+      "column": "T107_air",
+      "position_0based": 4,
+      "unit": "degC",
+      "instrument": "Campbell 207 per paper; export column named T107_air",
+      "height_m": 1.2
+    },
+    "air_RH_water_basis": {
+      "column": "RH_wrt_water",
+      "position_0based": 5,
+      "unit": "%",
+      "instrument": "Campbell 207; author corrected export basis retained",
+      "height_m": 1.2
+    },
+    "air_RH_ice_basis": {
+      "column": "RH_wrt_WaterIce",
+      "position_0based": 6,
+      "unit": "%",
+      "instrument": "Campbell 207; author corrected export basis retained",
+      "height_m": 1.2
+    },
+    "solar_irradiance": {
+      "column": "SlrW",
+      "position_0based": 7,
+      "unit": "W m-2",
+      "instrument": "LI-COR LI200X; 400-1100 nm response",
+      "height_m": 1.27
+    },
+    "wind_speed": {
+      "column": "WS_ms",
+      "position_0based": 8,
+      "unit": "m s-1",
+      "instrument": "RM Young 05103 in paper Methods; paper accuracy paragraph says 05013",
+      "height_m": 1.08
+    }
+  },
+  "checks": "Pinned source SHA256 and provider MD5; all row widths; header+unit positions; mixed time-format parse; unique ordered 30-minute source cadence; complete 11 calendar months; per-month sample counts; all five fields finite",
+  "limitations": [
+    "11 calendar months, not an annual climatology",
+    "Unresolved clock basis retained; no UTC conversion, Campbell-HOBO join, lag or diffusivity calculation",
+    "Processed/calibrated author file, not logger bytes; missing per-row intervention flags",
+    "Separate short export, not asserted identical to long09_13 export",
+    "0 wind values may be below the anemometer threshold; no calibration or dust proxy",
+    "Source sensor-model spelling differs within paper; do not silently resolve 05103 versus 05013",
+    "RH basis kept as supplied, no water activity or vapour correction",
+    "Solar channel response differs from TES and is not a Mars radiation estimate",
+    "Sample counts do not reduce systematic instrument errors",
+    "Point records, not gridded terrain or whole-valley climate"
+  ]
+}

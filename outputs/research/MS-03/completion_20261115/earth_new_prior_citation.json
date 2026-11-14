@@ -1,0 +1,32 @@
+{
+  "source_id": "CEW3",
+  "authors": [
+    "Christopher P. McKay",
+    "Margarita M. Marinova",
+    "Kaj E. Williams",
+    "Michael T. Mellon"
+  ],
+  "title": "Summer snow determines the depth to ice-cemented ground under dry permafrost in Antarctica",
+  "year": 2026,
+  "online_publication_date": "2025-11-27",
+  "journal": "Antarctic Science",
+  "volume": 38,
+  "issue": 2,
+  "pages": "122–134",
+  "doi": "10.1017/S0954102025100448",
+  "publisher_url": "https://www.cambridge.org/core/journals/antarctic-science/article/summer-snow-determines-the-depth-to-icecemented-ground-under-dry-permafrost-in-antarctica/5B2E97EBA4C91035CAFCECC234A532A0",
+  "author_institutional_record": "https://pubs.usgs.gov/publication/70273131",
+  "read_sections": [
+    "Environmental data: W coordinates and data-source paragraphs",
+    "Discussion: assumptions, surface boundary and one-year representativity",
+    "Extrapolating up and down University Valley: model assumptions",
+    "Publisher publication-date and volume/issue metadata"
+  ],
+  "not_claimed": [
+    "Full-paper review",
+    "Independent reproduction",
+    "New logger time history",
+    "Local Mars ice truth"
+  ],
+  "classification": "direct same-place, same-process precedent"
+}

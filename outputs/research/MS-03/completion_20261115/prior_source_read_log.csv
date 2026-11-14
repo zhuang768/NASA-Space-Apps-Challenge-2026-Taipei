@@ -1,0 +1,5 @@
+source_id,url_or_doi,locator,actually_read,supports,does_not_support
+PF01,https://doi.org/10.1029/2008JE003273,Publisher HTML section2 paragraphs5–8;section3 paragraphs9–11;AppendixA2 paragraph57;SupportingInformation,Selected actual primary HTML passages and attachment identities,Survey selection and observability/classification limits,Full S1 rows or MS03 membership
+PF02,https://doi.org/10.1029/2020JE006617,Publisher DataAvailabilityStatement and SupportingInformation,Actual primary HTML links and filenames,Release identity and exact S4 filename,Original S4 data or no-local-ice claim
+PF03,https://doi.org/10.1029/2024JE008387,Publisher section1.2 and DataAvailabilityStatement,Actual primary HTML study area and dataset references,HiRISE study and MBARS dataset lineage,Full54 footprints or header definitions
+PF04,https://catalog.data.gov/dataset/locations-and-properties-of-ice-exposing-scarps-and-new-impact-craters-in-the-mid-latitude,Resources and distribution fields,Actual official metadata page,Landing DOI and original metadata linkage,CSV source rows or independent observations

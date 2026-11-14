@@ -1,0 +1,24 @@
+你負責 NASA Space Apps 2026、Team zasa 的 MS-03 完整地球類比研究，角色是隊友二。請直接開始並完成，不等待其他人，不把研究步驟轉派給另一位隊友。
+
+專案：https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei
+共同起點：固定交接分支 handoff/team-start-20261114（TEAM-HANDOFF-20261114-v1，與本次補件後main相同）。記錄其完整commit SHA，再建立自己的 research/ms-03-earth-analogs 分支。保留既有本機修改；版本不同就另建clone／worktree，不要reset或force push。
+
+你的火星點：MS-03，57.75°N、242.25°E（等同−117.75°），名義0.5°範圍為57.50–58.00°N、242.00–242.50°E（−118.00至−117.50°）；只是篩選單元，不是著陸橢圓或實際鑽孔。
+研究切入：區域坡度及沙塵背景較低，近表層冰線索強、較深層指標相對低；TES有效格有限且範圍寬，MCS粗格偏北、缺測多。優先研究淺層冰／覆土造成的熱判讀歧義。以上是選題線索，實際數值以交接提交內的final_candidates.csv及原生證據為準。
+
+先讀 docs/TEAM_START.md、docs/REPORT.md，以及 outputs/research/mars_reselection_20261114/ 內的 report.md、selected_targets.json、final_candidates.csv、candidate_native_evidence.json、all_data_usage.csv、bounded_prior_site_audit.json。需要時讀candidate_dust_series.csv.gz與candidate_mcs_bins.csv.gz。
+執行 python3 scripts/restore_team_data.py（Windows可用 py -3）取得完整23 MB Excel及186份歷史補充，程式會核對SHA-256；7.7 MB完整篩選檔screened_pool.csv.gz已在同一main資料包。Excel仍是舊MR-v3／I-01/I-02快照，只作背景，不能把舊配對套給MS-03。更多歷史與19份火星原始檔在archive/pre-msr-cleanup-20261114；目前約12.3 GB地球原始下載不在GitHub，不能假稱已取得；需要時自己依來源取得或註明未知。你已可獨立開始，不須等這些全球資料或另一人。
+
+工作要求：
+1. 至少找兩個有依據的地球候選；若有更多且有不同用途可繼續保留，不以湊數為目的。寫出場址名稱、中心座標、實際研究範圍／邊界依據、可取得資料、具體可測試的物理過程及理由。不要只寫「環境很像」。
+2. 自己取得證據，逐一比較地形、溫度／熱性質、水／冰、大氣／沙塵四面向。每個數值列來源URL／DOI、頁／表／欄、單位、觀測期間、儀器、解析度／代表範圍、缺測及品質限制。沒有可比較的數據就標未知；不同單位、波段、深度、尺度或年代不能硬相減。區分測量、推論與待驗證假設。
+3. 自己查每個候選「相同地點＋相同用途」的先例，保留搜尋詞、平台、日期、讀過的文獻及其頁段。分類為直接先例、部分重疊、用途不同或證據不足。比較你的具體問題、尺度、方法與既有研究的差異；沒查到不能寫成從未研究，有限查核不能放行全球新穎性。
+4. 提出每個候選保留、排除或待補證據的理由及下一個可執行驗證步驟。可以是一點多個互補地球場址；不要求所有指標都相同，也不因為其他人選過就排除。明確說明能驗證什麼與不能外推什麼。
+5. SWIM一致性不是含冰量／機率；熱慣量不是溫度／硬度；MCS粗格不是候選現地溫度；區域低坡度不是著陸安全；地球與火星大氣、重力等差異要界定。不得無依據宣稱首次、最佳、可開採或已驗證基地可行。
+
+交付與結束條件：
+- 報告：docs/research/MS-03/report.md。
+- 證據：outputs/research/MS-03/candidates.csv、evidence.csv、prior_work.csv、search_log.csv、manifest.json。候選ID用MS-03-E01、MS-03-E02；manifest記錄共同起點SHA、來源／檔案hash及未解缺口。必要程式只放自己的專用目錄。
+- 核對座標、單位、缺值及引文，確認至少兩個候選均完成四面向與先例查核，證據不足也須如實交付。
+- 只提交自己負責的目錄，推至research/ms-03-earth-analogs並建立PR；不要直接合併main，不改共用Excel、既有火星結果、別人的檔案或網站。
+- 完成後回報分支／commit／PR連結、候選結論與主要缺口，等統籌最後整合。如果沒有寫入權限，保留完整本機交付並回報具體阻擋，不要宣稱已推送。

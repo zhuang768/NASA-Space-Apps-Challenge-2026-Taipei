@@ -1,0 +1,437 @@
+{
+  "schema": "MS03-publication-readback-v1",
+  "status": "published_data_commit_and_PR_verified",
+  "research_date_taipei": "2026-11-15",
+  "repository": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei",
+  "repository_visibility_checked": "private",
+  "authenticated_owner_checked": "zhuang768",
+  "branch": "research/ms-03-earth-analogs",
+  "fixed_research_baseline": "234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa",
+  "publication_base_commit": "1506ede572435588eb5e64f95f24639279b77e56",
+  "data_commit": "60dc8882ffb5b0e0894c0a9eaabf1c4200a14b8b",
+  "data_tree": "f5be19e6867725c2c1be2c2c0833553cc06432cb",
+  "pr": {
+    "number": 26,
+    "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/26",
+    "state_read_back": "open",
+    "merged": false,
+    "head_read_back": "60dc8882ffb5b0e0894c0a9eaabf1c4200a14b8b"
+  },
+  "verification": {
+    "changed_files": 74,
+    "all_changed_Git_blob_hashes_match_prepared_bytes": true,
+    "unrelated_base_files_preserved": true,
+    "structural_checks": 26,
+    "structural_failed_checks": 0,
+    "original_handoff_validation": "passed",
+    "retained_input_clean_reproduction": "passed;four numerical tables byte-identical",
+    "earth_metrics": 5,
+    "earth_samples": 16032,
+    "earth_complete_months": 11,
+    "radar_centres": 65
+  },
+  "file_inventory": {
+    "rows": 598,
+    "recomputed_baseline_files": 518,
+    "explicit_allowed_baseline_modifications": 6,
+    "new_indexed_files": 63,
+    "remote_tree_references_not_locally_downloaded": 11
+  },
+  "scientific_completion": false,
+  "all_scientific_problems_solved": false,
+  "unresolved_questions": "outputs/research/MS-03/completion_20261115/open_questions.csv",
+  "verified_data_files": [
+    {
+      "path": "docs/research/MS-03/completion_20261115/earth_evidence.md",
+      "git_blob_sha1": "26adba8fee1c3142505d5bd7b2ee32490832246a",
+      "bytes": 5867
+    },
+    {
+      "path": "docs/research/MS-03/completion_20261115/prior_followup.md",
+      "git_blob_sha1": "7ac844975d94586921b20ee73ca39bcaa135bea8",
+      "bytes": 4689
+    },
+    {
+      "path": "docs/research/MS-03/completion_20261115/requirements_review.md",
+      "git_blob_sha1": "a13a3e622f99e0dd5ae8a226c22dcf2678a4a197",
+      "bytes": 9094
+    },
+    {
+      "path": "docs/research/MS-03/completion_20261115/technical_review.md",
+      "git_blob_sha1": "063fe8758234834f3078a9645055548c0f895680",
+      "bytes": 3388
+    },
+    {
+      "path": "docs/research/MS-03/report.md",
+      "git_blob_sha1": "a272a1cd89911383ad2178a00a53466c4772e5b8",
+      "bytes": 21724
+    },
+    {
+      "path": "docs/research/MS-03/report_history_before_completion_20261115.md",
+      "git_blob_sha1": "f9164ae35147f6007f486fe69cb93cc41572c2b5",
+      "bytes": 74658
+    },
+    {
+      "path": "outputs/research/MS-03/candidates.csv",
+      "git_blob_sha1": "d87446ee18e48f88dfddaac1ecc7a08e1e3f1628",
+      "bytes": 3811
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/README.md",
+      "git_blob_sha1": "ac663055a33be403c63cf6baa5fe7456df720a92",
+      "bytes": 3712
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/all_search_records.csv",
+      "git_blob_sha1": "0f96d686f72246ca3bebe6ff5e52ec9ee20ecae7",
+      "bytes": 397609
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/baseline_git_tree.json",
+      "git_blob_sha1": "1608b3597d80fdf68ec6a6250839552eebdf2f73",
+      "bytes": 199684
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/build_delivery_index.py",
+      "git_blob_sha1": "4f9ac45bb58401489af07ad212f6023483b235b1",
+      "bytes": 36687
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_atmosphere.py",
+      "git_blob_sha1": "4fef5e44020403f887753be7456f3db71975b8e4",
+      "bytes": 7898
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_atmosphere_monthly.csv",
+      "git_blob_sha1": "2e070542a542eff6ebbbf593cafd0e2239094593",
+      "bytes": 4493
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_atmosphere_summary.csv",
+      "git_blob_sha1": "696ced0e5da79647aa5b085848552f34532bae9c",
+      "bytes": 2245
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_comparability.csv",
+      "git_blob_sha1": "cca215f61ffdc7345956e2e6ecb9fc21a79e89f0",
+      "bytes": 4929
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_evidence.csv",
+      "git_blob_sha1": "74ba15c84e1e4e2e23649e6829eadfe8c16ab608",
+      "bytes": 1835
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_evidence_append.csv",
+      "git_blob_sha1": "74ba15c84e1e4e2e23649e6829eadfe8c16ab608",
+      "bytes": 1835
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_four_dimensions.csv",
+      "git_blob_sha1": "7b9bfbe6335bf4824bab0c2e0301543aa35c2b0f",
+      "bytes": 8338
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_input_receipt.json",
+      "git_blob_sha1": "15d5bdf7139dc7014387b81d2e5631c8e24e78e7",
+      "bytes": 3513
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_new_prior_citation.json",
+      "git_blob_sha1": "a0e6439c2207d2680910869b372a8b646160aa27",
+      "bytes": 1236
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_prior_append.csv",
+      "git_blob_sha1": "b956e19ccbd5fa002c81317232fcaa5b1128d058",
+      "bytes": 1290
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_prior_work.csv",
+      "git_blob_sha1": "b956e19ccbd5fa002c81317232fcaa5b1128d058",
+      "bytes": 1290
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_raw/README.md",
+      "git_blob_sha1": "efa9c1e247893bcfc74494cc1d3d292cf6f0954f",
+      "bytes": 2035
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_raw/UniversityV_09_10_Campbell_data_good_only_calibrated.txt.gz",
+      "git_blob_sha1": "db3803b36af95ee90d6c44d2e6f446445acc1307",
+      "bytes": 506804
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_raw/provenance.json",
+      "git_blob_sha1": "0b691fade867d97b806377fca650ff76ec173471",
+      "bytes": 2254
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_retained_validation.json",
+      "git_blob_sha1": "91768ece9af6ec43a782fb868468ec21a2cc52f1",
+      "bytes": 766
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_search_append.csv",
+      "git_blob_sha1": "885a8f86f8ad05c1fe24d7ee65b3621eb217a913",
+      "bytes": 1365
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_search_log.csv",
+      "git_blob_sha1": "5a13446d814e2f12851e3d161c32549549541c29",
+      "bytes": 1332
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_source_read_log.csv",
+      "git_blob_sha1": "ecf76b41c34009120ab21e29fbd65803ee9a206d",
+      "bytes": 2013
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_validate.py",
+      "git_blob_sha1": "ae0ef9dc846af88596abb5bd4eb6066a7af32bee",
+      "bytes": 3556
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_validation.json",
+      "git_blob_sha1": "f3cb1471153bd3a9318430b448cb278adb6a9a76",
+      "bytes": 2029
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/file_inventory.csv",
+      "git_blob_sha1": "f011df72bc83ed383c9a62cfa3571bec8139c6aa",
+      "bytes": 526904
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/integrate_earth.py",
+      "git_blob_sha1": "a12e55e852e6376176affce9c512d7725619c578",
+      "bytes": 9821
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/integrate_local_evidence.py",
+      "git_blob_sha1": "f8cf1f0b013506ff16b88397ca3c838c6f3fc64b",
+      "bytes": 8710
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/link_inventory.csv",
+      "git_blob_sha1": "853898045ee5a13a255a571b7299f7a830dd66a9",
+      "bytes": 78588
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/local_evidence_append.csv",
+      "git_blob_sha1": "28136c4423c81a02c766be667c393ef549a1169e",
+      "bytes": 6576
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/manifest.json",
+      "git_blob_sha1": "477ea63c71c81303043ebbd8b8a705e41517980c",
+      "bytes": 18560
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/open_questions.csv",
+      "git_blob_sha1": "9fc3692c6e39e800f4d2f6f16aad123067ec1ba8",
+      "bytes": 3693
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/original_research_instructions.txt",
+      "git_blob_sha1": "0e50cca44a8c02540ef48244bd3e10c3e6464ea3",
+      "bytes": 4424
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/parent_manifest_before_completion_20261115.json",
+      "git_blob_sha1": "558703f155475bf11afef7b69ac6a305047dcbdd",
+      "bytes": 33823
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/prior_protocol.csv",
+      "git_blob_sha1": "01dd65c88aeb9a042e88834d580129a5a6f24c29",
+      "bytes": 1174
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/prior_search_log.csv",
+      "git_blob_sha1": "62309d142feb41fc9fa2ac3e643d5a62b1f578f7",
+      "bytes": 4254
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/prior_source_read_log.csv",
+      "git_blob_sha1": "1197f6e7e05026fae619f8c6ee596112075a805e",
+      "bytes": 1102
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/F-RAD01_peak_index_diagnostic.png",
+      "git_blob_sha1": "65fe09440fb68f0d900d6183b1d3956bff639ad3",
+      "bytes": 172006
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/README.md",
+      "git_blob_sha1": "d952067c13ceeff0931d79fd27a569cc1a1dd152",
+      "bytes": 3641
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/analyze.py",
+      "git_blob_sha1": "5c62ec8e59bef1591c436abeeebba1c0fdb7955b",
+      "bytes": 6089
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/manifest.json",
+      "git_blob_sha1": "19b451d94ae55216daac4067093e1c0db253c523",
+      "bytes": 2076
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/plot.py",
+      "git_blob_sha1": "e07b552b8f66a89214970c5bd93411cabfc1cc3a",
+      "bytes": 1431
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/radar_diagnostic_summary.json",
+      "git_blob_sha1": "490efa0e2f687fea432af291adab700e9e413aad",
+      "bytes": 1670
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/radar_pick_diagnostic.csv",
+      "git_blob_sha1": "fcc85be6b19920ecd6c414820f621429906535b6",
+      "bytes": 7947
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/range_support.csv",
+      "git_blob_sha1": "55cdf40ec2493d28d8cb0cd49bfc3d26da96a947",
+      "bytes": 748
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/search_log.csv",
+      "git_blob_sha1": "4fdf83f75b948fd3345cc1c3941e7d9e6764edf6",
+      "bytes": 1343
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/source_read_log.csv",
+      "git_blob_sha1": "e8334e6198101bcc5455b06c69e84b200c10f73e",
+      "bytes": 2552
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/validation.json",
+      "git_blob_sha1": "edfbd100b0555df658b727da1499edbb58204a25",
+      "bytes": 420
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/visual_review.json",
+      "git_blob_sha1": "656784288fece4f957de3b55f7d56b1f55ca020b",
+      "bytes": 241
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/refresh_parent_manifest.py",
+      "git_blob_sha1": "f5201a7549a6225fba07af6f5e598f1be5eff571",
+      "bytes": 3548
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/requirement_audit.csv",
+      "git_blob_sha1": "4fd8edcb6db8d46bfcf66391db4f484c13b75f8a",
+      "bytes": 2867
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/search_log_index.csv",
+      "git_blob_sha1": "545fc45d1a3f308e984862948081467827a87b91",
+      "bytes": 2153
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/shared_input_verification.json",
+      "git_blob_sha1": "9335ce78004a3de632699864ab7cc46d71eee6ef",
+      "bytes": 3002
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/shared_inputs/all_data_usage.csv",
+      "git_blob_sha1": "18542b97e34899f3cfd5f0c3d5c8141cbf559d9a",
+      "bytes": 803
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/shared_inputs/candidate_native_evidence.json",
+      "git_blob_sha1": "faf4421c57da38852972efe36623c603c29eda4c",
+      "bytes": 38177
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/shared_inputs/final_candidates.csv",
+      "git_blob_sha1": "2371ade1c27087efaa165acb98b7541266eaa606",
+      "bytes": 5897
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/shared_inputs/report.md.snapshot.txt",
+      "git_blob_sha1": "ff21a1256666d25a45a59a245f962e967768bb7f",
+      "bytes": 16524
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/shared_inputs/selected_targets.json",
+      "git_blob_sha1": "a93c2ef45ef78922ec4ab88498ce92ef6aafabf5",
+      "bytes": 3434
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/source_byte_recovery.json",
+      "git_blob_sha1": "a73051ef48cbe2ad056da843be9eab2e809ac5a1",
+      "bytes": 5436
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/source_cross_reference_checks.csv",
+      "git_blob_sha1": "980f7e4b58c04dce1c6612e8cf577f3ae4db425b",
+      "bytes": 14960
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/source_crosswalk.csv",
+      "git_blob_sha1": "60c39e1bedff22fd4a78826efd92e2909adb6207",
+      "bytes": 12936
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/validation.json",
+      "git_blob_sha1": "58ee613c7601f0485fad4c455743f8ca00198944",
+      "bytes": 4934
+    },
+    {
+      "path": "outputs/research/MS-03/evidence.csv",
+      "git_blob_sha1": "daa7e42a8d0bb7f398fdc36d3d24ba2d02f7024a",
+      "bytes": 29904
+    },
+    {
+      "path": "outputs/research/MS-03/manifest.json",
+      "git_blob_sha1": "8cf4f58b83df7e9f91a850d4daa1f5bfa515d054",
+      "bytes": 74449
+    },
+    {
+      "path": "outputs/research/MS-03/prior_work.csv",
+      "git_blob_sha1": "f331d100fd996b5824f9bb0db84c63e12069ff25",
+      "bytes": 6571
+    },
+    {
+      "path": "outputs/research/MS-03/search_log.csv",
+      "git_blob_sha1": "419cdda017d925496ca49958192303e33b60d140",
+      "bytes": 12791
+    },
+    {
+      "path": "outputs/research/MS-03/sources.json",
+      "git_blob_sha1": "2cb7ea679c6d294a69111c6d20a34fa0a3c0faea",
+      "bytes": 16294
+    }
+  ],
+  "self_reference_limit": "This post-publication receipt is excluded from the inventory checksum graph. It identifies the immutable data commit and PR read back before this receipt is committed; it cannot contain its own final commit hash.",
+  "main_merge_performed": false,
+  "ci": {
+    "all_repository_checks_green": false,
+    "data_commit_checks": [
+      {
+        "id": 132613719229,
+        "name": "Workers Builds: nasa-space-apps-challenge-2026-taipei",
+        "status": "completed",
+        "conclusion": "failure",
+        "details_url": "https://dash.cloudflare.com/5a215a2a3ffc384e958ae5bcb53687d0/workers/services/view/nasa-space-apps-challenge-2026-taipei/production/builds/d512a78b-ff51-4834-bd17-663fa611097e"
+      }
+    ],
+    "publication_base_checks": [
+      {
+        "id": 132586509408,
+        "name": "Workers Builds: nasa-space-apps-challenge-2026-taipei",
+        "status": "completed",
+        "conclusion": "failure",
+        "details_url": "https://dash.cloudflare.com/5a215a2a3ffc384e958ae5bcb53687d0/workers/services/view/nasa-space-apps-challenge-2026-taipei/production/builds/86284f53-a26e-43d2-a7e9-038f340db6e3"
+      }
+    ],
+    "comparison_limit": "The same check context fails on both commits; check summaries do not establish that the root causes are identical.",
+    "github_actions_pull_request_runs": [],
+    "website_build_or_deployment_success_claimed": false,
+    "research_validation_scope": "The passing research checks validate the explicitly recorded data/provenance/reproduction requirements; they do not assert successful website deployment."
+  }
+}

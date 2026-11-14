@@ -1,0 +1,8 @@
+step,input,operation,required_output,gate
+1,Original table/readme,Retain raw bytes and URL/time/hash plus provider checksum when present,Acquisition receipt and unchanged original,Reject HTML denial/signin payload
+2,Original definitions,Record coordinate and row-object semantics with raw values,Coordinate/schema crosswalk,Unknown definitions prohibit spatial conclusion
+3,Levy imageIDs,Resolve official footprints and test fixed-cell intersections,Per-image spatial match and morphology labels,Do not substitute image centre for footprint
+4,Cohen-Zada54 images,Resolve actual analysed boulder-map subregions,Image-to-analysis-region crosswalk,Whole-image overlap alone does not prove same analysed location
+5,DundasS4,Distinguish exposure/event coordinates and imagery,Point and footprint membership separately,Other catalogues are not replacements
+6,Intersecting studies,Read purpose/scale/material/method/results,Direct/partial/different/insufficient classification,No global first-site inference
+7,All bounded results,State version/selection/missing coverage and scientific uncertainty,Qualified novelty and ice statements,Zero records never means no ice/no prior work

@@ -1,0 +1,55 @@
+{
+  "command": "python3 scripts/restore_team_data.py",
+  "execution_context": "existing project checkout; pre-existing user work preserved",
+  "result": "Already verified Excel, legacy ZIP, screened pool and186 historical supplements",
+  "pinned_inputs": [
+    {
+      "path": "outputs/research/MS-03/completion_20261115/shared_inputs/report.md.snapshot.txt",
+      "original_path": "outputs/research/mars_reselection_20261114/report.md",
+      "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "bytes": 16524,
+      "sha256": "1708e2d7af86118edf2a88c3e896464406d5bd617f9ab197f7c4d412f5969e4b",
+      "access": "fixed repository bytes retained in MS03-owned scope"
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/shared_inputs/selected_targets.json",
+      "original_path": "outputs/research/mars_reselection_20261114/selected_targets.json",
+      "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "bytes": 3434,
+      "sha256": "388ca89110b2a8fbb4fc6fa403994ab54cd193fd23eefd8aa5987a75e3255ba5",
+      "access": "fixed repository bytes retained in MS03-owned scope"
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/shared_inputs/final_candidates.csv",
+      "original_path": "outputs/research/mars_reselection_20261114/final_candidates.csv",
+      "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "bytes": 5897,
+      "sha256": "83a03d1f4273fa7c45c0d22b5c29a8b8cfc0544e481d5f2bbca2c85812534c4e",
+      "access": "fixed repository bytes retained in MS03-owned scope"
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/shared_inputs/candidate_native_evidence.json",
+      "original_path": "outputs/research/mars_reselection_20261114/candidate_native_evidence.json",
+      "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "bytes": 38177,
+      "sha256": "3258b5c5bd7de7f15d96918bbce1c09afa6c5b7a329b8bc05cdb7c4fcd3f41c6",
+      "access": "fixed repository bytes retained in MS03-owned scope"
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/shared_inputs/all_data_usage.csv",
+      "original_path": "outputs/research/mars_reselection_20261114/all_data_usage.csv",
+      "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "bytes": 803,
+      "sha256": "384fd5358f45c0ba4965a829f51a5e28496efbb5c90435f57823ec747ef345bd",
+      "access": "fixed repository bytes retained in MS03-owned scope"
+    }
+  ],
+  "local_working_copy_note": "Existing shared candidate_native_evidence.json differs from pinned bytes and was preserved; this research uses its explicitly retained fixed-commit snapshot.",
+  "workbook_role": "Historical context only; no old matching values transplanted",
+  "handoff_commit_object_verified": "f7076c9fdc77e00244ed5d6863aad2bf78cfa28f",
+  "named_handoff_ref_lookup": {
+    "ref": "handoff/team-start-20261114",
+    "http_status": 404,
+    "interpretation": "Use the verified fixed commit SHA; a currently existing named branch is not assumed."
+  }
+}

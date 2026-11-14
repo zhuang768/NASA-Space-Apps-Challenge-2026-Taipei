@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "metric": "air_temperature",
+      "decimal_mean": "-25.42890281936127744510978044",
+      "output_mean": "-25.428902819361276",
+      "absolute_difference": "1.44510978044E-15",
+      "valid_n": 16032,
+      "monthly_reaggregation_passed": true,
+      "extrema_passed": true
+    },
+    {
+      "metric": "air_RH_water_basis",
+      "decimal_mean": "40.94597679640718562874251497",
+      "output_mean": "40.94597679640719",
+      "absolute_difference": "4.37125748503E-15",
+      "valid_n": 16032,
+      "monthly_reaggregation_passed": true,
+      "extrema_passed": true
+    },
+    {
+      "metric": "air_RH_ice_basis",
+      "decimal_mean": "47.64789795409181636726546906",
+      "output_mean": "47.64789795409182",
+      "absolute_difference": "3.63273453094E-15",
+      "valid_n": 16032,
+      "monthly_reaggregation_passed": true,
+      "extrema_passed": true
+    },
+    {
+      "metric": "solar_irradiance",
+      "decimal_mean": "73.10605289421157684630738523",
+      "output_mean": "73.10605289421157",
+      "absolute_difference": "6.84630738523E-15",
+      "valid_n": 16032,
+      "monthly_reaggregation_passed": true,
+      "extrema_passed": true
+    },
+    {
+      "metric": "wind_speed",
+      "decimal_mean": "2.765481536926147704590818363",
+      "output_mean": "2.7654815369261474",
+      "absolute_difference": "3.04590818363E-16",
+      "valid_n": 16032,
+      "monthly_reaggregation_passed": true,
+      "extrema_passed": true
+    }
+  ],
+  "source_md5_passed": true,
+  "selected_n": 16032,
+  "expected_days": 334,
+  "source_sha256_passed": true,
+  "retained_gzip_sha256_passed": true,
+  "selected_period": "[2010-01-01,2010-12-01) printed time; no UTC claim",
+  "four_themes_per_candidate_passed": true,
+  "all_csv_rows_match_headers": true,
+  "scope": "Independent Decimal arithmetic from fixed original columns; monthly weighted identity; extrema; four-theme coverage and CSV schema. This does not validate sensors, physical simultaneity or Mars transfer."
+}

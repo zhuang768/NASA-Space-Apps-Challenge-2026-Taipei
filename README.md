@@ -31,7 +31,7 @@ python3.12 -m venv .venv
 
 請先閱讀 [CONTRIBUTING.md](CONTRIBUTING.md)：包含協作者邀請、各作業系統的資料下載指令、分支上傳方式與常見錯誤處理。
 `data/raw/mars/` 與 `data/processed/`（約 390 MB）已進版控，clone 即可用。
-`data/raw/earth/`（約 7.6 GB）仍不進 git，請用雲端交接，見 `docs/data_handoff.md`。
+`data/raw/earth/`（約 12.33 GB）仍不進 git，請用雲端交接，見 `docs/data_handoff.md`。
 
 ## 架構
 
@@ -61,7 +61,7 @@ python3.12 -m venv .venv
 4. **大氣與沙塵（Air）**：懸浮沙塵與沙塵暴（影響太陽能與設備）；子題包含**風力與風蝕地形**（沙丘、雅丹）及**大氣成分與氣壓**（0.6 kPa CO₂）。
 - **地球無法複製的限制**（0.38 g 重力、低氣壓、強輻射與高氯酸鹽土壤等）將於各場址分析中明確標註。
 
-隊友回報已下載約 12 GB 地球資料至其 `data/raw/earth/`（含最新補齊的四大面向子資料集）：`SRTMGL30`（官方 collection 002）＋`MCD12C1` 2024 地表覆蓋（地形）、`MOD11C3`＋`M2TMNXRAD` 輻射與反照率（溫度）、`GPM_3IMERGM`＋`GLDAS_NOAH025_M`＋`MOD13C2`＋2021 年 ESA CCI Permafrost v4.0（水／冰與永凍土／植被）、`M2TMNXAER`＋`AERDB_M3_VIIRS_SNPP` 衛星 AOD＋`M2TMNXSLV` 風速與氣壓（大氣與沙塵）。這批原始檔與讀取紀錄尚未透過 repo 交接；規格與限制見 `docs/earth_data_plan.md`、`docs/cross_reference.md`，交接方式見 `docs/data_handoff.md`。
+隊友回報已下載約 12 GB 地球資料至其 `data/raw/earth/`（含最新補齊的四大面向子資料集）：`SRTMGL30`（官方 collection 002）＋`MCD12C1` 2024 地表覆蓋（地形）、`MOD11C3`＋`M2TMNXRAD` 輻射與反照率（溫度）、`GPM_3IMERGM`＋`GLDAS_NOAH025_M`＋`MOD13C2`＋2021 年 ESA CCI Permafrost v4.0（水／冰與永凍土／植被）、`M2TMNXAER`＋`AERDB_M3_VIIRS_SNPP` 衛星 AOD＋`M2TMNXSLV` 風速與氣壓（大氣與沙塵）。共 222 個檔案、12.33 GB，逐檔 SHA-256 與讀取紀錄見 `docs/earth_inventory.csv`；原始檔本身尚未透過 repo 交接。規格與限制見 `docs/earth_data_plan.md`、`docs/cross_reference.md`，交接方式見 `docs/data_handoff.md`。
 
 MODIS 地表溫度與 TES 熱慣量、地球乾濕條件與 SWIM 地下冰一致性均不是同一物理量；NDVI 不代表生命存在與否，永凍土面積比例也不是可開採冰量。這些面向先作分開的證據描述，尚未整合為四面向相似度分數。
 
@@ -75,7 +75,7 @@ MODIS 地表溫度與 TES 熱慣量、地球乾濕條件與 SWIM 地下冰一致
 
 - 2026-11-13：使用 Cursor（Claude）整理挑戰說明與資料來源、建立專案骨架、撰寫火星資料的下載與讀取程式及測試。
 - 2026-11-14：使用 Gemini 整理 2026 挑戰規範與評分重點、確定聚焦地球與火星類比（排除月球）、整併四大主題與子題，撰寫「地球無法複製的火星條件」、7 頁簡報架構、地球端資料下載規劃與跨行星對照表（`docs/`），並下載分類 2023–2024 兩年地球端四大面向全球資料（`SRTMGL30`、`MCD12C1`、`MOD11C3`、`M2TMNXRAD`、`GPM_3IMERGM`、`GLDAS_NOAH025_M`、`MOD13C2`、`ESA CCI Permafrost v4.0`、`M2TMNXAER`、`AERDB_M3_VIIRS_SNPP`、`M2TMNXSLV`），同步備份至本機桌面並更新對照文件。
-- 2026-11-14：隊友回報使用 Claude Code 協助授權 Earthdata 資料中心、建立 Python 3.12 環境、監看下載及開啟 145 個資料檔。此為隊友環境的紀錄；與清單推算 148 個的差異、實際檔案及讀取紀錄尚待核對。
+- 2026-11-14：隊友回報使用 Claude Code 協助授權 Earthdata 資料中心、建立 Python 3.12 環境、監看下載並逐檔開啟驗證地球端資料（共 222 個檔案全部開啟成功，逐檔紀錄見 `docs/earth_inventory.csv`）。先前記錄的 145 個為加總錯誤，原始批次實際為 148 個。
 - 2026-11-14：使用 OpenAI Codex 核對官方規格，修正 SRTMGL30 版本、資料計數狀態、永凍土／NDVI 解釋、跨行星配對與 HDF4 環境限制。本次文件修正未使用 C2C。
 - 2026-11-14：使用 Cursor（Claude）完成火星四面向堆疊與相似度自我測試，並將 `data/raw/mars/` 與 `data/processed/` 納入版控以便隊友直接取得。
 - 2026-11-14：OpenAI Codex 接入並核對上傳的 10 個火星來源檔、修正 SWIM 座標與聚合倍率、沙塵欄位及缺值評分，匯出目標特徵與交接文件；本輪未使用 C2C，地球端處理由隊友負責。

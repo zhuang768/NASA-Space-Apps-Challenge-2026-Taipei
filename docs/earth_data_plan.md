@@ -25,26 +25,26 @@
 
 ---
 
-## 2. 隊友回報的地球端資料清單（約 7.6 GB，完整性待清單核對）
+## 2. 地球端資料清單（222 個檔案、12.33 GB，已於隊友本機逐檔開啟）
 
-隊友回報以下資料已下載至其 `data/raw/earth/`（不進 Git）；NASA 資料透過 `earthaccess`，永凍土來自 ESA CCI 歸檔。本輪尚未取得這批原始檔與讀取紀錄，因此下表保留回報的數量與容量，不代表已在本機驗證。資料交接方式見 [data_handoff.md](data_handoff.md)。
+隊友回報以下資料已下載至其 `data/raw/earth/`（不進 Git）；NASA 資料透過 `earthaccess`，永凍土來自 ESA CCI 歸檔。逐檔檔名、位元組數、SHA-256 與讀取結果見 [earth_inventory.csv](earth_inventory.csv)（2026-11-14 於隊友本機 `.venv` 測試，222/222 開啟成功）；原始檔本身尚未交接至 repo，其他電腦取得後可用 SHA-256 比對。資料交接方式見 [data_handoff.md](data_handoff.md)。
 
 | 面向 | 資料夾 (`data/raw/earth/`) | 資料集（Shortname） | 檔案數與容量 | 原始解析度／網格 | 關鍵變數與讀取備註 |
 | --- | --- | --- | --- | --- | --- |
 | **1. 地形** | `terrain/` | **`SRTMGL30`**（官方 collection **002**；實際下載識別碼待核對） | 回報 27 個 `.dem.zip`（266 MB） | 30 arc-sec（~900 m） | 隊友回報 `.DEM` 為 16-bit signed big-endian、每塊 4800×6000、無 `.HDR`，圖磚集合涵蓋 60°S–90°N。需用實際檔案大小與產品中繼資料確認邊界及維度，檔名不代表版本；按相同物理尺度計算坡度／起伏。 |
-| **1. 地形（地表覆蓋）** | `terrain/landcover/` | **`MCD12C1`** (v061, 2024) | 1 個 `.hdf`（~1.19 GB） | 0.05° 年平均（`3600×7200`） | `Majority_Land_Cover_Type_1`（HDF4，可由本機 `netCDF4.Dataset` 開啟）；區分裸岩／荒漠／植被。 |
+| **1. 地形（地表覆蓋）** | `terrain/landcover/` | **`MCD12C1`** (v061, 2024) | 1 個 `.hdf`（1.24 GB） | 0.05° 年平均（`3600×7200`） | `Majority_Land_Cover_Type_1`（HDF4，可由本機 `netCDF4.Dataset` 開啟）；區分裸岩／荒漠／植被。 |
 | **2. 溫度** | `temperature/` | **`MOD11C3`** (v061, 2023–2024) | 24 個 `.hdf`（1.9 GB） | 0.05° 月平均（~5.6 km） | `LST_Day_CMG`／`LST_Night_CMG`，K；讀取 scale、fill 與 QA。月合成日夜值之差不是 TES 熱慣量；月合成值的年內最小／最大也不是瞬時極端溫度。HDF4 讀取依環境支援而定。 |
-| **2. 溫度（日照／反照率）** | `temperature/radiation/` | **`M2TMNXRAD`** (MERRA-2, 2023–2024) | 24 個 `.nc4`（~1.38 GB） | 0.5° × 0.625°（`361×576`） | `xarray` 直接讀取 `SWGDN`（入射短波輻射）、`ALBEDO`（地表反照率）、`LWGNT`；注意 MERRA-2 為再分析資料，非衛星直接觀測。 |
+| **2. 溫度（日照／反照率）** | `temperature/radiation/` | **`M2TMNXRAD`** (MERRA-2, 2023–2024) | 24 個 `.nc4`（1.45 GB） | 0.5° × 0.625°（`361×576`） | `xarray` 直接讀取 `SWGDN`（入射短波輻射）、`ALBEDO`（地表反照率）、`LWGNT`；注意 MERRA-2 為再分析資料，非衛星直接觀測。 |
 | **3. 水／冰（乾旱度）** | `water_ice/gpm/` | **`GPM_3IMERGM`** (v07, 2023–2024) | 24 個 `.HDF5`（444 MB） | 0.1° 月平均（`1800×3600`） | `xarray(..., group='Grid')` 讀取 `precipitation` |
 | **3. 水／冰（土壤濕度）** | `water_ice/gldas/` | **`GLDAS_NOAH025_M`** (v2.1, 2023–2024) | 24 個 `.nc4`（584 MB） | 0.25° 月平均（`600×1440`） | `xarray` 直接讀取 `SoilMoi0_10cm_inst`（取代原規劃的每日 9 km 衛星觀測 `SPL3SMP_E`；注意 GLDAS 為陸面模式輸出，非衛星直接觀測，涵蓋 60°S–90°N） |
 | **3. 水／冰（植被背景）** | `water_ice/ndvi/` | **`MOD13C2`** (v061, 2023–2024) | 24 個 `.hdf`（2.6 GB） | 0.05° 月平均（~5.6 km） | `CMG 0.05 Deg Monthly NDVI`，需處理 QA、scale 與 fill。僅作植被背景，尚未定義扣分規則；HDF4 讀取依環境支援而定。 |
 | **3. 水／冰（永凍土）** | `water_ice/permafrost/` | **ESA CCI Permafrost** (v4.0，回報選取 2021) | 1 個 `.nc`（12 MB） | 回報 0.01° 經緯網格（`6000×36000`），25°N–85°N；需確認有效資料遮罩 | `PFR` 與 `PFR_uncertainty` 為 %，由熱模型及衛星／再分析輸入推算。產品序列涵蓋 1997–2021，隊友只回報選取 2021；PFR 是永凍土面積比例，不是地下冰含量、純度、深度或可開採性。 |
 | **4. 大氣與沙塵** | `air/` | **`M2TMNXAER`** (MERRA-2, 2023–2024) | 24 個 `.nc4`（1.9 GB） | 0.5° × 0.625°（`361×576`） | `xarray` 直接讀取 `DUEXTTAU`（純沙塵消光 AOT，取代原規劃的 `MOD08_M3` 總 AOD；注意 MERRA-2 為再分析資料，非衛星直接觀測） |
-| **4. 大氣與沙塵（衛星觀測 AOD）** | `air/viirs/` | **`AERDB_M3_VIIRS_SNPP`** (2023–2024) | 25 個 `.nc`（~148 MB） | 1° × 1°（`180×360`） | `xarray` 直接讀取 `Aerosol_Optical_Thickness_550_Land_Mean`（衛星實測 AOD，補齊 MERRA-2 再分析之外的直接觀測） |
-| **4. 大氣與沙塵（風速／氣壓）** | `air/wind_pressure/` | **`M2TMNXSLV`** (MERRA-2, 2023–2024) | 24 個 `.nc4`（~1.80 GB） | 0.5° × 0.625°（`361×576`） | `xarray` 直接讀取 `U10M`、`V10M`（10 m 風速）與 `PS`（地表氣壓）；注意 MERRA-2 為再分析資料 |
+| **4. 大氣與沙塵（衛星觀測 AOD）** | `air/viirs/` | **`AERDB_M3_VIIRS_SNPP`** (2022-12, 2023–2024) | 25 個 `.nc`（155 MB） | 1° × 1°（`180×360`，座標名為 `Latitude_1D`／`Longitude_1D`） | `xarray` 直接讀取 `Aerosol_Optical_Thickness_550_Land_Mean`（衛星實測 AOD，補齊 MERRA-2 再分析之外的直接觀測）。第 25 個檔 `A2022335` 為 2022 年 12 月（搜尋時間範圍重疊而納入），計算 2023–2024 平均時應排除。 |
+| **4. 大氣與沙塵（風速／氣壓）** | `air/wind_pressure/` | **`M2TMNXSLV`** (MERRA-2, 2023–2024) | 24 個 `.nc4`（1.89 GB） | 0.5° × 0.625°（`361×576`） | `xarray` 直接讀取 `U10M`、`V10M`（10 m 風速）與 `PS`（地表氣壓）；注意 MERRA-2 為再分析資料 |
 
 > [!NOTE]
-> **數量與讀取狀態待核對**：表格數量合計為 `27 + 5×24 + 1 = 148`；先前隊友回報成功開啟 145 個，計數範圍尚未釐清。148 是依表格推算的預期數量，不是新增的驗證通過數。需提供實際檔名、容量、校驗碼、產品識別碼與讀取紀錄，才能確認完整性。
+> **數量與讀取狀態**：原始批次為 `27 + 5×24 + 1 = 148` 個；先前回報的 145（及更早的 144）是 Claude Code 驗證時的加總錯誤，當時各資料夾實際已逐檔開啟全部檔案。加上新增子資料集 `25 + 24 + 24 + 1 = 74` 個，共 **222 個、12.33 GB（十進位）**，全部開啟成功，逐檔紀錄見 [earth_inventory.csv](earth_inventory.csv)。容量以十進位 GB／MB 計。
 > - `GPM_3IMERGM`（需 `group='Grid'`）、`GLDAS_NOAH025_M`、`M2TMNXAER` 與 ESA CCI Permafrost 可用 `xarray` 直接開啟，並帶有 lat/lon 座標。
 > - `MOD11C3` 與 `MOD13C2` 為 HDF4-EOS。隊友回報其環境可用 `netCDF4.Dataset(path)` 開啟；這需要底層 netCDF-C 編譯支援 HDF4 SD，不能保證其他 wheel 或電腦也可讀。應以同一原始檔測試實際環境；若不支援，再使用具 HDF4 支援的讀取器或經驗證的轉檔工具。
 > - MODIS CMG 檔案**沒有 lat/lon 變數**，需自行建立 0.05° 網格（3600×7200）：lat 由 89.975 遞減至 −89.975，lon 由 −179.975 遞增至 179.975（皆為格點中心）。

@@ -1,0 +1,21 @@
+{
+  "input_commit": "14f65509bbf3358a50ef866c65e2b5d42fe8c467",
+  "input_hashes_match": true,
+  "selected_pair_count": 2160,
+  "first_selected_printed_time": "2017-12-01T00:00:00",
+  "last_selected_printed_time": "2018-02-28T23:00:00",
+  "mean_source": "window_summaries.csv / summer / T_3cm_minus_49cm_C / observed_mean",
+  "mean_from_export_C": 3.274851851851852,
+  "mean_recomputed": false,
+  "statistics_recomputed": false,
+  "raw_pdf_parsed": false,
+  "curve_vertex_checks": "all 2160 y values per plotted series match export/original plotting expression",
+  "transformations": [
+    "same original summer selection",
+    "same-row subtraction copied from upstream plot_eh",
+    "new typography/colours/layout",
+    "source mean annotation"
+  ],
+  "mainline_acceptance": "pending",
+  "team2_consolidated_review": "pending"
+}

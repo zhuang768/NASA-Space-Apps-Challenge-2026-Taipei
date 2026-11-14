@@ -1,0 +1,48 @@
+{
+  "input_commit": "14f65509bbf3358a50ef866c65e2b5d42fe8c467",
+  "selection_status": "User-selected compute handoff for figure preparation; not final mainline acceptance",
+  "files": [
+    {
+      "path": "outputs/research/final_figures/inputs/14f6550/station_observations.csv.gz",
+      "source_path": "outputs/compute/EARTH-002/station_observations.csv.gz",
+      "commit": "14f65509bbf3358a50ef866c65e2b5d42fe8c467",
+      "sha256": "2538996758f41e548d90b57959889a52b953d584eaad971a07525599363de6db",
+      "bytes": 299876
+    },
+    {
+      "path": "outputs/research/final_figures/inputs/14f6550/window_summaries.csv",
+      "source_path": "outputs/compute/EARTH-002/window_summaries.csv",
+      "commit": "14f65509bbf3358a50ef866c65e2b5d42fe8c467",
+      "sha256": "6d4c57dbd58d996ea3461962096f0f4e6e6141c155c05eefb52b7e555d7176ca",
+      "bytes": 1729
+    },
+    {
+      "path": "outputs/research/final_figures/inputs/14f6550/qa_report.json",
+      "source_path": "outputs/compute/EARTH-002/qa_report.json",
+      "commit": "14f65509bbf3358a50ef866c65e2b5d42fe8c467",
+      "sha256": "6c29bc2fd1ad887dce3b9873c2ef220928d691623fcf3447d6248ee26936346c",
+      "bytes": 63747
+    },
+    {
+      "path": "outputs/research/final_figures/inputs/14f6550/data_dictionary.json",
+      "source_path": "outputs/compute/EARTH-002/data_dictionary.json",
+      "commit": "14f65509bbf3358a50ef866c65e2b5d42fe8c467",
+      "sha256": "344ebbfe3bf4b5d78b1a9db1a62c952ab4482dc9ab4ed9e20627f8471addc691",
+      "bytes": 2924
+    },
+    {
+      "path": "outputs/research/final_figures/inputs/14f6550/inputs_manifest.csv",
+      "source_path": "outputs/compute/EARTH-002/inputs_manifest.csv",
+      "commit": "14f65509bbf3358a50ef866c65e2b5d42fe8c467",
+      "sha256": "7ff7d547484602a3eb8f55ec72f7a24755c2b253bbda7667dc649a3442a030bd",
+      "bytes": 1161
+    },
+    {
+      "path": "outputs/research/final_figures/inputs/14f6550/figures/EARTH-002_paired_summer.png",
+      "source_path": "outputs/compute/EARTH-002/figures/EARTH-002_paired_summer.png",
+      "commit": "14f65509bbf3358a50ef866c65e2b5d42fe8c467",
+      "sha256": "50d39addef26f6a1c9462c52732eb0dd0a6b64a739c95e51144f8da0dd469c3f",
+      "bytes": 448114
+    }
+  ]
+}

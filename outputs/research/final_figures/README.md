@@ -1,66 +1,61 @@
-# Final research figures: version-controlled handoff
+# Research display figures: pinned compute handoff
 
-Team zasa · 2026-11-14 · main input `ab1da697ad2093ca8185d29932e3fc5b85e7f80b`.
-Research framing: MR-20261114-v2; the user-specified figure brief fixes I-02 / EARTH-002 as the main case. This package makes no change to candidate purposes, measurements, analysis windows or conclusions.
+Team zasa · 2026-11-14 · branch `reporting/team1-final-figures`.
 
-## Delivery status
+**F01–F03 are now rendered as PNG and PDF.** They are display editions for review, not final mainline acceptance. The user explicitly selected compute commit `14f65509bbf3358a50ef866c65e2b5d42fe8c467` (PR #5) for this continuation. The final `elephant_head_final/` package and `final_research_summary_en.md` remain unreceived; neither is marked as received or accepted.
 
-| Figure | Status | Files and intended use |
+## Figures and changes
+
+| ID | Files | Purpose and transformation |
 |---|---|---|
-| F01 | Coordinate-context graphic completed; science/caption review pending | [PNG](F01_case_context.png) / [PDF](F01_case_context.pdf). Separates the Mars nominal screening cell from the Earth station anchor. No photo, terrain background or test-area polygon. |
-| F02 | Blocked: accepted source figure absent from main | [PNG layout template](templates/F02_EH_temperatures_TEMPLATE.png) / [PDF](templates/F02_EH_temperatures_TEMPLATE.pdf). These contain no observations and must not be used as result figures. |
-| F03 | Blocked: accepted source figure absent from main | [PNG layout template](templates/F03_EH_temperature_difference_TEMPLATE.png) / [PDF](templates/F03_EH_temperature_difference_TEMPLATE.pdf). These contain no difference curve or mean line and must not be used as result figures. |
+| F01 | [PNG](F01_case_context.png) / [PDF](F01_case_context.pdf) | Sourced coordinate context for I-02 and EARTH-002. Original illustration; no new measurement or terrain analysis. |
+| F02 | [PNG](F02_EH_temperatures.png) / [PDF](F02_EH_temperatures.pdf) | 3 cm and 49 cm temperatures. Same published values and original summer mask as compute `plot_eh`, separated from the original combined chart into its own panel; colours, type and spacing revised. |
+| F03 | [PNG](F03_EH_temperature_difference.png) / [PDF](F03_EH_temperature_difference.pdf) | Same-row `T(3 cm) − T(49 cm)`, using the original plotting expression. The descriptive mean is read from `window_summaries.csv`, not recalculated. No confidence interval or performance statistic. |
 
-**The three-figure scientific result set is not complete.** F02/F03 have no formal output filenames at the package root, so a downstream exporter cannot mistake templates for accepted results. No existing science image has been recolored, cropped, smoothed or substituted. F01 is a new coordinate illustration, not a new measurement or terrain analysis.
+Both depth curves use all 2,160 common hourly observations. No smoothing, filling, resampling, timezone conversion or raw-PDF parsing was performed. Original `plot_eh` performs same-row subtraction for display; this renderer repeats only that plotting expression, with no new summary statistics or scientific analysis. The mean comes from the export's `summer / T_3cm_minus_49cm_C / observed_mean = 3.274851851851852`, displayed as **+3.2749°C**. No values were adjusted to match a target.
 
-## Input audit and exact missing items
+The earlier `templates/` files are retained as data-free historical layouts, clearly labelled **NOT A RESULT FIGURE**. They are superseded by root F02/F03 and excluded from the current figure manifest. Do not include them in a submission.
 
-All these paths are absent from the checked main commit:
+## Versions and intact inputs
 
-- `docs/research/final_research_summary_en.md`
-- `outputs/research/elephant_head_final/README.md`
-- `outputs/research/elephant_head_final/manifest.json`
-- `outputs/research/elephant_head_final/qa.json`
-- `outputs/research/elephant_head_final/summer_temperatures.png`
-- `outputs/research/elephant_head_final/summer_temperature_difference.png`
-- `outputs/compute/README.md`
-- `outputs/compute/EARTH-002/`
+- Context documents: main `ab1da697ad2093ca8185d29932e3fc5b85e7f80b`, MR-20261114-v2. Read the main research cards, synthesis, Team 1 matching report/candidate CSV and Team 2 audit. The figure brief fixes I-02 / EARTH-002 as the main display case; University Valley remains a known-use comparison and Linnaeus remains inactive.
+- Calculation input: [`14f6550 / outputs/compute/EARTH-002`](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/tree/14f65509bbf3358a50ef866c65e2b5d42fe8c467/outputs/compute/EARTH-002), on `compute/candidate-extraction-20261114`, [PR #5](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/5). User selection permits figure preparation; it is not a final acceptance receipt.
+- Byte-identical copies of `station_observations.csv.gz`, `window_summaries.csv`, `qa_report.json`, `data_dictionary.json`, `inputs_manifest.csv`, and the original combined PNG are retained under [inputs/14f6550/](inputs/14f6550/). They were read from the pinned Git objects without modifying or rerunning compute code. Source paths, byte counts and SHA-256 values are in [input_lock.json](input_lock.json).
+- The original plotting method is `scripts/compute/eh_adapter.py`, `plot_eh`, at the same pinned commit. Its summer selection and row-subtraction expression are attributed in the presentation script. No compute source file is edited.
+- The compute QA reports 8,922 publication-table rows and previously executed checks. Those remain the compute team's results, not new figure-owner data QA. Our rendering checks are separate in [render_checks.json](render_checks.json).
 
-The remote branch `origin/compute/candidate-extraction-20261114` at `14f65509bbf3358a50ef866c65e2b5d42fe8c467` does contain the compute README, EH QA/data and `EARTH-002_paired_summer.png`. The branch's README and EH QA header were inspected using `git show`; the time-series file was not parsed. The named mainline final package was not found on that branch or the research-mainline branch. There is no explicit mainline acceptance/selection record in the received files. Compute outputs were not copied into this package or presented as the mainline final result. Main must identify the accepted version before F02/F03 replacement. This is an input dependency, not a request to redo data analysis.
+The following requested final-mainline files remain absent from the received main baseline: `docs/research/final_research_summary_en.md`, and `outputs/research/elephant_head_final/{README.md,manifest.json,qa.json,summer_temperatures.png,summer_temperature_difference.png}`. The `outputs/compute/` package is received from the fixed branch, not from main. No other version is silently mixed into F02/F03.
 
-Read inputs: `docs/research/main_mars_research_cards.md`, `main_project_synthesis.md`, `team1_earth_analog_matching.md`, Team 1 candidate CSV and Team 2 audit. These preserve historical/provisional states; the figure brief supplies the current display roles. University Valley is a known-use comparison and Linnaeus Terrace remains inactive. Neither is added as a new case.
+## Coordinates, time and interpretation
 
-## Coordinates, scales and visual contract
+**F01 Mars:** I-02 center 53.75°N, 42.25°E; nominal cell 53.5–54°N / 42–42.5°E. Planetocentric latitude and east-positive longitude. Regional locator view: 52.75–54.75°N / 40.75–43.75°E. Display aspect is corrected at the center latitude; it is not a new terrain map or instrument footprint. No Earth-distance formula is used for Mars.
 
-- Mars: I-02 center 53.75°N, 42.25°E; nominal cell 53.5–54°N / 42–42.5°E. Planetocentric latitude, east-positive longitude. F01 uses a local longitude/latitude locator, with the display aspect corrected at the center latitude. It does not use Earth distances for Mars. The regional locator view is 52.75–54.75°N / 40.75–43.75°E; that view is not a study footprint.
-- Earth: EH point anchor 79.820216667°S, 83.314333333°W. Original DMS values: 79°49.213′S, 83°18.860′W. The original source does not state datum or positioning error; no WGS84 claim or areal radius is assigned. Decimal precision reflects the supplied conversion, not survey accuracy.
-- Earth panel is a south-polar **coordinate locator**, radial coordinate `90 + latitude` and angle signed east longitude, displayed clockwise from 0°. It is not an orthophoto, geodetic survey, coastline map or metric polar projection. Its view spans 60–90°S. Marker size is symbolic. No distance scale bar is asserted.
-- White background, DejaVu Sans, 14 × 8 inches, PNG 3080 × 1760 at 220 dpi, vector PDF. Teal `#007F8B` is reserved for the 3 cm series; orange `#C16A16` for 49 cm. F01 uses these as location accents, not depth measurements. F02/F03 templates contain no data encodings yet.
-- On receipt, preserve the accepted summer window: first printed time `[2017-12-01, 2018-03-01)`, 2,160 same-row pairs. The approximately +3.2749°C descriptive mean is a receipt-check reference only; it has not been recalculated or drawn here.
-- F03 must retain `T(3 cm) − T(49 cm)` and label any mean as descriptive. No confidence band, accuracy or performance statistic is authorized. Do not convert unresolved printed time labels to UTC/solar time. Station temperature is distinct from Mars TES thermal inertia.
+**F01 Earth:** station anchor 79.820216667°S, 83.314333333°W; source DMS 79°49.213′S, 83°18.860′W. Datum and positioning error are unstated. Decimal precision reflects the supplied conversion, not survey accuracy. The south-polar coordinate locator uses radius `90 + latitude` and signed east longitude displayed clockwise from 0°. It is a coordinate diagram, not a metric survey projection or coastline map. The view spans 60–90°S. Marker size is symbolic; no trial-area radius or common Earth–Mars distance scale is assigned.
 
-## Photography and orbital imagery inventory
+**F02/F03:** first printed time `[2017-12-01, 2018-03-01)`, 2,160 same-row pairs. The export retains label “GMT-07:00” and unresolved UTC/solar-time meaning. No time conversion is made. Nominal 3 cm subsurface temperature is not radiometric land-surface temperature. The historical 49 cm probe is not a new ice-depth measurement or independent held-out truth. N describes observational support, not independent replication. The plots do not infer ice depth, quantity, extractability, causation or Mars equipment performance; terrestrial temperature is distinct from TES thermal inertia.
 
-Existing source: McKay et al. (2019), [NASA-hosted author PDF](https://www.nasa.gov/wp-content/uploads/2019/09/mckay_etal_2019_dry_permafrost_ellsworth_land21.pdf), DOI [10.1017/S0954102019000269](https://doi.org/10.1017/S0954102019000269). The local cached PDF's page 2 was rendered and inspected; Methods and Fig. 1 identify the station. Fig. 1 contains (a) a map, (b) satellite imagery and (c) a station photograph; its red X marks the monitored site, while S is another site about 1.5 km east. The displayed 1 km scale and north arrow belong to the original image, not to our locators.
+## Appearance and reproduction
 
-The cached PDF has a publisher download stamp dated 2019-07-30. This is **not** the photograph or satellite acquisition date. The inspected figure does not establish those acquisition dates, sensor/product IDs or precise image footprint. Team 1's recorded article reuse basis is CC BY 4.0; per-image third-party credits/exceptions have not been fully checked for this package. Therefore no figure panel or photograph has been copied or redistributed. A field/station photograph with verified date and reuse basis, and a location-verified satellite image with acquisition metadata, remain optional missing assets.
+White background, DejaVu Sans, 14 × 8 inches; PNG 3080 × 1760 at 220 dpi and vector PDF. 3 cm is teal `#007F8B`; 49 cm is orange `#C16A16`. The difference is purple with a dashed dark descriptive-mean line. Labels name the depth as well as colour. F01 uses location accents; its colours are not depth measurements.
 
-No location-verified I-02 orbital image/product with acquisition date and exact footprint was identified in the received case package. No unrelated region, generic Antarctica photo or generated image is substituted. Imagery is not a blocker for F01's sourced coordinate locator. No open-ended image search was undertaken.
-
-## Reproduction and checks
-
-Run from repo root using Python with matplotlib and numpy:
+Run from repo root, with matplotlib/numpy:
 
 ```sh
 python scripts/reporting/final_figures/build_figures.py
 ```
 
-This script only constructs coordinate locators and data-free layout templates. It never opens the raw PDF or temperature observations. The original PDF was inspected separately for the asset inventory, not reparsed for data. No new dependencies or source data are committed.
+The script verifies pinned input hashes, reads the exported CSV/gzip, selects the original plot window, renders curves and refreshes the manifest. It never opens the raw PDF, runs the compute pipeline, fits a model, computes an average or changes scientific values. `path.simplify=False` preserves all plotted vertices. The original input package remains intact. PDF metadata can change between runs; output hashes are refreshed in the manifest.
 
-Executed: PNG generation, PDF generation, F01 visual inspection (corrected an initial text overlap), template visual inspection, candidate DMS arithmetic check, JSON/CSV input parsing and manifest/hash verification. Full figure captions and science review by Team 2 are pending; no feedback has been received or claimed as addressed. At 180 mm width the 12 pt base font scales to about 6.1 pt; use full-page/landscape placement for detailed reading, or vector PDF zoom. No mobile/interface testing is claimed.
+Executed checks: byte identity against the pinned Git input objects; input/output SHA-256; 2,160 selected pairs against export valid N; all plotted y-vertices against source temperatures / original subtraction expression; coordinate DMS arithmetic; CSV/JSON parsing; PNG/PDF output; visual review of the original combined chart and F01/F02/F03, including correction of label overlaps. These are rendering/provenance checks, not a repeat of statistical or sensor QA. Mainline acceptance and Team 2's consolidated science/caption review remain pending. Detailed text is best placed full-page/landscape or read in vector PDF; no mobile/interface test is claimed.
 
-## One consolidated review and finish
+## Photography / orbital imagery inventory
 
-Team 2 should review the labels, coordinate conventions, scale distinction, source statements and limitations together, then provide one consolidated caption/science correction list. Main should supply the accepted F02/F03 PNGs, manifest, QA and plotting source if re-export is requested. The figure owner will apply that one review to these files only, preserving the accepted curves and data. Until then, no completed scientific three-figure set or accepted captions are claimed. No new sites, analysis or other presentation tasks are opened.
+Existing source: McKay et al. (2019), [NASA author PDF](https://www.nasa.gov/wp-content/uploads/2019/09/mckay_etal_2019_dry_permafrost_ellsworth_land21.pdf), DOI [10.1017/S0954102019000269](https://doi.org/10.1017/S0954102019000269). The cached PDF page 2 was rendered and inspected for the asset inventory only. Methods/Fig. 1 identify the monitored station. Figure 1 has a map, satellite view and station photograph; its red X identifies the monitored site, while S is another site about 1.5 km east.
 
-[figure_manifest.csv](figure_manifest.csv) records inputs, periods, constraints, statuses and output hashes. This package is on `reporting/team1-final-figures`; main integration is left to the main conversation. Original illustration code/assets inherit the repository's eventual team-approved license; no new project license is chosen here. Cite the underlying research even when using the original locators.
+The PDF's 2019-07-30 download stamp is not the image acquisition date. Acquisition dates, product/sensor IDs, exact image footprint and individual third-party reuse exceptions are not established by the inspected figure. Team 1 records the article as CC BY 4.0; per-image clearance remains pending. No image panel was copied or redistributed. A dated, location-verified station photo and satellite/orbital image with verified reuse terms remain optional missing assets. No suitable I-02 orbital image with acquisition metadata/footprint was identified in the supplied package. No other place's image or generated image is substituted; F01 remains a sourced coordinate locator. No expanded search was undertaken.
+
+## Review and final handoff
+
+Team 2: provide one consolidated review of scientific labels, coordinate conventions, source attribution, limits and full captions for F01–F03. No feedback has yet been received or claimed as resolved. Main: confirm the final accepted plot version once the mainline package is published; if it differs, identify the exact replacement and QA. The figure owner will apply one concentrated correction pass within this package. Main performs the final merge. No new sites, analysis or other presentation tasks are opened.
+
+[figure_manifest.csv](figure_manifest.csv) records each scientific output, input version, source, data period, conditions, changes and limitations. No new project-wide license is selected: original layout/code follows the team's eventual license decision, while published measurements retain their source attribution and applicable source terms.

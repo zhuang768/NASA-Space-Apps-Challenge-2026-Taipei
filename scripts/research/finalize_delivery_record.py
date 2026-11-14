@@ -101,7 +101,7 @@ def main():
                   'EH_records': summary['records'], 'EH_valid_3cm': summary['records_with_3cm'],
                   'EH_summer_paired': summary['summer_paired_n'],
                   'EH_summer_mean_difference_C': summary['summer_soil3_minus_ice49_mean_C'],
-                  'source_page_spot_checks': [1, 73, 2232, 2646, 2647, 4500, 8922],
+                  'source_row_spot_checks_with_page_trace': [1, 73, 2232, 2646, 2647, 4500, 8922],
                   'two_figures_visually_checked': True, 'English_summary_pages': 2,
                   'science_limits_retained': True, 'workbook_QA_path': 'outputs/consolidated/review/main_v3/verification.json',
                   'reader_QA_path': 'outputs/consolidated/review/main_v3/reader_qa.json',

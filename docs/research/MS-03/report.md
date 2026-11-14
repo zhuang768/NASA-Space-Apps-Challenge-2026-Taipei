@@ -2,6 +2,25 @@
 
 Team zasa｜2026-11-14｜MS03-EARTH-ANALOG-20261114-v1
 
+## 2026-11-15追加搜尋：原碼、原始logger與2012操作紀錄仍未取得
+
+本節接續`ab31a3d`，保留前輪邊界核對及全部歷史紀錄。本次有新增作者活動紀錄與版本查核，**仍不足以確認四小時偏移原因**。不改任何時間欄，不與HOBO配時，也不新增跨儀器統計。
+
+| 追查路徑 | 實際取得／讀取範圍 | 結果與限制 |
+|---|---|---|
+| [作者Zenodo版本介面](https://zenodo.org/api/records/10553882/versions)及[latest](https://zenodo.org/api/records/10553882/versions/latest) | 兩個API實際讀取；versions回傳10553882一筆，latest仍為10553882 | 本次沒有找到另一個公開版本補上原碼或2012紀錄；不推論沒有私存資料 |
+| 同固定版本的[2010 activities summaries.pdf](https://zenodo.org/records/10553882/files/2010%20activities%20summaries.pdf) | 實際下載1,108,938bytes，MD5 `d2184a3cb5941a62c9ff5079289ca766`符合來源；14頁文字抽取檢索，重點讀pp.5、8–9 | p.5 University Valley段記錄2009–2010資料下載與電腦過冷造成的重複連線問題，未提供2012-10-28時鐘或補列紀錄。這不能解釋四小時變化 |
+| 同PDF的站點歸屬核對 | pp.8–9連讀 | p.9「station program was not changed」承接p.8 **Pearse Valley**，不能誤作University Valley W站未改程式的證據 |
+| [2022原論文](https://doi.org/10.1017/S0954102022000025) | 出版者HTML的Meteorological measurements、Supplemental material、Author contributions | 作者說明Marinova負責logger程式、部署及取回資料；文中資料典藏方向為NSIDC，補充資料為Fig.3每日氣象數值。這些段落未提供所需`.m`、原始W logger檔或2012校時紀錄；不以論文曾比較儀器推定本組可直接配時 |
+| [USAP-DC 609529](https://www.usap-dc.org/view/dataset/609529) | 官方metadata與公開檔案清單，未下載數值檔 | 清單為四谷地下冰深度調查，並非W站CR1000原始時序或時鐘操作紀錄，不作替代輸入 |
+| 精確／作者與站點名稱補搜 | 2026-11-15；完整查詢記在search_log Q23–Q28 | 本次未找到可取得的校準程式、原始W站logger檔或2012校時紀錄。搜尋結果含其他站點與無關同名資料，均不採用；沒有進行作者聯絡，也不聲稱全面排除 |
+
+本輪取得與搜尋紀錄見[clock_search_followup.json](../../../outputs/research/MS-03/uv_w/clock_search_followup.json)。新PDF原檔只留本機暫存，沒有提交大型原檔。原資料版本10553882、既有55,346列Campbell與HOBO描述結果均維持原樣。
+
+**研究判斷維持unknown**：前輪證據已確認「欄位差改變」與「8列NaN補列」在同一邊界；本輪沒有拿到能重現該處理的原碼及前處理檔，因此無法把處理錯位假說提升成已證實原因。2010下載斷線也不能回推為2012異常原因。
+
+接續工作只需針對缺件：實際執行的校準`.m`與相依檔、2012-10-28前後未處理CR1000檔、2012當次下載／重設／時鐘紀錄，以及時間向量生成規則。若持有人提供後，再比較補列前後輸出與RECORD；在此之前，停止重複無新線索的泛搜，保留原時標及跨儀器配時禁用狀態。
+
 ## 2026-11-15續查：Campbell −1／−5小時差異與作者補列紀錄
 
 本節接續`89ff46f`，只查時間欄處理。**四小時差異與作者記載的8筆NaN補列，在匯出檔中發生於同一邊界；尚未取得校準程式，根因與正確時刻仍未確認。** 保留兩個原時間欄，不修正、不轉UTC或太陽時、不與HOBO配時。這裡的−1／−5小時是「小數日減印刷日期」的欄位差，並非已確認時區。

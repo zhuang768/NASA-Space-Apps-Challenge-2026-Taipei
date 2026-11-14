@@ -207,8 +207,8 @@
   "outputs": [
     {
       "path": "docs/research/MS-03/report.md",
-      "bytes": 22307,
-      "sha256": "089f4faec30b6ddaa301d012080908cf7f40c734af7685fe62d3f8a249fbba9a"
+      "bytes": 25529,
+      "sha256": "606d7f8e0df3b69472c336e5aeda2e0fb5c430811b71c3b7bfe8422c06f63e2b"
     },
     {
       "path": "scripts/research/MS-03/audit_campbell_clock.py",
@@ -252,8 +252,8 @@
     },
     {
       "path": "outputs/research/MS-03/search_log.csv",
-      "bytes": 4908,
-      "sha256": "7d3822dfcc41c8ef5c7b68938662f717919930952ffface386303d3fca5a5eec"
+      "bytes": 7016,
+      "sha256": "1648f9984c0f3722388c1ed3e5bc9b41ee9c36a55f013e79f1896259cd9783ac"
     },
     {
       "path": "outputs/research/MS-03/sources.json",
@@ -269,6 +269,11 @@
       "path": "outputs/research/MS-03/uv_w/campbell_clock_boundary.csv",
       "bytes": 877,
       "sha256": "20f3a653e654e9f79b445f9d1f83c53d67161f6578fe775366a0ae0937725f8d"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/clock_search_followup.json",
+      "bytes": 1247,
+      "sha256": "3366ad1aeeaeac4a397a17f6831ece521f409ae27d7931bed9ad27c8670e5447"
     },
     {
       "path": "outputs/research/MS-03/uv_w/download_manifest.json",
@@ -297,8 +302,8 @@
     },
     {
       "path": "outputs/research/MS-03/validation.json",
-      "bytes": 1838,
-      "sha256": "70cd13a010245b3487f0bb2b154503c5a73edbea465dc80e96271c947805638b"
+      "bytes": 2218,
+      "sha256": "f942544f5c6b2182aef745618f2aba62995633f53f152bdd2bc95266bcebf2f8"
     }
   ],
   "followup_date_taipei": "2026-11-15",
@@ -324,5 +329,11 @@
       "uv_w/campbell_clock_audit.json",
       "uv_w/campbell_clock_boundary.csv"
     ]
+  },
+  "clock_public_source_followup": {
+    "date": "2026-11-15",
+    "record": "uv_w/clock_search_followup.json",
+    "root_cause": "unknown",
+    "no_new_clock_inputs": true
   }
 }

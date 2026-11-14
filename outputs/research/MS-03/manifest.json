@@ -212,8 +212,8 @@
     },
     {
       "path": "scripts/research/MS-03/audit_campbell_clock.py",
-      "bytes": 2754,
-      "sha256": "5aec914605c66e7b1f2c38293c633381a8344235885e2a0f240cf32ba202d5dd"
+      "bytes": 2774,
+      "sha256": "c4405e186b81522508c1cff54aaf10edcc00c076480bd47d6cdb11e37d2fcd04"
     },
     {
       "path": "scripts/research/MS-03/inspect_uv_w.py",
@@ -252,8 +252,8 @@
     },
     {
       "path": "outputs/research/MS-03/search_log.csv",
-      "bytes": 4931,
-      "sha256": "e0552a1544dad085d156f4d320f6fd873bfc41e21a83849cab288b2d6b8e370c"
+      "bytes": 4908,
+      "sha256": "7d3822dfcc41c8ef5c7b68938662f717919930952ffface386303d3fca5a5eec"
     },
     {
       "path": "outputs/research/MS-03/sources.json",
@@ -267,8 +267,8 @@
     },
     {
       "path": "outputs/research/MS-03/uv_w/campbell_clock_boundary.csv",
-      "bytes": 892,
-      "sha256": "8da0c5151702ea58d2a7c2b76235cd6fb0e3cfd5ac7678ad18e791d89dd85f51"
+      "bytes": 877,
+      "sha256": "20f3a653e654e9f79b445f9d1f83c53d67161f6578fe775366a0ae0937725f8d"
     },
     {
       "path": "outputs/research/MS-03/uv_w/download_manifest.json",

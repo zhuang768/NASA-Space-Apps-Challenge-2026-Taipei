@@ -1,0 +1,27 @@
+{
+  "repository": "zhuang768/NASA-Space-Apps-Challenge-2026-Taipei",
+  "base_commit": "521740108050ba16e406f8becb67a786179ff8bd",
+  "base_tree": "f4ddaa434df90f6577708997d44a53097bcfd3fe",
+  "fixed_roi": {
+    "latitude_N": [
+      52.5,
+      53.0
+    ],
+    "longitude_E": [
+      168.0,
+      168.5
+    ],
+    "center": [
+      52.75,
+      168.25
+    ]
+  },
+  "date_taipei": "2026-11-15",
+  "snapshot_text_files_verified_against_git_blob_sha": 175,
+  "formal_report_sha256": "1f603ac5a125befdd34af97c14a0c24b3a3591f2b6289a07d4ea62abf7caa0f4",
+  "original_handoff_sha": "f7076c9fdc77e00244ed5d6863aad2bf78cfa28f",
+  "preservation": "Desktop working tree was read only; formal report remains byte-identical to pinned GitHub base; publication modifies MS-02 directories only.",
+  "integration_parent_commit": "1506ede572435588eb5e64f95f24639279b77e56",
+  "integration_parent_tree": "c0c4657aed7ecd1c65574bf1a8f7cc390927ad68",
+  "parallel_work_preserved": "Remote main gained five commits affecting MS-03 and elephant_head outputs after the research base. No MS-02 path changed in that comparison. Publication uses the newer tree to preserve those unrelated results."
+}

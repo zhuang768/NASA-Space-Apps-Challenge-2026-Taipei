@@ -1,0 +1,26 @@
+{
+  "calculation_status": "pass",
+  "scientific_scope": "algebraic non-uniqueness only, not field validation",
+  "formula": "Ke=(fi*sqrt(Ki)+(1-fi)*sqrt(Ks))**2",
+  "assumptions": [
+    "two components: ice and host sediment",
+    "low loss; no liquid water, air, temperature or frequency dependence",
+    "Ki=3 and Ke=3.2 fixed for illustration",
+    "Ks scenarios are assumed; no MS-02 host material measurement"
+  ],
+  "feasible_scenarios": 3,
+  "admissible_ice_fractions": [
+    -0.0,
+    0.6390984728778306,
+    0.9160043572318947
+  ],
+  "rejected_scenarios": [
+    "CRIM-KS-2.8"
+  ],
+  "cannot_conclude": [
+    "actual MS-02 ice presence or fraction",
+    "actual Earth-line ice fraction",
+    "validation of any WISDOM model permittivity",
+    "reproduction of Thomson original radar/core analysis"
+  ]
+}

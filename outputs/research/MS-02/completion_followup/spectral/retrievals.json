@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-2-edr-v1/mrocr_0001/cdr/wa/cdr450924300802_wa0300010l_3.lbl",
+    "file": "sources/cdr450924300802_wa0300010l_3.lbl",
+    "utc": "2026-11-14T20:51:14.863486+00:00",
+    "request_timeout_s": 8,
+    "wall_budget_s": 12,
+    "status": "not_acquired",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-2-edr-v1/mrocr_0001/cdr/wa/cdr450924300802_wa0300010l_3.img",
+    "file": "sources/cdr450924300802_wa0300010l_3.img",
+    "utc": "2026-11-14T20:51:14.878523+00:00",
+    "request_timeout_s": 8,
+    "wall_budget_s": 12,
+    "status": "not_acquired",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2104/trdr/2010/2010_008/msp0001565d/msp0001565d_01_if213l_trr3.img",
+    "file": "sources/msp0001565d_01_if213l_trr3.img",
+    "utc": "2026-11-14T20:51:14.881048+00:00",
+    "request_timeout_s": 8,
+    "wall_budget_s": 12,
+    "status": "not_acquired",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-6-ddr-v1/mrocr_1002/ddr/2010/2010_008/msp0001565d/msp0001565d_01_de213l_ddr1.img",
+    "file": "sources/msp0001565d_01_de213l_ddr1.img",
+    "utc": "2026-11-14T20:51:14.884030+00:00",
+    "request_timeout_s": 8,
+    "wall_budget_s": 12,
+    "status": "not_acquired",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  }
+]

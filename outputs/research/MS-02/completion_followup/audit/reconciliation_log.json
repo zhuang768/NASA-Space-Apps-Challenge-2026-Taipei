@@ -1,0 +1,898 @@
+{
+  "base_commit": "521740108050ba16e406f8becb67a786179ff8bd",
+  "scope": "structured record correction only; formal report untouched",
+  "formal_report_sha256": "1f603ac5a125befdd34af97c14a0c24b3a3591f2b6289a07d4ea62abf7caa0f4",
+  "files": {
+    "candidates.csv": {
+      "sha256_before": "ed4f3fe42842f088b8029877b95bafd6ba9f5137477671d0fdee1d20c2da3450",
+      "row_count": 4,
+      "fields": [
+        "candidate_id",
+        "name",
+        "lat_deg",
+        "lon_deg_east",
+        "research_extent",
+        "boundary_basis",
+        "available_data",
+        "testable_physical_processes",
+        "main_environment_differences",
+        "disposition",
+        "disposition_reason",
+        "cannot_extrapolate",
+        "next_verification_step"
+      ],
+      "sha256_after": "a43bf6f3ff2da48a64cd10219cdd13bcdd309e70b625f23e8e0f214850ef346f",
+      "row_count_after": 4
+    },
+    "evidence.csv": {
+      "sha256_before": "86366de6f32dbcee7c3f851b596bba68c1b548dfc8d930c214d854b3ff095ae3",
+      "row_count": 61,
+      "fields": [
+        "evidence_id",
+        "candidate_id",
+        "facet",
+        "variable",
+        "value",
+        "unit",
+        "evidence_type",
+        "observation_period",
+        "depth_or_height",
+        "resolution_or_representative_extent",
+        "source",
+        "locator",
+        "limitation_or_comparability"
+      ],
+      "sha256_after": "32f98a4a452b4e1b849bd62303bc3885158e0f0f5e3ee6f8800de9676c0dc074",
+      "row_count_after": 67
+    },
+    "claims.csv": {
+      "sha256_before": "7f7a9db9b9a322dcbef12c622f14987bba5241a43ee815d00c5053239c465dfe",
+      "row_count": 9,
+      "fields": [
+        "claim_id",
+        "claim",
+        "claim_origin",
+        "direct_evidence",
+        "site_year_depth_of_direct_evidence",
+        "independent_truth_for_the_claim",
+        "alternative_explanations_or_caveats",
+        "status",
+        "source_and_locator"
+      ],
+      "sha256_after": "2c01d63c23410498ca9f0ed8611e18fbc6263472ce981d85705d399c25acacdf",
+      "row_count_after": 9
+    },
+    "footprint.csv": {
+      "sha256_before": "6ac85eb51dd5e72ad9eb6fabbdbbc239fd9a82f190bf620b5782c96b37b149a6",
+      "row_count": 9,
+      "fields": [
+        "footprint_id",
+        "evidence_set",
+        "location",
+        "lat_deg",
+        "lon_deg_east",
+        "geometry_type",
+        "stated_extent",
+        "survey_or_sample_year",
+        "depth_range_m",
+        "measured_quantity",
+        "source",
+        "locator",
+        "geometry_status"
+      ],
+      "sha256_after": "8deca9d2292a66d2cd7336f168dbb2169f533c7b1e2ac0383395816f9959df07",
+      "row_count_after": 12
+    },
+    "prior_work.csv": {
+      "sha256_before": "581b4beb6bf5fc6716ec779008c53116606b27eef3ab3411b061dc7e05dab2cb",
+      "row_count": 20,
+      "fields": [
+        "prior_id",
+        "candidate_id",
+        "work",
+        "venue_doi_or_url",
+        "site_covered",
+        "purpose",
+        "classification_vs_MS02_use",
+        "read_scope",
+        "difference_in_question",
+        "difference_in_scope",
+        "difference_in_data",
+        "difference_in_method",
+        "note"
+      ],
+      "sha256_after": "42782a1a61462e94593d2ffbf6b4f6f6a2c7c90bea2a8fd147d8f5cb6d14d941",
+      "row_count_after": 22
+    },
+    "local_validation/mars_ice_evidence.csv": {
+      "sha256_before": "9e8394792c4781f6a0ed7d63c7179b3c397d2d0ac8951af5959b5c7740dfc8d5",
+      "row_count": 25,
+      "fields": [
+        "evidence_id",
+        "facet",
+        "variable",
+        "value",
+        "unit",
+        "evidence_type",
+        "source_url_or_doi",
+        "locator",
+        "period",
+        "depth_or_sensitivity",
+        "resolution_or_extent",
+        "covers_cell",
+        "bears_on",
+        "directness",
+        "source_dependency",
+        "status",
+        "limitation_or_unknown",
+        "review_state"
+      ],
+      "sha256_after": "75eb1f639d8308ecac6b0da5eb7a0c178a85a84d1807ef333153ef79e9954398",
+      "row_count_after": 25
+    }
+  },
+  "changes": [
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E01",
+      "field": "main_environment_differences",
+      "new": "Latitude 77.9S vs 52.75N; measured Earth MAAT -23.4 degC is not comparable with model-time-adjusted, coarse-bin MCS context (quantity/QA not independently reprocessed; not local ground temperature). Atmosphere, pressure, dust and insolation differ. W-station ice-cemented interface is 42 cm; approximately 15 cm is the 0 degC active layer, not total dry-cover thickness. Actual MS-02 ice depth remains unknown.",
+      "authority": "local_validation/claim_corrections.csv",
+      "locator": "MCS-ORDER;UV-COVER",
+      "old": "Latitude 77.9°S vs 52.75°N; MAAT -23.4 °C measured vs Mars MCS 03/15 LTST surface medians (not annual mean); atmosphere, pressure, dust, insolation all differ; ice in dry soil at 42 cm vs MS-02 ice depth unknown"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E01",
+      "field": "disposition_reason",
+      "new": "Retained for the specifically documented W-station ice-cemented interface and multi-depth seasonal thermal response. This is an identifiability/method reference; independently separating ice from local cover/material/boundary effects has not been demonstrated. Do not reuse deprecated H2/H3 radar-chain claims.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-01",
+      "old": "Only candidate with a measured multi-depth temperature series that brackets an ice table and a published energy-balance model; directly addresses 'cover + season + ice' hypotheses H1/H2"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E01",
+      "field": "next_verification_step",
+      "new": "Link raw W-station channels to serial/deployment metadata and preserve unresolved original clock/coordinate issues; obtain co-located density, heat capacity, conductivity and an independent ice profile plus matched ice-free/boundary controls before a unique ice or blind-accuracy claim. Table II/Fig.6 have been read; their publication summaries are not the raw series.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-01; shared_validation/gap_status.csv earth_controls and uv_identity_clock",
+      "old": "Obtain Table II/Fig. 6 series from the paper/supplement; get soil density and heat capacity (only conductivity and diffusivity were read, so thermal inertia is not derived); find wind-speed values; test what TES-scale (3 km) thermal inertia could/couldn't see for a 42 cm ice table"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E02",
+      "field": "research_extent",
+      "new": "Original middle/central Beacon Valley records retain their separate, incompletely located scopes. A limited Liu2018 thermal/material subcase is located at 77deg49S,160deg39E; shallow sensors near a ~30 cm dry-cover/ice interface and an adjacent-polygon deep borehole are separate supports. No valley-wide surveyed boundary has been obtained.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06",
+      "old": "Not defined: coordinates not extracted; only valley name and Heldmann 2013 / Bannister 2007 abstracts read"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E02",
+      "field": "boundary_basis",
+      "new": "Keep earlier Heldmann2013/Kowalewski2006/McKay2009/Bannister2007 records separate. Added primary Liu2018 sections2-3.3/Table1/Fig2 locates only its thermal subcase (77deg49S160deg39E); the adjacent deep borehole is not the same vertical column.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06",
+      "old": "Heldmann 2013 abstract (middle Beacon Valley massive ground ice); Kowalewski 2006 abstract (central Beacon Valley); McKay 2009 abstract; Bannister 2007 abstract (1.3 km transect)"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E02",
+      "field": "available_data",
+      "new": "Historical abstract-level depth/sublimation records remain separately sourced in evidence.csv. Liu2018 primary sections2-3.3/Table1/Fig2 now read: shallow temperatures, ~30 cm cover/interface, laboratory heat capacity, semiempirical conductivity, adjacent-polygon deep borehole. Original Liu raw time series has not been acquired; no independent rerun or generic valley-wide promotion.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06",
+      "old": "Heldmann 2013 (ice 10-60 cm, abstract); Kowalewski 2006 (ice under 40-80 cm sublimation till; net loss ~0.017 mm over 18 Nov-29 Dec 2004, HOBO loggers; abstract); McKay 2009 (snow recurrence >10 yr implied on Beacon floor; abstract); Bannister 2007 undergraduate thesis (buried massive ice reported >100 m deep)"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E02",
+      "field": "main_environment_differences",
+      "new": "Polar latitude/climate/pressure mismatch with MS-02; massive-ice versus ice-cemented distinction is site-specific. Liu2018 is a located primary-literature thermal/material subcase, while older 10-60 cm and 40-80 cm ranges remain different sites/definitions and are not reconciled. Missing raw series prevents independent time-series reanalysis.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06",
+      "old": "Same latitude/climate mismatch as E01; ice type differs (massive ice vs ice-cemented); all evidence is abstract-level; site coordinates still not found; Heldmann (10-60 cm) and Kowalewski (40-80 cm) depth ranges differ by site/definition and were not reconciled"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E02",
+      "field": "disposition",
+      "new": "待補證據（原整體候選）；Liu2018具名熱學/材料子案例可作限定文獻參照",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06",
+      "old": "待補證據"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E02",
+      "field": "disposition_reason",
+      "new": "The older whole-valley candidate is not upgraded. Latest primary-source review establishes a located ~30 cm interface/material thermal subcase (Liu2018); laboratory heat capacity and semiempirical conductivity are distinguished. Raw observations and co-located boundary/material controls remain missing.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06",
+      "old": "Now has two peer-reviewed abstracts with numbers (sublimation, till depth) and a snow-recurrence link, but no coordinates, no temperature tables, and no full text read"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E02",
+      "field": "next_verification_step",
+      "new": "Acquire the original Liu2018 raw thermal series and sensor/depth/spatial metadata before independent reanalysis; preserve its adjacent deep borehole as a separate support. Resolve older study-specific depth ranges with original footprints, not a valley-name join.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06",
+      "old": "Read Kowalewski 2006 and McKay 2009 full text for site coordinates and instrument/depth details; read Marchant & Head 2007 (not yet read)"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E03",
+      "field": "testable_physical_processes",
+      "new": "Retain CS-1 aeolian-silt accumulation and syngenetic-ice co-evolution as a specific measured core subprocess. ADE chemistry/structure and Hauber polygon geometry are separate references. WISDOM polygon-trough radar remains general-method context without located same-line independent ice truth; no combined cover-plus-radar validation chain.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-02;AV-03;AV-04;AV-09",
+      "old": "Ice-wedge polygons and mantled ground ice; aeolian silt cover (loess) building syngenetic permafrost; radar detection of ice beneath an active layer; polygon geometry vs Mars (Hauber)"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E03",
+      "field": "next_verification_step",
+      "new": "CS-1 coring date is resolved: September2019; August2022 exposure is ~20 m NE. Wendt core coordinates/values have been acquired separately and cannot be joined to unlocated WISDOM lines. Obtain actual WISDOM line geometry and same-line independent ice observations before overlap/truth claims; keep CALM and older active-layer periods separate.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-02;AV-04;AV-05;AV-09",
+      "old": "Obtain the full Brighi et al. WISDOM paper (coordinates of the polygon lines, borehole/probe truth, how ε was derived); check whether CS-1 and the polygon site share a terrace; get Rasmussen Sect. 6 text beyond char 100,000 and Rotem Table 1; download PANGAEA polygons and SESS 2018 borehole data (blocked here)"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E04",
+      "field": "research_extent",
+      "new": "Keep original Haughton River Valley nine-LiDAR-grid scope separate. A limited Thomson2012 plateau GPR/core subcase is at 75.368333N,-89.525833E with a 3 m line and a core at its 1.5 m CMP focus; approximately 0.9 m wet overburden was excavated. Do not merge this line with river/gully or 2003 base-camp evidence by place name.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-07",
+      "old": "Nine LiDAR grids (0.1-0.5 m/px) within ~3.9 km N-S x ~4.0 km E-W (this-study calc from Table 3.1 UTM 16N); valley ~1.5 km wide, elevation 75-151 m a.s.l."
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E04",
+      "field": "available_data",
+      "new": "Original Andres2020 LiDAR/thaw-depth and Nieto2003 GPR/seismic records retain their own footprints. Added primary Thomson2012 sections2.3,3.1-3.3: 450 MHz GPR on a 3 m line and a ~1 m core, diameter0.10m, at CMP focus1.5m after ~0.9m overburden excavation. Raw radar/core profiles are not acquired; no whole-valley ice quantity or ground-temperature series.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-07",
+      "old": "MAAT ~-16 °C Devon / ~-15 °C valley (cited, Andres p.1,6); LiDAR 2016 (36 DEMs, 9 analysed); thaw depth 0.52-0.67 m (2019, Andres pp.102-106); polygon/stripe diameters 5-31 m (pp.114-115); GPR 250 MHz and seismic at the Haughton base camp/landing strip (Nieto & Stewart 2003; CSEG article) giving permafrost top ~0.6-0.9 m; no Haughton ground-ice quantity"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E04",
+      "field": "disposition",
+      "new": "待補證據（原河谷候選）；Thomson2012挖除覆土後同線GPR/岩芯子案例可作限定方法參照",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-07",
+      "old": "待補證據"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E04",
+      "field": "disposition_reason",
+      "new": "Original river-valley candidate is not upgraded. A distinct primary study supplies independent core evidence at one point on a 3 m GPR line, but the wet active layer had been excavated. It does not validate intact aeolian-cover detection, spatially exhaustive ground truth or orbital SHARAD, and Table1 aggregate material classes do not give this point a local ice fraction.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-07",
+      "old": "Measured thaw depth (2019), polygon geometry, and GPR/seismic permafrost-top depths (~0.6-0.9 m) exist, but no Haughton ground-ice quantity, no borehole temperature series (a '-17 °C crater average' is stated without period or depth), and no Mars-point comparison were found"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E04",
+      "field": "next_verification_step",
+      "new": "Acquire original Thomson2012 GPR/core profiles, field date, calibration and exact spatial linkage; retain core location and excavated-cover state. Independent undisturbed-cover controls are required for that broader use. Do not substitute Canadian High Arctic ice percentages or other sites.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-07",
+      "old": "Find a Haughton borehole/ground-temperature series (searches so far found none); the Hibbard dissertation text does not name Devon/Haughton in its abstract, so its body would need to be read from the repository PDF"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-005",
+      "field": "variable",
+      "new": "MCS-derived model-time-adjusted coarse-bin temperature context at 03/15 LTST; paired-bin contrast",
+      "authority": "local_validation/mars_ice_evidence.csv",
+      "locator": "ME-10",
+      "old": "MCS surface temp median at 03 / 15 LTST; paired contrast"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-005",
+      "field": "depth_or_height",
+      "new": "Quantity/QA not independently reprocessed; do not assign local surface, ground or subsurface sensitivity",
+      "authority": "local_validation/mars_ice_evidence.csv",
+      "locator": "ME-10",
+      "old": "surface (brightness temp; depth n/a)"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-005",
+      "field": "limitation_or_comparability",
+      "new": "Populated-bin medians: night171.2721K/day246.3053K. Median paired-bin contrast66.8305K is not the difference of those medians. Neighbouring5deg support, not candidate-local or annual ground temperature; QA/counts/uncertainty unprocessed; no Earth MAAT subtraction.",
+      "authority": "local_validation/mars_ice_evidence.csv",
+      "locator": "ME-10",
+      "old": "Populated-bin medians, not annual mean or amplitude; QA, counts, uncertainty absent; not comparable to Earth MAAT"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-011",
+      "field": "source",
+      "new": "https://pubs.usgs.gov/imap/1140/plate-1.pdf ; https://doi.org/10.3133/sim3292 ; https://planetarynames.wr.usgs.gov/Feature/348",
+      "authority": "local_validation/mars_ice_evidence.csv",
+      "locator": "ME-17;ME-18",
+      "old": "https://en.wikipedia.org/wiki/Cebrenia_quadrangle ; https://pubs.usgs.gov/publication/i1140"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-011",
+      "field": "limitation_or_comparability",
+      "new": "MC-7 extent confirmed from original USGS plate. Separate SIM3292 original-shapefile intersection places entire ROI in mAl (Middle Amazonian lowland unit); global1:20,000,000 unit is not local composition/ice truth. Arcadia MDIM2.1 polygon does not intersect ROI; approximate gap7.69km is geometric, not a precise geomorphic boundary.",
+      "authority": "local_validation/mars_ice_evidence.csv",
+      "locator": "ME-17;ME-18",
+      "old": "52.75°N, 168.25°E lies inside MC-7 (this-study check); the quadrangle only includes PART of Arcadia, so this does NOT establish that MS-02 is in Arcadia Planitia; geologic unit at MS-02 not read from the plate"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-014",
+      "field": "limitation_or_comparability",
+      "new": "Earth air temperature; do not compare directly with model-time-adjusted neighbouring5deg MCS context, whose quantity/QA was not independently reprocessed and is not candidate-local ground temperature.",
+      "authority": "local_validation/mars_ice_evidence.csv",
+      "locator": "ME-10",
+      "old": "Air temperature, not comparable with Mars MCS 03/15 LTST surface medians"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-017",
+      "field": "limitation_or_comparability",
+      "new": "Approximately15cm is the local0degC active layer estimate; it is not total dry-cover thickness. W-station ice-cemented interface is42cm; no surface melt observed in three summers. Do not transfer either depth to MS-02.",
+      "authority": "local_validation/claim_corrections.csv",
+      "locator": "UV-COVER",
+      "old": "Dry permafrost cover, no melt observed at surface in 3 summers (p.156)"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-018",
+      "field": "variable",
+      "new": "Annualized time near42cm ice interface above the recorded-temperature threshold; water activity calculated from ice/water saturation-vapour-pressure ratio",
+      "authority": "local_validation/claim_corrections.csv",
+      "locator": "I06/EV-018",
+      "old": "Time at 42 cm ice table with a_w>0.6 and T>-18 °C"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-018",
+      "field": "evidence_type",
+      "new": "溫度紀錄統計＋水活度熱力學計算（不是兩變量直接量測或能量模型時數）",
+      "authority": "local_validation/claim_corrections.csv",
+      "locator": "I06/EV-018",
+      "old": "實測+模式(energy-balance model)"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-018",
+      "field": "observation_period",
+      "new": "Annualized in Marinova2022 Fig6/p162; underlying station record2009-2013; no single complete calendar year assigned by this audit",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-01",
+      "old": "2010-2013"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-018",
+      "field": "locator",
+      "new": "p.162 Fig.6; AV-01",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-01",
+      "old": "p.161, Fig. 6"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-018",
+      "field": "limitation_or_comparability",
+      "new": "Approximately2560h/year is a published annualized temperature-threshold duration; aw is calculated, not independently measured. Separate from the10-day energy-balance-model tuning period. No MS-02 habitability, biological activity or annual coverage inference.",
+      "authority": "local_validation/claim_corrections.csv",
+      "locator": "I06/EV-018",
+      "old": "Special Region criteria (Rummel 2014); model tuned to a 10-day warm period (p.153-154)"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-029",
+      "field": "value",
+      "new": "Original abstract-era search found no table. Superseding located Liu2018 primary thermal/material subcase has ~30cm dry cover and measured heat capacity/semiempirical conductivity; numerical property values and original raw series not transcribed/acquired in this root row.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06",
+      "old": "not found"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-029",
+      "field": "source",
+      "new": "https://doi.org/10.1029/2017JF004535 ; local_validation/analog_validation.csv AV-06",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06",
+      "old": "n/a"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-029",
+      "field": "locator",
+      "new": "Liu2018 sections2-3.3;Table1;Fig2",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06",
+      "old": "n/a"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-029",
+      "field": "limitation_or_comparability",
+      "new": "A specific primary-literature subcase is now available; no whole-Beacon coordinate/depth unification. Adjacent deep borehole is a different support; raw-series availability and exact material/boundary controls remain unresolved.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06",
+      "old": "No primary temperature table read"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-048",
+      "field": "variable",
+      "new": "Scope-limited search result for Andres2020 and later Thomson2012 GPR/core evidence",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-07",
+      "old": "Haughton ground-ice quantity, GPR, borehole temperatures"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-048",
+      "field": "value",
+      "new": "Andres2020 text did not supply Haughton ground-ice quantity/GPR/temperature series. Later primary Thomson2012 identifies independent core at one3m GPR-line focus after ~0.9m overburden excavation; see AV-07. No whole-valley ice content or borehole-temperature series is established.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-07",
+      "old": "not found in text read"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-048",
+      "field": "limitation_or_comparability",
+      "new": "Absence from the original thesis text is not absence of Haughton GPR/core studies. Thomson2012 plateau line is separate from original river/gully scope. Canadian High Arctic10-20% and Axel Heiberg values cannot be substituted; aggregate Table1 is not a local ice fraction.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-07",
+      "old": "The 10-20% ice content is a Canadian High Arctic generality; Axel Heiberg values cannot be used for Haughton"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-053",
+      "field": "observation_period",
+      "new": "September2019 cores; August2022 exposure ~20m NE is separate",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-02",
+      "old": "coring date not extracted"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-054",
+      "field": "observation_period",
+      "new": "September2019 cores; August2022 exposure ~20m NE is separate",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-02",
+      "old": "core date not extracted"
+    },
+    {
+      "file": "claims.csv",
+      "key": "claim_id",
+      "record_id": "C1",
+      "field": "site_year_depth_of_direct_evidence",
+      "new": "CS-1 78.201N15.840E; cores September2019; 0-3.2m; August2022 exposure20mNE separately located",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-02",
+      "old": "CS-1 78.201N 15.840E; coring date not extracted; 0-3.2 m"
+    },
+    {
+      "file": "claims.csv",
+      "key": "claim_id",
+      "record_id": "C7",
+      "field": "direct_evidence",
+      "new": "CS-1 and ADE are ~5.97km apart; WISDOM polygon lines have no coordinates; dates differ (CS-1 Sep2019, ADE Mar2017, WISDOM Mar2022). ADE lies ~1.1km south of the cited polygon-site bounding box. Same valley is not a co-located chain.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-09",
+      "old": "CS-1 and ADE are ~5.97 km apart; WISDOM polygon lines have no coordinates; years differ (core undated here, 2017, 2022); ADE lies ~1.1 km south of the polygon-site bbox"
+    },
+    {
+      "file": "footprint.csv",
+      "key": "footprint_id",
+      "record_id": "FP-01",
+      "field": "survey_or_sample_year",
+      "new": "September2019 cores; August2022 exposure20mNE separate (record spans~3000yr)",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-02",
+      "old": "coring date not extracted (record spans ~3000 yr)"
+    },
+    {
+      "file": "prior_work.csv",
+      "key": "prior_id",
+      "record_id": "PW-02",
+      "field": "read_scope",
+      "new": "Earlier partial-text extraction retained in reconciliation log; superseding local_validation review acquired/read the full primary Marinova2022 PDF, including TableII, rendered Fig6/p162 and Appendix.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-01",
+      "old": "Extracted text characters 0-121,921 (two reads): body pp.145-162 and thermal-property appendix pp.165-171"
+    },
+    {
+      "file": "prior_work.csv",
+      "key": "prior_id",
+      "record_id": "PW-02",
+      "field": "difference_in_method",
+      "new": "Published surface-energy-balance model tuned to10-day window; separately, approximately2560h/year is an annualized recorded-temperature threshold statistic with calculated aw, not modelled annual hours or two measured variables.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-01",
+      "old": "Surface energy-balance model tuned to a 10-day window"
+    },
+    {
+      "file": "prior_work.csv",
+      "key": "prior_id",
+      "record_id": "PW-05",
+      "field": "note",
+      "new": "Author-interpreted ~1.5m polygon-trough reflector supported by radar/FDTD; no located same-line independent ice truth obtained. The stated3D truth belongs to a Longyearbreen glacier cave and cannot validate the separate polygon troughs.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-04",
+      "old": "Shows ice-like reflector detectable in troughs at Adventdalen"
+    },
+    {
+      "file": "prior_work.csv",
+      "key": "prior_id",
+      "record_id": "PW-06",
+      "field": "read_scope",
+      "new": "Earlier partial extraction superseded by local_validation full22-page primary-PDF acquisition/review; section3.2/p5 establishes September2019 cores and August2022 exposure20mNE separately.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-02",
+      "old": "Full text via fetch tool (DTU repository PDF, chars 0-100,000 of 107,876)"
+    },
+    {
+      "file": "prior_work.csv",
+      "key": "prior_id",
+      "record_id": "PW-13",
+      "field": "read_scope",
+      "new": "Original USGS I-1140 plate extent checked in later local_validation; this map supplies MC-7 context. Separate SIM3292 original shapefile, not I-1140 alone, supplies whole-ROI mAl unit.",
+      "authority": "local_validation/mars_ice_evidence.csv",
+      "locator": "ME-17;ME-18",
+      "old": "USGS abstract only; plate not read"
+    },
+    {
+      "file": "prior_work.csv",
+      "key": "prior_id",
+      "record_id": "PW-13",
+      "field": "note",
+      "new": "MC-7 confirmed. SIM3292 original-shapefile intersection establishes mAl at global-map scale; no local composition or independent ice truth. Approximate Arcadia MDIM2.1 named-feature geometry does not intersect ROI.",
+      "authority": "local_validation/mars_ice_evidence.csv",
+      "locator": "ME-17;ME-18",
+      "old": "Abstract mentions circumpolar plains with wind, glacial and periglacial processes; formal units at MS-02 not read"
+    },
+    {
+      "file": "evidence.csv",
+      "key": "evidence_id",
+      "record_id": "EV-006",
+      "field": "limitation_or_comparability",
+      "new": "Consistency with ice, not abundance or probability; thermal/neutron/geomorphology/radar-source dependencies prohibit independent-vote counting. A mean and extrema do not establish a binary cell distribution or an ice-bearing-cell fraction. Preserve missing values; no SWIM-to-WEH conversion.",
+      "authority": "local_validation/claim_corrections.csv",
+      "locator": "SWIM-BINARY; shared_validation/dependency_edges.csv",
+      "old": "Consistency with ice, not abundance or probability; 0-1 m inputs: neutron, thermal, shallow geomorphology, radar surface power"
+    },
+    {
+      "file": "local_validation/mars_ice_evidence.csv",
+      "key": "evidence_id",
+      "record_id": "ME-13",
+      "field": "evidence_type",
+      "new": "直接觀測（雷達power）；冰解釋未驗證",
+      "authority": "docs/research/MS-02/local_validation/research_notes.md",
+      "locator": "section2; acquired product statuses and labels",
+      "old": "未取得"
+    },
+    {
+      "file": "local_validation/mars_ice_evidence.csv",
+      "key": "evidence_id",
+      "record_id": "ME-14",
+      "field": "evidence_type",
+      "new": "已取得目錄/足跡與browse；未校正EDR",
+      "authority": "docs/research/MS-02/local_validation/research_notes.md",
+      "locator": "section2; acquired product statuses and labels",
+      "old": "未取得"
+    },
+    {
+      "file": "local_validation/mars_ice_evidence.csv",
+      "key": "evidence_id",
+      "record_id": "ME-15",
+      "field": "evidence_type",
+      "new": "已取得校準I/F與DDR；成分解釋未驗證",
+      "authority": "docs/research/MS-02/local_validation/research_notes.md",
+      "locator": "section2; acquired product statuses and labels",
+      "old": "未取得"
+    },
+    {
+      "file": "local_validation/mars_ice_evidence.csv",
+      "key": "evidence_id",
+      "record_id": "ME-17",
+      "field": "evidence_type",
+      "new": "已取得全球地質圖；映射解釋非局部實測",
+      "authority": "docs/research/MS-02/local_validation/research_notes.md",
+      "locator": "section2; acquired product statuses and labels",
+      "old": "未取得"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E03",
+      "field": "research_extent",
+      "new": "Group of separate Adventdalen evidence footprints, not a single validated site. Scalar coordinates78.1722N16.0613E retain the ADE historical anchor (FP-03); retained aeolian-cover/syngenetic-ice subprocess is CS-1 at78.201N15.840E (FP-01), about5.97km away. HRSC-AX8-site bounding box and unlocated WISDOM polygon-trough lines remain separate supports; no overlap or same-site truth assumed.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-02;AV-03;AV-04;AV-09",
+      "old": "Valley floor/terraces of Adventdalen (~40 km long, up to ~3 km wide); point anchor = ADE terrace site; HRSC-AX polygon sites span 78.182-78.206°N, 15.79-16.559°E (8 sites); polygon troughs surveyed by WISDOM team"
+    },
+    {
+      "file": "candidates.csv",
+      "key": "candidate_id",
+      "record_id": "MS-02-E04",
+      "field": "boundary_basis",
+      "new": "Original scalar anchor75.37N,-89.53E and nine-grid extent remain Andres2020 Table3.1/Fig1.8 p20 (UTM16N grids; impact-structure centre is different). Separate Thomson2012 primary DOI10.1029/2012JE004053 sections2.3,3.1-3.3 locates plateau subcase75deg22min06secN89deg31min33secW (FP-12):3m line, core at1.5m CMPfocus, ~0.9m overburden excavated. This point anchor is not a full line polygon or an automatic match to Andres/2003 footprints.",
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-07",
+      "old": "Andres 2020 Table 3.1 (UTM 16N grids converted to 75.359-75.394°N, 89.510-89.655°W) and Fig 1.8 p.20 (75.37, -89.53); the structure centre 75°22'N 89°41'W (p.6) is a different anchor ~4.3 km away"
+    }
+  ],
+  "inserted_rows": [
+    {
+      "file": "prior_work.csv",
+      "row": {
+        "prior_id": "PW-21",
+        "candidate_id": "MS-02-E02",
+        "work": "Liu et al.2018 (DOI-defined primary Beacon Valley thermal/material study)",
+        "venue_doi_or_url": "https://doi.org/10.1029/2017JF004535",
+        "site_covered": "Specific Beacon thermal site77deg49S160deg39E; adjacent-polygon deep borehole separate",
+        "purpose": "Thermal/material interpretation of dry cover and known massive-ice interface",
+        "classification_vs_MS02_use": "直接先例（限定地球熱學/材料子流程）；非MS-02配對驗證",
+        "read_scope": "Inherited verified primary review: sections2-3.3/Table1/Fig2; AV-06; original raw time series not acquired",
+        "difference_in_question": "Known Earth ice-interface/material response versus conditional MS-02 ice interpretation",
+        "difference_in_scope": "Specific~30cm dry-cover/interface site; no whole-valley or Mars footprint equivalence",
+        "difference_in_data": "Shallow thermal sensors, laboratory heat capacity; conductivity semiempirical; adjacent deep borehole separate",
+        "difference_in_method": "Primary material/thermal study; no independent reanalysis of raw time series in this delivery",
+        "note": "Limited subcase only. Missing original series and co-located controls prohibit a full-candidate upgrade or unique ice attribution."
+      },
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06;AV-07"
+    },
+    {
+      "file": "prior_work.csv",
+      "row": {
+        "prior_id": "PW-22",
+        "candidate_id": "MS-02-E04",
+        "work": "Thomson et al.2012 (DOI-defined primary Haughton GPR/core study)",
+        "venue_doi_or_url": "https://doi.org/10.1029/2012JE004053",
+        "site_covered": "Specific plateau site75.368333N,-89.525833E;3m GPR line and CMPfocus1.5m",
+        "purpose": "Same-line radar/core dielectric-method comparison",
+        "classification_vs_MS02_use": "直接先例（限定挖除覆土後GPR/岩芯子流程）；非未擾動覆土或軌道雷達驗證",
+        "read_scope": "Inherited verified primary review: sections2.3,3.1-3.3,4,5.2; AV-07; raw profiles not acquired",
+        "difference_in_question": "Earth co-located dielectric method versus MS-02 orbital ice/interface interpretation",
+        "difference_in_scope": "Core truth at one focus, not spatially exhaustive line truth; separate from original river/gully candidate",
+        "difference_in_data": "450MHz GPR;~1m length0.10m diameter core;~0.9m wet active layer excavated",
+        "difference_in_method": "Known excavation and point-core linkage; no intact-cover or SHARAD performance transfer",
+        "note": "Table1 aggregate site classes are not this point ice fraction; field-date/raw-profile/calibration and undisturbed controls remain required for broader validation."
+      },
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06;AV-07"
+    },
+    {
+      "file": "evidence.csv",
+      "row": {
+        "evidence_id": "EV-062",
+        "candidate_id": "MS-02-E02",
+        "facet": "地形",
+        "variable": "Located Beacon thermal subcase versus unmeasured local terrain",
+        "value": "77deg49S160deg39E (approximately-77.816667N,160.650000E); quantitative slope/relief/DEM and a surveyed polygon remain unknown",
+        "unit": "degrees; slope/relief unknown",
+        "evidence_type": "Primary-literature location; terrain geometry unknown",
+        "observation_period": "Site as described by Liu2018; exact terrain survey period not supplied here",
+        "depth_or_height": "surface location",
+        "resolution_or_representative_extent": "Specific shallow thermal-site anchor; adjacent deep borehole separate; no valley-wide polygon",
+        "source": "https://doi.org/10.1029/2017JF004535",
+        "locator": "Sections2-3.3;Fig2;local_validation/analog_validation.csv AV-06",
+        "limitation_or_comparability": "Coordinate is the Liu2018 subcase, not an automatic location for Heldmann/Kowalewski/Bannister data. No quantitative Mars-versus-Earth terrain difference is computed; unknown is not zero."
+      },
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06;AV-07"
+    },
+    {
+      "file": "evidence.csv",
+      "row": {
+        "evidence_id": "EV-063",
+        "candidate_id": "MS-02",
+        "facet": "熱性質",
+        "variable": "Piqueux 2019 ice-table depth d_m at the pixel containing the cell",
+        "value": "0.4499824941",
+        "unit": "m",
+        "evidence_type": "Conditional thermal-model product",
+        "observation_period": "2019 archive v1.0; multiannual MCS/THEMIS input; per-pixel time series not supplied",
+        "depth_or_height": "seasonal thermal model ~0.06–1 m; two-layer ice assumed",
+        "resolution_or_representative_extent": "0.5 deg export pixel exactly ROI; 531.665 km2",
+        "source": "https://doi.org/10.22002/D1.1316 ; https://doi.org/10.1029/2019GL083947",
+        "locator": "d_m.ascii row74 col336 zero-based; Lat/Lon files; paper sections 2–3; local_validation/mars_ice_evidence.csv ME-12",
+        "limitation_or_comparability": "Not observed ice table; no local residual/CI; ~20% paper best-case discretization floor is not local uncertainty. Export 2 ppd vs paper 3 ppd unresolved; cannot separate rock from ice or pore from massive ice. Source dependence: MCS/THEMIS; thermal family shared with SWIM; albedo/topography/dust climatology inputs"
+      },
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06;AV-07"
+    },
+    {
+      "file": "evidence.csv",
+      "row": {
+        "evidence_id": "EV-064",
+        "candidate_id": "MS-02",
+        "facet": "水/冰",
+        "variable": "SHARAD tracks and reflectors inside the fixed range",
+        "value": "3 segments; 64+65+65=194 in-ROI columns",
+        "unit": "segments; posted columns",
+        "evidence_type": "Observed radar power; ice interpretation unvalidated",
+        "observation_period": "2007-07-24; 2010-10-20; 2010-11-05",
+        "depth_or_height": "20 MHz, 10 MHz bandwidth; theoretical free-space resolution 15 m, ice eps=3.15 ~8.45 m; not 0.45 m ice-table resolving",
+        "resolution_or_representative_extent": "460 m posting; 0.0375 us samples; not independent spatial/range resolution",
+        "source": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/ ; sources/catalog/SHARAD_USRDRV2.json",
+        "locator": "00464501 / 01983502 / 02004601; radar_checks.json; PDS labels and geom.tab; local_validation/mars_ice_evidence.csv ME-13",
+        "limitation_or_comparability": "All selected power samples finite/nonzero. Row1800 is areoid NOT local surface. Full-delay comparison inspected; surface response present, no validated subsurface pick/epsilon inversion. Missing validated reflector is not absence of ice. Source dependence: SHARAD; MOLA-based geometry/surface clutter; shared radar family with SWIM"
+      },
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06;AV-07"
+    },
+    {
+      "file": "evidence.csv",
+      "row": {
+        "evidence_id": "EV-065",
+        "candidate_id": "MS-02",
+        "facet": "地形",
+        "variable": "HiRISE / CTX products with footprints inside the fixed range",
+        "value": "5 CTX EDR footprints; 5 browse images; HiRISE queried RDR4/RDRV11=0",
+        "unit": "products",
+        "evidence_type": "Acquired nominal footprints and browse imagery",
+        "observation_period": "2012-05-12 to 2024-12-31",
+        "depth_or_height": "optical surface only",
+        "resolution_or_representative_extent": "CTX native ~6.08–6.15 m/px; browses variably downsampled; nominal union 100% ROI",
+        "source": "https://oderest.rsl.wustl.edu/live2/ ; sources/catalog/CTX_EDR.json",
+        "locator": "product_footprints.csv; catalog_summary.json; acquisition_log.jsonl; local_validation/mars_ice_evidence.csv ME-14",
+        "limitation_or_comparability": "Footprint union is not usable pixel coverage. HiRISE zero is only successful queried product types/date; unsupported EDR query was error not zero. No crater/polygon/ice absence inference from low contrast browse. Source dependence: n/a"
+      },
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06;AV-07"
+    },
+    {
+      "file": "evidence.csv",
+      "row": {
+        "evidence_id": "EV-066",
+        "candidate_id": "MS-02",
+        "facet": "水/冰",
+        "variable": "CRISM/OMEGA surface H2O-ice or hydration signals in the fixed range",
+        "value": "59 CRISM IF products (49 S / 10 L); 1 L science+DDR acquired; 912 ROI pixel centres",
+        "unit": "products; pixels",
+        "evidence_type": "Acquired calibrated I/F; no accepted compositional interpretation",
+        "observation_period": "science sample 2010-01-08; full list in product_footprints.csv",
+        "depth_or_height": "optical surface; does not see through regolith to buried ice",
+        "resolution_or_representative_extent": "sample 900x64 spatial x55 bands; nominal survey resolution ~200 m; actual numeric QA only",
+        "source": "https://oderest.rsl.wustl.edu/live2/ ; sources/catalog/CRISM_TRDR.json",
+        "locator": "MSP0001565D_01_IF213L_TRR3 + DE213L_DDR1; crism_quality.json; local_validation/mars_ice_evidence.csv ME-15",
+        "limitation_or_comparability": "177 TRDR records include housekeeping, not 177 spectra. Sample 50160 values, 2100 equal65535, numeric usable95.8134%; wavelength/bad-band/atmosphere/photometry QA incomplete. Negative I/F retained. No hydrated-mineral or ice claim. Source dependence: CRISM calibration+SPICE/MOLA DDR; DDR thermal inertia is imported, not CRISM independent TI"
+      },
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06;AV-07"
+    },
+    {
+      "file": "evidence.csv",
+      "row": {
+        "evidence_id": "EV-067",
+        "candidate_id": "MS-02",
+        "facet": "地形",
+        "variable": "Geologic unit at the cell (Tanaka 2014)",
+        "value": "mAl — Middle Amazonian lowland unit; intersection fraction 1.0",
+        "unit": "map unit; ROI area fraction",
+        "evidence_type": "Global mapped geologic interpretation",
+        "observation_period": "2014 map; Middle Amazonian mapped chronology not direct date",
+        "depth_or_height": "surface geologic mapping",
+        "resolution_or_representative_extent": "1:20,000,000; Mars2000 sphere radius3396190 m",
+        "source": "https://doi.org/10.3133/sim3292 ; https://pubs.usgs.gov/sim/3292/downloads/sim3292_database.zip",
+        "locator": "SIM3292_Global_Geology.shp feature OBJECTID1252 (record1251); geography_check.json; local_validation/mars_ice_evidence.csv ME-17",
+        "limitation_or_comparability": "Global unit cannot establish local cover thickness, lithology, grain size, or current ice fraction. Source dependence: global geologic compilation; mAl dust/ice hypothesis is not independent ice detection"
+      },
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-06;AV-07"
+    },
+    {
+      "file": "footprint.csv",
+      "row": {
+        "footprint_id": "FP-10",
+        "evidence_set": "D University Valley thermal-interface subcase",
+        "location": "W-station thermal profile (specific anchor; not valley centre or S/D stations)",
+        "lat_deg": "-77.86215",
+        "lon_deg_east": "160.7101",
+        "geometry_type": "point anchor; no surveyed profile polygon",
+        "stated_extent": "W thermal/ice-interface station area; approximately42cm ice-cemented interface and approximately15cm0degC active layer; no radar line",
+        "survey_or_sample_year": "Station record2009-2013 as described in Marinova2022; channel-specific metadata and original clock issues preserved",
+        "depth_range_m": "0.10/0.42/0.49m thermal channels;0.42m ice-interface reference;0.15m active layer is not total cover",
+        "measured_quantity": "Multi-depth temperatures and documented ice-cemented interface; not local bulk-material truth or blind ice detection",
+        "source": "https://doi.org/10.1017/S0954102022000025",
+        "locator": "TableI station location;TableII;AV-01;77deg51.729minS160deg42.606minE converted to decimal degrees",
+        "geometry_status": "Published W-station point anchor converted arithmetically; no inferred footprint; S/D identity ambiguity is not resolved"
+      },
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-01;AV-06;AV-07"
+    },
+    {
+      "file": "footprint.csv",
+      "row": {
+        "footprint_id": "FP-11",
+        "evidence_set": "E Beacon thermal/material subcase",
+        "location": "Liu2018 shallow thermal site; adjacent deep borehole separate",
+        "lat_deg": "-77.8166666667",
+        "lon_deg_east": "160.65",
+        "geometry_type": "point anchor; no surveyed local terrain polygon",
+        "stated_extent": "Primary coordinate77deg49S160deg39E; shallow sensors and ~0.30m dry-cover/ice interface; adjacent-polygon deep borehole is a separate column",
+        "survey_or_sample_year": "Primary publication2018; instrument-specific observation periods not transcribed in this footprint index; raw series not acquired",
+        "depth_range_m": "~0.30m dry-cover/interface; shallow thermal depths documented separately; no merge with adjacent deep borehole",
+        "measured_quantity": "Literature thermal/material subcase: recorded temperatures, laboratory heat capacity, semiempirical conductivity",
+        "source": "https://doi.org/10.1029/2017JF004535",
+        "locator": "Sections2-3.3;Table1;Fig2;AV-06;77deg49S160deg39E arithmetic conversion",
+        "geometry_status": "Published coordinate anchor, minute precision; no whole-valley boundary or automatic location for older Beacon records"
+      },
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-01;AV-06;AV-07"
+    },
+    {
+      "file": "footprint.csv",
+      "row": {
+        "footprint_id": "FP-12",
+        "evidence_set": "F Haughton excavated-cover GPR/core subcase",
+        "location": "Thomson2012 plateau GPR line and CMP-focus core; not Andres river/gully grids",
+        "lat_deg": "75.3683333333",
+        "lon_deg_east": "-89.5258333333",
+        "geometry_type": "published site point anchor;3m line endpoints/azimuth not encoded",
+        "stated_extent": "450MHz GPR3m line; core at along-line1.5m CMPfocus; core~1m long and0.10m diameter; ~0.9m wet active layer excavated before method comparison",
+        "survey_or_sample_year": "Primary publication2012; field year not extracted in AV-07; no inference from publication year",
+        "depth_range_m": "Core length~1m after~0.9m overburden excavation; original depth datum not imposed by this index",
+        "measured_quantity": "Same-line GPR/dielectric comparison with independent core at one focus; not exhaustive line truth or intact-cover detection",
+        "source": "https://doi.org/10.1029/2012JE004053",
+        "locator": "Section2.3;sections3.1-3.3;AV-07;75deg22min06secN89deg31min33secW arithmetic conversion",
+        "geometry_status": "Source-backed site anchor and stated line/core extents; do not merge with original Haughton River Valley, base-camp or landing-strip supports"
+      },
+      "authority": "local_validation/analog_validation.csv",
+      "locator": "AV-01;AV-06;AV-07"
+    }
+  ]
+}

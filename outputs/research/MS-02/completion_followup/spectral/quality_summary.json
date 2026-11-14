@@ -1,0 +1,47 @@
+{
+  "schema": "MS02-CRISM-numeric-support-v1",
+  "base_commit": "521740108050ba16e406f8becb67a786179ff8bd",
+  "product": "MSP0001565D_01_IF213L_TRR3",
+  "shape": [
+    55,
+    912
+  ],
+  "input_roi_sha256": "5623622ad64840dc4cac3877048549c50adb93d18c70025bc3f1f1841c0c1d27",
+  "input_roi_git_blob_sha1": "c4cf29f4a9c86bbd48a268eaf47920d417b0b6fd",
+  "label_sha256": "81fea2e75d5921e1b34763f0426a71f9f8697be0e989bc588cf540cbd796b209",
+  "ddr_label_sha256": "8d01c4363a10df272c8c89a166473864b63f2f72139619b0d2dea5b43d5d0e4c",
+  "numeric_mask_reproduces_stored": true,
+  "numeric_values": 48060,
+  "total_values": 50160,
+  "numeric_fraction": 0.9581339712918661,
+  "sentinel_values": 2100,
+  "all55_numeric_pixel_count": 0,
+  "all54_except_band0_numeric_pixel_count": 890,
+  "zero_numeric_pixel_count": 22,
+  "all_invalid_band_indices": [
+    0
+  ],
+  "negative_if_count": 43,
+  "negative_band_indices": [
+    9
+  ],
+  "negative_supported_pixel_fraction": 0.048314606741573035,
+  "pixel_bounds": {
+    "lat_min": 52.924991607666016,
+    "lat_max": 52.9999885559082,
+    "lon_min": 168.24786376953125,
+    "lon_max": 168.49977111816406
+  },
+  "sampling_support_note": "912 pixel centres in narrow northern subset; count is not area coverage or 912 independent mineral detections",
+  "wavelength_assignment": null,
+  "material_classification": null,
+  "ice_detection": null,
+  "interpretation": "Numeric QA strengthened. Entire band0 missing; no complete55-band spectra. Science validity, absorption bands and material/ice identification remain unproven.",
+  "missing": [
+    "55 detector-row numbers appended to original IF cube (record49501,110 bytes)",
+    "Exact WA calibration CDR450924300802_WA0300010L_3.IMG and its label",
+    "Original scene sample/line linkage for per-pixel wavelength calibration",
+    "Per-band quality masks and validated smile/atmospheric/thermal/photometric treatment",
+    "Independent calibrated same-location spectral interpretation/reference"
+  ]
+}

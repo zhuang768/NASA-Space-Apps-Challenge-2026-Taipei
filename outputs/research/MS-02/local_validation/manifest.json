@@ -299,8 +299,8 @@
     },
     {
       "path": "outputs/research/MS-02/local_validation/mars_ice_evidence.csv",
-      "bytes": 14953,
-      "sha256": "9e8394792c4781f6a0ed7d63c7179b3c397d2d0ac8951af5959b5c7740dfc8d5",
+      "bytes": 15115,
+      "sha256": "75eb1f639d8308ecac6b0da5eb7a0c178a85a84d1807ef333153ef79e9954398",
       "storage": "git_deliverable",
       "role": "derived_or_method"
     },
@@ -1571,5 +1571,14 @@
     "scope": "Document consistency and provenance only; original scientific arrays not reprocessed",
     "verification": "outputs/research/MS-02/local_validation/repair_verification.json",
     "historical_verification_not_rerun": true
+  },
+  "completion_followup": {
+    "date_taipei": "2026-11-15",
+    "base_commit": "521740108050ba16e406f8becb67a786179ff8bd",
+    "manifest": "outputs/research/MS-02/completion_followup/manifest.json",
+    "status": "outputs/research/MS-02/completion_followup/completion_status.json",
+    "all_ms02_problems_resolved": false,
+    "formal_report_status": "Preserved byte-for-byte as requested. Old prose contains historical superseded claims; use current structured corrections and follow-up notes pending human revision.",
+    "verification_scope": "Historical verification outputs were not rerun or relabeled as current; use completion_followup/verify_followup.py and each analysis verifier."
   }
 }

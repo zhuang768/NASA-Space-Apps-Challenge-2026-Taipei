@@ -1,0 +1,5 @@
+scenario_id,effective_permittivity_assumed,ice_permittivity_assumed,host_permittivity_assumed,algebraic_ice_fraction,physically_admissible_in_this_model,reconstructed_effective_permittivity,result_type,observation_site,source_equation
+CRIM-KS-2.8,3.2,3.0,2.8,1.9671861857359976,False,3.1999999999999997,conditional_synthetic_identifiability_check,none,https://doi.org/10.1029/2012JE004053; equation 7
+CRIM-KS-3.2,3.2,3.0,3.2,-0.0,True,3.1999999999999997,conditional_synthetic_identifiability_check,none,https://doi.org/10.1029/2012JE004053; equation 7
+CRIM-KS-3.57,3.2,3.0,3.57,0.6390984728778306,True,3.1999999999999997,conditional_synthetic_identifiability_check,none,https://doi.org/10.1029/2012JE004053; equation 7
+CRIM-KS-5.8,3.2,3.0,5.8,0.9160043572318947,True,3.1999999999999997,conditional_synthetic_identifiability_check,none,https://doi.org/10.1029/2012JE004053; equation 7

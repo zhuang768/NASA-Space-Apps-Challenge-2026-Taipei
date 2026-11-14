@@ -1,0 +1,494 @@
+{
+  "checks": [
+    {
+      "check": "81 unique native cells",
+      "pass": true
+    },
+    {
+      "check": "81 valid numeric pairs",
+      "pass": true
+    },
+    {
+      "check": "exact fixed centre one row",
+      "pass": true
+    },
+    {
+      "check": "centre depth matches independently inherited source table",
+      "pass": true
+    },
+    {
+      "check": "centre TI matches inherited source table",
+      "pass": true
+    },
+    {
+      "check": "1x1 conditional_depth_m count",
+      "pass": true
+    },
+    {
+      "check": "1x1 conditional_depth_m extrema median",
+      "pass": true
+    },
+    {
+      "check": "1x1 conditional_depth_m weighted mean",
+      "pass": true
+    },
+    {
+      "check": "1x1 conditional_depth_m no error claim",
+      "pass": true
+    },
+    {
+      "check": "1x1 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf count",
+      "pass": true
+    },
+    {
+      "check": "1x1 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf extrema median",
+      "pass": true
+    },
+    {
+      "check": "1x1 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf weighted mean",
+      "pass": true
+    },
+    {
+      "check": "1x1 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf no error claim",
+      "pass": true
+    },
+    {
+      "check": "3x3 conditional_depth_m count",
+      "pass": true
+    },
+    {
+      "check": "3x3 conditional_depth_m extrema median",
+      "pass": true
+    },
+    {
+      "check": "3x3 conditional_depth_m weighted mean",
+      "pass": true
+    },
+    {
+      "check": "3x3 conditional_depth_m no error claim",
+      "pass": true
+    },
+    {
+      "check": "3x3 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf count",
+      "pass": true
+    },
+    {
+      "check": "3x3 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf extrema median",
+      "pass": true
+    },
+    {
+      "check": "3x3 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf weighted mean",
+      "pass": true
+    },
+    {
+      "check": "3x3 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf no error claim",
+      "pass": true
+    },
+    {
+      "check": "5x5 conditional_depth_m count",
+      "pass": true
+    },
+    {
+      "check": "5x5 conditional_depth_m extrema median",
+      "pass": true
+    },
+    {
+      "check": "5x5 conditional_depth_m weighted mean",
+      "pass": true
+    },
+    {
+      "check": "5x5 conditional_depth_m no error claim",
+      "pass": true
+    },
+    {
+      "check": "5x5 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf count",
+      "pass": true
+    },
+    {
+      "check": "5x5 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf extrema median",
+      "pass": true
+    },
+    {
+      "check": "5x5 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf weighted mean",
+      "pass": true
+    },
+    {
+      "check": "5x5 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf no error claim",
+      "pass": true
+    },
+    {
+      "check": "9x9 conditional_depth_m count",
+      "pass": true
+    },
+    {
+      "check": "9x9 conditional_depth_m extrema median",
+      "pass": true
+    },
+    {
+      "check": "9x9 conditional_depth_m weighted mean",
+      "pass": true
+    },
+    {
+      "check": "9x9 conditional_depth_m no error claim",
+      "pass": true
+    },
+    {
+      "check": "9x9 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf count",
+      "pass": true
+    },
+    {
+      "check": "9x9 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf extrema median",
+      "pass": true
+    },
+    {
+      "check": "9x9 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf weighted mean",
+      "pass": true
+    },
+    {
+      "check": "9x9 dry_layer_TI_J_m_minus2_K_minus1_s_minushalf no error claim",
+      "pass": true
+    },
+    {
+      "check": "spherical area independently quadrature verified",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 70,332",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 70,333",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 70,334",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 70,335",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 70,336",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 70,337",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 70,338",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 70,339",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 70,340",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 71,332",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 71,333",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 71,334",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 71,335",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 71,336",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 71,337",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 71,338",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 71,339",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 71,340",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 72,332",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 72,333",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 72,334",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 72,335",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 72,336",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 72,337",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 72,338",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 72,339",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 72,340",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 73,332",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 73,333",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 73,334",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 73,335",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 73,336",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 73,337",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 73,338",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 73,339",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 73,340",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 74,332",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 74,333",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 74,334",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 74,335",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 74,336",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 74,337",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 74,338",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 74,339",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 74,340",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 75,332",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 75,333",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 75,334",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 75,335",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 75,336",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 75,337",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 75,338",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 75,339",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 75,340",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 76,332",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 76,333",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 76,334",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 76,335",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 76,336",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 76,337",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 76,338",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 76,339",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 76,340",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 77,332",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 77,333",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 77,334",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 77,335",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 77,336",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 77,337",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 77,338",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 77,339",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 77,340",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 78,332",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 78,333",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 78,334",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 78,335",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 78,336",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 78,337",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 78,338",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 78,339",
+      "pass": true
+    },
+    {
+      "check": "2026 publication rule cell 78,340",
+      "pass": true
+    },
+    {
+      "check": "MS02 component scalar independently checked",
+      "pass": true
+    },
+    {
+      "check": "unknown diagnostics stay null",
+      "pass": true
+    },
+    {
+      "check": "5 original decoded source checksums checked",
+      "pass": true
+    }
+  ],
+  "all_pass": true,
+  "scope": "numerical reproducibility and support QA only; no ice truth, residual CI, version transformation or SWIM raster validation"
+}

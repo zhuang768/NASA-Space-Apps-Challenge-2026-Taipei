@@ -1,0 +1,1077 @@
+{
+  "base_commit": "521740108050ba16e406f8becb67a786179ff8bd",
+  "scope": "current structured records and correction provenance only",
+  "checks": [
+    {
+      "name": "candidates.csv IDs",
+      "passed": true,
+      "detail": {
+        "rows": 4,
+        "key": "candidate_id"
+      }
+    },
+    {
+      "name": "candidates.csv schema preserved",
+      "passed": true,
+      "detail": [
+        "candidate_id",
+        "name",
+        "lat_deg",
+        "lon_deg_east",
+        "research_extent",
+        "boundary_basis",
+        "available_data",
+        "testable_physical_processes",
+        "main_environment_differences",
+        "disposition",
+        "disposition_reason",
+        "cannot_extrapolate",
+        "next_verification_step"
+      ]
+    },
+    {
+      "name": "candidates.csv identities retained",
+      "passed": true,
+      "detail": {
+        "before": 4,
+        "inserted": 0,
+        "after": 4
+      }
+    },
+    {
+      "name": "candidates.csv output hash",
+      "passed": true,
+      "detail": "a43bf6f3ff2da48a64cd10219cdd13bcdd309e70b625f23e8e0f214850ef346f"
+    },
+    {
+      "name": "evidence.csv IDs",
+      "passed": true,
+      "detail": {
+        "rows": 67,
+        "key": "evidence_id"
+      }
+    },
+    {
+      "name": "evidence.csv schema preserved",
+      "passed": true,
+      "detail": [
+        "evidence_id",
+        "candidate_id",
+        "facet",
+        "variable",
+        "value",
+        "unit",
+        "evidence_type",
+        "observation_period",
+        "depth_or_height",
+        "resolution_or_representative_extent",
+        "source",
+        "locator",
+        "limitation_or_comparability"
+      ]
+    },
+    {
+      "name": "evidence.csv identities retained",
+      "passed": true,
+      "detail": {
+        "before": 61,
+        "inserted": 6,
+        "after": 67
+      }
+    },
+    {
+      "name": "evidence.csv output hash",
+      "passed": true,
+      "detail": "32f98a4a452b4e1b849bd62303bc3885158e0f0f5e3ee6f8800de9676c0dc074"
+    },
+    {
+      "name": "claims.csv IDs",
+      "passed": true,
+      "detail": {
+        "rows": 9,
+        "key": "claim_id"
+      }
+    },
+    {
+      "name": "claims.csv schema preserved",
+      "passed": true,
+      "detail": [
+        "claim_id",
+        "claim",
+        "claim_origin",
+        "direct_evidence",
+        "site_year_depth_of_direct_evidence",
+        "independent_truth_for_the_claim",
+        "alternative_explanations_or_caveats",
+        "status",
+        "source_and_locator"
+      ]
+    },
+    {
+      "name": "claims.csv identities retained",
+      "passed": true,
+      "detail": {
+        "before": 9,
+        "inserted": 0,
+        "after": 9
+      }
+    },
+    {
+      "name": "claims.csv output hash",
+      "passed": true,
+      "detail": "2c01d63c23410498ca9f0ed8611e18fbc6263472ce981d85705d399c25acacdf"
+    },
+    {
+      "name": "footprint.csv IDs",
+      "passed": true,
+      "detail": {
+        "rows": 12,
+        "key": "footprint_id"
+      }
+    },
+    {
+      "name": "footprint.csv schema preserved",
+      "passed": true,
+      "detail": [
+        "footprint_id",
+        "evidence_set",
+        "location",
+        "lat_deg",
+        "lon_deg_east",
+        "geometry_type",
+        "stated_extent",
+        "survey_or_sample_year",
+        "depth_range_m",
+        "measured_quantity",
+        "source",
+        "locator",
+        "geometry_status"
+      ]
+    },
+    {
+      "name": "footprint.csv identities retained",
+      "passed": true,
+      "detail": {
+        "before": 9,
+        "inserted": 3,
+        "after": 12
+      }
+    },
+    {
+      "name": "footprint.csv output hash",
+      "passed": true,
+      "detail": "8deca9d2292a66d2cd7336f168dbb2169f533c7b1e2ac0383395816f9959df07"
+    },
+    {
+      "name": "prior_work.csv IDs",
+      "passed": true,
+      "detail": {
+        "rows": 22,
+        "key": "prior_id"
+      }
+    },
+    {
+      "name": "prior_work.csv schema preserved",
+      "passed": true,
+      "detail": [
+        "prior_id",
+        "candidate_id",
+        "work",
+        "venue_doi_or_url",
+        "site_covered",
+        "purpose",
+        "classification_vs_MS02_use",
+        "read_scope",
+        "difference_in_question",
+        "difference_in_scope",
+        "difference_in_data",
+        "difference_in_method",
+        "note"
+      ]
+    },
+    {
+      "name": "prior_work.csv identities retained",
+      "passed": true,
+      "detail": {
+        "before": 20,
+        "inserted": 2,
+        "after": 22
+      }
+    },
+    {
+      "name": "prior_work.csv output hash",
+      "passed": true,
+      "detail": "42782a1a61462e94593d2ffbf6b4f6f6a2c7c90bea2a8fd147d8f5cb6d14d941"
+    },
+    {
+      "name": "local_validation/mars_ice_evidence.csv IDs",
+      "passed": true,
+      "detail": {
+        "rows": 25,
+        "key": "evidence_id"
+      }
+    },
+    {
+      "name": "local_validation/mars_ice_evidence.csv schema preserved",
+      "passed": true,
+      "detail": [
+        "evidence_id",
+        "facet",
+        "variable",
+        "value",
+        "unit",
+        "evidence_type",
+        "source_url_or_doi",
+        "locator",
+        "period",
+        "depth_or_sensitivity",
+        "resolution_or_extent",
+        "covers_cell",
+        "bears_on",
+        "directness",
+        "source_dependency",
+        "status",
+        "limitation_or_unknown",
+        "review_state"
+      ]
+    },
+    {
+      "name": "local_validation/mars_ice_evidence.csv identities retained",
+      "passed": true,
+      "detail": {
+        "before": 25,
+        "inserted": 0,
+        "after": 25
+      }
+    },
+    {
+      "name": "local_validation/mars_ice_evidence.csv output hash",
+      "passed": true,
+      "detail": "75eb1f639d8308ecac6b0da5eb7a0c178a85a84d1807ef333153ef79e9954398"
+    },
+    {
+      "name": "reconciled MS-02-E01.main_environment_differences",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/claim_corrections.csv",
+        "locator": "MCS-ORDER;UV-COVER"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E01.disposition_reason",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-01"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E01.next_verification_step",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-01; shared_validation/gap_status.csv earth_controls and uv_identity_clock"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E02.research_extent",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E02.boundary_basis",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E02.available_data",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E02.main_environment_differences",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E02.disposition",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E02.disposition_reason",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E02.next_verification_step",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E03.testable_physical_processes",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-02;AV-03;AV-04;AV-09"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E03.next_verification_step",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-02;AV-04;AV-05;AV-09"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E04.research_extent",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-07"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E04.available_data",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-07"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E04.disposition",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-07"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E04.disposition_reason",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-07"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E04.next_verification_step",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-07"
+      }
+    },
+    {
+      "name": "reconciled EV-005.variable",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/mars_ice_evidence.csv",
+        "locator": "ME-10"
+      }
+    },
+    {
+      "name": "reconciled EV-005.depth_or_height",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/mars_ice_evidence.csv",
+        "locator": "ME-10"
+      }
+    },
+    {
+      "name": "reconciled EV-005.limitation_or_comparability",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/mars_ice_evidence.csv",
+        "locator": "ME-10"
+      }
+    },
+    {
+      "name": "reconciled EV-011.source",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/mars_ice_evidence.csv",
+        "locator": "ME-17;ME-18"
+      }
+    },
+    {
+      "name": "reconciled EV-011.limitation_or_comparability",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/mars_ice_evidence.csv",
+        "locator": "ME-17;ME-18"
+      }
+    },
+    {
+      "name": "reconciled EV-014.limitation_or_comparability",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/mars_ice_evidence.csv",
+        "locator": "ME-10"
+      }
+    },
+    {
+      "name": "reconciled EV-017.limitation_or_comparability",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/claim_corrections.csv",
+        "locator": "UV-COVER"
+      }
+    },
+    {
+      "name": "reconciled EV-018.variable",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/claim_corrections.csv",
+        "locator": "I06/EV-018"
+      }
+    },
+    {
+      "name": "reconciled EV-018.evidence_type",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/claim_corrections.csv",
+        "locator": "I06/EV-018"
+      }
+    },
+    {
+      "name": "reconciled EV-018.observation_period",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-01"
+      }
+    },
+    {
+      "name": "reconciled EV-018.locator",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-01"
+      }
+    },
+    {
+      "name": "reconciled EV-018.limitation_or_comparability",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/claim_corrections.csv",
+        "locator": "I06/EV-018"
+      }
+    },
+    {
+      "name": "reconciled EV-029.value",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06"
+      }
+    },
+    {
+      "name": "reconciled EV-029.source",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06"
+      }
+    },
+    {
+      "name": "reconciled EV-029.locator",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06"
+      }
+    },
+    {
+      "name": "reconciled EV-029.limitation_or_comparability",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06"
+      }
+    },
+    {
+      "name": "reconciled EV-048.variable",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-07"
+      }
+    },
+    {
+      "name": "reconciled EV-048.value",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-07"
+      }
+    },
+    {
+      "name": "reconciled EV-048.limitation_or_comparability",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-07"
+      }
+    },
+    {
+      "name": "reconciled EV-053.observation_period",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-02"
+      }
+    },
+    {
+      "name": "reconciled EV-054.observation_period",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-02"
+      }
+    },
+    {
+      "name": "reconciled C1.site_year_depth_of_direct_evidence",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-02"
+      }
+    },
+    {
+      "name": "reconciled C7.direct_evidence",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-09"
+      }
+    },
+    {
+      "name": "reconciled FP-01.survey_or_sample_year",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-02"
+      }
+    },
+    {
+      "name": "reconciled PW-02.read_scope",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-01"
+      }
+    },
+    {
+      "name": "reconciled PW-02.difference_in_method",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-01"
+      }
+    },
+    {
+      "name": "reconciled PW-05.note",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-04"
+      }
+    },
+    {
+      "name": "reconciled PW-06.read_scope",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-02"
+      }
+    },
+    {
+      "name": "reconciled PW-13.read_scope",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/mars_ice_evidence.csv",
+        "locator": "ME-17;ME-18"
+      }
+    },
+    {
+      "name": "reconciled PW-13.note",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/mars_ice_evidence.csv",
+        "locator": "ME-17;ME-18"
+      }
+    },
+    {
+      "name": "reconciled EV-006.limitation_or_comparability",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/claim_corrections.csv",
+        "locator": "SWIM-BINARY; shared_validation/dependency_edges.csv"
+      }
+    },
+    {
+      "name": "reconciled ME-13.evidence_type",
+      "passed": true,
+      "detail": {
+        "authority": "docs/research/MS-02/local_validation/research_notes.md",
+        "locator": "section2; acquired product statuses and labels"
+      }
+    },
+    {
+      "name": "reconciled ME-14.evidence_type",
+      "passed": true,
+      "detail": {
+        "authority": "docs/research/MS-02/local_validation/research_notes.md",
+        "locator": "section2; acquired product statuses and labels"
+      }
+    },
+    {
+      "name": "reconciled ME-15.evidence_type",
+      "passed": true,
+      "detail": {
+        "authority": "docs/research/MS-02/local_validation/research_notes.md",
+        "locator": "section2; acquired product statuses and labels"
+      }
+    },
+    {
+      "name": "reconciled ME-17.evidence_type",
+      "passed": true,
+      "detail": {
+        "authority": "docs/research/MS-02/local_validation/research_notes.md",
+        "locator": "section2; acquired product statuses and labels"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E03.research_extent",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-02;AV-03;AV-04;AV-09"
+      }
+    },
+    {
+      "name": "reconciled MS-02-E04.boundary_basis",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-07"
+      }
+    },
+    {
+      "name": "new record PW-21",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06;AV-07"
+      }
+    },
+    {
+      "name": "new record PW-22",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06;AV-07"
+      }
+    },
+    {
+      "name": "new record EV-062",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06;AV-07"
+      }
+    },
+    {
+      "name": "new record EV-063",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06;AV-07"
+      }
+    },
+    {
+      "name": "new record EV-064",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06;AV-07"
+      }
+    },
+    {
+      "name": "new record EV-065",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06;AV-07"
+      }
+    },
+    {
+      "name": "new record EV-066",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06;AV-07"
+      }
+    },
+    {
+      "name": "new record EV-067",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-06;AV-07"
+      }
+    },
+    {
+      "name": "new record FP-10",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-01;AV-06;AV-07"
+      }
+    },
+    {
+      "name": "new record FP-11",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-01;AV-06;AV-07"
+      }
+    },
+    {
+      "name": "new record FP-12",
+      "passed": true,
+      "detail": {
+        "authority": "local_validation/analog_validation.csv",
+        "locator": "AV-01;AV-06;AV-07"
+      }
+    },
+    {
+      "name": "fixed Earth candidate IDs",
+      "passed": true,
+      "detail": [
+        "MS-02-E01",
+        "MS-02-E02",
+        "MS-02-E03",
+        "MS-02-E04"
+      ]
+    },
+    {
+      "name": "MS-02-E01 four facets",
+      "passed": true,
+      "detail": [
+        "地形",
+        "大氣/沙塵",
+        "水/冰",
+        "熱性質"
+      ]
+    },
+    {
+      "name": "MS-02-E01 disposition and limitation",
+      "passed": true,
+      "detail": {
+        "disposition": "保留"
+      }
+    },
+    {
+      "name": "MS-02-E01 coordinate pair",
+      "passed": true,
+      "detail": [
+        "-77.8667",
+        "160.75"
+      ]
+    },
+    {
+      "name": "MS-02-E01 numeric coordinate bounds",
+      "passed": true,
+      "detail": [
+        "-77.8667",
+        "160.75"
+      ]
+    },
+    {
+      "name": "MS-02-E02 four facets",
+      "passed": true,
+      "detail": [
+        "地形",
+        "大氣/沙塵",
+        "水/冰",
+        "熱性質"
+      ]
+    },
+    {
+      "name": "MS-02-E02 disposition and limitation",
+      "passed": true,
+      "detail": {
+        "disposition": "待補證據（原整體候選）；Liu2018具名熱學/材料子案例可作限定文獻參照"
+      }
+    },
+    {
+      "name": "MS-02-E04 four facets",
+      "passed": true,
+      "detail": [
+        "地形",
+        "大氣/沙塵",
+        "水/冰",
+        "熱性質"
+      ]
+    },
+    {
+      "name": "MS-02-E04 disposition and limitation",
+      "passed": true,
+      "detail": {
+        "disposition": "待補證據（原河谷候選）；Thomson2012挖除覆土後同線GPR/岩芯子案例可作限定方法參照"
+      }
+    },
+    {
+      "name": "MS-02-E04 coordinate pair",
+      "passed": true,
+      "detail": [
+        "75.37",
+        "-89.53"
+      ]
+    },
+    {
+      "name": "MS-02-E04 numeric coordinate bounds",
+      "passed": true,
+      "detail": [
+        "75.37",
+        "-89.53"
+      ]
+    },
+    {
+      "name": "MS-02-E03 four facets",
+      "passed": true,
+      "detail": [
+        "地形",
+        "大氣/沙塵",
+        "水/冰",
+        "熱性質"
+      ]
+    },
+    {
+      "name": "MS-02-E03 disposition and limitation",
+      "passed": true,
+      "detail": {
+        "disposition": "降為一般方法參照 (CS-1 loess core retained only as a process analog of aeolian cover + syngenetic ice; the radar link is 證據不足)"
+      }
+    },
+    {
+      "name": "MS-02-E03 coordinate pair",
+      "passed": true,
+      "detail": [
+        "78.1722",
+        "16.0613"
+      ]
+    },
+    {
+      "name": "MS-02-E03 numeric coordinate bounds",
+      "passed": true,
+      "detail": [
+        "78.1722",
+        "16.0613"
+      ]
+    },
+    {
+      "name": "E02 quantitative terrain stays unknown",
+      "passed": true,
+      "detail": "No invented slope/relief or zero fill"
+    },
+    {
+      "name": "CS1 core date resolved",
+      "passed": true,
+      "detail": "Separate September2019 cores and August2022 exposure"
+    },
+    {
+      "name": "WISDOM chain remains unproven",
+      "passed": true,
+      "detail": "No same-valley truth join"
+    },
+    {
+      "name": "EV018 measurement/calculation separation",
+      "passed": true,
+      "detail": "Recorded T; calculated aw; no energy-model annual hours"
+    },
+    {
+      "name": "0.45m remains conditional",
+      "passed": true,
+      "detail": "No independent local ice/interface confirmation"
+    },
+    {
+      "name": "Haughton excavation boundary",
+      "passed": true,
+      "detail": "Earth method precedent cannot be advertised as intact-cover or orbital validation"
+    },
+    {
+      "name": "Beacon raw availability boundary",
+      "passed": true,
+      "detail": "Literature review is not a new raw-data rerun"
+    },
+    {
+      "name": "FP-10 DMS conversion",
+      "passed": true,
+      "detail": {
+        "published_anchor_decimal": [
+          -77.86215,
+          160.7101
+        ],
+        "stored": [
+          "-77.86215",
+          "160.7101"
+        ]
+      }
+    },
+    {
+      "name": "FP-10 primary footprint source",
+      "passed": true,
+      "detail": "https://doi.org/10.1017/S0954102022000025"
+    },
+    {
+      "name": "FP-11 DMS conversion",
+      "passed": true,
+      "detail": {
+        "published_anchor_decimal": [
+          -77.81666666666666,
+          160.65
+        ],
+        "stored": [
+          "-77.8166666667",
+          "160.65"
+        ]
+      }
+    },
+    {
+      "name": "FP-11 primary footprint source",
+      "passed": true,
+      "detail": "https://doi.org/10.1029/2017JF004535"
+    },
+    {
+      "name": "FP-12 DMS conversion",
+      "passed": true,
+      "detail": {
+        "published_anchor_decimal": [
+          75.36833333333333,
+          -89.52583333333334
+        ],
+        "stored": [
+          "75.3683333333",
+          "-89.5258333333"
+        ]
+      }
+    },
+    {
+      "name": "FP-12 primary footprint source",
+      "passed": true,
+      "detail": "https://doi.org/10.1029/2012JE004053"
+    },
+    {
+      "name": "historical valley anchors not repointed",
+      "passed": true,
+      "detail": "Located subcases get separate footprint IDs; original scalar anchors retain their declared scopes"
+    },
+    {
+      "name": "E03 retained CS1 distinguished from ADE",
+      "passed": true,
+      "detail": "Same valley grouping does not imply a shared observation footprint"
+    },
+    {
+      "name": "E04 boundary cites actual Thomson source",
+      "passed": true,
+      "detail": "Independent source for plateau line; Andres boundary retained separately"
+    },
+    {
+      "name": "FP12 excavation and unresolved line geometry",
+      "passed": true,
+      "detail": "Point anchor and one core do not create a surveyed line polygon or intact-cover validation"
+    },
+    {
+      "name": "current handoff pinned base",
+      "passed": true,
+      "detail": "Four inputs match independently checked base-commit Git blobs"
+    },
+    {
+      "name": "screened pool target support",
+      "passed": true,
+      "detail": "Exactly one fixed MS-02 target, without confusing other candidate IDs"
+    },
+    {
+      "name": "current handoff same-quantity checks",
+      "passed": true,
+      "detail": "Actual new run; historical script not executed or relabelled"
+    },
+    {
+      "name": "aggregation differences preserved",
+      "passed": true,
+      "detail": "Native and coarse-scale statistics are distinct quantities"
+    },
+    {
+      "name": "workbook current container check",
+      "passed": true,
+      "detail": "Exact 23,035,176-byte Git blob contains32 sheets; historical33-sheet report statement is superseded"
+    },
+    {
+      "name": "historical verification files preserved",
+      "passed": true,
+      "detail": "Current handoff QA writes a separate JSON and does not overwrite historical science-verification files"
+    },
+    {
+      "name": "formal report unchanged",
+      "passed": true,
+      "detail": "1f603ac5a125befdd34af97c14a0c24b3a3591f2b6289a07d4ea62abf7caa0f4"
+    }
+  ],
+  "check_count": 128,
+  "passed_count": 128,
+  "all_integrity_checks_passed": true,
+  "all_scientific_questions_resolved": false,
+  "reason": "Independent MS-02 ice truth/local uncertainty, original calibration/field records and undisturbed material controls remain absent; see current gap ledger.",
+  "candidate_facets": {
+    "MS-02-E01": [
+      "地形",
+      "大氣/沙塵",
+      "水/冰",
+      "熱性質"
+    ],
+    "MS-02-E02": [
+      "地形",
+      "大氣/沙塵",
+      "水/冰",
+      "熱性質"
+    ],
+    "MS-02-E04": [
+      "地形",
+      "大氣/沙塵",
+      "水/冰",
+      "熱性質"
+    ],
+    "MS-02-E03": [
+      "地形",
+      "大氣/沙塵",
+      "水/冰",
+      "熱性質"
+    ]
+  }
+}

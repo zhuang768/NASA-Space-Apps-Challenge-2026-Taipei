@@ -1,0 +1,737 @@
+{
+  "base_commit": "521740108050ba16e406f8becb67a786179ff8bd",
+  "checks": [
+    {
+      "check": "formal_report_preserved",
+      "passed": true,
+      "detail": "Original formal report byte hash; later scientific authority is follow-up evidence, not old prose."
+    },
+    {
+      "check": "candidates_unique_ids",
+      "passed": true,
+      "detail": "4"
+    },
+    {
+      "check": "evidence_unique_ids",
+      "passed": true,
+      "detail": "67"
+    },
+    {
+      "check": "prior_work_unique_ids",
+      "passed": true,
+      "detail": "22"
+    },
+    {
+      "check": "claims_unique_ids",
+      "passed": true,
+      "detail": "9"
+    },
+    {
+      "check": "footprint_unique_ids",
+      "passed": true,
+      "detail": "12"
+    },
+    {
+      "check": "fixed_candidate_ids",
+      "passed": true,
+      "detail": "No renamed or invented Earth sites."
+    },
+    {
+      "check": "four_facets_per_earth_candidate",
+      "passed": true,
+      "detail": {
+        "MS-02-E01": [
+          "地形",
+          "大氣/沙塵",
+          "水/冰",
+          "熱性質"
+        ],
+        "MS-02-E02": [
+          "地形",
+          "大氣/沙塵",
+          "水/冰",
+          "熱性質"
+        ],
+        "MS-02-E03": [
+          "地形",
+          "大氣/沙塵",
+          "水/冰",
+          "熱性質"
+        ],
+        "MS-02-E04": [
+          "地形",
+          "大氣/沙塵",
+          "水/冰",
+          "熱性質"
+        ]
+      }
+    },
+    {
+      "check": "csv:earth/crim_identifiability.csv",
+      "passed": true,
+      "detail": 4
+    },
+    {
+      "check": "csv:earth/search_log.csv",
+      "passed": true,
+      "detail": 32
+    },
+    {
+      "check": "csv:earth/source_audit.csv",
+      "passed": true,
+      "detail": 13
+    },
+    {
+      "check": "csv:evidence_index.csv",
+      "passed": true,
+      "detail": 8
+    },
+    {
+      "check": "csv:morphology_hydrogen/ctx_coverage_multiplicity.csv",
+      "passed": true,
+      "detail": 5
+    },
+    {
+      "check": "csv:morphology_hydrogen/ctx_individual_support.csv",
+      "passed": true,
+      "detail": 5
+    },
+    {
+      "check": "csv:morphology_hydrogen/ctx_pair_support.csv",
+      "passed": true,
+      "detail": 10
+    },
+    {
+      "check": "csv:morphology_hydrogen/source_attempts.csv",
+      "passed": true,
+      "detail": 16
+    },
+    {
+      "check": "csv:radar/delay_windows.csv",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "check": "csv:radar/sources.csv",
+      "passed": true,
+      "detail": 4
+    },
+    {
+      "check": "csv:radar/threshold_sensitivity.csv",
+      "passed": true,
+      "detail": 54
+    },
+    {
+      "check": "csv:radar/trace_diagnostics.csv",
+      "passed": true,
+      "detail": 194
+    },
+    {
+      "check": "csv:radar/track_separation.csv",
+      "passed": true,
+      "detail": 3
+    },
+    {
+      "check": "csv:requirements.csv",
+      "passed": true,
+      "detail": 18
+    },
+    {
+      "check": "csv:spectral/band_quality.csv",
+      "passed": true,
+      "detail": 55
+    },
+    {
+      "check": "csv:spectral/label_processing_audit.csv",
+      "passed": true,
+      "detail": 16
+    },
+    {
+      "check": "csv:spectral/pixel_quality.csv",
+      "passed": true,
+      "detail": 912
+    },
+    {
+      "check": "csv:spectral/search_log.csv",
+      "passed": true,
+      "detail": 9
+    },
+    {
+      "check": "csv:thermal/native_cells_9x9.csv",
+      "passed": true,
+      "detail": 81
+    },
+    {
+      "check": "csv:thermal/search_log.csv",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "check": "csv:thermal/sources.csv",
+      "passed": true,
+      "detail": 10
+    },
+    {
+      "check": "csv:thermal/spatial_support_summary.csv",
+      "passed": true,
+      "detail": 8
+    },
+    {
+      "check": "json:audit/catalogue_roi_check.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:audit/current_handoff_check.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:audit/reconciliation_log.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:audit/verification.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:base_provenance.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:completion_status.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:earth/crim_identifiability.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:earth/manifest.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:earth/uv_export_support.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:earth/uv_surface_RH_support.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:earth/verification.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:morphology_hydrogen/manifest.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:morphology_hydrogen/mons_scale_constraints.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:morphology_hydrogen/support_summary.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:morphology_hydrogen/verification.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:radar/diagnostics.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:radar/verification.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:spectral/manifest.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:spectral/quality_summary.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:spectral/retrievals.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:spectral/verification.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:thermal/manifest.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:thermal/source_receipts.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:thermal/support_audit.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "json:thermal/verification.json",
+      "passed": true,
+      "detail": "parsed"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/candidates.csv",
+      "passed": true,
+      "detail": "a43bf6f3ff2da48a64cd10219cdd13bcdd309e70b625f23e8e0f214850ef346f"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/claims.csv",
+      "passed": true,
+      "detail": "2c01d63c23410498ca9f0ed8611e18fbc6263472ce981d85705d399c25acacdf"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/README.md",
+      "passed": true,
+      "detail": "2f22a9c897d6915424f1b3d4bb233fa79594aeff992289fe58fde325bc1aaa65"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/audit/audit_notes.md",
+      "passed": true,
+      "detail": "f5e7f98d8356db5ea774b4849af1dcfd4a082b574252ed49688de20fa421eba6"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/audit/catalogue_roi_check.json",
+      "passed": true,
+      "detail": "44bcd33efe1f1fd5eaa336104c104d44543e0ead3d45beca94476f6f248b0e8a"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/audit/catalogue_roi_check.py",
+      "passed": true,
+      "detail": "e00b5f9131da1bb476c692e68abb202ef561bb7ae634c0c8a1ebe91751760934"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/audit/current_handoff_check.json",
+      "passed": true,
+      "detail": "2268786ae2e91b3a25438d03cdf1f2676b445b16ac532c4fdef20b4776f6f872"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/audit/current_handoff_check.py",
+      "passed": true,
+      "detail": "90e402fb2bad4689a1a11e342acb2fe17629e3081515d9cddebc5c0736c9f096"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/audit/reconcile.py",
+      "passed": true,
+      "detail": "4ba615b2a3feca539e33da18315f0a4e56d4c0f3006821d052c38835d12ab0d5"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/audit/reconciliation_log.json",
+      "passed": true,
+      "detail": "c8774f07cdced2ebb4de6799c93e34269f1fb7241fa00505f4eb2e3e2992487f"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/audit/verification.json",
+      "passed": true,
+      "detail": "9de05d0bf5de64af6288e3a6cc15d3f61c439530d8f40c61fa70a4a0f6a21e89"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/audit/verify.py",
+      "passed": true,
+      "detail": "6d36d3d2892c7db9a6058cb3c574956d042c1a4e5fd53bed2e400ed02f916c29"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/base_provenance.json",
+      "passed": true,
+      "detail": "f78b658e79b7c8efadcc9327aa05022fbdb5d47ffe63d361594946e38ebd08b9"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/completion_status.json",
+      "passed": true,
+      "detail": "318091b9f2a76a23f572b45b846a0178a7ba80b5e8abfeaf3d3bf345d59af8f7"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/earth/analyze_crim.py",
+      "passed": true,
+      "detail": "b9c7e5566bdf7e2d38ed6aaf35056923cbcacc91c904cd1042575af21f9194f7"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/earth/crim_identifiability.csv",
+      "passed": true,
+      "detail": "bd03090dc483c645fe93654c511235794496da4813c91cc50c13f238aa19b865"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/earth/crim_identifiability.json",
+      "passed": true,
+      "detail": "bb3d1638e6d26f532dbe011131602b645bf17746ca573c3f3e3d66d4aa13e252"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/earth/earth_notes.md",
+      "passed": true,
+      "detail": "5bd5056f64032b7117126ade6af1b511165c2c3248ecb5bfcbf45ffce09222e9"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/earth/inspect_uv_support.py",
+      "passed": true,
+      "detail": "e3bebb91d4490a7658a26aea85a5194427f8368ca46b2bf32f2af0a63a2ac3db"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/earth/inspect_uv_surface_support.py",
+      "passed": true,
+      "detail": "4872312849432c6ec368151c6f6c61ed2d6e2d20d24be9990900af2b1dba9fea"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/earth/manifest.json",
+      "passed": true,
+      "detail": "83e661f7ea944816bdaff88ddf6fd7cde11659d142e7c6f88b8c6cbdb78b62a7"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/earth/search_log.csv",
+      "passed": true,
+      "detail": "547a6322099fafd4a9058339c27538f078db5cbcc1120750ee1e98cc4515b6f0"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/earth/source_audit.csv",
+      "passed": true,
+      "detail": "c724f25b0349a89df920254baf16b7b467cb468751e5d59a129af54f2fbeb922"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/earth/uv_export_support.json",
+      "passed": true,
+      "detail": "345062c23727069f53698a35faac0b2634ba0d7b1544d455d3cf20688248e768"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/earth/uv_surface_RH_available_summer.csv.gz",
+      "passed": true,
+      "detail": "2f646e59cae09cd65a4562cd0b0bdf21f22d7e6c5634bc19309211b5d1e4672c"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/earth/uv_surface_RH_support.json",
+      "passed": true,
+      "detail": "01901d8a0d987a70ab3b5a599c7cedced18da44aad6c939f9d79813b36482328"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/earth/uv_wind_records.csv.gz",
+      "passed": true,
+      "detail": "b720167f728548f150db5b860933db8d00dd7ab949a274e5f7da11989025e9c4"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/earth/verification.json",
+      "passed": true,
+      "detail": "3e140a2ec599146523e5d03869bd06d28abb20e86b160736fe24a7ebafeea232"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/earth/verify.py",
+      "passed": true,
+      "detail": "94665a735303f1befa59c42cb51b10e1e19ee588720eb272d54c0fb537f5f0b3"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/evidence_index.csv",
+      "passed": true,
+      "detail": "4e0d2467e90acadf2f871e1931a0b2b5d3fb4672e122add9d6dbd783bc5c2b01"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/finalize.py",
+      "passed": true,
+      "detail": "7e3d50a403b5c8eb1ed34e276cecc190560be5c9ee6053a67a85375e71880fec"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/morphology_hydrogen/analyze_support.py",
+      "passed": true,
+      "detail": "e647b1444784b7a06577279fafe7ac167f8545acb068f105efe385de9321df88"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/morphology_hydrogen/ctx_coverage_multiplicity.csv",
+      "passed": true,
+      "detail": "88bb847b2df99f400672305ad905becf6ed0be01e8397186588d77c14efe46b6"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/morphology_hydrogen/ctx_individual_support.csv",
+      "passed": true,
+      "detail": "2beb510c376441c8b0df889816c304406e6e6e4fec9aa6cac41e4b1792ddb75e"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/morphology_hydrogen/ctx_pair_support.csv",
+      "passed": true,
+      "detail": "892c9275263ffab278dfbb77962dd1cb6196b704f2957d9ee018d71b48bf4882"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/morphology_hydrogen/manifest.json",
+      "passed": true,
+      "detail": "39f4fb970fc0c19dbd006a475c31cd2a83a6f3996103a078ea6288d3f08b7d2b"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/morphology_hydrogen/mons_scale_constraints.json",
+      "passed": true,
+      "detail": "cb2193d04a0c0ca7b6dfca2d06f223a880deb762dbf0d5c138c067b15224c8ee"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/morphology_hydrogen/notes.md",
+      "passed": true,
+      "detail": "6f9b9f0f4d6a2dadcd0285802633df03eb30de6a621b123904e76f569c9edf3f"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/morphology_hydrogen/source_attempts.csv",
+      "passed": true,
+      "detail": "859630b589fffcc355f6458be273ab739d8a07050c530005fa97b8c0e45ece89"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/morphology_hydrogen/support_summary.json",
+      "passed": true,
+      "detail": "7e525ff55b53a77beeddf16514f437a3c4c6f169c71b256ef5118d9cf75972f3"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/morphology_hydrogen/verification.json",
+      "passed": true,
+      "detail": "5630a722586d25a28c88186088b77185ec5d40da346360a1a411fa14e1e660d8"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/morphology_hydrogen/verify_support.py",
+      "passed": true,
+      "detail": "c66af7186ecbe4ebe6a9035d11f8a18fcbad1c27057f6cb868048b70fbb23796"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/radar/analyze.py",
+      "passed": true,
+      "detail": "7df6dc71aa492642c89f163186a74966871086d1cd12874e26520ec34b1a1157"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/radar/delay_windows.csv",
+      "passed": true,
+      "detail": "64c1c2efce6f0b156f236595bfe5f09ee94880142ab83f68caa4608f9ef5c58f"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/radar/diagnostics.json",
+      "passed": true,
+      "detail": "5ba76801fa0d5d0c28720e185c37a042ada2e13274be882cf5bc14e5cefe3dec"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/radar/relative_delay_screen.png",
+      "passed": true,
+      "detail": "9ec0bb11cd972054267bc9d1d42808d8e62017c8083c8d7a554ffeace038fcf6"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/radar/sources.csv",
+      "passed": true,
+      "detail": "220ac69869ad0edee35758f37e701385187b778b6e03309be7377f07b9f7138a"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/radar/threshold_sensitivity.csv",
+      "passed": true,
+      "detail": "e6d7057c374a7187bff34f6ae14c26187df3972c37840afb044ed3db089efeb9"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/radar/trace_diagnostics.csv",
+      "passed": true,
+      "detail": "d4d3ea4f4ae6c854a12b488cadc259ac3a935f91e984e915b9c4f1562c21d53a"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/radar/track_separation.csv",
+      "passed": true,
+      "detail": "64056c03b42df2d947c95e3aee9575befa35c46ce6fff286fb8f75bddc8f7aa3"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/radar/verification.json",
+      "passed": true,
+      "detail": "39e122e66932a4216b91add97288074ebb68bbc174a610e0c699119b89876bc1"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/radar/verify.py",
+      "passed": true,
+      "detail": "6d7182a9c94a924d686abfc39318a9b904803338b8eb0da44299bc538dfeadf6"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/radar_notes.md",
+      "passed": true,
+      "detail": "45e39ee267d49f0f4b9cdf91e491ac95159913e462d3ba2c60a3c1e846b45e07"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/requirements.csv",
+      "passed": true,
+      "detail": "34e707061b65ec7d5bcf986832e6a08f4ffc8243041cfcfb88d3e0451a534ff7"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/spectral/acquire.py",
+      "passed": true,
+      "detail": "5a142139c88e13b26eb34aca9318aea9dfdcf6843332a166cee84bf18bbec74d"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/spectral/analyze.py",
+      "passed": true,
+      "detail": "3e5cbbcc8277170d88da4e828af03730779fa6501fb983b3e038c991a8bd7824"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/spectral/band_quality.csv",
+      "passed": true,
+      "detail": "89e86c4c8dc41d6b2c960447d0904fc630235f1dfedd55c9b6483ffcd4e8e113"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/spectral/label_processing_audit.csv",
+      "passed": true,
+      "detail": "5139efde5c8c69c144f1f8b4e2ed2f828c760fe679f0a23950179626a4702719"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/spectral/manifest.json",
+      "passed": true,
+      "detail": "7d06f88c24e039df058c523d04e74a109b9720ad31d82fccf28cf5ed671acc7c"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/spectral/pixel_quality.csv",
+      "passed": true,
+      "detail": "417c81f82906e90430b40a675ba26d5b8ed48a7c3dc3adedb6f58983d9617c8a"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/spectral/quality_summary.json",
+      "passed": true,
+      "detail": "2c167c702260729a3d28e69fdc5a3c617a84559a5e1fc9595799cdbe33bec4d1"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/spectral/retrievals.json",
+      "passed": true,
+      "detail": "7960c2739a489ff36b3ab6cebec6e61fa004a98ea55f4625a3262804a2ad1359"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/spectral/search_log.csv",
+      "passed": true,
+      "detail": "a74a2601d0e8cbfe4afabc0f58d48c6649b79db9fc019a130942cc0c7effcaa0"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/spectral/verification.json",
+      "passed": true,
+      "detail": "0ff2d072e3ed036559d4bcce99790fada86bdcb743ef0db9388921aa3edf140a"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/spectral/verify.py",
+      "passed": true,
+      "detail": "dcc5c2a04092ba2fcef1b7d3d808405ce24fd971b44a318e612a3e4355c9beaf"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/spectral_notes.md",
+      "passed": true,
+      "detail": "ab67fe8fba3e3295d4a226ed878ee624a35880c66cf1a5c62e1f900ad724ddee"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/thermal/analyze.py",
+      "passed": true,
+      "detail": "9bd8b88a640f3ad0f211c0cdbd691b3ca79f25fe812376f4a1ec6de57c5a6c03"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/thermal/manifest.json",
+      "passed": true,
+      "detail": "8084c982d4c080439a70935fe3dab98e32264673f2f1afe35440aad669b04ee3"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/thermal/native_cells_9x9.csv",
+      "passed": true,
+      "detail": "d76d3804f09c4e542eda1065e97ccf4b965cf28f7bb3d08bdfd71b7855c99c0d"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/thermal/search_log.csv",
+      "passed": true,
+      "detail": "8ba00b0e68e6ae82616088d5a4b8ccc4441dd0ffebd98931c1c190f28feb5fd0"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/thermal/source_receipts.json",
+      "passed": true,
+      "detail": "b9d6bbf0e12a39b9d180f8ef2707793ab75e7c4524b69860b185363dedf7fbf1"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/thermal/sources.csv",
+      "passed": true,
+      "detail": "003de4801036efc872aaf828398cd4ed56dfea820bedb282736f8d2d7a1758ad"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/thermal/spatial_support_summary.csv",
+      "passed": true,
+      "detail": "1380147d11ee369e9b7833eff06426cac5a49914cd0f2d5d1ed73647c2f9dfdd"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/thermal/support_audit.json",
+      "passed": true,
+      "detail": "9efacd6872f221656403dc8e56c9e1b6207b965dc9e629d284e6f7a79979050d"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/thermal/thermal_notes.md",
+      "passed": true,
+      "detail": "ba3d2de83e0f99731450668b7388276dbbe80ed2a16c9c6528b9424261c72db0"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/thermal/verification.json",
+      "passed": true,
+      "detail": "2cc5ee461246ae58b112e0d49a56fd5b368bc77a4f0547b2996daa0fdbd55f38"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/thermal/verify.py",
+      "passed": true,
+      "detail": "a40069b1ed07a8a4ada91c024207c7a2b4d49db7503f4efe209dbe3039c05492"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/completion_followup/verify_followup.py",
+      "passed": true,
+      "detail": "5f64cd8bd166bb8119522fcd44d03ad22f382439b770017163b136ee35795066"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/evidence.csv",
+      "passed": true,
+      "detail": "32f98a4a452b4e1b849bd62303bc3885158e0f0f5e3ee6f8800de9676c0dc074"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/footprint.csv",
+      "passed": true,
+      "detail": "8deca9d2292a66d2cd7336f168dbb2169f533c7b1e2ac0383395816f9959df07"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/local_validation/manifest.json",
+      "passed": true,
+      "detail": "cc8559b243958718e55d2541183c234ee6cfafc82dc643e8951aac2a48df7bcc"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/local_validation/mars_ice_evidence.csv",
+      "passed": true,
+      "detail": "75eb1f639d8308ecac6b0da5eb7a0c178a85a84d1807ef333153ef79e9954398"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/manifest.json",
+      "passed": true,
+      "detail": "81175c31eb8a25a9b886484e66dc26747d0d9bef861b25ff21c13cbc0337f1b9"
+    },
+    {
+      "check": "sha256:outputs/research/MS-02/prior_work.csv",
+      "passed": true,
+      "detail": "42782a1a61462e94593d2ffbf6b4f6f6a2c7c90bea2a8fd147d8f5cb6d14d941"
+    },
+    {
+      "check": "scientific_completion_not_inferred_from_qa",
+      "passed": true,
+      "detail": "Pass here means transparent accounting; it never means scientific completion."
+    },
+    {
+      "check": "publication_scope_only_ms02",
+      "passed": true,
+      "detail": "No shared, other site, or website mutations."
+    }
+  ],
+  "passed": true,
+  "scientific_completion": false
+}

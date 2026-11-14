@@ -1,0 +1,6 @@
+number_of_epochs,at_least_area_km2,at_least_roi_fraction,exactly_area_km2,exactly_roi_fraction,interpretation
+1,531.6718711242922,1.0000000000000002,1.1444091796875e-11,2.1524726844538377e-14,"catalogue nominal support, not registered usable pixels"
+2,531.6718711242808,0.9999999999999787,168.86088547188174,0.3176035721333208,"catalogue nominal support, not registered usable pixels"
+3,362.81098565239904,0.6823964278666579,335.58030294224403,0.6311793441932786,"catalogue nominal support, not registered usable pixels"
+4,27.23068271015504,0.05121708367337936,27.23068271015504,0.05121708367337936,"catalogue nominal support, not registered usable pixels"
+5,0.0,0.0,0.0,0.0,"catalogue nominal support, not registered usable pixels"

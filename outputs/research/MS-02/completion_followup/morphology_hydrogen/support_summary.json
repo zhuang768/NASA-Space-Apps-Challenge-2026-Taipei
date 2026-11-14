@@ -1,0 +1,27 @@
+{
+  "base_sha": "521740108050ba16e406f8becb67a786179ff8bd",
+  "source_path": "outputs/research/MS-02/local_validation/product_footprints.csv",
+  "source_sha256": "b33a3d579f6233f23b94ea14247c6cf9b5d7ed9fe022e231332fa1214b700b54",
+  "roi_bounds_lon_lat": [
+    168,
+    52.5,
+    168.5,
+    53
+  ],
+  "sphere_radius_m": 3396190.0,
+  "roi_spherical_area_km2": 531.6718711242921,
+  "legacy_laea_vertex_area_km2": 531.6653738505373,
+  "geometric_model": "straight source WKT segments in longitude/latitude; spherical surface integral",
+  "product_count": 5,
+  "pair_count": 10,
+  "earliest_utc": "2012-05-12T20:10:40.365",
+  "latest_utc": "2024-12-31T08:05:24.778",
+  "nominal_union_fraction": 1.0000000000000002,
+  "nominal_repeat_fraction": 0.9999999999999787,
+  "maximum_legacy_fraction_error": 2.531308496145357e-14,
+  "actual_valid_image_fraction": null,
+  "actual_change_rate": null,
+  "hydrogen_weh_wt_percent": null,
+  "uncertainties": "ODE footprint approximation/rounding and effective image masks unquantified; no local WEH map fetched",
+  "scientific_status": "nominal repeat geometry quantified; calibrated morphology/change and MONS WEH remain unclosed"
+}

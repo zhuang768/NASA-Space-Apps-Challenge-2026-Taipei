@@ -1,0 +1,13 @@
+date_taipei,platform,query_or_action,source_ids,result
+2026-11-15,web system2,Piqueux 2019GL083947 supporting information S1 3 ppd 2ppd,T02;T10,2019primary fulltextfound; SI notacquired
+2026-11-15,web system2,Piqueux 2019 GL083947 supplement MCS surface temperatures 3 pixels degree SWIM code,T02,No stage conversion artifact confirmed
+2026-11-15,web system2,SWIM2 thermal maps Piqueux github,none,Excluded similarly named Earth soil-moistureSWIM2 repositories
+2026-11-15,web system1,Thermal Detectability of Subsurface Water Ice on Mars data,T03;T07,Found2026primary paper and2025primary conferencepaper
+2026-11-15,web system1,Piqueux 3 ppd 2 ppd,T01;T02,No original conversion record acquired
+2026-11-15,web system1,SWIM thermal data Bandfield2026,T03;T04,Found new methodological source
+2026-11-15,web system1,grl59928-sup-0001,T10,Same binary SI entry; not acquired
+2026-11-15,web system2,10.3847/PSJ/ae7b38 pdf; SizemoreSWIM23Table2026; SWIM23datadownload,T03;T04;T09,Authorarticle mirror supplies selected methods; IOPinaccessible
+2026-11-15,web open,USGS2026; AASFigures12/13; LPSC2025PDF; Caltechrecord,T01;T03;T05;T06;T07,Read original records/captions/conferencepaper
+2026-11-15,web find/open,Sizemore2026section3.3 and0.5degree,T04,"Read equalweights, piecewiseconsistency and nativePQ19outputsupport"
+2026-11-15,web click,ResearchGate primaryarticle DownloadfulltextPDF,T04,403; textreading is not PDFdownload
+2026-11-15,node_repl attempted fetch,IOPpdf; SWIM2products; WileySI,T08;T09;T10,Call stalled/interrupted; no response or saved file confirmed; not HTTPsuccess/failureevidence

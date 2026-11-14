@@ -25,14 +25,15 @@
     "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx": {
       "bytes": 23035176,
       "sha256": "157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175",
-      "opened": "zip test OK; 33 sheets listed via openpyxl read-only"
+      "opened": "Current follow-up verified exact Git blob and all ZIP CRC; workbook.xml contains 32 sheets. Historical report statement of 33 is superseded."
     },
     "outputs/research/mars_reselection_20261114/screened_pool.csv.gz": {
       "bytes": 7702846,
       "sha256": "7c5559e40fca9fa304b7799e4490bfb4ff0d55ea0a02819c53f432377462ff92",
       "opened": "gzip -t OK; 58,238 rows x 54 columns; MS-02 cell found"
     },
-    "ms02_value_cross_check": "outputs/research/MS-02/verification.json (14 consistency checks, all pass)"
+    "ms02_value_cross_check": "outputs/research/MS-02/verification.json (14 consistency checks, all pass)",
+    "current_reproduction": "completion_followup/audit/current_handoff_check.json: 14 same-quantity comparisons, 58238 pool rows, unique MS-02, four exact input blobs; this is lineage consistency, not independent physical truth."
   },
   "files": [
     {
@@ -42,18 +43,18 @@
     },
     {
       "path": "outputs/research/MS-02/candidates.csv",
-      "bytes": 8051,
-      "sha256": "ed4f3fe42842f088b8029877b95bafd6ba9f5137477671d0fdee1d20c2da3450"
+      "bytes": 10319,
+      "sha256": "a43bf6f3ff2da48a64cd10219cdd13bcdd309e70b625f23e8e0f214850ef346f"
     },
     {
       "path": "outputs/research/MS-02/evidence.csv",
-      "bytes": 25451,
-      "sha256": "86366de6f32dbcee7c3f851b596bba68c1b548dfc8d930c214d854b3ff095ae3"
+      "bytes": 32963,
+      "sha256": "32f98a4a452b4e1b849bd62303bc3885158e0f0f5e3ee6f8800de9676c0dc074"
     },
     {
       "path": "outputs/research/MS-02/prior_work.csv",
-      "bytes": 11508,
-      "sha256": "581b4beb6bf5fc6716ec779008c53116606b27eef3ab3411b061dc7e05dab2cb"
+      "bytes": 14267,
+      "sha256": "42782a1a61462e94593d2ffbf6b4f6f6a2c7c90bea2a8fd147d8f5cb6d14d941"
     },
     {
       "path": "outputs/research/MS-02/search_log.csv",
@@ -62,13 +63,13 @@
     },
     {
       "path": "outputs/research/MS-02/footprint.csv",
-      "bytes": 2983,
-      "sha256": "6ac85eb51dd5e72ad9eb6fabbdbbc239fd9a82f190bf620b5782c96b37b149a6"
+      "bytes": 5783,
+      "sha256": "8deca9d2292a66d2cd7336f168dbb2169f533c7b1e2ac0383395816f9959df07"
     },
     {
       "path": "outputs/research/MS-02/claims.csv",
-      "bytes": 5797,
-      "sha256": "7f7a9db9b9a322dcbef12c622f14987bba5241a43ee815d00c5053239c465dfe"
+      "bytes": 5898,
+      "sha256": "2c01d63c23410498ca9f0ed8611e18fbc6263472ce981d85705d399c25acacdf"
     },
     {
       "path": "outputs/research/MS-02/figures/fig3_adventdalen_evidence_footprint.png",
@@ -217,12 +218,35 @@
     }
   ],
   "disposition_summary": {
-    "MS-02-E01": "保留",
-    "MS-02-E02": "待補證據",
-    "MS-02-E03": "降為一般方法參照 (CS-1 loess core retained only as a process analog of aeolian cover + syngenetic ice; the radar link is 證據不足)",
-    "MS-02-E04": "待補證據"
+    "MS-02-E01": "Retain W-station seasonal thermal/interface reference with independent material/clock limits",
+    "MS-02-E02": "Retain Liu2018 located thermal-material subcase only; original series/calibration not acquired",
+    "MS-02-E03": "Retain CS-1 aeolian/syngenetic-ice process; ADE and WISDOM separate; no colocated radar validation",
+    "MS-02-E04": "Retain Thomson2012 excavated same-line core/GPR method subcase only; no undisturbed or orbital validation"
   },
   "unresolved_gaps": [
+    "MS-02 still lacks colocated independent evidence establishing ice presence, the true interface depth, and ice amount. The released depth 0.4499824941 m is a conditional thermal-model value; no ice-absence inference is licensed.",
+    "CRISM material identification remains open: the original 55 detector-row numbers, exact WA calibration CDR450924300802_WA0300010L_3.IMG, scene sample/line linkage, validated band/pixel quality and atmospheric/thermal/photometric treatment have not been recovered and applied.",
+    "CTX catalogue repeat geometry has been quantified, but radiometric calibration, SPICE camera projection, validated orthorectification/registration, usable-pixel masks, fine-scale terrain and repeat-change uncertainty remain unavailable. Nominal footprint coverage does not establish actual morphology or change.",
+    "Pathare2018 supplemental Table S1 N16 numerical WEH/layer-depth values and their applicable uncertainty have not been acquired for MS-02. MONS coarse hydrogen support is not an independent 0.5-degree ice measurement.",
+    "Thermal per-cell observation dates/counts, residuals, RMS and depth CI remain absent. The 2019 observation-bin to released-product processing chain is unverified. Published 2026 native-grid and equal-weight rules are known, but local BF08/SWIM23 components, masks, missing-data handling and exact release identity are not reconstructed; the combined value remains null.",
+    "Earth validation remains incomplete: original Beacon time series/calibration, Haughton radar/core numerical records, WISDOM polygon-line coordinates and colocated independent ice truth, and University Valley original logger/calibration/clock/deployment identity records and matched material/boundary controls remain missing. Reused author-calibrated UV exports are distinct from unprocessed logger records and do not supply those controls.",
+    "Actual MS-02 cover thickness/material and accumulation rate lack an independently validated local observation. Column dust optical depth cannot be converted to a deposition rate or cover thickness with the available data."
+  ],
+  "not_claimed": [
+    "No ice amount or probability for MS-02",
+    "No Mars-likeness score/percentage",
+    "No claim that any pairing was never studied"
+  ],
+  "completion_followup": {
+    "date_taipei": "2026-11-15",
+    "base_commit": "521740108050ba16e406f8becb67a786179ff8bd",
+    "manifest": "outputs/research/MS-02/completion_followup/manifest.json",
+    "status": "outputs/research/MS-02/completion_followup/completion_status.json",
+    "all_ms02_problems_resolved": false,
+    "formal_report_status": "Preserved byte-for-byte as requested. Old prose contains historical superseded claims; use current structured corrections and follow-up notes pending human revision.",
+    "verification_scope": "Historical verification outputs were not rerun or relabeled as current; use completion_followup/verify_followup.py and each analysis verifier."
+  },
+  "historical_unresolved_gaps_before_completion_followup": [
     "docs/TEAM_START.md does not exist on main or the hand-off branch.",
     "scripts/restore_team_data.py does not exist on main or the hand-off branch (data are committed directly on the hand-off branch, so no restore step was needed).",
     "Raw PDS/SWIM/Montabone/Zenodo products could not be downloaded in the sandbox (HTTP 403 via proxy); MS-02 values were cross-checked among three hand-off files, not recomputed from raw rasters.",
@@ -238,10 +262,5 @@
     "Marchant & Head 2007 and Sugden 1995 were not found or read.",
     "Beacon Valley depth ranges differ between sources (10-60 cm Heldmann; 40-80 cm Kowalewski) and were not reconciled.",
     "Fourth-round Adventdalen audit: full Brighi et al. WISDOM paper (polygon-line coordinates, ground truth, ε derivation) not obtained (abstracts only); Rasmussen read chars 0-100,000 of 107,876 and Rotem 0-100,000 of 114,191 via extracted text; Rasmussen DOI and HAL record blocked; CS-1 coring date, CALM grid location and the WISDOM polygon location remain unknown."
-  ],
-  "not_claimed": [
-    "No ice amount or probability for MS-02",
-    "No Mars-likeness score/percentage",
-    "No claim that any pairing was never studied"
   ]
 }

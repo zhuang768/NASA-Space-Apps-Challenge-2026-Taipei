@@ -198,3 +198,10 @@ The user could not access Cloudflare and chose local operation. Started the late
 ### 2026-11-14: Push-triggered deployment recheck
 
 At the user's request, pushed `f47c72c` with web run/deployment documentation to exercise the reported GitHub integration. [Run 43563444490](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/actions/runs/43563444490) passed data generation and web build, then failed credential-format validation before upload. The previously checked Pages URL still served `index-BVqdeinh.js`, not the organized layout. No alternative deployment check or repository homepage URL was reported by GitHub at this check. Requested the teammate's actual public URL if a separate hosting integration is in use. Local operation remains available; successful deployment is not claimed.
+
+
+### 2026-11-14: Public organized-layout verification passed
+
+After syncing the teammate's manual-upload record, independently opened the public site and verified the organized layout served `index-C1XZWWZv.js`. Public Chromium checks passed at desktop 1440×1000 and mobile 390×844: default overview, three-view navigation, all three targets, candidate selection, evidence drawer opening/Escape closure and Demo-to-real reset. Mobile document width stayed 390 px with method details closed and open. No JavaScript page errors occurred in these tested flows. The public Gale comparison figure returned HTTP 200. No layout fixes were needed after these checks.
+
+The public organized-layout release is now verified. Automatic GitHub Actions deployment remains a separate unresolved configuration issue; successful manual upload does not repair it. No scientific results or website code changed in this verification. OpenAI Codex assisted browser checks and English reporting.

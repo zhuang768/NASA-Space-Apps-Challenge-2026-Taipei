@@ -37,3 +37,8 @@ No new candidate research, scientific values or rankings changed in this deploym
 Later on 2026-11-14 the current `main` (`9d865d7`) was rebuilt locally (`build_workbench_data.py`, `npm ci`, `npm run build`) and uploaded with Wrangler direct upload to the `terramatch-mission-lab` Pages project, production branch `main`. The public URL then served `/assets/index-C1XZWWZv.js` and showed the “Overview & map”, “Evidence & sources” and “Sensitivity & gaps” views, with no console errors on desktop load. Public mobile-width checks were not repeated.
 
 This was a one-off manual upload. Pushes to `main` will not update the site automatically until the owner replaces `CLOUDFLARE_API_TOKEN` and adds `CLOUDFLARE_ACCOUNT_ID` as described above.
+
+
+## Subsequent public desktop and mobile verification
+
+The organized public release was independently checked after the manual upload. Desktop 1440×1000 and mobile 390×844 passed overview/navigation, target and candidate selection, evidence drawer/Escape closure, and Demo reset. The mobile document remained exactly 390 px wide with method details closed and open. No JavaScript page errors were observed. The Gale terrain-comparison image returned HTTP 200. The served JavaScript was `index-C1XZWWZv.js`. No new layout defect requiring a code change was found in these flows. Earlier failure/overflow findings above describe the previous release, not the current public layout. Automatic deployment credentials remain unresolved.

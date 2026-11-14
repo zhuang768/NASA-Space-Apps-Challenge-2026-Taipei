@@ -13,7 +13,7 @@
 
 - [Supplement and exact missing files](original_tables_followup/README.md), [three-table status](original_tables_followup/table_acquisition.csv), and [actual checks](original_tables_followup/validation.json).
 - The three target tables remain unacquired; no fixed-cell membership or new ice result was computed. Public DataCite metadata and USGS field definitions were obtained and retained separately from observations.
-- The initial local-only checkpoint was superseded by the user's authorization to push and merge. PR #7 had already merged, so this supplement is submitted as a follow-up from main `08d2740a23694a54bcc11cabf7120114d2e120fc`, preserving its CRISM updates. GitHub records the actual publication/merge status.
+- The initial local-only checkpoint was superseded by the user's authorization to push and merge. PR #7 had already merged, so this supplement is submitted as a follow-up from main `fbfa780cf587a0787739200898e80b4d27fea8d1`, preserving its CRISM updates. GitHub records the actual publication/merge status.
 - If rebuilding the earlier primary tables, run `original_tables_followup/integrate_tables.py` afterwards to restore this supplement, before validation. The supplement does not regenerate the original science analysis.
 
 ## Reproduce
@@ -21,7 +21,7 @@
 - Python dependencies: numpy, rasterio, shapely, pyshp, matplotlib, Pillow (tested using the existing science environment).
 - Restore ignored Caltech inputs from exact URLs in `piqueux_qa.json`; verify provider MD5. `remote_geology.py` acquires original ZIP members with byte ranges and CRC checks. `acquire_ctx_samples.py` follows author KML; `acquire_sharad_sample.py` retrieves the documented original RDR ranges.
 - Run `analyze.py --mars-raw-dir /path/to/data/raw/mars` after source acquisition; SWIM inputs are read-only and SHA-checked against the pinned baseline.
-- Run `build_tables.py`, then `crism/refresh_crism_evidence.py`, then `original_tables_followup/integrate_tables.py`, then `plot.py`, then `validate.py`. The latter checks this package offline using retained small inputs; full source extraction also requires the ignored large/local inputs. The supplement can be checked separately with `original_tables_followup/validate_followup.py`.
+- Run `build_tables.py`, then `crism/refresh_crism_evidence.py`, then `official_resources/refresh_resources.py`, then `original_tables_followup/integrate_tables.py`, then `plot.py`, then `validate.py`. The latter checks this package offline using retained small inputs; full source extraction also requires the ignored large/local inputs. The supplement can be checked separately with `original_tables_followup/validate_followup.py`.
 - Acquisition is sequential: the request-log append operation is not designed for parallel writers.
 - `F-LV01_CTX_samples.png`: actual fixed local display patches, dates and observability limitations.
 - `F-LV02_observation_support.png`: real catalogue sub-spacecraft tracks and acquired RDR geometry segment; echoes not interpreted.
@@ -32,3 +32,8 @@
 - Two local I/F subsets, exact wavelength calibration and DDR geolocation are now acquired; the earlier catalogue-only status for these two products is retained in `crism/previous_catalogue_status.json` and superseded in current tables.
 - Start with `crism/README.md`, `crism/qa.json` and `crism/F-CRISM01_pixel_QA_spectra.png`. Ice classification remains unknown; basic numeric checks are not final scientific validity.
 - If regenerating parent tables with `build_tables.py`, run `crism/refresh_crism_evidence.py` afterwards to apply the new acquisition statuses while preserving prior history.
+
+## Official Resources / MRDR v4 follow-up
+
+- `official_resources/README.md` records the verified challenge→PDS source chain, acquired local corrected-band/summary data, source dates, native projection and unresolved ice interpretation.
+- Official MRDR parameters and a documented multispectral recalculation are now available in that separate package. This supersedes neither the original raw-product OFF flags nor the retained historical acquisition records. Negative parameters and numeric coverage are not an ice-absence result.

@@ -1,0 +1,156 @@
+
+CAT 7.4 Release Notes -- December 28, 2018
+
+=================================================================
+1. Intro
+=================================================================
+
+Download:
+    Location:
+        http://utopia.jhuapl.edu/flight/cat_archive/CAT7_4/   (CRISM Team only)
+        http://pds-geosciences.wustl.edu/missions/mro/crism.htm  (link for everyone)
+
+    6 files:
+        cat74_release.txt         This file.
+        cat_setup.pdf             setup guide
+        CAT_v7_4.zip              Full CAT distribution zip file.
+        CAT_v7_4_codeonly.zip     CAT software directories only (no aux_files)
+        CAT_v7_4_aux.zip          CAT aux_files directories only (no code)
+        CAT74_history_symbols.txt CAT history string description
+        
+        (You need either CAT_v7_4.zip, 
+        or both CAT_v7_4_codeonly.zip and CAT_v7_4_aux.zip)
+
+		zip file sizes:
+			CAT_v7_4.zip            524 MB
+			CAT_v7_4_codeonly.zip   9.6 MB
+			CAT_v7_4_aux.zip        514 MB
+			
+=================================================================
+2. Installation notes
+=================================================================
+
+Installation is described in cat_setup.pdf.
+
+You HAVE to have aux_files somewhere, and CAT needds to know where it is.
+
+
+=================================================================
+3. Summary of Main Changes Since 7.0
+=================================================================
+
+Version 7.0: 
+Added support for MTRDR data; added atmospheric transmission CDR's 
+from new volcano scans, and added artifact patch data to the CDRs.
+
+Version 7.1:
+Added volcano scan artifact correction.
+Added a volcano scan selection method: "Best match to bench 
+   temperature-derived spectral shift." Finds the volcano scan 
+   with spectral shift (calculated from optical bench temperature) 
+   that's closest to the shift of the observation being corrected. 
+   (In contrast, "Pre-selected volcano scan optimum for thermal period"
+   uses the volcano scan that's the best overall match to all the 
+   observations in a thermal period, not necessarily the specific 
+   observation of interest.)
+
+Version 7.2:
+Added a volcano scan selection method: "Empirically optimized for this observation"
+    Extract an 11-line subset from near the center of an observation. 
+    Apply all the available volcano scans to those lines. Evaluate 
+    the shift artifact at all lines and all sweetspot samples. Select the 
+    volcano scan that produces the smallest artifacts. (This is done offline 
+    and selected volcano scans are read from the AT observation info file; 
+    for observations where the volcano scan is not found there [e.g. 
+    observations newer than the info file], the comparison is performed 
+    on the fly by CAT.)
+
+Version 7.2.1:
+Bug fixes in non-tile atmospheric correction, PDS file searches.
+
+Version 7.3.1:
+Viviano-Beck et al 2014 summary parameters 
+Version 8 VS ADR labels updated to comply with PDS.
+Works with MTRDR updates; fixed issues noted during PDS review
+Spectral stats: ignore CRISM NAN 65535
+Updated obs info file (to Feb 2015)
+CRISM Z-profile now works with projected cubes
+EXPERIMENTAL: "CRISM Active z-profile" (updates spectrum as you move around, 
+old CRISM z-profile was static)
+
+Version 7.4:
+Version 9 volcano scan ADR adds 5 new volcano scans
+Map projection matches MTRDR
+Remove options for bench temperature VS ADR selection
+Correct bugs in volcano scan artifact patch and 3 summary parameters
+
+=================================================================
+4. Bug Fixes since 7.3
+=================================================================
+Fixed a bug in the convergence test in volcano scan artifact 
+patch scaling
+    Testing suggests the bug rarely results in a difference greater 
+    than ~1% of continuum and usually that threshold is exceeded only 
+    for observations with problematic data or very strong ice bands.
+
+Fixed typs in three summary parameters:
+	crism_summary_bd3400, crism_summary_bd3400_2, crism_summary_icer2_2
+
+=================================================================
+5. New CDR/ADR
+=================================================================
+Version 9 VS ADR
+   (5 new volcano scans: 27233 2815C 28395 28D04 32AFC)
+
+=================================================================
+6. New header parameters
+=================================================================
+None
+
+=================================================================
+7. New CAT config file parameters
+=================================================================
+None
+
+=================================================================
+8. Known Bugs
+=================================================================
+
+*****  TRR2 Atmospheric Correction May Fail  *****
+CAT will fail to correct TRR2 data if one of the new volcano scans 
+(11d87, 1b815, 12B2C, 103D6, 11739) is selected. These may be selected
+by either of the automated selection algorithms, or by the user. 
+
+The new volcano scans have not been processed with TRR2 data. Since 
+the volcano scan source data must match the calibration version of 
+the scene being corrected, CAT fails to apply the correction if the 
+requested volcano scan is not available in the required version. 
+
+WORKAROUND: Try a different automated method, a different volcano 
+scan may be emloyed; or use user selection to use one og the old 
+volcano scans: 61c4, 8608, a93e are the clean ones.
+
+
+
+Mac vs. Windows differences
+	Testing has uncovered certain CAT outputs where numerical 
+	results differ between Mac and Windows versions. These are:
+	- Summary parameters BDI1000IR and BDI2000
+	- CIRRUS destripe
+	- CIRRUS despike
+
+	In all cases tested, there are only a few pixels where 
+	differences are of a significant magnitude. Results are 
+	identical or differ by floating point roundoff-like 
+	amounts at nearly all pixels. These differences probably 
+	result from algorithmic sensitivity to machine-dependent 
+	floating point processing differences at a few anomalous 
+	pixels, and probably does NOT indicate any overall 
+	unreliability of these outputs. However, the exact source 
+	of these differences is not yet determined. 
+	
+	Other Mac vs. Windows CAT outputs are exactly identical.	
+	
+Thermal Model
+    AlgK thermal model partially implemented.
+

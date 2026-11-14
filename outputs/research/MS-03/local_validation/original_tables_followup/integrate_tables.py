@@ -8,7 +8,7 @@ import subprocess
 FUP = Path(__file__).resolve().parent
 P = FUP.parent
 ROOT = FUP.parents[4]
-INTEGRATION_BASE = '08d2740a23694a54bcc11cabf7120114d2e120fc'
+INTEGRATION_BASE = 'fbfa780cf587a0787739200898e80b4d27fea8d1'
 
 def read(name):
     with (P/name).open(encoding='utf-8-sig', newline='') as f:

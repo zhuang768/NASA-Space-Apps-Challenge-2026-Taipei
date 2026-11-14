@@ -10,7 +10,7 @@ HERE = Path(__file__).resolve().parent
 LOCAL = HERE.parent
 ROOT = HERE.parents[4]
 BASE = '778af696c654a191fe2a720f24d9f30ebd7d247b'
-INTEGRATION_BASE = '08d2740a23694a54bcc11cabf7120114d2e120fc'
+INTEGRATION_BASE = 'fbfa780cf587a0787739200898e80b4d27fea8d1'
 checks = []
 
 def check(name, condition):
@@ -84,13 +84,17 @@ changed = subprocess.check_output(['git','diff','--name-only',INTEGRATION_BASE],
 check('tracked edits confined to two local_validation directories', all(x.startswith(('docs/research/MS-03/local_validation/','outputs/research/MS-03/local_validation/')) for x in changed))
 check('dedicated follow-up branch used', subprocess.check_output(['git','branch','--show-current'],cwd=ROOT,text=True).strip()=='codex/ms03-original-tables-followup')
 base_search = list(csv.DictReader(subprocess.check_output(['git','show',INTEGRATION_BASE+':outputs/research/MS-03/local_validation/search_log.csv'],cwd=ROOT).decode('utf-8-sig').splitlines()))
-check('all 204 latest-main search records retained unchanged', len(base_search)==204 and all(current[r['log_id']]==r for r in base_search))
+check('all '+str(len(base_search))+' latest-main search records retained unchanged', len(base_search)>=204 and all(current[r['log_id']]==r for r in base_search))
 base_search_bytes = subprocess.check_output(['git','show',INTEGRATION_BASE+':outputs/research/MS-03/local_validation/search_log.csv'],cwd=ROOT)
 check('latest-main search-log bytes retained as exact prefix', (LOCAL/'search_log.csv').read_bytes().startswith(base_search_bytes))
 crism = subprocess.check_output(['git','ls-tree','-r','--name-only',INTEGRATION_BASE,'--','outputs/research/MS-03/local_validation/crism/'],cwd=ROOT,text=True).splitlines()
 for name in crism:
     assert (ROOT/name).read_bytes()==subprocess.check_output(['git','show',INTEGRATION_BASE+':'+name],cwd=ROOT), name
 check('all '+str(len(crism))+' CRISM files byte-identical to latest integration base', len(crism)>0)
+resources = subprocess.check_output(['git','ls-tree','-r','--name-only',INTEGRATION_BASE,'--','outputs/research/MS-03/local_validation/official_resources/'],cwd=ROOT,text=True).splitlines()
+for name in resources:
+    assert (ROOT/name).read_bytes()==subprocess.check_output(['git','show',INTEGRATION_BASE+':'+name],cwd=ROOT), name
+check('all '+str(len(resources))+' official-resource files byte-identical to latest integration base', len(resources)>0)
 name='outputs/research/MS-03/local_validation/observation_inventory.csv'
 check('acquired-spectrum inventory retained unchanged', (ROOT/name).read_bytes()==subprocess.check_output(['git','show',INTEGRATION_BASE+':'+name],cwd=ROOT))
 result = {'status':'passed','date_taipei':'2026-11-15','starting_sha':BASE,'integration_base_sha':INTEGRATION_BASE,'checks':checks,'available_response_bodies_verified':body_checks,'not_performed':['original-table row parsing or fixed-cell membership computation','new ice or morphology analysis'],'publication_status':'GitHub records actual commit, PR and merge; this validator performs no remote mutations'}

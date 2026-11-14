@@ -3,7 +3,7 @@
 - Date: 2026-11-15, Asia/Taipei.
 - Start: PR #7 branch `research/ms-03-earth-analogs`, SHA `778af696c654a191fe2a720f24d9f30ebd7d247b`.
 - Working copy: isolated local clone; the original concurrent CRISM work was not edited.
-- Publication history: initially retained locally at the user's request; the user later authorized pushing and direct merging. PR #7 had already merged, so this supplement uses a follow-up PR based on main `08d2740a23694a54bcc11cabf7120114d2e120fc`, branch `codex/ms03-original-tables-followup`. Check GitHub for actual publication and merge status.
+- Publication history: initially retained locally at the user's request; the user later authorized pushing and direct merging. PR #7 had already merged, so this supplement uses a follow-up PR based on main `fbfa780cf587a0787739200898e80b4d27fea8d1`, branch `codex/ms03-original-tables-followup`. Check GitHub for actual publication and merge status.
 - Fixed Mars cell: 57.50–58.00°N, 242.00–242.50°E, planetocentric/east-positive. It has not moved.
 
 ## Retained outputs
@@ -42,6 +42,6 @@ python3 outputs/research/MS-03/local_validation/original_tables_followup/collect
 python3 outputs/research/MS-03/local_validation/original_tables_followup/validate_followup.py
 ```
 
-`finalize.py` reapplies the small evidence-table supplement, runs the offline checks and refreshes retained hashes. It performs no network, Git commit, push or merge. The existing CRISM files and observation inventory must remain byte-identical to the integration base.
+`finalize.py` reapplies the small evidence-table supplement, runs the offline checks and refreshes retained hashes. It performs no network, Git commit, push or merge. The existing CRISM files, official-resource/MRDR files and observation inventory must remain byte-identical to the integration base.
 
 Acquisition requires public network access and may return different responses later. Raw HTTP bodies are retained locally under ignored `responses/`; approved public metadata snapshots are copied under `metadata/`. Do not upload challenge tokens, error-page scripts, or large/raw scientific datasets as research results. No credentials or author messages were used.

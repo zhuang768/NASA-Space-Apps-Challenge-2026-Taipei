@@ -1,0 +1,16 @@
+{
+ "purpose": "MS-01 scale-gap table, neighbourhood context, statistics; no new retrieval; existing MS-01 files unchanged",
+ "outputs": {
+  "build_scale_gap.py": "ac1719aaf0d734bc83b3469a8ac4279720b6d8209cef2ac1b94b83e60a492437",
+  "verify_scale_gap.py": "5de7931c8db12daf332344d6ac37bfb6134adeedff28543f8ed9ee585440fede",
+  "scale_gap_resolution.csv": "7050db8cbedf6f5d26ab6fe3a6895c4ddf156d7327e574fc7cd9858c6b609375",
+  "neighbourhood_context.json": "f6548bf1616c7aa601788e3f9b845f951e6da7c8cdb976cd8b7a92aaeb06ac20",
+  "statistics_summary.md": "4bb591de9bb7d4e9db8f96d103390d29e53edd1f7d4553449343475fb9ad431d"
+ },
+ "inputs": {
+  "outputs/research/mars_reselection_20261114/final_candidates.csv": "83a03d1f4273fa7c45c0d22b5c29a8b8cfc0544e481d5f2bbca2c85812534c4e",
+  "outputs/research/mars_reselection_20261114/screened_pool.csv.gz": "7c5559e40fca9fa304b7799e4490bfb4ff0d55ea0a02819c53f432377462ff92",
+  "outputs/research/MS-01/local_validation/catalogue_summary.csv": "96fec1a0d86022860fcd0e32122be600712e72e1198cbfcb2f41cd6c9984e2cd",
+  "outputs/research/MS-01/local_validation/mars_ice_evidence.csv": "36ed3186c0b92a4e3fdfbf6d2477fd1b7c26908133afd8f99a1ef96efa1c2620"
+ }
+}

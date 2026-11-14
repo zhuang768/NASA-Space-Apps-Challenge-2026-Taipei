@@ -1,0 +1,17 @@
+{
+  "checked_utc": "2026-11-14T19:44:19.141554+00:00",
+  "pr_url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/7",
+  "observed_state": "MERGED",
+  "observed_merged_at_utc": "2026-11-14T19:38:25Z",
+  "observed_merged_head": "44c2e03b8617c7bb536ad712b85f4716dd190d7c",
+  "verified_origin_main": "08d2740a23694a54bcc11cabf7120114d2e120fc",
+  "new_science_commit": "aa8b5cb26df6d09992853d0400b18173bbe31a64",
+  "new_acquisition_commit": "c63d50a04dd999f1811a2c7fb0c3070a78a25257",
+  "new_commits_ancestors_of_verified_main": false,
+  "official_resources_manifest_present_in_verified_main": false,
+  "task_performed_merge": false,
+  "delivery": "new data retained on original branch; merged PR description can link them but merged diff does not include them; no new PR created",
+  "snapshot_kind": "pre-merge-authorization observation, not an assertion of later main state",
+  "subsequent_user_instruction": "\u76f4\u63a5\u5408\u4f75\u5c31\u597d\u4e86",
+  "subsequent_action_authorized": "merge the new branch commits via a new integration PR; PR7 is already merged"
+}

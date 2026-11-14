@@ -19,7 +19,7 @@ manifest['original_tables_followup'] = {
     'date_taipei': '2026-11-15',
     'starting_sha': '778af696c654a191fe2a720f24d9f30ebd7d247b',
     'delivery_state': 'prepared for user-authorized follow-up PR and merge; actual status recorded by GitHub',
-    'integration_base_sha': '08d2740a23694a54bcc11cabf7120114d2e120fc',
+    'integration_base_sha': 'fbfa780cf587a0787739200898e80b4d27fea8d1',
     'branch': 'codex/ms03-original-tables-followup',
     'prior_delivery_state': 'initial local-only checkpoint superseded by later push-and-merge authorization',
     'public_requests_recorded': 29,

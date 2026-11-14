@@ -933,5 +933,8 @@
       "passed": true
     }
   ],
-  "limits": "Numerical/provenance checks only; no validated ice detection; original historical verifiers not rerun"
+  "limits": "Numerical/provenance checks only; no validated ice detection; original historical verifiers not rerun",
+  "record_status": "historical_snapshot_not_rerun_after_documentation_repair",
+  "scope_note": "Original 232 checks / 181 hashed files are retained as a historical run, not verification of the current repaired tree. Current limited documentation checks are recorded in repair_verification.json.",
+  "superseded_for_current_tree_by": "outputs/research/MS-02/local_validation/repair_verification.json"
 }

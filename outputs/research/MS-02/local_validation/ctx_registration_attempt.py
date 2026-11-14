@@ -20,10 +20,10 @@ def corners(pts,topN,leftW):
     return top,bot  # (left,right) lon/lat pairs
 def sample(img,pts,topN,leftW,lon,lat):
     (tl,tr),(bl,br)=corners(pts,topN,leftW);h,w=img.shape
-    # invert bilinear by Newton on a grid: build forward map for image grid coarse then interpolate
+    # Build a coarse forward bilinear corner grid; no Newton inverse or camera model.
     gy,gx=np.mgrid[0:h:8,0:w:8]; u=gx/(w-1); v=gy/(h-1)
     LON=(1-v)*((1-u)*tl[0]+u*tr[0])+v*((1-u)*bl[0]+u*br[0]); LAT=(1-v)*((1-u)*tl[1]+u*tr[1])+v*((1-u)*bl[1]+u*br[1])
-    # for each target point find nearest coarse node then refine locally by affine
+    # Select the nearest coarse node in lon/lat degrees; no affine refinement.
     out=np.full(lon.shape,np.nan,np.float32)
     from scipy.spatial import cKDTree
     t=cKDTree(np.c_[LON.ravel(),LAT.ravel()]);d,i=t.query(np.c_[lon.ravel(),lat.ravel()])

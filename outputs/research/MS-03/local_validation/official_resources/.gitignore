@@ -1,0 +1,7 @@
+__pycache__/
+sources/*.html
+sources/*.htm
+sources/*.pdf
+sources/mrdr_mrdr_*
+sources/mrdr_index_*
+sources/ode_MRDR4.json

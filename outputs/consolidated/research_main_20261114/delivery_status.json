@@ -1,0 +1,34 @@
+{
+  "version": "MR-20261114-v2",
+  "updated_taipei": "2026-11-14T20:08:22.200057+08:00",
+  "phase": "archive_QA_description_and_evidence_requirements",
+  "remote_source_main": "bc9fe3c0f352632a7117dbdab24df21b7450738e",
+  "branch": "codex/mars-research-mainline-20261114",
+  "branch_head_before_update": "9e5c49ea7b4d7272972e7d409e6a298e6ef3da4a",
+  "history_commit_MRv1": "9e5c49ea7b4d7272972e7d409e6a298e6ef3da4a",
+  "integration_status": "prepared_for_authorized_main_integration_pending_verification",
+  "integrated_into_main": false,
+  "integration_commit": null,
+  "local_main_synced": false,
+  "preserve_other_local_changes": true,
+  "excel_updated": false,
+  "excel_sha256": "a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731",
+  "requirements_count": 27,
+  "execution_counts": {
+    "this_round_required": 8,
+    "reuse_existing": 10,
+    "future_experiment": 5,
+    "after_main_analysis": 3,
+    "unavailable_limit": 1
+  },
+  "science_groups_validated": false,
+  "analysis_class_B": "Team2_QA_and_descriptive_summary_received_row_artifacts_and_plots_pending",
+  "research_difference_class_C": "initial_review_received_no_new_scientific_difference_established_depth_cause_pending",
+  "experiments_class_D": "protocol_draft_received_experiments_not_executed",
+  "handoff": {
+    "method": "orchestrator_forwardable_summary_in_main_project_synthesis",
+    "direct_messages_sent": false,
+    "MRv2_recipient_acknowledgments": "pending"
+  },
+  "record_semantics": "After publication, integration_commit records an actually verified main commit; source main identifies inputs, not the final main head."
+}

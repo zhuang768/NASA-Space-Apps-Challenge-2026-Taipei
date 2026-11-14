@@ -9,7 +9,18 @@ from urllib.request import Request, urlopen
 
 
 def fetch(url):
-    request = Request(url, headers={"Cache-Control": "no-cache"})
+    # Cloudflare often returns 403 to bare urllib clients from cloud IPs.
+    request = Request(
+        url,
+        headers={
+            "Cache-Control": "no-cache",
+            "User-Agent": (
+                "Mozilla/5.0 (compatible; TerraMatchReleaseVerify/1.0; "
+                "+https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei)"
+            ),
+            "Accept": "text/html,application/json;q=0.9,*/*;q=0.8",
+        },
+    )
     with urlopen(request, timeout=15) as response:
         return response.read()
 

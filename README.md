@@ -267,3 +267,12 @@ Created a four-page Traditional Chinese internal preparation PDF with requiremen
 Confirmed the official team Worker URL serves the organized layout. Public Chromium checks passed at 1440×1000 and 390×844 for overview, evidence/sensitivity navigation, three targets, candidate selection, drawer/Escape and Demo reset. Mobile document width remained 390 px, including open method details; no page errors in these flows.
 
 Manually dispatched [run 43567297561](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/actions/runs/43567297561) against current main. Account-ID format validation no longer reports an error, but CLOUDFLARE_API_TOKEN still fails format validation. The site is publicly available; automatic upload is not yet working. Owner must replace the token secret with the pure value of a token authorized for Workers deployment in the team account. No credential values were read or published; no scientific or website changes were needed.
+
+### 2026-11-14：Matching 火星用途候選文獻查核交接
+
+已完成 [Reporting 交接](docs/mars_discovery_handoff.md)、[15 點逐項查核／原始數值表](docs/mars_discovery_novelty_checks.csv)與[搜尋範圍及來源雜湊紀錄](docs/mars_discovery_search_scope.json)。檢視三類用途各前五名與三張原圖；I-01／I-02 僅保留淺冰研究候選，D-03／D-04 僅作沙塵／地形脈絡參考，建議暫停 firm-ground 承載與通行性主張。所有點的精確位置／相同用途新穎性仍標示未確認，沒有宣稱從未研究。D-01／D-02 的中心位於既有 Utopia 沙塵研究監測圈內，與實際推薦登陸區分開說明。
+
+核對：15 筆座標、既有分數與五層值均與來源 JSON 一致；四組卡片數值及本機引用連結通過檢查。來源 JSON、三張 PNG、analog/ 與 discovery 程式維持原樣；未重排候選、未處理地球原始資料、未執行前端或整套測試。狀態同步工具新增 `--handoff`，預覽與 Ruff 通過；桌面原檔仍受本工作階段寫入限制，需在 Mac 終端機執行 `python3 scripts/sync_desktop_ai_status.py --handoff` 才會更新原檔的 GPT 欄。本輪未修改 Cursor 欄。
+
+OpenAI Codex 協助公開一手來源檢索、有限範圍新穎性查核、研究文字與引用整理、數值轉錄與地理監測圈核對。文件已存於本機儲存庫，本輪未提交或推送 Git。
+

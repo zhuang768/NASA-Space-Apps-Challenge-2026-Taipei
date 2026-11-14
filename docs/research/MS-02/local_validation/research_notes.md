@@ -1,147 +1,133 @@
-# MS-02 local_validation：研究筆記（資料、判定、未知；非報告正文）
+# MS-02 local_validation — 證據、方法與待決事項
 
-範圍：MS-02 52.75°N、168.25°E；固定範圍 52.50–53.00°N、168.00–168.50°E（行星中心座標、東經為正）。研究日 2026-11-15（Asia/Taipei）。
-本檔只列條列與表格；報告正文、摘要、結論由人類撰寫。
+- 用途：人類撰寫正式報告的資料筆記；不是報告正文、摘要或結論。
+- 固定範圍：52.50–53.00°N、168.00–168.50°E；中心52.75°N、168.25°E；行星中心緯度、東經為正。未更動範圍。
+- 本輪日期：2026-11-15 Asia/Taipei（下載紀錄使用 UTC，部分為11月14日）。
 
-## 0. 基準與讀取
+## 基準與閱讀範圍
 
-- PR #6 head：`38b8fa0dea527b1cc47aeb02dc260e039da37122`（本輪開始時以 `git ls-remote` 與 `gh api` 核對，未變）；base 維持 `handoff/verified-data-20261114`（`f7076c9fdc77e00244ed5d6863aad2bf78cfa28f`）。
-- 已讀：PR #6 報告 §8B、`claims.csv`、`footprint.csv`、`candidates.csv`、`evidence.csv`、`prior_work.csv`；PR #9（驗收，head `c206553…`）與 PR #10（整合，head `0260c51…`，`synthesis.md`）。
-- 不採用：降級前的「覆土＋雷達」用途文字（PR #6 報告前段與 H2/H3 殘留）；以 §8B 與 PR #9 主張台帳 C19–C24、X04 為準。
-- 環境限制（影響後述每一項「未取得」）：shell 對 PDS／ODE／USGS／HiRISE 索引等資料主機一律 CONNECT 403；`oderest` 經 WebFetch 被 robots 拒絕；HAL 被 Anubis 擋（未繞過）。見 `search_log.csv` LV-S14、S15、S18、S21、S52。
-- 產出數字的程式：`derive_metrics.py`（衍生數值＋圖）、`build_tables.py`（五個表）、`verify_local_validation.py`（核對）。
+| 項目 | 核對結果 |
+|---|---|
+| 起始遠端完整 SHA | `c309675fbe713a8548a75abf29b54e64217768f9`；已不同於使用者已知的 `38b8fa0dea527b1cc47aeb02dc260e039da37122` |
+| 工作中新增遠端提交 | `cdcf3baaa0342a852cc4f6060f3d8fb048dcce53`：統計彙整與 builder；已 fast-forward 保留 |
+| 原分支／PR | `research/ms-02-earth-analogs`／[#6](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/6) |
+| 第二次保留遠端提交 | `ef5eb162b1df0919b8d6dd780782896188607b2c`：瀏覽器ODE盤點；已fast-forward，保留其清單與LV-S56–60；本輪實際檔案驗證另列 |
+| 不變的 base | `handoff/verified-data-20261114`；`f7076c9fdc77e00244ed5d6863aad2bf78cfa28f` |
+| 原資料已讀 | report §8B、claims、footprint、candidates、evidence、prior_work；既有 local_validation 與統計表 |
+| 驗收／整合已讀 | [PR9](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/9) `c206553fc681328d214cbbcd508d3c5b1391e200`；[PR10](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/10) `0260c511d9fce6be12d3460a69e474f333160cbf`；其引用的舊 PR6 SHA 不代表本輪產品狀態 |
+| Excel | 完整巡覽 repo 彙整活頁簿32張表、逐列計數／MS-02 字串盤點，見 `workbook_inventory.csv`；MEDA/Jezero、舊 I-01/I-02、Elephant Head 等不得移用為本格量測 |
+| 無法識別的使用者來源 | 本對話沒有附百度帳號、下載連結或額外 Excel 附件；沒有宣稱已取得這些未提供來源。以 repo 可辨識活頁簿為界 |
+| 禁止沿用 | 降級前 Adventdalen「覆土＋雷達」鏈、H2/H3 舊敘述；詳 `claim_corrections.csv` |
 
-## 1. 問題一：研究缺口
+## 1. 位置與既有研究
 
-### 1.1 區域與地質單元（自行核對）
+| 判定 | 證據／方法 | 限制 |
+|---|---|---|
+| 正式圖幅：MC-7 Cebrenia | USGS I-1140 原圖30–65°N、180–240°W，即120–180°E | 圖幅名不等於地貌單元名 |
+| 全格在 mAl（Middle Amazonian lowland unit） | SIM3292 原始 shapefile；OBJECTID1252；Mars2000球半徑3396190m；相交面積比例1.0 | 1:20,000,000全球圖；不能推出局部礦物、覆土厚度或現在含冰量 |
+| 不直接稱 Arcadia Planitia | Gazetteer Feature348 的 MDIM2.1 多邊形不與固定範圍相交；MDIM2.0 舊矩形則相交 | 名稱邊界為近似；不能只用 bounding box。原「距西緣84km」停止引用 |
+| MDIM2.1 圖形間距約7.69km | 火星球面局部等積投影、ROI與多邊形距離；`geography_check.json` | 近似圖形的幾何距離，不是精確地貌分界距離 |
+| ROI面積約531.665km² | 同一投影計算；`analyze_products.py` | 直線多邊形邊界近似；不用地球半徑 |
 
-| 項目 | 結果 | 來源／依據 | 狀態 |
+- 來源：[SIM3292](https://doi.org/10.3133/sim3292)、[I-1140](https://pubs.usgs.gov/imap/1140/plate-1.pdf)、[Gazetteer](https://planetarynames.wr.usgs.gov/Feature/348)；下載hash與實讀欄位見 manifest、search_log。
+- 搜尋鍵：完整座標、Cebrenia／Arcadia／Phlegra、mAl／Middle Amazonian lowland unit、五個 CTX ID、SHARAD 00464501、Piqueux／Tanaka／Skinner 引用鏈；歷史搜尋55筆保留並標記為前輪。
+
+| 類別 | 本輪處置 | 不能推論 |
+|---|---|---|
+| 格內同用途 | Piqueux2019全球熱反演產品的本格像元已取得；用途為淺冰表深度估計 | 不是針對本格的獨立地面驗證研究 |
+| 格內不同用途 | SIM3292地質分類、SWIM篩選一致性、已定位軌道產品 | 覆蓋不等於已完成相同研究問題 |
+| 附近／大區域 | 原 Bramson、Viola、Ramsdale、Séjourné、MONS、暴露冰點表的範圍限制保留；新增 Skinner2012 mAl引用鏈 | 不移植180°E以東研究的深度／含量至168°E；Skinner只讀摘要與地圖引用，不能宣稱其局部樣區含本格 |
+| 位置不明 | Costard摘要，以及僅由檢索結果不能定位的項目 | 沒找到不能證明從未研究 |
+
+- `local_prior_work.csv` 的 `review_state` 區分本輪重讀、前輪繼承；未把繼承的全文閱讀冒充本輪重讀。
+- 研究缺口的具體定義：缺「格內同一位置的覆土材料／厚度、冰真值與季節熱觀測或雷達」配套驗證；不再寫成「完全沒有產品／從未研究」。
+
+## 2. 已取得的火星資料與品質
+
+| 資料 | 本次取得與計算 | 時期／解析度／敏感深度 | 品質與未知 |
 |---|---|---|---|
-| 圖幅 | 在 MC-7 Cebrenia 四邊形內（30–65°N、120–180°E）；距其東界 180°E 沿緯線約 421.6 km | Wikipedia Cebrenia quadrangle（次級；LV-S05） | 取得（次級來源） |
-| Arcadia Planitia | planitia 範圍約 33.9–64.2°N、165.9–210.4°E（中心 47.2°N、184.3°E）；本格在其範圍框內，距西緣沿緯線約 84.3 km | Wikipedia Arcadia Planitia（次級；LV-S06）；Gazetteer 該 planitia 頁未讀到（LV-S11、S22） | 次級來源；不可直接稱「在 Arcadia」 |
-| 易混名稱 | Gazetteer 的 `Arcadia`（Feature 346）是 albedo feature，44.66°N、260°E；`Cebrenia`（Feature 1095）albedo feature 49.67°N、150°E，皆為單點，不是 planitia 範圍 | LV-S03、S04 | 取得 |
-| 地質單元 | **未確定**。Tanaka 2014（SIM 3292）說明書讀到 pp.13–14，列出低地單元 lHl、AHtu、mAl、Av，但沒有給任何座標的單元；GIS 未取得 | LV-S12、S13、S40 | 未取得；不得命名單元 |
-| 與已做格圖帶的位置 | Arcadia 格圖帶（Ramsdale 2019）約 186–194°E，距本格中心約 628.7 km；Utopia 格圖帶（Séjourné 2019）約 87–94°E，約 2,534.5 km | `derived_metrics.json`；圖 `fig_local_prior_work_extents.png` | 本次計算（帶寬為近似） |
+| Piqueux2019 | 全部5個檔案；row74 col336（0起算）：模型深度0.4499824941m、乾層TI188.2415009 J m⁻² K⁻¹ s⁻½ | 2019-11-27 archive；0.5°像元恰等於ROI；季節熱敏感約6cm–1m | 非缺值−32768；真實深度未驗證；沒有本格殘差或CI；不可把論文最佳情況約20%直接當本格誤差棒；檔案2ppd與論文3ppd原因未解 |
+| CTX | 5個EDR目錄足跡＋5張browse；名義聯集覆蓋100%ROI | 2012-05-12至2024-12-31；原生約6.08–6.15m/px；browse降採樣不同；只看表面 | 已看browse；未做EDR校正、正射或有效像元面積；低對比影像不能證明沒有多邊形、冰崖或新撞擊坑 |
+| SHARAD | 3個原始power陣列、標籤、定位表、表面clutter模擬browse；格內64+65+65=194欄；均finite且非零 | 2007-07-24、2010-10-20、2010-11-05；posting460m；sample0.0375µs；20MHz、10MHz頻寬 | 194欄不是194獨立解析單元；第1800列是areoid不是地表；完整delay圖有表面回波；未認定地下反射體、未反演介電常數 |
+| CRISM | 177目錄記錄中59為IF科學產品（49S、10L）；取得全部IF標籤；其中1個L立方體＋配套DDR | MSP0001565D，2010-01-08；55bands×900lines×64samples；survey約200m；光學表面 | 格內912像元中心／50160光譜值；2100值為65535；數值可用95.8134%不等於科學有效率；含負I/F；波長／壞band／大氣／光度校正不足，不能判礦物或冰 |
+| HiRISE | ODE RDR4、RDRV11成功查詢為0；EDR空間查詢不支援 | 查詢日期與類型限定 | 錯誤不是零；不是任務全期無資料或無冰證明 |
+| MONS | 原資料的粗尺度背景＋Pathare2018文章PDF；本格WEH數值仍未取得 | 約550km FWHM；近表層氫、分層模型，非0.5°獨立觀測 | 氫不等於獨立確認H₂O冰；不得以SWIM neutron consistency替代WEH；SWIM頁本輪亦有timeout紀錄 |
+| TES／SWIM／CDOD／MCS | repo交接數據保留；來源依賴與原生格限制見CSV | TES93/100有效；SWIM兩層是產品深度標籤；CDOD3°；MCS5° | 沒有把這些背景資料重新包裝成新量測 |
 
-### 1.2 既有研究分類（完整表：`local_prior_work.csv`）
+- 熱資料來源：[資料DOI](https://doi.org/10.22002/D1.1316)、[方法§2–3](https://doi.org/10.1029/2019GL083947)；地層冰為模型假設，岩石／塊石可造成混淆；不能辨別孔隙冰與塊狀冰。
+- SHARAD解析度計算：c/(2B)≈15m自由空間；除以√3.15≈8.45m冰中（介電常數為假設）。0.0375µs取樣間隔對應5.62m自由空間，不是系統解析度；不可能用此產品直接驗證0.45m冰表。
+- `fig_sharad_observed_clutter.png`：完整3600列與對應格內欄位；觀測power顯示用dB、模擬為browse灰階；幅度不可直接相減或定量比值。未做盲測／自動偵測率試驗。
+- `fig_verified_footprints.png`：原地質單元、Gazetteer近似界線、CTX足跡、SHARAD測線。聯集面積是名義支援，不是無雲／無塵／有效像元覆蓋。
+- `crism_roi.npz` 保留未作光譜解釋的樣本與numeric mask；DDR的TI來自其他產品，不能當CRISM獨立熱測量。
 
-| 類別 | 項目 | 備註 |
-|---|---|---|
-| 格內同用途 | 無「針對本格」研究在已執行搜尋中出現；**產品級**例外：Piqueux 2019 全球冰表深度圖（2 ppd，本格約為 1 個像元） | 像元值未取得（LP-08、ME-12） |
-| 格內不同用途 | SWIM2 一致性（本格有值；區域篩選，不是局部驗證）；Tanaka 2014 地質圖（覆蓋本格；單元值未取得） | LP-05、LP-09 |
-| 附近／大區域 | Bramson 2015（180–225°E、38–50°N；距 463.6 km）；Viola 2015（180–240°E；421.1 km）；Ramsdale 2019（628.7 km）；Pathare 2017 WEH（Arcadia 框 184–228°E；563.9 km；MONS 約 550 km FWHM）；Séjourné 2019（2,534.5 km）；Morgan 2025 Table 2 最近點 Site 46（46.62°N、171.88°E）389.0 km | LP-01–04、06、07、10 |
-| 位置不明 | Costard 等 EPSC 2013（只讀到摘錄，無座標） | LP-13 |
-| 繼承自 hand-off 稽核（本輪未重讀） | Dundas 2014/2021 點、EZMars、SWIM4MIM、MCOA、Phlegra 提案 | LP-11、LP-12 |
+### 冰存在、深度、含量分開判定
 
-- 搜尋用的鍵：座標字串、區域名（Arcadia／Cebrenia／Utopia／Phlegra）、地質單元名、HiRISE 影像 ID 格式、引用鏈（Bramson→Viola→Ramsdale→Morgan）。完整字串與日期見 `search_log.csv`（LV-S01–S55）。
-- 搜尋無命中**不等於**從未研究：WebSearch 不是目錄；ODE、PDS 影像／SHARAD 索引、HiRISE 累積索引（168,675,271 B）都無法在本環境查詢。
-
-### 1.3 具體缺少的研究／觀測（判定）
-
-| 缺口 | 判定 | 需要的資料或觀測 |
-|---|---|---|
-| 本格或其 0.5° 像元的冰表深度數值 | 缺（產品存在、值未取得） | Piqueux 2019 `d_m.ascii` 與 `TI_SI.ascii` 在該像元的值與擬合殘差（像元大小 2 ppd 與 3 ppd 兩頁說法不一致，未解決） |
-| SHARAD 是否有軌跡穿過固定範圍、是否有反射體 | 缺 | PDS／ODE 的 SHARAD 軌跡與雷達圖；若有，需 ε 假設與近表面雜波評估（Bramson：側瓣可遮蔽 20–30 m 內反射；解析度約 8.4 m（冰中）） |
-| 格內 HiRISE／CTX 影像清單與地貌 | 缺 | ODE 或 HiRISE 累積索引查詢固定範圍；目前無影像 ID |
-| 光譜（CRISM／OMEGA）冰訊號或含水訊號 | 缺（未取得任何產品；僅做標題級搜尋） | CRISM 覆蓋清單與判讀 |
-| 暴露冰（新撞擊坑、冰崖） | 未見（只涵蓋已繼承的點表） | 對固定範圍的新撞擊坑／重複影像檢索 |
-| MONS WEH 在本格的數值 | 缺（區域圖存在，足跡約 550 km） | Pathare／Wilson 圖在該座標的值（此值也只是約 550 km 範圍平均） |
-| 本格正式地質單元 | 缺 | SIM 3292 向量與固定範圍相交 |
-| 與 Arcadia 區域研究（180°E 以東）的銜接 | 缺 | 沒有任何已讀研究把 168°E 帶納入；Ramsdale 與 Bramson／Viola 的西界皆在 180–186°E |
-
-## 2. 問題二：MS-02 當地材料、覆土與冰證據（完整：`mars_ice_evidence.csv`）
-
-### 2.1 實際取得與計算（本格；來源 hand-off main 的 `final_candidates.csv`，共享資料）
-
-| 項目 | 值 | 單位 | 類型 | 限制 |
+| 問題 | 直接證據 | 間接線索 | 模型／假設 | 判定與未知 |
 |---|---|---|---|---|
-| MOLA 高程 平均（最小／最大） | −3898.719（−3956／−3839） | m 相對 areoid | 產品推估 | 約 3.7 km 基線；64 個原生格 |
-| MOLA 坡度 平均／最大；起伏 | 0.3018／0.9253；117 | °；m | 產品推估 | 基線尺度，不是局部坡度 |
-| TES 熱慣量 平均（中位；範圍；有效） | 217.269（213；177–276；93/100） | J m⁻² K⁻¹ s⁻⁰·⁵ | 產品推估 | 表層熱性質；7 格 mask=0 補值格已排除（不是 0）；不是溫度、硬度、冰量或深度 |
-| SWIM2 0–1 m 平均（中位＝最小；最大） | 0.6930（0.6650；0.7845） | 無量綱 −1..1 | 產品推估 | 一致性，不是含量、機率、深度；至少半數格同值 |
-| SWIM2 1–5 m 平均（中位＝最小；最大） | 0.6225（0.5；1.0） | 無量綱 −1..1 | 產品推估 | 同上；兩層共用輸入 |
-| 若 1–5 m 只含 0.5 與 1.0 兩值，1.0 的占比 | 0.245（約 24.5/100 格） | 比例（假設） | 本次計算（假設） | 無逐格資料，未驗證；不得當作量測占比 |
-| CDOD MY34 平均／p95；MY35 平均／p95 | 0.1254／0.2400；0.1101／0.1731 | 無量綱（9.3 µm 吸收柱） | 產品推估 | 3° 網格；不可換算覆土堆積率或覆土厚度 |
-| MCS 15/03 LTST 中位；反差 | 171.27／246.31；66.83 | K | 產品推估 | 5° bin，中心距本格約 146.7 km；模式時間校正，無 QA |
+| 存在 | 本格未取得獨立冰真值；軌道power／I/F是直接觀測，但不是直接冰確認 | 本格季節熱模型、SWIM一致性；mAl區域成因描述 | 熱模型下層假設冰；mAl成因為解釋 | 間接支持增加；實際存在仍證據不足；不判無冰 |
+| 深度 | 無本格鑽探／暴露界面／經驗證反射體 | 熱季節差異 | 兩層模型給0.4499824941m | 可引用「產品模型值約0.45m」；真實深度與本格CI未知 |
+| 含量 | 無本格含冰量實測／獨立介電反演 | SWIM、氫背景不能直接給本格冰量 | 熱模型下層物性；雷達介電常數若使用須另假設 | 缺值保留；不填百分比、不填機率 |
+| 覆土／材料 | 地質單元已定位；尚無局部粒徑／礦物／累積率真值 | TI、CTX表面外觀 | 乾層熱模型，不唯一 | 0.45m只是條件性模型乾層厚度；CDOD不能換算堆積率 |
 
-### 2.2 分項證據狀態
+### 來源依賴
 
-| 證據類型 | 取得情況 | 直接／間接 | 說明 |
+- SWIM綜合 N/T/G/RS/RD：氫、熱、影像地貌、雷達表面／地下輸入；不是五次獨立確認。
+- Piqueux MCS/THEMIS 與SWIM熱資料屬共享資料家族；未取得逐像元輸入權重，不能聲稱完全相同或完全獨立。
+- MOLA既是地形背景，又參與SHARAD定位／clutter、CRISM DDR與熱模型邊界；交叉一致不能重複計票。
+- TES本格TI217.27與Piqueux乾層TI188.24估計對象、時段、模型不同；不直接求差判成冰。
+- 地質圖的「dust+ice」解釋與區域文獻引用鏈不算本格新觀測。
+
+## 3. 地球配對的驗證程度
+
+| 案例 | 本輪獨立核對 | 保留／提升的精確用途 | 不可跨越的限制 |
 |---|---|---|---|
-| 影像（HiRISE／CTX） | 未取得：ODE robots 拒絕、shell 403、索引過大（LV-S15、S19、S21） | — | 無影像 ID，無法判地貌 |
-| 熱 | 取得 TES TI（共享資料）；Piqueux 冰表深度圖未取得 | TI：間接（表層材料）；Piqueux：模型 | Piqueux 輸入為 MCS＋THEMIS |
-| 雷達（SHARAD） | 未取得 | — | 無軌跡、無反射體資訊；Séjourné（Utopia 帶，47–78°N）曾**未**偵測到反射，作者說可能是冰太淺或雷達穿透不足，兩者無法區分 |
-| 光譜 | 未取得 | — | 未見任何格內偵測；未見不等於無 |
-| 氫（MONS） | 區域圖存在；本格值未取得 | 間接 | 足跡約 550 km FWHM；本格面積約為其圓面積的 0.22% |
-| 暴露冰 | 最近已知點 389.0 km；格內無 | 間接（區域脈絡） | 只涵蓋繼承點表 |
-| 大區域研究 | Bramson：冰層底深度眾數 42 m、平均 51 m（ε=2.5）；Viola：過量冰層多在約 15–20 m 內；皆在 180°E 以東 | 區域、他處 | 不可搬到本格 |
+| University Valley W站 | Marinova2022完整PDF、TableII、p162 Fig6與附錄；42cm界面；約15cm是0°C活動層 | 保留已知界面＋季節熱響應 | 不能把15cm當全部乾覆土；部分導熱係數依賴外來密度／比熱；無雷達用途 |
+| CS-1 | Rasmussen2023 PDF p5 §3.2：2019年9月取芯；2022年8月露頭20mNE另列 | 風成覆土累積＋同生冰子過程 | 0.35cm/yr為峰值，不是長期平均或火星堆積率；質量冰含量不是vol% |
+| ADE | 78.1722N16.0613E；2017年3月資料維持原範圍 | 一般凍土結構參照 | 與CS-1約5.97km，不接同址鏈 |
+| WISDOM Adventdalen | Brighi摘要仍無可定位測線與同測線獨立冰真值 | 一般雷達方法參照 | Longyearbreen冰洞3D真值不能移接；模型ε不當實測ε |
+| Wendt2026／2023岩芯 | 版本DOI10.5281/zenodo.11187360原Excel；12站UTM33N轉WGS84；各層數值QA | 各岩芯位置的獨立地面資料，非WISDOM驗證 | E6 5–10cm VIC108.9293、PIC101.2191vol%超物理區間，保留旗標；未知雷達位置不能拼接 |
+| Beacon：Liu2018具名測站 | §2–3.3、Table1、Fig2；77°49′S160°39′E；約30cm乾層與已知冰界面 | 限縮提升為熱模型材料參數與界面子案例 | 深部井在相鄰多邊形；導熱係數為半經驗估計；未下載原時間序列；不提升整個谷名 |
+| Haughton：Thomson2012具名測線 | §2.3、3.1–3.3；75°22′06″N89°31′33″W；3m線、450MHz、CMP焦點1.5m處約1m岩芯 | 限縮提升為同測線GPR＋獨立岩芯介電方法子案例，補足WISDOM缺的真值設計 | 雷達穿透濕活動層受阻後挖除約0.9m；不能說驗證未擾動覆土下冰，也不能驗證軌道SHARAD；Table1類型彙整不當本點含冰量 |
 
-### 2.3 判定（冰存在／深度／含量分開）
+- [University Valley](https://doi.org/10.1017/S0954102022000025)、[Rasmussen全文](https://backend.orbit.dtu.dk/ws/files/329047704/1_s2.0_S0277379123001853_main.pdf)、[Wendt原資料](https://doi.org/10.5281/zenodo.11187360)、[Beacon](https://doi.org/10.1029/2017JF004535)、[Haughton](https://doi.org/10.1029/2012JE004053)。
+- 沒有新增谷名候選、沒有全球相似度排名；Beacon/Haughton僅以自行核對的特定研究補明確缺口。
 
-| 問題 | 判定 | 直接證據 | 間接線索 | 模型假設 | 未知 |
-|---|---|---|---|---|---|
-| 冰是否存在 | **證據不足**（非「無冰」） | 無 | 區域性：SWIM 一致性為正（100/100 格）、MONS 區域 W_dn>10% 帶延伸至 Arcadia（約 45°N、150°W；Pathare Sec.4.1）、東側研究的覆土與過量冰 | SWIM 組合式 Ci；二層／三層 WEH 模型 | 格內是否有冰 |
-| 冰深度 | **unknown** | 無 | 無本格值 | Piqueux 二層擬合（未取得）；SHARAD ε 假設（未取得） | 深度；現有資料對 0.5–15 m 解析不佳（Morgan p.6） |
-| 冰含量 | **unknown** | 無 | 無本格值 | WEH 閾值 25 wt%＝過量冰（Pathare Eq.6），無本格 WEH 值 | 含量；SWIM 不是含量 |
+## 4. 驗收／整合的主張修正與禁用
 
-### 2.4 共享輸入與不可宣稱
+- 權威修正清單：`claim_corrections.csv`；只提出對原報告、PR9、PR10的修正要求，沒有改寫正式稿或他人成果。
+- C19/C20/C21/C24：CS-1/ADE/WISDOM不可同址串接；約1.5m雷達反射不代表已獨立驗證冰；ε輸入與量測分離；H2/H3舊用途禁用。
+- C22：峰值沉積率限制保留；C23：60–100cm與UNISCALM≥1m為不同時期／來源，仍未調和。CS-1取芯日期另由未知更新為2019年9月。
+- I06／EV-018：原文p162為2560h/年溫度門檻累積；溫度來自記錄，water activity由冰／水飽和蒸氣壓比計算；不是兩個量均直接量測，也不是能量模型模擬時數。不得移植為MS-02可居住性；Fig6年化，不自行指定某完整曆年。
+- I08：University Valley S/D座標跨文獻交換問題維持未解；不用名稱自動配對感測器。
+- MCS日夜順序修正：day246.3053K、night171.2721K；66.8305K是配對差的中位數，不是兩個中位數相減；來源量與QA未重處理，不當地表／地下溫度。
+- 舊SWIM「若只有兩值則24.5/100格」推論撤回：平均／極值無法證明二值分布，更不是實測格數。
 
-- SWIM Ci 由 N（MONS）、T（TES＋THEMIS 季節視熱慣量）、G（CTX 格圖地貌）、RS／RD（SHARAD）五項平均而成（Morgan 2021 pp.3–4）；0–1 m 與 1–5 m 兩層共用輸入；**本格不知道五項各自的值**，只有合成值。
-- TES TI（ME-03）與 SWIM 的 T 輸入屬同一資料族；MONS 同時進 SWIM 的 N 與 Pathare WEH；以上不可當作獨立確認。
-- 不得宣稱：SWIM＝含冰量或機率；CDOD＝覆土堆積率或厚度；TI＝溫度或硬度；0.5 m 解析度的 SHARAD 雜波或未見反射＝無冰；MONS 約 550 km 平均＝本格值；Arcadia 東側研究結果＝MS-02。
+## 5. 尚缺與待人類決定
 
-## 3. 問題三：地球配對驗證程度（完整：`analog_validation.csv`）
+| 缺口 | 已做的工作／影響 | 最小下一步 |
+|---|---|---|
+| 本格冰真值 | 已有條件性熱深度，但無獨立確認 | 暴露冰重複影像、可定位獨立反射體或原位驗證 |
+| SHARAD冰層解釋 | 有原始power與clutter；未做可信反射挑選 | 表面對齊、噪音／側瓣門檻、地形clutter驗證、跨軌一致性；不以0.45m作已知真值 |
+| 光譜表面材料 | 有1個L科學樣本，尚無完整光譜處理 | 波長、壞band／像元、大氣／光度校正，與同位置影像比較 |
+| 實際覆土累積率 | CDOD無法回答；無變化測量 | 定量重複影像／原位沉積觀測 |
+| MONS格內WEH | 文章取得，數值格未取得 | 下載原WEH與誤差／PSF；仍只作粗尺度氫背景 |
+| 土壤粒徑／礦物／冰含量 | 全球地質分類已取得但不能代替 | 可辨識材料的當地觀測；保留缺值 |
+| 地球原始驗證資料 | UV/Beacon/Haughton文獻用途已限縮；Wendt有原表 | 雷達原始線與岩芯物性剖面共同座標，未擾動覆土對照 |
+| 人類論點選擇 | 證據支持寫「模型估約0.45m」，不支持寫「已證實0.45m有冰」 | 人類決定是否採用此條件性估計及兩個限縮地球子案例 |
 
-| ID | 證據 | 判定 | 與 PR #6 head 比較 | 依據 | 升級所需 |
-|---|---|---|---|---|---|
-| AV-01 | University Valley（E01） | **保留**（用途限縮：已知冰膠結界面深度＋季節熱響應；不含覆土堆積、雷達、塵率） | 判定不變；用途寫窄 | 站點多深度溫度與冰膠結層頂 42 cm（Marinova 2022）；谷級錨點與 W 站相距 1.06 km；2009 與 2022 的 S/D 站座標互換未解（PR #10 I08） | 不適用 |
-| AV-02 | Adventdalen CS-1 岩芯 | **保留為子過程**（風成覆土累積＋同生冰） | 不變 | 岩芯本身是含冰量真值；78.201°N、15.840°E | 不適用 |
-| AV-03 | ADE 鑽孔 | 一般方法參照 | 不變 | 78.1722°N、16.0613°E；與 CS-1 相距 5.97 km | — |
-| AV-04 | WISDOM 多邊形溝槽雷達 | **一般方法參照（不升級）** | 不變 | 無座標、無同線獨立冰真值；ε=3.2／≥7 為模型輸入；本輪新查 EPSC2026-890、EGU25-9766 皆無場址／真值資料；HAL 被擋 | WISDOM 測線座標＋同線開挖／岩芯冰觀測 |
-| AV-05 | Adventdalen 2023 岩芯＋InSAR（Wendt 等 2026） | 新增來源；**不接成雷達鏈** | 新增 | 12 個岩芯 0.63–2.02 m、2023 年 4–5 月；**未用 GPR**；Zenodo 10.5281/zenodo.11187359（未下載） | 岩芯座標與 WISDOM 測線座標並做重疊計算 |
-| AV-06 | Beacon Valley（E02） | **待補證據（不升級）** | 不變 | 本格 PR 無座標；搜尋僅出 Mullins 冰川與一篇不可讀的學士論文；未開到含雷達與獨立冰深的 Beacon 論文 | 自行核對座標＋覆土厚度／冰深真值 |
-| AV-07 | Haughton 多邊形溝槽（E04） | **待補證據（不升級）** | 不變；新讀到「GPR 與淺鑽確認多邊形溝槽有冰」一句 | 無座標、深度、ε、活動層、共線說明；覆土非風成粉砂 | 同線 GPR 深度＋ε 與鑽探深度的數值 |
-| AV-08 | 新增候選 | **無新增** | — | 沒有任何地點在本輪可自行核對資料與範圍而補足缺口；不做全球排序 | — |
-| AV-09 | CS-1→ADE→WISDOM 串接 | **不成立**（不得寫成同址驗證鏈） | 不變 | 相距 5.97 km；年份：鑽孔 2017-03、雷達 2022-03、Wendt 岩芯 2023-04/05；雷達無座標 | — |
+## 6. 重現與檔案管理
 
-## 4. 本輪判定變化
+- 主資料：`mars_ice_evidence.csv`、`local_prior_work.csv`、`analog_validation.csv`、`search_log.csv`、`manifest.json`。
+- 新分析：`analyze_products.py`、`analyze_radar.py`、`analyze_crism.py`、`analyze_workbooks.py`；需要 numpy/shapely/pyproj/pyshp/matplotlib/Pillow/openpyxl。
+- `acquisition_log.jsonl`逐次保存URL、UTC、HTTP／錯誤、bytes、SHA256；HTTP200的ODE錯誤body仍標錯誤，不當成功產品。
+- 原始大檔與完整文章在本機 `sources/`；`.gitignore`只排除本輪大陣列／GIS／文章全文與中間抽取，沒有刪除。Git交付小型目錄、標籤、ROI陣列、衍生表與圖；manifest明列local-only與已納入Git的差別。
+- 熱圖原檔Notes標示all rights reserved，Git交付本格／小鄰域衍生值、來源與hash，沒有重新散布全球原圖。
+- 舊 `build_tables.py`／`derive_metrics.py`／原verifiers是前輪快照；保留歷史，但不得重跑覆蓋新表。本輪以 `verify_revision.py`為檢查入口；`build_statistics.py`依新表更新計數。
+- 下載未取得、檢索無命中、產品未分類、無法有效判讀四種狀態分開保存；均不當無冰或無既有研究的證明。
 
-- 無候選層級的處置變化（E01 保留；E02、E04 待補；E03 維持降級）。
-- 變化的是**描述界線**：E01 用途限縮；E03 拆為 CS-1（保留子過程）、ADE（方法參照）、WISDOM（方法參照）；新增 Adventdalen 岩芯來源（AV-05）但不接鏈；Haughton 新增一句已讀內容但不升級。
-- MS-02 位置：由「Cebrenia 四邊形內、是否 Arcadia 未確認」更新為「MC-7 內；在 Arcadia Planitia 範圍框（次級來源）內靠西緣約 84 km；未見任何研究的範圍涵蓋 168°E」。地質單元仍未確認。
+## 遠端並行盤點差異（保留、不混算）
 
-## 5. 未知（本輪無法取得，原因見 search_log）
-
-- 格內：冰是否存在、深度、含量；SHARAD 軌跡與反射；HiRISE／CTX 影像 ID 與地貌；CRISM 光譜；暴露冰；Piqueux 像元值；MONS 本格值；地質單元。
-- 地球：WISDOM 測線座標與同線冰真值；Wendt 岩芯座標；Beacon 座標與資料；Haughton 數值。
-- 來源間：Piqueux 像元大小（2 ppd 對 3 ppd）；Morgan 2021 研究區經度字面（「290°E to 225°E」）有歧義；Ramsdale 格圖帶經度界為近似。
-
-## 6. 待人類決定
-
-- 報告是否沿用 MS-02 的地理描述：「Cebrenia（MC-7）內，近 Arcadia Planitia 西緣；單元未確認」，而非「Arcadia」。
-- 報告 H2／H3、場址比較表與「E03 可測」的殘留措辭（PR #9 C24）是否改寫；本輪**未修改**正式報告。
-- 是否把 E03 在候選表拆成 CS-1／ADE／WISDOM 三列。
-- 報告是否保留「SWIM 1–5 m 中位 0.5、最大 1.0」的呈現；本輪補充的 0.245 為假設，建議不寫入正文。
-- 是否在能連線的環境補取：Piqueux `d_m`、SHARAD 軌跡、ODE 影像清單、SIM 3292 GIS、Wendt Zenodo 資料（需要時另開補件任務）。
-- PR #10 I06：EV-018（約 2560 h 雙閾值）本輪未核對，仍待核定。
-
-## 7. 重現與檔案
-
-- `python3 outputs/research/MS-02/local_validation/derive_metrics.py` → `derived_metrics.json`、`fig_local_prior_work_extents.png`
-- `python3 outputs/research/MS-02/local_validation/build_tables.py` → `local_prior_work.csv`、`mars_ice_evidence.csv`、`analog_validation.csv`、`search_log.csv`
-- `python3 outputs/research/MS-02/local_validation/verify_local_validation.py` → `verification.json`
-- 距離使用 Mars 半徑 3,396 km（格尺寸、火星距離）與地球 6,371 km（地球站點距離）；格圖帶界為本次計算，非論文所給。
-
-## 5. 資料尺度過粗：整理與判定（表：`outputs/research/MS-02/local_validation/scale_gap_resolution.csv`，核對：`verify_scale_gap.py`，3 輪一致）
-
-- 地形、熱性質、水／冰、大氣／沙塵：已用現有最細資料列出格內數值與限制（SG-01–04）。
-- 當地材料、覆土、形貌：Excel（含 MEDA 原始紀錄，屬 Jezero 漫遊車）與 GitHub 皆無亞格（<3.7 km）資料，**無法由現有資料回答**（SG-05–07）；所需最小資料見表。
-- 因此「已回答」只限於格尺度描述；三項未知維持 unknown，不推論為無冰或無覆土。
-- 補（SG-08）：以 `screened_pool.csv.gz` 取本格 ±2° 的 81 個 0.5° 格比較——熱慣量 186–302（均 241.6；本格 217.3 偏低）、高差最大 542 m；顯示周邊並不均一，但仍是同一批粗產品，不能代替當地材料、覆土、形貌。`all_data_usage.csv` 也把「局部材料、冰真值、細地形」列為未取得，與本判定一致。
-
-## 6. ODE 網頁查詢補充（2026-11-15，LV-S56–S60；表：`ode_coverage_query.csv`）
-
-- 方式：在使用者電腦的瀏覽器操作 ODE Data Product Search 表單，座標框 52.5–53.0°N、168.0–168.5°E（未呼叫 REST 介面）。
-- 取得：CTX 5 景（2012-05-12、2012-06-09、2016-04-13、2018-01-20、2024-12-31）；HiRISE 0；SHARAD 3 筆觀測（2007-07-24、2010-10-20、2010-11-05；各有 EDR＋USRDRV2 雷達圖；無雜波模擬）；CRISM 383（VRDR 6）。
-- 仍未取得（不因此改變判定）：影像與雷達圖內容、CRISM 光譜、Piqueux 像元值、SIM 3292 GIS、WISDOM 座標＋同線冰真值。形貌、覆土、材料維持未知；本節只把「清單」補齊。
-- 限制：ODE 對範圍框是「相交」或「包含」未核實；HiRISE 0 只代表清單無此景。
+- `ode_coverage_query.csv`與LV-S56–60來自ef5eb16的瀏覽器清單；沒有冒充本輪重跑瀏覽器。
+- 該清單CRISM383筆含TRDR/MRDR4/DDR/VRDR等不同產品，不是383次獨立光譜觀測；其TRDR180與本輪REST177筆差異尚未調和，不能相加。
+- 該清單SHSIMU=0已被本輪取得的3個SHSIMU產品與對應browse反證；原清單保留並新增修正欄，不再引用「無clutter產品」。
+- 新清單另提示THEMIS等產品；本輪未逐一取得，並未將未下載誤記為無觀測。

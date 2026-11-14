@@ -1,158 +1,1533 @@
 {
-  "purpose": "MS-02 local validation: research gap, local Mars material/ice evidence, Earth analog validation level. Data/notes only; no report prose, no slides.",
-  "date_taipei": "2026-11-15",
-  "pinned": {
-    "PR6_head_at_start": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
-    "PR6_base": "handoff/verified-data-20261114 @ f7076c9fdc77e00244ed5d6863aad2bf78cfa28f",
-    "main_read": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
-    "PR9_head_read": "c206553fc681328d214cbbcd508d3c5b1391e200",
-    "PR10_head_read": "0260c511d9fce6be12d3460a69e474f333160cbf"
+  "schema_version": 2,
+  "task": "MS-02 fixed-ROI local validation; evidence only",
+  "date_local": "2026-11-15",
+  "timezone": "Asia/Taipei",
+  "start_head": "c309675fbe713a8548a75abf29b54e64217768f9",
+  "preserved_remote_head": "ef5eb162b1df0919b8d6dd780782896188607b2c",
+  "user_known_old_head": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+  "branch": "research/ms-02-earth-analogs",
+  "base": "handoff/verified-data-20261114",
+  "base_sha": "f7076c9fdc77e00244ed5d6863aad2bf78cfa28f",
+  "pr": 6,
+  "fixed_roi": {
+    "south": 52.5,
+    "north": 53,
+    "west_east_positive": 168,
+    "east_east_positive": 168.5,
+    "coordinate_system": "planetocentric; Mars sphere3396190m"
   },
-  "environment": {
-    "python": "3.13.18",
-    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39",
-    "numpy": "2.5.3",
-    "matplotlib": "3.11.2"
+  "audit_reads": {
+    "PR9": "c206553fc681328d214cbbcd508d3c5b1391e200",
+    "PR10": "0260c511d9fce6be12d3460a69e474f333160cbf"
   },
-  "inputs_from_repo": [
-    "outputs/research/mars_reselection_20261114/final_candidates.csv",
-    "outputs/research/mars_reselection_20261114/known_ice_points_morgan2025.csv",
-    "outputs/research/mars_reselection_20261114/bounded_prior_site_audit.json (inherited statements, not re-read)"
+  "acquisition": "acquisition_log.jsonl; actual requests including errors; source ZIP hash in geology_archive_provenance.json",
+  "storage_policy": "Large originals, copyrighted full articles and intermediate extracted text remain local-only; labels/catalogs/ROI numerical derivatives and source hashes are committed. Missing local-only data after clone may be reacquired by exact source URL; no claim all source bytes reside in Git.",
+  "reproduction": [
+    "extract_geology.py ZIP_PATH",
+    "analyze_products.py",
+    "analyze_radar.py",
+    "analyze_crism.py",
+    "analyze_workbooks.py",
+    "revise_evidence.py",
+    "finalize_records.py",
+    "build_revision_manifest.py",
+    "verify_revision.py",
+    "build_statistics.py"
   ],
-  "search_log_rows": 60,
-  "verification": {
-    "PASS": 12,
-    "FAIL": 0
-  },
-  "data_products_not_obtained": [
-    {
-      "product": "Piqueux 2019 ice-table depth map (d_m.ascii)",
-      "reason": "no download URL found; host unreachable from shell"
-    },
-    {
-      "product": "SHARAD tracks/radargrams in 52.50-53.00N,168.00-168.50E",
-      "reason": "PDS Geosciences index fetch client_error; shell CONNECT 403"
-    },
-    {
-      "product": "HiRISE/CTX footprints (ODE REST; RDRCUMINDEX.TAB 168,675,271 B)",
-      "reason": "ODE refused by robots; TAB cannot be parsed via fetch; shell CONNECT 403"
-    },
-    {
-      "product": "CRISM/OMEGA detections",
-      "reason": "title-level search only; no product retrieved"
-    },
-    {
-      "product": "Tanaka 2014 SIM 3292 GIS (unit at coordinate)",
-      "reason": "astrogeology/pubs.usgs CONNECT 403; pamphlet read to p.14 only"
-    },
-    {
-      "product": "MONS WEH value at the cell",
-      "reason": "map not retrieved; paper text gives no cell value"
-    },
-    {
-      "product": "Wendt 2026 Zenodo core data (10.5281/zenodo.11187359)",
-      "reason": "not downloaded (zenodo unreachable from shell)"
-    },
-    {
-      "product": "HAL insu-03914738 (GPR field tests on Svalbard)",
-      "reason": "Access Denied by Anubis bot protection; not bypassed"
-    }
+  "dependencies": [
+    "Python3.9+",
+    "numpy",
+    "shapely",
+    "pyproj",
+    "pyshp",
+    "matplotlib",
+    "Pillow",
+    "openpyxl"
   ],
-  "inherited_not_reread": [
-    "Dundas 2014/2021 point tables",
-    "EZMars/SWIM4MIM/MCOA/Phlegra proposals",
-    "Morgan 2025 Table 2 (points read from the repo CSV)"
-  ],
-  "unresolved_source_discrepancies": [
-    "Piqueux pixel size 2 ppd (data-file page) vs 3 ppd (abstract page)",
-    "Morgan 2021 study-region longitude wording '290E to 225E'",
-    "Ramsdale 2019 strip longitude limits not stated (edges are this-study estimates)"
+  "historical_scripts": "build_tables.py, derive_metrics.py, build_manifest.py and historical verifiers reflect earlier snapshot; do not run to overwrite revised evidence",
+  "excluded_self_hashes": [
+    "manifest.json",
+    "revision_verification.json",
+    "statistics_summary.md"
   ],
   "files": [
     {
-      "path": "docs/research/MS-02/local_validation/research_notes.md",
-      "bytes": 16627,
-      "sha256": "0806fa57b20474eca3dab4bd0c4e441487282c1f781a198131ed7092a6c418e3"
+      "path": "outputs/research/MS-02/local_validation/.gitignore",
+      "bytes": 318,
+      "sha256": "e3545c31106b8fe0e40417793f11eb63ee05a776af3bb5059f7f1bf08bc7d32e",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/acquire.py",
+      "bytes": 1149,
+      "sha256": "cd54b9473a093090716ac408b255a426f527874e19663003782a717058cad9a1",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/acquisition_log.jsonl",
+      "bytes": 75926,
+      "sha256": "87cb08dacd5b648a9bf9311eb798995c1d52a6e80e52b7044d661b9b406dd7ce",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     },
     {
       "path": "outputs/research/MS-02/local_validation/analog_validation.csv",
-      "bytes": 6586,
-      "sha256": "9e2160cc8f9d6d87a0f605f64cc2e24cf5abf8d6ada30a6dc09929bb781390df"
+      "bytes": 7078,
+      "sha256": "7ca5a68fda86bad0835c40a17a6496cd98a2bfb1dc133a792d8fc402c84c0924",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/analyze_crism.py",
+      "bytes": 1632,
+      "sha256": "ed155f4f4614ca08e1c5bbdd9e5ac6fab606bdb52ee6e00e5898b0df066aa179",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/analyze_products.py",
+      "bytes": 6902,
+      "sha256": "cac3ed3960adb8a77827c0408f64002825289ab09e8ae0310b4d981319c76df8",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/analyze_radar.py",
+      "bytes": 3462,
+      "sha256": "722402c6c31b09196515f0aa175e0865a26bc71ad74d13cf8d0835f161a9129b",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/analyze_workbooks.py",
+      "bytes": 2411,
+      "sha256": "97b4a797be816f91ef2b3f0085056f0c1bf24678eebe94300ec3f650a7ada893",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     },
     {
       "path": "outputs/research/MS-02/local_validation/build_manifest.py",
       "bytes": 3573,
-      "sha256": "0f749654f1e306d1165c8da6d127f2422fda7f1a34f98ad8d10d49ca4135fa18"
+      "sha256": "0f749654f1e306d1165c8da6d127f2422fda7f1a34f98ad8d10d49ca4135fa18",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/build_revision_manifest.py",
+      "bytes": 2739,
+      "sha256": "6601517fe3004414fb0a9d27cf7c1cdbb4b9fd7668355acff0e76382d76b48a0",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     },
     {
       "path": "outputs/research/MS-02/local_validation/build_statistics.py",
-      "bytes": 4212,
-      "sha256": "c6cbc5728e347372838b6af949d51cafc019621d9f7bae494b0f116155e57df7"
+      "bytes": 1590,
+      "sha256": "ca4b72c34dcec6466d013365c129cb7744b345f483f8fabcc4e9759e1d5f3226",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     },
     {
       "path": "outputs/research/MS-02/local_validation/build_tables.py",
       "bytes": 44346,
-      "sha256": "559a5bc840c7f482d04ddfb15b9c5dac6ffc39c1988dd2ae1ef646e27991032d"
+      "sha256": "559a5bc840c7f482d04ddfb15b9c5dac6ffc39c1988dd2ae1ef646e27991032d",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/catalog_summary.json",
+      "bytes": 836,
+      "sha256": "b31f31c5b4206d4750153f91905f306e9c57beb397ce1877c52ff528f78591da",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/claim_corrections.csv",
+      "bytes": 3013,
+      "sha256": "651ac0efe311a664de66299cf8bbed54de510bfd75a85bb03d884b981b48cf1b",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/crism_quality.json",
+      "bytes": 891,
+      "sha256": "c5bcbd398bb82e9be2834725f7abfd624fd91743de560fda9a76f868b0466364",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/crism_roi.npz",
+      "bytes": 171051,
+      "sha256": "5623622ad64840dc4cac3877048549c50adb93d18c70025bc3f1f1841c0c1d27",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     },
     {
       "path": "outputs/research/MS-02/local_validation/derive_metrics.py",
       "bytes": 8595,
-      "sha256": "e0e40d016323826aa3fffa70d14f538e11ca502db106dd1c3b79a1ab43544d71"
+      "sha256": "e0e40d016323826aa3fffa70d14f538e11ca502db106dd1c3b79a1ab43544d71",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     },
     {
       "path": "outputs/research/MS-02/local_validation/derived_metrics.json",
       "bytes": 2198,
-      "sha256": "6747baa0d7ed452b51217b3eb58f5bfa2016c34e139066bbf4c39d93cb684d5c"
+      "sha256": "6747baa0d7ed452b51217b3eb58f5bfa2016c34e139066bbf4c39d93cb684d5c",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/extract_geology.py",
+      "bytes": 1512,
+      "sha256": "105e633d22bce3db1aeda380a3e7bd0c38edf51b534741349a55c5217dcf03f9",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/extracted/marinova2022.txt",
+      "bytes": 121508,
+      "sha256": "f8a2017c780221bdc12ce7dc5257ad8f9cfab9168826fbf363719c044a9802c0",
+      "storage": "local_only",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/extracted/marinova_p162.png",
+      "bytes": 165267,
+      "sha256": "acb1dc7acc3a1d5c24a7dc7a2b85a1671526b5ffb2fda5ee824a6f3286fcdc76",
+      "storage": "local_only",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/extracted/rasmussen2023.txt",
+      "bytes": 107964,
+      "sha256": "5545133bf3ecf1e72981b51afa8224d2a0948d2fec48ed4d2b79560d30f702bc",
+      "storage": "local_only",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/extracted/sim3292_pamphlet.txt",
+      "bytes": 193958,
+      "sha256": "0d736cc154bad8269670a8001ee3066a20049290ff09c8d0095ee008e06557a1",
+      "storage": "local_only",
+      "role": "derived_or_method"
     },
     {
       "path": "outputs/research/MS-02/local_validation/fig_local_prior_work_extents.png",
       "bytes": 118791,
-      "sha256": "ea16e533e7bd137314b8c9cad7590d58da2630c7ed5f8873770fd5584fb20dfc"
+      "sha256": "ea16e533e7bd137314b8c9cad7590d58da2630c7ed5f8873770fd5584fb20dfc",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/fig_sharad_observed_clutter.png",
+      "bytes": 960970,
+      "sha256": "9ba24a4703b60de0cd0936c6b92dee23e1c5d498c37438a821ff734c5485dc67",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/fig_verified_footprints.png",
+      "bytes": 184673,
+      "sha256": "10133a65a2b49713cbbb819db41cc9508f249f9c363d4b9b01540e6235d8ea08",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/finalize_records.py",
+      "bytes": 9346,
+      "sha256": "13d9c2a64227b087a43772dac83cd6def1f95e9c6a1da5e41a7a3098926d4952",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/geography_check.json",
+      "bytes": 756,
+      "sha256": "9328b6d8aa1244ae71a84fba8032a66d4ba999890e11fda5e4c3fcfedaad32a7",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/geology_archive_provenance.json",
+      "bytes": 266,
+      "sha256": "fa78245c231370a80328cf8f0bdda076653b5bfff1513cbc7ba4d8bebf140f2a",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/geology_roi_original.geojson",
+      "bytes": 110043,
+      "sha256": "43cfc81b8cbdccdb374922508ebe2cf759a707dc005fba5d178c4d6cd902fb23",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     },
     {
       "path": "outputs/research/MS-02/local_validation/local_prior_work.csv",
-      "bytes": 10557,
-      "sha256": "e557b642fa2220efddec11432cb1903efc356907df2b4cdcdfae8c57ac494b7c"
+      "bytes": 12054,
+      "sha256": "4df89c3f1e58ceb3937817d7e60b1451e301a33837d0668e795a0fee5075de7e",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     },
     {
       "path": "outputs/research/MS-02/local_validation/mars_ice_evidence.csv",
-      "bytes": 12227,
-      "sha256": "7f920dfd6cf923b7c40adeb18142c22aea66eb074e1816f0692669f2b23f7228"
+      "bytes": 14953,
+      "sha256": "9e8394792c4781f6a0ed7d63c7179b3c397d2d0ac8951af5959b5c7740dfc8d5",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     },
     {
       "path": "outputs/research/MS-02/local_validation/ode_coverage_query.csv",
-      "bytes": 772,
-      "sha256": "c5c68c374ca55fea0d48e5078a07562caaffa6d332a9b4716d544ab56a4792a1"
+      "bytes": 2192,
+      "sha256": "5e84cbcc7fce00270e0e646a06ce292bb4820e9830e6712501482ebc7d0c889a",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/preview_d01_027516_2328_xn_52n191w.img.png",
+      "bytes": 26110,
+      "sha256": "8e9b0d3fcd76c5b6255090f5243e6eb2e654749342fabdce7f061135ee2657c8",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/preview_g23_027160_2321_xn_52n192w.img.png",
+      "bytes": 25594,
+      "sha256": "01f536314b94ce432ada3130768af2ab911b93c30bc370396862fb3542f25a13",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/preview_j02_045529_2335_xn_53n191w.img.png",
+      "bytes": 37030,
+      "sha256": "f1d9cc437d9de72b22d87b17d2071a0f614b2dfcd2f6920149930322a059e33d",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/preview_k01_053836_2341_xn_54n192w.img.png",
+      "bytes": 43343,
+      "sha256": "dcf210e2af96f85d42277075bb3ab33aa371061a32af4e886db181e92414c7d9",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/preview_v16_086396_2333_xn_53n192w.img.png",
+      "bytes": 39127,
+      "sha256": "8fa38828c42b520321b454faa64e9b15dbe7fa12a8376d469eea5f8e47f22328",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/product_footprints.csv",
+      "bytes": 276860,
+      "sha256": "b33a3d579f6233f23b94ea14247c6cf9b5d7ed9fe022e231332fa1214b700b54",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_checks.json",
+      "bytes": 2246,
+      "sha256": "5ce6d146fcb5ef83d7d4e138e6e3dfe6f52ff53cc7ef96f56cc26b25efb7b612",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_00464501.npz",
+      "bytes": 815601,
+      "sha256": "4d08b6b9083e19a9cac7fde6415d99291fbd720df444388eff91c8d227c92608",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_00464501_clutter_roi.png",
+      "bytes": 21900,
+      "sha256": "3a5e252afcda8cb054c1895912ccb2505d2bcebb712cd035eb57dca95dd19b8a",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_00464501_geom.csv",
+      "bytes": 6548,
+      "sha256": "4f67b7e44bff52196489f2e597471c0151026349291d98e224fa18dd866d2dcc",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_01983502.npz",
+      "bytes": 827610,
+      "sha256": "198ba059c4b3c379bfeb7f492ad381461c192edc74a12c7791b60c1aedf2d90c",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_01983502_clutter_roi.png",
+      "bytes": 22480,
+      "sha256": "4b7f82f600e65f3260029496359c5caae1f7c9c9b79f1cd7e14946bc0445079d",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_01983502_geom.csv",
+      "bytes": 6648,
+      "sha256": "24347a68e05500777fd7e217acb49100a9da487ddd8d1b94ccb2279aee05b729",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_02004601.npz",
+      "bytes": 827405,
+      "sha256": "7a3332adfadaecbe1b7273881157b99ed8162396d2b19315f0cdb3b137fb2132",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_02004601_clutter_roi.png",
+      "bytes": 22239,
+      "sha256": "b7c64cad7668848d68281846d869f1a39236af785e5bcf9b2ff1cc402c8cfff0",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_02004601_geom.csv",
+      "bytes": 6648,
+      "sha256": "f1c806951724b0d54309993d3a0dbd78fc1638c35bdad34fd18215a128dc63aa",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/revise_evidence.py",
+      "bytes": 16563,
+      "sha256": "45cc5a06fe925624f1a7338be99a9ed248bb4ab2e48f4eff5f11088aebb82e11",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     },
     {
       "path": "outputs/research/MS-02/local_validation/scale_gap_resolution.csv",
-      "bytes": 3043,
-      "sha256": "729681fbb330d576671223373e84c5635510d50d4733b4180f38eed0c2b96af9"
+      "bytes": 2932,
+      "sha256": "a5e4484f6a7c4f89f407d2fd357b41520ab6375f8fefe0cb99da055dad6c7112",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     },
     {
       "path": "outputs/research/MS-02/local_validation/search_log.csv",
-      "bytes": 13697,
-      "sha256": "f14540c284c3eb157736233f7276e278ac78f9aa4325bd9e8dfadcd1afd950b0"
+      "bytes": 80061,
+      "sha256": "f298c96cb4b6fca2e64ed3207db896a24c0e252b1d357d6fedaa61ac765b984e",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     },
     {
-      "path": "outputs/research/MS-02/local_validation/statistics_summary.md",
-      "bytes": 3715,
-      "sha256": "90de416d1e6a8ea09c3e2cdbb5904feb62e647ef9206887a4e4226232a0458b0"
+      "path": "outputs/research/MS-02/local_validation/sources/Adventdalen_data.xlsx",
+      "bytes": 51908,
+      "sha256": "a9876f8280461c7b675e3a231ac4cd1d9d466a24d492598b59b17f03fdb1df49",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/arcadia348.html",
+      "bytes": 48527,
+      "sha256": "b160ec01ade324b41d489dd9b18fe090ac95a5e856c2052cbe66405dc2e955e0",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/catalog/CRISM_DDR_1565d.json",
+      "bytes": 17660,
+      "sha256": "9916244b17c852500c9e90847398a206c93992944da4a631bb330c55078f3e07",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/catalog/CRISM_MTRDR.json",
+      "bytes": 398,
+      "sha256": "f00cda1760e065b9762014f8d56ee386138c03364d805eaacb21e7c93766c41b",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/catalog/CRISM_TRDR.json",
+      "bytes": 1769861,
+      "sha256": "1f5f45d3f4d92c8332a65adc7c16c3f41ea315ed336cc0467b3b574b2d559453",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/catalog/CTX_EDR.json",
+      "bytes": 29012,
+      "sha256": "1e443654c6ca8aa12a99d977277bc63919638fc75329571d27197802d6d6fdc3",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/catalog/HIRISE_EDR.json",
+      "bytes": 394,
+      "sha256": "4ea0c41cbce47125bcfca0d6da8113bc50674ac0bcd1cc8747f52944bbf05a06",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/catalog/HIRISE_RDR4.json",
+      "bytes": 398,
+      "sha256": "4e8d19cc61ea980c661701dededb834f63fafc829d0bdef1280d5b13fc9c7cbc",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/catalog/SHARAD_SHSIMU.json",
+      "bytes": 44884,
+      "sha256": "1bbb8845423bf994826f59686a9c4458b3ac491e575db800a8df92c56f617403",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/catalog/SHARAD_USGEOMV2.json",
+      "bytes": 36037,
+      "sha256": "14d7754edc4d230681cd0657aca1ff0e0303d74277cfa5e0646ef6dcff59e352",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/catalog/SHARAD_USRDRV2.json",
+      "bytes": 38163,
+      "sha256": "a32ed307c761d6e065c5d723e1de5fc68d03ba70fb3616b19f646afd815bb09d",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/cebrenia1979.pdf",
+      "bytes": 8952806,
+      "sha256": "c86b494b269673fce8f3a42008bbd31383dbb5e975d8b3bde3690b9beffb00a3",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/crism_help.html",
+      "bytes": 58477,
+      "sha256": "df7a7e7bf3c9c9c1897401c1c27d5f2a85784a4529031db11f595f0fa55cf966",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/geology_roi.json",
+      "bytes": 85001,
+      "sha256": "47174f39454d627379744fe0e30b4c6c66d04d169754b93ae78f22f5866e7b5d",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/geology_service.json",
+      "bytes": 43798,
+      "sha256": "a81e253d11b042027f0a3162b4f32211591ae13a4af6c7ee90878d3070904268",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/marinova2022.pdf",
+      "bytes": 1577252,
+      "sha256": "3090b004f5d633897e447eb9b58d7e3ab9ab32f47f56d18c50b2331bc0a6e1a1",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/ode_crism.json",
+      "bytes": 469,
+      "sha256": "5a5118942ee1529e30a95d8e08240c24d62661f2c3386f93b356343e2feccaf6",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/ode_crism_TRDR.json",
+      "bytes": 528715,
+      "sha256": "11b6a177624b96e83483724042fb1744e9bfb9fbf83c350873468d1fdcfeb3ba",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/ode_ctx.json",
+      "bytes": 459,
+      "sha256": "84c22d752b7ae1e7f0733fad45492ba507c64c10ac5dbf258b0d647ca5ce206e",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/ode_ctx_EDR.json",
+      "bytes": 12489,
+      "sha256": "d15cf5dc5d1cf132c30bb6684e4faf98d8fc8b472000255767bff84816b42279",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/ode_datasets.json",
+      "bytes": 385612,
+      "sha256": "3358ce926dbc34cc733f92bc66dce4b53bb231e799732a4f718161ef1fb61fc2",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/ode_hirise.json",
+      "bytes": 470,
+      "sha256": "be08cb7fd4808f6e6941d662c301dc114e2cab56a361b5dfa88c74164961f4f1",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/ode_hirise_RDRV11.json",
+      "bytes": 384,
+      "sha256": "607875183e6599497c83f446eaf14970e079fb60f1bbeeeb95b7b69f0d03d121",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/ode_sharad.json",
+      "bytes": 470,
+      "sha256": "981bb5acdd7d4a388b6c016b54d28b7cedd51a5889238c4f6416d6e6c3dd4529",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/ode_sharad_RDR.json",
+      "bytes": 10079,
+      "sha256": "45b9d9b7e18a1bf6cd28c6bde87f947abf8e44d813bbadaee96e0116c15829ac",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/pathare2018.pdf",
+      "bytes": 1908797,
+      "sha256": "a57be3a6612b55126e47539d638d22ce0ff9cbf5c512bafd147d6a6abe4aabb6",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/piqueux/Lat.ascii",
+      "bytes": 2660,
+      "sha256": "e85e1881c73691ae5dd58f7e1e5dbb805e900776c72a8b82b6efed14b545f0e3",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/piqueux/Lon.ascii",
+      "bytes": 4820,
+      "sha256": "d0ad069f1f456b3291cc57f7116e75696ffdcaff69b40c38189e9807c23de86a",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/piqueux/Notes.txt",
+      "bytes": 1926,
+      "sha256": "472a30fe9ce97f8e476eeceb5d42ac5e4ddb9cd55fb33f48a2741302cf3c75ca",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/piqueux/TI_SI.ascii",
+      "bytes": 2484261,
+      "sha256": "20e842167fcb4daa811cc83ba69a666d47a73338274d8a65f85e69b5b7e4d2fb",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/piqueux/d_m.ascii",
+      "bytes": 2434482,
+      "sha256": "1101d38a45c88f7531fcfa0e7af163d94e8fb337d53e0b7f766f81762ae5b1ff",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/d01_027516_2328_xn_52n191w.img.jpeg",
+      "bytes": 28700,
+      "sha256": "b9172425344e8d2bd1281ecae939769db41ad926fbf3388745d07756c66532f8",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/g23_027160_2321_xn_52n192w.img.jpeg",
+      "bytes": 23966,
+      "sha256": "2f7e1fce35069e0295db0519dc55dfc5dd023ada85761d1c603be1a6c153139c",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsp00016015_01_if218l_trr3.lbl",
+      "bytes": 9518,
+      "sha256": "574dd5db39763c31ce28da6586a59f8e66af7d0e994ddcc138fa98f4616767f0",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsp00016015_01_if218s_trr3.lbl",
+      "bytes": 8734,
+      "sha256": "4eab215cc3f41ec6dc675f96255c955cf576e6f5b7ef2719fb769dd63e1cce65",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsp0002dd17_01_if218l_trr3.lbl",
+      "bytes": 9483,
+      "sha256": "282ae3bfd903b3c7879f7b0f09dde9df73edc79e11220d7e1def0351edda3caa",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsp0002dd17_01_if218s_trr3.lbl",
+      "bytes": 8736,
+      "sha256": "46693456685848bcb533fbd8018c87fd96b46668f1d8474f9e31fb59c72e027d",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv0001f528_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "85a2f62a627d5369e1eb7ef3675d70b5fa0dc9176a91e4b0ece10c0f1ab02214",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv0002248c_05_if209s_trr3.lbl",
+      "bytes": 8736,
+      "sha256": "c71bd8d33b0eed38648837d670c870f331448d4676ca087098053110bf78f017",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv00028c5b_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "02ec242c71c58002d07c8312ff9abddf3d4ca40152990abf91563c8ba12efc83",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv000291f0_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "8c1dc6db3e690373a95e8294f8e21ac88c97c1ef11037ab5b3e5579078fa5b33",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv0002c6a9_01_if209s_trr3.lbl",
+      "bytes": 8736,
+      "sha256": "d35a78357dbb40aeabaea1da042ef76a47f35ce528765a083dbcce6db6994059",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv00031a8a_03_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "ec6c1e224b0bef856cbb449bf2e55d4635fcb7b2f936573753aaee2a7df60037",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv000330a8_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "078a9b3db4269f4ab3e84e464ea1622d3205be3e8d2bb2763ad06cc6528aee38",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv000348af_01_if208s_trr3.lbl",
+      "bytes": 8732,
+      "sha256": "82b8d8d9cb0e3a20acaddc2316c1816f4dc46bb9a9426895a3b059b06bca3a06",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv00034e71_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "b215c7fb54eb06f8df11cd5e670dbb35ff3df98403fd13965e32c79a4dd3c379",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv00035289_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "0ad35e60f3431d3c7cd8d33ea62fe1131d2e75cb711c59391e330812c8000e4f",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv000358e1_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "17a8e9031906668daa11b178e52d7069e0fc0990606cfe4d7af46e26214df018",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv00036180_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "91543b4c255b67b26e276e0413681054f787698ad6a12682a7f8e9d5daaf9fe7",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv00036850_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "5d5b9492f1f943b2fcc40cb78f6a7b71aa78a7e12da2f9434522b60877c626fb",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv00036df7_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "2357c4227760c13f9a322a8e93ffaa24b6357b06921cee51734d1e0dbd444022",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv0003b68e_07_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "850eaf4a34d27eca5080ca3de95321131d93cb623ffa1872a8c75175205f4f71",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv00040375_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "db1b733fcd62c5876ca10aeadea7d4d49221c8fb5e8d08adb534f162a2b8df3e",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv00040d33_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "eed1b847b52979d4935b8cf8a4e56d736aab72f9f71c03cab12423e9135c3984",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv0004521d_01_if209s_trr3.lbl",
+      "bytes": 8736,
+      "sha256": "514c05a56f87e8c7cfd441ba8112a601f936c15625e318b92e1f4397346d69c6",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv000469fd_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "0a08f5be3a70b5cd7c1d32284e035109f777ad4053883d53fdfb8b05266630e3",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv0004c085_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "35af6e1022783f477c7f5c3d90588a4c9827eb9bf960c39824da78da8b0ed265",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv0004c47c_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "d4615078e44fcc891fd93cfd02f0f737c1dbefd0d55d1148d5232f1aabb43906",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv000551b1_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "aed21cbb19fb20adb672ffa18811cc25235850a1166c10de7ba519d7a8d8b476",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv000562e7_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "31de8b3113aa3cb1d652efb0c9c030e88d1b8c0c8e3b677c92b1dd6b9eec38f6",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/hsv00056e79_01_if209s_trr3.lbl",
+      "bytes": 8737,
+      "sha256": "715981f438cf3f96195b7c4b5160e2470a271320a8b90253565b0076587de559",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/j02_045529_2335_xn_53n191w.img.jpeg",
+      "bytes": 1770318,
+      "sha256": "15dc21c11108fa42403b3fc892f3a16229140823da206c8d4f06ec60ff33cc60",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/k01_053836_2341_xn_54n192w.img.jpeg",
+      "bytes": 770724,
+      "sha256": "8575759c6cbdebb16f55d323a79c99c22bf170167964fcff1445fe96a98bb736",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp00003061_07_if214l_trr3.lbl",
+      "bytes": 9480,
+      "sha256": "b1eceea06df94a86b28a0d1d96ba83896059d55bf94cf88e53fc50d150b17246",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp00003061_07_if214s_trr3.lbl",
+      "bytes": 8768,
+      "sha256": "7e592218e7e21c2491ffb7d5b4f9f02e5ca56377938473558cccd5c2984a3a6d",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp000072e0_05_if214l_trr3.lbl",
+      "bytes": 9480,
+      "sha256": "055e2cd18507a2ecf282ed49c3d9be7174b3230fc05bee553546e0604b27419c",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp000072e0_05_if214s_trr3.lbl",
+      "bytes": 8731,
+      "sha256": "4323f8661b1ab37f3dbefacf094d1d79e8e3105cd63fa03d984d6e7931d73ab1",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp00007762_05_if214l_trr3.lbl",
+      "bytes": 9480,
+      "sha256": "3b2e366b5df89d3da0f9715ba36278998c5a035e8acfcf47f039e5e159fb0f08",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp00007762_05_if214s_trr3.lbl",
+      "bytes": 8731,
+      "sha256": "6a98ed78a969b8387f96e8eff96dd5adae16e6b093a940ecbb29959d14e9f340",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp0000845d_05_if214l_trr3.lbl",
+      "bytes": 9517,
+      "sha256": "bb8eb47007a8bb1dfa1c33eae7c99e71c4480a8cec88b712d95b1064792804a9",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp0000845d_05_if214s_trr3.lbl",
+      "bytes": 8731,
+      "sha256": "93eff9f84075d3324b851dfaf53ab82ad25aba244721e694bed8fec55da8450d",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp0001498f_01_if214l_trr3.lbl",
+      "bytes": 9480,
+      "sha256": "3798a0473451934bed1390e30bb37e083a3280f8cc4282b1520a534cac43c1d9",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp0001498f_01_if214s_trr3.lbl",
+      "bytes": 8731,
+      "sha256": "9bf714492b46037db71a4348d9ef7e6159751ac8d38b8adf7325136e4e4a2336",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_de213l_ddr1.img",
+      "bytes": 3225600,
+      "sha256": "7e7ae444032398bc99fe27c54cef2c923bd62e352625d38f75323b66f804422f",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_de213l_ddr1.lbl",
+      "bytes": 4736,
+      "sha256": "8d01c4363a10df272c8c89a166473864b63f2f72139619b0d2dea5b43d5d0e4c",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.img",
+      "bytes": 12672256,
+      "sha256": "e27dfbf5b7f95cd49f897aed58a6c5407ce5a974601e9119cdd34f56daee21b4",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl",
+      "bytes": 9474,
+      "sha256": "81fea2e75d5921e1b34763f0426a71f9f8697be0e989bc588cf540cbd796b209",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213s_trr3.lbl",
+      "bytes": 8727,
+      "sha256": "cae481bcfa361234d212f850d89983dcf588d7ad08f02a1349c273a0d95e2b00",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp0001aac8_01_if214l_trr3.lbl",
+      "bytes": 9480,
+      "sha256": "fb63a4e48a4dbb3b54e5865ac92bb19e67110f1186051f8682e5ad758979256d",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp0001aac8_01_if214s_trr3.lbl",
+      "bytes": 8731,
+      "sha256": "4705bea838bc41fd8ba0b33986656ff58448c54fd01563fd021559277f60f7f7",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp00029e3c_01_if214l_trr3.lbl",
+      "bytes": 9482,
+      "sha256": "1440c04da5cd99ff63e559cef36291214bd56f108f412a68e99f51cbdcb8c864",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msp00029e3c_01_if214s_trr3.lbl",
+      "bytes": 8733,
+      "sha256": "398974da8c204ed51d65ba570cb713d2b8b7ab82c98ba85e786b572f6ce6b50f",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msv000304bb_05_if152s_trr3.lbl",
+      "bytes": 8735,
+      "sha256": "5e63d22db4fa3738a4d0d2b92e114681780131e1ff556fccd778a967e5945542",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msv0003d412_03_if152s_trr3.lbl",
+      "bytes": 8735,
+      "sha256": "446ac9da6efcaf2992c52a4db650c6f5de4d9177c1e4430949afbb476a1ef06a",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msv0003dd08_01_if152s_trr3.lbl",
+      "bytes": 8735,
+      "sha256": "ac97e3091f70276b271a9bd4b766f91e7d123e85fcc4996deb6fa94b18e54bc9",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msv00049556_03_if152s_trr3.lbl",
+      "bytes": 8735,
+      "sha256": "2ec58b4c74294dd9f19057d273020853de1de60fa5872afb6af6b7e123850966",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msv0004bab9_01_if152s_trr3.lbl",
+      "bytes": 8735,
+      "sha256": "0a2058cbae5b4ea7564c464f86c461c3f015a80b32a59ccdc199e67978f00d2a",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msv0004cd2a_01_if152s_trr3.lbl",
+      "bytes": 8735,
+      "sha256": "2b04f0b5c62ca12e9ff6119edcedd59119e1855b1c91c65ef02da25b8b58deaf",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msv0004e27d_01_if152s_trr3.lbl",
+      "bytes": 8734,
+      "sha256": "943a22f966431f388c98b99a108707c281669a76323c0110f7e746a1f22cb140",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msv0004ecdc_01_if152s_trr3.lbl",
+      "bytes": 8734,
+      "sha256": "92b412d274394ceef11613b10cc824443425be0be4f4887bd55b8aef33def70a",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msv0005102b_01_if152s_trr3.lbl",
+      "bytes": 8735,
+      "sha256": "e890b8cb436913fd3ca4bc18580e00ba6fb5cdb4e3d75ce41774dff12ea19628",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msv00056ce1_01_if152s_trr3.lbl",
+      "bytes": 8735,
+      "sha256": "41e739aae640115d32b2be706ee194d6f95c0857cc47f1175e6dec2fa08eb332",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msv000581b5_01_if151s_trr3.lbl",
+      "bytes": 8734,
+      "sha256": "98e2232d5db2dac02a4e25416225c87fe53bbbf7da5ddefac7985396e0f118a5",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msv00058888_01_if152s_trr3.lbl",
+      "bytes": 8734,
+      "sha256": "7d7289a7c47ff02d09d3da58a71da7ff72e9b88530c83a9885fb6a6d72bfe0fc",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msv00058f98_03_if152s_trr3.lbl",
+      "bytes": 8734,
+      "sha256": "0975ad82be31c8760ddb57eba1a637f3ce24f20447ca9a36ea93ac78ada638e8",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msv00059902_01_if152s_trr3.lbl",
+      "bytes": 8734,
+      "sha256": "58608050d54941ea06f34e30cd10bc2a5e254b4bb68da813c66145281c08422f",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/msv00059fd8_06_if152s_trr3.lbl",
+      "bytes": 8734,
+      "sha256": "cc84c176e3d5a8eff08d197d951e22435a27262b2ff2d205e4d70706acf21d13",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_00464501_browse_combined.tif",
+      "bytes": 18554522,
+      "sha256": "1a31801542010eab988fead3001236636e8595179552fe35a16abafdbcae3f36",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_00464501_browse_sim.xml",
+      "bytes": 6166,
+      "sha256": "0ec4dca7d1c59b81d650d45f57f01049c464beb7365f9063c10144ff05ac069c",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_00464501_geom.lbl",
+      "bytes": 5967,
+      "sha256": "4026073397f6a5a0c7fd08ab69059320fa2ff8affa389f1a2998fce735475dfe",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_00464501_geom.tab",
+      "bytes": 515400,
+      "sha256": "8563a7a628f81a9b1c0d8cc9106da53b3283610fb3c44415075a3d7d23521bf2",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_00464501_geom.xml",
+      "bytes": 12041,
+      "sha256": "a800959f7e12b5eb42101d2824bc44246b26667cc5899a49f5a3953e2a541a07",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_00464501_rgram.img",
+      "bytes": 74217600,
+      "sha256": "fd68cc9a73abf241222db813a2fb33c6153ae3b47eec078c31f5a2f41cbd4eef",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_00464501_rgram.lbl",
+      "bytes": 2154,
+      "sha256": "959f6bbb8013535adb21fecc2dc1f16a3fe7b9befefd5592e27d24d4efada0d6",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_00464501_rgram.xml",
+      "bytes": 11289,
+      "sha256": "42ef1fafb2abab2f847f4f9d09f814baba70ab3a53686a02aa5ba6d9ac38d646",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_00464501_rtrn.csv",
+      "bytes": 540201,
+      "sha256": "02cc253632dcfa13e8dfe9d6c60972a8000b7a2ff787cbc0ab31d391720c448f",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_00464501_sim.xml",
+      "bytes": 15716,
+      "sha256": "466fc6dec7399776858c565792f2b5b7604edd633ea23e13b2ca7c73562abae0",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_00464501_tiff.lbl",
+      "bytes": 2909,
+      "sha256": "74af45ed5ae9b94737abc4a6d57df66d795c4ed0c4134a4c321b8eeb930b57c9",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_00464501_tiff.xml",
+      "bytes": 8807,
+      "sha256": "fb0ec2bd88ff55a3862344250a601f57d8a856178e8c0c7863f7b4695f07567b",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_01983502_browse_combined.tif",
+      "bytes": 21088922,
+      "sha256": "75b8f78c206f613497e450496d499464038a0f99d05a45acaee4b2a86b8c17a8",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_01983502_browse_sim.xml",
+      "bytes": 6166,
+      "sha256": "e61a3e353182ba3cc4407acba16fe55bfcafca0c82529d209692e4f85f8fcc89",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_01983502_geom.lbl",
+      "bytes": 5968,
+      "sha256": "b75bb07989ed2f6aab8d1ee272e8762b5f402f3dfd3692717fac32009e3d5b83",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_01983502_geom.tab",
+      "bytes": 585800,
+      "sha256": "879e53b3cac74e271aab2f31052d12dbf4d5ddac67a867d772b3a0727d06a0cb",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_01983502_geom.xml",
+      "bytes": 12042,
+      "sha256": "be6f3444b0728f6d3d0751d1f51fad31130fd0fdfeb69209a209ee0de5e05e61",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_01983502_rgram.img",
+      "bytes": 84355200,
+      "sha256": "1778dfa18ef54ea9e131c8a1055e748cb77c0d26132dbc5637205868752b5422",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_01983502_rgram.lbl",
+      "bytes": 2155,
+      "sha256": "97c3fd682f36cbd22765241cae230a170b637f4821caab5e7eb09e5faebe342d",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_01983502_rgram.xml",
+      "bytes": 11290,
+      "sha256": "9164fe67287b81ded6a58ce7a8aa4f9c7204c21400ad504753754aeab188f494",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_01983502_rtrn.csv",
+      "bytes": 614086,
+      "sha256": "7b5d3bbbd297237fb3e45d012e7222917392ae029db5f91f4daea5eea9551f7d",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_01983502_sim.xml",
+      "bytes": 15716,
+      "sha256": "1e3e0be54123b322aef29ffe460f54b32ba5aeb769c2c58601f706f6a887c17a",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_01983502_tiff.lbl",
+      "bytes": 2910,
+      "sha256": "536fa9be0dd664abebf6cc887469ce63cebba1cb1f4fb91294b43e2221afebb4",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_01983502_tiff.xml",
+      "bytes": 8808,
+      "sha256": "c20cc009a8911781696069ac3b559887d10fbe5d60e07f2f132ec95999978b62",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_02004601_browse_combined.tif",
+      "bytes": 21099722,
+      "sha256": "9828f8bb7538db31dbd736f5ccc1a10aeee895c7ca6fae5e58af69333493b6a5",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_02004601_browse_sim.xml",
+      "bytes": 6166,
+      "sha256": "d5a29f499d84dc8b328208259fd594e9bc6efaaaac1067036c86bfbf80a1d1b1",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_02004601_geom.lbl",
+      "bytes": 5968,
+      "sha256": "19738edb4c11db1d04b350f4a0ba217faefa1dc2040faa92d21cec28958819b3",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_02004601_geom.tab",
+      "bytes": 586100,
+      "sha256": "f0e87fb91157e96bbb36361b6e944c68da2ba26cd11926174869fd9d33e2f2c7",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_02004601_geom.xml",
+      "bytes": 12042,
+      "sha256": "c05839c2d5739ec3257b3ba3761faa16641935dd0d31f4e7554222704f3a9989",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_02004601_rgram.img",
+      "bytes": 84398400,
+      "sha256": "c44f702d3a73d865b94f0e11dcf56ab9e169b0ee8b71e942cda6bfecd6235cc8",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_02004601_rgram.lbl",
+      "bytes": 2155,
+      "sha256": "8fa50787d9b427951925b4a303f531c2892969df35f83d1859c8039179f36c34",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_02004601_rgram.xml",
+      "bytes": 11290,
+      "sha256": "1b7b93142cfcdd40972690d2a0119db5d8dd3b2c9328ec38130b88fa1e7fb855",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_02004601_rtrn.csv",
+      "bytes": 614372,
+      "sha256": "ce53ef61702679cbc7b298469bc53c04074bd294bfdb2dcb43cd2ff9a1a8ef1b",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_02004601_sim.xml",
+      "bytes": 15716,
+      "sha256": "8e0670db76e18724733dceb62e2738df5cc6b8e2ae028df31111cdce8dc4b4fd",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_02004601_tiff.lbl",
+      "bytes": 2910,
+      "sha256": "bc0b191579fac2ef70be53f6ba75864ae700fa339820c440d4430a8c9150189a",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/s_02004601_tiff.xml",
+      "bytes": 8808,
+      "sha256": "4cb8dae1b22a3779f2f8c0588cb5b8c9318a2fe66b63a04a5ce4c92055655dee",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/products/v16_086396_2333_xn_53n192w.img.jpeg",
+      "bytes": 3519687,
+      "sha256": "fb507f1c00c8ff2a56b75be74c3a9490ef1e82e2f84d0392e581f88926f8e500",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/radar_processing.htm",
+      "bytes": 64217,
+      "sha256": "3a7f32d63fc2a8e257e5c89774e06b9b7fcc9b3388d615ecf8186e5797f0fe27",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/rasmussen2023.pdf",
+      "bytes": 10596869,
+      "sha256": "da4ba0be22d59148d083b6b9fd1e5bc87b3b246c7ea9ee2d875823b32d4d8d40",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/sim3292_metadata.txt",
+      "bytes": 14233,
+      "sha256": "f6124030ad026b0f0f249f9aff64b733dcfe0174c97aa8027b7af33b6f3527a6",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/sim3292_pamphlet.pdf",
+      "bytes": 3415492,
+      "sha256": "18d3f0547e2f8cd82891f5adc454a8177ab62339c0b4a7f8370d8d2ecbce16ca",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/sim3292_readme.txt",
+      "bytes": 5580,
+      "sha256": "702c8d8dd705a7746dad2b47a36f85fd850cc44939388ccc5f8e636369731aeb",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/usgs_geology/SIM3292_Global_Geology.dbf",
+      "bytes": 156235,
+      "sha256": "06a7b40338f8f62e1d8192e07068fcb343ca7c2f02ffb353bead832ffa1d2bab",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/usgs_geology/SIM3292_Global_Geology.prj",
+      "bytes": 176,
+      "sha256": "2fb085b6ac6c8594c2e411b1c99b35093b1ff01ba125b06e1b57328a2dc8f8bc",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/usgs_geology/SIM3292_Global_Geology.sbn",
+      "bytes": 14124,
+      "sha256": "21addaea836034ea8666a786d44a2a9d69f5ff704c3cc74d3416191ccbc5fddc",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/usgs_geology/SIM3292_Global_Geology.sbx",
+      "bytes": 1612,
+      "sha256": "d9c5ea3d4386f1dfb72ec4ca53481fb402bd455291ad4d3d61cd70cb6a08791b",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/usgs_geology/SIM3292_Global_Geology.shp",
+      "bytes": 63803656,
+      "sha256": "9c0fbc204c1c7f108a854036d85f44c77531e85e0c03959eaea2b6cd33197f3a",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/usgs_geology/SIM3292_Global_Geology.shp.xml",
+      "bytes": 53319,
+      "sha256": "b568de11e1e151e9dff06908d26365711d1e9845a5097154308af64f76969eab",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/usgs_geology/SIM3292_Global_Geology.shx",
+      "bytes": 10588,
+      "sha256": "c6e40da9148010bf93ac1cf57b4976635574e9b1977e5eef75c3930212011935",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/wendt2026.html",
+      "bytes": 316541,
+      "sha256": "a0697a7715506b1251813cb23fce4f46898fcc2f5375bc3f25dde731d875aa69",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/wisdom2025.html",
+      "bytes": 159660,
+      "sha256": "68818ec9a0516b8c36430b9ac67362d2c1d957c02e60a1fcd3ee342d2d7daa0c",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/zenodo_wendt.json",
+      "bytes": 3845,
+      "sha256": "838bfd77cb87f0e5220dab7ed41547183074e92a22bddb6d817a97a0238e2aee",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/thermal_neighborhood.csv",
+      "bytes": 1209,
+      "sha256": "ff195fdabe74d8ed30aa44316c9b1624327dc9a4994c6bd5a14d946af73bba88",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/thermal_pixel.json",
+      "bytes": 789,
+      "sha256": "8dca20b90ba570d674f1ebe008a51ce74413f7e3ed4a017cac0c2567a63c6f39",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     },
     {
       "path": "outputs/research/MS-02/local_validation/verification.json",
       "bytes": 1633,
-      "sha256": "5832e173f05bb7a256258c779ca66f8fa9dda71cf1685006a371f03bb21c5942"
+      "sha256": "5832e173f05bb7a256258c779ca66f8fa9dda71cf1685006a371f03bb21c5942",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     },
     {
       "path": "outputs/research/MS-02/local_validation/verify_local_validation.py",
       "bytes": 4781,
-      "sha256": "b1e05d366b165853aea7d356780391e4e3b285e19d35637b771ef17bba47f85a"
+      "sha256": "b1e05d366b165853aea7d356780391e4e3b285e19d35637b771ef17bba47f85a",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/verify_revision.py",
+      "bytes": 4038,
+      "sha256": "07c0963b173d7bb0fdcbd0c6f694821a3e3bed9cab26e59abcd3cc1d9b29369f",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     },
     {
       "path": "outputs/research/MS-02/local_validation/verify_scale_gap.py",
       "bytes": 1324,
-      "sha256": "23953d96ec8b108219b5fa259d85ae50caa87124b9b838853e5f896b53e7b053"
+      "sha256": "23953d96ec8b108219b5fa259d85ae50caa87124b9b838853e5f896b53e7b053",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/wendt_core_locations.csv",
+      "bytes": 3602,
+      "sha256": "ddb1eb5b085d17f7750d59258233b6e8c69c56bdedd7e817bf4ee4b78fdad862",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/wendt_quality_flags.csv",
+      "bytes": 306,
+      "sha256": "d9dcbafa8173da1a973b4088dfe442b322432abeadb506571abac597dcdd0602",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/workbook_inventory.csv",
+      "bytes": 4454,
+      "sha256": "d9c35dfd3c13da30ca66dd57481e41ba68abb5eeddfda08666b0f33c4f2990b4",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "docs/research/MS-02/local_validation/research_notes.md",
+      "bytes": 16089,
+      "sha256": "b43058bf1e03bf09ee8fc9a9d31d296ecdef69d299e0f518532d6de5aff93782",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
     }
   ]
 }

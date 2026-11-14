@@ -1,0 +1,6 @@
+{
+  "url": "https://pubs.usgs.gov/sim/3292/downloads/sim3292_database.zip",
+  "bytes": 808910442,
+  "sha256": "ef75f059b1f2f5a47aff55e6c6e39500cf1ab65e743fabc5d463b97bc10b6541",
+  "method": "Extract original shapefile members; no reprojection before intersection"
+}

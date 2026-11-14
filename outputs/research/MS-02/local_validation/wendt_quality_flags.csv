@@ -1,0 +1,3 @@
+sheet,excel_row,upper_cm,lower_cm,variable,value,unit,flag
+Core_E6,3,5,10,VIC,108.92932129966685,vol%,outside physical 0–100 interval; preserved; do not clamp or transfer to Mars
+Core_E6,3,5,10,PIC,101.21914850099282,vol%,outside physical 0–100 interval; preserved; do not clamp or transfer to Mars

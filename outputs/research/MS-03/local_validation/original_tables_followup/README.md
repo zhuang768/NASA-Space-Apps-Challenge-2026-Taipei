@@ -17,6 +17,7 @@
 |`requests_round*_retrievals.json`|UTC request times, HTTP responses, content types, sizes and SHA256 values. HTTP 200 is not an acceptance test.|
 |`content_checks.json`|Content classification and bounded inspection results, including the sign-in response.|
 |`validate_followup.py`, `validation.json`|Offline evidence, CSV, missing-value and unchanged-scope checks.|
+|`validation_retained_only.json`|Actually executed clean-clone/detached-HEAD checks with no ignored response files; six committed metadata snapshots verified.|
 
 ## Status and use
 

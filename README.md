@@ -6,7 +6,7 @@ Search open terrain data for Earth candidate regions, compare them with Mars tar
 
 [Methods](docs/README.md) · [Candidate results](outputs/analysis/candidate_handoff.md) · [Website handoff](outputs/matching_handoff/README.md) · [Mars data](outputs/mars_profiles/handoff.md) · [Data guide](data/README.md) · [Contributing](CONTRIBUTING.md)
 
-> Research pipeline and candidate-analysis prototype. Regional terrain results are available; validated four-theme scoring is unfinished. A teammate has built a local prototype in `web/`; public deployment has not been verified in this work log. This repository does not establish NASA endorsement or completed competition submission. Earth–Mars-only scope is a locked team decision.
+> Research pipeline and candidate-analysis prototype. Regional terrain results are available; validated four-theme scoring is unfinished. The public site is reachable, but the latest organized layout is blocked by deployment credentials; see the deployment report. This repository does not establish NASA endorsement or completed competition submission. Earth–Mars-only scope is a locked team decision.
 
 ## Results
 
@@ -22,7 +22,7 @@ Candidates come from sparse regional terrain screening and require further envir
 | Rover day/night brightness temperature | Exploratory; incomplete quality support | [MEDA method](docs/mars_temperature.md), [quality summary](outputs/mars_temperature/summary.json) |
 | Multi-theme Earth raw data | Teammate inventory; complete batch not on this machine | [Inventory](docs/earth_inventory.csv), [handoff](docs/data_handoff.md) |
 | Four-theme scoring and field-site validation | Unfinished | [Quantity comparison](docs/cross_reference.md) |
-| Interactive workbench | Local prototype; public deployment unverified here | [web/](web/); latest Matching export not automatically integrated |
+| Interactive workbench | Public site serves an older release; latest organized layout upload blocked | [Live site](https://terramatch-mission-lab.pages.dev), [deployment check](docs/deployment_check_2026-11-14.md) |
 | English presentation and official submission | Drafts available; completion unverified | [Submission preparation](docs/submission/preparation.md) |
 
 ## Run locally
@@ -179,3 +179,12 @@ Selection clears any open evidence drawer to prevent showing a previous candidat
 Validation: TypeScript/Vite production build passed. Headless Chromium checked default overview, target switching, evidence/sensitivity navigation, Demo-to-real reset and mobile overflow with method details closed and open. At 390 px the document width was 390 px. No page errors were observed in these flows. Desktop/mobile screenshots were captured for review. These local checks do not establish public deployment or official submission. OpenAI Codex assisted information hierarchy, React/CSS changes, browser checks and English documentation.
 
 Additional browser checks passed: evidence drawer opens and closes with Escape, all three targets update the selected summary, and selecting Gale rank 2 updates the summary without changing stored ranks. A first smoke-test attempt used an incorrect accessible button name; the selector was corrected to the existing evidence-specific label and the complete flow passed. Browser-test dependencies and screenshots stayed outside the repository.
+
+
+### 2026-11-14: Public deployment diagnosis
+
+Opened the public Cloudflare Pages URL in headless Chromium at desktop 1440×1000 and mobile 390×844. HTTP 200 and initial asset requests succeeded with no observed page errors, but the site still served the old all-panels layout (`index-BVqdeinh.js`), with no new three-view navigation. Mobile document width was 916 px at a 390 px viewport. The latest organized layout is therefore **not verified as deployed**.
+
+GitHub Actions for `f0cdd59` failed at upload with an invalid header value. Added masked token normalization/validation and reran deployment; `fb10a3c` failed validation because the configured token still contains unsupported characters after trimming. Five synthetic format checks passed. Requested that the repository owner replace the token secret and configure the missing account-ID secret, without sharing credentials in chat. [Full evidence and next checks](docs/deployment_check_2026-11-14.md).
+
+The workflow repair is pushed; publication remains blocked on valid Cloudflare configuration. Public desktop/mobile verification of the new layout will resume after the owner updates secrets. No science or site-content changes were made in this diagnostic task. OpenAI Codex assisted CI diagnosis, browser checks and English reporting.

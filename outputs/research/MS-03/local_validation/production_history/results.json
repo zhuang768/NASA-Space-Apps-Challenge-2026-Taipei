@@ -1,0 +1,25 @@
+{
+  "starting_main_sha": "826780f0b270eebe9b6f2f64b8ba1ac5ddcc8177",
+  "historical_snapshot_utc": "2022-09-30T18:58:40Z",
+  "section8_identical_across_read_versions": true,
+  "documented_summary_optimization_precedes_product_creation": true,
+  "exact_1_03_94_source_obtained": false,
+  "execution_settings_obtained": false,
+  "normalization_coefficients_obtained": false,
+  "paired_pre_post_data_obtained": false,
+  "quantitative_attribution": "unknown",
+  "local_ice_presence": "unknown",
+  "local_ice_depth_m": "unknown",
+  "local_ice_fraction": "unknown",
+  "original_scientific_values_changed": false,
+  "fitted_correction_applied": false,
+  "prior_numbers_reference": "../bd1500_audit/results.json",
+  "prior_strict_residual_unchanged": {
+    "n": 13169,
+    "median": 0.0007114219669197563,
+    "max_abs": 0.019347334519968284,
+    "p05": -0.0033188935069573323,
+    "p95": 0.008343958426089119
+  },
+  "production_runtime_executed": false
+}

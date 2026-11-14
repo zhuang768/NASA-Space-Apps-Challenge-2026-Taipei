@@ -42,3 +42,8 @@
 
 - `bd1500_audit/README.md` documents official CAT/JCAT source/version distinctions, numerical checks and remaining missing production files. Existing values are retained; no cause-specific correction is applied.
 - When regenerating parent tables, run the prior CRISM and official-resource refresh scripts, followed by `bd1500_audit/refresh_parent.py` to retain the additive LV-ICE13 audit record.
+
+## Production history follow-up (2026-11-15)
+
+- [Historical sources, processing stages and missing run artifacts](production_history/README.md).
+- A 2022 SIS snapshot documents a second optimization of surface summary products. This establishes a stage difference from formula-only evaluation, but does not recover build1.03.94 settings or explain the local residual numerically. Official values, previous calculations and ice unknowns are preserved.

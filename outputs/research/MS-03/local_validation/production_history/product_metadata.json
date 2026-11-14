@@ -1,0 +1,56 @@
+[
+  {
+    "product_family": "AL",
+    "source_file": "sources/T1811_AL_PDS4.xml",
+    "sha256": "73b6ad77d19a1db64a94eb81fc09a438842ca7100d8750f5736b9000124fca94",
+    "inspected_fields": {
+      "name": [
+        "crism_mapping_execute_flow"
+      ],
+      "program_version": [
+        "1.03.94"
+      ],
+      "program_stop_date_time": [
+        "2023-07-18T18:12:54Z"
+      ],
+      "file_name": [
+        "t1811_mrral_60n243_0327_4.img",
+        "t1811_mrral_60n243_0327_4.hdr",
+        "t1811_mrral_60n243_0327_4.lbl"
+      ],
+      "creation_date_time": [
+        "2023-07-18T18:12:54Z"
+      ]
+    },
+    "runtime_settings_obtained": false,
+    "intermediate_arrays_obtained": false,
+    "label_migration_is_not_observation_time": true
+  },
+  {
+    "product_family": "SU",
+    "source_file": "sources/T1811_SU_PDS4.xml",
+    "sha256": "ae52789304a930fd3ccb16bfc20b12c2d00ad40e75cacdf4ff703e411d1d4bf2",
+    "inspected_fields": {
+      "name": [
+        "crism_mapping_execute_flow"
+      ],
+      "program_version": [
+        "1.03.94"
+      ],
+      "program_stop_date_time": [
+        "2023-07-18T18:12:54Z"
+      ],
+      "file_name": [
+        "t1811_mrrsu_60n243_0327_4.img",
+        "t1811_mrrsu_60n243_0327_4.hdr",
+        "t1811_mrrsu_60n243_0327_4.lbl"
+      ],
+      "creation_date_time": [
+        "2023-07-18T18:12:54Z"
+      ]
+    },
+    "runtime_settings_obtained": false,
+    "intermediate_arrays_obtained": false,
+    "label_migration_is_not_observation_time": true
+  }
+]

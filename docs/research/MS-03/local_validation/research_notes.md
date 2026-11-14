@@ -1,5 +1,26 @@
 # MS-03 — local validation evidence notes
 
+## 2026-11-15：1.03.94 歷史流程與中間資料查核
+
+- 起始 main：`826780f0b270eebe9b6f2f64b8ba1ac5ddcc8177`；提交前同步 `2b3984047b8983a1db8b9f15a585d88651d74a5b`，保留其他人的更新。
+- [來源與實讀範圍](../../../../outputs/research/MS-03/local_validation/production_history/source_audit.csv)、[缺件與取得狀態](../../../../outputs/research/MS-03/local_validation/production_history/availability.csv)、[歷史版本比較](../../../../outputs/research/MS-03/local_validation/production_history/version_history.csv)、[文件流程圖](../../../../outputs/research/MS-03/local_validation/production_history/F-PH01_documented_processing.png)、[方法與 GPU 交接](../../../../outputs/research/MS-03/local_validation/production_history/README.md)。
+
+|問題|本輪證據|可以判定／仍未知|
+|---|---|---|
+|第二次最佳化是否只是事後推測？|取得2022-09-30歷史存檔：SIS1.3.7.6，文件日期2022-06-22，Appendix P3 §8；該節與目前1.3.7.7的正規化文字SHA256完全相同|已確認是產品製作前就有記載的流程，不再僅列為可能的文件脈絡；不等於取得實際執行紀錄|
+|能否涵蓋BD1500_2？|§8涵蓋surface summary products；Table3-12的BD1500_2為第21項，在其指定範圍內|表格項次21不是T1811輸出band零起算24；不能互換當index|
+|差異為什麼可能出現？|P3 §6、§7、§8依序為反射率最佳化、參數計算及summary再次最佳化|公式單獨重算與交付SU的處理stage不等價；實際每筆殘差的數值歸因仍unknown|
+|確切程式／版本？|AL、SU的官方PDS4 XML均記載crism_mapping_execute_flow1.03.94及2023-07-18T18:12:54Z|確認產品標籤資訊；本次仍未取得對應source、executable、build hash或依賴版本|
+|作者公開資料？|LPSC2022 #2361兩頁經web reader讀取；作者CV公開連結及GitHub搜尋／release元資料已核對|只有方法框架和其他工具；沒有找到T1811設定或前後配對資料。另一份HSP作者稿僅讀到搜尋摘錄，不能當已讀全文|
+|能否拿舊版當正規化前資料？|P3 §13顯示v1、v3、v4的輸入、公式及產品組成不同；猜測的3001／3101目前路徑回404|不是受控前後配對；404不代表歷史產品不存在。沒有取得舊版影像，亦未計算跨版差值|
+
+- 明確缺件：1.03.94程式或可核驗build、T1811 run options、AL與SU各stage前後同來源資料、遮罩、逐條帶／波段／參數轉換係數、weights／anchors、traceability及執行日誌。
+- 給GPU：先保留官方值與formula-only結果分欄；收到上述配對資料後再做stage replay。不要以擬合gain/offset、截負值或換舊版公式把結果調成相等。
+- 給主要對話：可說「文件確認summary計算後另有最佳化，公式重算不是完整製作流程」；不能說「已證明這次0.01935由某個係數造成」「官方值有錯」或「已消除冰判讀不確定性」。
+- 本輪只檢查來源／處理歷史；27份既有實體資料及參考結果以SHA256保留核對。原始數值、先前殘差統計、AD1降級、形貌unknown與冰存在／深度／含量unknown均維持。
+- 搜尋界線：已保存原始URL、HTTP結果、查詢與實讀範圍；沒有進入作者限制區、沒有寄信索取資料。GitHub零命中只限本次查詢，不是歷史完整排除。
+- 以下前輪紀錄保留。先前「尚未找到具體summary處理階段」的保守狀態，由本輪§8歷史文件補足；精確執行與數值致因仍未解決。
+
 ## 2026-11-15：BD1500_2 官方程式／版本查核（數值未修正）
 
 - 起始main：`fbfa780cf587a0787739200898e80b4d27fea8d1`；本輪依使用者指示驗證後整合main，只更新local_validation。

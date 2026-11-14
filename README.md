@@ -2,152 +2,154 @@
 
 ### Earth–Mars analog research · NASA Space Apps 2026 Taipei · Team zasa
 
-以開放地形資料搜尋地球候選區域，對照火星目標，並公開推薦依據、資料缺口與類比限制。
+Search open terrain data for Earth candidate regions, compare them with Mars targets, and expose the supporting evidence, missing data and limits of each analogy.
 
-[研究方法](docs/README.md) · [候選結果](outputs/analysis/candidate_handoff.md) · [火星資料](outputs/mars_profiles/handoff.md) · [資料導覽](data/README.md) · [協作方式](CONTRIBUTING.md)
+[Methods](docs/README.md) · [Candidate results](outputs/analysis/candidate_handoff.md) · [Website handoff](outputs/matching_handoff/README.md) · [Mars data](outputs/mars_profiles/handoff.md) · [Data guide](data/README.md) · [Contributing](CONTRIBUTING.md)
 
-> 目前是研究管線與候選分析原型。區域地形搜尋已產生結果，四面向綜合評分尚未完成；`web/` 已有隊友建立的本機互動原型，公開部署尚未核實；本 repo 不代表 NASA 認證或已完成競賽提交。
+> Research pipeline and candidate-analysis prototype. Regional terrain results are available; validated four-theme scoring is unfinished. A teammate has built a local prototype in `web/`; public deployment has not been verified in this work log. This repository does not establish NASA endorsement or completed competition submission. Earth–Mars-only scope is a locked team decision.
 
-## 先看結果
+## Results
 
-![地形候選搜尋圖，非整體火星相似度](outputs/analysis/figures/candidate_map.png)
+![Terrain candidate search, not overall Mars similarity](outputs/analysis/figures/candidate_map.png)
 
-圖中候選來自稀疏區域地形搜尋，尚待地質、環境與既有研究查證。圖示不能證明著陸安全、場址新穎性或任務成功率。
+Candidates come from sparse regional terrain screening and require further environmental, geological and prior-literature verification. The map does not establish landing safety, novelty or mission success.
 
-| 工作項目 | 目前狀態 | 可檢查內容 |
+| Workstream | Status | Evidence |
 |---|---|---|
-| 相同物理尺度的地形比較 | 已有實際結果 | [方法](docs/earth_pipeline.md)、[候選與限制](outputs/analysis/candidate_handoff.md) |
-| 火星 MOLA／TES／SWIM／沙塵描述 | 已接入 | [方法](docs/mars_pipeline.md)、[來源與數值](outputs/mars_profiles/profiles.json) |
-| 日夜地面亮溫 | 探索用途，品質不完整 | [MEDA 說明](docs/mars_temperature.md)、[品質紀錄](outputs/mars_temperature/summary.json) |
-| 地球多面向原始資料 | 隊友提供清單，原始檔未全數在本機 | [逐檔清單](docs/earth_inventory.csv)、[交接](docs/data_handoff.md) |
-| 四面向整合／場址驗證 | 尚未完成 | [物理量對照](docs/cross_reference.md) |
-| 互動工作台 | 已有本機原型，公開部署未核實 | [web/](web/)；本輪未重跑前端驗收 |
-| 正式英文展示與提交 | 尚未核實完成 | [英文提交準備與草稿](docs/submission/preparation.md) |
+| Common physical-scale terrain comparison | Actual results available | [Method](docs/earth_pipeline.md), [candidates and limits](outputs/analysis/candidate_handoff.md) |
+| Mars MOLA / TES / SWIM / dust context | Integrated | [Method](docs/mars_pipeline.md), [sources and values](outputs/mars_profiles/profiles.json) |
+| Regional day/night temperature context | New coarse MCS time-corrected derivative; unscored and metadata incomplete | [Source, extraction and remaining gaps](outputs/mars_regional_temperature/README.md) |
+| Rover day/night brightness temperature | Exploratory; incomplete quality support | [MEDA method](docs/mars_temperature.md), [quality summary](outputs/mars_temperature/summary.json) |
+| Multi-theme Earth raw data | Teammate inventory; complete batch not on this machine | [Inventory](docs/earth_inventory.csv), [handoff](docs/data_handoff.md) |
+| Four-theme scoring and field-site validation | Unfinished | [Quantity comparison](docs/cross_reference.md) |
+| Interactive workbench | Local prototype; public deployment unverified here | [web/](web/); latest Matching export not automatically integrated |
+| English presentation and official submission | Drafts available; completion unverified | [Submission preparation](docs/submission/preparation.md) |
 
-## 本機執行
+## Run locally
 
-需要 Python 3.11 以上；前輪使用 Python 3.12。以下在專案根目錄執行：
+Python 3.11 or later is required; previous runs used Python 3.12. Run from the repository root:
 
 ```bash
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -e ".[dev]"
 .venv/bin/python -m scripts.profile_mars --strict
 .venv/bin/python -m scripts.process_mars_temperature
+.venv/bin/python -m scripts.export_matching_handoff
 .venv/bin/python -m pytest -q
 .venv/bin/ruff check .
 ```
 
-火星原始資料與既有輸出已進版控。`profile_mars` 與溫度處理命令會重建相應輸出；只想閱讀結果時直接開啟上述連結即可。`--strict` 檢查核心網格來源，不代表 MEDA 品質通過。
+Existing Mars inputs and outputs are versioned. Processing commands rebuild their outputs; use the linked files directly when reading results. `--strict` checks core grid inputs, not MEDA quality acceptance.
 
-地球搜尋需要另外取得 ETOPO／陸地遮罩等輸入，見 [地球執行說明](docs/earth_pipeline.md)。Earthdata 產品可能需要帳號；不要把登入檔放入 Git。環境版本紀錄見 [requirements-lock.txt](requirements-lock.txt)，跨平台安裝相容性仍需各自確認。
-
-## 專案結構
+Earth screening additionally needs ETOPO and the land mask; see [Earth execution](docs/earth_pipeline.md). Some Earthdata products require an account. Never commit credentials. [requirements-lock.txt](requirements-lock.txt) records the tested environment; cross-platform installation still requires verification.
 
 ```text
-analog/       科學資料讀取、尺度處理與分析模組
-scripts/      下載、處理、匯出與繪圖入口
-tests/        資料與方法檢查
-data/         火星原始／處理資料；地球大檔另行交接
-outputs/      既有候選、來源、敏感度、火星描述與圖表
-docs/         方法、資料規格、競賽準備與歷史紀錄
+analog/       Scientific readers, scale handling and analysis
+scripts/      Download, processing, export and plotting entry points
+tests/        Data and method checks
+data/         Mars inputs and processed data; large Earth files handed off separately
+outputs/      Candidates, provenance, sensitivity, profiles and figures
+docs/         Methods, data contracts, submission drafts and historical records
+web/          Reporting teammate's interactive prototype
 ```
 
-各目錄的用途與保留理由見 [資料導覽](data/README.md)、[結果導覽](outputs/README.md) 與 [檔案盤點](docs/repository_inventory.csv)。
+See the [data guide](data/README.md), [output guide](outputs/README.md) and [file inventory](docs/repository_inventory.csv).
 
-## 科學邊界
+## Scientific boundaries
 
-- Earth 與 Mars 比較以公里尺度定義窗口，不能直接視為相同角度網格。重採樣不會新增真實細節。
-- MODIS LST、MEDA 地面亮溫、POWER 2 m 氣溫與 TES 熱慣量是不同量，不能直接互相代替。
-- SWIM 一致性不是冰含量或機率；永凍土比例不是可採冰量；低 NDVI 不是無生命證明。
-- Earth 550 nm extinction AOT 與 Mars 9.3 μm absorption CDOD 不能直接等量比較。
-- 未知與未通過品質檢查的證據不得算作確認符合。已知地形相近，也不表示成因、礦物或任務適用性相同。
+- Define comparison windows in kilometers using the appropriate planetary radius. Equal angular grids do not imply equal physical support; interpolation creates no new detail.
+- MODIS kinetic LST, MEDA ground brightness temperature, POWER 2 m air temperature and TES thermal inertia are different quantities.
+- SWIM consistency is not ice amount or probability. Permafrost fraction is not extractable ice. Low NDVI is not evidence of lifelessness.
+- Earth 550 nm extinction AOT is not directly equivalent to Mars 9.3 µm absorption CDOD.
+- Missing or quality-incomplete evidence cannot count as confirmed support. Similar terrain statistics do not establish matching geology, origin or mission suitability.
 
-## 來源、授權與競賽準備
+## Sources, rights and submission
 
-來源、版本、單位與處理見 [文件索引](docs/README.md) 及各結果 manifest。沙塵衍生資料依 [CC-BY-SA 說明](outputs/mars_profiles/LICENSE-data.md) 使用；其他產品依原提供者條件，不能整批套用同一授權。程式目前尚無明確根目錄授權檔，提交前需由團隊確認採用的程式授權。
+Versions, units and processing are documented in the [method index](docs/README.md) and output manifests. Dust-derived material has [separate CC-BY-SA terms](outputs/mars_profiles/LICENSE-data.md). Other products retain their providers' terms. An original-code license remains pending team confirmation; Apache-2.0 is a proposal, not an adopted license.
 
-[官方挑戰頁](https://www.spaceappschallenge.org/2026/challenges/permanent-moon-base-locations-and-mars/) · [官方條款](https://www.spaceappschallenge.org/legal/)
+[Official challenge](https://www.spaceappschallenge.org/2026/challenges/permanent-moon-base-locations-and-mars/) · [Official terms](https://www.spaceappschallenge.org/legal/)
 
-頁數、影片、開發時段、AI 揭露格式與提交時間仍需依當次官方完整規則核實。既有七頁簡報是草稿規劃，不作為官方規則證明。
+The official-repository Navigator reply supports preparing up to seven slides or a video of at most 30 seconds. The complete submission guide, account details and Taipei-specific requirements remain unverified. Drafts are not proof of submission. See the [remaining checklist](docs/submission/remaining_checklist.md). Historical scope questions are retained as audit records, not invitations to change the locked Earth–Mars focus.
 
-## 工作報告（繁體中文）
+## Work reports
 
-後續每次工作在此追加完成項目、實際驗證、問題與下一步。歷史報告與 AI 使用紀錄完整保留於 [整理前紀錄](docs/archive/README_before_cleanup_2026-11-14.md)，另見 [地球工作報告](docs/work_report_2026-11-14.md) 與 [MEDA 工作報告](docs/mars_temperature.md)。六階段提示詞已整理，階段任務未因此自動執行。
+Reports below preserve historical outcomes and limitations; a past status is not necessarily the latest status. Earlier source records and AI disclosures remain in the [pre-cleanup archive](docs/archive/README_before_cleanup_2026-11-14.md), [Earth work log](docs/work_report_2026-11-14.md) and [MEDA log](docs/mars_temperature.md). The six phase prompts were edited; that alone did not execute the six phases. Historical linked documents may still be in Chinese; this root README is English.
 
-### 2026-11-14：提交用儲存庫整理
+### 2026-11-14: Repository cleanup
 
-- 已完成：重整 README、建立文件／資料／結果導覽與逐檔用途清單；歷史紀錄移入 archive，保留引用與 AI 揭露。
-- 清理：移除本機可重建快取；沒有刪除科學來源、敏感度對照、測試或來源紀錄。10 km 結果仍被摘要腳本引用，不能當成多餘資料。
-- 限制：尚未建立互動介面、完成四面向選址或競賽提交；本次沒有重新排名或修改科學數值。
-- 待處理：團隊確認程式授權、正式競賽規則、地球原始檔交接，以及 MEDA 品質旗標。
-- AI 使用：OpenAI Codex 協助檔案盤點、導覽與中文報告整理。本輪 57 項測試通過（8 個既有警告）、Ruff 通過，新增導覽與歷史快照的本機連結檢查通過。
+Reorganized README and data/document/output navigation; created a file-purpose inventory and preserved history and AI disclosures in the archive. Removed rebuildable local caches without deleting scientific inputs, sensitivity comparisons, tests or provenance. The 10 km analysis remains a dependency of summary scripts.
 
-### 2026-11-14：三組火星—地球候選研究
+At that point, the interface, four-theme selection and competition submission were unfinished. No reranking or scientific values changed. Outstanding items included licensing, complete rules, Earth handoff and MEDA flags. OpenAI Codex assisted inventory and documentation. Verification: 57 tests passed, eight existing warnings, Ruff passed, and new navigation/archive links checked.
 
-[完整研究報告](docs/research_report_three_analogs_2026-11-14.md)與[可追溯證據](outputs/research/three_candidate_evidence.json)已建立。選出 Gale—39°N、75°E，以及 Arcadia—29°N、105°W、35°N、57°E，共三個地球候選、兩個火星目標。既有 Jezero 候選暫留地形參照，沒有強行宣稱乾燥環境匹配。
+### 2026-11-14: Three Earth candidate research records
 
-本輪依既有特徵重算三個地形距離，均與既有值一致；統計四個配置的前二名保留次數為 4/4、3/4、2/4，不代表信賴度。來源、窗口、氣候背景與研究限制均附於報告。地質／礦物、地下冰、文獻新穎性與後勤尚待驗證，沒有重新排名或宣稱 NASA 認證。重現命令：`.venv/bin/python -m scripts.report_candidate_evidence`。
+Created the [research report](docs/research_report_three_analogs_2026-11-14.md) and [traceable evidence](outputs/research/three_candidate_evidence.json). The existing cases are Gale–39N,75E and Arcadia–29N,105W / 35N,57E: three Earth candidates and two Mars targets. Jezero candidates remain terrain references without claiming dry-environment suitability.
 
-### 2026-11-14：第一組候選地質與礦物查證
+Recomputed three distances from stored features. Top-two retention across four tested configurations was 4/4, 3/4 and 2/4, not calibrated confidence. Geology, ice, novelty and logistics remained unresolved. No reranking or NASA certification. Reproduce with `python -m scripts.report_candidate_evidence`.
 
-已更新[研究報告第 3 節](docs/research_report_three_analogs_2026-11-14.md)。Bershaw et al.（2012）的三個 Oytag 泥岩、砂岩、石灰岩樣點均落在 39°N、75°E 的 100 km 窗口東側；[座標摘錄](outputs/research/oytag_literature_points.csv)及[雙重空間核對](outputs/research/oytag_overlap.json)已保存。
+### 2026-11-14: Located sedimentary-rock evidence
 
-這支持局部沉積岩研究。石膏仍是剖面級文獻證據，精確露頭未核對；蒙皂石與氧化鐵配對未確認，海相／河流背景也不能直接等同 Gale 湖泊。未新增礦物分數或改動排名。下一步優先取得地層圖與同露頭礦物鑑定，而非宣稱完整 Gale 類比已成立。
+Updated [report section 3](docs/research_report_three_analogs_2026-11-14.md). Three Bershaw et al. (2012) Oytag mudstone, sandstone and limestone sample points fell inside the eastern side of the 100 km candidate window. [Coordinates](outputs/research/oytag_literature_points.csv) and [spatial checks](outputs/research/oytag_overlap.json) are preserved.
 
-實際執行：`.venv/bin/python -m scripts.check_oytag_overlap`，三點均通過局部 ±50 km 與既有多邊形包含檢查。座標 datum 未註明，結果只供研究尺度歸屬。AI 協助文獻核對、座標計算與中文報告；未產生衛星影像或礦物量測。
+This supports localized sedimentary-rock investigation. Gypsum was section-level evidence; exact outcrop, smectite and iron-oxide co-occurrence were unconfirmed. Marine/fluvial context cannot be equated to Gale's lake deposits. `python -m scripts.check_oytag_overlap` checked the three points against local ±50 km coordinates and the existing polygon. The source datum was unspecified, so the result is regional, not navigational. AI assisted literature review and calculations; no imagery or mineral measurements were fabricated.
 
-### 2026-11-14：TerraMatch Mission Lab 本機互動工作台建置
+### 2026-11-14: Teammate's local TerraMatch workbench
 
-已完成 `web/`（React 18 + TypeScript + Vite）第一版本機互動工作台（簡潔英文介面），藉由 `web/scripts/build_workbench_data.py`（`npm run build:data`）與 `web/src/data/adapter.ts` 串接 `outputs/analysis/results_with_context.json`、`outputs/analysis_scale10km/results.json`、`outputs/analysis/sensitivity.json`、`outputs/mars_profiles/profiles.json` 及 `outputs/mars_temperature/summary.json`，未修改 `analog/`、`scripts/`、`data/` 或既有 `outputs/` 結果，亦未重新排名或改動科學模型。
+The Reporting teammate created `web/` with React 18, TypeScript and Vite. `web/scripts/build_workbench_data.py` and `web/src/data/adapter.ts` read the existing 4 km/10 km results, sensitivity, Mars profiles and MEDA summary without changing Matching inputs or rankings.
 
-- **已完成**：目標與任務列（`jezero`、`gale`、`arcadia` 切換並自動清除舊狀態、獨立隔離 Demo Mode）、雙側獨立座標地圖（Earth `R = 6,371.0 km`、`Δlat = 0.90° / 100 km` vs. Mars `R = 3,396.0 km`、`Δlat = 1.69° / 100 km`，明示無 Mars 底圖並可展開 `candidate_map.png` 與各目標 `*_terrain_comparison.png`）、12 筆候選清單與篩選器（含 `No qualifying candidates` 空狀態）、四大主題證據矩陣（共 8 項指標，獨立列出火星 `surface_temperature: missing` 缺口、置頂不可直接比較物理量護欄、缺值不補零）、可存取 `EvidenceDrawer`（含 DOI／PDS 網址與 SHA-256 校驗碼）及 4 組態真實敏感度面板（Top-2 頻率明標非機率或信賴度）。
-- **本機執行**：於 `web/` 執行 `npm install`、`npm run build:data`、`npm run build`，並以 `npm run dev` 或 `npx vite preview --port 4173 --host 127.0.0.1` 啟動。
-- **實際驗證**：`cd web && npm run build:data` 與 `npm run build`（`tsc -b && vite build`）通過；`.venv/bin/ruff check .` 通過；於 `http://127.0.0.1:4173/` 實機瀏覽器驗證桌面（1280×800）與窄螢幕（390×844）共 7 項互動流程、邊界座標與動態圖表載入全數通過（0 console errors、0 失敗網路請求）。
-- **限制與下一步**：目前科學篩選仍為 `terrain_only_screening`，Ranks #3–#12 尚未查取 NASA POWER 氣候背景，火星區域 `surface_temperature` 仍為 `missing`；後續若擴充多變量評分或新證據，可重新執行 `npm run build:data` 更新前端資料包。
-- **AI 使用**：Antigravity 協助建置與審查強化 `web/` 前端與資料轉接程式、執行建置與瀏覽器實機驗證並追加本節報告；未生成虛構科學數據或改動既有排名。
+The teammate reported target switching with state reset, isolated Demo Mode, separate Earth/Mars coordinate diagrams, 12-candidate filtering and empty states, four-theme evidence views, source/hash drawers and four-configuration sensitivity. Displayed radii were Earth 6,371.0 km and Mars 3,396.0 km; approximate 100 km latitude spans were 0.90° and 1.69°. The lack of a Mars basemap was disclosed.
 
-### 2026-11-14：Oytag 石膏層定位與同露頭鑑定續查
+The teammate reported `npm run build:data`, TypeScript/Vite build and Ruff passing; browser checks at 1280×800 and 390×844 covered seven flows with no console errors or failed network requests. These are historical teammate-reported checks, not repeated by the later Matching export. Run locally with `npm install`, `npm run build:data`, `npm run build`, then Vite dev/preview. Antigravity assisted frontend work and testing. Ranks 3–12 lacked POWER context and regional Mars temperature remained missing.
 
-已補入[研究報告 §3.7](docs/research_report_three_analogs_2026-11-14.md)：讀取 Sun/Jiang（2013）Fig.2 經緯網定位圖、Fig.3 含石膏剖面，近似讀取 A–B 路線；兩端與八種 ±8 pixel 診斷情境均在候選窗口內。這支持含石膏剖面位於範圍內的圖上推論，尚無石膏 GPS，不是精密地質套疊。
+### 2026-11-14: Approximate gypsum-bearing transect
 
-[空間計算](outputs/research/oytag_transect_check.json)、[原創示意圖](outputs/research/oytag_transect_schematic.png)及[來源查證清單](outputs/research/oytag_outcrop_source_audit.json)已保存。熱磁分析、石灰岩 Ca/Sr、附近薄片都不能替代同一石膏露頭的 XRD；2012 與 2013 研究亦不能因同名剖面就串成同一樣品。未找到完整「石膏層座標—樣品 ID—礦物鑑定」鏈，蒙皂石共現仍未知。
+[Report section 3.7](docs/research_report_three_analogs_2026-11-14.md) used Sun/Jiang (2013) Figures 2–3 to approximate an A–B transect. Endpoints and eight ±8-pixel diagnostic cases lay inside the candidate. This was map-based inference, not original gypsum GPS or precise geological overlay.
 
-已執行 `.venv/bin/python -m scripts.check_oytag_overlap` 與 `.venv/bin/python -m scripts.check_oytag_transect` 核對空間結果，並檢查圖表與文件連結。本輪未重跑科學排名或整套測試。下一步需原始接觸點／樣品 GPS 與同樣品礦相資料。OpenAI Codex 協助 PDF 圖件閱讀、近似座標診斷及中文紀錄；原文 PDF 未重新散布。
+Preserved the [calculation](outputs/research/oytag_transect_check.json), [original schematic](outputs/research/oytag_transect_schematic.png) and [source audit](outputs/research/oytag_outcrop_source_audit.json). Thermomagnetic analysis, limestone Ca/Sr and nearby thin sections cannot substitute for same-outcrop gypsum XRD. Same-named sections cannot automatically be linked to one sample. The GPS–sample-ID–mineral chain and smectite co-occurrence remained unknown.
 
-### 2026-11-14：Oytag 原始補充表與礦物線索續查
+Executed overlap and transect checks and reviewed links/figures, without reranking or rerunning the full test suite. Codex assisted PDF interpretation and approximate spatial analysis; source PDFs were not redistributed.
 
-已取得 Bershaw（2012）原始 `mmc1.xls`／Table DR1，解析十組 PMR 母岩座標與樣品 ID，均位於候選多邊形內；[座標摘錄](outputs/research/oytag_supplement_coordinates.csv)、[來源雜湊](outputs/research/oytag_supplement_metadata.json)與[存取紀錄](outputs/research/oytag_supplement_access_log.json)已保存，詳見[研究報告 §3.8](docs/research_report_three_analogs_2026-11-14.md)。
+### 2026-11-14: Original supplementary table
 
-補表是鋯石定年資料，不是石膏層 GPS 或 XRD；新座標只能補強樣品追溯，不能證實同一露頭礦物共現。另找到 Oytag `9412-1` 礦物表，但材料是冰磧物，已排除為同露頭證據。石膏層的原始座標、唯一 ID 及同樣品礦相仍缺，Fig. DR1 地圖也尚未取得。
+Obtained Bershaw (2012) `mmc1.xls` / Table DR1 and extracted ten PMR parent-rock coordinates and IDs inside the polygon. [Coordinates](outputs/research/oytag_supplement_coordinates.csv), [hashes](outputs/research/oytag_supplement_metadata.json) and [access log](outputs/research/oytag_supplement_access_log.json) are preserved; see [section 3.8](docs/research_report_three_analogs_2026-11-14.md).
 
-已執行補表解碼、十組唯一 ID／座標範圍／多邊形核對及文件連結檢查；原始受版權保護 Excel／PDF 未散布，選用 reader 僅安裝於臨時目錄。本輪未重新排名、未重跑整套測試。OpenAI Codex 協助補充資料查找、摘錄與中文更新。
+The table is zircon-dating material, not gypsum GPS/XRD. Oytag sample `9412-1` concerns moraine and was excluded as same-outcrop evidence. Gypsum coordinates, unique ID, mineral analysis and Figure DR1 remained missing. Executed table decoding, unique-ID/coordinate/polygon and link checks. The optional reader was installed only temporarily; copyrighted Excel/PDF files were not redistributed. No reranking or full-suite rerun. Codex assisted source retrieval and extraction.
 
-### 2026-11-14：提交前研究與資料總盤點
+### 2026-11-14: Submission readiness audit
 
-已完成[整體準備報告](docs/submission_readiness_2026-11-14.md)、[53項缺口清單](docs/submission_gap_checklist_2026-11-14.csv)與[查核快照](outputs/research/submission_audit_snapshot_2026-11-14.json)。分為8項P0提交準備、31項P1品質優先、14項依主張需要才補的P2；不代表每一項都是官方強制。
+Created the [readiness report](docs/submission_readiness_2026-11-14.md), [53-item checklist](docs/submission_gap_checklist_2026-11-14.csv) and [snapshot](outputs/research/submission_audit_snapshot_2026-11-14.json): eight submission items, 31 quality priorities and 14 claim-dependent items, not 53 official requirements.
 
-核對隊友清單為222檔、12.33GB，但完整原始批次未在本機；現有排名仍為terrain-only，三目標各12候選，只有各前2有POWER。建議先完成Gale／Oytag主案例及明確未知，不強行合成四面向分數。新增研究尚未進入前端bundle，介面部分local驗證文字與sources映射問題已列給隊友，沒有修改`web/`。
+The teammate inventory contained 222 files / about 12.33 GB; the full raw batch was not available locally. Rankings remained terrain-only, with 12 candidates per target and POWER for the first two. The audit recommended an evidence-limited main case instead of an unsupported combined score. It identified research-bundle, local-verification wording and source-mapping issues for Reporting without editing the website; later teammate fixes must be assessed separately.
 
-已讀官方年度頁／條款及GitHub Navigator提交答覆；完整題目、正式指南與台北場細節仍未核實，不把搜尋摘要當完整規則。實際重跑Python測試57項通過（8個既有警告）、Ruff通過；未重跑前端、部署或官方提交。程式授權、英文展示、公開連結與Submitted狀態仍需團隊完成。OpenAI Codex協助本輪盤點與中文報告。
+Read official annual/legal pages and the Navigator submission reply; complete challenge text, guide and Taipei details remained unverified. Tests: 57 passed, eight existing warnings; Ruff passed. No frontend, deployment or official submission check. Codex assisted the audit and documentation.
 
+### 2026-11-14: Submission copy and research requirements
 
-### 2026-11-14：完成第1／第2項的提交準備與研究規格
+Prepared [official checks and English copy](docs/submission/preparation.md), [seven-slide text](docs/submission/slides_en.md) and [rights/AI/contribution forms](docs/submission/disclosures_and_rights.md). Account fields were left blank; Apache-2.0 remained a proposal. No login, message to organizers or submission occurred.
 
-依使用者範圍，本輪完成[官方查核與英文提交文案](docs/submission/preparation.md)、[七頁英文文字稿](docs/submission/slides_en.md)、[授權建議／AI與分工表](docs/submission/disclosures_and_rights.md)，帳戶欄位留空；原創程式Apache-2.0只作建議，待全隊確認，尚未新增正式LICENSE。完整題目、Mars-only與正式指南仍未核實；沒有登入、發送問題或正式提交。
+Added [one research question and five requirements](docs/research_scope.md), [CSV matrix](docs/research_requirements.csv), [literature review](docs/literature_review.md) and [claim ledger](docs/submission/claim_ledger.csv). Only terrain was quantitatively scored; environmental and same-outcrop conditions remained partial/unknown.
 
-研究補上[單一問題與五項需求](docs/research_scope.md)、[CSV矩陣](docs/research_requirements.csv)、[既有方案與有限文獻紀錄](docs/literature_review.md)、[英文主張證據表](docs/submission/claim_ledger.csv)。只承認地形為已計算搜尋條件，環境與同露頭材料維持部分／未知，不宣稱四面向整合或任務成功率。
+Executed `python -m scripts.validate_research_scope`: recomputed three Mars target signatures and Death Valley/Amazon reference windows from raw DEMs, matched stored Mars features and checked distance contributions. [Results and hashes](outputs/research/reference_terrain_check.json) show that Arcadia terrain can favor a low-relief contrast, illustrating that terrain distance does not establish complete environmental analogy. Two windows are not full external validation. No ranking, candidate geology or website changes.
 
-實際執行新命令 `python -m scripts.validate_research_scope`：由原始DEM重算三個Mars目標及Death Valley／Amazon兩個參照窗口，Mars特徵與既有值吻合，距離分項核對通過。[數值與輸入hash](outputs/research/reference_terrain_check.json)顯示Arcadia地形也會偏好低起伏對照，說明地形距離不足以判定整體環境類比；兩窗口不是完整外部有效性驗證。未更動正式排名、第三項候選地質／礦物調查或隊友介面。
-
-英文PDF／影片、隊伍／帳戶核對、全隊授權、完整文獻史與獨立參照組、匿名公開連結及SUBMIT狀態仍未完成，見[最後checklist](docs/submission/remaining_checklist.md)。OpenAI Codex協助研究規格、來源核對、計算與中英文文案；展示文字草稿不等於成品或已提交。
-
-本輪驗證：新參照檢查命令執行成功；Python測試57項通過（8個既有警告）、Ruff通過，9份文件本機連結檢查通過。未執行前端建置、瀏覽器驗收、公開部署或官方提交。
-
+English PDF/video, account checks, team licensing, systematic literature/reference validation, public access and SUBMIT remained unfinished. Tests: 57 passed, eight existing warnings; Ruff and nine-document local-link checks passed. No frontend/build/deployment/submission. Codex assisted specifications, checks and writing; text drafts were not final deliverables.
 
 ### 2026-11-14: Matching results and website handoff
 
-Synced main before work. Exported [the English website handoff](outputs/matching_handoff/README.md) and [machine-readable matching data](outputs/matching_handoff/matching_data.json): 36 stored target–candidate records, six with POWER context, three Mars profiles, source hashes, scoring statuses and limitations. Added PNG/SVG figures explaining terrain-distance components and top-two sensitivity; existing maps and equal-scale terrain panels are linked with captions. No candidate reranking, candidate geological investigation, or website edits were performed.
+Synced main before work. Exported [the English website handoff](outputs/matching_handoff/README.md) and [machine-readable matching data](outputs/matching_handoff/matching_data.json): 36 stored target–candidate records, six with POWER context, three Mars profiles, source hashes, scoring statuses and limitations. Added PNG/SVG figures explaining terrain-distance components and top-two sensitivity; existing maps and equal-scale terrain panels are linked with captions. No candidate reranking, geological investigation or website edits.
 
-Verification: all 36 stored terrain distances recomputed from stored features; component sums, unique IDs and footprint count checked. Both new chart layouts were visually inspected. Python tests: 57 passed, eight existing warnings; Ruff passed. The export is reproducible with `python -m scripts.export_matching_handoff`. Website integration/build, browser testing, public deployment and official submission were not performed.
+Verification: all 36 stored distances recomputed from stored features; component sums, unique IDs and footprint count checked. Both chart layouts visually inspected. Tests: 57 passed, eight existing warnings; Ruff passed. Reproduce with `python -m scripts.export_matching_handoff`. Website integration/build, browser testing, deployment and official submission were not performed.
 
-Remaining Matching dependencies: Data teammate's QA-controlled Earth candidate feature handoff, compatible regional Mars day/night surface-temperature data, and a defensible cross-theme comparison/weighting/missing-data definition before any four-theme reranking. The handoff specifies the minimal Data-to-Matching schema and Reporting's integration steps. Unknown themes remain unscored; native dust, thermal inertia and ice consistency remain context, not identical cross-planet measurements. Original results are unchanged. OpenAI Codex assisted export code, numerical checks, figures and English documentation.
+Remaining dependencies: QA-controlled Earth feature handoff, compatible regional Mars day/night surface temperatures, and a defensible cross-theme comparison/weighting/missing-data definition before four-theme reranking. Unknown themes remain unscored; native dust, thermal inertia and ice consistency remain separate context. Original rankings unchanged. Codex assisted export code, checks, figures and English documentation.
+
+
+### 2026-11-14: Regional Mars temperature source and English README
+
+Synced main and located a new published MCS-derived surface-temperature grid, version DOI `10.5281/zenodo.17947556`, corrected to nominal 03:00 and 15:00 LTST. Downloaded 14,940,903 bytes, matched the provider MD5, recorded SHA-256/version/license, and extracted nearest native coordinates for Jezero, Gale and Arcadia over MY29–36. [The source report](outputs/mars_regional_temperature/README.md) documents methods, attribution and gaps; [context.json](outputs/mars_regional_temperature/context.json) contains reproducible series and counts.
+
+Jezero/Gale/Arcadia have respectively 129/54/115 populated paired year–season bins out of 288. These are not same-sol pairs or raw observation counts. The native grid is 5° with 10° Ls spacing; all file attributes are empty and bin QA, counts, uncertainties and coordinate semantics remain unresolved. The product is model-adjusted observation-derived context, not a qualified 100 km kinetic-LST comparison. All target exports remain `scoring_eligible=false`; no existing ranking or formal temperature status was changed.
+
+Integrated the separate context package into the Matching handoff exporter. Reporting can use the new key and caveats without recomputing science. Source and derived temperature data retain Wang/Jin attribution and CC-BY-4.0 terms. THEMIS BTR/PBT and TES routes were assessed but not substituted with uncalibrated mosaics. No candidate geological investigation, website edits, email query or account action occurred.
+
+Translated the entire root README to English while preserving historical findings, linked evidence and the distinction between teammate-reported checks and this run. Remaining work: grid/quantity metadata and method verification, original quality/count support, compatible regional thermal support, Earth QA-controlled LST/time handoff, and a justified temperature-scoring definition. OpenAI Codex assisted source research, extraction code, tests and English documentation.
+
+Verification for this temperature update: 62 Python tests passed (eight existing warnings), Ruff passed, provider checksum and export context equality checked, root README checked for remaining Chinese text, and local links checked. Formal regional temperature remains missing and the new context remains unscored. No website build, browser or deployment tests were run.

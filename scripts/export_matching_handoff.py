@@ -91,6 +91,15 @@ def main():
         "limitations": base["limitations"],
         "dust_license_path": "outputs/mars_profiles/LICENSE-data.md",
     }
+    context_path = ROOT / "outputs/mars_regional_temperature/context.json"
+    if context_path.exists():
+        manifest["regional_temperature_context"] = json.loads(context_path.read_text())
+        manifest["inputs"].append(
+            {
+                "path": str(context_path.relative_to(ROOT)),
+                "sha256": hashlib.sha256(context_path.read_bytes()).hexdigest(),
+            }
+        )
     (OUT / "matching_data.json").write_text(json.dumps(manifest, indent=2, allow_nan=False) + "\n")
     plt.rcParams.update(
         {

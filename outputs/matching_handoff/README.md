@@ -90,3 +90,8 @@ A small JSON/CSV per target/candidate is preferable to transferring all raw file
 The export recalculates all 36 stored distances, verifies component sums and unique IDs, and checks footprint count. It does not recalculate raw DEM features or alter ranking. Input SHA-256 values are in the export. Existing source records preserve dataset versions and units. New PNG/SVG charts were visually inspected; website integration, build, deployment and browser operation are not verified by this export.
 
 For exact science details use [the terrain method](../../docs/earth_pipeline.md), [Mars profiles](../mars_profiles/handoff.md) and [temperature limitations](../../docs/mars_temperature.md). Candidate geology remains in the existing research report and was not investigated further this round.
+
+
+## Temperature context update (2026-11-14)
+
+The export now includes `regional_temperature_context`: [MCS corrected 03:00/15:00 LTST data](../mars_regional_temperature/README.md). The original missing-temperature statements above refer to the formal QA-qualified 100 km comparison. A real coarse 5° research derivative is now available as independent, unscored context; it does not satisfy that formal requirement or alter the terrain ranking. Read the new source limitations and CC-BY-4.0 attribution before display. Reporting must explicitly integrate this key; no website changes were made by Matching.

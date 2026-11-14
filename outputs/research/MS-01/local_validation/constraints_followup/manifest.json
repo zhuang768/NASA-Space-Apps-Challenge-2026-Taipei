@@ -1,0 +1,246 @@
+{
+  "start_sha": "522108db21ae00032c6e2c8b8135fb75fc3b1bd1",
+  "branch": "research/ms-01-earth-analogs",
+  "pr": 8,
+  "created_utc": "2026-11-14T19:31:14.067573+00:00",
+  "ROI": [
+    72.5,
+    56.5,
+    73,
+    57
+  ],
+  "kind": "source_data_methods_figures_bulletnotes_only",
+  "goals": [
+    "samepositionthermalrepeat",
+    "materialandsurfaceboundary",
+    "independenticeevidence"
+  ],
+  "disposition": {
+    "UniversityValley": "retainthermalidentifiability",
+    "BeaconValley": "optionalnotupgraded"
+  },
+  "unresolved": [
+    "normativepixelorigin/registration",
+    "matchedseasonlocaltimeatmosphereemissivity",
+    "localk/rho/Cp/coverdepth",
+    "uniquelyidentifiedicehorizon",
+    "iceexistence/depth/abundance"
+  ],
+  "files": [
+    {
+      "path": "docs/research/MS-01/local_validation/constraints_followup_notes.md",
+      "bytes": 7574,
+      "sha256": "2963b1ace7953875ba32cd32c7e21d5daabee03e967958ffcb35736eae2029b0"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/I55869010PBT_header.lbl",
+      "bytes": 4320,
+      "sha256": "3b77312118866174eee9c4a102b19957bd2cac35db4731e697c4abef50ae172f"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/I61766008PBT_header.lbl",
+      "bytes": 3400,
+      "sha256": "b67b588a35e82fd14b9b8c8e8c39d3e8b259a0da3a829ebe3d567bce7d639de0"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/I71532035PBT_header.lbl",
+      "bytes": 4896,
+      "sha256": "0df9680883eadc6703e25835f699688ba2e68b25d1922e9debb835a42c319ecb"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/I72486029PBT_header.lbl",
+      "bytes": 4192,
+      "sha256": "6b19e9bdb7fd52cc82887357d839e944a2de15068f00d289d8d9df2538b75142"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/I73671033PBT_header.lbl",
+      "bytes": 4848,
+      "sha256": "9f02258b291fa3796f8fbbf604c901c16b4be3a5c40d99a907619a3083526bc0"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/I74120036PBT_header.lbl",
+      "bytes": 4840,
+      "sha256": "71a98e0fd44e39c8282bafd9f3b203345047fdcb8a97bb8b54fe89bc72a96bcd"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/acquisition_log.csv",
+      "bytes": 9176,
+      "sha256": "a233e83e35bfa9c3d9f45ffcd3c910c36282a30cbea5402240f4120ebea23f59"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/albedo_roi.csv",
+      "bytes": 6396,
+      "sha256": "8c36af557c286d58df5f9cdb9acd50c8b44e49bee1a69bb307cdbfa4c57d6ffc"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/albedo_summary.json",
+      "bytes": 516,
+      "sha256": "a765d7b8269e9fb40ccd386f10769f9107768acfdfd29f277d5f53772e238818"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/analyze.py",
+      "bytes": 7430,
+      "sha256": "8b78f0e3a557a33cbf04f01bf29eb8fb48b5c9726a0745419f4ddfe9925f32bb"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/fetch_inputs.mjs",
+      "bytes": 1686,
+      "sha256": "f18b8ae675be4dab425718fe3cc1dca387155df8e4fdc77cc2cb490f2b679918"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/figure_caption_data.json",
+      "bytes": 991,
+      "sha256": "19cae74543deed41bb13f15eaae7b94dccae56625685727c9fb49b6aff2a8f41"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/interpretation_table.csv",
+      "bytes": 1407,
+      "sha256": "f4ff1717fcc2015489a67e6c659c1905150a68d9707d29a3c8f086cee359b005"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/plot.py",
+      "bytes": 1336,
+      "sha256": "4550c6dfaeea5b5f3b2fb1c78d9fec2f921e69d3bf2b925ad285e2bf26a9ff2e"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/radar_clutter_comparison.png",
+      "bytes": 143335,
+      "sha256": "859409ccd6a8273b6553d00aeb753947906ff31ba12eaf115909a99d212daba7"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/radar_clutter_comparison.svg",
+      "bytes": 117578,
+      "sha256": "5b1b09fd1f4326108dea8e49add0dea6feab30fd6b2449fb5d4b0be2d05d898f"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/radar_clutter_roi.npz",
+      "bytes": 433869,
+      "sha256": "22820edc8fb8c04cd24b80f66e099394a87227cc2921def07f704ce164187ced"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/radar_peak_diagnostic.csv",
+      "bytes": 5442,
+      "sha256": "c612458a9ce701d5d5ce46c81dfc19684907285e72364e9acd23613129b5421a"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/radar_qc.json",
+      "bytes": 1160,
+      "sha256": "ff1af79bc0999b71436d54e115f8dfe07c62e43e0c0c8be19e204293b2edd672"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/source_hashes.json",
+      "bytes": 1597,
+      "sha256": "08e488eacf9badfdc1abd4f4dcb742e20d48ffa8b30a189c5184cab32f2582ac"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/albedo_rows.bin",
+      "bytes": 46080,
+      "sha256": "7e864ca1d67c883bef399d26ccf5ef2fe39cc2a0ff17887c0e6a8b08f0237e6e"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/dci_header.bin",
+      "bytes": 16384,
+      "sha256": "021197c8dc5c89a2a9fa18feb77fc2b93e1f61c56db791e21ced0db305e53eb5"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/dci_http.html",
+      "bytes": 2072,
+      "sha256": "f78770ed8e60e4701faeb40a1a8a28023136c28ab72f4fc37b08fda320dba2e1"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/extra_receipts.json",
+      "bytes": 905,
+      "sha256": "90f90886d637aa02c77c9c0cc33528ac7044ea7e940a646eb473a6c01d3052da"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/global_albedo_8ppd.lbl",
+      "bytes": 2334,
+      "sha256": "af384feba24d44a87bcf2caaf5e0f41c9ed0f27c045e6d1a00dd1fd99bd2f749"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/guide_receipts.json",
+      "bytes": 713,
+      "sha256": "164878728fd5589a00491f72c8ed43830f3e678e6640ab5e6e51e6cc03936b58"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/pair_range_receipts.json",
+      "bytes": 822,
+      "sha256": "3ebfcae1895c52d1b5e1011e719a329fea2a85dbd67b294bd1e49e646d285eda"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/pair_retry_receipts.json",
+      "bytes": 970,
+      "sha256": "6ea720d6387b028d45312521cc9ec87ed24880d5a0c6e63a90400006700966e6"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/radar.lbl",
+      "bytes": 2155,
+      "sha256": "2704ddcccd2528cace812267bfb6b22712545ff967c28edeb560a66d923f7e15"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/radar_material_receipts.json",
+      "bytes": 1394,
+      "sha256": "db9c0d8c262b0bc8f89fad3ec59b38916541c5dd9a9a46705fdc0cc82c45dfeb"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/range_receipts.json",
+      "bytes": 1010,
+      "sha256": "c2f7515d40060d4c858ddcf534b172ea1fd21dc0efdb694d157373e7f8aa3f05"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/rtrn.xml",
+      "bytes": 13658,
+      "sha256": "8f3bcf7a7a04f8f9bfc0e160ab17c7108fc6ae98aa91851ec8ea5959137ae812"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/s_01958801_sim.xml",
+      "bytes": 15716,
+      "sha256": "56f0c2387b9244fede10523201b95d8a9796a9d4694d959a7a971cbd2f5321d6"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/tes_products_http.html",
+      "bytes": 22356,
+      "sha256": "1ddd7cd62e340455566694d985de4a9cdc9a28d32caf3fd1d7d11a142ac84c42"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/themis_receipts.json",
+      "bytes": 3956,
+      "sha256": "e231a2668d40302239bb7944385092ece7e2c04ec97077ce301e2e754f803156"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/sources/window_receipts.json",
+      "bytes": 986,
+      "sha256": "db2b8bd4dd119981cedb6b0a1947c0103ec6ee94abf76415378dfe921f817215"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/thermal_common_grid.npz",
+      "bytes": 62338,
+      "sha256": "025fb77e7e9475ce95b00cec93f9b8a2c33581dc56266dc4dd96178a1c904e79"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/thermal_method.json",
+      "bytes": 506,
+      "sha256": "c17a13ab0a514d8603eecfa6ef2fdf31905a44636265f670b4f5bf78c8124a9d"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/thermal_pair_support.csv",
+      "bytes": 3546,
+      "sha256": "1f76f5dd51a300c46e44666385af9670c63bd37efe42646beb7b0de0119dd7c5"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/thermal_scene_qc.csv",
+      "bytes": 1852,
+      "sha256": "468f3a25fcec3dd1de83eb47dab9f000f410d94af0f0a221c0c3b5a29b7bfbaf"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/verification.json",
+      "bytes": 407,
+      "sha256": "b02456b78983092501f340be1856701d1bdde15a270929a71a75dc00e283de50"
+    },
+    {
+      "path": "outputs/research/MS-01/local_validation/constraints_followup/verify.py",
+      "bytes": 1701,
+      "sha256": "9c123c41e31cb7c772d095c1cd9ac5c0e4e763d27405fb7029db7647c0f0ae04"
+    }
+  ]
+}

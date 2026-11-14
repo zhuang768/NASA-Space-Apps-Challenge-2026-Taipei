@@ -1,0 +1,32 @@
+[
+  {
+    "id": "albedo_rows.bin",
+    "url": "http://tes.asu.edu/mineral_map/global_albedo_8ppd.img",
+    "start": 3041280,
+    "end": 3087359,
+    "at": "2026-11-14T19:24:01.699Z",
+    "status": 206,
+    "bytes": 46080,
+    "content_range": "bytes 3041280-3087359/16588800"
+  },
+  {
+    "id": "radar_window.bin",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/rgram/s_0195xx/s_01958801_rgram.img",
+    "start": 33344000,
+    "end": 62519999,
+    "at": "2026-11-14T19:24:01.700Z",
+    "status": 206,
+    "bytes": 29176000,
+    "content_range": "bytes 33344000-62519999/75024000"
+  },
+  {
+    "id": "sim_window.bin",
+    "url": "https://pds-geosciences.wustl.edu/mro/urn-nasa-pds-mro_sharad_simulations/data/s_0195xx/s_01958801/s_01958801_sim.img",
+    "start": 183392000,
+    "end": 212567999,
+    "at": "2026-11-14T19:24:01.701Z",
+    "status": 206,
+    "bytes": 29176000,
+    "content_range": "bytes 183392000-212567999/225072000"
+  }
+]

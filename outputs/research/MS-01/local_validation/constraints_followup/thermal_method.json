@@ -1,0 +1,12 @@
+{
+  "grid_step_lat_deg": 0.005,
+  "grid_step_lon_deg": 0.009,
+  "method": "Nearestnativepixelatidenticalrequestedcoordinates;notinterpolationorregistration",
+  "projection": "Sphere3396.190km;sinusoidal or north-polarstereographic;zero-based offsets sameexplicitconventionaspreviousphase",
+  "limits": [
+    "Normativepixeloriginnotverified",
+    "Gridnodes are not independent observations",
+    "PBTbrightness not kinetictemperature",
+    "No same-season/LT pair accepted as controlled experiment"
+  ]
+}

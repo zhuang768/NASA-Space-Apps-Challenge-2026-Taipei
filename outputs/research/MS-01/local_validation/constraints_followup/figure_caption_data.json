@@ -1,0 +1,26 @@
+{
+  "figure": "radar_clutter_comparison.png",
+  "observation": "S_01958801 orbit19588 actualreceivedpower andcorrespondingcombinedclutter",
+  "UTC": "2010-09-30T20:09:47.039–20:09:56.350",
+  "columns_label1": [
+    1664,
+    1727
+  ],
+  "rows_display0": [
+    2420,
+    2530
+  ],
+  "raw_window0": [
+    1600,
+    2999
+  ],
+  "coordinate_source": "../sharad_actual_geometry_rows.csv",
+  "display": "10log10(power/panelmax);-35..0dB;separatenormalization;notphysicalpowercomparison",
+  "what_new": "First actual same-trackROI echo/clutter qualitative inspection in thisMS01branch",
+  "what_not": "No uniquelypickedsubsurfaceice,noamplitudesubtraction,noicefraction/depthinversion",
+  "source_urls": [
+    "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/rgram/s_0195xx/s_01958801_rgram.img",
+    "https://pds-geosciences.wustl.edu/mro/urn-nasa-pds-mro_sharad_simulations/data/s_0195xx/s_01958801/s_01958801_sim.img"
+  ],
+  "methods": "analyze.py;plot.py"
+}

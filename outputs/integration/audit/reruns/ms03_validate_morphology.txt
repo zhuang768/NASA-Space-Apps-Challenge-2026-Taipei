@@ -1,0 +1,2 @@
+PASS: acquisition hashes;JSON/CSV;185 polygon IDs;first polygon independent shoelace/perimeter;metric bounds;unmodified DN crop;ODE3CTX/0HiRISE responses;catalogue union;outside HiRISE label;AD1 downgrade;figure files.
+exit=0

@@ -1,0 +1,22 @@
+{
+  "checked_main_sha": "08d2740a23694a54bcc11cabf7120114d2e120fc",
+  "check_name": "Workers Builds: nasa-space-apps-challenge-2026-taipei",
+  "check_id": 132565173673,
+  "build_status": "failure",
+  "build_id": "34fdb249-d067-47bd-8386-7ddca08208e3",
+  "details_url": "https://dash.cloudflare.com/5a215a2a3ffc384e958ae5bcb53687d0/workers/services/view/nasa-space-apps-challenge-2026-taipei/production/builds/34fdb249-d067-47bd-8386-7ddca08208e3",
+  "github_error_text": null,
+  "current_repository_app_configs": [],
+  "repository_scope_evidence": "PUBLICATION.json cleanup_scope says website/deployment files retained in archive/history",
+  "dashboard_observation": "redirected to Cloudflare sign-in; no signed-in session available",
+  "exact_build_failure_cause": "unknown; detailed logs not accessible while signed out",
+  "state_changed": false,
+  "next_required": "Cloudflare authenticated build logs and current Git integration configuration; keep research-source checks distinct from deployment health",
+  "not_performed": [
+    "disable build check",
+    "disconnect repository",
+    "restore archived website",
+    "modify credentials",
+    "deploy website"
+  ]
+}

@@ -1,0 +1,3 @@
+PASS: IDs;coordinates;4themes;source crossrefs;CSV/JSON;native-vs-finalMS03;input hashes;EarthGIS ZIP/CRS/185records.
+PASS: W pinned6source hashes where local;header mapping first/last samples;27553rows;2010window8760;8759pairs;summary reproduction;clock limits retained.
+exit=0

@@ -1,0 +1,86 @@
+pool rows 58238 | all pass: True
+OK   lat 0.0
+OK   lon_east 0.0
+OK   mola_relief_m final_vs_pool 0.0
+OK   SWIM_0_1m stack final_vs_pool 0.0
+OK   SWIM_1_5m stack final_vs_pool 0.0
+OK   dust_my34_p95 final_vs_pool 0.0
+OK   dust_my35_p95 final_vs_pool 0.0
+OK   dust_my34_mean final_vs_pool 1.5065821146187375e-08
+OK   dust_my35_mean final_vs_pool 1.7704859800460326e-08
+OK   MCS night median K final_vs_pool 0.0
+OK   MCS day median K final_vs_pool 0.0
+OK   MCS paired contrast K final_vs_pool 0.0
+OK   TES TI native-vs-final 0.0
+OK   MOLA slope native-vs-final 0.0
+{
+ "mars_km_per_degree": 59.27138139772743,
+ "nominal_NS_km_from_bounds": 29.635690698863716,
+ "nominal_EW_km_at_center_lat": 17.93830541152093,
+ "dust_cell_center_(52.5,168.0)_distance_km": 17.33422198491386,
+ "mcs_bin_center_(55.0,170.0)_distance_km": 146.70074443798975,
+ "mcs_bin_note": "5-degree MCS bin center is ~2.25 deg north of MS-02: a regional background, not a site value"
+}
+{
+ "E04_structure_center_to_HRV_study_area_km": 4.322791258876751,
+ "E04_LiDAR_grids_latlon_from_UTM16N_Table3.1": {
+  "grids": {
+   "16A": {
+    "lat": 75.37608648290647,
+    "lon": -89.53585002630436
+   },
+   "16C": {
+    "lat": 75.3797030979511,
+    "lon": -89.53735182862484
+   },
+   "16D": {
+    "lat": 75.38097042062354,
+    "lon": -89.5362881412168
+   },
+   "16K": {
+    "lat": 75.35892472037956,
+    "lon": -89.54347723998369
+   },
+   "16L": {
+    "lat": 75.35883963184597,
+    "lon": -89.53395611246928
+   },
+   "16N": {
+    "lat": 75.36679839679307,
+    "lon": -89.52543788803418
+   },
+   "16AD": {
+    "lat": 75.39368038259451,
+    "lon": -89.57094551946253
+   },
+   "StoneStripes": {
+    "lat": 75.36386077903315,
+    "lon": -89.6547489484874
+   },
+   "EastCampPolygons": {
+    "lat": 75.37044750900976,
+    "lon": -89.5105763416902
+   }
+  },
+  "lat_range": [
+   75.35883963184597,
+   75.39368038259451
+  ],
+  "lon_range": [
+   -89.6547489484874,
+   -89.5105763416902
+  ],
+  "ns_extent_km": 3.874114723724713,
+  "ew_extent_km_at_mean_lat": 4.04853047766084,
+  "note": "grids agree with Fig 1.8 (75.37N, -89.53) to ~0.01-0.1 deg; the p.6 coordinate is the impact-structure centre, a different anchor"
+ },
+ "unit_conversions_K": {
+  "UV_MAAT_-23.4C": 249.74999999999997,
+  "UV_42cm_-24.1C": 249.04999999999998,
+  "Svalbard_Polygons_MAAT_-5.8C": 267.34999999999997,
+  "Devon_MAAT_-16C": 257.15,
+  "UV_SpecialRegion_threshold_255K_as_C": -18.149999999999977,
+  "UV_2560h_fraction_of_year": 0.2922374429223744
+ }
+}
+exit=0

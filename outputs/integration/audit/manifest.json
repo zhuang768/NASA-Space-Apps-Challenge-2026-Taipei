@@ -1,0 +1,124 @@
+{
+  "purpose": "Final-round evidence and claim audit, Team zasa, NASA Space Apps 2026",
+  "audit_date_taipei": "2026-11-15",
+  "pinned": {
+    "main": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+    "handoff": "f7076c9fdc77e00244ed5d6863aad2bf78cfa28f",
+    "ms01": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+    "ms02": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+    "ms03": "8fa07afac4a98096958880f6a5ece16f35abc4db"
+  },
+  "task_listed_ms03_head_superseded": {
+    "listed": "3321765dc0cd24316e7e12d30b4ade803fa67fcd",
+    "audited_latest": "8fa07afac4a98096958880f6a5ece16f35abc4db"
+  },
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39",
+    "numpy": "2.5.3"
+  },
+  "automated_checks_summary": {
+    "PASS": 25,
+    "FAIL": 0,
+    "INFO": 4,
+    "NOT_RUN": 0
+  },
+  "reruns_of_existing_validators": {
+    "ms01_thermal_validate_noraw.txt": {
+      "exit_code": 1,
+      "status": "NOT_RERUN: Zenodo raw HOBO/Campbell files unavailable (FileNotFoundError); not a PASS"
+    },
+    "ms01_validate_deliverables.txt": {
+      "exit_code": 0,
+      "status": "ran; exit 0 = that team's own structural/reproduction checks passed"
+    },
+    "ms02_verify.txt": {
+      "exit_code": 0,
+      "status": "ran; exit 0 = that team's own structural/reproduction checks passed"
+    },
+    "ms03_validate.txt": {
+      "exit_code": 0,
+      "status": "ran; exit 0 = that team's own structural/reproduction checks passed"
+    },
+    "ms03_validate_morphology.txt": {
+      "exit_code": 0,
+      "status": "ran; exit 0 = that team's own structural/reproduction checks passed"
+    }
+  },
+  "not_verified": [
+    "MS-01 thermal_followup/validate.py against Zenodo raw files (raw unavailable)",
+    "MS-03 149 PDS labels not re-downloaded (CSV-internal recompute only)",
+    "literature contents beyond what each team's report states it read",
+    "root cause of HiRISE duplicate index rows (unknown by MS-03's own report)",
+    "Workers Builds failure cause (fails on main and handoff as well)",
+    "legal licence status of third-party files"
+  ],
+  "claim_ledger_rows": 49,
+  "files": [
+    {
+      "path": "docs/integration/audit/audit_report.md",
+      "sha256": "91280505a60b9affedc32840d667b26edf8e15083dfc2a93343313961a506a6d",
+      "bytes": 12827
+    },
+    {
+      "path": "docs/integration/audit/merge_readiness.md",
+      "sha256": "cab79b13b55cb996668a36809025422a303e57b049176195131f389228a0c4b2",
+      "bytes": 1535
+    },
+    {
+      "path": "outputs/integration/audit/checks.json",
+      "sha256": "bae68575ecb3ac05602b8d5cb6c9a6b9bcd808f2e2ce42006bc1c75e664e0076",
+      "bytes": 36528
+    },
+    {
+      "path": "outputs/integration/audit/claim_ledger.csv",
+      "sha256": "3f1e3f2ffc3533e5bfaef42ecc6e76f53b53041fb3bea8757a16e0660dec954f",
+      "bytes": 18881
+    },
+    {
+      "path": "outputs/integration/audit/reruns/ms01_thermal_validate_noraw.txt",
+      "sha256": "d6caa1822115ee53e76bfe5d0e1cc3d7cff59c60bba6103cf672f509c1a43794",
+      "bytes": 953
+    },
+    {
+      "path": "outputs/integration/audit/reruns/ms01_validate_deliverables.txt",
+      "sha256": "5241f7fc862611053fe6d477323aa4dbe77bc5e01079491122ec8915e3bb98a0",
+      "bytes": 663
+    },
+    {
+      "path": "outputs/integration/audit/reruns/ms02_verify.txt",
+      "sha256": "fb7ea99123c593c00df956ee08b9c51826bdf8517c56f8b873ec72bff3a12d48",
+      "bytes": 2479
+    },
+    {
+      "path": "outputs/integration/audit/reruns/ms03_validate.txt",
+      "sha256": "ab67d972d90851ce6f6d52ff1a4781ed2b3b7fc142a57a26290d679a98887528",
+      "bytes": 279
+    },
+    {
+      "path": "outputs/integration/audit/reruns/ms03_validate_morphology.txt",
+      "sha256": "4fe75a127c3168f57979ebd8733f7b4c08bd5da063f8f5b28e74ae523ea79934",
+      "bytes": 226
+    },
+    {
+      "path": "outputs/integration/audit/scripts/audit_checks.py",
+      "sha256": "22493787b03d70a45166babf72771ec9d2d61ce6186c3e015b01019203f997f7",
+      "bytes": 30503
+    },
+    {
+      "path": "outputs/integration/audit/scripts/build_ledger.py",
+      "sha256": "06b8a61223af57fade30769336d1311f01b1d9366402a8b0cea5f9beb0ea9042",
+      "bytes": 18668
+    },
+    {
+      "path": "outputs/integration/audit/scripts/build_manifest.py",
+      "sha256": "7178fba5bb94eae11c38936c257af3eb6ee1b4a8717df4bde262a8fe43a4a4ac",
+      "bytes": 2358
+    }
+  ],
+  "record_status": "historical_snapshot_with_current_overlay",
+  "current_snapshot": "outputs/integration/audit/current_snapshot.json",
+  "current_notes": "docs/integration/audit/current_notes.md",
+  "current_manifest": "outputs/integration/audit/manifest_current.json",
+  "historical_checks_not_rerun": true
+}

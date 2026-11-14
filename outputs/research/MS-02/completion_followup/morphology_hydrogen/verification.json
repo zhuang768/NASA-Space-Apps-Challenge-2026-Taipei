@@ -1,0 +1,134 @@
+{
+  "verification_scope": "numerical nominal footprint/time geometry only; not scientific gap closure",
+  "checks": [
+    {
+      "check": "pinned_source_sha256",
+      "passed": true
+    },
+    {
+      "check": "legacy_spatial_reproduction",
+      "passed": true,
+      "error": 2.531308496145357e-14
+    },
+    {
+      "check": "independent_grid_at_least_1",
+      "passed": true,
+      "grid_fraction": 1.0,
+      "analytic_fraction": 1.0000000000000002,
+      "tolerance": 0.001
+    },
+    {
+      "check": "independent_grid_at_least_2",
+      "passed": true,
+      "grid_fraction": 1.0,
+      "analytic_fraction": 0.9999999999999787,
+      "tolerance": 0.001
+    },
+    {
+      "check": "independent_grid_at_least_3",
+      "passed": true,
+      "grid_fraction": 0.6823950747017553,
+      "analytic_fraction": 0.6823964278666579,
+      "tolerance": 0.001
+    },
+    {
+      "check": "independent_grid_at_least_4",
+      "passed": true,
+      "grid_fraction": 0.05121686776993617,
+      "analytic_fraction": 0.05121708367337936,
+      "tolerance": 0.001
+    },
+    {
+      "check": "independent_grid_at_least_5",
+      "passed": true,
+      "grid_fraction": 0.0,
+      "analytic_fraction": 0.0,
+      "tolerance": 0.001
+    },
+    {
+      "check": "independent_grid_0_1",
+      "passed": true,
+      "grid_fraction": 0.0,
+      "analytic_fraction": 0.0,
+      "tolerance": 0.001
+    },
+    {
+      "check": "independent_grid_0_2",
+      "passed": true,
+      "grid_fraction": 0.4655275003304073,
+      "analytic_fraction": 0.4655273486090941,
+      "tolerance": 0.001
+    },
+    {
+      "check": "independent_grid_0_3",
+      "passed": true,
+      "grid_fraction": 0.0,
+      "analytic_fraction": 0.0,
+      "tolerance": 0.001
+    },
+    {
+      "check": "independent_grid_0_4",
+      "passed": true,
+      "grid_fraction": 0.43432279976502886,
+      "analytic_fraction": 0.43432221848175945,
+      "tolerance": 0.001
+    },
+    {
+      "check": "independent_grid_1_2",
+      "passed": true,
+      "grid_fraction": 0.15643988417173746,
+      "analytic_fraction": 0.1564396267516648,
+      "tolerance": 0.001
+    },
+    {
+      "check": "independent_grid_1_3",
+      "passed": true,
+      "grid_fraction": 0.11763205759109145,
+      "analytic_fraction": 0.1176341184374188,
+      "tolerance": 0.001
+    },
+    {
+      "check": "independent_grid_1_4",
+      "passed": true,
+      "grid_fraction": 0.4083657684965593,
+      "analytic_fraction": 0.4083667500012757,
+      "tolerance": 0.001
+    },
+    {
+      "check": "independent_grid_2_3",
+      "passed": true,
+      "grid_fraction": 0.07643406871377,
+      "analytic_fraction": 0.07643463154259715,
+      "tolerance": 0.001
+    },
+    {
+      "check": "independent_grid_2_4",
+      "passed": true,
+      "grid_fraction": 0.6895482176072691,
+      "analytic_fraction": 0.689547865922611,
+      "tolerance": 0.001
+    },
+    {
+      "check": "independent_grid_3_4",
+      "passed": true,
+      "grid_fraction": 0.17017045603745642,
+      "analytic_fraction": 0.1701715470070588,
+      "tolerance": 0.001
+    },
+    {
+      "check": "no_unmeasured_change_or_weh",
+      "passed": true
+    },
+    {
+      "check": "all_science_status_unclosed",
+      "passed": true
+    },
+    {
+      "check": "roi_not_earth_radius",
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "independent_method": "1000x1000 midpoint samples; cosine-latitude area weights; direct polygon half-plane tests",
+  "check_count": 20
+}

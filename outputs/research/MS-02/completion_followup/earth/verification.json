@@ -1,0 +1,17 @@
+{
+  "local_artifact_integrity": "pass",
+  "checked_local_files": 13,
+  "source_records": 13,
+  "search_records": 32,
+  "calculation_scenarios": 4,
+  "check_scope": "hashes, source schema, CRIM forward reconstruction, source-line/time-linked wind and hourly surface-RH support; full-paper snow result withheld",
+  "author_calibrated_UV_export_reused": true,
+  "wind_records_checked": 17705,
+  "snow_proxy_count_reproduced": false,
+  "full_paper_snow_proxy_count_reproduced": false,
+  "available_hourly_surface_proxy_support_computed": true,
+  "available_hourly_surface_RH_records_checked": 1944,
+  "original_earth_series_or_radar_acquired": false,
+  "external_ground_truth_validated": false,
+  "research_completion": "unproven; original records and independent target validation remain missing"
+}

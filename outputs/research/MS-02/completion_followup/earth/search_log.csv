@@ -1,0 +1,33 @@
+search_id,platform,query_or_target,outcome,access_date_taipei
+S01,web_search_system2,"""2017JF004535"" data availability dataset",Liu full text found; read full text; not raw download,2026-11-15
+S02,web_search_system2,"""2012JE004053"" ""data""",Thomson full text found; not raw download,2026-11-15
+S03,web_search_system2,"""Beacon Valley"" ""Liu"" ""2018"" data temperature download",Published archive route identified,2026-11-15
+S04,web_search_system2,Brighi WISDOM Adventdalen data radar 2022 raw,Primary EPSC2025 found,2026-11-15
+S05,web_search_system1,"""UW_Dry_Valley_Datalogging""",Liu data route; no raw file acquired,2026-11-15
+S06,web_search_system1,"""Beacon Valley"" ""Sletten"" ""data"" download",USAP601247 cosmogenic core and GTNP found; not target series,2026-11-15
+S07,web_search_system1,"""Brighi"" ""WISDOM"" ""zenodo""",No verified raw dataset identified; not evidence no dataset exists,2026-11-15
+S08,web_open,https://cmr.earthdata.nasa.gov/search/collections.umm_json?keyword=UW_Dry_Valley_Datalogging&page_size=10,Tool inaccessible; no collection result acquired,2026-11-15
+S09,web_search_system1,"""UW_Dry_Valley_Datalogging"" -site:agupubs.onlinelibrary.wiley.com",No verified raw target acquired,2026-11-15
+S10,web_search_system1,"""Beacon Valley"" soil temperature ""data"" NASA collection",USAP602028 separate wet/dry study found,2026-11-15
+S11,web_search_system1,"""WISDOM"" ""Svalbard"" ""data availability""",EPSC2025/2026 abstracts; no raw file acquired,2026-11-15
+S12,web_search_system2,"""Brighi"" ""Svalbard"" dataset zenodo hal",No verified raw file acquired,2026-11-15
+S13,web_search_system2,"""Thomson"" ""Haughton"" GPR raw data 2012 repository",No verified target raw file acquired,2026-11-15
+S14,web_open,https://data.gtn-p.org/view/pt/681,Read location and explicit no-datasets table,2026-11-15
+S15,web_open,https://meetingorganizer.copernicus.org/EPSC2026/EPSC2026-988.html,Read actual 3D cave-ground-truth scope,2026-11-15
+S16,web_open,https://www.usap-dc.org/view/dataset/602028,Catalog filename and MD5 visible; reCAPTCHA download gate; file not acquired,2026-11-15
+S17,web_click,Liu2018 GCMD data link,HTTP502; access failure not absence,2026-11-15
+S18,web_click,Liu2018 supporting-information PDF link,HTTP403; content not reviewed,2026-11-15
+S19,web_search_system1,"""Thomson"" ""2012JE004053"" site:dataverse.scholarsportal.info",No raw dataset verified,2026-11-15
+S20,web_open,https://doi.org/10.1109/JSTARS.2026.3739489,Inaccessible via tool; no new-paper full-text or raw-data verification,2026-11-15
+S21,web_search_or_open,Sletten Dry Valley Datalogging data site:earthdata.nasa.gov,No matching raw record verified,2026-11-15
+S22,web_search_or_open,"""Sletten"" ""Beacon"" ""temperature data"" site:washington.edu",UW dissertation found,2026-11-15
+S23,web_search_or_open,https://dev-www.ess.washington.edu/content/people/student_publications_files/liu--lu/Liu_washington_0250E_14999.pdf,Read primary thesis data route and comparison appendix; no original series acquired,2026-11-15
+S24,web_search_or_open,https://depts.washington.edu/icylands/,HTTP404; not proof original records absent,2026-11-15
+S25,web_open,https://doi.org/10.1017/S0954102025100448,DOI open failed; primary Cambridge exact page found by search and read,2026-11-15
+S26,web_search_system1,Summer snow determines 98;S0954102025100448,Primary Cambridge full HTML and USGS record found,2026-11-15
+S27,web_find,McKay2026 98%;48;24days;representative,Read source rule;Fig6-7 and representativeness assumptions,2026-11-15
+S28,web_search_system2,Levy2026 Apparent thermal inertia McMurdo Dry Valleys,Publisher cached primary methods/results available;direct fulltext403,2026-11-15
+S29,web_search_system2,10.1080/15230430.2026.2617687 KD2;2009 2015;15 20,"Primary cached methods confirm instrument,triplicates,wetting levels;not supplement acquisition",2026-11-15
+S30,web_find,Marinova2022 Meteorological measurements 1.2m,Primary channel locations and30minCampbell/60minOnset read,2026-11-15
+S31,local_read_only,UV09_10 Campbell gzip and source_manifest.json,Decoded MD5/sha256 match prior release record;17705rows inspected;no snowcount due missing surfaceRH/window,2026-11-15
+S32,local_read_only,UV09_10 HOBO WeatherStation Surf_RHIce alternatefile,Releasehashverified;hourlysurfacechannel found;availablewindow proxycomputed withoutpaperreproduction/resampling,2026-11-15

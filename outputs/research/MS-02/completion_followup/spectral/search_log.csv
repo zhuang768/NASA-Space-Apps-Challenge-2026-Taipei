@@ -1,0 +1,10 @@
+date_taipei,method,query_or_url,outcome,scope
+2026-11-15,web_search,"CDR450924300802_WA0300010L_3",no_exact_calibration_result,"No missing-file proof; exact source named in IF label"
+2026-11-15,web_search,"site.pds-geosciences.wustl.edu CRISM TRDR ROWNUM wavelength smile multispectral55bands",official_SIS_and_TRDR_primer_found,"Product interpretation and calibration requirements"
+2026-11-15,web_open,https://pds-geosciences.wustl.edu/mro/mro-m-crism-2-edr-v1/mrocr_0001/document/crism_dpsis.htm,success,"SIS1.3.7.7 dated2024-11-05; sections3.4 and label keyword table; wavelength and detector-row linkage"
+2026-11-15,web_open,https://pds-geosciences.wustl.edu/mro/mro-m-crism-2-edr-v1/mrocr_0001/cdr/wa/cdr450924300802_wa0300010l_3.lbl,not_accessible_by_web_tool,"Not an HTTP404 or proof file absent"
+2026-11-15,web_open,https://pds-geosciences.wustl.edu/mro/mro-m-crism-2-edr-v1/mrocr_0001/cdr/wv/,not_accessible_by_web_tool,"No source bytes acquired"
+2026-11-15,web_open,https://pds-geosciences.wustl.edu/mro/mro-m-crism-2-edr-v1/mrocr_0001/cdr/sw/,not_accessible_by_web_tool,"No source bytes acquired"
+2026-11-15,playwright_request,https://pds-geosciences.wustl.edu/mro/mro-m-crism-2-edr-v1/mrocr_0001/cdr/,stalled_then_interrupted,"Request reported timeout20000ms argument but tool did not return; no response bytes or HTTP code; not retried"
+2026-11-15,local_readonly_source_method,/tmp/nasa-ms03-completion-20261115/outputs/research/MS-03/local_validation/crism/acquire_crism.py,read_method_and_receipts,"Previous differentWA acquired using urllib; values not substituted for exactMS02calibration"
+2026-11-15,bounded_urllib,see_retrievals.json,all_four_DNS_failures,"ExactWA lbl/img and originalIF/DDR; actual errors preserved; no remote bytes acquired"

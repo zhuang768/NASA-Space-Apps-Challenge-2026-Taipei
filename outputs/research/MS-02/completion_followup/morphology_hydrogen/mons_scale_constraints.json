@@ -1,0 +1,17 @@
+{
+  "source_doi": "10.1016/j.icarus.2017.09.031",
+  "source_locator": "Appendix, pp114-115, Eq A2 discussion",
+  "instrument_fwhm_km_approx": 550,
+  "adopted_spherical_harmonic_order": 16,
+  "longitudinal_half_wavelength_deg": 11.25,
+  "paper_radius_km": 3390,
+  "longitudinal_half_wavelength_km": 665.6249434793374,
+  "roi_north_south_km": 29.637348761653108,
+  "roi_east_west_at_center_km": 17.939309026959148,
+  "local_weh_wt_percent": null,
+  "local_weh_uncertainty": null,
+  "local_areal_density_g_cm2": null,
+  "numerical_table_required": "published supplemental Table S1 (N16); Table S2 for undeconvolved comparison",
+  "status": "primary method located/read; numerical supplementary table not acquired",
+  "limit": "N16 half-wavelength is not FWHM and is not a new local measurement; no WEH estimated from a coloured map or SWIM consistency"
+}

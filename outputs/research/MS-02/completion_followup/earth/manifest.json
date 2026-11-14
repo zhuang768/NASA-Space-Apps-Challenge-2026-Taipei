@@ -1,0 +1,92 @@
+{
+  "scope": "Earth primary-source follow-up, reused author-export schema/wind support and conditional synthetic diagnostic; not formal report",
+  "baseline_main": "521740108050ba16e406f8becb67a786179ff8bd",
+  "generated_utc": "2026-11-14T20:33:54.098449+00:00",
+  "original_raw_data_acquired": false,
+  "external_original_hashes": null,
+  "listed_remote_md5_not_locally_verified": {
+    "g080_ground_sensor_data.zip": "cad4c27d74f8becc4d8bd6840fb31f7f"
+  },
+  "files": [
+    {
+      "path": "analyze_crim.py",
+      "bytes": 3246,
+      "sha256": "b9c7e5566bdf7e2d38ed6aaf35056923cbcacc91c904cd1042575af21f9194f7"
+    },
+    {
+      "path": "crim_identifiability.csv",
+      "bytes": 889,
+      "sha256": "bd03090dc483c645fe93654c511235794496da4813c91cc50c13f238aa19b865"
+    },
+    {
+      "path": "crim_identifiability.json",
+      "bytes": 812,
+      "sha256": "bb3d1638e6d26f532dbe011131602b645bf17746ca573c3f3e3d66d4aa13e252"
+    },
+    {
+      "path": "earth_notes.md",
+      "bytes": 8854,
+      "sha256": "5bd5056f64032b7117126ade6af1b511165c2c3248ecb5bfcbf45ffce09222e9"
+    },
+    {
+      "path": "inspect_uv_support.py",
+      "bytes": 4365,
+      "sha256": "e3bebb91d4490a7658a26aea85a5194427f8368ca46b2bf32f2af0a63a2ac3db"
+    },
+    {
+      "path": "inspect_uv_surface_support.py",
+      "bytes": 4789,
+      "sha256": "4872312849432c6ec368151c6f6c61ed2d6e2d20d24be9990900af2b1dba9fea"
+    },
+    {
+      "path": "search_log.csv",
+      "bytes": 4424,
+      "sha256": "547a6322099fafd4a9058339c27538f078db5cbcc1120750ee1e98cc4515b6f0"
+    },
+    {
+      "path": "source_audit.csv",
+      "bytes": 6210,
+      "sha256": "c724f25b0349a89df920254baf16b7b467cb468751e5d59a129af54f2fbeb922"
+    },
+    {
+      "path": "uv_export_support.json",
+      "bytes": 2515,
+      "sha256": "345062c23727069f53698a35faac0b2634ba0d7b1544d455d3cf20688248e768"
+    },
+    {
+      "path": "uv_surface_RH_available_summer.csv.gz",
+      "bytes": 19624,
+      "sha256": "2f646e59cae09cd65a4562cd0b0bdf21f22d7e6c5634bc19309211b5d1e4672c"
+    },
+    {
+      "path": "uv_surface_RH_support.json",
+      "bytes": 2834,
+      "sha256": "01901d8a0d987a70ab3b5a599c7cedced18da44aad6c939f9d79813b36482328"
+    },
+    {
+      "path": "uv_wind_records.csv.gz",
+      "bytes": 130827,
+      "sha256": "b720167f728548f150db5b860933db8d00dd7ab949a274e5f7da11989025e9c4"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 5873,
+      "sha256": "94665a735303f1befa59c42cb51b10e1e19ee588720eb272d54c0fb537f5f0b3"
+    }
+  ],
+  "updated_utc": "2026-11-14T21:33:49.661273+00:00",
+  "author_calibrated_export_reused": true,
+  "remote_export_reacquired_this_round": false,
+  "reused_author_export_hashes": {
+    "decoded_md5": "ae2133eac5c92c695c5f6ef93bcbbd25",
+    "decoded_sha256": "c46d93e3dd07c6c91d700a814214716f00caa0d5cc3a520f8969ce0af63ecafd",
+    "source_url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Campbell_data_good_only_calibrated.txt?download=1",
+    "source_level": "author-calibrated export; not unprocessed logger"
+  },
+  "reused_HOBO_surface_export_hashes": {
+    "decoded_md5": "0c138af0770ec15d4a4942a66507328f",
+    "decoded_sha256": "dc85d4a15723193044c909f761f10cf8e1272912073b378300bdcf5832ccab0c",
+    "source_url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Hobo_WeatherStation_data_good_only_calibrated.txt?download=1",
+    "source_level": "author-calibrated hourly surface-RH export;not unprocessed logger"
+  }
+}

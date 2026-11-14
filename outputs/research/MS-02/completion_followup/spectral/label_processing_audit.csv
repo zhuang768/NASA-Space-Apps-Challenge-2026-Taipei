@@ -1,0 +1,17 @@
+keyword,value,source
+PRODUCT_ID,MSP0001565D_01_IF213L_TRR3,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl
+PRODUCT_VERSION_ID,3,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl
+START_TIME,2010-01-08T23:15:04.702,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl
+STOP_TIME,2010-01-08T23:16:04.631,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl
+SAMPLING_MODE_ID,MULTISPEC,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl
+PIXEL_AVERAGING_WIDTH,10,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl
+MRO:WAVELENGTH_FILE_NAME,CDR450924300802_WA0300010L_3.IMG,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl
+MRO:ATMO_CORRECTION_FLAG,OFF,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl
+MRO:THERMAL_CORRECTION_MODE,OFF,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl
+MRO:PHOTOCLIN_CORRECTION_FLAG,OFF,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl
+MRO:SPATIAL_RESAMPLING_FLAG,OFF,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl
+MRO:SPECTRAL_RESAMPLING_FLAG,OFF,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl
+MRO:HDF_SOFTWARE_NAME,N/A,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl
+MRO:HDF_SOFTWARE_VERSION_ID,N/A,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl
+MRO:IF_MIN_VALUE,N/A,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl
+MRO:IF_MAX_VALUE,N/A,outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.lbl

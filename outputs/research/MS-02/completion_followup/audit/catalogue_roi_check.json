@@ -1,0 +1,94 @@
+{
+  "check_scope": "Daubar2022 original catalogue impact-point membership only",
+  "source_doi": "10.5281/zenodo.6604912",
+  "paper_doi": "10.1029/2021JE007145",
+  "source_url": "https://zenodo.org/records/6604912/files/Daubar_2022_catalog_tableS1.xlsx?download=1",
+  "source_repo_path": "outputs/research/MS-03/local_validation/gap_completion/sources/Daubar_2022_catalog_tableS1.xlsx",
+  "source_bytes": 196534,
+  "source_md5": "4d1b49c2e62785a1b4efb73b2040de4d",
+  "provider_advertised_md5": "4d1b49c2e62785a1b4efb73b2040de4d",
+  "provider_md5_matched": true,
+  "source_sha256": "393ed99a157a7e68a77fc3adf332939ea368a15f2b7ac2589cb701e4f82291f6",
+  "source_git_blob_sha1": "b7d23e5ddea1592403dc3733aa76764413e918a4",
+  "source_license": "CC-BY-4.0 per author release metadata",
+  "original_headers": {
+    "A": "HiRISE Observation ID",
+    "B": "Latitude (deg E, centric)",
+    "C": "Longitude (deg N)",
+    "D": "Ls of image",
+    "E": "Date of image",
+    "F": "Mars Year of image",
+    "G": "Single or cluster",
+    "H": "Ice-exposing impact",
+    "I": "Halo",
+    "J": "Linear Rays",
+    "K": "Arcuate rays",
+    "L": "Dark-, Light-, or Dual-toned BZ",
+    "M": "Diameter (m)",
+    "N": "Before Image Instrument",
+    "O": "Before Image ID",
+    "P": "Before Image Date",
+    "Q": "After Image Instrument",
+    "R": "After Image ID",
+    "S": "After Image Date",
+    "T": "Reference for previously published diameter "
+  },
+  "coordinate_handling": {
+    "latitude": "Column B, named Latitude and marked centric; retained as planetocentric, no geodetic conversion",
+    "longitude": "Column C, named Longitude; east-positive orientation checked against official HiRISE first-row observation, normalized modulo360; no west-positive flip",
+    "header_issue": "Original B/C parenthetical E/N suffixes conflict with variable names; original headers retained unedited",
+    "orientation_check_source": "https://www.uahirise.org/PSP_007561_1290",
+    "orientation_check_read": "Official page latitude(centered)-50.602deg; longitude(East)305.990deg; read2026-11-15",
+    "source_first_row_impact_point": [
+      -50.5988,
+      305.9832
+    ],
+    "check_limit": "An observation centre is not the exact catalogue impact point. Difference used only to reject swapped columns/west-positive orientation, not to assign location accuracy."
+  },
+  "fixed_roi": {
+    "south_deg_N": 52.5,
+    "north_deg_N": 53.0,
+    "west_deg_E": 168.0,
+    "east_deg_E": 168.5,
+    "inclusive_bounds": true
+  },
+  "worksheet": "Sheet1",
+  "source_data_rows": 1203,
+  "source_excel_row_range": [
+    2,
+    1204
+  ],
+  "invalid_coordinate_rows": [],
+  "source_latitude_range": [
+    -82.03,
+    75.4193
+  ],
+  "source_longitude_east_range": [
+    3.2945,
+    359.1007
+  ],
+  "original_ice_flag_counts": {
+    "n": 1135,
+    "possible": 20,
+    "y": 48
+  },
+  "in_cell_catalogue_point_count": 0,
+  "in_cell_ice_exposing_y_count": 0,
+  "in_cell_possible_ice_exposing_count": 0,
+  "hits": [],
+  "interpretation": "No impact point from this bounded2022 source falls in fixedMS-02. This neither establishes no ice nor establishes no crater/study or no overlapping HiRISE image.",
+  "selection_limit": "Dated new-impact catalogue with before/after and crater-resolving HiRISE constraints; not an exhaustive local exposure/geomorphology inventory and not a replacement for other catalogues.",
+  "ice_presence": "unknown",
+  "ice_depth_m": null,
+  "ice_fraction": null,
+  "independent_local_ice_truth_gap_closed": false,
+  "all_ms02_problems_resolved": false,
+  "checks_passed": [
+    "original provider MD5 and two additional hashes",
+    "XLSX CRC",
+    "original headers and ice flag present",
+    "1203 finite valid coordinate rows",
+    "independent official cardinal orientation cross-check",
+    "fixed inclusive ROI point selection; original flags retained"
+  ]
+}

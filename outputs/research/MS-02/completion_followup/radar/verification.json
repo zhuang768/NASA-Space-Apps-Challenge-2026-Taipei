@@ -1,0 +1,339 @@
+{
+  "status": "pass",
+  "check_count": 83,
+  "checks": [
+    {
+      "check": "exactly194_delivered_columns",
+      "pass_": true
+    },
+    {
+      "check": "three_noise_quantiles_two_windows_three_browse_cuts_per_orbit",
+      "pass_": true
+    },
+    {
+      "check": "00464501_exact_original_git_blob",
+      "pass_": true
+    },
+    {
+      "check": "00464501_peak_rows_recomputed",
+      "pass_": true
+    },
+    {
+      "check": "00464501_reported_columns_match_input",
+      "pass_": true
+    },
+    {
+      "check": "00464501_roi_bounds",
+      "pass_": true
+    },
+    {
+      "check": "00464501_noise_quantile_recomputed",
+      "pass_": true
+    },
+    {
+      "check": "00464501_no_pass_claim",
+      "pass_": true
+    },
+    {
+      "check": "00464501_strictly_monotone_latitude",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_200_0.99_32",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_200_0.99_64",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_200_0.99_128",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_200_0.995_32",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_200_0.995_64",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_200_0.995_128",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_200_0.999_32",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_200_0.999_64",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_200_0.999_128",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_800_0.99_32",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_800_0.99_64",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_800_0.99_128",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_800_0.995_32",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_800_0.995_64",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_800_0.995_128",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_800_0.999_32",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_800_0.999_64",
+      "pass_": true
+    },
+    {
+      "check": "00464501_sensitivity_count_800_0.999_128",
+      "pass_": true
+    },
+    {
+      "check": "01983502_exact_original_git_blob",
+      "pass_": true
+    },
+    {
+      "check": "01983502_peak_rows_recomputed",
+      "pass_": true
+    },
+    {
+      "check": "01983502_reported_columns_match_input",
+      "pass_": true
+    },
+    {
+      "check": "01983502_roi_bounds",
+      "pass_": true
+    },
+    {
+      "check": "01983502_noise_quantile_recomputed",
+      "pass_": true
+    },
+    {
+      "check": "01983502_no_pass_claim",
+      "pass_": true
+    },
+    {
+      "check": "01983502_strictly_monotone_latitude",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_200_0.99_32",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_200_0.99_64",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_200_0.99_128",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_200_0.995_32",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_200_0.995_64",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_200_0.995_128",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_200_0.999_32",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_200_0.999_64",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_200_0.999_128",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_800_0.99_32",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_800_0.99_64",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_800_0.99_128",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_800_0.995_32",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_800_0.995_64",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_800_0.995_128",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_800_0.999_32",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_800_0.999_64",
+      "pass_": true
+    },
+    {
+      "check": "01983502_sensitivity_count_800_0.999_128",
+      "pass_": true
+    },
+    {
+      "check": "02004601_exact_original_git_blob",
+      "pass_": true
+    },
+    {
+      "check": "02004601_peak_rows_recomputed",
+      "pass_": true
+    },
+    {
+      "check": "02004601_reported_columns_match_input",
+      "pass_": true
+    },
+    {
+      "check": "02004601_roi_bounds",
+      "pass_": true
+    },
+    {
+      "check": "02004601_noise_quantile_recomputed",
+      "pass_": true
+    },
+    {
+      "check": "02004601_no_pass_claim",
+      "pass_": true
+    },
+    {
+      "check": "02004601_strictly_monotone_latitude",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_200_0.99_32",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_200_0.99_64",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_200_0.99_128",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_200_0.995_32",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_200_0.995_64",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_200_0.995_128",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_200_0.999_32",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_200_0.999_64",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_200_0.999_128",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_800_0.99_32",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_800_0.99_64",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_800_0.99_128",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_800_0.995_32",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_800_0.995_64",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_800_0.995_128",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_800_0.999_32",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_800_0.999_64",
+      "pass_": true
+    },
+    {
+      "check": "02004601_sensitivity_count_800_0.999_128",
+      "pass_": true
+    },
+    {
+      "check": "00464501_01983502_intersection_independent_latitude_knots",
+      "pass_": true
+    },
+    {
+      "check": "00464501_02004601_intersection_independent_latitude_knots",
+      "pass_": true
+    },
+    {
+      "check": "01983502_02004601_intersection_independent_latitude_knots",
+      "pass_": true
+    },
+    {
+      "check": "045m_is_subsample_not_resolved",
+      "pass_": true
+    },
+    {
+      "check": "no_amplitude_subtraction",
+      "pass_": true
+    },
+    {
+      "check": "unvalidated_detector_explicit",
+      "pass_": true
+    }
+  ],
+  "scope": "Input hashes, table calculations and geometry only; does not verify ice or detector sensitivity"
+}

@@ -1,0 +1,4 @@
+orbit_a,orbit_b,min_track_sample_separation_m,matched_latitude_median_separation_m,closest_a_roi_index,closest_b_roi_index,piecewise_linear_track_intersection_count,crossing_method,interpretation
+00464501,01983502,9571.579391322197,9731.186755671886,0,3,0,Strict segment intersections in Mars-local equirectangular projection,No track crossing in delivered linear interpolation; footprint overlap and independent truth untested
+00464501,02004601,562.4668478941403,576.9025039350724,4,5,0,Strict segment intersections in Mars-local equirectangular projection,No track crossing in delivered linear interpolation; footprint overlap and independent truth untested
+01983502,02004601,9013.732735937152,9125.733689290766,2,0,0,Strict segment intersections in Mars-local equirectangular projection,No track crossing in delivered linear interpolation; footprint overlap and independent truth untested

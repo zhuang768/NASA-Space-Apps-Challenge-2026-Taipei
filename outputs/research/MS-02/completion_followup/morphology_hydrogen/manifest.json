@@ -1,0 +1,62 @@
+{
+  "base_sha": "521740108050ba16e406f8becb67a786179ff8bd",
+  "scope": "new morphology/hydrogen followup only",
+  "files": [
+    {
+      "path": "analyze_support.py",
+      "bytes": 9069,
+      "sha256": "e647b1444784b7a06577279fafe7ac167f8545acb068f105efe385de9321df88"
+    },
+    {
+      "path": "ctx_coverage_multiplicity.csv",
+      "bytes": 739,
+      "sha256": "88bb847b2df99f400672305ad905becf6ed0be01e8397186588d77c14efe46b6"
+    },
+    {
+      "path": "ctx_individual_support.csv",
+      "bytes": 1528,
+      "sha256": "2beb510c376441c8b0df889816c304406e6e6e4fec9aa6cac41e4b1792ddb75e"
+    },
+    {
+      "path": "ctx_pair_support.csv",
+      "bytes": 3010,
+      "sha256": "892c9275263ffab278dfbb77962dd1cb6196b704f2957d9ee018d71b48bf4882"
+    },
+    {
+      "path": "mons_scale_constraints.json",
+      "bytes": 852,
+      "sha256": "cb2193d04a0c0ca7b6dfca2d06f223a880deb762dbf0d5c138c067b15224c8ee"
+    },
+    {
+      "path": "notes.md",
+      "bytes": 4840,
+      "sha256": "6f9b9f0f4d6a2dadcd0285802633df03eb30de6a621b123904e76f569c9edf3f"
+    },
+    {
+      "path": "source_attempts.csv",
+      "bytes": 4981,
+      "sha256": "859630b589fffcc355f6458be273ab739d8a07050c530005fa97b8c0e45ece89"
+    },
+    {
+      "path": "support_summary.json",
+      "bytes": 1166,
+      "sha256": "7e525ff55b53a77beeddf16514f437a3c4c6f169c71b256ef5118d9cf75972f3"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 3462,
+      "sha256": "5630a722586d25a28c88186088b77185ec5d40da346360a1a411fa14e1e660d8"
+    },
+    {
+      "path": "verify_support.py",
+      "bytes": 2762,
+      "sha256": "c66af7186ecbe4ebe6a9035d11f8a18fcbad1c27057f6cb868048b70fbb23796"
+    }
+  ],
+  "unclosed": [
+    "calibrated/georeferenced valid CTX imagery",
+    "quantitative surface morphology/change",
+    "MONS TableS1 MS02WEH and uncertainty"
+  ],
+  "input": "../../local_validation/product_footprints.csv"
+}

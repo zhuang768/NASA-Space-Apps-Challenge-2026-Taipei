@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "date_taipei": "2026-11-15",
+  "repository": "zhuang768/NASA-Space-Apps-Challenge-2026-Taipei",
+  "base_commit": "521740108050ba16e406f8becb67a786179ff8bd",
+  "base_tree": "f4ddaa434df90f6577708997d44a53097bcfd3fe",
+  "mars_candidate": "MS-02",
+  "fixed_roi": {
+    "latitude_N": [
+      52.5,
+      53.0
+    ],
+    "longitude_E": [
+      168.0,
+      168.5
+    ],
+    "center": [
+      52.75,
+      168.25
+    ]
+  },
+  "all_ms02_problems_resolved": false,
+  "scientific_completion": false,
+  "revision_scope": "Structured-record reconciliation, source acquisition audits and bounded reproducible analyses of already identified Mars/Earth evidence.",
+  "delivery_record_state": "Current package records and numerical checks are reviewable. Completion of the full scientific objective is unproven.",
+  "publication_state": "GitHub commit/PR publication must be verified separately by remote readback; this status file alone makes no upload claim.",
+  "integrity_qa": {
+    "named_checks_total": 362,
+    "breakdown": {
+      "audit": 128,
+      "radar": 83,
+      "spectral": 9,
+      "thermal": 122,
+      "morphology_hydrogen": 20
+    },
+    "earth_checks": "Separate current manifest/source/calculation/export integrity assertions; see earth/verification.json. Not added to the named-check count.",
+    "scope": "Record integrity and numerical reproduction only; no substitution for independent observations.",
+    "additional_catalogue_check": "Daubar2022 original workbook:1203 finite impact-coordinate rows; zero points in inclusive MS-02 bounds. Source headers/coordinate conventions and hashes audited; no ice-absence inference. See audit/catalogue_roi_check.json. Not included in 362 named package checks."
+  },
+  "verified_original_delivery_records": {
+    "earth_candidate_ids": [
+      "MS-02-E01",
+      "MS-02-E02",
+      "MS-02-E03",
+      "MS-02-E04"
+    ],
+    "four_facets_per_earth_candidate": true,
+    "root_prior_work_rows": 22,
+    "corrected_existing_cells": 54,
+    "inserted_evidence_prior_or_footprint_rows": 11,
+    "current_handoff_same_quantity_checks": 14,
+    "screened_pool_rows": 58238,
+    "screened_pool_columns": 54,
+    "ms02_pool_target_count": 1,
+    "workbook_bytes": 23035176,
+    "workbook_actual_sheet_count": 32
+  },
+  "formal_report": {
+    "path": "docs/research/MS-02/report.md",
+    "sha256_preserved": "1f603ac5a125befdd34af97c14a0c24b3a3591f2b6289a07d4ea62abf7caa0f4",
+    "status": "Preserved byte-for-byte for the human author. It retains historical statements superseded by current structured records and follow-up notes; do not treat its old prose as the current evidence-state authority."
+  },
+  "current_evidence_authority": [
+    "completion_followup/README.md",
+    "completion_followup/requirements.csv",
+    "completion_followup/evidence_index.csv",
+    "completion_followup/completion_status.json",
+    "the current six package notes, source logs, data tables and verifiers",
+    "local_validation/research_notes.md and corrected root CSVs within their stated scopes"
+  ],
+  "unresolved_scientific_requirements": [
+    "MS-02 still lacks colocated independent evidence establishing ice presence, the true interface depth, and ice amount. The released depth 0.4499824941 m is a conditional thermal-model value; no ice-absence inference is licensed.",
+    "CRISM material identification remains open: the original 55 detector-row numbers, exact WA calibration CDR450924300802_WA0300010L_3.IMG, scene sample/line linkage, validated band/pixel quality and atmospheric/thermal/photometric treatment have not been recovered and applied.",
+    "CTX catalogue repeat geometry has been quantified, but radiometric calibration, SPICE camera projection, validated orthorectification/registration, usable-pixel masks, fine-scale terrain and repeat-change uncertainty remain unavailable. Nominal footprint coverage does not establish actual morphology or change.",
+    "Pathare2018 supplemental Table S1 N16 numerical WEH/layer-depth values and their applicable uncertainty have not been acquired for MS-02. MONS coarse hydrogen support is not an independent 0.5-degree ice measurement.",
+    "Thermal per-cell observation dates/counts, residuals, RMS and depth CI remain absent. The 2019 observation-bin to released-product processing chain is unverified. Published 2026 native-grid and equal-weight rules are known, but local BF08/SWIM23 components, masks, missing-data handling and exact release identity are not reconstructed; the combined value remains null.",
+    "Earth validation remains incomplete: original Beacon time series/calibration, Haughton radar/core numerical records, WISDOM polygon-line coordinates and colocated independent ice truth, and University Valley original logger/calibration/clock/deployment identity records and matched material/boundary controls remain missing. Reused author-calibrated UV exports are distinct from unprocessed logger records and do not supply those controls.",
+    "Actual MS-02 cover thickness/material and accumulation rate lack an independently validated local observation. Column dust optical depth cannot be converted to a deposition rate or cover thickness with the available data."
+  ],
+  "unknown_handling": "Unknown numeric quantities remain blank/null with reasons; no probability, zero, fitted uncertainty, local truth or scientific completion is invented.",
+  "earth_update_policy": "Consult the current earth/source_audit.csv, earth/uv_export_support.json and earth/verification.json for the final source/channel review. This consolidation intentionally does not freeze a snow-proxy event count or pending channel-review result.",
+  "out_of_scope_for_this_revision": [
+    "Replacement of the human-authored formal report",
+    "Edits to other Mars sites, shared results or the website",
+    "New field experiments or contact with authors/recipients"
+  ],
+  "completion_rule": "A data/QA pass cannot close a requirement whose independent scientific evidence is missing. Every unresolved requirement above keeps the requested all-problems-resolved objective incomplete."
+}

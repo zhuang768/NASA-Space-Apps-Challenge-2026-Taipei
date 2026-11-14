@@ -1,0 +1,44 @@
+{
+  "scope": "numeric support and provenance only",
+  "checks": [
+    {
+      "check": "exact_git_input_blob",
+      "passed": true
+    },
+    {
+      "check": "shape55by912",
+      "passed": true
+    },
+    {
+      "check": "band_support_reconciles",
+      "passed": true
+    },
+    {
+      "check": "pixel_support_reconciles",
+      "passed": true
+    },
+    {
+      "check": "no_fabricated_wavelength_or_mineral",
+      "passed": true
+    },
+    {
+      "check": "completeness_counts",
+      "passed": true
+    },
+    {
+      "check": "negative_if_preserved_not_clipped",
+      "passed": true
+    },
+    {
+      "check": "processing_flags_uninvented",
+      "passed": true
+    },
+    {
+      "check": "manifest_inputs_match_bytes",
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "scientific_material_gap_closed": false,
+  "remaining_blocker": "Exact wavelength/row/sample linkage, validated quality and atmospheric/photometric treatment are unavailable; surface material and ice remain unclassified."
+}

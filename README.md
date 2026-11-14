@@ -138,3 +138,10 @@ The official site remains https://nasa-space-apps-challenge-2026-taipei.ziz81503
 Removed the desktop candidate-list height cap and nested scrolling so all candidates continue down the page. The candidate sidebar stretches with the right analysis column; the final right panel fills the shared row height. Removed desktop sticky positioning for this sidebar. Mobile retains its bounded, scrollable candidate list. No values, rankings or filters changed.
 
 Validated in Chromium at 1440 px: both Overview and Evidence views have matching left/right column bottoms, all 12 cards fit without internal list scrolling, and the sidebar is static. At 390 px the document has no horizontal overflow and the list remains at most 260 px tall. TypeScript/Vite build passed; a desktop screenshot was reviewed. OpenAI Codex assisted layout changes and validation.
+
+
+### 2026-11-14: Reduced information density
+
+Reorganized both website modes around progressive disclosure. Mars research candidates show research purpose, key gaps and the regional map first; research notes, four-theme evidence, measurements, sources and interpretation limits are available in five expandable sections. Shortened repeated warnings while preserving critical unverified status. Earth analog search initially shows three candidates, with a control to reveal the full list; a selected candidate outside the initial three remains visible. Map-scale explanations are expandable. No source records, scientific values, rankings or evidence were deleted or recalculated.
+
+TypeScript/Vite build passed. Chromium checks passed for five initially collapsed sections, visible regional map, measurement expansion, reset on candidate change, three/all candidate toggle, target switching, evidence drawer, and both modes at 390 px without horizontal overflow or page errors. Desktop screenshots were reviewed. These checks used the local site; public deployment is verified separately by the deployment workflow. OpenAI Codex assisted implementation, validation and this English report.

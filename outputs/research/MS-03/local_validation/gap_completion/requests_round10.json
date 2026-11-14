@@ -1,0 +1,20 @@
+[
+  {
+    "identifier": "US_GEOM_04624502",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/geom/s_0462xx/s_04624502_geom.tab",
+    "filename": "s_04624502_geom.tab",
+    "basis": "Other exact mapped intersecting product; verify actual centre membership, not bbox"
+  },
+  {
+    "identifier": "US_GEOM_06059201",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/geom/s_0605xx/s_06059201_geom.tab",
+    "filename": "s_06059201_geom.tab",
+    "basis": "Other exact mapped intersecting product; verify actual centre membership, not bbox"
+  },
+  {
+    "identifier": "US_GEOM_05882501",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/geom/s_0588xx/s_05882501_geom.tab",
+    "filename": "s_05882501_geom.tab",
+    "basis": "Other exact mapped intersecting product; verify actual centre membership, not bbox"
+  }
+]

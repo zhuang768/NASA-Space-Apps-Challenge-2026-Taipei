@@ -1,0 +1,72 @@
+PDS_VERSION_ID                    = PDS3
+LABEL_REVISION_NOTE               = "2016-08-01, Initial"
+RECORD_TYPE                       = STREAM
+SPACECRAFT_NAME                   = "MARS GLOBAL SURVEYOR"
+TARGET_NAME                       = "MARS"
+
+OBJECT                            = DATA_SET_MAP_PROJECTION
+  DATA_SET_ID                     = "MGS-M-MOC-NA/WA-4-RDR-L1B-V1.0"
+
+  OBJECT                          = DATA_SET_MAP_PROJECTION_INFO
+    MAP_PROJECTION_TYPE           = "SINUSOIDAL"
+    MAP_PROJECTION_DESC           = "
+
+    The SINUSOIDAL map projection in which the parallels and a central 
+    meridian, usually the prime meridian, are straight lines and the other 
+    meridians are curved outward from the central meridian. Sinusoidal 
+    projection maps present accurate area and distance at every parallel and 
+    at the central meridian; distortion increases at the outer meridians and 
+    at high latitudes.
+    "
+     ROTATIONAL_ELEMENT_DESC      = "N/A"
+     
+     OBJECT                       = DS_MAP_PROJECTION_REF_INFO
+       REFERENCE_KEY_ID           = "SNYDER1987"
+     END_OBJECT                   = DS_MAP_PROJECTION_REF_INFO
+     
+  END_OBJECT                      = DATA_SET_MAP_PROJECTION_INFO
+END_OBJECT                        = DATA_SET_MAP_PROJECTION
+    
+OBJECT                            = DATA_SET_MAP_PROJECTION
+  DATA_SET_ID                     = "MGS-M-MOC-NA/WA-4-RDR-L1B-V1.0" 
+    
+  OBJECT                          = DATA_SET_MAP_PROJECTION_INFO
+    MAP_PROJECTION_TYPE           = "TRANSVERSE MERCATOR"
+    MAP_PROJECTION_DESC           = "
+    
+    The TRANSVERSE MERCATOR map projection is similar to the Mercator except 
+    that the cylinder is tangent along a meridian instead of the equator. 
+    The result is a conformal projection that minimizes distortion along a 
+    north-south line, but does not maintain true directions.
+    "
+     ROTATIONAL_ELEMENT_DESC      = "N/A"
+     
+     OBJECT                       = DS_MAP_PROJECTION_REF_INFO
+       REFERENCE_KEY_ID           = "SNYDER1987"
+     END_OBJECT                   = DS_MAP_PROJECTION_REF_INFO
+     
+  END_OBJECT                      = DATA_SET_MAP_PROJECTION_INFO
+END_OBJECT                        = DATA_SET_MAP_PROJECTION
+
+OBJECT                            = DATA_SET_MAP_PROJECTION
+  DATA_SET_ID                     = "MGS-M-MOC-NA/WA-4-RDR-L1B-V1.0" 
+    
+  OBJECT                          = DATA_SET_MAP_PROJECTION_INFO
+    MAP_PROJECTION_TYPE           = "POLAR STEREOGRAPHIC"
+    MAP_PROJECTION_DESC           = "
+    
+    The POLAR STEREOGRAPHIC map projection is The projection is equivalent 
+    to the polar aspect of the stereographic projection on a spheroid. The 
+    central point is either the North Pole or the South Pole. This is the 
+    only polar aspect planar projection that is conformal.
+    "
+     ROTATIONAL_ELEMENT_DESC      = "N/A"
+     
+     OBJECT                       = DS_MAP_PROJECTION_REF_INFO
+       REFERENCE_KEY_ID           = "SNYDER1987"
+     END_OBJECT                   = DS_MAP_PROJECTION_REF_INFO
+     
+  END_OBJECT                      = DATA_SET_MAP_PROJECTION_INFO
+END_OBJECT                        = DATA_SET_MAP_PROJECTION
+
+END

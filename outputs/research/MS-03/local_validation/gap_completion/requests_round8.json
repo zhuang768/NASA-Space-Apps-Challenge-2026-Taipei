@@ -1,0 +1,38 @@
+[
+  {
+    "identifier": "US_rgram.lbl",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/rgram/s_0079xx/s_00796502_rgram.lbl",
+    "filename": "s_00796502_rgram.lbl",
+    "basis": "Mapped official same observation s_00796502"
+  },
+  {
+    "identifier": "US_rgram.xml",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/rgram/s_0079xx/s_00796502_rgram.xml",
+    "filename": "s_00796502_rgram.xml",
+    "basis": "Mapped official same observation s_00796502"
+  },
+  {
+    "identifier": "US_GEOM_DIR",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/geom/s_0079xx/",
+    "filename": "geom_0079xx.html",
+    "basis": "Groundtrack geometry for same US radargram; required for ROI sample selection"
+  },
+  {
+    "identifier": "CLUTTER_sim.xml",
+    "url": "https://pds-geosciences.wustl.edu/mro/urn-nasa-pds-mro_sharad_simulations/data/s_0079xx/s_00796502/s_00796502_sim.xml",
+    "filename": "s_00796502_sim.xml",
+    "basis": "Same observation simulation metadata; inspect sample/timing before comparison"
+  },
+  {
+    "identifier": "CLUTTER_rtrn.xml",
+    "url": "https://pds-geosciences.wustl.edu/mro/urn-nasa-pds-mro_sharad_simulations/data/s_0079xx/s_00796502/s_00796502_rtrn.xml",
+    "filename": "s_00796502_rtrn.xml",
+    "basis": "Same observation simulation metadata; inspect sample/timing before comparison"
+  },
+  {
+    "identifier": "MOC_CATALOG_DIR",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mgs/moc/rdr/mgscim_1548/catalog/",
+    "filename": "moc_catalog_dir.html",
+    "basis": "Locate actual DSMAP.CAT rather than assumed name"
+  }
+]

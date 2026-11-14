@@ -47,8 +47,8 @@
   "files": [
     {
       "path": "docs/research/MS-03/local_validation/research_notes.md",
-      "bytes": 26407,
-      "sha256": "13e90415cfe259dcf6aaacbe15f51bc9ac33d5fa4adc7f80c4ee22adf113e023"
+      "bytes": 32559,
+      "sha256": "e2c84f713e5d4a5c8d309c9ca7f3726eb9b15a96284e25b6af216d25d4fd1fe6"
     },
     {
       "path": "outputs/research/MS-03/local_validation/.gitignore",
@@ -857,8 +857,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/search_log.csv",
-      "bytes": 110425,
-      "sha256": "8563625b0340b65e5dbbf67ca677df601b502800ba5c9bf160b31f32f6787b35"
+      "bytes": 135295,
+      "sha256": "46560ee55c4e9e96454664df99591a92e34305919219d54aa936c6cf6429aab0"
     },
     {
       "path": "outputs/research/MS-03/local_validation/sharad_local_geometry.csv",
@@ -1330,5 +1330,7 @@
     "new_scientific_disposition": "unchanged; unknown morphology, independent local ice/depth/content unconfirmed",
     "validation": "original_tables_followup/validation.json",
     "timestamp_utc": "2026-11-14T19:55:16.073530+00:00"
-  }
+  },
+  "gap_completion_supplement": "gap_completion/manifest.json",
+  "gap_completion_starting_sha": "ddd04cfcb5ea810d73304b1cf6ae064c1f77a1c5"
 }

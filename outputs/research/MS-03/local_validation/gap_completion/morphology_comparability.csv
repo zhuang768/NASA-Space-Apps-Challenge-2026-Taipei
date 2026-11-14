@@ -1,0 +1,4 @@
+﻿source,actual_data,sampling_or_support,closed_boundaries,shared_geometry_comparison,limitation
+MS-03 MOC S1700607_NA,RDR image;3 fixed512x512 native-DN windows,3.000339463m projected grid; effective PSF not established,not validated,unknown; not calculated,Not complete-cell survey; no reliable closed polygon set; resampled map grid is not independent resolving elements
+MS-03 previous CTX samples,5 retained image samples from previous work,source-scale and mixed-date restrictions retained in ../ctx_observability.json,not validated,unknown; not calculated,Source samples are not full-cell quality-qualified coverage
+Adventdalen AD1,existing original GIS and prior reproducible geomorphometry retained unchanged,Published Earth definition/scale; not reprocessed this round,Earth polygons do not supply Mars boundaries,not performed,Method reference only; shape similarity alone would not establish ice or common genesis

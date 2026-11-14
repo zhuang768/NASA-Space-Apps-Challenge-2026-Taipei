@@ -1,0 +1,1204 @@
+﻿source_excel_row,HiRISE_observation_id,latitude_deg_planetocentric,longitude_deg_east,ice_exposing_flag_original,reference_original,inside_fixed_roi,scope
+2,PSP_007561_1290,-50.5988,305.9832,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+3,PSP_007596_1295,-50.1698,70.1013,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+4,PSP_009212_1640,-15.9344,217.3985,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+5,PSP_004770_1710,-8.786,182.6733,n,,false,catalogued impact point; not image footprint
+6,PSP_007879_1725,-7.3832,256.0283,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+7,PSP_009265_1730,-7.052,210.263,n,,false,catalogued impact point; not image footprint
+8,PSP_007496_1735,-6.2423,273.9839,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+9,PSP_007036_1765,-3.6161,234.2425,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+10,PSP_009185_1770,-3.1074,233.1054,n,,false,catalogued impact point; not image footprint
+11,PSP_005666_1790,-0.7549,200.0656,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+12,PSP_002764_1800,-0.0325,226.9066,n,,false,catalogued impact point; not image footprint
+13,PSP_004728_1805,0.4558,247.4432,n,,false,catalogued impact point; not image footprint
+14,PSP_007499_1810,0.9329,191.7461,n,,false,catalogued impact point; not image footprint
+15,PSP_003754_1815,1.6859,199.3819,n,,false,catalogued impact point; not image footprint
+16,PSP_005942_1825,2.4786,224.1045,n,,false,catalogued impact point; not image footprint
+17,PSP_009305_1830,2.9997,195.6448,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+18,PSP_010147_1830,3.1551,249.1778,n,,false,catalogued impact point; not image footprint
+19,PSP_007183_1850,4.7709,180.1448,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+20,PSP_010177_1850,5.0086,149.8493,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+21,PSP_003674_1855,5.3526,223.3237,n,,false,catalogued impact point; not image footprint
+22,PSP_004030_1855,5.469,224.3526,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+23,PSP_007378_1860,6.1177,254.3412,n,,false,catalogued impact point; not image footprint
+24,PSP_003172_1870,6.9891,247.9141,n,,false,catalogued impact point; not image footprint
+25,ESP_011618_1885,8.6248,46.8301,n,,false,catalogued impact point; not image footprint
+26,PSP_007246_1890,9.0492,259.5074,n,,false,catalogued impact point; not image footprint
+27,PSP_007009_1905,10.3747,250.2159,n,,false,catalogued impact point; not image footprint
+28,PSP_008300_1905,10.4201,278.408,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+29,PSP_004123_1915,11.3654,203.5051,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+30,PSP_007773_1930,12.9786,267.9309,n,,false,catalogued impact point; not image footprint
+31,PSP_003527_1940,13.7091,275.6743,n,,false,catalogued impact point; not image footprint
+32,PSP_003925_1940,13.8509,208.5816,n,,false,catalogued impact point; not image footprint
+33,PSP_007272_1945,14.5242,268.8501,n,Daubar et al. 2013,false,catalogued impact point; not image footprint
+34,PSP_006629_1955,15.2295,184.3175,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+35,PSP_003780_2000,19.7744,207.4252,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+36,PSP_004038_2005,20.4269,3.2945,n,,false,catalogued impact point; not image footprint
+37,PSP_003075_2020,21.9584,14.6045,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+38,PSP_008045_2020,22.0167,40.245,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+39,PSP_003812_2035,23.087,52.879,n,Daubar et al. 2014,false,catalogued impact point; not image footprint
+40,PSP_004374_2040,23.9758,189.2971,n,,false,catalogued impact point; not image footprint
+41,PSP_006758_2050,24.6758,261.5223,n,,false,catalogued impact point; not image footprint
+42,PSP_004175_2060,25.5007,221.7568,n,Daubar et al. 2014,false,catalogued impact point; not image footprint
+43,PSP_005579_2060,25.6007,52.1467,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+44,PSP_006998_2060,25.6044,188.5794,n,Daubar et al. 2013,false,catalogued impact point; not image footprint
+45,PSP_003101_2065,26.1584,23.6275,n,Daubar et al. 2014,false,catalogued impact point; not image footprint
+46,PSP_002736_2075,27.0551,268.332,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+47,PSP_003602_2085,28.4547,25.1963,n,,false,catalogued impact point; not image footprint
+48,PSP_003958_2095,28.9901,26.9261,n,Daubar et al. 2014,false,catalogued impact point; not image footprint
+49,PSP_008236_2180,37.4811,222.26,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+50,PSP_008015_2205,40.3738,136.5761,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+51,PSP_010084_2235,43.2965,164.2101,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+52,PSP_009978_2265,46.3514,176.8906,y,,false,catalogued impact point; not image footprint
+53,ESP_011428_2200,39.5655,190.0457,n,,false,catalogued impact point; not image footprint
+54,ESP_011425_1775,-2.355,278.2588,n,,false,catalogued impact point; not image footprint
+55,ESP_011360_1655,-14.3989,253.8538,n,,false,catalogued impact point; not image footprint
+56,ESP_011368_1860,6.1132,32.2888,n,,false,catalogued impact point; not image footprint
+57,ESP_011295_2205,40.3216,221.222,possible,,false,catalogued impact point; not image footprint
+58,PSP_010331_1755,-4.5049,265.9059,n,Daubar et al. 2014,false,catalogued impact point; not image footprint
+59,PSP_010528_1770,-2.9551,287.8235,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+60,PSP_010635_1780,-2.0209,246.5743,n,Daubar et al. 2013,false,catalogued impact point; not image footprint
+61,PSP_010319_1780,-1.9284,233.1307,n,Daubar et al. 2013,false,catalogued impact point; not image footprint
+62,PSP_010292_1785,-1.2803,250.1199,n,,false,catalogued impact point; not image footprint
+63,PSP_010200_1805,0.4988,242.327,n,,false,catalogued impact point; not image footprint
+64,PSP_010740_1840,3.9624,258.3892,n,Daubar et al. 2014,false,catalogued impact point; not image footprint
+65,PSP_010862_1880,8.0931,167.0077,n,,false,catalogued impact point; not image footprint
+66,PSP_010621_1960,15.6504,266.2163,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+67,PSP_010634_2135,33.1716,268.1102,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+68,PSP_010547_2195,38.9384,123.7127,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+69,PSP_010585_2255,45.0674,164.7022,y,,false,catalogued impact point; not image footprint
+70,PSP_010861_2265,46.1786,188.4953,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+71,PSP_010625_2360,55.5832,150.6025,y,,false,catalogued impact point; not image footprint
+72,ESP_013161_1715,-8.6155,43.4768,n,,false,catalogued impact point; not image footprint
+73,ESP_012047_1755,-4.3747,217.1195,n,,false,catalogued impact point; not image footprint
+74,ESP_012441_1775,-2.668,260.5269,n,Daubar et al. 2014,false,catalogued impact point; not image footprint
+75,PSP_010255_1700,-9.7199,181.3797,n,,false,catalogued impact point; not image footprint
+76,ESP_011584_1785,-1.5685,256.1356,n,Daubar et al. 2014,false,catalogued impact point; not image footprint
+77,ESP_011698_1810,1.0743,24.4375,n,,false,catalogued impact point; not image footprint
+78,ESP_011610_1825,2.3859,266.7247,n,,false,catalogued impact point; not image footprint
+79,ESP_012349_1830,2.91,250.7689,n,Daubar et al. 2014,false,catalogued impact point; not image footprint
+80,ESP_013287_1845,4.4312,201.3967,n,,false,catalogued impact point; not image footprint
+81,ESP_012588_1855,5.3033,205.7821,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+82,ESP_012375_2035,23.2913,257.9596,n,,false,catalogued impact point; not image footprint
+83,ESP_011623_2100,29.5135,267.3997,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+84,ESP_011716_2100,29.6604,249.3825,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+85,ESP_011781_2100,29.9256,274.4034,n,,false,catalogued impact point; not image footprint
+86,ESP_011491_2090,28.5869,271.5039,n,,false,catalogued impact point; not image footprint
+87,ESP_014150_2130,32.7474,37.6323,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+88,ESP_016203_2195,39.3726,149.3754,possible,Dundas et al. 2021,false,catalogued impact point; not image footprint
+89,ESP_016559_1855,5.5278,153.4704,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+90,ESP_016149_1905,10.5985,186.484,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+91,ESP_013788_1910,10.6813,203.0204,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+92,ESP_013590_1625,-17.3476,211.9291,n,,false,catalogued impact point; not image footprint
+93,ESP_018561_1710,-8.8785,217.6415,n,,false,catalogued impact point; not image footprint
+94,ESP_013893_1755,-4.3046,218.3305,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+95,ESP_013629_1740,-5.7344,226.4139,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+96,ESP_014143_1950,14.7599,230.1146,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+97,ESP_015989_1835,3.4174,235.2306,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+98,ESP_013800_1820,2.2213,236.4945,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+99,ESP_013655_1710,-9.0133,236.3692,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+100,ESP_016648_1665,-13.223,246.319,n,Daubar et al. 2014,false,catalogued impact point; not image footprint
+101,ESP_013694_2060,25.8463,247.6164,n,,false,catalogued impact point; not image footprint
+102,ESP_016239_2060,25.8855,247.8557,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+103,ESP_015949_1795,-0.6296,248.9133,n,Daubar et al. 2013,false,catalogued impact point; not image footprint
+104,ESP_013707_1915,11.476,255.0113,n,,false,catalogued impact point; not image footprint
+105,ESP_013641_1745,-5.2494,258.6694,n,,false,catalogued impact point; not image footprint
+106,ESP_016331_1730,-6.848,259.395,n,Daubar et al. 2013,false,catalogued impact point; not image footprint
+107,ESP_014010_1800,0.1597,263.7519,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+108,ESP_013799_1755,-4.37,264.5975,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+109,ESP_014168_1920,12.1015,268.8375,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+110,ESP_016238_1850,4.9619,277.7892,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+111,ESP_013640_2055,25.4291,282.5896,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+112,ESP_015908_2310,50.6709,278.399,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+113,ESP_016115_2010,20.8062,33.6409,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+114,ESP_016133_1825,2.5386,264.1102,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+115,ESP_016161_1755,-4.2191,220.5513,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+116,ESP_016186_1725,-7.3021,258.141,n,,false,catalogued impact point; not image footprint
+117,ESP_016200_1740,-6.0188,236.0335,n,,false,catalogued impact point; not image footprint
+118,ESP_016299_2095,29.4368,49.1482,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+119,ESP_016344_1825,2.5982,264.196,n,,false,catalogued impact point; not image footprint
+120,ESP_016465_1735,-6.4201,202.3956,n,,false,catalogued impact point; not image footprint
+121,ESP_016557_2240,43.7776,203.3071,possible,,false,catalogued impact point; not image footprint
+122,ESP_016501_2185,38.4291,293.7998,n,,false,catalogued impact point; not image footprint
+123,ESP_016582_1760,-4.1677,246.7092,n,,false,catalogued impact point; not image footprint
+124,ESP_016610_1725,-7.3429,202.8598,n,,false,catalogued impact point; not image footprint
+125,ESP_016660_1860,6.1256,276.7063,n,,false,catalogued impact point; not image footprint
+126,ESP_016676_1785,-1.4961,200.6245,n,,false,catalogued impact point; not image footprint
+127,ESP_016793_1855,5.4193,245.4656,n,,false,catalogued impact point; not image footprint
+128,ESP_016814_2125,32.2941,28.9591,n,,false,catalogued impact point; not image footprint
+129,ESP_016954_2245,44.222,164.2014,y,Daubar et al. 2019,false,catalogued impact point; not image footprint
+130,ESP_016919_2130,32.9339,42.6559,n,,false,catalogued impact point; not image footprint
+131,ESP_016994_2245,44.3504,152.9248,y,,false,catalogued impact point; not image footprint
+132,ESP_017003_1825,2.3972,272.2549,n,,false,catalogued impact point; not image footprint
+133,ESP_017025_1515,-28.0168,36.0107,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+134,ESP_017030_1755,-4.5451,256.9135,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+135,ESP_017038_1790,-0.965,37.833,n,,false,catalogued impact point; not image footprint
+136,ESP_017097_1780,-1.7913,227.4707,n,,false,catalogued impact point; not image footprint
+137,ESP_017328_2055,25.3111,36.7949,n,,false,catalogued impact point; not image footprint
+138,ESP_017329_1850,4.7423,12.4393,n,,false,catalogued impact point; not image footprint
+139,ESP_017262_2160,35.5174,36.3484,n,,false,catalogued impact point; not image footprint
+140,ESP_017192_2170,36.9152,148.2971,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+141,ESP_017231_1880,7.8268,166.8812,n,,false,catalogued impact point; not image footprint
+142,ESP_017333_1935,13.2428,260.9528,n,,false,catalogued impact point; not image footprint
+143,ESP_017425_2045,24.0728,268.9265,n,,false,catalogued impact point; not image footprint
+144,ESP_017447_1785,-1.3258,30.7988,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+145,ESP_017478_1760,-3.9384,264.9726,n,,false,catalogued impact point; not image footprint
+146,ESP_017481_2110,30.494,178.2495,n,,false,catalogued impact point; not image footprint
+147,ESP_017492_1890,9.0191,241.3683,n,,false,catalogued impact point; not image footprint
+148,ESP_017389_1690,-10.8395,176.0065,n,,false,catalogued impact point; not image footprint
+149,ESP_017637_1875,7.2953,241.9654,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+150,ESP_017658_1830,2.7421,29.5329,n,,false,catalogued impact point; not image footprint
+151,ESP_017566_2025,22.2947,19.1258,n,,false,catalogued impact point; not image footprint
+152,ESP_017789_2335,53.2738,46.2576,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+153,ESP_017868_2440,63.9191,44.8778,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+154,ESP_017770_1990,18.6672,209.1481,n,,false,catalogued impact point; not image footprint
+155,ESP_017803_2080,27.5053,26.9636,n,,false,catalogued impact point; not image footprint
+156,ESP_017808_1755,-4.5565,254.9574,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+157,ESP_017821_1820,2.1266,259.6874,n,,false,catalogued impact point; not image footprint
+158,ESP_017926_2310,50.5098,265.1962,y,,false,catalogued impact point; not image footprint
+159,ESP_017927_1875,7.4931,245.1876,n,Daubar et al. 2013,false,catalogued impact point; not image footprint
+160,ESP_017969_1855,5.5427,177.8914,n,,false,catalogued impact point; not image footprint
+161,ESP_017991_2195,39.302,293.787,n,,false,catalogued impact point; not image footprint
+162,ESP_018019_1735,-6.6436,254.7046,n,,false,catalogued impact point; not image footprint
+163,ESP_018032_1770,-2.9532,259.1879,n,,false,catalogued impact point; not image footprint
+164,ESP_018045_1760,-3.792,264.801,n,Daubar et al. 2014,false,catalogued impact point; not image footprint
+165,ESP_018125_2445,64.2878,231.501,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+166,ESP_018573_2415,60.9871,238.7229,y,,false,catalogued impact point; not image footprint
+167,ESP_018097_2190,38.648,280.2439,n,,false,catalogued impact point; not image footprint
+168,ESP_018192_1985,18.4741,209.2007,n,,false,catalogued impact point; not image footprint
+169,ESP_018217_1645,-15.3461,250.6273,n,,false,catalogued impact point; not image footprint
+170,ESP_018404_1775,-2.5661,183.9656,n,Daubar et al. 2013,false,catalogued impact point; not image footprint
+171,ESP_023156_1820,1.8292,46.9099,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+172,ESP_018493_1925,12.3311,271.4644,n,,false,catalogued impact point; not image footprint
+173,ESP_018586_1735,-6.3254,254.7166,n,,false,catalogued impact point; not image footprint
+174,ESP_018707_2205,40.3406,185.5012,n,,false,catalogued impact point; not image footprint
+175,ESP_018731_1770,-3.0166,256.2035,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+176,ESP_018746_2350,54.7669,196.8484,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+177,ESP_018784_2050,24.9205,245.2886,n,Daubar et al. 2013,false,catalogued impact point; not image footprint
+178,ESP_018800_2040,23.604,169.066,n,,false,catalogued impact point; not image footprint
+179,ESP_018854_2270,46.6112,133.7057,n,,false,catalogued impact point; not image footprint
+180,ESP_019165_2165,36.0137,282.0139,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+181,ESP_019195_2175,37.3408,182.1936,possible,Dundas et al. 2021,false,catalogued impact point; not image footprint
+182,ESP_019287_2295,49.3535,189.6662,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+183,ESP_019707_2075,27.0541,245.3663,n,,false,catalogued impact point; not image footprint
+184,ESP_019779_2205,40.4242,77.6026,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+185,ESP_019830_2215,41.0169,126.3011,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+186,ESP_019926_2070,26.9364,27.3006,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+187,ESP_019983_1800,-0.0658,274.1036,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+188,ESP_020592_1785,-1.5573,208.0138,n,,false,catalogued impact point; not image footprint
+189,ESP_020714_2125,32.249,112.3887,n,,false,catalogued impact point; not image footprint
+190,ESP_020787_1805,0.3718,284.3251,n,Daubar et al. 2014,false,catalogued impact point; not image footprint
+191,ESP_020803_2010,20.5763,204.7858,n,,false,catalogued impact point; not image footprint
+192,ESP_020841_2105,30.3095,245.2005,n,,false,catalogued impact point; not image footprint
+193,ESP_020842_2030,22.8137,219.9104,n,,false,catalogued impact point; not image footprint
+194,ESP_020853_1815,1.5063,281.637,n,,false,catalogued impact point; not image footprint
+195,ESP_020854_1965,16.322,252.3228,n,,false,catalogued impact point; not image footprint
+196,ESP_020855_2035,23.3352,225.2457,n,,false,catalogued impact point; not image footprint
+197,ESP_020869_1990,18.9352,202.796,n,Daubar et al. 2013,false,catalogued impact point; not image footprint
+198,ESP_020920_1855,5.3236,252.3123,n,,false,catalogued impact point; not image footprint
+199,ESP_020947_1840,3.7625,235.96,n,,false,catalogued impact point; not image footprint
+200,ESP_020960_1895,9.4705,239.5163,n,Daubar et al. 2014,false,catalogued impact point; not image footprint
+201,ESP_020857_1870,7.0596,172.3607,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+202,ESP_021768_1785,-1.3437,141.5665,n,,false,catalogued impact point; not image footprint
+203,ESP_021883_1890,9.0335,239.9504,n,,false,catalogued impact point; not image footprint
+204,ESP_022056_1925,12.2696,196.4839,n,,false,catalogued impact point; not image footprint
+205,ESP_022279_1690,-10.6596,231.0771,n,,false,catalogued impact point; not image footprint
+206,ESP_022299_2040,23.9187,41.4715,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+207,ESP_022536_1830,3.1168,53.3829,n,,false,catalogued impact point; not image footprint
+208,ESP_022912_1720,-7.7292,229.3621,n,,false,catalogued impact point; not image footprint
+209,ESP_022964_1845,4.4719,246.8932,n,Daubar et al. 2013,false,catalogued impact point; not image footprint
+210,ESP_023108_1870,6.7744,275.679,n,,false,catalogued impact point; not image footprint
+211,ESP_023363_1735,-6.6296,156.4455,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+212,ESP_023399_1870,7.0616,251.7709,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+213,ESP_023426_1835,3.2406,235.1001,n,,false,catalogued impact point; not image footprint
+214,ESP_023571_1835,3.6143,235.9084,n,,false,catalogued impact point; not image footprint
+215,ESP_026589_2045,24.1061,279.7989,n,,false,catalogued impact point; not image footprint
+216,ESP_025943_1850,4.8646,279.3617,n,,false,catalogued impact point; not image footprint
+217,ESP_025732_1875,7.4567,279.1682,n,,false,catalogued impact point; not image footprint
+218,ESP_024203_1795,-0.2678,262.285,n,,false,catalogued impact point; not image footprint
+219,ESP_024211_2060,25.6627,41.615,n,,false,catalogued impact point; not image footprint
+220,ESP_024349_2020,21.5849,234.7706,n,,false,catalogued impact point; not image footprint
+221,ESP_024389_1795,-0.441,225.1893,n,,false,catalogued impact point; not image footprint
+222,ESP_024646_1890,8.8715,47.6601,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+223,ESP_024836_1975,17.4842,259.1499,n,,false,catalogued impact point; not image footprint
+224,ESP_025840_2240,43.9007,204.3473,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+225,ESP_025864_1835,3.702,275.9915,n,Daubar et al. 2013,false,catalogued impact point; not image footprint
+226,ESP_026009_1920,11.8395,275.6939,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+227,ESP_026038_2155,35.3183,201.3733,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+228,ESP_026124_1935,13.261,15.7876,n,,false,catalogued impact point; not image footprint
+229,ESP_026248_2280,47.7167,225.1339,possible,Dundas et al. 2021,false,catalogued impact point; not image footprint
+230,ESP_026221_1825,2.5794,248.5217,n,Daubar et al. 2013,false,catalogued impact point; not image footprint
+231,ESP_027555_2125,32.2279,186.824,n,,false,catalogued impact point; not image footprint
+232,ESP_026418_2010,20.5433,268.5694,n,,false,catalogued impact point; not image footprint
+233,ESP_026445_1835,3.3972,253.9104,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+234,ESP_026802_2305,50.3748,219.7098,y,,false,catalogued impact point; not image footprint
+235,ESP_026892_1850,5.1306,290.5907,n,,false,catalogued impact point; not image footprint
+236,ESP_017229_2110,30.7907,219.2353,n,Daubar et al. 2013,false,catalogued impact point; not image footprint
+237,ESP_026989_2205,40.1213,157.9341,possible,Dundas et al. 2021,false,catalogued impact point; not image footprint
+238,ESP_027000_2325,52.0089,214.6959,y,,false,catalogued impact point; not image footprint
+239,ESP_026893_1995,19.0959,260.735,n,,false,catalogued impact point; not image footprint
+240,ESP_026934_1715,-8.6501,225.0481,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+241,ESP_026960_1710,-8.8804,235.7721,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+242,ESP_026999_1985,18.1891,247.6687,n,,false,catalogued impact point; not image footprint
+243,ESP_027077_1785,-1.3419,279.7307,n,,false,catalogued impact point; not image footprint
+244,ESP_027080_1715,-8.4147,199.2202,n,,false,catalogued impact point; not image footprint
+245,ESP_030243_1985,18.2744,244.9039,n,,false,catalogued impact point; not image footprint
+246,ESP_027316_1810,1.0114,235.7982,n,,false,catalogued impact point; not image footprint
+247,ESP_027410_1740,-5.8125,190.3714,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+248,ESP_027975_1835,3.2902,246.8272,n,,false,catalogued impact point; not image footprint
+249,ESP_028000_2070,26.9018,281.1491,n,,false,catalogued impact point; not image footprint
+250,ESP_028633_2070,26.7381,281.2094,n,,false,catalogued impact point; not image footprint
+251,ESP_028659_2050,24.5823,291.1092,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+252,ESP_028976_1770,-2.799,280.0517,n,,false,catalogued impact point; not image footprint
+253,ESP_028979_1730,-6.9348,198.5487,n,,false,catalogued impact point; not image footprint
+254,ESP_029015_1705,-9.2393,295.8298,n,,false,catalogued impact point; not image footprint
+255,ESP_029256_2195,39.1091,190.2525,y,,false,catalogued impact point; not image footprint
+256,ESP_029386_1760,-4.0249,246.2143,n,,false,catalogued impact point; not image footprint
+257,ESP_029701_1935,13.3653,283.7708,n,,false,catalogued impact point; not image footprint
+258,ESP_029821_1880,8.1331,249.044,n,,false,catalogued impact point; not image footprint
+259,ESP_030178_1990,18.6761,219.9111,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+260,ESP_030566_1860,5.9976,68.9693,n,,false,catalogued impact point; not image footprint
+261,ESP_030705_1810,0.7835,234.8454,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+262,ESP_030929_1715,-8.5362,239.6515,n,,false,catalogued impact point; not image footprint
+263,ESP_031101_1685,-11.2,223.3209,n,,false,catalogued impact point; not image footprint
+264,ESP_031248_1700,-9.8741,170.1286,n,,false,catalogued impact point; not image footprint
+265,ESP_031886_1785,-1.4744,29.6523,n,,false,catalogued impact point; not image footprint
+266,ESP_031912_1900,9.8865,39.0291,n,,false,catalogued impact point; not image footprint
+267,ESP_031965_2050,24.5437,31.0067,n,,false,catalogued impact point; not image footprint
+268,ESP_031969_1870,6.9114,282.7704,n,,false,catalogued impact point; not image footprint
+269,ESP_032039_1705,-9.2499,173.9719,n,,false,catalogued impact point; not image footprint
+270,ESP_032053_2010,20.6666,147.8234,n,,false,catalogued impact point; not image footprint
+271,ESP_032118_1085,-71.5108,191.5247,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+272,ESP_032106_1055,-74.5128,157.8942,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+273,ESP_032211_1780,-2.165,158.5617,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+274,ESP_032340_1060,-73.691,250.6217,y,,false,catalogued impact point; not image footprint
+275,ESP_032458_1780,-2.1606,254.2624,n,,false,catalogued impact point; not image footprint
+276,ESP_032479_2090,28.6027,36.8551,n,,false,catalogued impact point; not image footprint
+277,ESP_032577_1920,11.7819,243.6931,n,,false,catalogued impact point; not image footprint
+278,ESP_033078_1955,15.2077,244.7137,n,,false,catalogued impact point; not image footprint
+279,ESP_033091_1885,8.1805,250.8974,n,,false,catalogued impact point; not image footprint
+280,ESP_033093_1605,-19.3864,198.7123,n,,false,catalogued impact point; not image footprint
+281,ESP_033144_1895,9.3073,243.6977,n,,false,catalogued impact point; not image footprint
+282,ESP_033233_1740,-6.0573,334.3419,n,,false,catalogued impact point; not image footprint
+283,ESP_033236_1995,19.3486,249.6546,n,,false,catalogued impact point; not image footprint
+284,ESP_033237_1855,5.649,224.1213,n,,false,catalogued impact point; not image footprint
+285,ESP_033256_1730,-6.924,66.9471,n,,false,catalogued impact point; not image footprint
+286,ESP_033288_2120,31.5139,268.9214,n,,false,catalogued impact point; not image footprint
+287,ESP_033302_2030,22.6235,246.7638,n,,false,catalogued impact point; not image footprint
+288,ESP_033316_1805,0.567,228.3089,n,,false,catalogued impact point; not image footprint
+289,ESP_033319_2015,21.0413,143.4294,n,,false,catalogued impact point; not image footprint
+290,ESP_033328_2030,22.8008,257.7645,n,,false,catalogued impact point; not image footprint
+291,ESP_033342_2060,25.6093,235.4053,n,,false,catalogued impact point; not image footprint
+292,ESP_033381_1830,2.9158,252.8588,n,,false,catalogued impact point; not image footprint
+293,ESP_033384_1755,-4.5262,172.4524,n,,false,catalogued impact point; not image footprint
+294,ESP_033494_1900,9.6753,47.0765,n,,false,catalogued impact point; not image footprint
+295,ESP_033526_1840,3.9878,253.8955,n,,false,catalogued impact point; not image footprint
+296,ESP_033659_1905,10.5834,221.8583,n,,false,catalogued impact point; not image footprint
+297,ESP_033606_2210,40.9037,222.7119,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+298,ESP_033543_1845,4.4219,149.7325,n,,false,catalogued impact point; not image footprint
+299,ESP_033552_2060,25.7582,261.6661,n,,false,catalogued impact point; not image footprint
+300,ESP_033693_1825,2.2285,14.942,n,,false,catalogued impact point; not image footprint
+301,ESP_033705_1900,9.8422,46.7534,n,,false,catalogued impact point; not image footprint
+302,ESP_033825_2490,68.54588,358.5282102,y,,false,catalogued impact point; not image footprint
+303,ESP_033723_1895,9.5269,275.102,n,,false,catalogued impact point; not image footprint
+304,ESP_033724_1995,19.5034,246.5771,n,,false,catalogued impact point; not image footprint
+305,ESP_033764_2020,21.5723,234.2452,n,,false,catalogued impact point; not image footprint
+306,ESP_033765_1655,-14.2393,212.0874,n,,false,catalogued impact point; not image footprint
+307,ESP_033776_1780,-1.978,269.0393,n,,false,catalogued impact point; not image footprint
+308,ESP_033777_1950,14.6488,239.826,n,,false,catalogued impact point; not image footprint
+309,ESP_033804_2065,26.4351,222.5179,n,,false,catalogued impact point; not image footprint
+310,ESP_033807_2025,22.3153,140.3072,n,,false,catalogued impact point; not image footprint
+311,ESP_033816_2035,23.2786,255.0058,n,,false,catalogued impact point; not image footprint
+312,ESP_033829_2035,23.3006,260.0446,n,,false,catalogued impact point; not image footprint
+313,ESP_033843_1955,15.3187,238.8799,n,,false,catalogued impact point; not image footprint
+314,ESP_033855_1855,5.4749,272.644,n,,false,catalogued impact point; not image footprint
+315,ESP_033870_1625,-17.2679,225.2303,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+316,ESP_033923_2190,38.6849,210.4099,n,,false,catalogued impact point; not image footprint
+317,ESP_033949_1850,4.7998,226.3356,n,,false,catalogued impact point; not image footprint
+318,ESP_033954_2035,23.1367,86.7342,n,,false,catalogued impact point; not image footprint
+319,ESP_033962_2125,32.092,228.1213,n,,false,catalogued impact point; not image footprint
+320,ESP_033976_2255,45.0234,203.2327,n,,false,catalogued impact point; not image footprint
+321,ESP_033980_1955,15.4837,97.868,n,,false,catalogued impact point; not image footprint
+322,ESP_033990_1995,19.4039,185.0918,n,,false,catalogued impact point; not image footprint
+323,ESP_034001_2045,24.0912,243.2074,n,,false,catalogued impact point; not image footprint
+324,ESP_034003_1705,-9.5484,192.7961,n,,false,catalogued impact point; not image footprint
+325,ESP_034014_1840,4.1967,250.9984,n,,false,catalogued impact point; not image footprint
+326,ESP_034022_2090,28.496,30.3516,n,,false,catalogued impact point; not image footprint
+327,ESP_034116_1610,-18.8522,349.9128,n,,false,catalogued impact point; not image footprint
+328,ESP_034133_1930,12.7518,241.2857,n,,false,catalogued impact point; not image footprint
+329,ESP_034186_2340,53.5783,228.3042,possible,,false,catalogued impact point; not image footprint
+330,ESP_033942_2335,52.9605,50.8619,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+331,ESP_034259_2040,23.6778,39.9524,n,,false,catalogued impact point; not image footprint
+332,ESP_034265_1845,4.6325,239.0274,n,,false,catalogued impact point; not image footprint
+333,ESP_034266_1980,17.7277,210.0146,n,,false,catalogued impact point; not image footprint
+334,ESP_034272_1945,14.2729,46.5021,n,,false,catalogued impact point; not image footprint
+335,ESP_034273_2070,26.5319,17.4753,n,,false,catalogued impact point; not image footprint
+336,ESP_034278_1685,-11.2019,246.2581,n,,false,catalogued impact point; not image footprint
+337,ESP_034280_1885,8.6281,188.8389,n,,false,catalogued impact point; not image footprint
+338,ESP_034285_1835,3.6796,53.4275,n,,false,catalogued impact point; not image footprint
+339,ESP_034304_2115,30.9776,250.9819,n,,false,catalogued impact point; not image footprint
+340,ESP_034319_1625,-17.2769,207.3625,n,,false,catalogued impact point; not image footprint
+341,ESP_034334_2270,46.8023,149.5055,n,,false,catalogued impact point; not image footprint
+342,ESP_034343_1765,-3.517,271.234,n,,false,catalogued impact point; not image footprint
+343,ESP_034344_2040,23.8172,239.855,n,,false,catalogued impact point; not image footprint
+344,ESP_034357_2050,24.8777,245.2931,n,,false,catalogued impact point; not image footprint
+345,ESP_034372_1665,-13.2509,200.7267,n,,false,catalogued impact point; not image footprint
+346,ESP_034383_1840,4.1616,257.4686,n,,false,catalogued impact point; not image footprint
+347,ESP_034384_1930,12.7717,228.5649,n,,false,catalogued impact point; not image footprint
+348,ESP_034395_2100,29.8834,285.745,n,,false,catalogued impact point; not image footprint
+349,ESP_034397_1755,-4.4233,236.7932,n,,false,catalogued impact point; not image footprint
+350,ESP_034483_1935,13.2549,46.7319,n,,false,catalogued impact point; not image footprint
+351,ESP_034503_1780,-1.7507,221.2941,n,,false,catalogued impact point; not image footprint
+352,ESP_034518_1675,-12.3002,173.7889,n,,false,catalogued impact point; not image footprint
+353,ESP_034590_1795,-0.3575,6.1354,n,,false,catalogued impact point; not image footprint
+354,ESP_034595_2315,50.9322,221.9358,n,,false,catalogued impact point; not image footprint
+355,ESP_034778_2010,20.818,270.5772,n,,false,catalogued impact point; not image footprint
+356,ESP_034687_1915,11.299,236.3629,n,,false,catalogued impact point; not image footprint
+357,ESP_035209_2195,39.1234,21.3772,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+358,ESP_034859_1780,-1.75,221.2877,n,,false,catalogued impact point; not image footprint
+359,ESP_034875_1740,-6.1523,145.5903,n,,false,catalogued impact point; not image footprint
+360,ESP_034886_1670,-13.0194,206.2754,n,,false,catalogued impact point; not image footprint
+361,ESP_034897_2080,27.679,260.9988,n,,false,catalogued impact point; not image footprint
+362,ESP_034913_2110,30.7487,182.6138,n,,false,catalogued impact point; not image footprint
+363,ESP_034923_2060,25.5083,270.3053,n,,false,catalogued impact point; not image footprint
+364,ESP_035003_1960,15.9423,248.6131,n,,false,catalogued impact point; not image footprint
+365,ESP_035121_2025,22.1533,265.8374,n,,false,catalogued impact point; not image footprint
+366,ESP_035152_2035,23.475,138.4986,n,,false,catalogued impact point; not image footprint
+367,ESP_035169_1745,-5.2532,39.0603,n,,false,catalogued impact point; not image footprint
+368,ESP_035195_1895,9.46,46.5261,n,,false,catalogued impact point; not image footprint
+369,ESP_035214_1985,18.1812,246.7774,n,,false,catalogued impact point; not image footprint
+370,ESP_035254_2020,21.7426,234.4769,n,,false,catalogued impact point; not image footprint
+371,ESP_035309_1840,4.0151,175.3222,n,,false,catalogued impact point; not image footprint
+372,ESP_035319_1815,1.5577,263.0759,n,,false,catalogued impact point; not image footprint
+373,ESP_035345_1740,-6.0492,273.2905,n,,false,catalogued impact point; not image footprint
+374,ESP_035424_2035,23.1227,272.4771,n,,false,catalogued impact point; not image footprint
+375,ESP_035399_2050,24.766,234.6401,n,,false,catalogued impact point; not image footprint
+376,ESP_035426_1785,-1.3231,221.364,n,,false,catalogued impact point; not image footprint
+377,ESP_035437_1800,0.2051,280.6774,n,,false,catalogued impact point; not image footprint
+378,ESP_035438_2075,27.3316,249.692,n,,false,catalogued impact point; not image footprint
+379,ESP_035446_1925,12.5073,33.8458,n,,false,catalogued impact point; not image footprint
+380,ESP_035460_1965,16.3953,10.5791,n,,false,catalogued impact point; not image footprint
+381,ESP_035465_1815,1.6106,236.3474,n,,false,catalogued impact point; not image footprint
+382,ESP_035473_1855,5.6694,17.4804,n,,false,catalogued impact point; not image footprint
+383,ESP_035506_2115,31.3184,193.6348,n,,false,catalogued impact point; not image footprint
+384,ESP_035538_1950,14.8642,41.7649,n,,false,catalogued impact point; not image footprint
+385,ESP_035545_1735,-6.3305,212.7625,n,,false,catalogued impact point; not image footprint
+386,ESP_035552_1960,15.596,19.6619,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+387,ESP_035610_2050,24.6904,234.9488,n,,false,catalogued impact point; not image footprint
+388,ESP_035623_1905,10.4868,241.237,n,,false,catalogued impact point; not image footprint
+389,ESP_035677_1650,-14.9037,210.7389,n,,false,catalogued impact point; not image footprint
+390,ESP_035682_1745,-5.6562,72.6199,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+391,ESP_036033_2225,42.0635,205.2362,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+392,ESP_035815_2175,37.2424,36.0081,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+393,ESP_034238_2025,22.5042,253.6713,n,,false,catalogued impact point; not image footprint
+394,ESP_035201_2310,50.359,232.8956,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+395,ESP_035780_1765,-3.3475,277.0869,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+396,ESP_035824_1810,0.9247,154.8959,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+397,ESP_034911_1975,17.3818,239.0617,n,,false,catalogued impact point; not image footprint
+398,ESP_035354_1855,5.3682,26.0068,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+399,ESP_036053_1945,14.3284,22.1165,n,,false,catalogued impact point; not image footprint
+400,ESP_036085_2455,65.0614,220.4894,y,,false,catalogued impact point; not image footprint
+401,ESP_036059_1835,3.3498,219.4038,n,,false,catalogued impact point; not image footprint
+402,ESP_036075_1990,19.0082,141.3643,n,,false,catalogued impact point; not image footprint
+403,ESP_034358_1645,-15.1289,222.1473,n,,false,catalogued impact point; not image footprint
+404,ESP_036343_2080,27.5582,24.6534,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+405,ESP_036352_2005,20.4682,140.0233,n,,false,catalogued impact point; not image footprint
+406,ESP_036360_2145,34.19157,280.2614,n,,false,catalogued impact point; not image footprint
+407,ESP_036388_2095,29.3405,235.9843,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+408,ESP_036124_1935,13.4905,244.5064,n,,false,catalogued impact point; not image footprint
+409,ESP_036178_2215,41.3989,206.8137,n,,false,catalogued impact point; not image footprint
+410,ESP_036232_2245,44.3367,172.2976,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+411,ESP_036243_2250,44.7505,232.1105,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+412,ESP_036272_1995,19.2217,164.5255,n,,false,catalogued impact point; not image footprint
+413,ESP_036269_2360,55.5702,240.5211,n,,false,catalogued impact point; not image footprint
+414,ESP_036506_1850,4.9226,258.048,n,,false,catalogued impact point; not image footprint
+415,ESP_036308_1840,4.0806,263.1323,n,,false,catalogued impact point; not image footprint
+416,ESP_036317_1915,11.3299,16.3791,n,,false,catalogued impact point; not image footprint
+417,ESP_036356_2075,27.4492,30.2327,n,,false,catalogued impact point; not image footprint
+418,ESP_036443_2270,46.6265,171.8712,y,,false,catalogued impact point; not image footprint
+419,ESP_036426_2105,30.2519,278.3764,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+420,ESP_036467_2375,57.3347,234.2001,y,,false,catalogued impact point; not image footprint
+421,ESP_036600_2235,43.1309,204.8059,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+422,ESP_036625_2045,24.0084,245.6348,n,,false,catalogued impact point; not image footprint
+423,ESP_036646_1775,-2.4114,35.3375,n,,false,catalogued impact point; not image footprint
+424,ESP_036658_2550,74.6373,49.5508,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+425,ESP_036665_2345,54.3655,228.5427,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+426,ESP_036666_2230,42.7696,204.2708,possible,Dundas et al. 2021,false,catalogued impact point; not image footprint
+427,ESP_036703_2030,22.666,277.1276,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+428,ESP_036771_1605,-19.1238,225.272,n,,false,catalogued impact point; not image footprint
+429,ESP_036836_2360,55.6201,241.2399,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+430,ESP_036792_1930,12.9427,7.1936,n,,false,catalogued impact point; not image footprint
+431,ESP_036712_1890,8.7306,33.6884,n,,false,catalogued impact point; not image footprint
+432,ESP_036892_2100,29.4971,155.8253,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+433,ESP_036916_1665,-13.4173,225.9001,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+434,ESP_037139_1935,13.5383,253.1786,n,,false,catalogued impact point; not image footprint
+435,ESP_036976_2095,29.2044,22.1765,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+436,ESP_037033_2040,23.8603,265.9224,n,Bart et al. 2019,false,catalogued impact point; not image footprint
+437,ESP_037069_2375,57.241,358.0247,possible,,false,catalogued impact point; not image footprint
+438,ESP_037086_2440,63.6693,251.4107,y,,false,catalogued impact point; not image footprint
+439,ESP_037121_2075,27.1906,22.4322,n,,false,catalogued impact point; not image footprint
+440,ESP_037169_2230,42.5216,150.9859,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+441,ESP_037328_1845,4.2827,135.2539,n,,false,catalogued impact point; not image footprint
+442,ESP_037187_1890,9.0619,23.3688,n,,false,catalogued impact point; not image footprint
+443,ESP_037203_1680,-11.7651,308.7796,n,,false,catalogued impact point; not image footprint
+444,ESP_037239_1820,2.0373,44.5461,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+445,ESP_037336_2300,49.9049,270.2421,n,,false,catalogued impact point; not image footprint
+446,ESP_037341_1935,13.2354,138.2863,n,,false,catalogued impact point; not image footprint
+447,ESP_037345_2095,29.2914,27.3434,n,,false,catalogued impact point; not image footprint
+448,ESP_037354_1950,15.078,143.7085,n,,false,catalogued impact point; not image footprint
+449,ESP_037420_1830,2.7398,143.3886,n,,false,catalogued impact point; not image footprint
+450,ESP_037433_2000,19.558,146.3739,n,,false,catalogued impact point; not image footprint
+451,ESP_037442_1855,5.4554,262.3178,n,,false,catalogued impact point; not image footprint
+452,ESP_037502_1170,-62.5427,76.00392,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+453,ESP_037522_1845,4.5648,238.4684,n,,false,catalogued impact point; not image footprint
+454,ESP_037544_2060,25.6344,355.8839,n,,false,catalogued impact point; not image footprint
+455,ESP_037565_2050,24.7895,141.5597,n,,false,catalogued impact point; not image footprint
+456,ESP_037679_2010,20.9713,270.0808,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+457,ESP_037682_2030,22.6303,188.5996,n,,false,catalogued impact point; not image footprint
+458,ESP_037697_2030,22.8656,138.7479,n,,false,catalogued impact point; not image footprint
+459,ESP_037706_1765,-3.4366,256.3268,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+460,ESP_037761_2155,35.2727,191.1978,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+461,ESP_037284_1240,-55.86884005633,264.75874507763,n,,false,catalogued impact point; not image footprint
+462,ESP_037863_1945,14.5864,288.9837,n,,false,catalogued impact point; not image footprint
+463,ESP_037878_1970,17.0055,239.6703,n,,false,catalogued impact point; not image footprint
+464,ESP_037885_1850,5.1307,49.892,n,,false,catalogued impact point; not image footprint
+465,ESP_039276_1885,8.2231,245.3502,n,,false,catalogued impact point; not image footprint
+466,ESP_039329_1830,2.9514,238.8821,n,,false,catalogued impact point; not image footprint
+467,ESP_037946_1960,15.827,183.5578,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+468,ESP_037958_2125,32.2914,212.9484,n,,false,catalogued impact point; not image footprint
+469,ESP_037987_1970,16.8494,144.0949,n,,false,catalogued impact point; not image footprint
+470,ESP_038000_1840,4.06,150.3272,n,,false,catalogued impact point; not image footprint
+471,ESP_038057_1770,-3.1405,35.9536,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+472,ESP_038074_1885,8.2009,290.4344,n,,false,catalogued impact point; not image footprint
+473,ESP_038216_1765,-3.3262,15.0195,n,,false,catalogued impact point; not image footprint
+474,ESP_038258_1930,13.1016,307.5879,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+475,ESP_038391_2095,29.173,275.9036,n,,false,catalogued impact point; not image footprint
+476,ESP_038396_2000,19.8771,140.4964,n,,false,catalogued impact point; not image footprint
+477,ESP_038458_2030,22.7738,247.5913,n,Daubar et al. 2019,false,catalogued impact point; not image footprint
+478,ESP_038462_1995,19.2945,139.5052,n,,false,catalogued impact point; not image footprint
+479,ESP_038612_1935,13.2102,6.6334,n,,false,catalogued impact point; not image footprint
+480,ESP_039197_1925,12.4197,241.3362,n,,false,catalogued impact point; not image footprint
+481,ESP_039211_1630,-17.0563,222.7616,n,,false,catalogued impact point; not image footprint
+482,ESP_038842_1740,-6.1103,213.6015,n,,false,catalogued impact point; not image footprint
+483,ESP_037799_1575,-22.1815,239.206,n,,false,catalogued impact point; not image footprint
+484,ESP_038985_2005,20.3456,268.9725,n,,false,catalogued impact point; not image footprint
+485,ESP_039104_2050,24.5804,259.1419,n,,false,catalogued impact point; not image footprint
+486,ESP_039148_1980,18.0307,138.6634,n,,false,catalogued impact point; not image footprint
+487,ESP_039243_1850,5.063,67.3149,n,,false,catalogued impact point; not image footprint
+488,ESP_039335_1835,3.3193,75.518,n,,false,catalogued impact point; not image footprint
+489,ESP_039521_1790,-0.8666,38.1623,n,,false,catalogued impact point; not image footprint
+490,ESP_039553_2050,24.5884,241.4454,n,,false,catalogued impact point; not image footprint
+491,ESP_039574_1995,19.2163,28.8138,n,,false,catalogued impact point; not image footprint
+492,ESP_039861_1225,-57.3551,125.1724,y,,false,catalogued impact point; not image footprint
+493,ESP_039946_1150,-64.9984,329.8375,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+494,ESP_039864_1905,10.1654,33.8826,n,,false,catalogued impact point; not image footprint
+495,ESP_041141_1755,-4.4232,90.3396,n,,false,catalogued impact point; not image footprint
+496,ESP_041208_1755,-4.5626,62.3622,n,,false,catalogued impact point; not image footprint
+497,ESP_041953_1885,8.6348,239.4271,n,,false,catalogued impact point; not image footprint
+498,ESP_041874_1960,15.7389,234.9626,n,,false,catalogued impact point; not image footprint
+499,ESP_041952_1985,18.0757,265.2722,n,,false,catalogued impact point; not image footprint
+500,ESP_041925_1935,13.2835,283.5924,n,,false,catalogued impact point; not image footprint
+501,ESP_041913_1910,10.8693,251.5987,n,,false,catalogued impact point; not image footprint
+502,ESP_041886_2015,21.4424,267.224,n,,false,catalogued impact point; not image footprint
+503,ESP_041875_1690,-10.8552,211.7159,n,,false,catalogued impact point; not image footprint
+504,ESP_042757_2030,22.9086,247.3423,n,,false,catalogued impact point; not image footprint
+505,ESP_042103_2175,37.3888,100.0038,n,,false,catalogued impact point; not image footprint
+506,ESP_042138_1985,18.357,226.6142,n,,false,catalogued impact point; not image footprint
+507,ESP_042380_2050,24.8199,99.7961,n,,false,catalogued impact point; not image footprint
+508,ESP_042461_2150,34.4841,46.745,n,,false,catalogued impact point; not image footprint
+509,ESP_043537_2230,42.5792,189.02,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+510,ESP_043130_2150,34.6555,140.3625,n,,false,catalogued impact point; not image footprint
+511,ESP_043173_2145,34.1164,46.8828,n,,false,catalogued impact point; not image footprint
+512,ESP_043196_1980,17.9261,141.0904,n,,false,catalogued impact point; not image footprint
+513,ESP_043262_1940,13.8406,140.0172,n,,false,catalogued impact point; not image footprint
+514,ESP_043406_2235,43.0519,164.776,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+515,ESP_043605_1845,4.5105,135.8219,n,,false,catalogued impact point; not image footprint
+516,ESP_043134_1800,0.2192,38.4902,n,,false,catalogued impact point; not image footprint
+517,ESP_043853_2200,39.5611,202.4249,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+518,ESP_043606_2175,37.168,104.5331,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+519,ESP_043648_1865,6.2771,43.2549,n,,false,catalogued impact point; not image footprint
+520,ESP_043776_1985,18.4508,146.6137,n,,false,catalogued impact point; not image footprint
+521,ESP_043310_2065,26.2704,267.1748,n,,false,catalogued impact point; not image footprint
+522,ESP_045008_2150,34.6819,352.9809,n,,false,catalogued impact point; not image footprint
+523,ESP_044341_1610,-18.6642,207.0748,n,,false,catalogued impact point; not image footprint
+524,ESP_044910_1890,8.7578,151.3873,n,,false,catalogued impact point; not image footprint
+525,ESP_044887_1735,-6.556,62.277,n,,false,catalogued impact point; not image footprint
+526,ESP_045323_1560,-23.7871,42.4907,n,,false,catalogued impact point; not image footprint
+527,ESP_045118_1990,18.7736,233.487,n,,false,catalogued impact point; not image footprint
+528,ESP_044655_1730,-7.0461,275.0284,n,,false,catalogued impact point; not image footprint
+529,ESP_044696_2145,34.3493,230.8952,n,,false,catalogued impact point; not image footprint
+530,ESP_044698_2245,43.9431,173.7518,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+531,ESP_044722_2030,22.644,241.697,n,,false,catalogued impact point; not image footprint
+532,ESP_044730_2025,22.2815,23.1658,n,,false,catalogued impact point; not image footprint
+533,ESP_044862_2145,34.2995,18.9698,n,,false,catalogued impact point; not image footprint
+534,ESP_045098_2175,37.408,56.259,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+535,ESP_044915_1715,-8.2617,16.9022,n,,false,catalogued impact point; not image footprint
+536,ESP_044992_2555,75.4193,57.2452,possible,,false,catalogued impact point; not image footprint
+537,ESP_045020_1935,13.3698,29.1454,n,,false,catalogued impact point; not image footprint
+538,ESP_045473_2080,27.7303,261.0102,n,,false,catalogued impact point; not image footprint
+539,ESP_045103_1810,1.09,284.4201,n,,false,catalogued impact point; not image footprint
+540,ESP_045323_2200,39.8581,34.5346,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+541,ESP_045328_2375,57.2867,255.1137,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+542,ESP_045231_1615,-18.4615,33.2485,n,,false,catalogued impact point; not image footprint
+543,ESP_045236_1865,6.211246,254.3588,n,,false,catalogued impact point; not image footprint
+544,ESP_045270_1950,14.8504,43.8933,n,,false,catalogued impact point; not image footprint
+545,ESP_045271_1930,12.8394,17.4572,n,,false,catalogued impact point; not image footprint
+546,ESP_045543_2250,44.7939,147.0983,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+547,ESP_045447_2085,28.1384,250.7709,n,,false,catalogued impact point; not image footprint
+548,ESP_045448_2285,48.2955,221.9267,possible,Dundas et al. 2021,false,catalogued impact point; not image footprint
+549,ESP_045539_2350,54.8943,254.5451,possible,Dundas et al. 2021,false,catalogued impact point; not image footprint
+550,ESP_045547_1870,7.0937,43.1644,n,,false,catalogued impact point; not image footprint
+551,ESP_046189_2495,69.3474,142.1919,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+552,ESP_045754_2260,45.8551,147.195,y,,false,catalogued impact point; not image footprint
+553,ESP_045596_2005,20.2163,143.64,n,,false,catalogued impact point; not image footprint
+554,ESP_047004_2110,30.7734,221.8594,n,,false,catalogued impact point; not image footprint
+555,ESP_046444_1865,6.2539,34.0502,n,,false,catalogued impact point; not image footprint
+556,ESP_049891_1985,18.5199,242.1063,n,,false,catalogued impact point; not image footprint
+557,ESP_045875_2445,64.3783,77.5811,y,,false,catalogued impact point; not image footprint
+558,ESP_045767_2200,39.6502,153.3514,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+559,ESP_045771_1940,14.0722,46.358,n,,false,catalogued impact point; not image footprint
+560,ESP_045772_1890,9.1369,20.2449,n,,false,catalogued impact point; not image footprint
+561,ESP_045776_1765,-3.5405,271.8203,n,,false,catalogued impact point; not image footprint
+562,ESP_045798_1965,16.0898,28.7416,n,,false,catalogued impact point; not image footprint
+563,ESP_045803_2070,26.6067,250.9987,n,,false,catalogued impact point; not image footprint
+564,ESP_045857_1675,-12.4509,222.2706,n,,false,catalogued impact point; not image footprint
+565,ESP_045930_1860,5.8734,26.7887,n,,false,catalogued impact point; not image footprint
+566,ESP_045973_2440,63.9511,282.3931,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+567,ESP_045956_1855,5.369,37.306,n,,false,catalogued impact point; not image footprint
+568,ESP_045982_1860,5.727,46.6701,n,,false,catalogued impact point; not image footprint
+569,ESP_045990_2300,49.559,181.611,n,,false,catalogued impact point; not image footprint
+570,ESP_046005_2000,19.702,137.248,n,,false,catalogued impact point; not image footprint
+571,ESP_046040_2085,28.444,260.815,n,,false,catalogued impact point; not image footprint
+572,ESP_046073_2450,64.662,70.853,n,,false,catalogued impact point; not image footprint
+573,ESP_046096_1915,11.536,173.716,n,,false,catalogued impact point; not image footprint
+574,ESP_046160_2275,46.927,222.256,n,,false,catalogued impact point; not image footprint
+575,ESP_046199_1900,9.8804,242.408,n,,false,catalogued impact point; not image footprint
+576,ESP_046214_2025,22.475,191.573,n,,false,catalogued impact point; not image footprint
+577,ESP_046215_1815,1.469,165.359,n,,false,catalogued impact point; not image footprint
+578,ESP_046278_2255,45.0611,240.5787,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+579,ESP_046378_2440,63.8241,26.0693,possible,Dundas et al. 2021,false,catalogued impact point; not image footprint
+580,ESP_046338_1900,10.014,46.253,n,,false,catalogued impact point; not image footprint
+581,ESP_046344_1925,12.3,242.27,n,,false,catalogued impact point; not image footprint
+582,ESP_046378_1930,12.694,34.85,n,,false,catalogued impact point; not image footprint
+583,ESP_046382_1770,-2.921,286.654,n,,false,catalogued impact point; not image footprint
+584,ESP_046384_1640,-15.979,233.805,n,,false,catalogued impact point; not image footprint
+585,ESP_046479_2055,25.29,155.523,n,,false,catalogued impact point; not image footprint
+586,ESP_046489_1935,13.122,244.189,n,,false,catalogued impact point; not image footprint
+587,ESP_046509_2035,23.471,56.066,n,,false,catalogued impact point; not image footprint
+588,ESP_046536_1925,12.267,41.079,n,,false,catalogued impact point; not image footprint
+589,ESP_046549_1790,-0.869,47.515,n,,false,catalogued impact point; not image footprint
+590,ESP_046608_1730,-6.961,237.771,n,,false,catalogued impact point; not image footprint
+591,ESP_046747_2220,41.913,36.426,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+592,ESP_046661_2115,31.203,225.876,n,,false,catalogued impact point; not image footprint
+593,ESP_046707_2220,41.464,48.765,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+594,ESP_046806_2070,26.608,227.308,n,,false,catalogued impact point; not image footprint
+595,ESP_046850_1415,-37.983,114.302,n,,false,catalogued impact point; not image footprint
+596,ESP_047005_1210,-58.545,207.234,y,,false,catalogued impact point; not image footprint
+597,ESP_046866_1760,-3.905,34.093,n,,false,catalogued impact point; not image footprint
+598,ESP_046870_1485,-31.391,287.907,n,,false,catalogued impact point; not image footprint
+599,ESP_046871_2005,20.055,254.769,n,,false,catalogued impact point; not image footprint
+600,ESP_046880_2015,21.081,8.928,n,,false,catalogued impact point; not image footprint
+601,ESP_046885_1970,16.659,233.284,n,,false,catalogued impact point; not image footprint
+602,ESP_046891_1705,-9.509,72.738,n,,false,catalogued impact point; not image footprint
+603,ESP_046918_1885,8.642,52.027,n,,false,catalogued impact point; not image footprint
+604,ESP_046945_1775,-2.402,36.411,n,,false,catalogued impact point; not image footprint
+605,ESP_046977_1910,11.074,242.037,n,,false,catalogued impact point; not image footprint
+606,ESP_047011_1775,-2.243,34.692,n,,false,catalogued impact point; not image footprint
+607,ESP_047018_1920,11.838,201.946,n,,false,catalogued impact point; not image footprint
+608,ESP_047123_1680,-11.865,218.322,n,,false,catalogued impact point; not image footprint
+609,ESP_047130_1770,-2.971,26.221,n,,false,catalogued impact point; not image footprint
+610,ESP_047175_1955,15.572,234.09,n,,false,catalogued impact point; not image footprint
+611,ESP_047196_2085,28.101,19.718,n,,false,catalogued impact point; not image footprint
+612,ESP_047201_2040,23.664,243.872,n,,false,catalogued impact point; not image footprint
+613,ESP_047209_2135,33.083,24.573,n,,false,catalogued impact point; not image footprint
+614,ESP_047214_2035,23.502,249.118,n,,false,catalogued impact point; not image footprint
+615,ESP_047241_1840,3.929,234.114,n,,false,catalogued impact point; not image footprint
+616,ESP_047244_1995,19.208,150.359,n,,false,catalogued impact point; not image footprint
+617,ESP_047270_2045,24.051,160.181,n,,false,catalogued impact point; not image footprint
+618,ESP_047301_1770,-2.905,37.072,n,,false,catalogued impact point; not image footprint
+619,ESP_047307_1745,-5.295,233.461,n,,false,catalogued impact point; not image footprint
+620,ESP_047322_1950,14.851,181.367,n,,false,catalogued impact point; not image footprint
+621,ESP_047327_2135,33.125,42.369,n,,false,catalogued impact point; not image footprint
+622,ESP_047358_2085,28.126,276.195,n,,false,catalogued impact point; not image footprint
+623,ESP_047359_2030,22.825,250.053,n,,false,catalogued impact point; not image footprint
+624,ESP_047379_2055,25.279,63.817,n,,false,catalogued impact point; not image footprint
+625,ESP_047384_2005,20.506,287.908,n,,false,catalogued impact point; not image footprint
+626,ESP_047386_1895,9.382,234.767,n,,false,catalogued impact point; not image footprint
+627,ESP_047393_1795,-0.303,44.729,n,,false,catalogued impact point; not image footprint
+628,ESP_047399_2135,33.1122,236.4798,n,,false,catalogued impact point; not image footprint
+629,ESP_047427_1715,-8.579,197.344,n,,false,catalogued impact point; not image footprint
+630,ESP_047443_1910,11.118,117.494,n,,false,catalogued impact point; not image footprint
+631,ESP_047451_2015,21.504,258.333,n,,false,catalogued impact point; not image footprint
+632,ESP_047464_1895,9.191,264.89,n,,false,catalogued impact point; not image footprint
+633,ESP_047477_2055,25.049,267.408,n,,false,catalogued impact point; not image footprint
+634,ESP_047485_1900,9.843,51.925,n,,false,catalogued impact point; not image footprint
+635,ESP_047530_2080,27.791,260.808,n,,false,catalogued impact point; not image footprint
+636,ESP_047538_1900,9.931,44.607,n,,false,catalogued impact point; not image footprint
+637,ESP_047596_1845,4.644,261.403,n,,false,catalogued impact point; not image footprint
+638,ESP_047622_2005,20.041,269.893,n,,false,catalogued impact point; not image footprint
+639,ESP_047636_1720,-8.05,251.412,n,,false,catalogued impact point; not image footprint
+640,ESP_047643_2050,24.57,55.629,n,,false,catalogued impact point; not image footprint
+641,ESP_047650_1935,13.157,226.534,n,,false,catalogued impact point; not image footprint
+642,ESP_047768_1995,19.289,242.494,n,,false,catalogued impact point; not image footprint
+643,ESP_047789_1890,8.8106,30.6526,n,,false,catalogued impact point; not image footprint
+644,ESP_047798_2000,19.7049,143.7983,n,,false,catalogued impact point; not image footprint
+645,ESP_047861_1995,19.1166,223.4107,n,,false,catalogued impact point; not image footprint
+646,ESP_049100_1740,-5.889,237.469,n,,false,catalogued impact point; not image footprint
+647,ESP_047900_1990,18.752,239.486,n,,false,catalogued impact point; not image footprint
+648,ESP_047913_1915,11.448,245.079,n,,false,catalogued impact point; not image footprint
+649,ESP_047921_1780,-2.157,28.782,n,,false,catalogued impact point; not image footprint
+650,ESP_047947_1795,-0.648,37.916,n,,false,catalogued impact point; not image footprint
+651,ESP_047948_1945,14.369,8.254,n,,false,catalogued impact point; not image footprint
+652,ESP_047960_2035,23.501,39.443,n,,false,catalogued impact point; not image footprint
+653,ESP_048101_1920,11.626,151.662,n,,false,catalogued impact point; not image footprint
+654,ESP_048106_1675,-12.283,18.4847,n,,false,catalogued impact point; not image footprint
+655,ESP_048123_1750,-4.933,272.719,n,,false,catalogued impact point; not image footprint
+656,ESP_048126_1700,-10.009,191.826,n,,false,catalogued impact point; not image footprint
+657,ESP_048149_1810,1.0645,282.9381,n,,false,catalogued impact point; not image footprint
+658,ESP_048162_1790,-1.1167,287.8882,n,,false,catalogued impact point; not image footprint
+659,ESP_048176_1865,6.2536,264.4444,n,,false,catalogued impact point; not image footprint
+660,ESP_048203_1805,0.589,247.9845,n,,false,catalogued impact point; not image footprint
+661,ESP_048241_1760,-3.919,291.239,n,,false,catalogued impact point; not image footprint
+662,ESP_048325_2025,22.2741,154.0583,n,,false,catalogued impact point; not image footprint
+663,ESP_048374_2075,27.4632,255.2572,n,,false,catalogued impact point; not image footprint
+664,ESP_048382_1845,4.683,39.953,n,,false,catalogued impact point; not image footprint
+665,ESP_048888_1735,-6.534,264.802,n,,false,catalogued impact point; not image footprint
+666,ESP_048431_2040,23.6916,139.7535,n,,false,catalogued impact point; not image footprint
+667,ESP_048456_1640,-15.632,181.071,n,,false,catalogued impact point; not image footprint
+668,ESP_048466_1830,2.939,265.789,n,,false,catalogued impact point; not image footprint
+669,ESP_048483_1705,-9.5388,163.4077,n,,false,catalogued impact point; not image footprint
+670,ESP_048487_1860,6.1089,52.9273,n,,false,catalogued impact point; not image footprint
+671,ESP_048495_1910,11.0419,193.0091,n,,false,catalogued impact point; not image footprint
+672,ESP_048514_1885,8.3359,34.8646,n,,false,catalogued impact point; not image footprint
+673,ESP_048559_1820,1.775,247.612,n,,false,catalogued impact point; not image footprint
+674,ESP_048572_2035,23.0144,249.8732,n,,false,catalogued impact point; not image footprint
+675,ESP_048599_1820,1.923,234.377,n,,false,catalogued impact point; not image footprint
+676,ESP_048636_1870,6.909,303.5601,n,,false,catalogued impact point; not image footprint
+677,ESP_048686_1785,-1.585,20.588,n,,false,catalogued impact point; not image footprint
+678,ESP_048703_1750,-5.1129,275.8817,n,,false,catalogued impact point; not image footprint
+679,ESP_048720_1735,-6.209,172.756,n,,false,catalogued impact point; not image footprint
+680,ESP_048734_2005,20.481,145.967,n,,false,catalogued impact point; not image footprint
+681,ESP_048742_1760,-4.029,290.587,n,,false,catalogued impact point; not image footprint
+682,ESP_048743_1745,-5.4485,264.2955,n,,false,catalogued impact point; not image footprint
+683,ESP_048769_1950,14.8535,271.4805,n,,false,catalogued impact point; not image footprint
+684,ESP_048770_2010,20.7403,243.075,n,,false,catalogued impact point; not image footprint
+685,ESP_048773_1670,-12.7483,165.4502,n,,false,catalogued impact point; not image footprint
+686,ESP_048817_1880,7.963,41.544,n,,false,catalogued impact point; not image footprint
+687,ESP_048841_1610,-18.608,109.442,n,,false,catalogued impact point; not image footprint
+688,ESP_048847_1640,-15.6863,305.4962,n,,false,catalogued impact point; not image footprint
+689,ESP_048883_1905,10.5618,39.9032,n,,false,catalogued impact point; not image footprint
+690,ESP_048902_2075,27.0291,238.5707,n,,false,catalogued impact point; not image footprint
+691,ESP_048919_1905,10.398,136.465,n,,false,catalogued impact point; not image footprint
+692,ESP_049061_1370,-42.583,226.829,possible,,false,catalogued impact point; not image footprint
+693,ESP_049033_1865,6.458,264.455,n,,false,catalogued impact point; not image footprint
+694,ESP_049175_1490,-30.66,353.58,n,,false,catalogued impact point; not image footprint
+695,ESP_049245_1855,5.6094,237.101,n,,false,catalogued impact point; not image footprint
+696,ESP_049252_1835,3.341,47.298,n,,false,catalogued impact point; not image footprint
+697,ESP_049310_1755,-4.511,264.812,n,,false,catalogued impact point; not image footprint
+698,ESP_049349_1735,-6.282,279.1302,n,,false,catalogued impact point; not image footprint
+699,ESP_049377_1985,18.218,232.654,n,,false,catalogued impact point; not image footprint
+700,ESP_049403_1900,9.7405,242.927,n,,false,catalogued impact point; not image footprint
+701,ESP_049482_2005,20.079,245.683,n,,false,catalogued impact point; not image footprint
+702,ESP_049508_1905,10.519,257.818,n,,false,catalogued impact point; not image footprint
+703,ESP_049543_2085,28.321,19.903,n,,false,catalogued impact point; not image footprint
+704,ESP_049556_2090,28.696,23.859,n,,false,catalogued impact point; not image footprint
+705,ESP_049574_2030,22.8305,254.424,n,,false,catalogued impact point; not image footprint
+706,ESP_049600_1815,1.322,266.804,n,,false,catalogued impact point; not image footprint
+707,ESP_049640_1715,-8.533,255.861,n,,false,catalogued impact point; not image footprint
+708,ESP_049653_1775,-2.451,260.467,n,,false,catalogued impact point; not image footprint
+709,ESP_049661_1510,-28.881,46.279,n,,false,catalogued impact point; not image footprint
+710,ESP_049733_1810,0.8496,235.818,n,,false,catalogued impact point; not image footprint
+711,ESP_049740_1800,0.1659,44.871,n,,false,catalogued impact point; not image footprint
+712,ESP_049806_1990,18.557,41.972,n,,false,catalogued impact point; not image footprint
+713,ESP_049865_2045,24.296,230.144,n,,false,catalogued impact point; not image footprint
+714,ESP_049917_1760,-4.022,254.529,n,,false,catalogued impact point; not image footprint
+715,ESP_049930_2050,24.787,255.195,n,,false,catalogued impact point; not image footprint
+716,ESP_050446_1650,-14.811,211.718,n,,false,catalogued impact point; not image footprint
+717,ESP_049957_1955,15.269,239.976,n,,false,catalogued impact point; not image footprint
+718,ESP_049958_1700,-9.671,215.448,n,,false,catalogued impact point; not image footprint
+719,ESP_049965_1835,3.269,23.739,n,,false,catalogued impact point; not image footprint
+720,ESP_050023_1855,5.604,239.469,n,,false,catalogued impact point; not image footprint
+721,ESP_050043_1880,7.676,52.286,n,,false,catalogued impact point; not image footprint
+722,ESP_055324_1930,12.705,230.516,n,,false,catalogued impact point; not image footprint
+723,ESP_050115_2005,20.332,245.495,n,,false,catalogued impact point; not image footprint
+724,ESP_050128_2025,22.303,250.301,n,,false,catalogued impact point; not image footprint
+725,ESP_050129_2055,25.462,222.453,n,,false,catalogued impact point; not image footprint
+726,ESP_050141_1765,-3.342,257.826,n,,false,catalogued impact point; not image footprint
+727,ESP_050154_1750,-5.082,263.259,n,,false,catalogued impact point; not image footprint
+728,ESP_050168_1885,8.605,239.818,n,,false,catalogued impact point; not image footprint
+729,ESP_050181_1830,2.945,245.721,n,,false,catalogued impact point; not image footprint
+730,ESP_050202_2110,30.614,28.048,n,,false,catalogued impact point; not image footprint
+731,ESP_050228_2100,29.503,38.905,n,,false,catalogued impact point; not image footprint
+732,ESP_050239_1275,-52.093,109.244,possible,,false,catalogued impact point; not image footprint
+733,ESP_050246_2055,25.141,267.229,n,,false,catalogued impact point; not image footprint
+734,ESP_050300_1735,-6.392,237.627,n,,false,catalogued impact point; not image footprint
+735,ESP_050300_2170,36.919,230.689,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+736,ESP_050325_2085,28.015,269.521,n,,false,catalogued impact point; not image footprint
+737,ESP_050326_2010,20.969,243.172,n,,false,catalogued impact point; not image footprint
+738,ESP_050437_1070,-72.643,109.642,possible,Dundas et al. 2021,false,catalogued impact point; not image footprint
+739,ESP_057315_1065,-73.45238866776,264.10880196666,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+740,ESP_050431_1800,0.1413,258.892,n,,false,catalogued impact point; not image footprint
+741,ESP_050457_2070,26.528,265.479,n,,false,catalogued impact point; not image footprint
+742,ESP_050501_1965,16.124,145.603,n,,false,catalogued impact point; not image footprint
+743,ESP_050505_1915,11.333,37.008,n,,false,catalogued impact point; not image footprint
+744,ESP_050524_1920,11.718,238.208,n,,false,catalogued impact point; not image footprint
+745,ESP_050571_2090,28.836,32.632,n,,false,catalogued impact point; not image footprint
+746,ESP_050589_1830,2.728,265.185,n,,false,catalogued impact point; not image footprint
+747,ESP_050959_1520,-27.858,247.632,n,,false,catalogued impact point; not image footprint
+748,ESP_050628_2105,30.128,276.146,n,,false,catalogued impact point; not image footprint
+749,ESP_050655_1810,1.128,262.922,n,,false,catalogued impact point; not image footprint
+750,ESP_050668_1975,17.105,265.774,n,,false,catalogued impact point; not image footprint
+751,ESP_050669_1970,16.695,239.778,n,,false,catalogued impact point; not image footprint
+752,ESP_050670_1935,13.229,211.833,n,,false,catalogued impact point; not image footprint
+753,ESP_050695_1925,12.403,249.29,n,,false,catalogued impact point; not image footprint
+754,ESP_050708_2025,22.252,254.477,n,,false,catalogued impact point; not image footprint
+755,ESP_050734_1805,0.283,266.007,n,,false,catalogued impact point; not image footprint
+756,ESP_050800_2050,24.503,260.9,n,,false,catalogued impact point; not image footprint
+757,ESP_050814_1880,7.704,242.011,n,,false,catalogued impact point; not image footprint
+758,ESP_050854_1735,-6.391,230.446,n,,false,catalogued impact point; not image footprint
+759,ESP_050879_2055,25.061,265.247,n,,false,catalogued impact point; not image footprint
+760,ESP_050880_1945,14.253,237.962,n,,false,catalogued impact point; not image footprint
+761,ESP_050946_1715,-8.405,239.071,n,,false,catalogued impact point; not image footprint
+762,ESP_050958_2070,26.919,266.898,n,,false,catalogued impact point; not image footprint
+763,ESP_051070_1285,-51.289,101.058,y,,false,catalogued impact point; not image footprint
+764,ESP_051011_1660,-14.07,265.656,n,,false,catalogued impact point; not image footprint
+765,ESP_051020_2035,23.075,14.713,n,,false,catalogued impact point; not image footprint
+766,ESP_051037_2085,28.013,269.786,n,,false,catalogued impact point; not image footprint
+767,ESP_051080_1920,12.052,179.284,n,,false,catalogued impact point; not image footprint
+768,ESP_051144_1755,-4.285,233.585,n,,false,catalogued impact point; not image footprint
+769,ESP_051196_2025,22.239,249.766,n,,false,catalogued impact point; not image footprint
+770,ESP_051209_2045,24.444,255.219,n,,false,catalogued impact point; not image footprint
+771,ESP_051223_1845,4.635,236.021,n,,false,catalogued impact point; not image footprint
+772,ESP_051236_2135,33.332,237.484,n,,false,catalogued impact point; not image footprint
+773,ESP_051329_1730,-6.815,223.032,n,,false,catalogued impact point; not image footprint
+774,ESP_051344_1735,-6.349,172.586,n,,false,catalogued impact point; not image footprint
+775,ESP_051349_2130,32.815,30.968,n,,false,catalogued impact point; not image footprint
+776,ESP_051354_2030,22.598,257.112,n,,false,catalogued impact point; not image footprint
+777,ESP_051357_1880,7.807,176.451,n,,false,catalogued impact point; not image footprint
+778,ESP_051362_1960,16.001,38.514,n,,false,catalogued impact point; not image footprint
+779,ESP_051363_2075,27.223,11.008,n,,false,catalogued impact point; not image footprint
+780,ESP_051368_1985,18.258,234.582,n,,false,catalogued impact point; not image footprint
+781,ESP_051370_1655,-14.473,183.725,n,,false,catalogued impact point; not image footprint
+782,ESP_051394_1920,11.681,245.289,n,,false,catalogued impact point; not image footprint
+783,ESP_051395_1670,-12.724,222.351,n,,false,catalogued impact point; not image footprint
+784,ESP_051412_1675,-12.141,116.985,n,,false,catalogued impact point; not image footprint
+785,ESP_051782_2130,32.497,90.28005,n,,false,catalogued impact point; not image footprint
+786,ESP_051857_1650,-14.858,208.715,n,,false,catalogued impact point; not image footprint
+787,ESP_051884_2015,21.41007,186.722,n,,false,catalogued impact point; not image footprint
+788,ESP_051886_1715,-8.588,136.608,n,,false,catalogued impact point; not image footprint
+789,ESP_051897_1660,-13.711,197.322,n,,false,catalogued impact point; not image footprint
+790,ESP_051920_1850,4.981,286.014,n,,false,catalogued impact point; not image footprint
+791,ESP_051930_2080,27.657,11.597,n,,false,catalogued impact point; not image footprint
+792,ESP_051948_1895,9.261,241.894,n,,false,catalogued impact point; not image footprint
+793,ESP_051982_1760,-4.125,35.729,n,,false,catalogued impact point; not image footprint
+794,ESP_053631_1920,11.961,11.455,n,,false,catalogued impact point; not image footprint
+795,ESP_052000_1690,-10.743,265.258,n,,false,catalogued impact point; not image footprint
+796,ESP_052002_1845,4.552,207.483,n,,false,catalogued impact point; not image footprint
+797,ESP_052755_2200,39.6901,164.523,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+798,ESP_052048_1770,-2.805,33.839,n,,false,catalogued impact point; not image footprint
+799,ESP_052057_1985,18.29,144.199,n,,false,catalogued impact point; not image footprint
+800,ESP_052080_1920,11.929,238.332,n,,false,catalogued impact point; not image footprint
+801,ESP_052124_1860,5.929,117.311,n,,false,catalogued impact point; not image footprint
+802,ESP_052141_1955,15.166,12.805,n,,false,catalogued impact point; not image footprint
+803,ESP_052173_1670,-12.814,222.575,n,,false,catalogued impact point; not image footprint
+804,ESP_052752_2010,20.944,249.48,n,,false,catalogued impact point; not image footprint
+805,ESP_052219_1880,7.958,43.102,n,,false,catalogued impact point; not image footprint
+806,ESP_052228_1875,7.425,157.293,n,,false,catalogued impact point; not image footprint
+807,ESP_052238_2005,20.396,242.529,n,,false,catalogued impact point; not image footprint
+808,ESP_052250_1755,-4.502,278.115,n,,false,catalogued impact point; not image footprint
+809,ESP_052253_1670,-13.025,197.301,n,,false,catalogued impact point; not image footprint
+810,ESP_052278_1835,3.333,233.821,n,,false,catalogued impact point; not image footprint
+811,ESP_052325_1920,11.708,29.423,n,,false,catalogued impact point; not image footprint
+812,ESP_052330_1770,-2.802,254.607,n,,false,catalogued impact point; not image footprint
+813,ESP_052356_1745,-5.503,265.041,n,,false,catalogued impact point; not image footprint
+814,ESP_052439_2155,35.378,152.083,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+815,ESP_052441_2005,20.463,100.743,n,,false,catalogued impact point; not image footprint
+816,ESP_052475_1850,4.713,254.498,n,,false,catalogued impact point; not image footprint
+817,ESP_052479_1980,17.759,142.849,n,,false,catalogued impact point; not image footprint
+818,ESP_059425_1850,4.947,245.763,n,,false,catalogued impact point; not image footprint
+819,ESP_053003_1910,10.762,237.673,n,,false,catalogued impact point; not image footprint
+820,ESP_052843_2195,39.137,281.006,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+821,ESP_052866_1870,7.035,17.466,n,,false,catalogued impact point; not image footprint
+822,ESP_052870_2090,28.53,266.558,n,,false,catalogued impact point; not image footprint
+823,ESP_052872_2265,45.986,209.711,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+824,ESP_052875_1980,17.74924,131.446,n,,false,catalogued impact point; not image footprint
+825,ESP_052897_1740,-5.754424,252.8849,n,,false,catalogued impact point; not image footprint
+826,ESP_052914_1995,19.417,145.552,n,,false,catalogued impact point; not image footprint
+827,ESP_052962_1745,-5.253,278.354,n,,false,catalogued impact point; not image footprint
+828,ESP_053006_1980,17.81994,154.8095,n,,false,catalogued impact point; not image footprint
+829,ESP_053028_1915,11.436,273.981,n,,false,catalogued impact point; not image footprint
+830,ESP_053039_1640,-15.929,338.049,n,,false,catalogued impact point; not image footprint
+831,ESP_053623_1445,-35.069,235.731,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+832,ESP_053063_1820,2.176,39.206,n,,false,catalogued impact point; not image footprint
+833,ESP_053083_2310,50.611,206.426,n,,false,catalogued impact point; not image footprint
+834,ESP_053192_2070,26.903,114.574,n,,false,catalogued impact point; not image footprint
+835,ESP_053243_2020,21.649,162.997,n,,false,catalogued impact point; not image footprint
+836,ESP_053272_2025,22.094,90.468,n,,false,catalogued impact point; not image footprint
+837,ESP_053338_2030,22.939,88.709,n,,false,catalogued impact point; not image footprint
+838,ESP_053345_1915,11.196,259.143,n,,false,catalogued impact point; not image footprint
+839,ESP_055548_1705,-9.268,239.069,n,,false,catalogued impact point; not image footprint
+840,ESP_053363_1880,8.007,128.712,n,,false,catalogued impact point; not image footprint
+841,ESP_053372_2080,27.85778,239.5792,n,,false,catalogued impact point; not image footprint
+842,ESP_053500_2095,29.245,344.392,n,,false,catalogued impact point; not image footprint
+843,ESP_053552_2060,25.913,6.375,n,,false,catalogued impact point; not image footprint
+844,ESP_053598_1770,-2.7504,194.072,n,,false,catalogued impact point; not image footprint
+845,ESP_053635_1655,-14.43333,264.1693,n,,false,catalogued impact point; not image footprint
+846,ESP_053653_1850,4.775,131.433,n,,false,catalogued impact point; not image footprint
+847,ESP_053676_1685,-11.259,225.625,n,,false,catalogued impact point; not image footprint
+848,ESP_053703_2015,21.189,203.571,n,,false,catalogued impact point; not image footprint
+849,ESP_053727_1740,-5.959,272.599,n,,false,catalogued impact point; not image footprint
+850,ESP_053743_1750,-4.997,194.342,n,,false,catalogued impact point; not image footprint
+851,ESP_053745_1915,11.311,138.279,n,,false,catalogued impact point; not image footprint
+852,ESP_053774_1685,-11.557,69.771,n,,false,catalogued impact point; not image footprint
+853,ESP_053912_1940,13.803,258.715,n,,false,catalogued impact point; not image footprint
+854,ESP_053995_2165,35.999,149.578,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+855,ESP_054031_2410,60.822,241.135,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+856,ESP_054066_1920,11.801,14.767,n,,false,catalogued impact point; not image footprint
+857,ESP_054070_1800,-0.2069,266.873,n,,false,catalogued impact point; not image footprint
+858,ESP_054112_1820,1.738,199.736,n,,false,catalogued impact point; not image footprint
+859,ESP_054125_2215,41.296,199.631,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+860,ESP_054143_1630,-16.672,76.235,n,,false,catalogued impact point; not image footprint
+861,ESP_047030_1955,15.573,234.091,n,,false,catalogued impact point; not image footprint
+862,ESP_032391_2080,27.613,279.526,n,,false,catalogued impact point; not image footprint
+863,ESP_057429_1810,1.212,16.916,n,,false,catalogued impact point; not image footprint
+864,ESP_057034_2020,21.554,355.138,n,,false,catalogued impact point; not image footprint
+865,ESP_055133_2160,35.591,42.506,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+866,ESP_055134_1865,6.394,17.776,n,,false,catalogued impact point; not image footprint
+867,ESP_055286_2235,43.274,183.053,n,,false,catalogued impact point; not image footprint
+868,ESP_055287_2010,20.995,160.619,n,,false,catalogued impact point; not image footprint
+869,ESP_055345_1875,7.563,17.712,n,,false,catalogued impact point; not image footprint
+870,ESP_055376_2095,29.258,249.908,n,,false,catalogued impact point; not image footprint
+871,ESP_055383_2135,33.202,58.064,n,,false,catalogued impact point; not image footprint
+872,ESP_055417_1935,13.496,212.413,n,,false,catalogued impact point; not image footprint
+873,ESP_055420_1745,-5.367,132.138,n,,false,catalogued impact point; not image footprint
+874,ESP_055581_1985,18.49,52.322,n,,false,catalogued impact point; not image footprint
+875,ESP_055470_2205,39.988,200.753,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+876,ESP_055502_2185,38.045,48.279,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+877,ESP_055507_2070,26.666,273.145,n,,false,catalogued impact point; not image footprint
+878,ESP_055535_2155,35.157,228.743,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+879,ESP_055587_1830,2.722,252.442,n,,false,catalogued impact point; not image footprint
+880,ESP_055641_1700,-10.122,220.782,n,,false,catalogued impact point; not image footprint
+881,ESP_057173_2050,24.8102,161.254,n,,false,catalogued impact point; not image footprint
+882,ESP_056900_1935,13.309,54.461,n,,false,catalogued impact point; not image footprint
+883,ESP_057218_1935,13.124,14.454,n,,false,catalogued impact point; not image footprint
+884,ESP_056722_2000,19.704,231.986,n,,false,catalogued impact point; not image footprint
+885,ESP_056708_1890,8.805,254.482,n,,false,catalogued impact point; not image footprint
+886,ESP_056602_2080,27.918,267.035,n,,false,catalogued impact point; not image footprint
+887,ESP_056089_2005,20.498,228.129,n,,false,catalogued impact point; not image footprint
+888,ESP_056155_1980,17.762,226.942,n,,false,catalogued impact point; not image footprint
+889,ESP_057381_1815,1.634,247.225,n,,false,catalogued impact point; not image footprint
+890,ESP_059279_1635,-16.419,274.739,n,,false,catalogued impact point; not image footprint
+891,ESP_060255_1790,-0.8188,267.151,n,,false,catalogued impact point; not image footprint
+892,ESP_060268_1750,-4.956,272.586,n,,false,catalogued impact point; not image footprint
+893,ESP_060361_2000,19.726,251.259,n,,false,catalogued impact point; not image footprint
+894,ESP_056774_1900,10.091,253.434,n,,false,catalogued impact point; not image footprint
+895,ESP_056906_2160,35.741,247.085,n,,false,catalogued impact point; not image footprint
+896,ESP_056920_1950,14.699,227.369,n,,false,catalogued impact point; not image footprint
+897,ESP_056931_2180,37.885,284.672,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+898,ESP_056958_2075,27.071,268.643,n,,false,catalogued impact point; not image footprint
+899,ESP_056988_1720,-7.884,174.407,n,,false,catalogued impact point; not image footprint
+900,ESP_057090_2055,25.3304,266.559,n,,false,catalogued impact point; not image footprint
+901,ESP_057118_1615,-18.214,227.594,n,,false,catalogued impact point; not image footprint
+902,ESP_057152_0985,-81.491,41.349,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+903,ESP_057183_1745,-5.345,251.607,n,,false,catalogued impact point; not image footprint
+904,ESP_057209_1685,-11.501,263.0504,n,,false,catalogued impact point; not image footprint
+905,ESP_057235_1700,-9.951,272.642,n,,false,catalogued impact point; not image footprint
+906,ESP_057262_1950,14.958,253.659,n,,false,catalogued impact point; not image footprint
+907,ESP_057291_1640,-15.844,185.712,n,,false,catalogued impact point; not image footprint
+908,ESP_057301_2085,28.401,266.464,n,,false,catalogued impact point; not image footprint
+909,ESP_057302_2065,26.38,240.03,n,,false,catalogued impact point; not image footprint
+910,ESP_057328_1740,-5.733,254.535,n,,false,catalogued impact point; not image footprint
+911,ESP_057341_1755,-4.323,259.003,n,,false,catalogued impact point; not image footprint
+912,ESP_057354_2005,20.235,261.332,n,,false,catalogued impact point; not image footprint
+913,ESP_057660_2180,37.617,188.378,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+914,ESP_057671_2055,25.275,248.505,n,,false,catalogued impact point; not image footprint
+915,ESP_057687_1930,12.691,174.205,n,,false,catalogued impact point; not image footprint
+916,ESP_057842_1785,-1.454,266.204,n,,false,catalogued impact point; not image footprint
+917,ESP_057957_1655,-14.292,9.166,n,,false,catalogued impact point; not image footprint
+918,ESP_059441_2185,38.024,164.014,n,,false,catalogued impact point; not image footprint
+919,ESP_057927_1620,-17.935,108.34,n,,false,catalogued impact point; not image footprint
+920,ESP_059414_1280,-51.884,194.991,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+921,ESP_058014_1755,-4.536,252.45,n,,false,catalogued impact point; not image footprint
+922,ESP_058045_1610,-18.994,128.179,n,,false,catalogued impact point; not image footprint
+923,ESP_058061_1540,-25.689,51.034,n,,false,catalogued impact point; not image footprint
+924,ESP_058127_2075,27.079,43.257,n,,false,catalogued impact point; not image footprint
+925,ESP_058149_1670,-12.907,167.422,n,,false,catalogued impact point; not image footprint
+926,ESP_058176_1970,16.849,145.633,n,,false,catalogued impact point; not image footprint
+927,ESP_058205_2165,36.264,71.381,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+928,ESP_058220_1945,14.385,24.622,n,,false,catalogued impact point; not image footprint
+929,ESP_058226_1780,-2.148,223.342,n,,false,catalogued impact point; not image footprint
+930,ESP_058227_2050,24.949,193.127,n,,false,catalogued impact point; not image footprint
+931,ESP_058735_1125,-67.144,15.351,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+932,ESP_058453_1115,-68.308,156.611,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+933,ESP_058514_2140,33.816,274.173,n,,false,catalogued impact point; not image footprint
+934,ESP_058562_1800,-0.0303,47.927,n,,false,catalogued impact point; not image footprint
+935,ESP_058569_1695,-10.322,219.1104,n,,false,catalogued impact point; not image footprint
+936,ESP_058595_1645,-15.115,228.482,n,,false,catalogued impact point; not image footprint
+937,ESP_058608_1720,-7.961,232.645,n,,false,catalogued impact point; not image footprint
+938,ESP_058620_1990,18.922,261.463,n,,false,catalogued impact point; not image footprint
+939,ESP_058634_1975,17.515,240.522,n,,false,catalogued impact point; not image footprint
+940,ESP_058649_1895,9.264,192.371,n,,false,catalogued impact point; not image footprint
+941,ESP_058699_1805,0.5056,267.008,n,,false,catalogued impact point; not image footprint
+942,ESP_058805_1755,-4.645,254.564,n,,false,catalogued impact point; not image footprint
+943,ESP_058809_1080,-71.736,156.634,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+944,ESP_058871_1780,-1.994,251.864,n,,false,catalogued impact point; not image footprint
+945,ESP_060954_1760,-4.088,265.506,n,,false,catalogued impact point; not image footprint
+946,ESP_060955_1880,8.017,237.299,n,,false,catalogued impact point; not image footprint
+947,ESP_058897_2035,23.178,259.009,n,,false,catalogued impact point; not image footprint
+948,ESP_058912_1710,-8.913,212.652,n,,false,catalogued impact point; not image footprint
+949,ESP_058951_1685,-11.494,228.325,n,,false,catalogued impact point; not image footprint
+950,ESP_058963_2065,26.439,256.591,n,,false,catalogued impact point; not image footprint
+951,ESP_058964_1700,-9.993,234.266,n,,false,catalogued impact point; not image footprint
+952,ESP_058977_2025,21.211,234.027,n,,false,catalogued impact point; not image footprint
+953,ESP_058989_2050,24.691,265.975,n,,false,catalogued impact point; not image footprint
+954,ESP_058991_1670,-12.681,217.286,n,,false,catalogued impact point; not image footprint
+955,ESP_059004_1780,-2.19001,220.9501,n,,false,catalogued impact point; not image footprint
+956,ESP_059030_2150,34.899,226.788,n,,false,catalogued impact point; not image footprint
+957,ESP_059043_1980,17.716,233.726,n,,false,catalogued impact point; not image footprint
+958,ESP_059254_1805,0.4758,234.359,n,,false,catalogued impact point; not image footprint
+959,ESP_059283_1180,-61.589,171.575,possible,Dundas et al. 2021,false,catalogued impact point; not image footprint
+960,ESP_059291_2070,26.725,301.538,n,,false,catalogued impact point; not image footprint
+961,ESP_059292_2030,22.527,273.854,n,,false,catalogued impact point; not image footprint
+962,ESP_059293_2125,32.03,245.55,n,,false,catalogued impact point; not image footprint
+963,ESP_059294_1720,-7.87,224.162,n,,false,catalogued impact point; not image footprint
+964,ESP_059332_1705,-9.409,265.845,n,,false,catalogued impact point; not image footprint
+965,ESP_059372_2105,30.171,248.95,n,,false,catalogued impact point; not image footprint
+966,ESP_059387_1605,-19.111,205.564,n,,false,catalogued impact point; not image footprint
+967,ESP_059399_1940,13.977,233.865,n,,false,catalogued impact point; not image footprint
+968,ESP_059400_1735,-6.654,209.379,n,,false,catalogued impact point; not image footprint
+969,ESP_059413_1740,-6.091,214.485,n,,false,catalogued impact point; not image footprint
+970,ESP_059451_1950,14.66,254.108,n,,false,catalogued impact point; not image footprint
+971,ESP_059453_1335,-46.2097,208.6446,y,,false,catalogued impact point; not image footprint
+972,ESP_059491_1990,18.7017,242.5864,n,,false,catalogued impact point; not image footprint
+973,ESP_059523_2020,21.5936,88.2547,n,,false,catalogued impact point; not image footprint
+974,ESP_059632_1975,17.5551,352.8298,n,,false,catalogued impact point; not image footprint
+975,ESP_059642_1340,-45.4331,88.015,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+976,ESP_059668_1300,-49.8757,99.9564,n,,false,catalogued impact point; not image footprint
+977,ESP_059701_1955,15.2702,269.1441,n,,false,catalogued impact point; not image footprint
+978,ESP_059705_1980,17.6332,159.783,n,,false,catalogued impact point; not image footprint
+979,ESP_059728_1740,-5.8284,254.8211,n,,false,catalogued impact point; not image footprint
+980,ESP_059741_1750,-4.8767,259.5914,n,,false,catalogued impact point; not image footprint
+981,ESP_059769_1710,-8.713,216.394,n,,false,catalogued impact point; not image footprint
+982,ESP_059960_1825,2.435,40.754,n,,false,catalogued impact point; not image footprint
+983,ESP_059973_1985,18.363,44.069,n,,false,catalogued impact point; not image footprint
+984,ESP_059994_2055,25.07888879373,188.59863464496,n,,false,catalogued impact point; not image footprint
+985,ESP_059998_2115,31.128,79.945,n,,false,catalogued impact point; not image footprint
+986,ESP_060047_1915,11.383,184.741,n,,false,catalogued impact point; not image footprint
+987,ESP_060058_1940,13.642,243.949,n,,false,catalogued impact point; not image footprint
+988,ESP_060071_1725,-7.353,251.529,n,,false,catalogued impact point; not image footprint
+989,ESP_060091_1630,-16.969,66.489,n,,false,catalogued impact point; not image footprint
+990,ESP_060110_1800,0.016,266.106,n,,false,catalogued impact point; not image footprint
+991,ESP_060112_1940,13.779,208.784,n,,false,catalogued impact point; not image footprint
+992,ESP_060138_1675,-12.601,222.392,n,,false,catalogued impact point; not image footprint
+993,ESP_060164_1790,-0.7799,231.071,n,,false,catalogued impact point; not image footprint
+994,ESP_060177_1865,6.209,235.245,n,,false,catalogued impact point; not image footprint
+995,ESP_060203_1850,4.756,245.668,n,,false,catalogued impact point; not image footprint
+996,ESP_060237_2125,32.249,35.057,n,,false,catalogued impact point; not image footprint
+997,ESP_060242_1745,-5.391,262.1,n,,false,catalogued impact point; not image footprint
+998,ESP_060263_1875,7.199,47.279,n,,false,catalogued impact point; not image footprint
+999,ESP_060304_2135,33.3656,4.7771,n,,false,catalogued impact point; not image footprint
+1000,ESP_060342_1315,-48.0732,58.2481,n,,false,catalogued impact point; not image footprint
+1001,ESP_060902_1775,-2.715,246.524,n,,false,catalogued impact point; not image footprint
+1002,ESP_060444_1850,5.167,146.711,n,,false,catalogued impact point; not image footprint
+1003,ESP_061104_1655,-14.433,132.7,n,,false,catalogued impact point; not image footprint
+1004,ESP_061112_1670,-12.632,273.394,n,,false,catalogued impact point; not image footprint
+1005,ESP_061200_1790,-1.166,30.775,n,,false,catalogued impact point; not image footprint
+1006,ESP_061206_1735,-6.5697,227.6905,n,,false,catalogued impact point; not image footprint
+1007,ESP_061587_1995,19.3766,263.1242,n,,false,catalogued impact point; not image footprint
+1008,ESP_061714_1730,-6.7398,39.647,n,,false,catalogued impact point; not image footprint
+1009,ESP_061574_1925,12.408,259.0553,n,,false,catalogued impact point; not image footprint
+1010,ESP_061806_1810,1.0089,47.743,n,,false,catalogued impact point; not image footprint
+1011,ESP_061812_2230,42.7907,238.0865,n,,false,catalogued impact point; not image footprint
+1012,ESP_061859_1785,-1.493,41.1851,n,,false,catalogued impact point; not image footprint
+1013,ESP_061869_1690,-11.1142,129.743,n,,false,catalogued impact point; not image footprint
+1014,ESP_061997_2275,46.936,225.592,possible,,false,catalogued impact point; not image footprint
+1015,ESP_061930_2250,44.4284,257.5299,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+1016,ESP_061935_1850,4.9261,126.2644,n,,false,catalogued impact point; not image footprint
+1017,ESP_062128_1725,-7.3569,258.2291,n,,false,catalogued impact point; not image footprint
+1018,ESP_062140_1745,-5.528,290.848,n,,false,catalogued impact point; not image footprint
+1019,ESP_063498_1980,17.94930043283,286.60830332367,n,,false,catalogued impact point; not image footprint
+1020,ESP_062370_2095,29.2409,126.4076,n,,false,catalogued impact point; not image footprint
+1021,ESP_063433_2075,27.4086,261.1571,n,,false,catalogued impact point; not image footprint
+1022,ESP_064783_1920,11.973,126.289,n,,false,catalogued impact point; not image footprint
+1023,ESP_062237_1845,4.4365,158.938,n,,false,catalogued impact point; not image footprint
+1024,ESP_062356_1855,5.2344,149.56,n,,false,catalogued impact point; not image footprint
+1025,ESP_063305_1835,3.5633,158.9144,n,,false,catalogued impact point; not image footprint
+1026,ESP_062550_2030,22.5777,252.62,n,,false,catalogued impact point; not image footprint
+1027,ESP_062571_1960,15.8614,38.929,n,,false,catalogued impact point; not image footprint
+1028,ESP_062585_2085,28.3506,15.3514,possible,,false,catalogued impact point; not image footprint
+1029,ESP_062805_1880,8.0035,131.8104,n,,false,catalogued impact point; not image footprint
+1030,ESP_062861_1845,4.5079,42.3686,n,,false,catalogued impact point; not image footprint
+1031,ESP_062984_1975,17.1098,282.1799,n,,false,catalogued impact point; not image footprint
+1032,ESP_062999_2145,34.1696,231.2663,n,,false,catalogued impact point; not image footprint
+1033,ESP_063228_2180,37.831,97.106,n,,false,catalogued impact point; not image footprint
+1034,ESP_063229_1820,1.9343,75.3391,n,,false,catalogued impact point; not image footprint
+1035,ESP_063257_1450,-34.64910449892,35.96689388193,n,,false,catalogued impact point; not image footprint
+1036,ESP_063261_1775,-2.513,282.314,n,,false,catalogued impact point; not image footprint
+1037,ESP_062214_1755,-4.405,69.459,n,,false,catalogued impact point; not image footprint
+1038,ESP_063406_2240,43.6951,275.8546,n,,false,catalogued impact point; not image footprint
+1039,ESP_062234_2080,27.766,239.385,n,,false,catalogued impact point; not image footprint
+1040,ESP_063413_2160,35.739,85.859,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+1041,ESP_063533_1975,17.075,52.449,n,,false,catalogued impact point; not image footprint
+1042,ESP_063768_2270,46.833,112.362,n,,false,catalogued impact point; not image footprint
+1043,ESP_063736_1945,14.464,270.351,n,,false,catalogued impact point; not image footprint
+1044,ESP_063817_2235,42.999,215.353,n,Dundas et al. 2021,false,catalogued impact point; not image footprint
+1045,ESP_063861_1855,5.635,99.573,n,,false,catalogued impact point; not image footprint
+1046,ESP_063930_2125,32.193,11.766,n,,false,catalogued impact point; not image footprint
+1047,ESP_063938_1855,5.319,156.883,n,,false,catalogued impact point; not image footprint
+1048,ESP_063947_1750,-4.956,272.587,n,,false,catalogued impact point; not image footprint
+1049,ESP_063964_1550,-24.8905,171.1353,n,,false,catalogued impact point; not image footprint
+1050,ESP_063979_2280,47.429,112.015,y,,false,catalogued impact point; not image footprint
+1051,ESP_057627_1860,5.9589,12.4084,n,,false,catalogued impact point; not image footprint
+1052,ESP_057917_2090,28.9711,15.4178,n,,false,catalogued impact point; not image footprint
+1053,ESP_063406_1385,-41.257,287.674,possible,Dundas et al. 2021,false,catalogued impact point; not image footprint
+1054,ESP_036657_2495,69.468,80.444,y,Dundas et al. 2021,false,catalogued impact point; not image footprint
+1055,ESP_045823_2390,58.968,58.578,y,,false,catalogued impact point; not image footprint
+1056,ESP_064717_1945,14.3059,128.9147,n,,false,catalogued impact point; not image footprint
+1057,ESP_064681_1915,11.4087,30.8703,n,,false,catalogued impact point; not image footprint
+1058,ESP_064760_1795,-0.4876,36.7734,n,,false,catalogued impact point; not image footprint
+1059,ESP_064852_1890,8.977,43.7766,n,,false,catalogued impact point; not image footprint
+1060,ESP_064642_1920,11.9955,16.5093,n,,false,catalogued impact point; not image footprint
+1061,ESP_064651_1865,6.3198,131.4562,n,,false,catalogued impact point; not image footprint
+1062,ESP_064450_2250,44.5546,212.3266,n,,false,catalogued impact point; not image footprint
+1063,ESP_064826_1900,10.0155,32.5112,n,,false,catalogued impact point; not image footprint
+1064,ESP_064488_1765,-3.3634,261.3785,n,,false,catalogued impact point; not image footprint
+1065,ESP_064497_1770,-2.867,16.1993,n,,false,catalogued impact point; not image footprint
+1066,ESP_064641_1830,2.7309,44.6085,n,,false,catalogued impact point; not image footprint
+1067,ESP_046463_2160,35.869,230.8726,n,,false,catalogued impact point; not image footprint
+1068,ESP_064646_1975,17.4671,266.6747,n,,false,catalogued impact point; not image footprint
+1069,ESP_064662_1930,13.0735,189.6645,n,,false,catalogued impact point; not image footprint
+1070,ESP_064685_1480,-31.9229,287.9421,n,,false,catalogued impact point; not image footprint
+1071,ESP_064686_2090,28.6863,251.8223,n,,false,catalogued impact point; not image footprint
+1072,ESP_064687_2045,24.2373,226.5288,n,,false,catalogued impact point; not image footprint
+1073,ESP_064694_1745,-5.3788,38.4396,n,,false,catalogued impact point; not image footprint
+1074,ESP_064721_1710,-9.1248,21.8685,n,,false,catalogued impact point; not image footprint
+1075,ESP_064728_2030,22.8924,186.875,n,,false,catalogued impact point; not image footprint
+1076,ESP_064738_1855,5.1902,276.7289,n,,false,catalogued impact point; not image footprint
+1077,ESP_064740_1760,-3.9268,223.05,n,,false,catalogued impact point; not image footprint
+1078,ESP_064747_2065,26.43,26.8358,n,,false,catalogued impact point; not image footprint
+1079,ESP_064756_2275,47.3282,138.9112,n,,false,catalogued impact point; not image footprint
+1080,ESP_064773_1900,9.8819,40.3123,n,,false,catalogued impact point; not image footprint
+1081,ESP_064833_2190,38.6715,198.4812,n,,false,catalogued impact point; not image footprint
+1082,ESP_064880_1920,12.0638,359.1007,n,,false,catalogued impact point; not image footprint
+1083,ESP_066506_1720,-8.065,261.458,n,,false,catalogued impact point; not image footprint
+1084,ESP_060062_1840,3.866,135.613,n,,false,catalogued impact point; not image footprint
+1085,ESP_066559_2085,28.421,250.431,n,,false,catalogued impact point; not image footprint
+1086,ESP_066018_1765,-3.21741,259.4148,n,,false,catalogued impact point; not image footprint
+1087,ESP_066792_1795,-0.437296622,16.46840844,n,,false,catalogued impact point; not image footprint
+1088,ESP_066480_1970,16.6122,246.3148,n,,false,catalogued impact point; not image footprint
+1089,ESP_066902_1830,2.8903,254.1615,n,,false,catalogued impact point; not image footprint
+1090,ESP_028897_1730,-6.839,277.721,n,,false,catalogued impact point; not image footprint
+1091,ESP_066598_2020,21.543,267.235,n,,false,catalogued impact point; not image footprint
+1092,ESP_067377_1750,-4.87,253.929,n,,false,catalogued impact point; not image footprint
+1093,ESP_066915_2035,23.319,257.04,n,,false,catalogued impact point; not image footprint
+1094,ESP_066916_1700,-10.094,233.146,n,,false,catalogued impact point; not image footprint
+1095,ESP_065360_1900,10.061,217.057,n,,false,catalogued impact point; not image footprint
+1096,ESP_066493_2090,28.8,251.7929,n,,false,catalogued impact point; not image footprint
+1097,ESP_065387_1805,0.519,202.266,n,,false,catalogued impact point; not image footprint
+1098,ESP_065886_1825,2.33008,261.313,n,,false,catalogued impact point; not image footprint
+1099,ESP_065908_1910,10.826,19.405,n,,false,catalogued impact point; not image footprint
+1100,ESP_065180_1880,7.66468048696,89.72671037599,n,,false,catalogued impact point; not image footprint
+1101,ESP_065189_1700,-9.953,206.012,n,,false,catalogued impact point; not image footprint
+1102,ESP_065206_1950,14.70968638921,99.80635517688,n,,false,catalogued impact point; not image footprint
+1103,ESP_065213_2020,21.783,268.039,n,,false,catalogued impact point; not image footprint
+1104,ESP_065222_2095,29.031,21.203,n,,false,catalogued impact point; not image footprint
+1105,ESP_065246_1560,-23.9938,92.73723,n,,false,catalogued impact point; not image footprint
+1106,ESP_065248_1880,8.006321,34.30942,n,,false,catalogued impact point; not image footprint
+1107,ESP_065256_1935,13.273,174.274,n,,false,catalogued impact point; not image footprint
+1108,ESP_065281_1950,15.081,211.549,n,,false,catalogued impact point; not image footprint
+1109,ESP_065324_1350,-44.6558,125.6089,n,,false,catalogued impact point; not image footprint
+1110,ESP_065327_1765,-3.331,38.389,n,,false,catalogued impact point; not image footprint
+1111,ESP_065336_1835,3.307,151.866,n,,false,catalogued impact point; not image footprint
+1112,ESP_065340_1890,8.902,41.958,n,,false,catalogued impact point; not image footprint
+1113,ESP_065341_1780,-1.849,16.858,n,,false,catalogued impact point; not image footprint
+1114,ESP_065347_1830,2.918,211.485,n,,false,catalogued impact point; not image footprint
+1115,ESP_065385_1940,13.646,252.922,n,,false,catalogued impact point; not image footprint
+1116,ESP_065464_1770,-2.859,259.977,n,,false,catalogued impact point; not image footprint
+1117,ESP_065476_1830,2.767,290.386,n,,false,catalogued impact point; not image footprint
+1118,ESP_065478_1820,1.863,236.017,n,,false,catalogued impact point; not image footprint
+1119,ESP_065490_2000,20.005,267.496,n,,false,catalogued impact point; not image footprint
+1120,ESP_065517_1930,12.762,251.467,n,,false,catalogued impact point; not image footprint
+1121,ESP_065709_1820,1.912,52.507,n,,false,catalogued impact point; not image footprint
+1122,ESP_065717_1680,-12.108,195.949,n,,false,catalogued impact point; not image footprint
+1123,ESP_065745_0980,-82.03,175.7034,n,,false,catalogued impact point; not image footprint
+1124,ESP_065746_1880,7.766,121.761,n,,false,catalogued impact point; not image footprint
+1125,ESP_065754_1820,1.91,264.158,n,,false,catalogued impact point; not image footprint
+1126,ESP_066594_1915,11.5063,17.6132,n,,false,catalogued impact point; not image footprint
+1127,ESP_065775_2000,19.625,49.01,n,,false,catalogued impact point; not image footprint
+1128,ESP_065782_1775,-2.631,219.583,n,,false,catalogued impact point; not image footprint
+1129,ESP_065843_1775,-2.718,354.863,n,,false,catalogued impact point; not image footprint
+1130,ESP_066062_1945,14.413,136.688,n,,false,catalogued impact point; not image footprint
+1131,ESP_066123_1905,10.442,271.999,n,,false,catalogued impact point; not image footprint
+1132,ESP_066136_1870,6.763,277.492,n,,false,catalogued impact point; not image footprint
+1133,ESP_066823_1840,3.997,250.529,n,,false,catalogued impact point; not image footprint
+1134,ESP_066141_1800,-0.063,142.138,n,,false,catalogued impact point; not image footprint
+1135,ESP_066176_1790,-1.073,267.031,n,,false,catalogued impact point; not image footprint
+1136,ESP_066207_1925,12.355,139.662,n,,false,catalogued impact point; not image footprint
+1137,ESP_066471_1335,-46.345,143.346,n,,false,catalogued impact point; not image footprint
+1138,ESP_066585_1805,0.6722,265.498,n,,false,catalogued impact point; not image footprint
+1139,ESP_066421_1945,14.401,58.785,n,,false,catalogued impact point; not image footprint
+1140,ESP_066429_1840,4.199,201.314,n,,false,catalogued impact point; not image footprint
+1141,ESP_066520_1855,5.5423,237.6038,n,,false,catalogued impact point; not image footprint
+1142,ESP_066527_1835,3.562,46.758,n,,false,catalogued impact point; not image footprint
+1143,ESP_066528_1890,8.971,19.611,n,,false,catalogued impact point; not image footprint
+1144,ESP_066536_1875,7.2,160.681,n,,false,catalogued impact point; not image footprint
+1145,ESP_066550_1925,12.329,138.807,n,,false,catalogued impact point; not image footprint
+1146,ESP_066551_1300,-49.76,119.701,n,,false,catalogued impact point; not image footprint
+1147,ESP_066566_2090,28.891,60.435,n,,false,catalogued impact point; not image footprint
+1148,ESP_066587_2040,23.583,206.871,n,,false,catalogued impact point; not image footprint
+1149,ESP_067051_1865,6.427,148.015,n,,false,catalogued impact point; not image footprint
+1150,ESP_066611_1760,-3.754,275.953,n,,false,catalogued impact point; not image footprint
+1151,ESP_066625_1935,13.4,251.704,n,,false,catalogued impact point; not image footprint
+1152,ESP_067259_1810,1.189,231.813,n,,false,catalogued impact point; not image footprint
+1153,ESP_066986_1920,12.005,120.487,n,,false,catalogued impact point; not image footprint
+1154,ESP_068015_1855,5.328,126.959,n,,false,catalogued impact point; not image footprint
+1155,ESP_067009_1900,10.081,213.596,n,,false,catalogued impact point; not image footprint
+1156,ESP_067443_1745,-5.2849,253.1273,n,,false,catalogued impact point; not image footprint
+1157,ESP_067035_1790,-0.88506,225.3444,n,,false,catalogued impact point; not image footprint
+1158,ESP_067173_2190,38.87262,55.21625,n,,false,catalogued impact point; not image footprint
+1159,ESP_067047_1765,-3.53083,258.1301,n,,false,catalogued impact point; not image footprint
+1160,ESP_067548_1985,18.05592,265.4384,n,,false,catalogued impact point; not image footprint
+1161,ESP_066752_1955,15.117,26.122,n,,false,catalogued impact point; not image footprint
+1162,ESP_066768_1605,-19.334,313.464,n,,false,catalogued impact point; not image footprint
+1163,ESP_066778_1800,0.218,38.489,n,,false,catalogued impact point; not image footprint
+1164,ESP_066502_2065,26.371,6.554,n,,false,catalogued impact point; not image footprint
+1165,ESP_066533_1895,9.199,242.679,n,,false,catalogued impact point; not image footprint
+1166,ESP_066612_1830,2.998,247.46,n,,false,catalogued impact point; not image footprint
+1167,ESP_066633_1770,-3.206,35.43,n,,false,catalogued impact point; not image footprint
+1168,ESP_066857_2100,29.549,39.018,n,,false,catalogued impact point; not image footprint
+1169,ESP_066883_2020,21.812,50.823,n,,false,catalogued impact point; not image footprint
+1170,ESP_066943_2280,47.602,209.036,n,,false,catalogued impact point; not image footprint
+1171,ESP_066968_1755,-4.425,254.333,n,,false,catalogued impact point; not image footprint
+1172,ESP_067007_2200,39.61419,264.8912171,n,,false,catalogued impact point; not image footprint
+1173,ESP_067073_2060,25.897,265.376,n,,false,catalogued impact point; not image footprint
+1174,ESP_067122_1920,11.89,10.056,n,,false,catalogued impact point; not image footprint
+1175,ESP_067126_1760,-4.196,262.503,n,,false,catalogued impact point; not image footprint
+1176,ESP_067306_1890,8.901,29.606,n,,false,catalogued impact point; not image footprint
+1177,ESP_067310_1830,2.746,279.816,n,,false,catalogued impact point; not image footprint
+1178,ESP_067311_1795,-0.607,254.017,n,,false,catalogued impact point; not image footprint
+1179,ESP_067245_2095,29.08,251.038,n,,false,catalogued impact point; not image footprint
+1180,ESP_067192_1905,10.618,259.547,n,,false,catalogued impact point; not image footprint
+1181,ESP_067179_1755,-4.227,256.571,n,,false,catalogued impact point; not image footprint
+1182,ESP_066773_1825,2.643,174.425,n,,false,catalogued impact point; not image footprint
+1183,ESP_067319_2070,26.814,32.515,n,,false,catalogued impact point; not image footprint
+1184,ESP_067325_1685,-11.089,233.571,n,,false,catalogued impact point; not image footprint
+1185,ESP_064701_1745,-5.584,207.627,n,,false,catalogued impact point; not image footprint
+1186,ESP_067341_1830,2.829,155.607,n,,false,catalogued impact point; not image footprint
+1187,ESP_067438_1805,0.306,28.481,n,,false,catalogued impact point; not image footprint
+1188,ESP_067469_1740,-5.811,263.488,n,,false,catalogued impact point; not image footprint
+1189,ESP_067034_2015,21.315,249.401,n,,false,catalogued impact point; not image footprint
+1190,ESP_067390_1755,-4.487,258.675,n,,false,catalogued impact point; not image footprint
+1191,ESP_067543_2045,24.292,41.51,n,,false,catalogued impact point; not image footprint
+1192,ESP_067491_1780,-1.997,23.566,n,,false,catalogued impact point; not image footprint
+1193,ESP_067556_1930,12.793,48.459,n,,false,catalogued impact point; not image footprint
+1194,ESP_067781_2105,30.369,27.372,n,,false,catalogued impact point; not image footprint
+1195,ESP_067720_1820,1.76,254.429,n,,false,catalogued impact point; not image footprint
+1196,ESP_068355_1990,18.86856135,211.5511488,n,,false,catalogued impact point; not image footprint
+1197,ESP_068287_1770,-2.92438,270.0695,n,,false,catalogued impact point; not image footprint
+1198,ESP_068824_1920,11.79085,21.48203,n,,false,catalogued impact point; not image footprint
+1199,ESP_068315_1655,-14.5268,225.9985,n,,false,catalogued impact point; not image footprint
+1200,ESP_068907_1755,-4.384541564,279.6717549,n,,false,catalogued impact point; not image footprint
+1201,ESP_068305_1855,5.52,137.757,n,,false,catalogued impact point; not image footprint
+1202,ESP_068345_1850,4.940010447,126.9608196,n,,false,catalogued impact point; not image footprint
+1203,ESP_068886_1905,10.27624,133.5209,n,,false,catalogued impact point; not image footprint
+1204,ESP_068181_1850,5.2697,278.1548,n,,false,catalogued impact point; not image footprint

@@ -1,0 +1,22 @@
+[
+  {
+    "identifier": "US_RADAR_PIXELS",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/rgram/s_0462xx/s_04624502_rgram.img",
+    "filename": "s_04624502_rgram_rows.bin",
+    "basis": "Same observation, same array dimensions; full source rows [2182, 2450] inclusive; column selection from documented planetocentric GEOM",
+    "headers": {
+      "Range": "bytes=31202600-35049299"
+    },
+    "max_bytes": 3846700
+  },
+  {
+    "identifier": "SAME_TRACK_CLUTTER",
+    "url": "https://pds-geosciences.wustl.edu/mro/urn-nasa-pds-mro_sharad_simulations/data/s_0462xx/s_04624502/s_04624502_sim.img",
+    "filename": "s_04624502_sim_combined_rows.bin",
+    "basis": "Same observation, same array dimensions; full source rows [2182, 2450] inclusive; column selection from documented planetocentric GEOM",
+    "headers": {
+      "Range": "bytes=134162600-138009299"
+    },
+    "max_bytes": 3846700
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "identifier": "CAT_CODE",
+    "url": "https://pds-geosciences.wustl.edu/missions/mro/CAT_v7_4_codeonly.zip",
+    "filename": "CAT_v7_4_codeonly.zip",
+    "basis": "Exact software-only link on official PDS CRISM page; implementation reference, not assumed MRDR producer binary"
+  },
+  {
+    "identifier": "PARAM_PDF",
+    "url": "https://pds-geosciences.wustl.edu/missions/mro/crism_summary_parameter_reference.pdf",
+    "filename": "summary_parameter_reference_202607.pdf",
+    "basis": "Official PDS parameter reference, July2026; equations pp1\u20132,5"
+  },
+  {
+    "identifier": "DAUBAR_META",
+    "url": "https://zenodo.org/api/records/6604912",
+    "filename": "daubar2022_record.json",
+    "basis": "Original author data release cited in Daubar2022 Data Availability"
+  },
+  {
+    "identifier": "DAUBAR_TABLE",
+    "url": "https://zenodo.org/records/6604912/files/Daubar_2022_catalog_tableS1.xlsx?download=1",
+    "filename": "Daubar_2022_catalog_tableS1.xlsx",
+    "basis": "Original author TableS1, provider advertised MD5 4d1b49c2e62785a1b4efb73b2040de4d"
+  },
+  {
+    "identifier": "ODE_IIPT",
+    "url": "https://oderest.rsl.wustl.edu/live2/?query=iipt&target=mars&output=json",
+    "filename": "ode_iipt.json",
+    "basis": "Official ODE instrument/product-type inventory, validate instrument/product class before local image queries"
+  },
+  {
+    "identifier": "SHARAD_PORTAL",
+    "url": "https://pds-geosciences.wustl.edu/missions/mro/sharad.htm",
+    "filename": "sharad_portal.html",
+    "basis": "Official instrument resolution, products and clutter-simulation source links"
+  }
+]

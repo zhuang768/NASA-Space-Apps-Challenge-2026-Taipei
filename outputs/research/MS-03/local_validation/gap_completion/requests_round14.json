@@ -1,0 +1,14 @@
+[
+  {
+    "identifier": "CLUTTER_GUIDE",
+    "url": "https://pds-geosciences.wustl.edu/mro/urn-nasa-pds-mro_sharad_simulations/document/userguide.pdf",
+    "filename": "clutter_userguide.pdf",
+    "basis": "Official simulation timing, topography and line-index conventions; read needed sections"
+  },
+  {
+    "identifier": "RADAR_PDS4_NOTES",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/document/rgram_pds4_notes.pdf",
+    "filename": "rgram_pds4_notes.pdf",
+    "basis": "Official coordinate fixes and radargram geometry definitions"
+  }
+]

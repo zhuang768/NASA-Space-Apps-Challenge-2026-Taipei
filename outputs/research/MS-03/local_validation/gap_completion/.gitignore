@@ -1,0 +1,8 @@
+sources/*.zip
+sources/*.pdf
+sources/*.html
+sources/CAT/
+__pycache__/
+.mplconfig/
+sources/*.img
+sources/*.imq

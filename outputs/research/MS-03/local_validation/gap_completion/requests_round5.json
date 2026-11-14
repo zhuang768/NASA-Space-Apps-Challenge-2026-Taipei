@@ -1,0 +1,26 @@
+[
+  {
+    "identifier": "MOC_RDR_SUBDIR",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mgs/moc/rdr/mgscim_1548/s17006/",
+    "filename": "moc_rdr_subdir.html",
+    "basis": "Actual s17006 directory in official RDR volume; seek matching processed image with geometry"
+  },
+  {
+    "identifier": "RADAR_US_TRACK_DIR",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/rgram/s_0176xx/",
+    "filename": "sharad_us_track_directory.html",
+    "basis": "Exact grouped orbit directory in official radargram listing"
+  },
+  {
+    "identifier": "RADAR_EDR_US_MAP",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/document/edr_to_usrdr.csv",
+    "filename": "edr_to_usrdr.csv",
+    "basis": "Official correspondence table; never assume Italian RDR IDs equal US radargram IDs"
+  },
+  {
+    "identifier": "RADAR_PROCESSING",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/document/rgram_processing.htm",
+    "filename": "rgram_processing.html",
+    "basis": "Official radargram processing, sampling and range-resolution description"
+  }
+]

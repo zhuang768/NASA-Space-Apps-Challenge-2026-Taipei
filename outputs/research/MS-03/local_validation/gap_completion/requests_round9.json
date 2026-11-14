@@ -1,0 +1,38 @@
+[
+  {
+    "identifier": "RADAR_geom.lbl",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/geom/s_0079xx/s_00796502_geom.lbl",
+    "filename": "s_00796502_geom.lbl",
+    "basis": "Exact same-observation geom; latitude convention must be verified"
+  },
+  {
+    "identifier": "RADAR_geom.tab",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/geom/s_0079xx/s_00796502_geom.tab",
+    "filename": "s_00796502_geom.tab",
+    "basis": "Exact same-observation geom; latitude convention must be verified"
+  },
+  {
+    "identifier": "RADAR_geom.xml",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/geom/s_0079xx/s_00796502_geom.xml",
+    "filename": "s_00796502_geom.xml",
+    "basis": "Exact same-observation geom; latitude convention must be verified"
+  },
+  {
+    "identifier": "CLUTTER_RETURNS",
+    "url": "https://pds-geosciences.wustl.edu/mro/urn-nasa-pds-mro_sharad_simulations/data/s_0079xx/s_00796502/s_00796502_rtrn.csv",
+    "filename": "s_00796502_rtrn.csv",
+    "basis": "Exact same-observation clutter return coordinates and range-line reference"
+  },
+  {
+    "identifier": "MOC_DSMAP",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mgs/moc/rdr/mgscim_1548/catalog/DSMAP.CAT",
+    "filename": "DSMAP.CAT",
+    "basis": "Actual uppercase projection definition linked by image label"
+  },
+  {
+    "identifier": "HIRISE_COORD_CHECK",
+    "url": "https://www.uahirise.org/PSP_007561_1290",
+    "filename": "PSP_007561_1290.html",
+    "basis": "Independent coordinate anchor for catalogue header unit-label issue"
+  }
+]

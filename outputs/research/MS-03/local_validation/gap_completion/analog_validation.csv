@@ -1,0 +1,3 @@
+﻿earth_id,site,disposition,new_support,comparison,shared_genesis_or_ice,restriction,source_ids
+MS-03-E02,Adventdalen AD1,general_method_reference_only,actual MOC strip and three fixed review tiles; still no reliable Mars closed boundaries,"not performed; unknown, not0",unknown,No AD1 number copied into Mars; new image pixels do not automatically restore specific pairing,GAP-S04;GAP-S05;GAP-S06
+MS-03-E01,University Valley W,known_interface_and_quality_reference_only,no new Earth raw timing files acquired,Campbell–HOBO join disabled,not inferred for Mars,No Earth depth or temperature used to invert MS-03 depth; four-hour offset cause unresolved,Existing MS-03 timing handoff

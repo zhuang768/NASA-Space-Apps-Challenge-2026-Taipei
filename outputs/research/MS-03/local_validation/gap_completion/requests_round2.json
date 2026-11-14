@@ -1,0 +1,14 @@
+[
+  {
+    "identifier": "MOC_NASDP",
+    "url": "https://oderest.rsl.wustl.edu/live2/?target=mars&ihid=MGS&iid=MOC-NA%2FWA&pt=NASDP&query=product&results=mf&output=json&westernlon=242&easternlon=242.5&minlat=57.5&maxlat=58&limit=1000",
+    "filename": "moc_NASDP.json",
+    "basis": "Product class and instrument verified from official IIPT; fixed-cell footprint query"
+  },
+  {
+    "identifier": "MOC_NADSDP",
+    "url": "https://oderest.rsl.wustl.edu/live2/?target=mars&ihid=MGS&iid=MOC-NA%2FWA&pt=NADSDP&query=product&results=mf&output=json&westernlon=242&easternlon=242.5&minlat=57.5&maxlat=58&limit=1000",
+    "filename": "moc_NADSDP.json",
+    "basis": "Product class and instrument verified from official IIPT; fixed-cell footprint query"
+  }
+]

@@ -1,0 +1,143 @@
+PDS_VERSION_ID                 = PDS3
+
+/*          FILE FORMAT AND LENGTH */
+
+RECORD_TYPE                    = FIXED_LENGTH
+RECORD_BYTES                   = 2728  
+FILE_RECORDS                   = 10568 
+LABEL_RECORDS                  = 3     
+INTERCHANGE_FORMAT             = BINARY
+
+/*          POINTERS TO START RECORDS OF OBJECTS IN FILE */
+
+^IMAGE_HEADER                  = ("s1700607_na.img")
+^IMAGE                         = ("s1700607_na.img", 4)
+
+/*          IMAGE DESCRIPTION */
+
+DATA_SET_ID                    = "MGS-M-MOC-NA/WA-4-RDR-L1B-V1.0"
+PRODUCT_ID                     = "S1700607_NA"       
+PRODUCER_INSTITUTION_NAME      = "MALIN SPACE SCIENCE SYSTEMS"
+PRODUCT_TYPE                   = "MAP"
+MISSION_NAME                   = "MARS GLOBAL SURVEYOR"
+SPACECRAFT_NAME                = "MARS GLOBAL SURVEYOR"
+INSTRUMENT_NAME                = "MARS ORBITER CAMERA"
+INSTRUMENT_ID                  = "MOC-NA"
+TARGET_NAME                    = "MARS"
+START_TIME                     = 2006-04-08T00:22:40.473
+STOP_TIME                      = 2006-04-08T00:22:50.285
+SPACECRAFT_CLOCK_START_COUNT   = "0828923018.121"
+SPACECRAFT_CLOCK_STOP_COUNT    = "N/A"
+ORBIT_NUMBER                   = 31646
+PRODUCT_CREATION_TIME          = 2008-02-27T00:00:00           
+DATA_QUALITY_DESC              = "MGS:DATA_QUALITY_ID is a 10-digit
+number no less than 1 billion.  If the digits are 1abcdefghi, then
+  a = 0 if there was complete C-kernel coverage for this image;
+      a = 1 if the image was mapped using partital C-kernel coverage;
+      a = 2 if the image with mapped without using any C-kernel.
+      Nadir (adjusted for expected pitch angle) is used for pointing
+      when there is no C-kernel coverage.
+  b = 1 if the scale factor for converting from absolute DN was
+      greater than one, indicating an unexpectedly short image value
+      range; otherwise b = 0.
+  c = 0 if no errors were observed during the extraction from MSDP
+      phase for this image; if problems were observed, and automatic
+      repair was attempted c = 1; otherwise c = 2 and no further
+      quality analysis was performed.
+The remainder of the digits are non-zero only if automatic repair
+was attempted.
+  d = the number of stretches of missing MSDP fragments, e.g., if
+      fragments 0-7 were expected, but only fragments 0/1/4/6/7 were
+      present, then d = 2.
+  e = the number of data gaps after repair, including both leading
+      and trailing gaps, if any; if there are more than 9 data gaps,
+      e = 9.
+  f = percent of missing data after repair, divided by 10 and
+      rounded to the nearest integer between 0 and 9.
+  g = length of the largest gap, measured in percent, divided by 10
+      and rounded to the nearest integer between 0 and 9.
+  h = length of the longest contiguous stretch of non-missing
+      image data, divided by 10 and rounded to the nearest integer
+      between 0 and 9.
+  i = 0 if there is reasonable confidence that the repair was
+      successful, and that the correct number of missing data were
+      placed before or after each data gap; i = 1 if there is little
+      or no such confidence.
+"
+MGS:DATA_QUALITY_ID                = "1000000000"
+NOTE                           = "Observation notes:
+NORTH MID-LATITUDE TERRAIN 
+Processing notes:
+Raw camera COUNT was converted to absolute DN by
+    DN = ((COUNT - Z + OFFSET)/GAIN - G - DC*EX)/EX
+    where Z = 25.576700
+     OFFSET = 220
+       GAIN = 46.740000
+          G = 0.381963
+         DC = 0.000000
+         EX = 1.446300
+Absolute DN was destriped, and was scaled to an unsigned 16-bit
+value by
+    VAL16 = 2000*DN + 10000
+The 16-bit value was scaled to an unsigned 8-bit value in the
+range [1,255] by
+    VAL8 = 0.226786*(VAL16 + -18078.000000) + 1.000000
+The scaling factors for this last step were calculated to attain
+good contrast while preserving the significant portion of the
+image histogram.
+"
+
+/*          DESCRIPTION OF OBJECTS CONTAINED IN FILE */
+
+OBJECT                         = IMAGE
+BANDS                        = 1
+BAND_STORAGE_TYPE            = BAND_SEQUENTIAL
+BAND_NAME                    = "N/A"
+LINES                        = 10565
+LINE_SAMPLES                 = 2728
+SAMPLE_TYPE                  = UNSIGNED_INTEGER
+SAMPLE_BITS                  = 8
+SAMPLE_BIT_MASK              = 2#11111111#
+MINIMUM                      = 0  
+MAXIMUM                      = 255
+CHECKSUM                     = 1590142434  
+END_OBJECT                     = IMAGE
+
+OBJECT                         = IMAGE_MAP_PROJECTION
+^DATA_SET_MAP_PROJECTION     = "DSMAP.CAT"
+COORDINATE_SYSTEM_TYPE       = "BODY-FIXED ROTATING"
+COORDINATE_SYSTEM_NAME       = "PLANETOCENTRIC"
+POSITIVE_LONGITUDE_DIRECTION = "EAST"
+A_AXIS_RADIUS                = 3396.1900000 <km>
+B_AXIS_RADIUS                = 3396.1900000 <km>
+C_AXIS_RADIUS                = 3396.1900000 <km>
+MAP_PROJECTION_TYPE          = "POLAR STEREOGRAPHIC"
+MAP_RESOLUTION               = 19755.9970319 <pixel/degree>
+MAP_SCALE                    = 0.003000339463 <km/pixel>
+CENTER_LATITUDE              = 90.0000000 <degree>
+CENTER_LONGITUDE             = 242.0000000 <degree>
+REFERENCE_LATITUDE           = "N/A"
+REFERENCE_LONGITUDE          = "N/A"
+FIRST_STANDARD_PARALLEL      = "N/A"
+SECOND_STANDARD_PARALLEL     = "N/A"
+LINE_FIRST_PIXEL             = 1
+SAMPLE_FIRST_PIXEL           = 1
+LINE_LAST_PIXEL              = 10565
+SAMPLE_LAST_PIXEL            = 2728
+LINE_PROJECTION_OFFSET       = -646450.0000000
+SAMPLE_PROJECTION_OFFSET     = -2906.0000000
+MAXIMUM_LATITUDE             = 58.1262250 <degree>
+MINIMUM_LATITUDE             = 57.6316049 <degree>
+EASTERNMOST_LONGITUDE        = 242.4992481 <degree>
+WESTERNMOST_LONGITUDE        = 242.2534199 <degree>
+MAP_PROJECTION_ROTATION      = 0.0000000
+END_OBJECT                     = IMAGE_MAP_PROJECTION
+
+OBJECT                            = IMAGE_HEADER
+  BYTES                           = 8184
+  HEADER_TYPE                     = ODL
+  INTERCHANGE_FORMAT              = ASCII
+END_OBJECT                        = IMAGE_HEADER
+
+END
+

@@ -1,0 +1,38 @@
+[
+  {
+    "identifier": "US_46245_LABEL",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/rgram/s_0462xx/s_04624502_rgram.lbl",
+    "filename": "s_04624502_rgram.lbl",
+    "basis": "Exact mapped observation with65 strict in-cell planetocentric centres"
+  },
+  {
+    "identifier": "US_46245_GEOM_LABEL",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/geom/s_0462xx/s_04624502_geom.lbl",
+    "filename": "s_04624502_geom.lbl",
+    "basis": "Original geometry definition"
+  },
+  {
+    "identifier": "CLUTTER_46245_sim.xml",
+    "url": "https://pds-geosciences.wustl.edu/mro/urn-nasa-pds-mro_sharad_simulations/data/s_0462xx/s_04624502/s_04624502_sim.xml",
+    "filename": "s_04624502_sim.xml",
+    "basis": "Exact same-observation clutter; existence and grid must be verified"
+  },
+  {
+    "identifier": "CLUTTER_46245_rtrn.csv",
+    "url": "https://pds-geosciences.wustl.edu/mro/urn-nasa-pds-mro_sharad_simulations/data/s_0462xx/s_04624502/s_04624502_rtrn.csv",
+    "filename": "s_04624502_rtrn.csv",
+    "basis": "Exact same-observation clutter; existence and grid must be verified"
+  },
+  {
+    "identifier": "SCIENCEBASE_API_ALTERNATE",
+    "url": "https://api.sciencebase.gov/catalog/item/5f99f0b8d34e198cb786e8e7?format=json",
+    "filename": "dundas_api_alternate.json",
+    "basis": "Alternate official API hostname; seek actual TableS4 file rather than metadata-only proxy"
+  },
+  {
+    "identifier": "TEXAS_NATIVE_API",
+    "url": "https://dataverse.tdl.org/api/datasets/:persistentId/?persistentId=doi:10.18738/T8/DUCOYB",
+    "filename": "cohen_tdl_native_api.json",
+    "basis": "Official TDL Dataverse network alternate entrance; identity must match DOI before any use"
+  }
+]

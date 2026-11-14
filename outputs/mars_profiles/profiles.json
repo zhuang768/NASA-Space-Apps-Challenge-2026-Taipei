@@ -1,0 +1,754 @@
+{
+  "profiles": {
+    "jezero": {
+      "lat": 18.44,
+      "lon": 77.45,
+      "label": "Jezero regional terrain",
+      "coordinate_source": "https://ntrs.nasa.gov/citations/20230016428",
+      "body": "Mars",
+      "window_km": 100.0,
+      "terrain": {
+        "status": "available",
+        "slope_median_deg": 1.2190496921539307,
+        "slope_p90_deg": 3.0056519508361816,
+        "relief_m": 2198.345703125,
+        "sample_spacing_km": 4.0,
+        "slope_stencil_km": 8.0,
+        "radius_m": 3396000.0
+      },
+      "thermal_inertia": {
+        "native_cells_in_window": 1224,
+        "valid_native_cells": 1207,
+        "valid_fraction": 0.9861111111111112,
+        "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+        "status": "available",
+        "mean": 323.9213528617894,
+        "median": 324.0,
+        "min": 184.0,
+        "max": 529.0,
+        "units": "J m-2 K-1 s-0.5",
+        "infilled_pixels_excluded": true,
+        "is_temperature": false,
+        "is_hardness_measurement": false,
+        "with_infilled_pixels": {
+          "native_cells_in_window": 1224,
+          "valid_native_cells": 1224,
+          "valid_fraction": 1.0,
+          "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+          "status": "available",
+          "mean": 323.89802814845007,
+          "median": 324.0,
+          "min": 184.0,
+          "max": 529.0
+        }
+      },
+      "ice": {
+        "0_1m": {
+          "native_cells_in_window": 1223,
+          "valid_native_cells": 1223,
+          "valid_fraction": 1.0,
+          "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+          "status": "available",
+          "mean": -0.27758377623066344,
+          "median": -0.2772727310657501,
+          "min": -0.38363632559776306,
+          "max": -0.15909087657928467,
+          "units": "1",
+          "quantity": "SWIM ice consistency",
+          "is_ice_amount": false,
+          "is_probability": false,
+          "source_crs": "ESRI:103885"
+        },
+        "1_5m": {
+          "native_cells_in_window": 1223,
+          "valid_native_cells": 1223,
+          "valid_fraction": 1.0,
+          "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+          "status": "available",
+          "mean": -0.016399130043763234,
+          "median": 0.0,
+          "min": -0.5,
+          "max": 0.5,
+          "units": "1",
+          "quantity": "SWIM ice consistency",
+          "is_ice_amount": false,
+          "is_probability": false,
+          "source_crs": "ESRI:103885"
+        }
+      },
+      "dust": {
+        "dust_my34": {
+          "status": "available",
+          "mean_cdodtot": 0.3153404241876039,
+          "p95_cdodtot": 1.1090482234954835,
+          "max_cdodtot": 1.6763628721237183,
+          "peak_sol_of_year": 428.0,
+          "peak_Ls_deg": 213.7085418701172,
+          "valid_reconstructed_sols": 669,
+          "expected_reconstructed_sols": 669,
+          "units": "1",
+          "wavelength_micron": 9.3,
+          "optical_quantity": "absorption, local total column",
+          "native_cell_lat": 19.5,
+          "native_cell_lon": 78.0,
+          "native_grid_degrees": [
+            3,
+            3
+          ],
+          "reconstructed": true,
+          "reliability_interpretation": "cdodrel is provider reliability, not a calibrated probability",
+          "seasons_by_Ls": {
+            "0_90": {
+              "valid_sols": 193,
+              "mean_cdodtot": 0.1321042804674781
+            },
+            "90_180": {
+              "valid_sols": 179,
+              "mean_cdodtot": 0.11288626745925935
+            },
+            "180_270": {
+              "valid_sols": 143,
+              "mean_cdodtot": 0.7838624911708432
+            },
+            "270_360": {
+              "valid_sols": 154,
+              "mean_cdodtot": 0.3452444125886087
+            }
+          },
+          "reliability_mean": 0.7583771484760604
+        },
+        "dust_my35": {
+          "status": "available",
+          "mean_cdodtot": 0.19197293520196493,
+          "p95_cdodtot": 0.39298362731933595,
+          "max_cdodtot": 0.5225109457969666,
+          "peak_sol_of_year": 460.0,
+          "peak_Ls_deg": 233.7890625,
+          "valid_reconstructed_sols": 669,
+          "expected_reconstructed_sols": 669,
+          "units": "1",
+          "wavelength_micron": 9.3,
+          "optical_quantity": "absorption, local total column",
+          "native_cell_lat": 19.5,
+          "native_cell_lon": 78.0,
+          "native_grid_degrees": [
+            3,
+            3
+          ],
+          "reconstructed": true,
+          "reliability_interpretation": "cdodrel is provider reliability, not a calibrated probability",
+          "seasons_by_Ls": {
+            "0_90": {
+              "valid_sols": 193,
+              "mean_cdodtot": 0.1391793939579336
+            },
+            "90_180": {
+              "valid_sols": 178,
+              "mean_cdodtot": 0.11412443819173267
+            },
+            "180_270": {
+              "valid_sols": 143,
+              "mean_cdodtot": 0.28873634765614997
+            },
+            "270_360": {
+              "valid_sols": 155,
+              "mean_cdodtot": 0.2578375671179064
+            }
+          },
+          "reliability_mean": 0.8101320809758475
+        }
+      },
+      "surface_temperature": {
+        "status": "missing",
+        "reason": "TES thermal inertia is not temperature"
+      }
+    },
+    "gale": {
+      "lat": -4.59,
+      "lon": 137.44,
+      "label": "Gale regional terrain",
+      "coordinate_source": "https://doi.org/10.1002/2013JE004576",
+      "body": "Mars",
+      "window_km": 100.0,
+      "terrain": {
+        "status": "available",
+        "slope_median_deg": 3.912266731262207,
+        "slope_p90_deg": 10.439507484436035,
+        "relief_m": 4887.02880859375,
+        "sample_spacing_km": 4.0,
+        "slope_stencil_km": 8.0,
+        "radius_m": 3396000.0
+      },
+      "thermal_inertia": {
+        "native_cells_in_window": 1156,
+        "valid_native_cells": 1130,
+        "valid_fraction": 0.9775086505190311,
+        "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+        "status": "available",
+        "mean": 275.76331989382663,
+        "median": 268.0,
+        "min": 93.0,
+        "max": 511.0,
+        "units": "J m-2 K-1 s-0.5",
+        "infilled_pixels_excluded": true,
+        "is_temperature": false,
+        "is_hardness_measurement": false,
+        "with_infilled_pixels": {
+          "native_cells_in_window": 1156,
+          "valid_native_cells": 1156,
+          "valid_fraction": 1.0,
+          "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+          "status": "available",
+          "mean": 276.43040075706375,
+          "median": 269.5,
+          "min": 93.0,
+          "max": 511.0
+        }
+      },
+      "ice": {
+        "0_1m": {
+          "native_cells_in_window": 1123,
+          "valid_native_cells": 1123,
+          "valid_fraction": 1.0,
+          "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+          "status": "available",
+          "mean": 0.0812912580753809,
+          "median": 0.08030303567647934,
+          "min": -0.013939392752945423,
+          "max": 0.21000000834465027,
+          "units": "1",
+          "quantity": "SWIM ice consistency",
+          "is_ice_amount": false,
+          "is_probability": false,
+          "source_crs": "ESRI:103885"
+        },
+        "1_5m": {
+          "native_cells_in_window": 1123,
+          "valid_native_cells": 1123,
+          "valid_fraction": 1.0,
+          "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+          "status": "available",
+          "mean": -0.034740979861757025,
+          "median": 0.0,
+          "min": -0.5,
+          "max": 0.5,
+          "units": "1",
+          "quantity": "SWIM ice consistency",
+          "is_ice_amount": false,
+          "is_probability": false,
+          "source_crs": "ESRI:103885"
+        }
+      },
+      "dust": {
+        "dust_my34": {
+          "status": "available",
+          "mean_cdodtot": 0.29711678287819004,
+          "p95_cdodtot": 1.248078274726868,
+          "max_cdodtot": 2.570432186126709,
+          "peak_sol_of_year": 412.0,
+          "peak_Ls_deg": 203.7306365966797,
+          "valid_reconstructed_sols": 669,
+          "expected_reconstructed_sols": 669,
+          "units": "1",
+          "wavelength_micron": 9.3,
+          "optical_quantity": "absorption, local total column",
+          "native_cell_lat": -4.5,
+          "native_cell_lon": 138.0,
+          "native_grid_degrees": [
+            3,
+            3
+          ],
+          "reconstructed": true,
+          "reliability_interpretation": "cdodrel is provider reliability, not a calibrated probability",
+          "seasons_by_Ls": {
+            "0_90": {
+              "valid_sols": 193,
+              "mean_cdodtot": 0.10987354672171291
+            },
+            "90_180": {
+              "valid_sols": 179,
+              "mean_cdodtot": 0.09693286093420156
+            },
+            "180_270": {
+              "valid_sols": 143,
+              "mean_cdodtot": 0.8291908395248693
+            },
+            "270_360": {
+              "valid_sols": 154,
+              "mean_cdodtot": 0.2703913056424686
+            }
+          },
+          "reliability_mean": 0.6452287491216075
+        },
+        "dust_my35": {
+          "status": "available",
+          "mean_cdodtot": 0.17004218651886657,
+          "p95_cdodtot": 0.3627366244792939,
+          "max_cdodtot": 0.5622824430465698,
+          "peak_sol_of_year": 462.0,
+          "peak_Ls_deg": 235.08444213867188,
+          "valid_reconstructed_sols": 669,
+          "expected_reconstructed_sols": 669,
+          "units": "1",
+          "wavelength_micron": 9.3,
+          "optical_quantity": "absorption, local total column",
+          "native_cell_lat": -4.5,
+          "native_cell_lon": 138.0,
+          "native_grid_degrees": [
+            3,
+            3
+          ],
+          "reconstructed": true,
+          "reliability_interpretation": "cdodrel is provider reliability, not a calibrated probability",
+          "seasons_by_Ls": {
+            "0_90": {
+              "valid_sols": 193,
+              "mean_cdodtot": 0.1121492307112007
+            },
+            "90_180": {
+              "valid_sols": 178,
+              "mean_cdodtot": 0.0983756755091501
+            },
+            "180_270": {
+              "valid_sols": 143,
+              "mean_cdodtot": 0.279290799390186
+            },
+            "270_360": {
+              "valid_sols": 155,
+              "mean_cdodtot": 0.2236384948415141
+            }
+          },
+          "reliability_mean": 0.7302747176367071
+        }
+      },
+      "surface_temperature": {
+        "status": "missing",
+        "reason": "TES thermal inertia is not temperature"
+      }
+    },
+    "arcadia": {
+      "lat": 40.0,
+      "lon": -170.0,
+      "label": "Arcadia design target (not a selected landing site)",
+      "coordinate_source": "project design assumption",
+      "body": "Mars",
+      "window_km": 100.0,
+      "terrain": {
+        "status": "available",
+        "slope_median_deg": 0.7656119465827942,
+        "slope_p90_deg": 2.2971580028533936,
+        "relief_m": 927.235595703125,
+        "sample_spacing_km": 4.0,
+        "slope_stencil_km": 8.0,
+        "radius_m": 3396000.0
+      },
+      "thermal_inertia": {
+        "native_cells_in_window": 1496,
+        "valid_native_cells": 1412,
+        "valid_fraction": 0.9438502673796791,
+        "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+        "status": "available",
+        "mean": 138.72331209114742,
+        "median": 135.5,
+        "min": 74.0,
+        "max": 247.0,
+        "units": "J m-2 K-1 s-0.5",
+        "infilled_pixels_excluded": true,
+        "is_temperature": false,
+        "is_hardness_measurement": false,
+        "with_infilled_pixels": {
+          "native_cells_in_window": 1496,
+          "valid_native_cells": 1496,
+          "valid_fraction": 1.0,
+          "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+          "status": "available",
+          "mean": 138.49922142305675,
+          "median": 135.0,
+          "min": 74.0,
+          "max": 247.0
+        }
+      },
+      "ice": {
+        "0_1m": {
+          "native_cells_in_window": 1499,
+          "valid_native_cells": 1499,
+          "valid_fraction": 1.0,
+          "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+          "status": "available",
+          "mean": 0.1144841234494878,
+          "median": 0.0981818288564682,
+          "min": -0.07181818038225174,
+          "max": 0.3406045436859131,
+          "units": "1",
+          "quantity": "SWIM ice consistency",
+          "is_ice_amount": false,
+          "is_probability": false,
+          "source_crs": "ESRI:103885"
+        },
+        "1_5m": {
+          "native_cells_in_window": 1499,
+          "valid_native_cells": 1499,
+          "valid_fraction": 1.0,
+          "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+          "status": "available",
+          "mean": 0.5404835121500825,
+          "median": 0.5,
+          "min": -0.3499999940395355,
+          "max": 1.0,
+          "units": "1",
+          "quantity": "SWIM ice consistency",
+          "is_ice_amount": false,
+          "is_probability": false,
+          "source_crs": "ESRI:103885"
+        }
+      },
+      "dust": {
+        "dust_my34": {
+          "status": "available",
+          "mean_cdodtot": 0.21942003992329084,
+          "p95_cdodtot": 0.6417047500610351,
+          "max_cdodtot": 0.9173557758331299,
+          "peak_sol_of_year": 604.0,
+          "peak_Ls_deg": 324.6576232910156,
+          "valid_reconstructed_sols": 669,
+          "expected_reconstructed_sols": 669,
+          "units": "1",
+          "wavelength_micron": 9.3,
+          "optical_quantity": "absorption, local total column",
+          "native_cell_lat": 40.5,
+          "native_cell_lon": -171.0,
+          "native_grid_degrees": [
+            3,
+            3
+          ],
+          "reconstructed": true,
+          "reliability_interpretation": "cdodrel is provider reliability, not a calibrated probability",
+          "seasons_by_Ls": {
+            "0_90": {
+              "valid_sols": 193,
+              "mean_cdodtot": 0.14349435601827396
+            },
+            "90_180": {
+              "valid_sols": 179,
+              "mean_cdodtot": 0.10852525254201623
+            },
+            "180_270": {
+              "valid_sols": 143,
+              "mean_cdodtot": 0.44891085814345966
+            },
+            "270_360": {
+              "valid_sols": 154,
+              "mean_cdodtot": 0.23037222777674723
+            }
+          },
+          "reliability_mean": 0.8726308399697233
+        },
+        "dust_my35": {
+          "status": "available",
+          "mean_cdodtot": 0.16044503235451665,
+          "p95_cdodtot": 0.3201657593250276,
+          "max_cdodtot": 0.5092847347259521,
+          "peak_sol_of_year": 600.0,
+          "peak_Ls_deg": 322.0048522949219,
+          "valid_reconstructed_sols": 669,
+          "expected_reconstructed_sols": 669,
+          "units": "1",
+          "wavelength_micron": 9.3,
+          "optical_quantity": "absorption, local total column",
+          "native_cell_lat": 40.5,
+          "native_cell_lon": -171.0,
+          "native_grid_degrees": [
+            3,
+            3
+          ],
+          "reconstructed": true,
+          "reliability_interpretation": "cdodrel is provider reliability, not a calibrated probability",
+          "seasons_by_Ls": {
+            "0_90": {
+              "valid_sols": 193,
+              "mean_cdodtot": 0.14682887814977627
+            },
+            "90_180": {
+              "valid_sols": 178,
+              "mean_cdodtot": 0.11052303644043676
+            },
+            "180_270": {
+              "valid_sols": 143,
+              "mean_cdodtot": 0.20616209731026963
+            },
+            "270_360": {
+              "valid_sols": 155,
+              "mean_cdodtot": 0.1925514371645066
+            }
+          },
+          "reliability_mean": 0.8877441347625402
+        }
+      },
+      "surface_temperature": {
+        "status": "missing",
+        "reason": "TES thermal inertia is not temperature"
+      }
+    }
+  },
+  "inventory": {
+    "terrain": {
+      "status": "loaded",
+      "shape": [
+        2880,
+        5760
+      ]
+    },
+    "thermal_inertia": {
+      "status": "loaded",
+      "shape": [
+        3600,
+        7200
+      ]
+    },
+    "thermal_inertia_infilled": {
+      "status": "loaded",
+      "shape": [
+        3600,
+        7200
+      ]
+    },
+    "ice_shallow": {
+      "status": "loaded",
+      "shape": [
+        2400,
+        7200
+      ]
+    },
+    "ice_deep": {
+      "status": "loaded",
+      "shape": [
+        2400,
+        7200
+      ]
+    },
+    "dust_my34": {
+      "status": "loaded",
+      "native_grid": [
+        60,
+        120
+      ],
+      "reconstructed_sols": 669
+    },
+    "dust_my35": {
+      "status": "loaded",
+      "native_grid": [
+        60,
+        120
+      ],
+      "reconstructed_sols": 669
+    }
+  },
+  "errors": {},
+  "analysis_type": "Mars target descriptors, not Earth analog ranking",
+  "schema_version": "1.0",
+  "body": "Mars",
+  "longitude_convention": "east-positive [-180,180)",
+  "missing_requirements": [
+    "Comparable Mars surface day/night temperature and temporal definition",
+    "Mission-specific material, mineral and operational thresholds",
+    "Site-level ground validation and finer terrain where needed"
+  ],
+  "earth_team_handoff": [
+    "Match terrain at the declared physical scale.",
+    "Keep MODIS LST distinct from TES thermal inertia.",
+    "Keep Earth precipitation/moisture/permafrost distinct from SWIM ice consistency.",
+    "Keep 550 nm extinction AOT distinct from 9.3 micron Mars absorption CDOD."
+  ],
+  "sources": [
+    {
+      "file": "megt90n000eb.lbl",
+      "url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg016/megt90n000eb.lbl",
+      "bytes": 4813,
+      "sha256": "0f2bd919dddb86d83489a008d3007bd915507c892a0f22ce49ad5dd5d2fc7d8a",
+      "recorded_utc": "2026-11-14T02:31:23.446295+00:00",
+      "product": "mola_topography_label",
+      "status": "available"
+    },
+    {
+      "file": "megt90n000eb.img",
+      "url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg016/megt90n000eb.img",
+      "bytes": 33177600,
+      "sha256": "d18d9b9ab8c5516d02e157dd2cde0f1d0d160c21940e953ba22391269a545e7b",
+      "recorded_utc": "2026-11-14T02:31:23.457857+00:00",
+      "product": "mola_topography",
+      "status": "available",
+      "body": "Mars",
+      "dataset_id": "MGS-M-MOLA-5-MEGDR-L3-V1.0",
+      "observation_start": "1997-09-15T19:10:00.000",
+      "observation_end": "2001-06-30T11:10:40.000",
+      "creation_date": "2003-04-03T01:00:00",
+      "map_resolution_px_per_degree": 16.0,
+      "map_radius_m": 3396000.0,
+      "coordinate_system": "PLANETOCENTRIC",
+      "map_projection": "SIMPLE CYLINDRICAL",
+      "longitude_direction": "EAST",
+      "units": "m above areoid"
+    },
+    {
+      "file": "global_ti_night_2007.lbl",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_night_2007.lbl",
+      "bytes": 2415,
+      "sha256": "c1c897d9bd5399292166f99d84a29a73e42432cedfb9dd9a81a1441b3004b72b",
+      "recorded_utc": "2026-11-14T02:31:23.458039+00:00",
+      "product": "tes_thermal_inertia_night_label",
+      "status": "available"
+    },
+    {
+      "file": "global_ti_night_2007.img",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_night_2007.img",
+      "bytes": 51840000,
+      "sha256": "faee32838da40045ee7ebd21bed156cc649620312c01165b556d77a2128258f4",
+      "recorded_utc": "2026-11-14T02:31:23.475928+00:00",
+      "product": "tes_thermal_inertia_night",
+      "status": "available",
+      "body": "Mars",
+      "dataset_id": "MGS-M-TES-5-TIMAP-V1.0",
+      "observation_start": "N/A",
+      "observation_end": "N/A",
+      "creation_date": "2007-01-30",
+      "map_resolution_px_per_degree": 20.0,
+      "map_radius_m": 3396000.0,
+      "coordinate_system": "PLANETOCENTRIC",
+      "map_projection": "SIMPLE CYLINDRICAL",
+      "longitude_direction": "EAST",
+      "units": "J m-2 K-1 s-0.5"
+    },
+    {
+      "file": "global_ti_msk_night_2007.lbl",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_msk_night_2007.lbl",
+      "bytes": 2485,
+      "sha256": "164838970c1405b2dc6cf367a74c60c0de96d18f05f5e924db6c00f77038ee8a",
+      "recorded_utc": "2026-11-14T02:31:23.476107+00:00",
+      "product": "tes_thermal_inertia_night_mask_label",
+      "status": "available"
+    },
+    {
+      "file": "global_ti_msk_night_2007.img",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_msk_night_2007.img",
+      "bytes": 25920000,
+      "sha256": "fca7ec6fab8b3e81226e1d14dbb3a22509ad111bda4e03bf2b64f050bd550d0b",
+      "recorded_utc": "2026-11-14T02:31:23.485693+00:00",
+      "product": "tes_thermal_inertia_night_mask",
+      "status": "available",
+      "body": "Mars",
+      "dataset_id": "MGS-M-TES-5-TIMAP-V1.0",
+      "observation_start": "N/A",
+      "observation_end": "N/A",
+      "creation_date": "2007-01-30",
+      "map_resolution_px_per_degree": 20.0,
+      "map_radius_m": 3396000.0,
+      "coordinate_system": "PLANETOCENTRIC",
+      "map_projection": "SIMPLE CYLINDRICAL",
+      "longitude_direction": "EAST",
+      "units": "interpolation mask: 0 means infilled"
+    },
+    {
+      "file": "SWIM2_c0_1.tif",
+      "url": "https://swim.psi.edu/output/SWIM2/Global/Composite/SWIM2_c0_1.tif",
+      "bytes": 70995819,
+      "sha256": "0dd22f8a07172112c68fb304af9966bcdd788bbedf6ea40187a30f70130fea37",
+      "recorded_utc": "2026-11-14T02:31:23.513999+00:00",
+      "product": "ice_consistency_shallow",
+      "status": "available",
+      "body": "Mars",
+      "crs": "PROJCS[\"Mars2000_equicylindrical_clon0\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere_IAU_IAG\",3396190,0],AUTHORITY[\"ESRI\",\"106971\"]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "native_pixel_size_m": [
+        2964.119,
+        2964.119
+      ],
+      "native_shape": [
+        2400,
+        7200
+      ],
+      "nodata": -100.0,
+      "version": "SWIM 2.0",
+      "units": "ice consistency, dimensionless",
+      "observation_period": "composite; no single acquisition period in GeoTIFF"
+    },
+    {
+      "file": "SWIM2_c1_5.tif",
+      "url": "https://swim.psi.edu/output/SWIM2/Global/Composite/SWIM2_c1_5.tif",
+      "bytes": 70995805,
+      "sha256": "2ade8ab6aa4aae1c51ec71f10139e9b9ffa0a31ef1948566d0929ab7e91713ed",
+      "recorded_utc": "2026-11-14T02:31:23.541572+00:00",
+      "product": "ice_consistency_deep",
+      "status": "available",
+      "body": "Mars",
+      "crs": "PROJCS[\"Mars2000_equicylindrical_clon0\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere_IAU_IAG\",3396190,0],AUTHORITY[\"ESRI\",\"106971\"]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "native_pixel_size_m": [
+        2964.119,
+        2964.119
+      ],
+      "native_shape": [
+        2400,
+        7200
+      ],
+      "nodata": -100.0,
+      "version": "SWIM 2.0",
+      "units": "ice consistency, dimensionless",
+      "observation_period": "composite; no single acquisition period in GeoTIFF"
+    },
+    {
+      "file": "dustscenario_MY35_v2-5.nc",
+      "url": "https://www-mars.lmd.jussieu.fr/mars/dust_climatology/dataset_v2/dustscenario_MY35_v2-5.nc",
+      "bytes": 57832064,
+      "sha256": "95613d68e2d03904bfd93612f2fe70e84f8410b00ef33cafe59d77d50a41063a",
+      "recorded_utc": "2026-11-14T02:31:23.567402+00:00",
+      "product": "dust_my35",
+      "status": "available",
+      "body": "Mars",
+      "version": "2-5",
+      "creation_date": "25-November-2021",
+      "units": "dimensionless absorption optical depth",
+      "wavelength_micron": 9.3,
+      "native_grid_degrees": [
+        3,
+        3
+      ],
+      "native_shape": {
+        "longitude": 120,
+        "latitude": 60,
+        "Time": 669
+      },
+      "period": "dust_my35",
+      "license": "CC-BY-SA-3.0",
+      "citation": "https://doi.org/10.1029/2019JE006111",
+      "source_instruments": "MRO MCS; see individual file title",
+      "interpretation": "observation-constrained kriged scenario, not direct site measurement"
+    },
+    {
+      "file": "dustscenario_MY34_v2-5.nc",
+      "url": "https://www-mars.lmd.jussieu.fr/mars/dust_climatology/dataset_v2/dustscenario_MY34_v2-5.nc",
+      "bytes": 57814188,
+      "sha256": "032b9627247e9cc4397c9f007cc8f97a01acf689006b46ff3a51e5abed828797",
+      "recorded_utc": "2026-11-14T02:31:23.593620+00:00",
+      "product": "dust_my34",
+      "status": "available",
+      "body": "Mars",
+      "version": "2-5",
+      "creation_date": "5-December-2019",
+      "units": "dimensionless absorption optical depth",
+      "wavelength_micron": 9.3,
+      "native_grid_degrees": [
+        3,
+        3
+      ],
+      "native_shape": {
+        "longitude": 120,
+        "latitude": 60,
+        "Time": 669
+      },
+      "period": "dust_my34",
+      "license": "CC-BY-SA-3.0",
+      "citation": "https://doi.org/10.1029/2019JE006111",
+      "source_instruments": "MRO MCS; see individual file title",
+      "interpretation": "observation-constrained kriged scenario, not direct site measurement"
+    }
+  ],
+  "dust_data_license": "CC-BY-SA-3.0; see LICENSE-data.md"
+}

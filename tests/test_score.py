@@ -37,7 +37,7 @@ def test_similarity_scores_cells_with_partial_data():
     stack = toy_stack()
     stack["a"][:, :20] = np.nan  # western half has only layer b
     box = Box(south=75, north=80, west=-170, east=-165)
-    score = similarity(stack, signature(stack, box))
+    score = similarity(stack, signature(stack, box), min_valid_fraction=0.5)
     west = score.sel(lat=77.75, lon=-175.25)
     assert np.isfinite(float(west))
 

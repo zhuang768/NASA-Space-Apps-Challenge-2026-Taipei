@@ -1,13 +1,14 @@
-"""Self-test of the scoring method: score Mars against the Arcadia signature.
+"""Behaviour check using the same Mars data for reference and scoring.
 
-If the method works, the best-scoring region should be Arcadia Planitia
-itself, with other ice-bearing northern plains close behind.
+High descriptor similarity near Arcadia is expected. This is not independent
+scientific validation or an Earth analog recommendation.
 """
 
 import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
 
 from analog import sites
 from analog import stack as stack_mod
@@ -35,8 +36,11 @@ def main() -> None:
             f"  {'<- inside target box' if inside else ''}"
         )
 
-    fig, ax = plt.subplots(figsize=(11, 5), constrained_layout=True)
-    image = ax.imshow(score.values, extent=[-180, 180, -90, 90], cmap="magma", vmin=0, vmax=1)
+    fig, ax = plt.subplots(figsize=(11, 5))
+    fig.subplots_adjust(bottom=0.17, top=0.90, left=0.08, right=0.94)
+    cmap = plt.colormaps["magma"].copy()
+    cmap.set_bad("#d9dde2")
+    image = ax.imshow(score.values, extent=[-180, 180, -90, 90], cmap=cmap, vmin=0, vmax=1)
     ax.add_patch(
         plt.Rectangle(
             (box.west, box.south),
@@ -46,10 +50,22 @@ def main() -> None:
             edgecolor="cyan",
         )
     )
-    ax.set_title("Mars scored against the Arcadia Planitia signature (cyan box = target)")
+    ax.set_title("Within-Mars check against Arcadia (cyan box); all 5 layers required")
     ax.set_xlabel("East longitude (deg)")
     ax.set_ylabel("Latitude (deg)")
-    fig.colorbar(image, ax=ax, label="similarity")
+    ax.legend(
+        handles=[Patch(color="#d9dde2", label="Insufficient layer coverage")],
+        loc="lower left",
+        fontsize=8,
+    )
+    fig.colorbar(image, ax=ax, label="Descriptor similarity, not probability")
+    fig.text(
+        0.5,
+        0.02,
+        "Dust native grid: 3 deg; no Earth analog validation. Dust: Montabone et al. (2020), CC BY-SA 3.0",
+        ha="center",
+        fontsize=8,
+    )
     FIGURE.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(FIGURE, dpi=110)
     print(f"\nsaved {FIGURE}")

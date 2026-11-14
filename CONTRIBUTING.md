@@ -30,7 +30,7 @@ Windows PowerShell（需已安裝 Python 3.11 以上，建立環境時可使用 
 .venv\Scripts\python.exe scripts\download_mars.py
 ```
 
-`data/` 不放進 Git。下載腳本會取得目前列出的火星資料（約 365 MB），已有的檔案會跳過。
+`data/raw/mars/` 與 `data/processed/` 已進 Git，clone／pull 可取得目前火星資料；地球原始資料仍不進 Git。下載腳本只用來補齊缺少的火星檔案，已有的檔案會跳過；來源與校驗紀錄見 `outputs/mars_profiles/profiles.json`。
 這個下載流程仍需要可連到各資料來源的網路；腳本出錯時請保留完整錯誤訊息。
 衍生資料由對應的處理腳本重建。
 
@@ -55,7 +55,7 @@ Windows 可將上面的 `python3` 改成 `py -3`。
 
 | 現象或訊息 | 處理方式 |
 | --- | --- |
-| 資料沒有出現在 GitHub，但程式有上傳 | `data/` 被刻意忽略；執行下載腳本取得資料。 |
+| 地球資料沒有出現在 GitHub，但程式有上傳 | `data/raw/earth/` 被刻意忽略，需向地球端隊友取得檔案；火星資料已納入 Git。 |
 | `403`、`Permission denied`、`Write access ... not granted` | 確認協作者邀請已接受、登入的是受邀帳號；SSH 使用者另外檢查金鑰。 |
 | `401`、`Authentication failed` | 開發工具重新登入 GitHub；使用 gh CLI 時執行 `gh auth login`。HTTPS Git 不使用帳號密碼驗證，需使用工具登入、權杖或 SSH。 |
 | 網頁指出檔案過大 | 網頁每檔上限 25 MiB；25–100 MiB 的檔案改用 Git。專案原始資料優先透過下載腳本取得。 |

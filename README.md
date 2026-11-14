@@ -20,6 +20,7 @@ python3.12 -m venv .venv
 .venv/bin/python scripts/download_mars.py      # 若尚未有檔：下載火星資料到 data/raw/mars（約 380 MB，免登入）
 .venv/bin/python scripts/build_mars_stack.py   # 產出 data/processed/mars_stack_0p5deg.nc
 .venv/bin/python scripts/score_mars_selftest.py
+.venv/bin/python scripts/profile_mars.py --strict  # 火星目標特徵、來源與逐 sol 沙塵序列
 .venv/bin/python scripts/quicklook_mars.py
 .venv/bin/python scripts/check_upload.py
 .venv/bin/ruff format . && .venv/bin/ruff check .
@@ -50,7 +51,7 @@ python3.12 -m venv .venv
 | 火星 | MGS MOLA 地形（MEGDR） | NASA PDS Geosciences Node | 16 像素／度（3.7 km） | 不需要 |
 | 火星 | MGS TES 夜間熱慣量 | NASA PDS Geosciences Node | 20 像素／度（3.0 km） | 不需要 |
 | 火星 | SWIM 2.0 地下水冰一致性（淺層 <1 m、深層 1–5 m） | SWIM（NASA 資助，swim.psi.edu） | 20 像素／度，涵蓋南北緯 60 度 | 不需要 |
-| 火星 | 沙塵柱光學厚度氣候（MY34 全球沙塵暴年、MY35 平常年；TES/THEMIS/MCS 觀測） | Montabone et al. v2，LMD | 3 度 | 不需要 |
+| 火星 | MY34／MY35 沙塵重建場；兩份 v2.5 檔案標示觀測輸入為 MRO/MCS | Montabone et al. v2.5，LMD | 原生 3 度；9.3 μm 吸收光學厚度 | 不需要 |
 
 比較面向（與隊友定案，分為四大主題與子項目）：
 
@@ -77,6 +78,13 @@ MODIS 地表溫度與 TES 熱慣量、地球乾濕條件與 SWIM 地下冰一致
 - 2026-11-14：隊友回報使用 Claude Code 協助授權 Earthdata 資料中心、建立 Python 3.12 環境、監看下載及開啟 145 個資料檔。此為隊友環境的紀錄；與清單推算 148 個的差異、實際檔案及讀取紀錄尚待核對。
 - 2026-11-14：使用 OpenAI Codex 核對官方規格，修正 SRTMGL30 版本、資料計數狀態、永凍土／NDVI 解釋、跨行星配對與 HDF4 環境限制。本次文件修正未使用 C2C。
 - 2026-11-14：使用 Cursor（Claude）完成火星四面向堆疊與相似度自我測試，並將 `data/raw/mars/` 與 `data/processed/` 納入版控以便隊友直接取得。
+- 2026-11-14：OpenAI Codex 接入並核對上傳的 10 個火星來源檔、修正 SWIM 座標與聚合倍率、沙塵欄位及缺值評分，匯出目標特徵與交接文件；本輪未使用 C2C，地球端處理由隊友負責。
+
+## 火星端交接
+
+方法、執行與缺資料清單見 [docs/mars_pipeline.md](docs/mars_pipeline.md)，實際描述值見 [outputs/mars_profiles/handoff.md](outputs/mars_profiles/handoff.md)。`profiles.json` 含 MOLA、TES、SWIM 與 MY34／MY35 的來源、單位與品質資訊，另附六份逐 sol 沙塵 CSV。
+
+0.5° stack 是火星內部描述網格；沙塵仍只有原生 3°尺度。內部相似度預設需要全部圖層，允許部分資料時明列 `evidence_fraction`，不是信賴度。Arcadia 內部測試不是地球選址驗證。火星地表日夜溫度與任務專用門檻仍缺，不能用熱慣量或描述值取代。
 
 ## 地球管線與第一輪實際結果（2026-11-14）
 

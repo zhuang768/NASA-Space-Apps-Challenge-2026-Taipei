@@ -42,9 +42,16 @@ def load(name: str, raw_dir: Path = RAW_DIR) -> xr.DataArray:
         if src.nodata is not None:
             data[data == src.nodata] = np.nan
         transform = src.transform
+        if transform.b != 0 or transform.d != 0 or not src.crs:
+            raise ValueError(f"{path.name}: an unrotated raster with a known Mars CRS is required")
         # Mars equirectangular: convert projected metres to degrees if needed.
         to_degrees = 1.0
         if src.crs and src.crs.is_projected:
+            projection = src.crs.to_dict()
+            if projection.get("proj") != "eqc" or any(
+                projection.get(key, 0) != 0 for key in ("lat_ts", "lat_0", "lon_0", "x_0", "y_0")
+            ):
+                raise ValueError(f"{path.name}: unsupported equirectangular projection parameters")
             spheroid = re.search(r'SPHEROID\["[^"]*",\s*([\d.]+)', src.crs.to_wkt())
             if not spheroid:
                 raise ValueError(f"{path.name}: cannot find the body radius in the CRS")
@@ -54,6 +61,14 @@ def load(name: str, raw_dir: Path = RAW_DIR) -> xr.DataArray:
         lon = (transform.c + cols * transform.a) * to_degrees
         lat = (transform.f + rows * transform.e) * to_degrees
     grid = xr.DataArray(data, dims=("lat", "lon"), coords={"lat": lat, "lon": lon}, name=name)
-    if grid.lon.max() > 180:
-        grid = grid.assign_coords(lon=((grid.lon + 180) % 360) - 180).sortby("lon")
-    return grid
+    # These GeoTIFFs extend slightly west of -180, even though max(lon) < 180.
+    # Always normalize, rather than testing only the eastern edge.
+    grid = grid.assign_coords(lon=((grid.lon + 180) % 360) - 180).sortby("lon")
+    grid = grid.sortby("lat", ascending=False)
+    grid.attrs.update(
+        units="1",
+        source_crs=str(src.crs),
+        interpretation="ice consistency, not ice amount or probability",
+        coordinate_method="source equirectangular metres divided by source CRS radius",
+    )
+    return grid.where((grid >= -1) & (grid <= 1))

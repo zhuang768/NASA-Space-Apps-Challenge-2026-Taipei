@@ -1,0 +1,39 @@
+[
+  {
+    "file": "wisdom2026.pdf",
+    "url": "https://hal.science/hal-05844237/file/Waveform_Analysis_of_Super-Resolved_WISDOM_ExoMars_GPR_Data_Acquired_in_Svalbard_a_Terrestrial_Analogue_of_Mars.pdf",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "dsmap_snu_upper.cat",
+    "url": "https://static.mars.asu.edu/pds/ODTGEO_v2/catalog/DSMAP_SNU.CAT",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "pathare_mmc1.xlsx",
+    "url": "https://ars.els-cdn.com/content/image/1-s2.0-S0019103517303664-mmc1.xlsx",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "pathare_mmc2.xlsx",
+    "url": "https://ars.els-cdn.com/content/image/1-s2.0-S0019103517303664-mmc2.xlsx",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "pathare_mmc1.zip",
+    "url": "https://ars.els-cdn.com/content/image/1-s2.0-S0019103517303664-mmc1.zip",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "pathare_mmc1.pdf",
+    "url": "https://ars.els-cdn.com/content/image/1-s2.0-S0019103517303664-mmc1.pdf",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "pathare_elsevier.xml",
+    "url": "https://api.elsevier.com/content/article/PII:S0019103517303664?httpAccept=text/xml",
+    "status": 200,
+    "bytes": 195,
+    "sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7"
+  }
+]

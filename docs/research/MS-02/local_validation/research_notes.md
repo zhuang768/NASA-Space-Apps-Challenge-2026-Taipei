@@ -1,3 +1,5 @@
+- **2026-11-14 官方資料補充入口**：[新增條列筆記](official_followup_notes.md)。本頁下方為前輪快照；本次新增 9 景 THEMIS 共址亮溫、CRISM MRDR4 與幾何欄位、數值雷達雜波及地表對齊、五塊 CTX 地理定位樣區、UNISCALM 968 筆測值與 2023 岩芯原始資料。更新後的八項狀態、資料與品質限制以補充筆記和 `outputs/research/MS-02/local_validation/official_followup/` 為準；仍未確認當地冰存在、深度或含量。
+
 # MS-02 local_validation — 證據、方法與待決事項
 
 - 用途：人類撰寫正式報告的資料筆記；不是報告正文、摘要或結論。
@@ -133,3 +135,4 @@
 - 新清單另提示THEMIS等產品；本輪未逐一取得，並未將未下載誤記為無觀測。
 
 - 最後保留遠端 `79a36344fc4f815f4fcca6d0ddb446efe6ba4080` 的 `ctx_product_metadata.csv`（D01瀏覽器metadata）；本輪另有全部5景REST足跡與browse。合併保留雙方提交，沒有強推；原「足跡未核實」僅適用該遠端先前閱讀狀態。
+

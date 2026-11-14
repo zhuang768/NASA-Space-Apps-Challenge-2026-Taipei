@@ -1,0 +1,20 @@
+[
+  {
+    "path": "outputs/research/MS-02/local_validation/radar_roi/s_00464501.npz",
+    "ref": "1aea666cd3f227a296218362317a0d5ad989129d",
+    "sha256": "4d08b6b9083e19a9cac7fde6415d99291fbd720df444388eff91c8d227c92608",
+    "git_blob_sha1": "1b4dfd0a83cf37e90e8af93c97e00abfdc7b4cf5"
+  },
+  {
+    "path": "outputs/research/MS-02/local_validation/radar_roi/s_01983502.npz",
+    "ref": "1aea666cd3f227a296218362317a0d5ad989129d",
+    "sha256": "198ba059c4b3c379bfeb7f492ad381461c192edc74a12c7791b60c1aedf2d90c",
+    "git_blob_sha1": "ecc7431a6234bce63d7a180a83334b3be37f31d3"
+  },
+  {
+    "path": "outputs/research/MS-02/local_validation/radar_roi/s_02004601.npz",
+    "ref": "1aea666cd3f227a296218362317a0d5ad989129d",
+    "sha256": "7a3332adfadaecbe1b7273881157b99ed8162396d2b19315f0cdb3b137fb2132",
+    "git_blob_sha1": "8bb7a060774d5c042fabcbd9d70cbda7306756ac"
+  }
+]

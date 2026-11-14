@@ -1,0 +1,27 @@
+ENVI
+samples = 1252
+lines   = 1636
+bands   = 19
+data type = 4
+interleave = bsq
+file type = ENVI Standard
+header offset = 0
+byte order = 0
+map info = {MRO Mars Equirectangular [IAU 2000] [55.00N; 170.00E], 1.0000, 1.0000, -112961.0109, 3394802.2085, 1.805502e+02, 1.805502e+02, D_Mars_2000_IAU_IAG_custom_sphere_lat55, units=Meters}
+projection info = {17, 3382737.5, 55.000000, 170.000000, 0.0, 0.0, D_Mars_2000_IAU_IAG_custom_sphere_lat55, MRO Mars Equirectangular [IAU 2000] [55.00N; 170.00E], units=Meters}
+coordinate system string = {PROJCS["MRO Mars Equirectangular [IAU 2000] [55.00N; 170.00E]",GEOGCS["GCS_Mars_2000_IAU_IAG_custom_sphere_lat55",DATUM["D_Mars_2000_IAU_IAG_custom_sphere_lat55",SPHEROID["Mars_2000_IAU_IAG_custom_sphere_lat55",3382737.497920141,0.0]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Equidistant_Cylindrical"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",169.9999999205271],PARAMETER["Standard_Parallel_1",55.0],UNIT["Meter",1.0]]}
+x start = 197
+y start = 175
+band names = {
+ Target ID, Segment ID (Counter), VNIR (S-detector) Sample, 
+ VNIR (S-detector) Line, IR (L-detector) Sample, IR (L-detector) Line, 
+ INA at areoid - deg, EMA at areoid - deg, Phase angle - deg, 
+ Latitude - areocentric - deg N, Longitude - areocentric - deg E, 
+ INA at surface from MOLA - deg, EMA at surface from MOLA - deg, 
+ Slope magnitude from MOLA - deg, MOLA slope azimuth - deg clkwise from N, 
+ Elevation - meters relative to MOLA, Thermal inertia - J m^-2 K^-1 s^-0.5, 
+ Bolometic albedo, Local solar time - hours}
+wavelength units = Unknown
+data ignore value = 65535.00000000
+default stretch = 1.0% linear
+sensor type = Unknown

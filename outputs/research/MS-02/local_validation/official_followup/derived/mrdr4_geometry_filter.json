@@ -1,0 +1,8 @@
+{
+  "geometry_valid": 9898,
+  "geometry_filter_valid": 9867,
+  "roi_pixels": 15159,
+  "lat_residual_deg_median": -0.001519827836524712,
+  "lon_residual_deg_median": 0.0036870518714664513,
+  "warning": "Geometry coordinates are source observation centres; source pixel vs mosaic centre residual includes mapping/resampling. TI and albedo are supporting inputs, not independent mineral/ice evidence."
+}

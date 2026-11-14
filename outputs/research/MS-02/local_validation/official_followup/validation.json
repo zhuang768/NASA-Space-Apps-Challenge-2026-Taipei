@@ -1,0 +1,517 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "nine THEMIS epochs with distinct product IDs",
+      "passed": true
+    },
+    {
+      "check": "retained source bytes I63952017PBT",
+      "passed": true
+    },
+    {
+      "check": "retained source bytes I53637009PBT",
+      "passed": true
+    },
+    {
+      "check": "retained source bytes I54074011PBT",
+      "passed": true
+    },
+    {
+      "check": "retained source bytes I54561019PBT",
+      "passed": true
+    },
+    {
+      "check": "retained source bytes I54586015PBT",
+      "passed": true
+    },
+    {
+      "check": "retained source bytes I54717011PBT",
+      "passed": true
+    },
+    {
+      "check": "retained source bytes I55485010PBT",
+      "passed": true
+    },
+    {
+      "check": "retained source bytes I72751028PBT",
+      "passed": true
+    },
+    {
+      "check": "retained source bytes I74229033PBT",
+      "passed": true
+    },
+    {
+      "check": "fixed common grid coordinate shape",
+      "passed": true
+    },
+    {
+      "check": "fixed ROI unchanged",
+      "passed": true
+    },
+    {
+      "check": "numeric coverage I63952017PBT",
+      "passed": true
+    },
+    {
+      "check": "numeric coverage I53637009PBT",
+      "passed": true
+    },
+    {
+      "check": "numeric coverage I54074011PBT",
+      "passed": true
+    },
+    {
+      "check": "numeric coverage I54561019PBT",
+      "passed": true
+    },
+    {
+      "check": "numeric coverage I54586015PBT",
+      "passed": true
+    },
+    {
+      "check": "numeric coverage I54717011PBT",
+      "passed": true
+    },
+    {
+      "check": "numeric coverage I55485010PBT",
+      "passed": true
+    },
+    {
+      "check": "numeric coverage I72751028PBT",
+      "passed": true
+    },
+    {
+      "check": "numeric coverage I74229033PBT",
+      "passed": true
+    },
+    {
+      "check": "CRISM cube shape",
+      "passed": true
+    },
+    {
+      "check": "72 explicit wavelengths",
+      "passed": true
+    },
+    {
+      "check": "missingness retained",
+      "passed": true
+    },
+    {
+      "check": "UNISCALM 968 source records",
+      "passed": true
+    },
+    {
+      "check": "UNISCALM 121-node grid on 8 dates",
+      "passed": true
+    },
+    {
+      "check": "269 source core intervals",
+      "passed": true
+    },
+    {
+      "check": "source VIC outlier retained and flagged",
+      "passed": true
+    },
+    {
+      "check": "177 unique explicit TRDR IDs",
+      "passed": true
+    },
+    {
+      "check": "radar picks within fixed ROI 00464501",
+      "passed": true
+    },
+    {
+      "check": "radar picks within fixed ROI 01983502",
+      "passed": true
+    },
+    {
+      "check": "radar picks within fixed ROI 02004601",
+      "passed": true
+    },
+    {
+      "check": "194 radar postings",
+      "passed": true
+    },
+    {
+      "check": "file hash docs/research/MS-02/local_validation/official_followup_notes.md",
+      "passed": true
+    },
+    {
+      "check": "file hash docs/research/MS-02/local_validation/research_notes.md",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/README.md",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/additional_acquisitions.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/ctx_follow.py",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/ctx_tiles.py",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/F01_thermal_epochs.png",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/F02_radar_numeric_clutter.png",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/F03_crism_mrdr4.png",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/F04_ctx_samples.png",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/F05_uniscalm.png",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/adventdalen_2023_core_overview.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/adventdalen_2023_core_samples.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/catalog_reconciliation.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/crism_trdr_inventory.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/ctx_sample_metadata.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/mrdr4_band_qc.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/mrdr4_filtered_spectrum.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/mrdr4_geometry_filter.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/mrdr4_geometry_qc.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/mrdr4_geometry_roi.npz",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/mrdr4_roi.npz",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/mrdr4_roi_metadata.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/radar_candidate_screen.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/radar_cross_track_geometry.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/radar_followup_qc.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/s_00464501_numeric_clutter_roi.npz",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/s_00464501_surface_aligned.npz",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/s_00464501_surface_picks.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/s_01983502_numeric_clutter_roi.npz",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/s_01983502_surface_aligned.npz",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/s_01983502_surface_picks.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/s_02004601_numeric_clutter_roi.npz",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/s_02004601_surface_aligned.npz",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/s_02004601_surface_picks.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/themis_source_row_blocks.zip",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/thermal_common_grid.npz",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/thermal_epoch_qc.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/thermal_grid_shift_sensitivity.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/thermal_pairs.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/derived/uniscalm_by_date.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/diagnostics.py",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/earth_analyze.py",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/extra_fetch.py",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/fetch_sources.py",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/geometry_extract.py",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/get_products.py",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/inherited_inputs.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/package_release.py",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/plot_followup.py",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/radar_follow.py",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/restore_offline.py",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/retrievals_extra.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/retrievals_initial.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/retrievals_products.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/source_fingerprints.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/Adventdalen_data.xlsx",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/active2026.html",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/brighi_thesis.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/catalogues_and_themis_headers.zip",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/ctx_C_L12.png",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/ctx_NE_L12.png",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/ctx_NW_L12.png",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/ctx_SE_L12.png",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/ctx_SW_L12.png",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/ctx_esri.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/gtnp1505/alt_dataset_1505_alt_grid-transect.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/gtnp1505/alt_metadata.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/mrr_map.cat",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/s_00464501_rtrn.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/s_00464501_sim.xml",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/s_01983502_rtrn.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/s_01983502_sim.xml",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/s_02004601_rtrn.csv",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/s_02004601_sim.xml",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/t1746_mrral_55n170_0327_4.hdr",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/t1746_mrral_55n170_0327_4.lbl",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/t1746_mrrde_55n170_0327_4.hdr",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/t1746_mrrde_55n170_0327_4.lbl",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/t1746_mrrsu_55n170_0327_4.hdr",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/t1746_mrrsu_55n170_0327_4.lbl",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/t1746_mrrwv_55n170_0327_4.lbl",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/t1746_vrral_55n170_0654_1.hdr",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/t1746_vrral_55n170_0654_1.lbl",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/t1746_vrrde_55n170_0654_1.hdr",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/t1746_vrrde_55n170_0654_1.lbl",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/t1746_vrrsu_55n170_0654_1.hdr",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/t1746_vrrsu_55n170_0654_1.lbl",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/wisdom2026.html",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/wisdom_hal.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/sources/zenodo_groundice.json",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/spectral_extract.py",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/thermal_extract.py",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/thermal_sensitivity.py",
+      "passed": true
+    },
+    {
+      "check": "file hash outputs/research/MS-02/local_validation/official_followup/validate.py",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,1151 @@
+{
+  "schema_version": "1.0",
+  "generated_utc": "2026-11-14T12:33:14.700981+00:00",
+  "requirement_version": "MR-20261114-v2",
+  "candidate_contract": {
+    "earth_candidate_id": "EARTH-UV-001",
+    "mars_candidate_id": "I-01",
+    "earth_site_name": "University Valley meteorological station W vicinity",
+    "country_or_region": "Antarctica (no single sovereign country assigned)",
+    "earth_lat_deg": "-77.86215",
+    "earth_lon_east_deg": "160.7101",
+    "coordinate_basis": "E1 station W 77deg51.729minS 160deg42.606minE; reference anchor, not approved drill location; datum not stated in inspected passage",
+    "mars_lat_deg": "54.25",
+    "mars_lon_east_deg": "1.25",
+    "test_purpose": "辨識乾覆土下冰膠結界面；驗證分段取樣升溫與冰損失。研究提議，尚未執行。",
+    "pairing_evidence": "地球W站有現地42cm冰膠結界面；I-01僅有可能淺冰指標。因此配對探查驗證方法，不宣稱冰資源相同。",
+    "terrain_evidence": "岩質谷底W站1677m；未完成與火星同尺度坡度起伏計算。",
+    "temperature_evidence": "E1現地平均氣溫-23.4C；MERRA2粗格T2M239.169895K、時期不同；MODIS嚴格QC日0/24夜1/24，不產生年均或日夜差。",
+    "water_ice_evidence": "E1 W站冰膠結界面42cm；E2谷內0-98cm為離散調查範圍。新採樣位置仍需確認深度純度連續性。",
+    "atmosphere_evidence": "MERRA2 PS78685.235615Pa;U10M+10.726760m/s;V10M+2.351102m/s;24/24months;分量不是平均風速。",
+    "dust_evidence": "MERRA2 DUEXTTAU0.002139161 at550nm extinction;不能等同Mars9.3um absorption CDOD；無本地沉積磨蝕量。",
+    "mars_slope_deg": "0.3025961974521107",
+    "mars_relief_m": "76",
+    "mars_TI_J_m2_K_s05": "244.7096710205078",
+    "mars_SWIM_shallow_consistency": "0.3543070239029174",
+    "mars_CDOD_MY35_9p3um": "0.10687771439552307",
+    "mars_surface_temperature_status": "missing_qualified_candidate_temperature",
+    "source_ids": "E1;E2;E3;E4;E5;Mars discovery JSON;Excel Ice Candidate QA row2",
+    "source_urls": "https://doi.org/10.1017/S0954102022000025;https://www.cambridge.org/core/journals/antarctic-science/article/abs/distribution-of-depth-to-icecemented-soils-in-the-highelevation-quartermain-mountains-mcmurdo-dry-valleys-antarctica/EE34F569F8E954EE4DE86125C92E3188;https://gmao.gsfc.nasa.gov/gmao-products/merra-2/;https://doi.org/10.5067/MODIS/MOD11C3.061;https://doi.org/10.1089/ast.2013.1038",
+    "source_publication_years": "E1:2022;E2:2013;E5:2013;Earth-data periods separate",
+    "observation_periods": "E1:2009-2013;MERRA2/MODIS:2023-2024;Mars dust:MY35;SWIM:multi-period composite",
+    "spatial_temporal_resolution": "E1:point probes30/60min;MERRA2:0.5deg lat x0.625deg lon monthly,centre(-78,160.625);MODIS:0.05deg monthly,centre(-77.875,160.725);Mars nominal0.5deg~29.64x17.31km,dust native3deg",
+    "data_gaps": "無本站新採樣冰純度連續性可採量、同尺度地形、火星合格溫度及本站沉積磨蝕；MODIS QC不足；冰複查原MD未在GitHub快照。",
+    "similarities": "乾覆土與冰膠結層的探查及取樣問題；局部材料與方法類比。",
+    "cannot_simulate": "火星低壓CO2低重力輻射完整熱循環沙塵輸運；不能推估I-01冰量採水率鑽採耗能或著陸安全。",
+    "existing_pool_reassessment": "Accept Team 2: retain EARTH-UV-001 as known-use reference; do not revive removed terrain rankings or assign their IDs to new pairs.",
+    "test_metrics": "界面深度誤差與漏誤判；扭矩功率進尺樣品溫度回收質量含冰量；未自行設定合格閾值。",
+    "evidence_status": "conditional_partial_method_analog",
+    "team2_review_status": "review_received_known_valley_component_use_exact_W_protocol_unresolved",
+    "novelty_status": "not_cleared_existing_component_use",
+    "master_workbook_sha256": "a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731",
+    "github_baseline_commit": "3e3ffff3d8d0814c407eacdc0a83d8b45a5123b8",
+    "review_date": "2026-11-14",
+    "report_path": "docs/research/team1_earth_analog_matching.md",
+    "requirements_version": "MR-20261114-v1 / 2026-11-14 / branch commit 9e5c49ea7b4d7272972e7d409e6a298e6ef3da4a (previous: TEAM1-PROVISIONAL-ICE-v1 / 2026-11-14)",
+    "requirements_status": "mainline_v1_read_from_pinned_branch_not_in_main_76ba95f; thresholds not_defined; previous status: provisional_main_requirement_file_absent",
+    "site_extent_type": "station_anchor_undefined_vicinity",
+    "site_extent_description": "Original W station anchor retained. No defined test plot, radius or polygon.",
+    "earth_horizontal_datum": "not_stated_in_inspected_coordinate_passage",
+    "candidate_treatment": "known_use_reference",
+    "revision_date": "2026-11-14",
+    "revision_reason": "Accept Team 2 valley-level drilling/segmented thermal-control precedent; exact W protocol unresolved; original ID, coordinates and test_purpose retained. | Round2 2026-11-14 (started from main f54e107bbc8b80045774ab1679181ed78d8cd2d3; rebased on 76ba95f067089716cc86e42cb0cbd769aa683df1): identity, coordinates and test_purpose unchanged; requirements pointer moved to MR-20261114-v1; data availability added (public Zenodo record 10.5281/zenodo.10553882 holds the W-station series, files not downloaded or QA'd by Team 1); W footprint, datum and new independent truth still not provided.",
+    "previous_team1_commit": "5efa19766342a5a9ab24fcbbe3dbf02ed05805a6",
+    "raw_access_this_run": "Prior Earth climate extraction inherited only; no Earth raster or workbook reopened this run. | Round2 2026-11-14 (started from main f54e107bbc8b80045774ab1679181ed78d8cd2d3; rebased on 76ba95f067089716cc86e42cb0cbd769aa683df1): Zenodo record page and the first lines of UniversityV_09_13_Campbell_data_all_calibrated.txt read through a web text fetch; no file saved, no hash computed; MERRA-2/MODIS files not available this run.",
+    "gpu_handoff_status": "availability_published_in_outputs/research/team1_data_availability.csv; GPU-06 and GPU-07 inputs (per-file MODIS/MERRA-2 lists) not available to Team 1; GPU execution not acknowledged",
+    "gpu_requests_json": "",
+    "team2_questions_json": "",
+    "team2_source_audit_commit": "8d99d9f",
+    "source_locators_json": "{\"data_availability_csv\":\"outputs/research/team1_data_availability.csv\",\"UV_series_record\":\"UV-D1..UV-D5 Zenodo 10.5281/zenodo.10553882\",\"UV_depth_survey\":\"UV-D6 USAP-DC 10.7265/N5VX0DFJ (2009-2010 discrete depths, not the W series)\",\"NSIDC_claim\":\"UV-D7 not_found_in_this_search\",\"paper\":\"E1 Methods Meteorological measurements; Supplemental material paragraph\"}",
+    "literature_values_json": "",
+    "pending_main_decisions": "",
+    "prohibited_claims": "",
+    "handoff_acknowledged": "Team 2 existing audit read; no new response received | Round2: Team 2 audit unchanged for this ID; mainline v1 T1-01..T1-08 answered in the report; GPU/Main acknowledgement not received",
+    "site_name": "University Valley meteorological station W vicinity",
+    "latitude_deg": "-77.86215",
+    "longitude_east_deg": "160.7101",
+    "anchor_description": "E1 station W 77deg51.729minS 160deg42.606minE; reference anchor, not approved drill location; datum not stated in inspected passage",
+    "intended_test": "辨識乾覆土下冰膠結界面；驗證分段取樣升溫與冰損失。研究提議，尚未執行。",
+    "evidence_sources": "https://doi.org/10.1017/S0954102022000025;https://www.cambridge.org/core/journals/antarctic-science/article/abs/distribution-of-depth-to-icecemented-soils-in-the-highelevation-quartermain-mountains-mcmurdo-dry-valleys-antarctica/EE34F569F8E954EE4DE86125C92E3188;https://gmao.gsfc.nasa.gov/gmao-products/merra-2/;https://doi.org/10.5067/MODIS/MOD11C3.061;https://doi.org/10.1089/ast.2013.1038"
+  },
+  "source_profile": {
+    "source_id": "UV-W-CAMPBELL-2009-2010",
+    "earth_candidate_id": "EARTH-UV-001",
+    "mars_candidate_id": "I-01",
+    "latitude_deg": -77.86215,
+    "longitude_east_deg": 160.7101,
+    "spatial_support": "point anchor: meteorological station W; not a trial-area polygon or a new borehole",
+    "coordinate_source": "Team 1 CSV; Marinova et al. 2022 meteorological measurements",
+    "horizontal_datum": "not stated in inspected source",
+    "adapter": "campbell_toa5",
+    "path": "data/raw/earth/university_valley/UniversityV_09_10_Campbell_data_good_only_calibrated.txt",
+    "url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Campbell_data_good_only_calibrated.txt?download=1",
+    "dataset_doi": "10.5281/zenodo.10553882",
+    "method_url": "https://doi.org/10.1017/S0954102022000025",
+    "archive_published": "2024-01-23",
+    "expected_md5": "ae2133eac5c92c695c5f6ef93bcbbd25",
+    "source_level": "author-calibrated and author-screened archive input; not untouched logger measurements",
+    "time_standard": "not declared in text header; station-clock timestamps retained without UTC conversion",
+    "decimal_day_epoch": "2009-01-01T00:00:00",
+    "decimal_day_tolerance_days": 0.0001,
+    "sample_interval_minutes": 30,
+    "period_start": "2010-01-01T00:00:00",
+    "period_end_exclusive": "2011-01-01T00:00:00",
+    "missing_tokens": [
+      "",
+      "NaN",
+      "nan",
+      "NAN",
+      "NA"
+    ],
+    "variables": [
+      {
+        "column": "T107_air",
+        "quantity": "air_temperature",
+        "unit": "Deg C",
+        "height_above_surface_m": 1.2,
+        "scale_factor": 1.0,
+        "add_offset": 0.0,
+        "valid_range": [
+          -50.0,
+          50.0
+        ],
+        "plot_label": "Air +1.2 m"
+      },
+      {
+        "column": "T107_surf",
+        "quantity": "contact_surface_soil_temperature",
+        "unit": "Deg C",
+        "height_above_surface_m": 0.0,
+        "scale_factor": 1.0,
+        "add_offset": 0.0,
+        "valid_range": [
+          -50.0,
+          50.0
+        ],
+        "plot_label": "Contact soil surface"
+      },
+      {
+        "column": "T107_10cm",
+        "quantity": "subsurface_temperature",
+        "unit": "Deg C",
+        "height_above_surface_m": -0.1,
+        "scale_factor": 1.0,
+        "add_offset": 0.0,
+        "valid_range": [
+          -50.0,
+          50.0
+        ],
+        "plot_label": "Soil -0.10 m"
+      },
+      {
+        "column": "T107_ice42cm",
+        "quantity": "temperature_at_published_ice_interface_sensor",
+        "unit": "Deg C",
+        "height_above_surface_m": -0.42,
+        "scale_factor": 1.0,
+        "add_offset": 0.0,
+        "valid_range": [
+          -50.0,
+          50.0
+        ],
+        "plot_label": "Published interface probe -0.42 m"
+      },
+      {
+        "column": "T107_InIce49cm",
+        "quantity": "subsurface_temperature",
+        "unit": "Deg C",
+        "height_above_surface_m": -0.49,
+        "scale_factor": 1.0,
+        "add_offset": 0.0,
+        "valid_range": [
+          -50.0,
+          50.0
+        ],
+        "plot_label": "Soil -0.49 m"
+      }
+    ],
+    "timestamp_formats": [
+      "%m/%d/%Y %H:%M",
+      "%Y-%m-%d %H:%M:%S"
+    ],
+    "paired_differences": [
+      {
+        "metric_id": "surface_minus_interface_42cm",
+        "columns": [
+          "T107_surf",
+          "T107_ice42cm"
+        ]
+      },
+      {
+        "metric_id": "soil_10cm_minus_interface_42cm",
+        "columns": [
+          "T107_10cm",
+          "T107_ice42cm"
+        ]
+      }
+    ]
+  },
+  "candidate_csv_sha256": "07d3ccf7e26e0940a3c7753bfa07b8039184fe1151f772b8941b2b3557e123bd",
+  "acquisition": {
+    "url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Campbell_data_good_only_calibrated.txt?download=1",
+    "dataset_doi": "10.5281/zenodo.10553882",
+    "retrieval_date": "2026-11-14",
+    "retrieved_utc": null,
+    "verified_utc": "2026-11-14T12:07:14.209739+00:00",
+    "acquisition_method": "Chrome native browser download; original downloaded bytes independently verified, then copied into data/raw/earth",
+    "bytes": 2673975,
+    "md5": "ae2133eac5c92c695c5f6ef93bcbbd25",
+    "publisher_expected_md5": "ae2133eac5c92c695c5f6ef93bcbbd25",
+    "sha256": "c46d93e3dd07c6c91d700a814214716f00caa0d5cc3a520f8969ce0af63ecafd",
+    "archive_publication_date": "2024-01-23",
+    "download_seconds": null,
+    "note": "No timing or response headers captured by native browser. Filename good_only_calibrated denotes prior author processing, not untouched logger data."
+  },
+  "profiles_sha256": "6375f851268bb10b4da12b4ee8116ee0772304570b1d26d7217e676596184ffd",
+  "source_sha256": "c46d93e3dd07c6c91d700a814214716f00caa0d5cc3a520f8969ce0af63ecafd",
+  "processing_code_sha256": {
+    "download_inputs.py": "f4a5269bb282d5b0e71d03184bf47b04d4c31674c6963137fd4f086eb2c99c0e",
+    "eh_adapter.py": "dfb603a12117adbf45bb9de44e8ef0b21dce87dd0f92f71a764bed275eea13f8",
+    "inventory.py": "56be8a0a99eae9369e64e05cfd8baee328e4eb9dae00554431c6f6049b48d8f0",
+    "pipeline.py": "532e0391eb75c11fef261ff44464aeca0e7932a857aa6c9a4167588216450b19",
+    "test_eh_adapter.py": "9d2cf835dfd9f420e721c3fe5ce5cdfc5aa16b0dcd2f285e6ae82d067ea0618f",
+    "test_pipeline.py": "aba962436d766e607ebfd0f3401d7f6425af95bf01ec251ad63e05e34f7add1b"
+  },
+  "source_md5_verified": true,
+  "qa": {
+    "header": [
+      "TIMESTAMP",
+      "decimalDaySinceJan1_2009",
+      "RECORD",
+      "BattV",
+      "T107_air",
+      "RH_wrt_water",
+      "RH_wrt_WaterIce",
+      "SlrW",
+      "WS_ms",
+      "WindDir",
+      "T107_surf",
+      "T107_10cm",
+      "T107_ice42cm",
+      "T107_InIce49cm",
+      "water_int",
+      "PA_mS_int",
+      "water20cm",
+      "PA_mS20cm",
+      "LW_kOhm",
+      "Echo"
+    ],
+    "units": {
+      "TIMESTAMP": "TS",
+      "decimalDaySinceJan1_2009": "days",
+      "RECORD": "RN",
+      "BattV": "Volts",
+      "T107_air": "Deg C",
+      "RH_wrt_water": "%",
+      "RH_wrt_WaterIce": "%",
+      "SlrW": "W/m^2",
+      "WS_ms": "meters/second",
+      "WindDir": "Degrees",
+      "T107_surf": "Deg C",
+      "T107_10cm": "Deg C",
+      "T107_ice42cm": "Deg C",
+      "T107_InIce49cm": "Deg C",
+      "water_int": "",
+      "PA_mS_int": "mSec",
+      "water20cm": "",
+      "PA_mS20cm": "mSec",
+      "LW_kOhm": "kOhms",
+      "Echo": "mV/mV"
+    },
+    "logger_header": [
+      "TOA5",
+      "CR1000_2",
+      "CR1000",
+      "28046",
+      "CR1000.Std.17",
+      "CPU:UniversityValley_MetStation.CR1",
+      "53229",
+      "Table1",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "source_data_rows": 17705,
+    "unique_timestamp_rows": 17705,
+    "identical_duplicate_rows_removed": 0,
+    "conflicting_duplicates": 0,
+    "source_order_backward_steps": 0,
+    "records_sorted_for_output": true,
+    "first_timestamp": "2009-12-04T19:30:00",
+    "last_timestamp": "2010-12-08T15:30:00",
+    "raw_timestamp_formats": [
+      "%m/%d/%Y %H:%M",
+      "%Y-%m-%d %H:%M:%S"
+    ],
+    "decimal_day_epoch": "2009-01-01T00:00:00",
+    "decimal_day_max_tolerance_seconds": 8.64,
+    "time_standard": "not declared in text header; station-clock timestamps retained without UTC conversion",
+    "timestamp_gaps": [],
+    "all_file_variable_counts": {
+      "T107_air": {
+        "valid": 17705
+      },
+      "T107_surf": {
+        "missing_token": 297,
+        "valid": 17408
+      },
+      "T107_10cm": {
+        "missing_token": 297,
+        "valid": 17408
+      },
+      "T107_ice42cm": {
+        "missing_token": 297,
+        "valid": 17408
+      },
+      "T107_InIce49cm": {
+        "missing_token": 297,
+        "valid": 17408
+      }
+    },
+    "qa_flag_column": null,
+    "original_calibration_coefficients": null,
+    "prior_QA": "Author good-only calibrated file; independent audit cannot recover removed samples or original QA bits.",
+    "scale_offset_policy": "Already calibrated degC; declared identity scale/offset applied once. No re-calibration.",
+    "range_policy": "Declared probe operating range; outside values masked and counted, never silently clipped."
+  },
+  "monthly_support": [
+    {
+      "metric_id": "T107_air",
+      "period_start": "2010-01-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_surf",
+      "period_start": "2010-01-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_10cm",
+      "period_start": "2010-01-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_ice42cm",
+      "period_start": "2010-01-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_InIce49cm",
+      "period_start": "2010-01-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "surface_minus_interface_42cm",
+      "period_start": "2010-01-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "soil_10cm_minus_interface_42cm",
+      "period_start": "2010-01-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_air",
+      "period_start": "2010-02-01T00:00:00",
+      "valid_n": 1344,
+      "expected_n": 1344,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_surf",
+      "period_start": "2010-02-01T00:00:00",
+      "valid_n": 1344,
+      "expected_n": 1344,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_10cm",
+      "period_start": "2010-02-01T00:00:00",
+      "valid_n": 1344,
+      "expected_n": 1344,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_ice42cm",
+      "period_start": "2010-02-01T00:00:00",
+      "valid_n": 1344,
+      "expected_n": 1344,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_InIce49cm",
+      "period_start": "2010-02-01T00:00:00",
+      "valid_n": 1344,
+      "expected_n": 1344,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "surface_minus_interface_42cm",
+      "period_start": "2010-02-01T00:00:00",
+      "valid_n": 1344,
+      "expected_n": 1344,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "soil_10cm_minus_interface_42cm",
+      "period_start": "2010-02-01T00:00:00",
+      "valid_n": 1344,
+      "expected_n": 1344,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_air",
+      "period_start": "2010-03-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_surf",
+      "period_start": "2010-03-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_10cm",
+      "period_start": "2010-03-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_ice42cm",
+      "period_start": "2010-03-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_InIce49cm",
+      "period_start": "2010-03-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "surface_minus_interface_42cm",
+      "period_start": "2010-03-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "soil_10cm_minus_interface_42cm",
+      "period_start": "2010-03-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_air",
+      "period_start": "2010-04-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_surf",
+      "period_start": "2010-04-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_10cm",
+      "period_start": "2010-04-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_ice42cm",
+      "period_start": "2010-04-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_InIce49cm",
+      "period_start": "2010-04-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "surface_minus_interface_42cm",
+      "period_start": "2010-04-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "soil_10cm_minus_interface_42cm",
+      "period_start": "2010-04-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_air",
+      "period_start": "2010-05-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_surf",
+      "period_start": "2010-05-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_10cm",
+      "period_start": "2010-05-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_ice42cm",
+      "period_start": "2010-05-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_InIce49cm",
+      "period_start": "2010-05-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "surface_minus_interface_42cm",
+      "period_start": "2010-05-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "soil_10cm_minus_interface_42cm",
+      "period_start": "2010-05-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_air",
+      "period_start": "2010-06-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_surf",
+      "period_start": "2010-06-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_10cm",
+      "period_start": "2010-06-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_ice42cm",
+      "period_start": "2010-06-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_InIce49cm",
+      "period_start": "2010-06-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "surface_minus_interface_42cm",
+      "period_start": "2010-06-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "soil_10cm_minus_interface_42cm",
+      "period_start": "2010-06-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_air",
+      "period_start": "2010-07-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_surf",
+      "period_start": "2010-07-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_10cm",
+      "period_start": "2010-07-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_ice42cm",
+      "period_start": "2010-07-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_InIce49cm",
+      "period_start": "2010-07-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "surface_minus_interface_42cm",
+      "period_start": "2010-07-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "soil_10cm_minus_interface_42cm",
+      "period_start": "2010-07-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_air",
+      "period_start": "2010-08-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_surf",
+      "period_start": "2010-08-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_10cm",
+      "period_start": "2010-08-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_ice42cm",
+      "period_start": "2010-08-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_InIce49cm",
+      "period_start": "2010-08-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "surface_minus_interface_42cm",
+      "period_start": "2010-08-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "soil_10cm_minus_interface_42cm",
+      "period_start": "2010-08-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_air",
+      "period_start": "2010-09-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_surf",
+      "period_start": "2010-09-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_10cm",
+      "period_start": "2010-09-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_ice42cm",
+      "period_start": "2010-09-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_InIce49cm",
+      "period_start": "2010-09-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "surface_minus_interface_42cm",
+      "period_start": "2010-09-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "soil_10cm_minus_interface_42cm",
+      "period_start": "2010-09-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_air",
+      "period_start": "2010-10-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_surf",
+      "period_start": "2010-10-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_10cm",
+      "period_start": "2010-10-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_ice42cm",
+      "period_start": "2010-10-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_InIce49cm",
+      "period_start": "2010-10-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "surface_minus_interface_42cm",
+      "period_start": "2010-10-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "soil_10cm_minus_interface_42cm",
+      "period_start": "2010-10-01T00:00:00",
+      "valid_n": 1488,
+      "expected_n": 1488,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_air",
+      "period_start": "2010-11-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_surf",
+      "period_start": "2010-11-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_10cm",
+      "period_start": "2010-11-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_ice42cm",
+      "period_start": "2010-11-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_InIce49cm",
+      "period_start": "2010-11-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "surface_minus_interface_42cm",
+      "period_start": "2010-11-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "soil_10cm_minus_interface_42cm",
+      "period_start": "2010-11-01T00:00:00",
+      "valid_n": 1440,
+      "expected_n": 1440,
+      "missing_n": 0,
+      "coverage_fraction": 1.0,
+      "coverage_status": "complete_calendar_support"
+    },
+    {
+      "metric_id": "T107_air",
+      "period_start": "2010-12-01T00:00:00",
+      "valid_n": 368,
+      "expected_n": 1488,
+      "missing_n": 1120,
+      "coverage_fraction": 0.24731182795698925,
+      "coverage_status": "partial_calendar_support"
+    },
+    {
+      "metric_id": "T107_surf",
+      "period_start": "2010-12-01T00:00:00",
+      "valid_n": 368,
+      "expected_n": 1488,
+      "missing_n": 1120,
+      "coverage_fraction": 0.24731182795698925,
+      "coverage_status": "partial_calendar_support"
+    },
+    {
+      "metric_id": "T107_10cm",
+      "period_start": "2010-12-01T00:00:00",
+      "valid_n": 368,
+      "expected_n": 1488,
+      "missing_n": 1120,
+      "coverage_fraction": 0.24731182795698925,
+      "coverage_status": "partial_calendar_support"
+    },
+    {
+      "metric_id": "T107_ice42cm",
+      "period_start": "2010-12-01T00:00:00",
+      "valid_n": 368,
+      "expected_n": 1488,
+      "missing_n": 1120,
+      "coverage_fraction": 0.24731182795698925,
+      "coverage_status": "partial_calendar_support"
+    },
+    {
+      "metric_id": "T107_InIce49cm",
+      "period_start": "2010-12-01T00:00:00",
+      "valid_n": 368,
+      "expected_n": 1488,
+      "missing_n": 1120,
+      "coverage_fraction": 0.24731182795698925,
+      "coverage_status": "partial_calendar_support"
+    },
+    {
+      "metric_id": "surface_minus_interface_42cm",
+      "period_start": "2010-12-01T00:00:00",
+      "valid_n": 368,
+      "expected_n": 1488,
+      "missing_n": 1120,
+      "coverage_fraction": 0.24731182795698925,
+      "coverage_status": "partial_calendar_support"
+    },
+    {
+      "metric_id": "soil_10cm_minus_interface_42cm",
+      "period_start": "2010-12-01T00:00:00",
+      "valid_n": 368,
+      "expected_n": 1488,
+      "missing_n": 1120,
+      "coverage_fraction": 0.24731182795698925,
+      "coverage_status": "partial_calendar_support"
+    }
+  ],
+  "policy": {
+    "annual_statistics": "not_computed",
+    "interpolation": "none",
+    "unknown_UTC_offset": "no conversion",
+    "suitability_threshold": null,
+    "threshold_status": "not_defined",
+    "observed_statistics": "Descriptive only, retain all actual valid N and calendar coverage; no automatic acceptance cutoff",
+    "independent_truth": "Historical published interface is contextual metadata, not held-out truth or current ice depth",
+    "unimplemented_products": "MERRA-2, MODIS and DEM remain missing, no fabricated extraction"
+  },
+  "environment": {
+    "project_root": "/private/tmp/nasa-compute-20261114",
+    "cwd": "/private/tmp/nasa-compute-20261114",
+    "python_executable": "/Users/zhuangzijin/Desktop/NASA_Space_Apps_2026/.venv/bin/python",
+    "python": "3.12.15 (main, Sep 30 2026, 22:04:19) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "platform": "macOS-15.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "logical_cpu_count_host": 10,
+    "cgroup_limits": {},
+    "packages": {
+      "numpy": "2.5.4",
+      "xarray": "2026.9.0",
+      "netCDF4": "1.7.5.1.post1",
+      "rasterio": "1.5.2",
+      "matplotlib": "3.11.2",
+      "scipy": "1.18.1",
+      "pytest": "9.2.0",
+      "pypdf": "7.1.0",
+      "pypdfium2": "5.15.2",
+      "torch": null,
+      "cupy": null
+    },
+    "gpu": {
+      "device_paths": [],
+      "rocm_smi": null,
+      "amd_smi": null,
+      "computation_backend_used": "CPU",
+      "gpu_computation_performed": false
+    },
+    "git_branch": {
+      "returncode": 0,
+      "stdout": "compute/candidate-extraction-20261114",
+      "stderr": ""
+    },
+    "git_commit": {
+      "returncode": 0,
+      "stdout": "f6d4c181d9739fe5c74b1c573b59414d63d6ec8e",
+      "stderr": ""
+    },
+    "git_status": {
+      "returncode": 0,
+      "stdout": "?? outputs/compute/\n?? scripts/compute/",
+      "stderr": ""
+    },
+    "files": [],
+    "note": "Host CPU/memory figures are not an allocation guarantee; cgroup values govern when present."
+  },
+  "execution": {
+    "backend": "CPU",
+    "numeric_precision": "Python binary64 / float64",
+    "gpu_used": false,
+    "speedup": null,
+    "read_parse_qa_seconds": 0.16119437501765788,
+    "monthly_calculation_seconds": 0.04552662500645965,
+    "figure_seconds": 0.5658218748867512,
+    "data_transfer_seconds": null,
+    "timing_note": "Single local descriptive run; no GPU or performance comparison; download not included",
+    "total_seconds": 1.0395238329656422
+  }
+}

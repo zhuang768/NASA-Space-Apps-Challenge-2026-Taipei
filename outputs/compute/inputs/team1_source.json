@@ -1,0 +1,17 @@
+{
+  "source_branch": "main",
+  "source_commit": "f6d4c181d9739fe5c74b1c573b59414d63d6ec8e",
+  "source_path": "outputs/research/team1_earth_analog_candidates.csv",
+  "git_blob_sha": "894babc0373de43d841ac9dd0d0014ad855524c8",
+  "sha256": "07d3ccf7e26e0940a3c7753bfa07b8039184fe1151f772b8941b2b3557e123bd",
+  "requirements_commit": "9e5c49ea7b4d7272972e7d409e6a298e6ef3da4a",
+  "requirements_git_blob_sha": "c188677a92a1d25ab966a0c87577af2b682e4730",
+  "note": "Exact source files preserved. Main requirement file read from pinned research branch; absent from inspected main. Candidate treatment and novelty conclusions remain Team1/Team2 responsibility.",
+  "requirements_current_version": "MR-20261114-v2",
+  "requirements_current_source_commit": "f6d4c181d9739fe5c74b1c573b59414d63d6ec8e",
+  "requirements_current_git_blob_sha": "e82d04c65ca9c7d52a90c49fddc02bce31d87c25",
+  "team2_parser_source_commit": "bc9fe3c0f352632a7117dbdab24df21b7450738e",
+  "team2_source_report_git_blob_sha": "4da0ebf5cd4a53a89f04f27aa7a519ac36adf285",
+  "acceptance": "MR-v2 accepted for compute execution; Team1 original provisional fields not rewritten; current priority EH2 and LT inactive",
+  "availability_git_blob_sha": "36a610cfe9bcc609dc5667e67165962155a19679"
+}

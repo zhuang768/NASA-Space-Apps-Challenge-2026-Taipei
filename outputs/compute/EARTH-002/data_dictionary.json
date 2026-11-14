@@ -1,0 +1,80 @@
+{
+  "fields": {
+    "T_air_C": {
+      "unit": "degC",
+      "height_above_surface_m": 0.82,
+      "quantity_definition": "air",
+      "scale_factor": 1,
+      "add_offset": 0,
+      "pdf_numeric_column_1based": 1
+    },
+    "RH_air_water_pct": {
+      "unit": "percent",
+      "height_above_surface_m": 0.82,
+      "quantity_definition": "raw liquid-water-reference RH",
+      "scale_factor": 1,
+      "add_offset": 0,
+      "pdf_numeric_column_1based": 2
+    },
+    "RH_air_ice_corrected_pct": {
+      "unit": "percent",
+      "height_above_surface_m": 0.82,
+      "quantity_definition": "author-corrected RH with respect to ice",
+      "scale_factor": 1,
+      "add_offset": 0,
+      "pdf_numeric_column_1based": 3
+    },
+    "T_49cm_C": {
+      "unit": "degC",
+      "height_above_surface_m": -0.49,
+      "quantity_definition": "installed published ice-table probe temperature",
+      "scale_factor": 1,
+      "add_offset": 0,
+      "pdf_numeric_column_1based": 4
+    },
+    "RH_49cm_water_pct": {
+      "unit": "percent",
+      "height_above_surface_m": -0.49,
+      "quantity_definition": "raw liquid-water-reference RH",
+      "scale_factor": 1,
+      "add_offset": 0,
+      "pdf_numeric_column_1based": 5
+    },
+    "RH_49cm_ice_corrected_pct": {
+      "unit": "percent",
+      "height_above_surface_m": -0.49,
+      "quantity_definition": "author-corrected RH with respect to ice",
+      "scale_factor": 1,
+      "add_offset": 0,
+      "pdf_numeric_column_1based": 6
+    },
+    "T_3cm_C": {
+      "unit": "degC",
+      "height_above_surface_m": -0.03,
+      "quantity_definition": "subsurface soil temperature, not radiometric surface temperature",
+      "scale_factor": 1,
+      "add_offset": 0,
+      "pdf_numeric_column_1based": 7
+    },
+    "RH_3cm_water_pct": {
+      "unit": "percent",
+      "height_above_surface_m": -0.03,
+      "quantity_definition": "raw liquid-water-reference RH",
+      "scale_factor": 1,
+      "add_offset": 0,
+      "pdf_numeric_column_1based": 8
+    },
+    "RH_3cm_ice_corrected_pct": {
+      "unit": "percent",
+      "height_above_surface_m": -0.03,
+      "quantity_definition": "author corrected field; retain printed RH_ice <0, -2 header and Methods Appendix definition; not independently recalibrated",
+      "scale_factor": 1,
+      "add_offset": 0,
+      "pdf_numeric_column_1based": 9
+    }
+  },
+  "provenance": "source_page (1-based), source_page_row (1-based data row within page), source_text_line (pypdf extracted text line, not geometric PDF coordinate), published_row_id (printed #)",
+  "time": "Both original labels and original strings retained. Naive ISO columns are parsing conveniences, not UTC.",
+  "missing": "Empty fields and not_published flags for omitted 3cm triad; no finite missing sentinel documented in inspected header.",
+  "units": "degC and percent per EH1 Methods/Table II. Heights/depths and sensor uncertainty are historical published metadata."
+}

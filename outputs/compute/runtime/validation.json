@@ -1,0 +1,25 @@
+{
+  "checks": [
+    {
+      "candidate": "EARTH-UV-001",
+      "tidy_rows": 17705,
+      "monthly_rows": 84,
+      "csv_counts_and_code_hashes": "verified"
+    },
+    {
+      "candidate": "EARTH-002",
+      "tidy_rows": 8922,
+      "monthly_rows": 120,
+      "csv_counts_and_code_hashes": "verified"
+    }
+  ],
+  "tests": {
+    "passed": 15,
+    "command": "python -m unittest discover -s scripts/compute -p 'test_*.py' -v",
+    "log": "runtime/tests.log"
+  },
+  "source_snapshot_base_main": "f6d4c181d9739fe5c74b1c573b59414d63d6ec8e",
+  "branch": "compute/candidate-extraction-20261114",
+  "gpu_used": false,
+  "main_merge_performed": false
+}

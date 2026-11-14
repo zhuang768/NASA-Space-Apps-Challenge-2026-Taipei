@@ -1,0 +1,42 @@
+[
+  {
+    "file": "UnivValley_Dec2009Deployment_HoboInfo.docx",
+    "bytes": 16374,
+    "md5": "7a1d6353d30d724a0512ffb24db36401",
+    "sha256": "9aa5e4a2f04754293466e3f17854ea3c91109059d03023df655c464dfe9fcc0d",
+    "advertised_md5_matches": true,
+    "source": "https://zenodo.org/records/10553882/files/UnivValley_Dec2009Deployment_HoboInfo.docx?download=1"
+  },
+  {
+    "file": "UnivValley_HoboInfo_Dec2010_Update.docx",
+    "bytes": 14786,
+    "md5": "b8eb8ad431f094898dfc2d984e0f5c04",
+    "sha256": "c8b693f3fe406b65a3003419a5cfc1fd1d53e2abcbcfa9913ac1d0bae337d201",
+    "advertised_md5_matches": true,
+    "source": "https://zenodo.org/records/10553882/files/UnivValley_HoboInfo_Dec2010_Update.docx?download=1"
+  },
+  {
+    "file": "2010 activities summaries.pdf",
+    "bytes": 1108938,
+    "md5": "d2184a3cb5941a62c9ff5079289ca766",
+    "sha256": "c859467821beefd4e9ac8a65360a07254b4ac20f6af503d88b05f9839229effe",
+    "advertised_md5_matches": true,
+    "source": "https://zenodo.org/records/10553882/files/2010%20activities%20summaries.pdf?download=1"
+  },
+  {
+    "file": "University Valley Campbell notes Dec 2010.pdf",
+    "bytes": 1524291,
+    "md5": "608feb1d54fa3c2de4265f1d3f96d8b5",
+    "sha256": "311f3dafcb98ee3d15ac49aecc4e1bb1e6419097f021ac596772efbc99d89986",
+    "advertised_md5_matches": true,
+    "source": "https://zenodo.org/records/10553882/files/University%20Valley%20Campbell%20notes%20Dec%202010.pdf?download=1"
+  },
+  {
+    "file": "Marinova2022.pdf",
+    "bytes": 1577252,
+    "md5": "a7af13e3a8fcebc04eea5cd527e7b5fc",
+    "sha256": "3090b004f5d633897e447eb9b58d7e3ab9ab32f47f56d18c50b2331bc0a6e1a1",
+    "advertised_md5_matches": null,
+    "source": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/432141245F43EF744DD8ABDB56580A5F/S0954102022000025a.pdf/climate-and-energy-balance-of-the-ground-in-university-valley-antarctica.pdf"
+  }
+]

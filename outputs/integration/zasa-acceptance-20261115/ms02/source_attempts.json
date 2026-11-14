@@ -1,0 +1,16 @@
+{
+  "scope": "MS-02-E02 only, new source availability and geographic/boundary audit",
+  "main_snapshot_sha": "ae90982abc4ad2fded38dc79c5c786fbadc93f9f",
+  "prior_review": ["main candidates/evidence/prior_work including AV-06/PW-21", "PR22/25 metadata and existing reconciliation", "PR27 MS02_BEACON_EVIDENCE.md"],
+  "attempts": [
+    {"url":"https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2017JF004535", "result":"Full publisher HTML accessible in web tool; direct urllib403"},
+    {"url":"https://gcmd.nasa.gov/r/d/%5BGCMD%5DUW_Dry_Valley_Datalogging", "result":"web502/direct503; do not infer archive absence from this failure"},
+    {"url":"https://cmr.earthdata.nasa.gov/search/collections.json?keyword=UW_Dry_Valley_Datalogging", "result":"HTTP200; exact migrated collection found, online_access_flag false"},
+    {"url":"https://cmr.earthdata.nasa.gov/search/concepts/C1214591010-SCIOPS.umm_json", "result":"HTTP200; metadata only, no collection-level RelatedUrls data link; institutional contact is not a download"},
+    {"url":"https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C1214591010-SCIOPS&page_size=10", "result":"HTTP200; CMR-Hits0, entries empty"},
+    {"url":"https://data.gtn-p.org/api/site/134", "result":"HTTP200; four boreholes and two ALT sites, all zero datasets"},
+    {"url":"https://data.gtn-p.org/api/pt/678", "result":"HTTP200; middle borehole metadata, zero datasets"},
+    {"url":"https://data.gtn-p.org/api/pt/681", "result":"HTTP200; lower borehole metadata, zero datasets"},
+    {"url":"https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2017JF004535&file=jgrf20895-sup-0001-2017JF004535-S01.pdf", "result":"HTTP403; supplement not acquired"}
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "cohen_dataset",
+    "url": "https://dataverse.tdl.org/api/access/datafile/:persistentId?persistentId=doi%3A10.18738%2FT8%2FDUCOYB%2FJ9K4HL&format=original",
+    "status": 403,
+    "bytes": 919,
+    "sha256": "eeaa4b0bae5b61177848abb2c3d9e1a7122d3840d540907331a1a64103e287db",
+    "utc": "2026-11-14T22:54:58.318597+00:00"
+  },
+  {
+    "name": "cohen_headers",
+    "url": "https://dataverse.tdl.org/api/access/datafile/:persistentId?persistentId=doi%3A10.18738%2FT8%2FDUCOYB%2FE4MMUE&format=original",
+    "status": 403,
+    "bytes": 919,
+    "sha256": "187cba69484194b96158f8e16b22ef95c1bd41dc311dbaef73c39a782d509b1b",
+    "utc": "2026-11-14T22:54:58.274571+00:00"
+  },
+  {
+    "name": "cohen_si",
+    "url": "https://dataverse.tdl.org/api/access/datafile/:persistentId?persistentId=doi%3A10.18738%2FT8%2FDUCOYB%2FUEQNS2&format=original",
+    "status": 403,
+    "bytes": 919,
+    "sha256": "664cd5a5e79c15bd5a8c325507818ae1b896b58745e5160cf8fcd2fd5c9187cf",
+    "utc": "2026-11-14T22:54:58.317835+00:00"
+  }
+]

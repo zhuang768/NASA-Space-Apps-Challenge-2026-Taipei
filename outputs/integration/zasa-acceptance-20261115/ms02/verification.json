@@ -1,0 +1,31 @@
+{
+  "checks": {
+    "cmr_exact_legacy_id": true,
+    "cmr_online_access_false": true,
+    "cmr_no_collection_level_data_url": true,
+    "cmr_no_indexed_granules": true,
+    "gtnp_middle_no_datasets": true,
+    "gtnp_lower_no_datasets": true,
+    "gtnp_site_no_borehole_datasets": true,
+    "gtnp_middle_19_6m": true,
+    "gtnp_lower_30_62m": true,
+    "middle_anchor_separation_gt3km": true,
+    "middle_lower_separation_gt5km": true
+  },
+  "checks_passed": 11,
+  "earth_spherical_radius_km": 6371.0088,
+  "coordinate_assumptions": "decimal conversion only; reference datum unspecified; not matching stations on coordinate precision alone",
+  "source_sha256": {
+    "cmr": "de8d1efa3c1a1263adc8380c3510df3e92fd55af16faec2cf7957016b9f1f11f",
+    "cmr_granules.json": "42415a78387acc03fb7b2febf259ad718efb7473dfb36249b0fe2855f9186a8d",
+    "cmr_umm": "39bb1a991ee6b964524a7c7e0fa51de9ccb0d0a41103f73f2b3e4b8104ec3cb6",
+    "gtnp_lower.json": "36943cac8b98fc70a86295b0e2b64c71328dd06e484fb471a1ab02c8ec73c908",
+    "gtnp_middle.json": "bfcc74e457e36bc59d01d4a501570d1fe56eca7dd592f89331eb057615c37317",
+    "gtnp_site": "364e8fbb10436f69f6257611fc800bef6928400eb9069730981f13bbbd6b98fa",
+    "liu2018_new_scope.json": "d01146ba6e02808a4353f1df9127fafb11aa2aa59947fdcfabdfba77779db6e5",
+    "main_candidates.csv": "0ee51879fb0fbe5b2f10e4b609d31700da169f7d6f37a2a1d301964570d9ea96",
+    "main_evidence.csv": "de1cfc3e390e57ecdd63904d68e3c10d14aae08b2ad546c381b38e975c28abe5",
+    "main_prior_work.csv": "2a1f465f17de90fd716f4e90401df67faf53f8f6e706364c6ae363903b6aed99"
+  },
+  "interpretation": "Metadata route is recovered, raw observations are not. Do not promote whole-valley E02 or merge study footprints."
+}

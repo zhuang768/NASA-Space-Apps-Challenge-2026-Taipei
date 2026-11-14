@@ -1,0 +1,3 @@
+# Rebuild / preview
+The releasable static files are `index.html`, `style.css`, `app.js`, `mola.jpg`, `deployment.json`. Their exact values are fixed by the asset hash table in `deployment.json`; use a local HTTP server for verification (e.g. `python3 -m http.server 8000` in this folder).
+Only these five files belong in the public document root. Source notes, internal records and private evidence are not public assets. R2 additionally restores keyboard focus after chart rendering. See R2-PASS.txt for actual browser checks and SOURCE_PROVENANCE.md for source/license attribution; its four original R1 asset hashes are historical rather than the R2 manifest.

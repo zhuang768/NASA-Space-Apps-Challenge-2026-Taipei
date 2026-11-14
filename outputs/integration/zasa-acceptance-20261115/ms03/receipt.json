@@ -1,0 +1,52 @@
+{
+  "input_csv": "/workspace/shared/zasa-finish/integration/ms03-evidence-only/outputs/research/MS-03/completion_20261115/earth_four_dimensions.csv",
+  "input_sha256": "eb39109eab42cfa474e25add464bfdc6da7e1e0b8296eee2c8fc74f28e5454cf",
+  "AD1_row": {
+    "candidate_id": "MS-03-E02",
+    "theme": "terrain",
+    "actual_support": "Published AD1 vectors; metadata envelope 78.184\u201378.188\u00b0N,15.913\u201315.933\u00b0E",
+    "available_evidence": "185 GIS polygons; existing recomputed median equivalent diameter 18.484785m",
+    "evidence_type": "existing vector calculation",
+    "source_url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa/outputs/research/MS-03/morphology/AD1_geometry_summary.json",
+    "source_locator": "n; metrics.equivalent_circle_diameter_m.median",
+    "comparison_rule": "Keep as an existing geometry/method reference; do not invent Mars boundaries",
+    "still_unknown": "Registered closed MS-03 boundaries and comparable raster accuracy",
+    "next_executable_step": "Compare populations only after obtaining adequate inside-ROI imagery and fixing boundary rules",
+    "scope_class": "candidate_vector_support_only",
+    "observation_period": "2009 mapping; source published2020; existing geometry audit2026",
+    "units": "m;count",
+    "instrument_or_resolution": "Published orthoimage sampling0.2m; source raster not reacquired",
+    "precise_evidence_locator": "Base morphology/AD1_geometry_summary.json:185; equivalent-diameter median18.48478542881041m; base evidence EV29 source printed pp199\u2013201,203\u2013204 Tables2\u20134",
+    "evidence_class_and_quality": "Existing vectors and reproduction, not independent field truth",
+    "missing_data_policy": "Source raster accuracy and Mars comparable boundaries unknown"
+  },
+  "warning": "AD1 median inherited from retained repository calculation; not independently recomputed from vectors in this bounded task",
+  "illustrative_sampling_needed_m_for_20pct_diameter_error": 1.8484785428810413,
+  "illustrative_sampling_needed_m_for_10pct_diameter_error": 0.9242392714405206,
+  "results": [
+    {
+      "sampling_case": "CTX_nominal_not_window_calibration",
+      "ground_sampling_m": 6.0,
+      "AD1_median_diameter_m": 18.48478542881041,
+      "samples_across_diameter": 3.080797571468402,
+      "illustrative_two_edge_diameter_error_m": 12.0,
+      "illustrative_relative_diameter_error": 0.6491825423787059
+    },
+    {
+      "sampling_case": "MOC_ground_at_57.5N",
+      "ground_sampling_m": 2.7654000503145135,
+      "AD1_median_diameter_m": 18.48478542881041,
+      "samples_across_diameter": 6.684307909341401,
+      "illustrative_two_edge_diameter_error_m": 5.530800100629027,
+      "illustrative_relative_diameter_error": 0.2992082392262295
+    },
+    {
+      "sampling_case": "MOC_ground_at_58N",
+      "ground_sampling_m": 2.7723858162100714,
+      "AD1_median_diameter_m": 18.48478542881041,
+      "samples_across_diameter": 6.667465011806916,
+      "illustrative_two_edge_diameter_error_m": 5.544771632420143,
+      "illustrative_relative_diameter_error": 0.2999640787703196
+    }
+  ]
+}

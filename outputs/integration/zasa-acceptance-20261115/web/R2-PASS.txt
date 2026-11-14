@@ -1,0 +1,13 @@
+R2 LIVE PREVIEW PASS
+https://028d3ad6-nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/
+
+Live cloud-browser verification:
+- Enter on mean-slope MS-02 chart row: selected MS-02; focus retained on BUTTON, class bar-row selected, aria-label MS-02: 0.302 degrees. Select candidate.
+- Change metric to conditional modeled depth then Enter on MS-01 row: selected MS-01; focus retained on BUTTON, class bar-row selected, aria-label MS-01: 0.427 meters. Select candidate.
+- Explicit MS-03 marker click updates detail, coordinates, pressed states.
+- Enter on MS-02 candidate tab updates detail and pressed states; focus remains candidate tab.
+- MOLA image still loaded (naturalWidth 1800). Desktop visual appearance intact.
+- No production deployment or NASA submission performed.
+- Mobile visual acceptance unverified: no documented viewport emulation/resize API exposed.
+
+This resolves the chart-focus item in CHECKLIST.txt for R2 only. R1 test records remain unchanged.

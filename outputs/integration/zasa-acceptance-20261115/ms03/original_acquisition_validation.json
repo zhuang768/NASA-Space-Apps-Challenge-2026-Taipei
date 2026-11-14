@@ -1,0 +1,21 @@
+{
+  "receipt_byte_checks": 13,
+  "content_gate_unit_tests": [
+    "200 HTML rejected",
+    "403 cannot turn into table",
+    "DataCite is identity only",
+    "JSON not misread CSV",
+    "empty rejected",
+    "PDF magic enforced",
+    "PDF not automatic membership",
+    "tabular text still requires actual header semantics"
+  ],
+  "genuine_original_tables_acquired": 0,
+  "original_rows_parsed": 0,
+  "membership": {
+    "Levy_2009_S1": "unknown",
+    "Dundas_2021_S4": "unknown",
+    "CohenZada_2024": "unknown"
+  },
+  "science_claim": "No local ice, polygon, depth, fraction, or novelty conclusion follows."
+}

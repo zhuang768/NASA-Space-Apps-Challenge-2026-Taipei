@@ -1,0 +1,19 @@
+{
+  "scope": "AD1 Earth thermal/GPR spatial crosswalk only",
+  "status": "not_closed",
+  "primary_sources_checked": [
+    {"url":"https://doi.pangaea.de/10.1594/PANGAEA.921087","locator":"Abstract Act-IWS identity; Event Svalbard2009_Act-IWS","finding":"AD1 = Active Ice-Wedge site Adventdalen; event endpoints latitude 78.184 to 78.188, longitude 15.913 to 15.933. These are not TR sensor or radar-line coordinates."},
+    {"url":"https://onlinelibrary.wiley.com/doi/full/10.1002/ppp.1985","locator":"Section 2; Figure 2 caption; Sections 3.1-3.2; reference 29; Supporting Information listing","finding":"Named TR1/TR2/TR3 monitoring geometry exists in Figure 2. Section 2 explicitly cites Watanabe et al. 2008 for drilling/geophysical evidence at the monitoring site. No numeric TR coordinates or registered radar lines recovered in this bounded pass. Figure 2 registration remains needed."}
+  ],
+  "new_precise_lead": {"reference":"Watanabe T, Matsuoka N, Christiansen HH, Ikeda A. 2008. Sounding ice and soil wedge structures with Ground-penetrating radar. Proceedings Ninth International Conference on Permafrost, volume 2, pp.1933-1938","reason":"Explicit reference 29 of the thermal-monitoring paper, rather than an unrelated Adventdalen pingo radar study.","acquisition":"Full six-page paper not recovered; search located volume frontmatter/title index only. Do not treat that as full-paper reading."},
+  "remaining_missing_records": [
+    "Georeferenced TR1, TR2, TR3 point coordinates, CRS and horizontal accuracy; or adequately controlled registration of ppp.1985 Figures 1-2 to the actual AD1 GIS vectors",
+    "ppp1985-sup-0001-Matsuoka-Appendix S1 and S2 new.docx (17.8KB listed): instrument/channel/depth/calibration and interval metadata; link attempt returned article HTML, not DOCX",
+    "Actual timestamped TR thermal series with channel identifiers, time basis, sensor-depth history, calibration and malfunction flags",
+    "Watanabe et al. 2008 pp.1933-1938 full paper, then original georeferenced GPR line/trace positions, CRS, survey date and positional uncertainty",
+    "GPR radargrams plus antenna frequency, time-zero/processing, velocity or dielectric conversion and borehole validation tied to named wedges",
+    "Crosswalk table linking AD1 polygon IDs to TR point IDs, GPR lines/traces and borehole IDs after registration"
+  ],
+  "spatial_computation": {"performed":false,"reason":"No confirmed TR/radar coordinates or registered geometries recovered. Computing distance from the dataset event envelope or assigning its center to sensors would create false precision."},
+  "decision":"Retain AD1 as geometry/general method reference. Thermal study and its cited radar investigation form a promising named-site chain, but exact AD1-polygon co-location remains unproved. No same-polygon thermal/GPR claim."
+}

@@ -1,0 +1,5 @@
+﻿candidate_id,main_disposition,pr25_disposition,changed_fields
+MS-02-E01,保留,保留,main_environment_differences;disposition_reason;next_verification_step
+MS-02-E02,待補證據,待補證據（原整體候選）；Liu2018具名熱學/材料子案例可作限定文獻參照,research_extent;boundary_basis;available_data;main_environment_differences;disposition;disposition_reason;next_verification_step
+MS-02-E03,降為一般方法參照 (CS-1 loess core retained only as a process analog of aeolian cover + syngenetic ice; the radar link is 證據不足),降為一般方法參照 (CS-1 loess core retained only as a process analog of aeolian cover + syngenetic ice; the radar link is 證據不足),research_extent;testable_physical_processes;next_verification_step
+MS-02-E04,待補證據,待補證據（原河谷候選）；Thomson2012挖除覆土後同線GPR/岩芯子案例可作限定方法參照,research_extent;boundary_basis;available_data;disposition;disposition_reason;next_verification_step

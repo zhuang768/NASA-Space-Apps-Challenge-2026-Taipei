@@ -1,0 +1,6 @@
+issue_id,issue,decision,exact_missing_artifact,claim_not_allowed
+E04-GEO-01,純PythonUTM未獨立驗證,本輪已閉合；九點投影最大差0.000221m以下,無；實地精度另案,不得把數值精度當survey精度
+E04-GEO-02,九點是否完整覆蓋雷達/岩芯測線,維持未知；不按谷名合併,九塊DEM的原始bounds/CRS和雷達線端點/方向/共同基準,不得宣稱同線或不重疊
+E04-GEO-03,16N/16AD高度標籤,保留Table3.1與內文衝突；本輪不裁定,原始DEM/field metadata或作者勘誤,不得把表列高度當新的獨立高程真值
+MS02-GEO-01,正式區域地質單元,固定原USGS擷取polygon與衍生服務均完整包含ROI；mAl在這兩份固定來源成立,若需獨立完整來源認證須補原shapefile.prj與重驗808MBUSGS原ZIP,不得稱本輪重新下載或驗證整ZIP
+MS02-GEO-02,地方地層和含冰量,未閉合；仍不可從區域單元外推,同框材料組成/覆土厚度/界面與獨立冰觀測,不得用mAl充當地方材料或冰真值

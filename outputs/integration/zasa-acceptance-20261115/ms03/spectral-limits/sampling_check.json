@@ -1,0 +1,23 @@
+{
+  "diagnostic": "sampling adequacy QC, NOT ice detection or a material classifier",
+  "anchor_mismatch": [
+    {
+      "product_id": "hsp0002de65_03_if218l_trr3",
+      "anchor_requested_nm": 1525,
+      "actual_median_nm": 1514.16650390625,
+      "median_offset_nm": -10.83349609375,
+      "maximum_absolute_offset_nm": 15.674560546875
+    },
+    {
+      "product_id": "msp00018fda_01_if214l_trr3",
+      "anchor_requested_nm": 1525,
+      "actual_median_nm": 1508.404296875,
+      "median_offset_nm": -16.595703125,
+      "maximum_absolute_offset_nm": 18.635986328125
+    }
+  ],
+  "coincident_nir_visible_IRR1_not_available_in_selected_L_only_inputs": true,
+  "quantitative_frost_cloud_material_discrimination_executed": false,
+  "detection_limit": null,
+  "reason": "No calibrated noise/residual model, validated alternative discrimination, full seasonal sampling or matched footprints. Do not turn numeric valid counts into sensitivity."
+}

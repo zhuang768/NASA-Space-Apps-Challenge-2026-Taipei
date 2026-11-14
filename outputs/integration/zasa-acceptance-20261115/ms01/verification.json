@@ -1,0 +1,54 @@
+{
+  "main_sha": "1506ede572435588eb5e64f95f24639279b77e56",
+  "reviewed_pr27_sha": "3186fca5f968322a7bdaaed83c41d870a1d68c6f",
+  "inputs": [
+    {
+      "filename": "UniversityV_09_10_Hobo_shal8cm_data_good_only_calibrated.txt",
+      "url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Hobo_shal8cm_data_good_only_calibrated.txt?download=1",
+      "bytes": 764068,
+      "md5": "c86d19365c2deb4f1d6e71109cbb18cc",
+      "sha256": "66f01d656e0beec7fc5a09445a46011fd84c6f4c8962ab7e7e028390e5ae2eaf",
+      "retrieval": "Python urllib fresh download for this follow-up; processed author data, not original logger binary"
+    },
+    {
+      "filename": "UniversityV_09_10_Hobo_med22cm_data_good_only_calibrated.txt",
+      "url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Hobo_med22cm_data_good_only_calibrated.txt?download=1",
+      "bytes": 967591,
+      "md5": "71a790d5594bc89e621e3f5766c87948",
+      "sha256": "aa0b7e2668217735d1047c3c0ec21dcd56abbb8697b0c7cd5df2b085d24a3f35",
+      "retrieval": "Python urllib fresh download for this follow-up; processed author data, not original logger binary"
+    },
+    {
+      "filename": "UniversityV_09_10_Hobo_deep36cm_data_good_only_calibrated.txt",
+      "url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Hobo_deep36cm_data_good_only_calibrated.txt?download=1",
+      "bytes": 965061,
+      "md5": "005d3a762723c0654aa3d4c80bebf9c2",
+      "sha256": "b7415cd01d9ed93362a47db923c6eaa7decb3c775ffdd79de5ebefa9b330c9c0",
+      "retrieval": "Python urllib fresh download for this follow-up; processed author data, not original logger binary"
+    },
+    {
+      "filename": "UniversityV_09_10_Campbell_data_good_only_calibrated.txt",
+      "url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Campbell_data_good_only_calibrated.txt?download=1",
+      "bytes": 2673975,
+      "md5": "ae2133eac5c92c695c5f6ef93bcbbd25",
+      "sha256": "c46d93e3dd07c6c91d700a814214716f00caa0d5cc3a520f8969ce0af63ecafd",
+      "retrieval": "Python urllib fresh download for this follow-up; processed author data, not original logger binary"
+    }
+  ],
+  "window": [
+    "2010-11-07T00:00:00",
+    "2010-11-18T00:00:00"
+  ],
+  "same_logger_only": true,
+  "primary_processed_temperature_values": 5016,
+  "prior_amplitude_max_abs_delta_K": 1.2434497875801753e-14,
+  "clock_origin_invariance_max_numerical_error": 4.263256414560601e-14,
+  "ideal_synthetic_discrepancy_h": 1.7763568394002505e-14,
+  "formula_reference": "https://doi.org/10.1029/2002JB002351 section 3.1 equations in paragraph 10",
+  "notes": [
+    "No new field observations; new diagnostic of existing observations.",
+    "No phase between separate U23 loggers or between stations.",
+    "Common constant offset only; clock drift, reset, channel delay and calibration are not verified.",
+    "LODO bounds are sensitivity ranges, not confidence or sensor uncertainty intervals."
+  ]
+}

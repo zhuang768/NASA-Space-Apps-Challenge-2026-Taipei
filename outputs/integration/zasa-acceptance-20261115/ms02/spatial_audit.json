@@ -1,0 +1,63 @@
+{
+  "versions": {
+    "python": "3.12.14",
+    "pyproj": "3.8.0",
+    "PROJ": "9.8.1",
+    "shapely": "2.2.0",
+    "GEOS": "3.14.1"
+  },
+  "input_hashes": {
+    "sources/analog_validation.csv": "d0b29258696cd11d4ce2b479e6debfb35ab1f210db2591e9c05dd3c994774ab9",
+    "sources/arcgis_item.json": "6c32b7d8b36acc0a19c01d124015d6a39875a48a27e8923d2c00779a46b3f9f1",
+    "sources/fresh_arcgis_geology_roi.json": "47174f39454d627379744fe0e30b4c6c66d04d169754b93ae78f22f5866e7b5d",
+    "sources/fresh_arcgis_service.json": "a81e253d11b042027f0a3162b4f32211591ae13a4af6c7ee90878d3070904268",
+    "sources/geology_roi_original.geojson": "d809db0cffc863668e77b9ff0d133b308d8bfd829d286fb66c069b1e85d72277",
+    "sources/main_candidates.csv": "5b7a5afbddf2bf2e3ae2f022f6922f851c67ef82b621fb55d87997995c65f801",
+    "sources/main_footprint.csv": "a487183cea737c039ab0091bd430fe1523fe8af1e034feb0cff5e9ac324aac30",
+    "sources/main_report.md": "97d8018e59e7f9acd03787dca65f68b548db865f89a11c86d3e07b7e9f9d9b15",
+    "sources/pr25_candidates.csv": "0ee51879fb0fbe5b2f10e4b609d31700da169f7d6f37a2a1d301964570d9ea96",
+    "sources/remote_state.json": "463fee3a85630d4ac52d60bd15510bcd17741196efbbbf7d315106aeced22d5d",
+    "sources/sim3292_metadata.txt": "be6a0a23474f1f724a70dafa1cebbab706d9df7058f0bc6377e9ea350ebd3fe6",
+    "sources/verification.json": "e410d8d20abc48404842a9530d47a051cea7877271e5467623f6aac9ada5f62e",
+    "sources/verify_ms02.py": "3e05f6e46cda5bb6a0438389c42d6542e3e187e59a8f81159b2ad83cbe8d38c4"
+  },
+  "table31_hash": "927977dd129aee9b49c88d07a65cc79a8a4dd46d135c3c4c31b00314604a16a9",
+  "haughton": {
+    "crs": "WGS84 / UTM zone16N; EPSG32616; x=easting,y=northing",
+    "primary_retranscription_matches_pinned_nine_pairs": true,
+    "max_legacy_difference_m": 0.0002200519509582369,
+    "max_roundtrip_residual_m": 1.8662795822463695e-09,
+    "point_anchor_bounds": {
+      "south": 75.35883962988554,
+      "north": 75.39368038062311,
+      "west": -89.65474894848741,
+      "east": -89.51057634169022
+    },
+    "point_anchor_span_NS_m": 3888.995855198977,
+    "point_anchor_span_EW_at_mean_lat_m": 4065.826956236206,
+    "nearest_table_reference_to_Thomson": "16N",
+    "nearest_reference_distance_m": 171.6956247705992,
+    "interpretation": "Reference-point span, not full DEM boundaries. Distance does not determine overlap. No same-line join. Ground accuracy not established."
+  },
+  "mars_geology": {
+    "source": "Tanaka2014 SIM3292 original polygon plus freshly retrieved corresponding ArcGIS service",
+    "nominal_roi": [
+      168,
+      52.5,
+      168.5,
+      53
+    ],
+    "objectid": 1252,
+    "unit": "mAl",
+    "description": "Middle Amazonian lowland unit",
+    "original_polygon_valid": true,
+    "fresh_polygon_valid": true,
+    "original_covers_whole_roi": true,
+    "fresh_covers_whole_roi": true,
+    "original_fresh_hausdorff_degrees": 6.840688184124108e-10,
+    "original_intersection_fraction_in_angular_coordinates": 1.0,
+    "fresh_intersection_fraction_in_angular_coordinates": 1.0,
+    "limitation": "Pinned GeoJSON geographic interpretation cross-checked with service104971; original per-shapefile .prj and full ZIP not reacquired. Overall metadata Robinson projection is not a per-file .prj substitute. 1:20,000,000 regional classification, not local composition, cover thickness, ice truth, or landform-name boundary."
+  },
+  "all_bounded_assertions_passed": true
+}

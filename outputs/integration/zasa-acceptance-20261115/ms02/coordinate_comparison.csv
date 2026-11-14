@@ -1,0 +1,4 @@
+comparison,lat_a,lon_a,lat_b,lon_b,spherical_distance_km,interpretation
+Liu2018 printed anchor -> GTNP middle,-77.81666666666666,160.65,-77.84864,160.60186,3.729998235260656,coordinate separation only; not sensor registration or positional uncertainty
+Liu2018 printed anchor -> GTNP lower,-77.81666666666666,160.65,-77.80318,160.71384,2.1203156183414333,coordinate separation only; not sensor registration or positional uncertainty
+GTNP middle -> GTNP lower,-77.84864,160.60186,-77.80318,160.71384,5.696250955624904,coordinate separation only; not sensor registration or positional uncertainty

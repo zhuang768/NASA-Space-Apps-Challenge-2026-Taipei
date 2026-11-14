@@ -1,0 +1,7 @@
+track_a,track_b,reported_min_sample_distance_m,allowed_depth_difference_m,max_depth_gradient_m_per_m,equivalent_angle_deg,scope
+00464501,01983502,9571.6,0.45,4.7014083329850806e-05,0.0026937085504921544,illustrative uniform-gradient budget at minimum sample separation; not measured slope or footprint test
+00464501,01983502,9571.6,8.445695713807336,0.0008823703157055597,0.05055608193695014,illustrative uniform-gradient budget at minimum sample separation; not measured slope or footprint test
+00464501,02004601,562.5,0.45,0.0008,0.04583661383198991,illustrative uniform-gradient budget at minimum sample separation; not measured slope or footprint test
+00464501,02004601,562.5,8.445695713807336,0.015014570157879707,0.8602068642259292,illustrative uniform-gradient budget at minimum sample separation; not measured slope or footprint test
+01983502,02004601,9013.7,0.45,4.992400457081997e-05,0.00286043475592336,illustrative uniform-gradient budget at minimum sample separation; not measured slope or footprint test
+01983502,02004601,9013.7,8.445695713807336,0.0009369843364886045,0.053685232239868555,illustrative uniform-gradient budget at minimum sample separation; not measured slope or footprint test

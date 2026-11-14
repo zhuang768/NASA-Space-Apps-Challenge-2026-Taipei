@@ -1,0 +1,9 @@
+observation,latitude_planetocentric_N,longitude_E,type,source,inside_MS01,inside_MS02,inside_MS03,distance_to_MS01_center_km,distance_to_MS02_center_km,distance_to_MS03_center_km
+Phoenix,68.219,234.249,"Excavated ice; mechanical, spectral and chemical confirmation",https://doi.org/10.1029/2009JE003417,False,False,False,3211.8,2002.3,654.3
+Dundas2021_Table1_A,46.35,176.89,Impact site with icy color; morphology depths not direct ice abundance,https://doi.org/10.1029/2020JE006617,False,False,False,3499.7,502.6,2369.2
+Dundas2021_Table1_B,44.22,164.2,Impact site with icy color; morphology depths not direct ice abundance,https://doi.org/10.1029/2020JE006617,False,False,False,3254.8,528.8,2840.1
+Dundas2021_Table1_C,50.51,265.2,Impact site with icy color; morphology depths not direct ice abundance,https://doi.org/10.1029/2020JE006617,False,False,False,4274.0,3277.8,897.3
+Dundas2021_Table1_D,39.11,190.25,Impact site with icy color; morphology depths not direct ice abundance,https://doi.org/10.1029/2020JE006617,False,False,False,4180.4,1203.8,2245.8
+Dundas2021_Table1_E,47.43,112.01,Impact site with icy color; morphology depths not direct ice abundance,https://doi.org/10.1029/2020JE006617,False,False,False,1504.7,2102.1,3967.6
+Dundas2021_Fig14a,41.4,48.8,Ice-exposing impact in lineated valley fill ESP_046707_2220,https://doi.org/10.1029/2020JE006617,False,False,False,1285.7,4280.2,4745.2
+Dundas2021_Fig14b,41.9,36.4,Ice-exposing impact in lineated valley fill ESP_046747_2220,https://doi.org/10.1029/2020JE006617,False,False,False,1625.5,4534.1,4616.2

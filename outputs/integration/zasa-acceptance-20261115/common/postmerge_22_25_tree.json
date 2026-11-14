@@ -1,0 +1,15 @@
+{
+  "main": "41eb893a2fbe434048ac2fb5a277bddb7d39a2ce",
+  "pr22_exact_paths": true,
+  "pr25_exact_paths": true,
+  "ms03_formal_report": {
+    "path": "docs/research/MS-03/report.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f9164ae35147f6007f486fe69cb93cc41572c2b5",
+    "size": 74658,
+    "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/f9164ae35147f6007f486fe69cb93cc41572c2b5"
+  },
+  "new_subset_paths_absent": true,
+  "unrelated_main_blobs_preserved": true
+}

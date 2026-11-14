@@ -1,0 +1,36 @@
+SHOWCASE ACCEPTANCE CHECK — 2026-11-15
+Scope: independent QA of exact three-site static release. No release edits, deployment, NASA submission, report, slides, or narration authored.
+
+PASS
+[✓] Four release-asset SHA256 values match deployment.json.
+[✓] Local DOM harness: initial state, all six marker/tab controls, two synchronized pressed controls, all four metrics, bar selection.
+[✓] Public staged preview opens without access request:
+    https://22f7673c-nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/
+[✓] Live marker MS-03 → details/coordinates/pressed states update.
+[✓] Live Enter on MS-02 tab → correct selected site.
+[✓] Live depth/thermal/ice selectors → correct labels, values, units, notes.
+[✓] Live Enter on chart row → selected site updates.
+[✓] MOLA image loads, natural width 1800; clean desktop map/detail layout.
+[✓] Desktop no horizontal overflow: scrollWidth 1197, viewport 1212.
+[✓] No site-origin JS errors observed. Browser extension metadata errors excluded.
+[✓] English visible content; no apparent emails, personal identity, credentials, analytics, form submission, external script, or private account links in release.
+[✓] Center-marker versus footprint distinction visible; regional scale and incomplete coverage disclosed.
+[✓] No verified ice, safety certification, novelty, or validated Earth–Mars pairing claimed.
+
+OPEN / POLISH
+[ ] Keyboard chart-row activation replaces focused DOM row and resets focus to BODY. Selection works, but keyboard continuity is impaired. Preserve focus or update rows in place if revising later.
+[ ] Direct TES/SWIM dataset links are absent from this small public interface. Include reproducibility/source references in final project evidence if available; do not imply the model/MOLA links cover every metric.
+[ ] No live mobile emulation in documented cloud-browser API. CSS has 750px one-column media query; mobile visual acceptance NOT verified.
+[ ] No recording capability exposed. Screenshots were observed in cloud-browser tool output; no real video produced or synthetic footage substituted.
+
+DEMO VS FINAL PROJECT
+NASA Space Apps official-repository Navigator answer (Nov13,2026) independently read:
+https://github.com/nasa/spaceapps/discussions/1991
+- Final project may be a publicly accessible website or other host; GitHub not mandatory.
+- Separate project Demo link required: maximum 7 slides OR video LESS THAN 30 seconds.
+- Submit on team page Project tab. Hosting alone is not submission.
+This live interactive site is the final project artifact, not by itself proof of compliance with the separate Demo-format field.
+Official current guide/2026/challenge pages returned 502/timeout during this pass, so fresh English/deadline/challenge-rule verification remains limited. Root's supplied deadline: Nov15 23:59 Asia/Taipei (15:59 UTC). The owner authors formal submission materials.
+
+Artifacts: dom-test.cjs, dom-results.txt, static-results.json, link-results.json.
+Playwright test.cjs is prepared but local Chromium was runtime-blocked (socket not permitted); it did NOT produce successful browser/mobile results.

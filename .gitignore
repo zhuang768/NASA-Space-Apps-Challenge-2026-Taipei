@@ -5,8 +5,16 @@ __pycache__/
 .ruff_cache/
 .DS_Store
 
-# Downloaded and derived data are large; re-create with the scripts.
-data/
+# Earth raw downloads are multi-GB; keep them out of git.
+# Mars raw + processed grids are tracked (each file < 100 MB).
+data/**
+!data/raw/
+!data/raw/mars/
+!data/raw/mars/**
+!data/processed/
+!data/processed/**
+data/raw/earth/
+data/**/*.part
 
 # Credentials
 .netrc

@@ -207,8 +207,8 @@
   "outputs": [
     {
       "path": "docs/research/MS-03/report.md",
-      "bytes": 25529,
-      "sha256": "606d7f8e0df3b69472c336e5aeda2e0fb5c430811b71c3b7bfe8422c06f63e2b"
+      "bytes": 31299,
+      "sha256": "9a0c8b6be1749cfdf8028c623fe3ee328c6f7f3ec9d58179b91b2204678f9495"
     },
     {
       "path": "scripts/research/MS-03/audit_campbell_clock.py",
@@ -302,8 +302,8 @@
     },
     {
       "path": "outputs/research/MS-03/validation.json",
-      "bytes": 2218,
-      "sha256": "f942544f5c6b2182aef745618f2aba62995633f53f152bdd2bc95266bcebf2f8"
+      "bytes": 2545,
+      "sha256": "ed6043c9ae047960fd36d7cf52d389e6e19cf1fe6c1a7d2289c69f46c70bef83"
     }
   ],
   "followup_date_taipei": "2026-11-15",
@@ -335,5 +335,16 @@
     "record": "uv_w/clock_search_followup.json",
     "root_cause": "unknown",
     "no_new_clock_inputs": true
+  },
+  "clock_handoff": {
+    "date": "2026-11-15",
+    "recipients": [
+      "main research conversation",
+      "GPU"
+    ],
+    "location": "docs/research/MS-03/report.md",
+    "status": "prepared in PR7;not merged",
+    "clock_correction": false,
+    "hobo_alignment": false
   }
 }

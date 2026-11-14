@@ -60,5 +60,16 @@
     "root_cause": "unknown",
     "clock_correction": false,
     "hobo_alignment": false
+  },
+  "clock_handoff": {
+    "date": "2026-11-15",
+    "basis_commit": "79072555dd90e78c3810d9e1d2ac5ec8f970c3b8",
+    "checks": [
+      "report relative file links exist",
+      "all uv_w files byte-identical to prior commit",
+      "existing validate.py passed"
+    ],
+    "new_analysis": false,
+    "hobo_alignment": false
   }
 }

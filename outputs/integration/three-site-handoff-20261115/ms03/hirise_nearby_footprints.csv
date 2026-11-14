@@ -1,0 +1,3 @@
+product,observation,footprint_wkt,easternmost_deg_from_wkt,utc_start_as_supplied,native_map_scale_m_per_pixel,intersects_roi,file_label_url
+PSP_006864_2380_COLOR,PSP_006864_2380,"POLYGON ((241.761 57.2514, 241.722 57.2486, 241.596 57.7673, 241.635 57.7701, 241.761 57.2514))",241.761,2008-01-13T07:42:38.431,0.5,false (longitude separation),https://hirise.lpl.arizona.edu/PDS/RDR/PSP/ORB_006800_006899/PSP_006864_2380/PSP_006864_2380_COLOR.LBL
+PSP_006864_2380_RED,PSP_006864_2380,"POLYGON ((241.838 57.2566, 241.645 57.2431, 241.518 57.7617, 241.713 57.7753, 241.838 57.2566))",241.838,2008-01-13T07:42:38.542,0.5,false (longitude separation),https://hirise.lpl.arizona.edu/PDS/RDR/PSP/ORB_006800_006899/PSP_006864_2380/PSP_006864_2380_RED.LBL

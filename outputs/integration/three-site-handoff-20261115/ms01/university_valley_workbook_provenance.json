@@ -1,0 +1,76 @@
+{
+  "sources": {
+    "hobos.xlsx": {
+      "url": "https://zenodo.org/records/10553882/files/UV%202009_2011%20All%20Hobos.xlsx?download=1",
+      "bytes": 1767387,
+      "provider_md5": "7ab4bf2692ef83c5a3d4a5347b8a71c8",
+      "sha256": "dcca997245bc2f24868768763243277ebf5d32cfaf257da01367700b6194cc6c"
+    },
+    "shal8.txt": {
+      "url": "https://zenodo.org/records/10553882/files/UniversityV_09_13_Hobo_shal8cm_data_good_only_calibrated.txt?download=1",
+      "bytes": 2396778,
+      "provider_md5": "b5aed600dbdfc30d44c96720ddf34ae4",
+      "sha256": "c0de0e3a5027a3b7d3e29436bd00d788e4cf73c1019a475edf4e3d8a2b0d6844"
+    },
+    "med22.txt": {
+      "url": "https://zenodo.org/records/10553882/files/UniversityV_09_13_Hobo_med22cm_data_good_only_calibrated.txt?download=1",
+      "bytes": 3029182,
+      "provider_md5": "87a4f1d870b50c3e8cb508d827d35cee",
+      "sha256": "33e3aef6d1ca4550eccb143fd37b5bccb46b8159809a166251fc5ce437631a56"
+    },
+    "deep36.txt": {
+      "url": "https://zenodo.org/records/10553882/files/UniversityV_09_13_Hobo_deep36cm_data_good_only_calibrated.txt?download=1",
+      "bytes": 3026430,
+      "provider_md5": "ce95463da241db7209c49b07ff4772df",
+      "sha256": "7a76d34eb2f92b0687d8a2bf484386dd51e28b029991520e4f1f7927ccf8fe98"
+    }
+  },
+  "worksheet": "UniversityV_09_13_Hobo_shal8cm_",
+  "worksheet_count": 1,
+  "worksheet_size": [
+    27398,
+    30
+  ],
+  "formulas_vapour_example": "= 3495100000000*EXP(-6137.16644/(C3+273.15))/(8.316*(273.15+C3)) * 100/100",
+  "formula_first_year_summary": null,
+  "w_ac_ad_label": [
+    "42 cm",
+    "Marinova et al. 2022"
+  ],
+  "w_ac_ad_nonempty_cell_rows": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "w_ac_ad_header_and_summary": [
+    [
+      "42 cm",
+      "Marinova et al. 2022"
+    ],
+    [
+      "Tsurf",
+      "Tice"
+    ],
+    [
+      -25.8,
+      -24.1
+    ],
+    [
+      7.5,
+      -9.3
+    ],
+    [
+      -47.8,
+      -34.8
+    ],
+    [
+      null,
+      -22.3
+    ]
+  ],
+  "printed_time_basis": "GMT+13:00 as labelled in both processed exports, not verified physical time",
+  "notes": "Row matching is workbook-vs-text for each station only; not synchronizing stations or loggers."
+}

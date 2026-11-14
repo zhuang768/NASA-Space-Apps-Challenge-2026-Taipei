@@ -1,0 +1,4 @@
+site,lat_deg_N,lon_deg_E,box_area_km2,TES_valid_cells,TES_nominal_cells,MCS_nearest_grid_center_distance_km,MY34_dust_nearest_grid_center_distance_km,MCS_paired_bins,MCS_expected_pairs,MCS_paired_fraction,PQ19_conditional_model_depth_m,PQ19_only_consistency_arithmetic,PQ19_only_if_depth_plus_0p05m,PQ19_only_if_depth_minus_0p05m,nominal_shallow_composite_term_if_all_factors_present,nominal_term_change_if_depth_plus_0p05m,nominal_term_change_if_depth_minus_0p05m,nominal_1to5m_PQ19_direct_weight
+MS-01,56.75,72.75,481.604135,73,100,127.883744,78.125767,69,288,0.239583,0.426995635,0.365022,0.115022,0.615022,0.050697,-0.034722,0.034722,0
+MS-02,52.75,168.25,531.671871,93,100,146.708952,17.335192,75,288,0.260417,0.4499824941,0.250088,0.000088,0.500088,0.034734,-0.034722,0.034722,0
+MS-03,57.75,242.25,468.710798,79,100,150.111714,50.273019,60,288,0.208333,0.103161566,1.000000,1.000000,1.000000,0.138889,0.000000,0.000000,0

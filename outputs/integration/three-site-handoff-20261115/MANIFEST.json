@@ -1,0 +1,161 @@
+{
+  "source_main": "1506ede572435588eb5e64f95f24639279b77e56",
+  "scope": "supplemental evidence and offline preview, not production or submission",
+  "files": [
+    {
+      "path": "README.md",
+      "size": 4957,
+      "sha256": "d824e9cf310b8f8b3800ea50e06fc93c90d80579787e448fb10bd91a240dbe03"
+    },
+    {
+      "path": "SUBMISSION_CHECKLIST.md",
+      "size": 1814,
+      "sha256": "6e059200b1b04459a5d2bada7f003e5d34174d815892c145f3141ca8996abaf8"
+    },
+    {
+      "path": "cross-site/README.md",
+      "size": 2392,
+      "sha256": "66ee223684fa9bfe33cd6510cfe745bc043fa379a4c23582ccee9d26c98b9281"
+    },
+    {
+      "path": "cross-site/candidates_source.csv",
+      "size": 5897,
+      "sha256": "83a03d1f4273fa7c45c0d22b5c29a8b8cfc0544e481d5f2bbca2c85812534c4e"
+    },
+    {
+      "path": "cross-site/cross_site_checks.csv",
+      "size": 930,
+      "sha256": "a5f76051d278a51b1df61a9919b2186d7c61011b9964ec89b65aa3a0859de019"
+    },
+    {
+      "path": "cross-site/model_source.csv",
+      "size": 1901,
+      "sha256": "639e447ed2f074a162f73a2b804c198b7b2142945bb7530f7b3c253c780295fa"
+    },
+    {
+      "path": "cross-site/reproduce.py",
+      "size": 3099,
+      "sha256": "154cdd9a2fa7a2f91e0fa6c06a1bd407e2e9996c2c33ef87c52bc51ea0b7b3df"
+    },
+    {
+      "path": "cross-site/targets_source.json",
+      "size": 3434,
+      "sha256": "388ca89110b2a8fbb4fc6fa403994ab54cd193fd23eefd8aa5987a75e3255ba5"
+    },
+    {
+      "path": "engineering/README.md",
+      "size": 3171,
+      "sha256": "097a8b5b235cb79c136afbe7109645a9834a6f445dc18d838dadf9a780819a5e"
+    },
+    {
+      "path": "engineering/build_preview.py",
+      "size": 5231,
+      "sha256": "c2372ec132426bc6850d302b2b6d2ebf29f62ebff926ebde29084aa41aaa667e"
+    },
+    {
+      "path": "engineering/final_candidates.csv",
+      "size": 5897,
+      "sha256": "83a03d1f4273fa7c45c0d22b5c29a8b8cfc0544e481d5f2bbca2c85812534c4e"
+    },
+    {
+      "path": "engineering/index.html",
+      "size": 5921,
+      "sha256": "9d3cc64a32004fd79fa8264b9c347004f787d007c3d074d522f0c2a8fee3ff54"
+    },
+    {
+      "path": "ms01/README.md",
+      "size": 7236,
+      "sha256": "0269c3f32cf9a31205f7e90fb882c039436a49d788b5446677c4b6be7c566368"
+    },
+    {
+      "path": "ms01/university_valley_coordinate_crosscheck.csv",
+      "size": 2571,
+      "sha256": "cd023ebd1e396619ca20165bc94c1d140ee0bcf4bfbb086284373508ad48be60"
+    },
+    {
+      "path": "ms01/university_valley_coordinate_provenance.json",
+      "size": 752,
+      "sha256": "68ef1cbaca53a8e80c38357ed09275837be03d78c2d53a3f8ceef74a398d125a"
+    },
+    {
+      "path": "ms01/university_valley_workbook_comparison.csv",
+      "size": 1063,
+      "sha256": "c0bdefc19926bed23d86ebb46b128aaa5350ef2bb83fb884d8afeb9148dfbad1"
+    },
+    {
+      "path": "ms01/university_valley_workbook_differences.csv",
+      "size": 75,
+      "sha256": "baba6fca0286806e6f6b9b79c7915d5f88dcfdeb2330b689b1697d5fe107e41d"
+    },
+    {
+      "path": "ms01/university_valley_workbook_provenance.json",
+      "size": 2188,
+      "sha256": "27f8898cf9a2a15a11a1f47c8c76c0d2b51ba10904de11129e782f181022672d"
+    },
+    {
+      "path": "ms01/verify_uv_survey.py",
+      "size": 3891,
+      "sha256": "776a4d28bf4451b2348a47d3cc1c4591f623ec34a75ea6b0f076d54bc68ae770"
+    },
+    {
+      "path": "ms01/verify_uv_workbook.py",
+      "size": 6759,
+      "sha256": "f7f5da9eb0a6957c5757dece3db7f0f44598799899150737eaee89ce7952248c"
+    },
+    {
+      "path": "ms02/MS02_BEACON_EVIDENCE.md",
+      "size": 2609,
+      "sha256": "f52cb97c29102f77f930f61a6a6b3c7f655f704d1ba7d439e614ef8430f576d9"
+    },
+    {
+      "path": "ms02/MS02_HAUGHTON_EVIDENCE.md",
+      "size": 5738,
+      "sha256": "103d651bfda663c9b25986022ba3cfc034c3ba14763fbabaadcd66685717b441"
+    },
+    {
+      "path": "ms02/ms02_haughton_audit.py",
+      "size": 2002,
+      "sha256": "1cce62aa87681ecee253e98ebeaf613555f5e38d99079f7d66b54d04bb65e9ba"
+    },
+    {
+      "path": "ms02/ms02_haughton_calculations.csv",
+      "size": 946,
+      "sha256": "b3950d33902084e8391f74a034c5da13a974586d35277bd9d68b6a7f43ec19df"
+    },
+    {
+      "path": "ms03/README.md",
+      "size": 4901,
+      "sha256": "d898ba81d3c9767daa0a66d48492c7e47520843b5e512a1ae37f931705100623"
+    },
+    {
+      "path": "ms03/audit_ms03_coverage.py",
+      "size": 6123,
+      "sha256": "73fb9b2dfb24b3e6bb9cbaf74d42d8d926acc4013641f3c3d6ba0d77abed5ce7"
+    },
+    {
+      "path": "ms03/coverage_input.json",
+      "size": 5387,
+      "sha256": "0fbe8b301c740cf09c325c435ece008bbd0e13425a9e10281c3a2f1c4c448fe9"
+    },
+    {
+      "path": "ms03/coverage_summary.json",
+      "size": 2410,
+      "sha256": "74b0aca036e97f79258ea018178d38ea06540c2a2396cb3dfe7e4a94f6ab1efe"
+    },
+    {
+      "path": "ms03/ctx_review_area.csv",
+      "size": 1170,
+      "sha256": "cc4d2a2cd6da87761bb68a811025ce0b9518a5ccaa9dbf4451a48f2fe0a297f4"
+    },
+    {
+      "path": "ms03/hirise_nearby_footprints.csv",
+      "size": 747,
+      "sha256": "09bb87e2fe157cfbc1d6bd9559cd39bbddf7c19044dd91208cd530b3b216c114"
+    },
+    {
+      "path": "ms03/hirise_query_results.csv",
+      "size": 990,
+      "sha256": "2124f6697786470f68a9dfff7b1f0ed9a6f55dc52050ff14d9dfb961c0f68864"
+    }
+  ]
+}

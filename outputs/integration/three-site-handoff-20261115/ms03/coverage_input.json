@@ -1,0 +1,167 @@
+{
+  "ctx_manifest_git_blob": "dd69a638dc40a0f3f40a8a14a37034233ea0e9de",
+  "moc_summary_git_blob": "d1e9060629cfdd6b4eefe2e131183aaf9c654539",
+  "samples": [
+    {
+      "sample_id": "C",
+      "overlay": {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/13/1416/5713.png",
+        "bounds": {
+          "north": 57.75107598132101,
+          "south": 57.72761921621492,
+          "east": -117.7294921875,
+          "west": -117.7734375
+        }
+      },
+      "acquired": true
+    },
+    {
+      "sample_id": "NW",
+      "overlay": {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/13/1413/5719.png",
+        "bounds": {
+          "north": 57.89149735271031,
+          "south": 57.8681317633288,
+          "east": -117.861328125,
+          "west": -117.9052734375
+        }
+      },
+      "acquired": true
+    },
+    {
+      "sample_id": "NE",
+      "overlay": {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/13/1419/5719.png",
+        "bounds": {
+          "north": 57.89149735271031,
+          "south": 57.8681317633288,
+          "east": -117.59765625,
+          "west": -117.6416015625
+        }
+      },
+      "acquired": true
+    },
+    {
+      "sample_id": "SW",
+      "overlay": {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/13/1413/5708.png",
+        "bounds": {
+          "north": 57.63363992885697,
+          "south": 57.61010702068388,
+          "east": -117.861328125,
+          "west": -117.9052734375
+        }
+      },
+      "acquired": true
+    },
+    {
+      "sample_id": "SE",
+      "overlay": {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/13/1419/5708.png",
+        "bounds": {
+          "north": 57.63363992885697,
+          "south": 57.61010702068388,
+          "east": -117.59765625,
+          "west": -117.6416015625
+        }
+      },
+      "acquired": true
+    }
+  ],
+  "moc": {
+    "product_id": "S1700607_NA",
+    "raw_product_id": "S17/00607",
+    "source_sha256": "53e1e2ebeeb7873b078f8daf1701b81904fba12b7b11df6ebd561af50cd293f3",
+    "source_label_sha256": "bb2d0b283e54ee84dd3c453d0701e0787cea3f5637e5399570c82470e1e45375",
+    "utc_start": "2006-04-08T00:22:40.473",
+    "utc_stop": "2006-04-08T00:22:50.285",
+    "projection": "spherical north polar stereographic",
+    "radius_m": 3396190,
+    "centre_longitude_deg_E": 242,
+    "map_grid_m": 3.000339463,
+    "native_downtrack_summing": 3,
+    "native_crosstrack_summing": 3,
+    "map_grid_is_effective_resolution": false,
+    "latitude_convention": "planetocentric",
+    "longitude_convention": "east-positive",
+    "producer_quality_id": "1000000000",
+    "producer_quality_interpretation": "complete C-kernel; no extraction error or repair reported; not proof of feature detectability",
+    "original_dimensions": [
+      10565,
+      2728
+    ],
+    "roi_valid_nonzero_pixel_centres": 9272742,
+    "source_valid_pixel_coordinate_extrema": [
+      57.63202293739351,
+      58.125931027488434,
+      242.25751097189888,
+      242.49131468977293
+    ],
+    "label_coordinate_extrema": [
+      57.6316049,
+      58.126225,
+      242.2534199,
+      242.4992481
+    ],
+    "roi_crop_0based_inclusive": [
+      2689,
+      10564,
+      385,
+      2727
+    ],
+    "tiles": [
+      {
+        "id": 1,
+        "source_rows_0based_inclusive": [
+          3614,
+          4125
+        ],
+        "source_columns_0based_inclusive": [
+          899,
+          1410
+        ],
+        "latitude_deg_N": 57.94489824242618,
+        "longitude_deg_E": 242.35778560743228,
+        "selection": "fixed along-strip fraction; nearest valid centre, not feature-based",
+        "valid_roi_pixels": 262144,
+        "display": "native 8-bit source DN; zero is masked outside-ROI/no-data"
+      },
+      {
+        "id": 2,
+        "source_rows_0based_inclusive": [
+          6370,
+          6881
+        ],
+        "source_columns_0based_inclusive": [
+          1313,
+          1824
+        ],
+        "latitude_deg_N": 57.815948412100106,
+        "longitude_deg_E": 242.39259534967286,
+        "selection": "fixed along-strip fraction; nearest valid centre, not feature-based",
+        "valid_roi_pixels": 262144,
+        "display": "native 8-bit source DN; zero is masked outside-ROI/no-data"
+      },
+      {
+        "id": 3,
+        "source_rows_0based_inclusive": [
+          9126,
+          9637
+        ],
+        "source_columns_0based_inclusive": [
+          1720,
+          2231
+        ],
+        "latitude_deg_N": 57.687073522248184,
+        "longitude_deg_E": 242.42650073357086,
+        "selection": "fixed along-strip fraction; nearest valid centre, not feature-based",
+        "valid_roi_pixels": 262144,
+        "display": "native 8-bit source DN; zero is masked outside-ROI/no-data"
+      }
+    ],
+    "geometry_measurement": "not performed: no validated closed polygon boundaries",
+    "morphology": "unknown; no automated morphology classification; separate visual-review record required",
+    "ice_presence": "unknown",
+    "processing": "Original RDR is destriped, histogram-scaled and map-projected. This script masks and crops only; it does not enhance or add spatial detail."
+  }
+}

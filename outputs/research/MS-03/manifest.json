@@ -207,8 +207,23 @@
   "outputs": [
     {
       "path": "docs/research/MS-03/report.md",
-      "bytes": 18137,
-      "sha256": "c3895c74c343b5f3905f406254790de94d33595a392ef2ca986d185d1a180f3c"
+      "bytes": 22307,
+      "sha256": "089f4faec30b6ddaa301d012080908cf7f40c734af7685fe62d3f8a249fbba9a"
+    },
+    {
+      "path": "scripts/research/MS-03/audit_campbell_clock.py",
+      "bytes": 2754,
+      "sha256": "5aec914605c66e7b1f2c38293c633381a8344235885e2a0f240cf32ba202d5dd"
+    },
+    {
+      "path": "scripts/research/MS-03/inspect_uv_w.py",
+      "bytes": 8503,
+      "sha256": "ac287fe9be19d54526416734cde176855f77b4242942084fcce60bff3f73908b"
+    },
+    {
+      "path": "scripts/research/MS-03/validate.py",
+      "bytes": 4608,
+      "sha256": "03a67857e976f28a0f43366596fefc6be607914ace6b8d630cd45667d2fdca00"
     },
     {
       "path": "outputs/research/MS-03/candidates.csv",
@@ -237,13 +252,23 @@
     },
     {
       "path": "outputs/research/MS-03/search_log.csv",
-      "bytes": 4298,
-      "sha256": "63f19ab043e34ece6456e9053a5eab25407df12d5802c78fc0e71b79b59a8ccd"
+      "bytes": 4931,
+      "sha256": "e0552a1544dad085d156f4d320f6fd873bfc41e21a83849cab288b2d6b8e370c"
     },
     {
       "path": "outputs/research/MS-03/sources.json",
       "bytes": 5241,
       "sha256": "01b1256e0ed89c2745947f333f08be06ad468661b669d56e5bd5d6c7ef7fd2ec"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/campbell_clock_audit.json",
+      "bytes": 1224,
+      "sha256": "41da5b4508cc37e9b0c342ca37d1785a99b0dac49e5ff11829a482648792e376"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/campbell_clock_boundary.csv",
+      "bytes": 892,
+      "sha256": "8da0c5151702ea58d2a7c2b76235cd6fb0e3cfd5ac7678ad18e791d89dd85f51"
     },
     {
       "path": "outputs/research/MS-03/uv_w/download_manifest.json",
@@ -272,18 +297,8 @@
     },
     {
       "path": "outputs/research/MS-03/validation.json",
-      "bytes": 1383,
-      "sha256": "5c8a19dedafc9deb2991e8f414e52071a6077ce8191a8a6826caad054df09b94"
-    },
-    {
-      "path": "scripts/research/MS-03/inspect_uv_w.py",
-      "bytes": 8503,
-      "sha256": "ac287fe9be19d54526416734cde176855f77b4242942084fcce60bff3f73908b"
-    },
-    {
-      "path": "scripts/research/MS-03/validate.py",
-      "bytes": 4608,
-      "sha256": "03a67857e976f28a0f43366596fefc6be607914ace6b8d630cd45667d2fdca00"
+      "bytes": 1838,
+      "sha256": "70cd13a010245b3487f0bb2b154503c5a73edbea465dc80e96271c947805638b"
     }
   ],
   "followup_date_taipei": "2026-11-15",
@@ -299,5 +314,15 @@
     "parser": "scripts/research/MS-03/inspect_uv_w.py",
     "clock_status": "Campbell decimal day / printed timestamp discontinuity unresolved;HOBO no time conversion",
     "main_integration": false
+  },
+  "campbell_clock_followup": {
+    "date": "2026-11-15",
+    "status": "boundary association confirmed;root cause unresolved",
+    "correction_applied": false,
+    "hobo_alignment": false,
+    "outputs": [
+      "uv_w/campbell_clock_audit.json",
+      "uv_w/campbell_clock_boundary.csv"
+    ]
   }
 }

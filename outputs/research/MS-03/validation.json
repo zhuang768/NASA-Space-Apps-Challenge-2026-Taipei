@@ -30,5 +30,22 @@
     "gap filling or new calibration",
     "ice-depth/TI inversion",
     "causal or performance validation"
-  ]
+  ],
+  "campbell_clock_followup": {
+    "date": "2026-11-15",
+    "passed": [
+      "pinned MD5",
+      "one offset transition",
+      "eight all-channel NaN rows",
+      "RECORD33305 to33314",
+      "HOBO tidy and2010summary byte-identical to prior commit",
+      "existing validate.py passed"
+    ],
+    "not_validated": [
+      "correct timestamp basis",
+      "author code execution",
+      "2012 clock history"
+    ],
+    "correction_applied": false
+  }
 }

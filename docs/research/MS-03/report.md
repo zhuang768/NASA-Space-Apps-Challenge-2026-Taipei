@@ -2,6 +2,37 @@
 
 Team zasa｜2026-11-14｜MS03-EARTH-ANALOG-20261114-v1
 
+## 2026-11-15續查：Campbell −1／−5小時差異與作者補列紀錄
+
+本節接續`89ff46f`，只查時間欄處理。**四小時差異與作者記載的8筆NaN補列，在匯出檔中發生於同一邊界；尚未取得校準程式，根因與正確時刻仍未確認。** 保留兩個原時間欄，不修正、不轉UTC或太陽時、不與HOBO配時。這裡的−1／−5小時是「小數日減印刷日期」的欄位差，並非已確認時區。
+
+### 原列證據與可重現核對
+
+輸入仍為[Zenodo固定版本10553882](https://zenodo.org/records/10553882)的`UniversityV_09_13_Campbell_data_all_calibrated.txt`，MD5 `333b498382376f3bb034e68862bede70`。全55,346列僅找到一次偏移轉換；小數日以2009-01-01為計算基準，偏移四捨五入至0.01小時，以容納小數日列印精度。
+
+| 原檔實體行（含4行標頭） | 原日期欄 | 原小數日 | RECORD | 可確認內容 |
+|---|---|---|---|---|
+| 50810 | 2012-10-28 06:00:00 | 1396.2083 | 33305 | 邊界前最後一列，欄位差約−1小時 |
+| 50811–50818 | 2012-10-28 10:30:00至14:00:00 | 1396.2292至1396.3750 | 全NaN | 連續8列，RECORD及全部感測欄皆NaN；欄位差約−5小時 |
+| 50819 | 2012-10-28 14:30:00 | 1396.3958 | 33314 | 有效RECORD恢復，偏移仍約−5小時 |
+
+邊界日期欄跨270分鐘，小數日僅跨約30.096分鐘（四位小數造成的列印捨入）；RECORD由33305至33314。這些證據確認兩個時間表示在補列邊界後不一致，**無法單憑匯出檔決定應修日期欄或小數日**，也不能把270分鐘逕稱為真實缺測時間。
+
+核對輸出：[原列邊界表](../../../outputs/research/MS-03/uv_w/campbell_clock_boundary.csv)、[機器可讀查核](../../../outputs/research/MS-03/uv_w/campbell_clock_audit.json)。[核對程式](../../../scripts/research/MS-03/audit_campbell_clock.py)只讀Campbell檔，不接受HOBO輸入；沒有產生校正時序。
+
+### 作者程式、部署紀錄與取得限制
+
+- **作者QA正文已讀**：同紀錄中的`University Valley weather station data check 2011-2013.docx`，段落開頭「There is some weird missing data in Oct 2012」記載缺8筆／4小時，作者補入缺少時間並將感測欄設NaN。正文另明確指名`University_Valley_Met_Station_Calibration_all.m`用於校準與移除表面尖峰。它未交代補列程式、每列日期或時鐘修正方式；不能據此宣稱已讀到程式或確認某行bug。DOCX封裝未含嵌入附件。
+- **部署PDF已讀**：`University Valley Campbell notes Dec 2010.pdf` p.1記載2009-12-02設定logger為紐西蘭當地時間，並提到與當地標準太陽時間差一小時。這是初始部署脈絡，不能解釋2012年的四小時突變；本輪未找到2012年該次校時／重設／下載操作紀錄。PDF另提及`University_Valley_Met_Station_Calibration.xls`與`UniversityValley_MetStation.CR1`，尚未取得。
+- **固定版本清單已核對**：[API](https://zenodo.org/api/records/10553882)列28檔，沒有`.m`、`.CR1`或`.xls`檔（有另一份`.xlsx` HOBO表，不能當作所需Campbell程式）。這只限定該版本清單，不代表作者其他地方從未公開。
+- **2026-11-15補搜**：精確查詢`"University_Valley_Met_Station_Calibration_all.m"`與`"UniversityValley_MetStation.CR1"`，本次搜尋未找到可取得原碼。未向作者發信，也未將無結果寫成完整排除。
+
+### 目前判斷與交接
+
+**可說**：時標四小時差異與已記載的補NaN操作具有直接邊界對應；資料處理造成時間向量錯位是值得優先查證的假說。**不能說**：已證實是夏令時間、logger跳時、MATLAB特定bug，或將某段平移四小時就已完成校準。
+
+需要主要對話／資料持有人提供：①實際執行的`University_Valley_Met_Station_Calibration_all.m`及相依版本；②2012-10-28前後未處理Campbell檔；③當次logger時鐘、下載與重設紀錄；④小數日起算及時間向量建立規則。取得後才可逐步重現補列，決定修正哪個欄位。GPU暫不跨儀器join；HOBO原有2010年站內描述維持原樣，不能用其曲線相似性代替時標真值。
+
 ## 2026-11-15續查：W站時序已取得，先完成地球站內描述
 
 本節接續研究commit `89deea4`，更新E01資料可取得性；下方2026-11-14「尚未取得時序」保留為初版紀錄，以本節及新版候選表為準。E02、MS-03科學數值與原先例判定均未改，也未合併main。

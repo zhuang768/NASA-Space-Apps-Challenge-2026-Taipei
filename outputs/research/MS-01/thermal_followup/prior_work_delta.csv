@@ -1,0 +1,5 @@
+source_id,prior_answer,prior_scope_data,this_work_addition,contribution_boundary
+U1,振幅/相位與κ方法已在Appendix Method2 Eq18–20做過,既有年度多深度序列/理想化或能量模型,本次用固定11天24h分量、同logger比值及留一日敏感度明列可識別性限制,描述性重算與應用；非新演算法/新κ物性
+U1,冰深、風/輻射/物性敏感性已研究,同谷已知界面及能量收支情境,本次未重現原三年能量模型；用觀測/替代解釋表判斷MS-01哪些訊號仍不足,不重報覆土或淺冰機制作新發現
+D09;D10;UD,原作者已有部署、維護與校準/篩選匯出,原始公開來源,本次提供explicit serial/channel/coordinate-version crosswalk及精確source-row小型分析交付,來源核對與新任務的判讀帳；未聲稱首次發現作者錯誤
+B1,塊狀埋冰FDM/FVM和土樣物性已研究,1999–2011逐時剖面及實驗/模型物性,本次僅界定其相對UV的補充價值，未取得其raw/未重跑,文獻級對照；非雙場址性能驗證

@@ -51,8 +51,8 @@ def main():
     assert all(x['match'] for x in checks)
     (OUT/'inputs/remote_availability.json').write_text(json.dumps(observed,ensure_ascii=False,indent=2)+'\n')
     files=[]
-    for p in sorted([ROOT/'docs/research/MS-01/report.md']+list(OUT.rglob('*'))):
-        if not p.is_file() or '__pycache__' in p.parts or p.name in {'manifest.json','validation.json'}:continue
+    for p in sorted(list((ROOT/'docs/research/MS-01').rglob('*'))+list(OUT.rglob('*'))):
+        if not p.is_file() or '__pycache__' in p.parts or p in {OUT/'manifest.json',OUT/'validation.json'}:continue
         files.append(dict(path=p.relative_to(ROOT).as_posix(),bytes=p.stat().st_size,sha256=sha(p)))
     manifest=dict(schema_version='MS01-EARTH-ANALOGS-v1',research_date='2026-11-14',timezone='Asia/Taipei',
                   team='zasa',mars_id='MS-01',baseline_sha=BASE,baseline_tree=remote['sha'],
@@ -62,7 +62,7 @@ def main():
                   nominal_bounds={'south':56.5,'north':57,'west':72.5,'east':73},
                   candidate_ids=['MS-01-E01','MS-01-E02'],
                   delivery_paths=['docs/research/MS-01/','outputs/research/MS-01/'],files=files,
-                  hash_scope='manifest.json and validation.json excluded to avoid self-reference; validation rechecks all listed hashes',
+                  hash_scope='Only root outputs/research/MS-01/manifest.json and validation.json excluded to avoid self-reference; nested follow-up manifests/verification and all reports are included.',
                   sources_file='outputs/research/MS-01/sources.json',
                   source_acquisition={'mars':'11 existing local raw files match remote baseline source hashes; re-extracted this task',
                     'university_valley':'Existing author-processed calibrated bytes; publisher MD5 independently checked online; this task calculated summaries and warm-window harmonic fit',
@@ -82,6 +82,9 @@ def main():
                   scope_stop='Two evidence-supported candidates and complete bounded delivery; no main merge, deployment, further research expansion or teammate dependency.',
                   licensing='Underlying sources retain their terms. Dust-derived summaries follow Montabone CC-BY-SA-3.0; no new project-wide license.',
                   execution='Mac CPU; Python/numpy/pandas/xarray/matplotlib; no new field observations, no model training.')
+    followup=OUT/'thermal_followup/manifest.json'
+    if followup.is_file():
+        manifest['followups']=[dict(path=followup.relative_to(ROOT).as_posix(),starting_sha='33f78ed986b0c39585dc4224b5f68bd6a7e9bed7',date_taipei='2026-11-15',report='docs/research/MS-01/thermal_followup.md',scope='Known-interface temperature comparison; original baseline acquisition statements above are historical, not current all-branch availability.')]
     (OUT/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps({'manifest_files':len(files),'local_parts_verified':len(checks),'handoff_remote_present':any(e['present_in_remote_baseline'] for e in availability)}))
 

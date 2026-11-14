@@ -18,7 +18,7 @@
     "evidence": 33,
     "prior_work": 8,
     "searches": 26,
-    "hashed_files": 23
+    "hashed_files": 49
   },
   "limits": "Validation of deliverable consistency, not ground-truth science, global novelty or full clean-checkout data availability."
 }

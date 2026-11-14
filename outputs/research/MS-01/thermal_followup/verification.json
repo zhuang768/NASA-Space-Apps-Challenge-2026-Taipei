@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "starting_sha": "33f78ed986b0c39585dc4224b5f68bd6a7e9bed7",
+  "counts": {
+    "source_assets": 7,
+    "verified_profiles": 5,
+    "independently_matched_channels": 18,
+    "source_row_column_values": 5808,
+    "interpretation_rows": 8
+  },
+  "checks": [
+    "All7 source sizes/MD5/SHA256",
+    "Primary common-valid counts and no duplicate/gapped printed grids",
+    "Independent HOBO OLS and previous W Campbell match",
+    "All5808 export values trace to exact source line/column/string",
+    "All18 export fits independently match",
+    "S/D coordinate conflict preserved; M upper1cm; no W HOBO phase",
+    "Two source DOCX paragraph extractions retained",
+    "Report links, code syntax and figure signatures"
+  ],
+  "limits": "Deliverable consistency, not true historical clock synchronization, geolocation resolution, instrument calibration, unique ice detection or Mars ground truth."
+}

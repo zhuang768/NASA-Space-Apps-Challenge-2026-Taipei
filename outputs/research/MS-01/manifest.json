@@ -29,8 +29,13 @@
   "files": [
     {
       "path": "docs/research/MS-01/report.md",
-      "bytes": 18474,
-      "sha256": "4847828a1e7023cbe0aa688ca461602e23de940b51d4e2751d41f854337e72ff"
+      "bytes": 18898,
+      "sha256": "2e0af390f9148b7b9d17c6c70fbeb496dd09a8cb3437aa7a52c06bc9c361b669"
+    },
+    {
+      "path": "docs/research/MS-01/thermal_followup.md",
+      "bytes": 18263,
+      "sha256": "7e3444758fae54713008f3afa38f96c1d783041fdcc1effd299017a457d84975"
     },
     {
       "path": "outputs/research/MS-01/analysis/audit_ms01.py",
@@ -119,8 +124,8 @@
     },
     {
       "path": "outputs/research/MS-01/make_manifest.py",
-      "bytes": 7825,
-      "sha256": "66a1cb1350ba70e5a88b353f63fffd12f3deea9729fca89bb1d101fb02d0d494"
+      "bytes": 8336,
+      "sha256": "0c84734dc8824a034afdf683878bf8d2be3d5ab60ea0f148396d970ce1410a68"
     },
     {
       "path": "outputs/research/MS-01/prior_work.csv",
@@ -138,12 +143,137 @@
       "sha256": "0e602b59d1dcce7bcc72977c1db8b6874ff0d819d494c1ad601f84b160396e25"
     },
     {
+      "path": "outputs/research/MS-01/thermal_followup/amplitudes.csv",
+      "bytes": 6785,
+      "sha256": "8ac8df7962085c91603da54d483a3d38688fde327e7740e9aebbcae00253b52b"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/analyze.py",
+      "bytes": 11902,
+      "sha256": "7ecc2b4ef60bc4e8e33f2d84812e61f43b8cac356203a025259874cbea4cad70"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/channel_metadata.csv",
+      "bytes": 4522,
+      "sha256": "897eecd7254547b7a3c48421f275cd04707579a147f47b8d9419041540604eab"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/comparison.json",
+      "bytes": 29150,
+      "sha256": "8f481a124f2b03df665d38db53665defbaf75734ec79d0e56c27bf061ba4a460"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/comparison_figure.png",
+      "bytes": 735074,
+      "sha256": "3d34ddfbf02af89616efb7e078215ce4f94a30411fafcd03af845d023aae97f0"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/comparison_figure.svg",
+      "bytes": 133473,
+      "sha256": "5c3600cd274a0a589dd4bfb5fe18eb7c095da81dd060495cf49d445f1561d587"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/deployment_paragraphs.json",
+      "bytes": 12371,
+      "sha256": "fe1f86860c3847d9263b8f43db70873258865cae83d86bdb7530e995d97d16eb"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/dispositions.csv",
+      "bytes": 692,
+      "sha256": "def7f94b97cea8b25e22568d39db4bb0bcf6afc78877d50a9258bca6877e5eb5"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/extract_deployment.py",
+      "bytes": 1540,
+      "sha256": "405be707f7e6500872f0068103b8a01a15c8852cf3ebcecfc7e54e8fc10732a5"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/fetch_inputs.py",
+      "bytes": 1903,
+      "sha256": "bea27ef9ef9ece09c6d9baa9b544d94273982f669b49f0b97882ce9fb22d7e79"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/independent_audit.json",
+      "bytes": 19970,
+      "sha256": "1ba7bf343aa6146c93057ca3c019eadad031d78c7bf97db92a827e4b524284b7"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/independent_check.py",
+      "bytes": 5979,
+      "sha256": "c551805da685ff6fb21836c4290d0bcb158459f70ed5ccca8f0e6689a0f0c8ba"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/interpretation_table.csv",
+      "bytes": 3105,
+      "sha256": "d2fe62fe283d6d5c9f2ef9883446e6c073b79408295bd496c743112783c43459"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/make_manifest.py",
+      "bytes": 2145,
+      "sha256": "dac2105868bcc3cf96d70e83f6060febe135d60e9a03e7fb4ed3fb5c36717e60"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/manifest.json",
+      "bytes": 6450,
+      "sha256": "29927510766c851f1fd70bfd2283781784927e43df88290bb850486f1512187d"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/plot_comparison.py",
+      "bytes": 9046,
+      "sha256": "27262c69e6f214bb027608061fe5936235a30df0a319655955413bcb9e5b8ce6"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/primary_temperature_records.csv.gz",
+      "bytes": 43785,
+      "sha256": "bfa679478ebf9e1279c277356f94bd047a3a9dda8ea01ef6d7b60c27f6713bfd"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/prior_work_delta.csv",
+      "bytes": 1040,
+      "sha256": "686c0fbe5ce032005b120e26aab71b9f76e22f18ac86837062aa877d01b18492"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/protocol.json",
+      "bytes": 2850,
+      "sha256": "3f31735e85ca683b8d14a5699bfc5fa67aceba8e44f2af364769bed25f746569"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/search_log.csv",
+      "bytes": 2030,
+      "sha256": "a148cf0399e644243c4712780fc8b0224692f537d7ed3cbd37b1e7fb181448ad"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/source_manifest.json",
+      "bytes": 5775,
+      "sha256": "242db0fc271db1f011ab96523f3e0bc397ed5da0a33097cb0e77ff4a63d22286"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/sources.json",
+      "bytes": 3169,
+      "sha256": "7dfddd25062a640bccd9c6c7556b35c14177238f00dfac03c3a506cf8bd028db"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/station_metadata.csv",
+      "bytes": 2865,
+      "sha256": "c0eacaec1c2b9cb2f88e4fd0cf2bad05b90b773b410ab4632e804f5e45bd51cf"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/validate.py",
+      "bytes": 6797,
+      "sha256": "e4e8ab235b8e7aa3853c078211c2adb00df75c9032eb71dc24cefced3d0cff7e"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/verification.json",
+      "bytes": 918,
+      "sha256": "036478e3818a2f31d861f3698b9077b1446980856b2cb8e0fe4524e8575c4b2f"
+    },
+    {
       "path": "outputs/research/MS-01/validate_deliverables.py",
       "bytes": 4731,
       "sha256": "5284d5f89becdfa32f8ca94fbb5f7d4a0186cd8cd79e21bf215da9ee22318177"
     }
   ],
-  "hash_scope": "manifest.json and validation.json excluded to avoid self-reference; validation rechecks all listed hashes",
+  "hash_scope": "Only root outputs/research/MS-01/manifest.json and validation.json excluded to avoid self-reference; nested follow-up manifests/verification and all reports are included.",
   "sources_file": "outputs/research/MS-01/sources.json",
   "source_acquisition": {
     "mars": "11 existing local raw files match remote baseline source hashes; re-extracted this task",
@@ -210,5 +340,14 @@
   ],
   "scope_stop": "Two evidence-supported candidates and complete bounded delivery; no main merge, deployment, further research expansion or teammate dependency.",
   "licensing": "Underlying sources retain their terms. Dust-derived summaries follow Montabone CC-BY-SA-3.0; no new project-wide license.",
-  "execution": "Mac CPU; Python/numpy/pandas/xarray/matplotlib; no new field observations, no model training."
+  "execution": "Mac CPU; Python/numpy/pandas/xarray/matplotlib; no new field observations, no model training.",
+  "followups": [
+    {
+      "path": "outputs/research/MS-01/thermal_followup/manifest.json",
+      "starting_sha": "33f78ed986b0c39585dc4224b5f68bd6a7e9bed7",
+      "date_taipei": "2026-11-15",
+      "report": "docs/research/MS-01/thermal_followup.md",
+      "scope": "Known-interface temperature comparison; original baseline acquisition statements above are historical, not current all-branch availability."
+    }
+  ]
 }

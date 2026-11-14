@@ -1,0 +1,110 @@
+{
+  "dataset_doi": "10.5281/zenodo.10553882",
+  "starting_sha": "33f78ed986b0c39585dc4224b5f68bd6a7e9bed7",
+  "research_date_taipei": "2026-11-15",
+  "assets": [
+    {
+      "filename": "UniversityV_09_10_Hobo_deep36cm_data_good_only_calibrated.txt",
+      "bytes": 965061,
+      "md5": "005d3a762723c0654aa3d4c80bebf9c2",
+      "expected_md5": "005d3a762723c0654aa3d4c80bebf9c2",
+      "sha256": "b7415cd01d9ed93362a47db923c6eaa7decb3c775ffdd79de5ebefa9b330c9c0",
+      "url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Hobo_deep36cm_data_good_only_calibrated.txt?download=1",
+      "method": "Chrome native browser file-link download; bytes independently read and checked",
+      "retrieval_date_taipei": "2026-11-15",
+      "source_version": "Zenodo v1 2024-01-23; DOI10.5281/zenodo.10553882",
+      "license": "CC0-1.0 per provider record rights panel"
+    },
+    {
+      "filename": "UniversityV_09_10_Hobo_med22cm_data_good_only_calibrated.txt",
+      "bytes": 967591,
+      "md5": "71a790d5594bc89e621e3f5766c87948",
+      "expected_md5": "71a790d5594bc89e621e3f5766c87948",
+      "sha256": "aa0b7e2668217735d1047c3c0ec21dcd56abbb8697b0c7cd5df2b085d24a3f35",
+      "url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Hobo_med22cm_data_good_only_calibrated.txt?download=1",
+      "method": "Chrome native browser file-link download; bytes independently read and checked",
+      "retrieval_date_taipei": "2026-11-15",
+      "source_version": "Zenodo v1 2024-01-23; DOI10.5281/zenodo.10553882",
+      "license": "CC0-1.0 per provider record rights panel"
+    },
+    {
+      "filename": "UniversityV_09_10_Hobo_shal8cm_data_good_only_calibrated.txt",
+      "bytes": 764068,
+      "md5": "c86d19365c2deb4f1d6e71109cbb18cc",
+      "expected_md5": "c86d19365c2deb4f1d6e71109cbb18cc",
+      "sha256": "66f01d656e0beec7fc5a09445a46011fd84c6f4c8962ab7e7e028390e5ae2eaf",
+      "url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Hobo_shal8cm_data_good_only_calibrated.txt?download=1",
+      "method": "Chrome native browser file-link download; bytes independently read and checked",
+      "retrieval_date_taipei": "2026-11-15",
+      "source_version": "Zenodo v1 2024-01-23; DOI10.5281/zenodo.10553882",
+      "license": "CC0-1.0 per provider record rights panel"
+    },
+    {
+      "filename": "UniversityV_09_10_Hobo_WeatherStation_data_good_only_calibrated.txt",
+      "bytes": 979484,
+      "md5": "0c138af0770ec15d4a4942a66507328f",
+      "expected_md5": "0c138af0770ec15d4a4942a66507328f",
+      "sha256": "dc85d4a15723193044c909f761f10cf8e1272912073b378300bdcf5832ccab0c",
+      "url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Hobo_WeatherStation_data_good_only_calibrated.txt?download=1",
+      "method": "Chrome native browser file-link download; bytes independently read and checked",
+      "retrieval_date_taipei": "2026-11-15",
+      "source_version": "Zenodo v1 2024-01-23; DOI10.5281/zenodo.10553882",
+      "license": "CC0-1.0 per provider record rights panel"
+    },
+    {
+      "filename": "UnivValley_Dec2009Deployment_HoboInfo.docx",
+      "bytes": 16374,
+      "md5": "7a1d6353d30d724a0512ffb24db36401",
+      "expected_md5": "7a1d6353d30d724a0512ffb24db36401",
+      "sha256": "9aa5e4a2f04754293466e3f17854ea3c91109059d03023df655c464dfe9fcc0d",
+      "url": "https://zenodo.org/records/10553882/files/UnivValley_Dec2009Deployment_HoboInfo.docx?download=1",
+      "method": "Chrome native browser file-link download; bytes independently read and checked",
+      "retrieval_date_taipei": "2026-11-15",
+      "source_version": "Zenodo v1 2024-01-23; DOI10.5281/zenodo.10553882",
+      "license": "CC0-1.0 per provider record rights panel"
+    },
+    {
+      "filename": "UnivValley_HoboInfo_Dec2010_Update.docx",
+      "bytes": 14786,
+      "md5": "b8eb8ad431f094898dfc2d984e0f5c04",
+      "expected_md5": "b8eb8ad431f094898dfc2d984e0f5c04",
+      "sha256": "c8b693f3fe406b65a3003419a5cfc1fd1d53e2abcbcfa9913ac1d0bae337d201",
+      "url": "https://zenodo.org/records/10553882/files/UnivValley_HoboInfo_Dec2010_Update.docx?download=1",
+      "method": "Chrome native browser file-link download; bytes independently read and checked",
+      "retrieval_date_taipei": "2026-11-15",
+      "source_version": "Zenodo v1 2024-01-23; DOI10.5281/zenodo.10553882",
+      "license": "CC0-1.0 per provider record rights panel"
+    },
+    {
+      "filename": "UniversityV_09_10_Campbell_data_good_only_calibrated.txt",
+      "bytes": 2673975,
+      "md5": "ae2133eac5c92c695c5f6ef93bcbbd25",
+      "expected_md5": "ae2133eac5c92c695c5f6ef93bcbbd25",
+      "sha256": "c46d93e3dd07c6c91d700a814214716f00caa0d5cc3a520f8969ce0af63ecafd",
+      "url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Campbell_data_good_only_calibrated.txt?download=1",
+      "method": "Existing local bytes independently rechecked against provider MD5; not a new download",
+      "retrieval_date_taipei": null,
+      "verified_date_taipei": "2026-11-15",
+      "source_version": "Zenodo v1 2024-01-23",
+      "license": "CC0-1.0 per provider record"
+    }
+  ],
+  "raw_assets_tracked": false,
+  "raw_cache_hint": "Pass --raw-dir; original files can be reacquired from fixed URLs with MD5 checks.",
+  "attempts": [
+    {
+      "method": "Python urllib",
+      "result": "DNS failure / timeout during initial batch; no asset obtained"
+    },
+    {
+      "method": "Node fetch Zenodo API",
+      "http_status": 403,
+      "result": "No asset obtained"
+    },
+    {
+      "method": "Chrome individual file-link downloads",
+      "result": "Six required new assets retrieved; MD5 verified",
+      "note": "Browser multi-download restriction caused initial timeouts; no malformed response accepted as data."
+    }
+  ]
+}

@@ -1,0 +1,624 @@
+{
+  "scope": "Independent positional CSV/time/count/harmonic audit, no time correction or cross-logger joins",
+  "primary_start_inclusive": "2010-11-07T00:00:00",
+  "primary_end_exclusive": "2010-11-18T00:00:00",
+  "model": "T=intercept+linear_hours+sin(2pi hours/24)+cos(2pi hours/24); half-amplitude sqrt(a^2+b^2)",
+  "stations": {
+    "D": {
+      "file": "/tmp/ms01_uv_followup_raw/UniversityV_09_10_Hobo_deep36cm_data_good_only_calibrated.txt",
+      "bytes": 965061,
+      "md5": "005d3a762723c0654aa3d4c80bebf9c2",
+      "sha256": "b7415cd01d9ed93362a47db923c6eaa7decb3c775ffdd79de5ebefa9b330c9c0",
+      "data_rows": 8728,
+      "header_field_count": 13,
+      "unit_field_count": 13,
+      "data_row_width_counts": {
+        "13": 8728
+      },
+      "header_fields": [
+        "Deep_DateTime",
+        "DecimalDaySinceJan1_2009",
+        "Deep_surf_T",
+        "Deep_cm10_T",
+        "Deep_ice36cm_T",
+        "Deep_InIce42cm_T",
+        "Deep_4ch_Batt",
+        "Deep_soil11cm_T",
+        "Deep_soil11cm_RHIce",
+        "Deep_soil_batt",
+        "Deep_rock15cm_T",
+        "Deep_rock15cm_RHIce",
+        "Deep_rock_batt"
+      ],
+      "unit_fields": [
+        "GMT+13:00",
+        "days",
+        "degC",
+        "degC",
+        "degC",
+        "degC",
+        "Volt",
+        "degC",
+        "%",
+        "Volt",
+        "degC",
+        "%",
+        "Volt"
+      ],
+      "first_datetime": "2009-12-10T00:00:00",
+      "last_datetime": "2010-12-08T15:00:00",
+      "duplicate_datetime_count": 0,
+      "time_step_minutes_counts": {
+        "60.0": 8727
+      },
+      "decimal_minus_printed_hours": {
+        "finite": 8728,
+        "missing_or_nonfinite": 0,
+        "mean": 0.0,
+        "min": -0.0008000000007086783,
+        "max": 0.0008000000007086783
+      },
+      "numeric_column_missing_counts": {
+        "index_1based_2": 0,
+        "index_1based_3": 2,
+        "index_1based_4": 2,
+        "index_1based_5": 2,
+        "index_1based_6": 2,
+        "index_1based_7": 1,
+        "index_1based_8": 1,
+        "index_1based_9": 1,
+        "index_1based_10": 193,
+        "index_1based_11": 1,
+        "index_1based_12": 1,
+        "index_1based_13": 193
+      },
+      "primary_printed_rows": 264,
+      "channels": [
+        {
+          "csv_index_1based": 3,
+          "header": "Deep_surf_T",
+          "nominal_depth_m_from_header": 0,
+          "label": "surface",
+          "full_file": {
+            "finite": 8726,
+            "missing_or_nonfinite": 2,
+            "mean": -26.159586866834747,
+            "min": -53.883,
+            "max": 10.932
+          },
+          "primary_individual_valid": 264,
+          "joint_fit_n": 264,
+          "half_amplitude_K": 9.250783909756937,
+          "residual_RMSE_K": 4.68681954075664,
+          "slope_K_per_h": -0.010907927810419767,
+          "fit_intercept_C": -10.896277947474898,
+          "window_min_C": -22.989,
+          "window_max_C": 7.142
+        },
+        {
+          "csv_index_1based": 4,
+          "header": "Deep_cm10_T",
+          "nominal_depth_m_from_header": 0.1,
+          "label": "soil10cm",
+          "full_file": {
+            "finite": 8726,
+            "missing_or_nonfinite": 2,
+            "mean": -25.929156772862708,
+            "min": -46.721,
+            "max": -2.83
+          },
+          "primary_individual_valid": 264,
+          "joint_fit_n": 264,
+          "half_amplitude_K": 2.9847544354294584,
+          "residual_RMSE_K": 2.1669524050579105,
+          "slope_K_per_h": 0.003955619009666399,
+          "fit_intercept_C": -15.76664874825584,
+          "window_min_C": -21.125,
+          "window_max_C": -7.478
+        },
+        {
+          "csv_index_1based": 5,
+          "header": "Deep_ice36cm_T",
+          "nominal_depth_m_from_header": 0.36,
+          "label": "ice36cm",
+          "full_file": {
+            "finite": 8726,
+            "missing_or_nonfinite": 2,
+            "mean": -25.367133394453358,
+            "min": -39.634,
+            "max": -11.29
+          },
+          "primary_individual_valid": 264,
+          "joint_fit_n": 264,
+          "half_amplitude_K": 0.19088629092972859,
+          "residual_RMSE_K": 0.7019310201719694,
+          "slope_K_per_h": 0.016106768523051786,
+          "fit_intercept_C": -22.566585515326686,
+          "window_min_C": -23.409,
+          "window_max_C": -18.652
+        },
+        {
+          "csv_index_1based": 6,
+          "header": "Deep_InIce42cm_T",
+          "nominal_depth_m_from_header": 0.42,
+          "label": "inice42cm",
+          "full_file": {
+            "finite": 8726,
+            "missing_or_nonfinite": 2,
+            "mean": -25.29965619986248,
+            "min": -40.383,
+            "max": -11.613
+          },
+          "primary_individual_valid": 264,
+          "joint_fit_n": 264,
+          "half_amplitude_K": 0.15575761672360966,
+          "residual_RMSE_K": 0.6361650164150974,
+          "slope_K_per_h": 0.016286168206525512,
+          "fit_intercept_C": -22.85471445249135,
+          "window_min_C": -23.621,
+          "window_max_C": -19.012
+        }
+      ],
+      "primary_common_valid_rows": 264,
+      "primary_missing_rows": 0,
+      "primary_expected_hour_rows": 264,
+      "ice_to_upper_half_amplitude_ratio": 0.020634607055127298,
+      "upper_reference_header": "Deep_surf_T",
+      "ice_reference_header": "Deep_ice36cm_T",
+      "cautions": [
+        "Times retained as author printed GMT+13 header; absolute historical clock accuracy not validated. No gapfill, phase-to-solar-time or Mars transfer."
+      ]
+    },
+    "M": {
+      "file": "/tmp/ms01_uv_followup_raw/UniversityV_09_10_Hobo_med22cm_data_good_only_calibrated.txt",
+      "bytes": 967591,
+      "md5": "71a790d5594bc89e621e3f5766c87948",
+      "sha256": "aa0b7e2668217735d1047c3c0ec21dcd56abbb8697b0c7cd5df2b085d24a3f35",
+      "data_rows": 8751,
+      "header_field_count": 13,
+      "unit_field_count": 13,
+      "data_row_width_counts": {
+        "13": 8751
+      },
+      "header_fields": [
+        "Med_DateTime",
+        "DecimalDaySinceJan1_2009",
+        "Med_cm12_T",
+        "Med_InIce27cm_T",
+        "Med_cm1_T",
+        "Med_Ice22cm_T",
+        "Med_4ch_batt",
+        "Med_soil15cm_T",
+        "Med_soil15cm_RHIce",
+        "Med_soil_batt",
+        "Med_rock15cm_T",
+        "Med_rock15cm_RHIce",
+        "Med_rock_batt"
+      ],
+      "unit_fields": [
+        "GMT+13:00",
+        "days",
+        "degC",
+        "degC",
+        "degC",
+        "degC",
+        "Volt",
+        "degC",
+        "%",
+        "Volt",
+        "degC",
+        "%",
+        "Volt"
+      ],
+      "first_datetime": "2009-12-09T00:00:00",
+      "last_datetime": "2010-12-08T14:00:00",
+      "duplicate_datetime_count": 0,
+      "time_step_minutes_counts": {
+        "60.0": 8750
+      },
+      "decimal_minus_printed_hours": {
+        "finite": 8751,
+        "missing_or_nonfinite": 0,
+        "mean": 0.0,
+        "min": -0.0008000000007086783,
+        "max": 0.0008000000007086783
+      },
+      "numeric_column_missing_counts": {
+        "index_1based_2": 0,
+        "index_1based_3": 2,
+        "index_1based_4": 2,
+        "index_1based_5": 2,
+        "index_1based_6": 2,
+        "index_1based_7": 0,
+        "index_1based_8": 196,
+        "index_1based_9": 196,
+        "index_1based_10": 193,
+        "index_1based_11": 195,
+        "index_1based_12": 195,
+        "index_1based_13": 193
+      },
+      "primary_printed_rows": 264,
+      "channels": [
+        {
+          "csv_index_1based": 5,
+          "header": "Med_cm1_T",
+          "nominal_depth_m_from_header": 0.01,
+          "label": "soil1cm",
+          "full_file": {
+            "finite": 8749,
+            "missing_or_nonfinite": 2,
+            "mean": -26.777559949708536,
+            "min": -48.112,
+            "max": 7.945
+          },
+          "primary_individual_valid": 264,
+          "joint_fit_n": 264,
+          "half_amplitude_K": 6.995728016030305,
+          "residual_RMSE_K": 4.2309405209679545,
+          "slope_K_per_h": -0.00478244602440253,
+          "fit_intercept_C": -14.14025607506348,
+          "window_min_C": -24.214,
+          "window_max_C": 3.88
+        },
+        {
+          "csv_index_1based": 3,
+          "header": "Med_cm12_T",
+          "nominal_depth_m_from_header": 0.12,
+          "label": "soil12cm",
+          "full_file": {
+            "finite": 8749,
+            "missing_or_nonfinite": 2,
+            "mean": -26.054592524859984,
+            "min": -43.813,
+            "max": -4.016
+          },
+          "primary_individual_valid": 264,
+          "joint_fit_n": 264,
+          "half_amplitude_K": 3.018919356249825,
+          "residual_RMSE_K": 2.055289989987894,
+          "slope_K_per_h": 0.005211475147641248,
+          "fit_intercept_C": -17.30147943646012,
+          "window_min_C": -21.916,
+          "window_max_C": -8.597
+        },
+        {
+          "csv_index_1based": 6,
+          "header": "Med_Ice22cm_T",
+          "nominal_depth_m_from_header": 0.22,
+          "label": "ice22cm",
+          "full_file": {
+            "finite": 8749,
+            "missing_or_nonfinite": 2,
+            "mean": -26.081561549891415,
+            "min": -41.967,
+            "max": -10.336
+          },
+          "primary_individual_valid": 264,
+          "joint_fit_n": 264,
+          "half_amplitude_K": 0.6138154735281544,
+          "residual_RMSE_K": 1.0950811873967823,
+          "slope_K_per_h": 0.013936060926363382,
+          "fit_intercept_C": -21.676906405756107,
+          "window_min_C": -23.303,
+          "window_max_C": -16.955
+        },
+        {
+          "csv_index_1based": 4,
+          "header": "Med_InIce27cm_T",
+          "nominal_depth_m_from_header": 0.27,
+          "label": "inice27cm",
+          "full_file": {
+            "finite": 8749,
+            "missing_or_nonfinite": 2,
+            "mean": -25.747534575380044,
+            "min": -39.952,
+            "max": -10.827
+          },
+          "primary_individual_valid": 264,
+          "joint_fit_n": 264,
+          "half_amplitude_K": 0.3592633212629049,
+          "residual_RMSE_K": 0.9132573480136799,
+          "slope_K_per_h": 0.01571548363523497,
+          "fit_intercept_C": -22.285593673790903,
+          "window_min_C": -23.462,
+          "window_max_C": -18.032
+        }
+      ],
+      "primary_common_valid_rows": 264,
+      "primary_missing_rows": 0,
+      "primary_expected_hour_rows": 264,
+      "ice_to_upper_half_amplitude_ratio": 0.0877414719556895,
+      "upper_reference_header": "Med_cm1_T",
+      "ice_reference_header": "Med_Ice22cm_T",
+      "cautions": [
+        "Upper reference is nominal1cm, not surface0cm; channel order is12cm,27cm,1cm,22cm.",
+        "Times retained as author printed GMT+13 header; absolute historical clock accuracy not validated. No gapfill, phase-to-solar-time or Mars transfer."
+      ]
+    },
+    "S": {
+      "file": "/tmp/ms01_uv_followup_raw/UniversityV_09_10_Hobo_shal8cm_data_good_only_calibrated.txt",
+      "bytes": 764068,
+      "md5": "c86d19365c2deb4f1d6e71109cbb18cc",
+      "sha256": "66f01d656e0beec7fc5a09445a46011fd84c6f4c8962ab7e7e028390e5ae2eaf",
+      "data_rows": 8726,
+      "header_field_count": 11,
+      "unit_field_count": 10,
+      "data_row_width_counts": {
+        "10": 8726
+      },
+      "header_fields": [
+        "Shal_DateTime",
+        "DecimalDaySinceJan1_2009",
+        "Shal_surf_T",
+        "Shal_Ice8cm_T",
+        "Shal_InIce15cm_T",
+        "Shal_cm4_Echo",
+        "Shal_4ch_batt",
+        "Shal_cm4_T",
+        "Shal_cm4_Ice",
+        "H",
+        "Shal_cm4_batt"
+      ],
+      "unit_fields": [
+        "GMT+13:00",
+        "days",
+        "degC",
+        "degC",
+        "degC",
+        "Volt",
+        "Volt",
+        "degC",
+        "%",
+        "Volt"
+      ],
+      "first_datetime": "2009-12-10T00:00:00",
+      "last_datetime": "2010-12-08T13:00:00",
+      "duplicate_datetime_count": 0,
+      "time_step_minutes_counts": {
+        "60.0": 8725
+      },
+      "decimal_minus_printed_hours": {
+        "finite": 8726,
+        "missing_or_nonfinite": 0,
+        "mean": 9.168003675322923e-08,
+        "min": -0.0008000000007086783,
+        "max": 0.0008000000007086783
+      },
+      "numeric_column_missing_counts": {
+        "index_1based_2": 0,
+        "index_1based_3": 0,
+        "index_1based_4": 0,
+        "index_1based_5": 0,
+        "index_1based_6": 0,
+        "index_1based_7": 0,
+        "index_1based_8": 0,
+        "index_1based_9": 0,
+        "index_1based_10": 0
+      },
+      "primary_printed_rows": 264,
+      "channels": [
+        {
+          "csv_index_1based": 3,
+          "header": "Shal_surf_T",
+          "nominal_depth_m_from_header": 0,
+          "label": "surface",
+          "full_file": {
+            "finite": 8726,
+            "missing_or_nonfinite": 0,
+            "mean": -26.028863511345406,
+            "min": -42.323,
+            "max": 0.329
+          },
+          "primary_individual_valid": 264,
+          "joint_fit_n": 264,
+          "half_amplitude_K": 2.7883183350318332,
+          "residual_RMSE_K": 1.6893886986215747,
+          "slope_K_per_h": 0.009574159264473634,
+          "fit_intercept_C": -20.699331488732632,
+          "window_min_C": -24.488,
+          "window_max_C": -12.343
+        },
+        {
+          "csv_index_1based": 4,
+          "header": "Shal_Ice8cm_T",
+          "nominal_depth_m_from_header": 0.08,
+          "label": "ice8cm",
+          "full_file": {
+            "finite": 8726,
+            "missing_or_nonfinite": 0,
+            "mean": -25.993223470089386,
+            "min": -40.383,
+            "max": -7.058
+          },
+          "primary_individual_valid": 264,
+          "joint_fit_n": 264,
+          "half_amplitude_K": 1.2574465973309068,
+          "residual_RMSE_K": 1.1535658731039746,
+          "slope_K_per_h": 0.013281171045537624,
+          "fit_intercept_C": -22.216803537942624,
+          "window_min_C": -24.488,
+          "window_max_C": -16.492
+        },
+        {
+          "csv_index_1based": 5,
+          "header": "Shal_InIce15cm_T",
+          "nominal_depth_m_from_header": 0.15,
+          "label": "inice15cm",
+          "full_file": {
+            "finite": 8726,
+            "missing_or_nonfinite": 0,
+            "mean": -25.946052945221176,
+            "min": -39.952,
+            "max": -8.397
+          },
+          "primary_individual_valid": 264,
+          "joint_fit_n": 264,
+          "half_amplitude_K": 1.020467371921448,
+          "residual_RMSE_K": 1.1126639817171278,
+          "slope_K_per_h": 0.01370225578771494,
+          "fit_intercept_C": -22.319115575478346,
+          "window_min_C": -24.323,
+          "window_max_C": -16.997
+        }
+      ],
+      "primary_common_valid_rows": 264,
+      "primary_missing_rows": 0,
+      "primary_expected_hour_rows": 264,
+      "ice_to_upper_half_amplitude_ratio": 0.45096952580077304,
+      "upper_reference_header": "Shal_surf_T",
+      "ice_reference_header": "Shal_Ice8cm_T",
+      "cautions": [
+        "Header 11 vs units/data 10 due split trailing RH-like label; only temperature columns3–5 interpreted; trailing columns not silently DictReader-aligned.",
+        "Times retained as author printed GMT+13 header; absolute historical clock accuracy not validated. No gapfill, phase-to-solar-time or Mars transfer."
+      ]
+    },
+    "W_HOBO": {
+      "file": "/tmp/ms01_uv_followup_raw/UniversityV_09_10_Hobo_WeatherStation_data_good_only_calibrated.txt",
+      "bytes": 979484,
+      "md5": "0c138af0770ec15d4a4942a66507328f",
+      "sha256": "dc85d4a15723193044c909f761f10cf8e1272912073b378300bdcf5832ccab0c",
+      "data_rows": 8625,
+      "header_field_count": 14,
+      "unit_field_count": 14,
+      "data_row_width_counts": {
+        "14": 8625
+      },
+      "header_fields": [
+        "DateTime",
+        "DecimalDaySinceJan1_2009",
+        "Air_T",
+        "Air_RHIce",
+        "Air_Battery",
+        "Surf_T",
+        "Surf_RHIce",
+        "Surf_Battery",
+        "cm20_T",
+        "cm20_RHIce",
+        "cm20_Battery",
+        "ice42cm_T",
+        "ice42cm_RHIce",
+        "ice42cm_Battery"
+      ],
+      "unit_fields": [
+        "GMT+13:00",
+        "days",
+        "degC",
+        "%",
+        "V",
+        "degC",
+        "%",
+        "V",
+        "degC",
+        "%",
+        "V",
+        "degC",
+        "%",
+        "V"
+      ],
+      "first_datetime": "2009-12-10T00:00:00",
+      "last_datetime": "2010-12-04T08:00:00",
+      "duplicate_datetime_count": 0,
+      "time_step_minutes_counts": {
+        "60.0": 8624
+      },
+      "decimal_minus_printed_hours": {
+        "finite": 8625,
+        "missing_or_nonfinite": 0,
+        "mean": 1.0,
+        "min": 0.9991999999997461,
+        "max": 1.0007999999997992
+      },
+      "numeric_column_missing_counts": {
+        "index_1based_2": 0,
+        "index_1based_3": 206,
+        "index_1based_4": 206,
+        "index_1based_5": 206,
+        "index_1based_6": 0,
+        "index_1based_7": 0,
+        "index_1based_8": 0,
+        "index_1based_9": 0,
+        "index_1based_10": 0,
+        "index_1based_11": 0,
+        "index_1based_12": 0,
+        "index_1based_13": 0,
+        "index_1based_14": 0
+      },
+      "primary_printed_rows": 264,
+      "channels": [
+        {
+          "csv_index_1based": 6,
+          "header": "Surf_T",
+          "nominal_depth_m_from_header": 0,
+          "label": "surface",
+          "full_file": {
+            "finite": 8625,
+            "missing_or_nonfinite": 0,
+            "mean": -25.956200347826087,
+            "min": -47.794,
+            "max": 7.544
+          },
+          "primary_individual_valid": 264,
+          "joint_fit_n": 264,
+          "half_amplitude_K": 7.610508861453878,
+          "residual_RMSE_K": 4.14502096280477,
+          "slope_K_per_h": -0.009852839445161975,
+          "fit_intercept_C": -11.735249340233661,
+          "window_min_C": -22.575,
+          "window_max_C": 4.011
+        },
+        {
+          "csv_index_1based": 9,
+          "header": "cm20_T",
+          "nominal_depth_m_from_header": 0.2,
+          "label": "soil20cm",
+          "full_file": {
+            "finite": 8625,
+            "missing_or_nonfinite": 0,
+            "mean": -25.402700521739128,
+            "min": -41.618,
+            "max": -5.172
+          },
+          "primary_individual_valid": 264,
+          "joint_fit_n": 264,
+          "half_amplitude_K": 1.7092623290934148,
+          "residual_RMSE_K": 1.7417692090152666,
+          "slope_K_per_h": 0.009023730354001768,
+          "fit_intercept_C": -17.89619251124809,
+          "window_min_C": -21.916,
+          "window_max_C": -11.577
+        },
+        {
+          "csv_index_1based": 12,
+          "header": "ice42cm_T",
+          "nominal_depth_m_from_header": 0.42,
+          "label": "ice42cm",
+          "full_file": {
+            "finite": 8625,
+            "missing_or_nonfinite": 0,
+            "mean": -24.971722434782613,
+            "min": -36.783,
+            "max": -10.686
+          },
+          "primary_individual_valid": 264,
+          "joint_fit_n": 264,
+          "half_amplitude_K": 0.17818004000872287,
+          "residual_RMSE_K": 0.6926904159335351,
+          "slope_K_per_h": 0.01765074898236702,
+          "fit_intercept_C": -22.80924394572663,
+          "window_min_C": -23.621,
+          "window_max_C": -18.652
+        }
+      ],
+      "primary_common_valid_rows": 264,
+      "primary_missing_rows": 0,
+      "primary_expected_hour_rows": 264,
+      "ice_to_upper_half_amplitude_ratio": 0.023412368772235306,
+      "upper_reference_header": "Surf_T",
+      "ice_reference_header": "ice42cm_T",
+      "cautions": [
+        "Temperature/RH probes are not declared one common logger; raw printed-grid co-occurrence is not validated cross-logger timing. DecimalDay differs printed DateTime by about+1hour; neither silently corrected.",
+        "Times retained as author printed GMT+13 header; absolute historical clock accuracy not validated. No gapfill, phase-to-solar-time or Mars transfer."
+      ]
+    }
+  }
+}

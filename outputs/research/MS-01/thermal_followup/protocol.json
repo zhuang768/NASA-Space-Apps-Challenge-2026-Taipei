@@ -1,0 +1,28 @@
+{
+  "task": "MS-01 known-interface temperature identifiability follow-up",
+  "research_date_taipei": "2026-11-15",
+  "starting_branch_sha": "33f78ed986b0c39585dc4224b5f68bd6a7e9bed7",
+  "branch": "research/ms-01-earth-analogs",
+  "pr": 8,
+  "fixed_dataset_doi": "10.5281/zenodo.10553882",
+  "question": "Can known-interface Earth temperature observations distinguish overburden/material response from an ice-interface response, and what can this add to interpreting MS-01?",
+  "primary_printed_date_window": {
+    "start_inclusive": "2010-11-07T00:00:00",
+    "end_exclusive": "2010-11-18T00:00:00",
+    "reason": "Preserve the previous W analysis window instead of selecting a new window after inspecting amplitudes.",
+    "clock_status": "Author printed timestamps only; no UTC/LTST conversion or independently verified cross-logger synchronization."
+  },
+  "input_preference": "2009-2010 author good-only calibrated HOBO exports for S/M/D/W; Campbell W retained as prior separate-instrument example, no cross-instrument join.",
+  "mapping_rule": "Match file columns using author headers, deployment/QA records and paper. A filename is not sufficient proof of a channel depth or logger identity. Conflicts remain explicit.",
+  "coverage_rule": "Report whole-file and primary-window counts/missingness. Use actual common finite records without interpolation. Retain a calendar grid only to display gaps. If primary support is inadequate, record that result before considering another explicitly justified window.",
+  "descriptive_model": "T = intercept + centered linear time + bsin*sin(2*pi*t/24h) + bcos*cos(2*pi*t/24h). Half-amplitude = hypot(bsin,bcos), not peak-to-peak.",
+  "comparison_rule": "Separate within-logger depth ratios from cross-logger and cross-site comparisons. Shared printed dates do not establish identical forcing, actual simultaneity or causal control.",
+  "sensitivity_rule": "Report leave-one-printed-day-out fit range as a descriptive stability check, not a confidence interval or proof of independent daily samples. Do not use sample count to remove systematic sensor uncertainty.",
+  "interpretation_limits": [
+    "No thermal-inertia, ice-depth, ice-abundance or detection-accuracy inversion.",
+    "No cross-site causal attribution to ice depth alone: shade, radiation, wind, material, moisture and contact/exposure can differ.",
+    "No MS-01 temperature subtraction, Earth-to-Mars parameter transfer, similarity score or new-method claim.",
+    "Ice truth at Earth sites is prior external information, not a discovery produced by this fit."
+  ],
+  "stop_condition": "Deliver a verified bounded comparison or explicit insufficient-support finding, an observation/interpretation/alternative table, and a disposition/value conclusion for University Valley and Beacon Valley. Only MS-01 paths and PR #8 are updated."
+}

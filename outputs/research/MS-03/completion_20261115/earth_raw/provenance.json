@@ -1,0 +1,31 @@
+{
+  "dataset_title": "Data from NASA project to study ice-cemented ground in and around University Valley Antarctica",
+  "creator": "Marinova, Margarita (data collector)",
+  "dataset_version": "v1 (2024-01-23)",
+  "dataset_doi": "10.5281/zenodo.10553882",
+  "official_record_url": "https://zenodo.org/records/10553882",
+  "official_file_url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Campbell_data_good_only_calibrated.txt?download=1",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_basis": "Fixed remote sources.json U4 declares CC0 per version metadata; this task does not claim successful re-fetch of blocked API.",
+  "license_evidence_url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa/outputs/research/MS-03/sources.json",
+  "license_evidence_locator": "U4.license",
+  "uncompressed_filename": "UniversityV_09_10_Campbell_data_good_only_calibrated.txt",
+  "uncompressed_bytes": 2673975,
+  "uncompressed_sha256": "c46d93e3dd07c6c91d700a814214716f00caa0d5cc3a520f8969ce0af63ecafd",
+  "uncompressed_md5": "ae2133eac5c92c695c5f6ef93bcbbd25",
+  "provider_md5": "ae2133eac5c92c695c5f6ef93bcbbd25",
+  "gzip_filename": "UniversityV_09_10_Campbell_data_good_only_calibrated.txt.gz",
+  "gzip_bytes": 506804,
+  "gzip_sha256": "f2ab00f49fdfa9f64cb2e6fe15df3d32599f382292ba7b2e4b916f75c5f311f1",
+  "compression": {
+    "format": "gzip",
+    "compresslevel": 9,
+    "mtime": 0,
+    "stored_filename": "",
+    "method": "Python gzip.GzipFile with explicit empty filename and mtime0"
+  },
+  "attribution": "Margarita Marinova, Zenodo v1 2024, DOI10.5281/zenodo.10553882; associated Marinova et al.2022 DOI10.1017/S0954102022000025",
+  "changes": "Lossless compression only; decompressed bytes exactly equal previously MD5-verified author-processed short export. No newline rewrite, row editing, recalibration, interpolation or time correction. This is not unprocessed logger output.",
+  "original_acquisition": "Existing local file previously downloaded from official Zenodo URL; original provenance says browser acquisition2026-11-14. This task rehashes those bytes and rechecks provider MD5, not a new download."
+}

@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "input_hash": true,
+    "all65_maxima_independently_recomputed": true,
+    "no_source_mutation": true,
+    "first_row_missing_previous_jump": true,
+    "negative_delay_retained": true,
+    "positive_delay_retained": true,
+    "vacuum_bandwidth_resolution_near15m": true,
+    "counts_partition65": true,
+    "no_depth_column_in_peak_table": true
+  },
+  "passed": 9,
+  "scientific_validation": false
+}

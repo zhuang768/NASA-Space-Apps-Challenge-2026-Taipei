@@ -1,9 +1,9 @@
 {
-  "version": "MS03-EARTH-ANALOG-20261115-v2",
+  "version": "MS03-completion-20261115-v1",
   "baseline_main_commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
   "supplemental_handoff_commit": "f7076c9fdc77e00244ed5d6863aad2bf78cfa28f",
   "branch": "research/ms-03-earth-analogs",
-  "research_date_taipei": "2026-11-14",
+  "research_date_taipei": "2026-11-15",
   "mars_id": "MS-03",
   "mars_coordinates": {
     "lat": 57.75,
@@ -13,39 +13,44 @@
   "requirements": "User MS03 brief;atleast2Earthcandidate literature evidence/prior-use review",
   "inputs": [
     {
-      "path": "outputs/research/mars_reselection_20261114/report.md",
+      "path": "outputs/research/MS-03/completion_20261115/shared_inputs/report.md.snapshot.txt",
+      "original_path": "outputs/research/mars_reselection_20261114/report.md",
       "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
       "bytes": 16524,
       "sha256": "1708e2d7af86118edf2a88c3e896464406d5bd617f9ab197f7c4d412f5969e4b",
-      "access": "read_local_clone_after_fetch"
+      "access": "fixed repository bytes retained in MS03-owned scope"
     },
     {
-      "path": "outputs/research/mars_reselection_20261114/selected_targets.json",
+      "path": "outputs/research/MS-03/completion_20261115/shared_inputs/selected_targets.json",
+      "original_path": "outputs/research/mars_reselection_20261114/selected_targets.json",
       "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
       "bytes": 3434,
       "sha256": "388ca89110b2a8fbb4fc6fa403994ab54cd193fd23eefd8aa5987a75e3255ba5",
-      "access": "read_local_clone_after_fetch"
+      "access": "fixed repository bytes retained in MS03-owned scope"
     },
     {
-      "path": "outputs/research/mars_reselection_20261114/final_candidates.csv",
+      "path": "outputs/research/MS-03/completion_20261115/shared_inputs/final_candidates.csv",
+      "original_path": "outputs/research/mars_reselection_20261114/final_candidates.csv",
       "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
       "bytes": 5897,
       "sha256": "83a03d1f4273fa7c45c0d22b5c29a8b8cfc0544e481d5f2bbca2c85812534c4e",
-      "access": "read_local_clone_after_fetch"
+      "access": "fixed repository bytes retained in MS03-owned scope"
     },
     {
-      "path": "outputs/research/mars_reselection_20261114/candidate_native_evidence.json",
+      "path": "outputs/research/MS-03/completion_20261115/shared_inputs/candidate_native_evidence.json",
+      "original_path": "outputs/research/mars_reselection_20261114/candidate_native_evidence.json",
       "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
       "bytes": 38177,
       "sha256": "3258b5c5bd7de7f15d96918bbce1c09afa6c5b7a329b8bc05cdb7c4fcd3f41c6",
-      "access": "read_local_clone_after_fetch"
+      "access": "fixed repository bytes retained in MS03-owned scope"
     },
     {
-      "path": "outputs/research/mars_reselection_20261114/all_data_usage.csv",
+      "path": "outputs/research/MS-03/completion_20261115/shared_inputs/all_data_usage.csv",
+      "original_path": "outputs/research/mars_reselection_20261114/all_data_usage.csv",
       "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
       "bytes": 803,
       "sha256": "384fd5358f45c0ba4965a829f51a5e28496efbb5c90435f57823ec747ef345bd",
-      "access": "read_local_clone_after_fetch"
+      "access": "fixed repository bytes retained in MS03-owned scope"
     }
   ],
   "shared_files": [
@@ -172,6 +177,159 @@
       "locator": "Overview and access status",
       "read_scope": "Official catalog:depth-to-ice survey,not W temperature series;not local raw archive retrieval",
       "access_date_taipei": "2026-11-15"
+    },
+    "MOR1": {
+      "url": "https://oderest.rsl.wustl.edu/live2/",
+      "locator": "saved ode_CTX_EDR.json and ode_HIRISE_RDRV11/RDR.json QuerySummary;Product fields and footprint WKT",
+      "read_scope": "Successful bounded catalogue API queries;3 actual browse downloads;D01 exact native EDR byte range and label record;not full raw frames",
+      "access_date_taipei": "2026-11-15"
+    },
+    "MOR2": {
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/PSP/ORB_006800_006899/PSP_006864_2380/PSP_006864_2380_RED.LBL",
+      "locator": "START_TIME;MAP_SCALE;MINIMUM/MAXIMUM_LATITUDE;WESTERNMOST/EASTERNMOST_LONGITUDE",
+      "read_scope": "Full detached original label obtained;no HiRISE image pixels acquired;outside ROI confirmed by longitude bound",
+      "access_date_taipei": "2026-11-15"
+    },
+    "MOR3": {
+      "url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_1677/index/cumindex.lbl",
+      "locator": "columns18-25;areographic corner labels;USAGE_NOTE",
+      "read_scope": "Actual index definition retrieved;ODE planetocentric equivalents used for approximate locator;not SPICE camera calibration",
+      "access_date_taipei": "2026-11-15"
+    },
+    "MOR4": {
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/INDEX/RDRCUMINDEX.TAB",
+      "locator": "full actual205451rows;821bytes;MINIMUM/MAXIMUM_LATITUDE/LONGITUDE;RDRCUMINDEX.LBL schema",
+      "read_scope": "Actual168675271-byte table downloaded and all rows screened;615invalid bbox retained;label205302 count mismatch recorded;not a guarantee of all observations;followup2026-11-15 all54fields in149duplicate pairs compared;615negative-lon flags excluded by valid latitude;all305latitude-eligible rows tested",
+      "access_date_taipei": "2026-11-15"
+    },
+    "MOR5": {
+      "url": "https://awi-test.eprints-hosting.org/24005/1/Ulr2011a.pdf",
+      "locator": "printedpp199-201,203-204;sections2,3.1-3.3;Tables2-4;PDFpages4-6,8-9",
+      "read_scope": "Actual author PDF4448816bytes21pages including cover;focused reading named sections/tables;13 rounded statistics checked;not full-paper review",
+      "access_date_taipei": "2026-11-15"
+    },
+    "MOR6": {
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/ERRATA.TXT",
+      "locator": "keyword search duplicate/index/start-time;2012 INDEX Table Updates section;not all product-list entries read",
+      "read_scope": "Actual482461bytes archived;no specific149duplicate-group explanation found in this bounded check",
+      "access_date_taipei": "2026-11-15"
+    },
+    "MOR7": {
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/ESP/ORB_019500_019599/ESP_019584_2365/ESP_019584_2365_RED.LBL",
+      "locator": "PROJECTION_LATITUDE_TYPE;POSITIVE_LONGITUDE_DIRECTION;MINIMUM/MAXIMUM_LATITUDE;WESTERNMOST/EASTERNMOST_LONGITUDE",
+      "read_scope": "Actual full original label for closest negative-longitude row retrieved;planetocentric east-positive negative longitudes and outsideROI latitude confirmed;not all615labels",
+      "access_date_taipei": "2026-11-15"
+    },
+    "MOR8": {
+      "url": "https://pirlwww.lpl.arizona.edu/software/HiRISE/Java/HiRISE/HiCat/HiVolume/Index_Builder.html",
+      "locator": "class description;Write_RDR_Index(java.util.Date);constructors;paired IndexBuilder docs",
+      "read_scope": "Actual public Javadoc class/method descriptions read;not source implementation or verified2026productionbuild",
+      "access_date_taipei": "2026-11-15"
+    },
+    "MOR9": {
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/",
+      "locator": "10exact label URLs and bbox fields in index_handoff/neighbour_label_check.json",
+      "read_scope": "10actual source labels downloaded;5observations selected by stated nearby bbox rule;0ROIoverlap;not all product labels or independent geodetic truth",
+      "access_date_taipei": "2026-11-15"
+    },
+    "MOR10": {
+      "url": "https://pirlwww.lpl.arizona.edu/software/HiRISE/Java/constant-values.html",
+      "locator": "HiRISE.HiCat.HiVolume.Index_Builder.ID;IndexBuilder.ID;HiVolume.ID;PDS_Release.ID;Generated-by HTML comment",
+      "read_scope": "Actual1176869-byte public HTML read at named constants/comment;4IDvalues and2026-10-26doc generation recorded;not executed build/source/SQL",
+      "access_date_taipei": "2026-11-15"
+    },
+    "MOR11": {
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/",
+      "locator": "149exact label URLs and hashes in generator_followup/duplicate_label_time_comparison.csv;MRO:OBSERVATION_START_TIME",
+      "read_scope": "All149actual detached labels acquired and command-start fields compared;not first-line START_TIME substitution;no index correction",
+      "access_date_taipei": "2026-11-15"
+    },
+    "CEW1": {
+      "url": "https://doi.org/10.5281/zenodo.10553882",
+      "locator": "Fixed version10553882; UniversityV_09_10_Campbell_data_good_only_calibrated.txt; second-row headers and third-row units; earth_input_receipt.json",
+      "read_scope": "Provider fixed-version listing and MD5 re-read; existing original short-export bytes independently SHA256/MD5 checked; all17705 rows parsed;16032 rows selected for11 complete months; no new download, untouched logger or clock-alignment claim",
+      "access_date_taipei": "2026-11-15",
+      "related_existing_source_id": "U4",
+      "dataset_doi": "10.5281/zenodo.10553882",
+      "source_file_sha256": "c46d93e3dd07c6c91d700a814214716f00caa0d5cc3a520f8969ce0af63ecafd",
+      "source_file_md5": "ae2133eac5c92c695c5f6ef93bcbbd25"
+    },
+    "CEW2": {
+      "url": "https://doi.org/10.1017/S0954102022000025",
+      "locator": "Meteorological measurements paragraphs on heights/instruments; Energy balance pressure paragraph after Eq6",
+      "read_scope": "Publisher HTML named Methods paragraphs and constant-pressure assumption re-read; no full-paper review or independent sensor calibration claimed;05103/05013 spelling difference retained",
+      "access_date_taipei": "2026-11-15",
+      "related_existing_source_id": "U1"
+    },
+    "CEW3": {
+      "url": "https://doi.org/10.1017/S0954102025100448",
+      "locator": "Environmental data: W coordinates/data-source; Discussion / Extrapolating up and down University Valley: surface boundary, approximations and one-year representativity; TableII caption",
+      "read_scope": "Named primary publisher HTML sections and publication metadata read; USGS70273131 used to crosscheck publication year; direct same-W same-process precedent classified; no independent model reproduction, full-paper review or new clock evidence",
+      "access_date_taipei": "2026-11-15",
+      "related_existing_source_id": "U5",
+      "authors": [
+        "Christopher P. McKay",
+        "Margarita M. Marinova",
+        "Kaj E. Williams",
+        "Michael T. Mellon"
+      ],
+      "title": "Summer snow determines the depth to ice-cemented ground under dry permafrost in Antarctica",
+      "year": 2026,
+      "online_publication_date": "2025-11-27",
+      "journal": "Antarctic Science",
+      "volume": 38,
+      "issue": 2,
+      "pages": "122–134",
+      "doi": "10.1017/S0954102025100448"
+    },
+    "CEA2": {
+      "url": "https://doi.org/10.1002/ppp.1985",
+      "locator": "Sections2,3.1 Instrumentation,3.2 Thermal parameters,4.1 Snow/thermal/hydrological regimes",
+      "read_scope": "Named publisher HTML sections re-read; hourly records,0.02m surface-temperature definition and snow-camera limitations; exact TR1-TR3 to AD1GIS correspondence unproved; no raw sensor supplement acquired",
+      "access_date_taipei": "2026-11-15",
+      "related_existing_source_id": "A2"
+    },
+    "MS03C01": {
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa/outputs/research/MS-03/local_validation/piqueux_native_cell.csv",
+      "locator": "candidate_id=MS-03;row_0based=64;column_0based=484; DOI10.22002/D1.1316",
+      "read_scope": "Full named retained calculation/QA record; upstream original sources and exact byte hashes remain in its package. This is project analysis, not a second independent observation.",
+      "access_date_taipei": "2026-11-15",
+      "source_kind": "published_model_locally_extracted"
+    },
+    "MS03C02": {
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa/outputs/research/MS-03/local_validation/gap_completion/moc_summary.json",
+      "locator": "roi_valid_nonzero_pixel_centres;tiles;original_dimensions;source_sha256",
+      "read_scope": "Full named retained calculation/QA record; upstream original sources and exact byte hashes remain in its package. This is project analysis, not a second independent observation.",
+      "access_date_taipei": "2026-11-15",
+      "source_kind": "archival_processed_image_and_derived_count"
+    },
+    "MS03C03": {
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa/outputs/research/MS-03/local_validation/crism/qa.json",
+      "locator": "products;mask counts;matching DDR and WA calibration;original label flags",
+      "read_scope": "Full named retained calculation/QA record; upstream original sources and exact byte hashes remain in its package. This is project analysis, not a second independent observation.",
+      "access_date_taipei": "2026-11-15",
+      "source_kind": "derived_numeric_and_calibration_QA"
+    },
+    "MS03C04": {
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa/outputs/research/MS-03/local_validation/bd1500_audit/results.json",
+      "locator": "strict subset BD1500_2 residual;production_history/README.md and t1811_run_artifacts/README.md",
+      "read_scope": "Full named retained calculation/QA record; upstream original sources and exact byte hashes remain in its package. This is project analysis, not a second independent observation.",
+      "access_date_taipei": "2026-11-15",
+      "source_kind": "derived_parameter_non_equivalence_diagnostic"
+    },
+    "MS03C05": {
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa/outputs/research/MS-03/local_validation/gap_completion/radar_summary.json",
+      "locator": "array_shape;strict_roi_centre_count;row_sampling_us;source_inputs",
+      "read_scope": "Full named retained calculation/QA record; upstream original sources and exact byte hashes remain in its package. This is project analysis, not a second independent observation.",
+      "access_date_taipei": "2026-11-15",
+      "source_kind": "archival_radar_and_same_track_clutter_model"
+    },
+    "MS03C06": {
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa/outputs/research/MS-03/local_validation/gap_completion/daubar2022_summary.json",
+      "locator": "rows;point_hits;original_headers;original_ice_flag_counts;source_sha256; DOI10.5281/zenodo.6604912",
+      "read_scope": "Full named retained calculation/QA record; upstream original sources and exact byte hashes remain in its package. This is project analysis, not a second independent observation.",
+      "access_date_taipei": "2026-11-15",
+      "source_kind": "original_catalogue_point_membership_calculation"
     }
   },
   "downloaded_earth_asset": {
@@ -189,7 +347,8 @@
     "No dust-deposition/wind/pressure equivalence",
     "No new-scientific-novelty or validated instrument performance established",
     "W data now retrieved;Campbell clock history and author per-row intervention flags unresolved",
-    "No independent sensor recalibration or EarthMars common physical support established"
+    "No independent sensor recalibration or EarthMars common physical support established",
+    "Current source-specific status and executable verification protocols are in completion_20261115/open_questions.csv and the active report; downloaded data do not establish local ice truth."
   ],
   "scope": "Independent literature and evidence pairing;no global reranking/new field or predictive test",
   "new_calculations": [
@@ -200,11 +359,703 @@
     "Earth-only2010HOBO20/42cm same-row descriptive statistics"
   ],
   "data_not_transferred": [
-    "I01I02 oldpairing",
-    "Jezero MEDA",
-    "airport climate as AD1 station value"
+    "All global Earth raw products are not duplicated by this supplement.",
+    "Unprocessed W logger/calibration/clock records and exact MRDR producer run artifacts remain unobtained.",
+    "Specified original source tables remain limited by the documented acquisition status; no absence inferred."
   ],
   "outputs": [
+    {
+      "path": "docs/research/MS-03/report.md",
+      "bytes": 21724,
+      "sha256": "a480d8e67af4787d4efe4b53316d0be1ab8ae9626da21c2bc95642206cdf9d8d",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "scripts/research/MS-03/acquire_morphology.py",
+      "bytes": 3144,
+      "sha256": "59b3badcab02664511ad2bdee8bdcb16b1e57aa63b23940558cbf11f3b1afebe",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "scripts/research/MS-03/audit_campbell_clock.py",
+      "bytes": 2774,
+      "sha256": "c4405e186b81522508c1cff54aaf10edcc00c076480bd47d6cdb11e37d2fcd04",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "scripts/research/MS-03/audit_hirise_index_anomalies.py",
+      "bytes": 6049,
+      "sha256": "e692739f2c3263a4d583acf27c5aa5265dd28f3f99e6445b73e9ff93b0d8529c",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "scripts/research/MS-03/check_hirise_duplicate_label_times.py",
+      "bytes": 4304,
+      "sha256": "b71cfba0537bf323be8bb9f2ecf6687a4ca4708cba059812ebaa2adec07e3187",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "scripts/research/MS-03/check_hirise_neighbour_labels.py",
+      "bytes": 3725,
+      "sha256": "e6b6d4e994f441e03428ae7b73f1a8ec4c7c54b8bc7f34e9d34b6ac7ad8046b7",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "scripts/research/MS-03/inspect_uv_w.py",
+      "bytes": 8662,
+      "sha256": "afdb38f4f8cce6c2724506bba784cefa76c38c5d301e916ddf660434fd9ecf39",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "scripts/research/MS-03/morphology_geometry.py",
+      "bytes": 5437,
+      "sha256": "bc4ee74866dd19b3d892eec374042c3ca64f05b1f2cf5d5d56f851f2de3577aa",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "scripts/research/MS-03/plot_morphology.py",
+      "bytes": 7415,
+      "sha256": "2719b7594f280c1ab87494248125801f7eee987e27019e44abd068af763527ab",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "scripts/research/MS-03/supplement_ad1_evidence.py",
+      "bytes": 4880,
+      "sha256": "b89fa44c565c887e74c20377515ca9d67ea42aca4cb85e2ad80b908d0353259e",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "scripts/research/MS-03/validate.py",
+      "bytes": 4608,
+      "sha256": "03a67857e976f28a0f43366596fefc6be607914ace6b8d630cd45667d2fdca00",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "scripts/research/MS-03/validate_morphology.py",
+      "bytes": 3405,
+      "sha256": "e8966355be54fe7a8efbf1c0c3a7ac986c01f6c8da983a07d52a3265d9856f69",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/candidates.csv",
+      "bytes": 3811,
+      "sha256": "2b1c7db7ba433a94a83a9f07107afc380525f1868accc39d8afcf964f87b9972",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/evidence.csv",
+      "bytes": 29904,
+      "sha256": "5bb3aeb6f5eae3c7a0d1601bcddbd5bcc7412f86b4178cf4bf98da4605eae8aa",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/mars_reference.json",
+      "bytes": 13542,
+      "sha256": "014ca34cb9eca59fe1623b4e5cbe602097c6b4a42a8e41de52a9bb108f972348",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/AD1_geometry_summary.json",
+      "bytes": 2081,
+      "sha256": "6c76690c0a68d46b651a10dc0d24240fac1cc02067d95ec11b825c0f33026d2e",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/AD1_recomputed_geometry.csv",
+      "bytes": 24837,
+      "sha256": "1a588571b18b34fdfdf7022dd67712f41c4356a533cbc68840a1bca6fea4b0ac",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/CTX_cumindex.lbl",
+      "bytes": 14728,
+      "sha256": "d09cb01caeb8c6a47373a31033d6eff1595430cee747840fba0072741c4388e0",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/CTX_footprints_mars.json",
+      "bytes": 2130,
+      "sha256": "00650e04ed2239c66d6b44b8ada2e51c6949dcef6168f5fa7c19313a49691fb9",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/D01_027566_2370_XN_57N117W_browse.jpg",
+      "bytes": 59584,
+      "sha256": "c702177589f56aa24aa1f96f5efcd232acbd5dc39ff405b20bcb50d5c875ff83",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/D01_label.txt",
+      "bytes": 1299,
+      "sha256": "e9dc5fd1302f256312e2403aae65bf840ad332ff77c20cf73a02f4f2ea271b2a",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/D01_label_record.bin",
+      "bytes": 5056,
+      "sha256": "f28ba04cb5d6b9a875f55d6b76657a81f8ac7eea7a8f99b1a151624159a4ba93",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/D01_native_crop_DN.png",
+      "bytes": 214449,
+      "sha256": "b44272ad5ba709b95bb851c62ddf99a5e8d71b6ee7222bdaa3999d7d32584b54",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/D01_native_crop_stretch.png",
+      "bytes": 215978,
+      "sha256": "e69a4d90a8e45f210bb614051aa69b1a314aa888c26999f9f16cb16c76d84e17",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/D01_native_rows.bin.gz",
+      "bytes": 1198415,
+      "sha256": "93dd09696264d396eda82e323ef09c4de943e3858e76dd5029ebd92a64717f07",
+      "verification": "inherited_baseline_assertion_not_recomputed"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/G01_018718_2370_XN_57N118W_browse.jpg",
+      "bytes": 58477,
+      "sha256": "70603b5a65e4717fddd7d994cadd67084d58fc9cdd4dcca918c530d024e4e919",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/HiRISE_RDRCUMINDEX.LBL",
+      "bytes": 15726,
+      "sha256": "5401abbb16f8cd9ae0bd99f60cd0198f9cd10914d7e8e89ff4c3985d53bff0a8",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/MS03_AD1_coverage_interpretation.pdf",
+      "bytes": 80744,
+      "sha256": "5e4812dd8860857cb65ae112e0df49aee74170e8c589cc83404fd89b32cd3897",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/MS03_AD1_coverage_interpretation.png",
+      "bytes": 568583,
+      "sha256": "4f2c52b9ff573fb2e38e4db4ae1693f68cf5f47583199e874df9af91fb0c4755",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/PSP_006864_2380_RED.LBL",
+      "bytes": 8157,
+      "sha256": "0ec93f75138dc57e84c80e33809ec3f352b848defb3657e45a5d976a972273f4",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/README.md",
+      "bytes": 16029,
+      "sha256": "96826b0445f0a0b76e6cbd6f825c0f118fe60b8409b93123bac384432a479892",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/V17_086802_2374_XN_57N118W_browse.jpg",
+      "bytes": 3454794,
+      "sha256": "4630cf1857507c35940e9b33c4fe25e7d10a882990de644c811ffebffd153ae2",
+      "verification": "inherited_baseline_assertion_not_recomputed"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/acquisition_manifest.json",
+      "bytes": 5241,
+      "sha256": "3bd71d7274f621f246a9867de08c93db4abc23d8a521b43d7dca9af762c18a67",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/coverage_summary.json",
+      "bytes": 490,
+      "sha256": "0bc38e9f41b9e4d4e053e56631d96e6ac96f20086a4d36bb283348815753ddb3",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/AD1_published_table_crosscheck.csv",
+      "bytes": 1396,
+      "sha256": "143375143133e2ac62b71459e56306559d75ebcd8bc4597d95157c1c856d7b81",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/HiRISE_independent_index_check.json",
+      "bytes": 1472,
+      "sha256": "2d7c463a35b1dccac7a5ad63522ae9ba91264f1d3b237e7711449fd37a67688d",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/HiRISE_invalid_bbox_rows.csv",
+      "bytes": 61911,
+      "sha256": "3144088fa1cd398c1e53d14c11c282ba35f84ee9c216df0bc8cb3528442a6f77",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/author_paper_reading.json",
+      "bytes": 1205,
+      "sha256": "ca0b8db71d4276e057636e497206e242f1037599b306de1facebc5cafe4c30f8",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/generator_followup/duplicate_label_time_comparison.csv",
+      "bytes": 52557,
+      "sha256": "d991340b8e3997832ebf670f994883e47f4159c07317c4286def5d5db936fc9c",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/generator_followup/duplicate_label_time_summary.json",
+      "bytes": 918,
+      "sha256": "66c3d548915a546a65b02dba61351310297e305528dd8910d7c4721d2b52e52f",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/generator_followup/duplicate_source_labels.zip",
+      "bytes": 412652,
+      "sha256": "aaea677542b323640935f66450e9ebba825e2a534fc54fa272b50c9d6e23d34b",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/generator_followup/public_version_trace.json",
+      "bytes": 4346,
+      "sha256": "d2fcd64440e31217a94e899ac234ceb534fb478ebf0a5c62246ec1b71829ffe4",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/ERRATA.TXT",
+      "bytes": 482461,
+      "sha256": "22d6848224f94ff7ab3dfc4f32850e2c51364d34a5486af970b21202d239ea67",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/ERRATA.TXT.retrieval.json",
+      "bytes": 284,
+      "sha256": "101216b1a086d6f5b57a31ac357a92bda41e26ea8f1ea539a66442d4639f9471",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/ESP_019584_2365_RED.LBL",
+      "bytes": 8144,
+      "sha256": "dee92225bd2ee94c2ce63eb3104c63878bd4b67680e8b8f7d27e97edc02b0fa9",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/PSP_001460_1425_RED.LBL",
+      "bytes": 8151,
+      "sha256": "93b043c80f46d0d8e0c75b60885e8d1e1f1c7bdb01bb5adcf1b2a15340eeffa8",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/PSP_010545_2700_RED.LBL",
+      "bytes": 7405,
+      "sha256": "869997315427ac1ce5a7a3f4dad8b22489fdfa2856f7297c0d1badfbbead2b83",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/TRA_000846_2475_RED.LBL",
+      "bytes": 7391,
+      "sha256": "6370e985c645f112dd231f501bd84ec74e70dc70bed022995ce76f4f4a3c4d41",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/duplicate_product_audit.csv",
+      "bytes": 27879,
+      "sha256": "7e427fe3962d05d0d98584a9477056344f1179849675243898c5bace083e0c3a",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/label_refresh.lbl",
+      "bytes": 15726,
+      "sha256": "5401abbb16f8cd9ae0bd99f60cd0198f9cd10914d7e8e89ff4c3985d53bff0a8",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/label_refresh.lbl.retrieval.json",
+      "bytes": 294,
+      "sha256": "4abb059f689fdadc91b016dee572593340fbcc5cbe3acba1e712702fbe7f3fb3",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/latitude_eligible_rows.csv",
+      "bytes": 19972,
+      "sha256": "96000aca746d62b5e5ff9363efbc93b59aad4c3a77aaed608be6b7d2e77eefe3",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/negative_longitude_reclassification.csv",
+      "bytes": 145693,
+      "sha256": "23eef584a02a8a181c0d76c36ebde1f3dbbf8d091d44e3cc7a52e35289e67106",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/product_label_downloads.json",
+      "bytes": 1167,
+      "sha256": "e4b0856a345966eef732eaf30f93a0bbe72fb0e00668a9c5e99ff59ac624948d",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/resolution_summary.json",
+      "bytes": 2783,
+      "sha256": "57c8d00c32b7692e3a9416188bfe55f885d4ffa903cc8827560636b747b5933b",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/table_header_recheck.json",
+      "bytes": 232,
+      "sha256": "2f90e7a66d1f4435c1be10c2ccecb2049ea6dbff46cea967908b5941b1155b30",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_download_manifest.json",
+      "bytes": 565,
+      "sha256": "3b87140804a81ff8d1f14d0c5b9cd5f48305ba8eecc6f2ddef7f1591e1dd7697",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_019562_2385_COLOR.LBL",
+      "bytes": 7981,
+      "sha256": "5341386c433824546beb6d1417bd792959ae06e2155ca350f51c40e8764bc28e",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_019562_2385_RED.LBL",
+      "bytes": 8148,
+      "sha256": "dbe1bc882be79d55005331012940877a50312521aa63418328577dc02d149d89",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_027368_2380_COLOR.LBL",
+      "bytes": 8004,
+      "sha256": "db14c1ee0bb27d6582ac1a0193fcbcc9601e5366bccf80a7783df0bbe7f9aa40",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_027368_2380_RED.LBL",
+      "bytes": 8065,
+      "sha256": "4665f1bab0e418e0a3134f9fd84f914ae7fb46f677f6f8e3542c933ce4232daf",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_034858_2375_COLOR.LBL",
+      "bytes": 8036,
+      "sha256": "d36cc10dbfc5bed8eb3ba9a215620fc5205e4251ffb78291a418c9affe4c2306",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_034858_2375_RED.LBL",
+      "bytes": 8106,
+      "sha256": "8c7f2e5474bd0cbf507eccf41e4db5a504cf085438767e72c3db1252e5a097d2",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_036559_2375_COLOR.LBL",
+      "bytes": 7982,
+      "sha256": "b033521fe50675da2ab73375bf67d7dd7a5edb4de2a51ecc30cc86933d601890",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_036559_2375_RED.LBL",
+      "bytes": 8111,
+      "sha256": "dffaf7ad41bcc0ced3ed67bc940a19d3449b995c9fa5e04bbf6e67ddda3945d5",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/PSP_006864_2380_COLOR.LBL",
+      "bytes": 7776,
+      "sha256": "50590d17cf2368bffa767663f8f69a33d2ccc0da7da9cd061f366564215a3a10",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/PSP_006864_2380_RED.LBL",
+      "bytes": 8157,
+      "sha256": "0ec93f75138dc57e84c80e33809ec3f352b848defb3657e45a5d976a972273f4",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/generator_documentation_reading.json",
+      "bytes": 1692,
+      "sha256": "bf2f920d20b17e1b05c8f792f51e38e3b48eb345aabc55db70f2e8c9fc387b68",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/handoff_status.json",
+      "bytes": 2123,
+      "sha256": "3927253edba71a3cf65cb6ccfb022272f190e2a69211b5ad4c783a4d92ed5497",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/neighbour_label_check.json",
+      "bytes": 8353,
+      "sha256": "50f148cb84b3bb4e1132386926d59ee25f037c0fb9ec283ed50dbca6cb30f8b8",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/published_Mars_image_index_rows.csv",
+      "bytes": 532,
+      "sha256": "a7cefc97fb33c6cbbf958e42481b4b70545e552483816c28cd32b6e250b75437",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/hirise_page.html",
+      "bytes": 22521,
+      "sha256": "aa902fa0dae49d6986bfb24c524b0cbfa9004e3a1a95a98d565e009d9a392d6c",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/image_inventory.csv",
+      "bytes": 2025,
+      "sha256": "1ebf49b0f42c5a116e92a0a9842bdfbce343eb64f02c507bd972b9ea5ac644d9",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/native_crop_provenance.json",
+      "bytes": 1074,
+      "sha256": "32b516e3ecf40ff460994ee4845a6b051bd98343b07e2d4cc722a23f2f9498e0",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/observability_comparison.csv",
+      "bytes": 1070,
+      "sha256": "edd7b6f37f1cd9d83f55b4c9a0cc2d4a1138d8ab8ae4e88690be315d918189e5",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/ode_CTX_EDR.json",
+      "bytes": 17421,
+      "sha256": "815d30cb337ee94e0d1e20e09a016279ea944c6511a6c28d0a3609fb696d620c",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/ode_HIRISE_EDR.json",
+      "bytes": 394,
+      "sha256": "24fa377414a674126d6618f102de87411b479eb11c5c84d179843c1b57c4f2d2",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/ode_HIRISE_RDR.json",
+      "bytes": 397,
+      "sha256": "0a5a6c1cab838d7d5522f4cbf30f3350abd6bb7b596844d4f410f1b3fea14800",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/ode_HIRISE_RDRV11.json",
+      "bytes": 400,
+      "sha256": "43fa7739f2ae256120df4ef1e9d04369b703ed71823d4c19d1a41cee4d8afbf7",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/ode_HIRISE_RDR_V11.json",
+      "bytes": 525,
+      "sha256": "34140bfa532326251abadb99f2c7d7c555b1d95ffdfe2dee8210ee4464e73a03",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/requirements-lock.txt",
+      "bytes": 299,
+      "sha256": "e505259112e4890718dcaf519678fefd5ee22bcd001aa11f7611233f96413e03",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/polygons_Act-IWS_source.zip",
+      "bytes": 57636,
+      "sha256": "c75e7568c9fbfc67898f64e9c18681e5dc7e24a1ec272ceafa12c51377b8054e",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/prior_work.csv",
+      "bytes": 6571,
+      "sha256": "621267b4acc5642643b83f1571ec6a6154482f2d46e9163b25010fc26ef1de2b",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/search_log.csv",
+      "bytes": 12791,
+      "sha256": "52c9a56a133ab6345dd470eff26d5264ddddf8f5c5658c202aa66c63a0b9d35e",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/sources.json",
+      "bytes": 16294,
+      "sha256": "e6dddff2e88d0a728ab3bb39f092efcd8b5f9dee862046cd3080ef54096058ab",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/campbell_clock_audit.json",
+      "bytes": 1224,
+      "sha256": "41da5b4508cc37e9b0c342ca37d1785a99b0dac49e5ff11829a482648792e376",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/campbell_clock_boundary.csv",
+      "bytes": 877,
+      "sha256": "20f3a653e654e9f79b445f9d1f83c53d67161f6578fe775366a0ae0937725f8d",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/clock_search_followup.json",
+      "bytes": 1247,
+      "sha256": "3366ad1aeeaeac4a397a17f6831ece521f409ae27d7931bed9ad27c8670e5447",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/download_manifest.json",
+      "bytes": 3332,
+      "sha256": "ebd5294c47f2d76bc6d7d7121874b96bff400987eae8c741b69fd16e95b78770",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/earth_only_2010_summary.csv",
+      "bytes": 886,
+      "sha256": "f469d76f1c73ccfc5411ab6cebb760300e6823435d1f41c54942d7b15011932e",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/hobo_W_temperatures.csv.gz",
+      "bytes": 446674,
+      "sha256": "9fff2d2d959e4cbecd66c05d9c7904cf021e8c2a048050a24198477cf52ee157",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/monthly_coverage.csv",
+      "bytes": 30420,
+      "sha256": "ae5957c9449503a5cd0fe7d58a2e18061d5a929139eabefa72499830dfeeea5a",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/qa.json",
+      "bytes": 6621,
+      "sha256": "47d4ecd4ec26c1678b3ded7a11f45039e269e826311efa15ed6ad441eebb39ed",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/validation.json",
+      "bytes": 20861,
+      "sha256": "a562fb1fa2f1d517749cc21de5b22f4d8e369d589c78e4662e23be801c082bb3",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/manifest.json",
+      "bytes": 18560,
+      "sha256": "cf1d5a9cd40201bbca113c038d7a2f9a25b60c735d4586508dd1ced960c47a38",
+      "verification": "recomputed_from_current_local_bytes"
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/file_inventory.csv",
+      "bytes": 526904,
+      "sha256": "80261e960e071bc004457f8dbddb90efb9ef04a803fbceac6d78d6cf565e960f",
+      "verification": "recomputed_from_current_local_bytes"
+    }
+  ],
+  "followup_date_taipei": "2026-11-15",
+  "uv_followup": {
+    "version_record": 10553882,
+    "version_doi": "10.5281/zenodo.10553882",
+    "download_manifest": "outputs/research/MS-03/uv_w/download_manifest.json",
+    "qa": "outputs/research/MS-03/uv_w/qa.json",
+    "data": "outputs/research/MS-03/uv_w/hobo_W_temperatures.csv.gz",
+    "summary": "outputs/research/MS-03/uv_w/earth_only_2010_summary.csv",
+    "scope": "Earth-only same-HOBO-depth descriptive analysis;no cross-planet numerical matching",
+    "raw_downloads_tracked": false,
+    "parser": "scripts/research/MS-03/inspect_uv_w.py",
+    "clock_status": "Campbell decimal day / printed timestamp discontinuity unresolved;HOBO no time conversion",
+    "main_integration": false
+  },
+  "campbell_clock_followup": {
+    "date": "2026-11-15",
+    "status": "boundary association confirmed;root cause unresolved",
+    "correction_applied": false,
+    "hobo_alignment": false,
+    "outputs": [
+      "uv_w/campbell_clock_audit.json",
+      "uv_w/campbell_clock_boundary.csv"
+    ]
+  },
+  "clock_public_source_followup": {
+    "date": "2026-11-15",
+    "record": "uv_w/clock_search_followup.json",
+    "root_cause": "unknown",
+    "no_new_clock_inputs": true
+  },
+  "clock_handoff": {
+    "date": "2026-11-15",
+    "recipients": [
+      "main research conversation",
+      "GPU"
+    ],
+    "location": "docs/research/MS-03/report.md",
+    "status": "prepared in PR7;not merged",
+    "clock_correction": false,
+    "hobo_alignment": false
+  },
+  "morphology_followup": {
+    "starting_sha": "7b3c865e85ffeb4db81277ef34e9c3f4a318fc9f",
+    "date": "2026-11-15",
+    "roi_planetocentric_east_positive": [
+      242,
+      57.5,
+      242.5,
+      58
+    ],
+    "decision": "MS-03-E02 downgrade_general_method_reference_not_specific_MS03_pair",
+    "result": "insufficient_evidence_not_absence",
+    "directory": "outputs/research/MS-03/morphology",
+    "clock_work": "unchanged"
+  },
+  "AD1_handoff_evidence_supplement": {
+    "date": "2026-11-15",
+    "basis_commit": "5154b9b2c58057b8719ed0d6297374ad03086da0",
+    "recipients": [
+      "main research conversation",
+      "GPU"
+    ],
+    "status": "prepared in report and PR7;not independently sent",
+    "raw_cumulative_index_tracked": false,
+    "author_pdf_tracked": false,
+    "decision": "downgrade retained;insufficient evidence"
+  },
+  "HiRISE_index_anomaly_resolution": {
+    "date": "2026-11-15",
+    "basis_commit": "115576b51e1a7c89d2d9cd75ae667d4da4ad96c0",
+    "summary": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/resolution_summary.json",
+    "legacy_flags": "615negative-longitude rows latitude-excluded;not missing geolocation",
+    "count_difference": "149duplicate-product extra rows;upstream generation unknown",
+    "roi_result": "0bbox hits in all205451rows of fixed source",
+    "clock_alignment": false
+  },
+  "index_handoff_further_evidence": {
+    "date": "2026-11-15",
+    "basis_commit": "c6f9b93aa9ff5a471a8f67fbdf40f0922e508b84",
+    "status_ledger": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/handoff_status.json",
+    "delivery": "prepared for main/GPU in report and PR7;not externally notified",
+    "resolved_old_claim": "615locationsunknown is superseded",
+    "extra_label_checks": 10,
+    "generator_documentation": "read;not production implementation",
+    "main_merge": false
+  },
+  "generator_followup": {
+    "basis_commit": "3321765dc0cd24316e7e12d30b4ade803fa67fcd",
+    "date": "2026-11-15",
+    "directory": "outputs/research/MS-03/morphology/evidence_followup/generator_followup",
+    "source_label_count": 149,
+    "causal_root": "unknown",
+    "actual2026build_and_SQL": "not obtained",
+    "new_scope": "public version trace and bounded time-field diagnostic;not morphology or clock correction"
+  },
+  "duplicate149_handoff": {
+    "date": "2026-11-15",
+    "basis_commit": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+    "location": "docs/research/MS-03/report.md",
+    "recipients": [
+      "main research conversation",
+      "GPU"
+    ],
+    "delivery": "prepared in report/PR7;not externally sent",
+    "new_data_or_analysis": false,
+    "missing": [
+      "actual executed2026build",
+      "actualSQL/config andsource snapshot",
+      "same-build write/count logs"
+    ]
+  },
+  "historical_version": "MS03-EARTH-ANALOG-20261115-v2",
+  "historical_branch": "research/ms-03-earth-analogs",
+  "initial_research_date_taipei": "2026-11-14",
+  "historical_outputs": [
     {
       "path": "docs/research/MS-03/report.md",
       "bytes": 74658,
@@ -676,115 +1527,61 @@
       "sha256": "a562fb1fa2f1d517749cc21de5b22f4d8e369d589c78e4662e23be801c082bb3"
     }
   ],
-  "followup_date_taipei": "2026-11-15",
-  "uv_followup": {
-    "version_record": 10553882,
-    "version_doi": "10.5281/zenodo.10553882",
-    "download_manifest": "outputs/research/MS-03/uv_w/download_manifest.json",
-    "qa": "outputs/research/MS-03/uv_w/qa.json",
-    "data": "outputs/research/MS-03/uv_w/hobo_W_temperatures.csv.gz",
-    "summary": "outputs/research/MS-03/uv_w/earth_only_2010_summary.csv",
-    "scope": "Earth-only same-HOBO-depth descriptive analysis;no cross-planet numerical matching",
-    "raw_downloads_tracked": false,
-    "parser": "scripts/research/MS-03/inspect_uv_w.py",
-    "clock_status": "Campbell decimal day / printed timestamp discontinuity unresolved;HOBO no time conversion",
-    "main_integration": false
+  "historical_outputs_commit": "234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa",
+  "historical_inputs": [
+    {
+      "path": "outputs/research/mars_reselection_20261114/report.md",
+      "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "bytes": 16524,
+      "sha256": "1708e2d7af86118edf2a88c3e896464406d5bd617f9ab197f7c4d412f5969e4b",
+      "access": "read_local_clone_after_fetch"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/selected_targets.json",
+      "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "bytes": 3434,
+      "sha256": "388ca89110b2a8fbb4fc6fa403994ab54cd193fd23eefd8aa5987a75e3255ba5",
+      "access": "read_local_clone_after_fetch"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/final_candidates.csv",
+      "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "bytes": 5897,
+      "sha256": "83a03d1f4273fa7c45c0d22b5c29a8b8cfc0544e481d5f2bbca2c85812534c4e",
+      "access": "read_local_clone_after_fetch"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/candidate_native_evidence.json",
+      "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "bytes": 38177,
+      "sha256": "3258b5c5bd7de7f15d96918bbce1c09afa6c5b7a329b8bc05cdb7c4fcd3f41c6",
+      "access": "read_local_clone_after_fetch"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/all_data_usage.csv",
+      "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "bytes": 803,
+      "sha256": "384fd5358f45c0ba4965a829f51a5e28496efbb5c90435f57823ec747ef345bd",
+      "access": "read_local_clone_after_fetch"
+    }
+  ],
+  "current_completion": {
+    "date_taipei": "2026-11-15",
+    "baseline_main_commit": "234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa",
+    "branch": "research/ms-03-earth-analogs",
+    "report": "docs/research/MS-03/report.md",
+    "history_report": "docs/research/MS-03/report_history_before_completion_20261115.md",
+    "complete_file_inventory": "outputs/research/MS-03/completion_20261115/file_inventory.csv",
+    "manifest": "outputs/research/MS-03/completion_20261115/manifest.json",
+    "requirement_audit": "outputs/research/MS-03/completion_20261115/requirement_audit.csv",
+    "publication_receipt": "outputs/research/MS-03/completion_20261115/publication_receipt.json",
+    "legacy_outputs_scope": "Original94 outputs are retained with their baseline provenance; current full MS03 coverage is the inventory, including local_validation.",
+    "all_scientific_problems_solved": false,
+    "unknowns": "outputs/research/MS-03/completion_20261115/open_questions.csv"
   },
-  "campbell_clock_followup": {
-    "date": "2026-11-15",
-    "status": "boundary association confirmed;root cause unresolved",
-    "correction_applied": false,
-    "hobo_alignment": false,
-    "outputs": [
-      "uv_w/campbell_clock_audit.json",
-      "uv_w/campbell_clock_boundary.csv"
-    ]
-  },
-  "clock_public_source_followup": {
-    "date": "2026-11-15",
-    "record": "uv_w/clock_search_followup.json",
-    "root_cause": "unknown",
-    "no_new_clock_inputs": true
-  },
-  "clock_handoff": {
-    "date": "2026-11-15",
-    "recipients": [
-      "main research conversation",
-      "GPU"
-    ],
-    "location": "docs/research/MS-03/report.md",
-    "status": "prepared in PR7;not merged",
-    "clock_correction": false,
-    "hobo_alignment": false
-  },
-  "morphology_followup": {
-    "starting_sha": "7b3c865e85ffeb4db81277ef34e9c3f4a318fc9f",
-    "date": "2026-11-15",
-    "roi_planetocentric_east_positive": [
-      242,
-      57.5,
-      242.5,
-      58
-    ],
-    "decision": "MS-03-E02 downgrade_general_method_reference_not_specific_MS03_pair",
-    "result": "insufficient_evidence_not_absence",
-    "directory": "outputs/research/MS-03/morphology",
-    "clock_work": "unchanged"
-  },
-  "AD1_handoff_evidence_supplement": {
-    "date": "2026-11-15",
-    "basis_commit": "5154b9b2c58057b8719ed0d6297374ad03086da0",
-    "recipients": [
-      "main research conversation",
-      "GPU"
-    ],
-    "status": "prepared in report and PR7;not independently sent",
-    "raw_cumulative_index_tracked": false,
-    "author_pdf_tracked": false,
-    "decision": "downgrade retained;insufficient evidence"
-  },
-  "HiRISE_index_anomaly_resolution": {
-    "date": "2026-11-15",
-    "basis_commit": "115576b51e1a7c89d2d9cd75ae667d4da4ad96c0",
-    "summary": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/resolution_summary.json",
-    "legacy_flags": "615negative-longitude rows latitude-excluded;not missing geolocation",
-    "count_difference": "149duplicate-product extra rows;upstream generation unknown",
-    "roi_result": "0bbox hits in all205451rows of fixed source",
-    "clock_alignment": false
-  },
-  "index_handoff_further_evidence": {
-    "date": "2026-11-15",
-    "basis_commit": "c6f9b93aa9ff5a471a8f67fbdf40f0922e508b84",
-    "status_ledger": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/handoff_status.json",
-    "delivery": "prepared for main/GPU in report and PR7;not externally notified",
-    "resolved_old_claim": "615locationsunknown is superseded",
-    "extra_label_checks": 10,
-    "generator_documentation": "read;not production implementation",
-    "main_merge": false
-  },
-  "generator_followup": {
-    "basis_commit": "3321765dc0cd24316e7e12d30b4ade803fa67fcd",
-    "date": "2026-11-15",
-    "directory": "outputs/research/MS-03/morphology/evidence_followup/generator_followup",
-    "source_label_count": 149,
-    "causal_root": "unknown",
-    "actual2026build_and_SQL": "not obtained",
-    "new_scope": "public version trace and bounded time-field diagnostic;not morphology or clock correction"
-  },
-  "duplicate149_handoff": {
-    "date": "2026-11-15",
-    "basis_commit": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
-    "location": "docs/research/MS-03/report.md",
-    "recipients": [
-      "main research conversation",
-      "GPU"
-    ],
-    "delivery": "prepared in report/PR7;not externally sent",
-    "new_data_or_analysis": false,
-    "missing": [
-      "actual executed2026build",
-      "actualSQL/config andsource snapshot",
-      "same-build write/count logs"
-    ]
-  }
+  "historical_data_not_transferred": [
+    "I01I02 oldpairing",
+    "Jezero MEDA",
+    "airport climate as AD1 station value"
+  ]
 }

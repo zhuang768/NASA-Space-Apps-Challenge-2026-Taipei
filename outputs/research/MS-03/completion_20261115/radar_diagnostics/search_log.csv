@@ -1,0 +1,7 @@
+search_id,platform,query_or_url,date_taipei,result,limitation
+RAD-Q01,web system2,SHARAD pure water ice dielectric permittivity3.15 10MHz range resolution Seu2007,2026-11-15,Located PSI radar method page and primary-paper pointers,Search excerpt not local material measurement
+RAD-Q02,web system1,"site.swim.psi.edu/about.php Pure water ice3.15",2026-11-15,Located NASA NTRS Morgan supplementary information;actual PDF p4 subsequently read,Bounded source lookup;not exhaustive literature search
+RAD-Q03,web open,https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/document/rgram_processing.htm,2026-11-15,Primary HTML retrieved;selected sections read,Nominal product description only
+RAD-Q04,web open,https://pds-geosciences.wustl.edu/mro/urn-nasa-pds-mro_sharad_simulations/document/userguide.pdf,2026-11-15,Tool failed:content length too large13196337bytes,No new full-guide read claimed;previous package reading preserved
+RAD-Q05,web open,https://swim.psi.edu/about.php?section=radar,2026-11-15,Tool fetch timed out,No page-read success claimed
+RAD-Q06,web open,https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/rgram/s_0462xx/s_04624502_rgram.lbl,2026-11-15,Not accessible through web tool;original pinned GitHub label bytes read instead,Not an HTTP status or archive absence claim

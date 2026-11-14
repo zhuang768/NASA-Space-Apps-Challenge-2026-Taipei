@@ -1,0 +1,76 @@
+{
+  "version": "MARS-RESELECT-20261114-v1",
+  "parent_main": "e84da75d905ad43f260e74307752946862200dae",
+  "scope": "regional shallow-ice reconnaissance research, not landing/extraction approval",
+  "sites": [
+    {
+      "id": "MS-01",
+      "review": "A",
+      "name": "72°E 北部低地扇區",
+      "role": "雙深度冰線索與低起伏並存",
+      "why": "兩深度冰一致性都相對高，區域坡度與高差低；適合提出覆土與冰相關熱訊號的後續探查問題。",
+      "trade": "三點中熱慣量最高，但這不等於較硬、較好鑽或冰較多。TES有27個插值格被排除；局部材料與冰界面仍未知。",
+      "question": "在兩深度冰線索均較強、較高熱慣量的區域，哪些局部影像、雷達與熱觀測能區分表層材料和地下冰的影響？",
+      "center": {
+        "lat": 56.75,
+        "lon": 72.75
+      },
+      "lon_east_0_360": 72.75,
+      "bounds": {
+        "south": 56.5,
+        "north": 57.0,
+        "west": 72.5,
+        "east": 73.0
+      },
+      "status": "retained_for_followup_with_bounded_prior_site_nonhit; not globally novelty-cleared",
+      "native_evidence_file": "candidate_native_evidence.json",
+      "native_review_id": "A"
+    },
+    {
+      "id": "MS-02",
+      "review": "D",
+      "name": "168°E 北部低地扇區",
+      "role": "較低緯度的冰探查取捨",
+      "why": "三點中最靠近赤道，兩深度冰線索均為正且相對高，TES原生有效格比例最高；適合比較緯度、熱背景與冰線索的取捨。",
+      "trade": "三點中區域高差較大，MY34沙塵p95及最大值也最高。較低緯度不等於已證明供電、熱控或登陸可行。Phlegra大區已有研究。",
+      "question": "較低緯度但較高沙塵背景的候選，能否用新增局部觀測釐清淺層冰線索與季節熱背景，而不借用南方既有場址真值？",
+      "center": {
+        "lat": 52.75,
+        "lon": 168.25
+      },
+      "lon_east_0_360": 168.25,
+      "bounds": {
+        "south": 52.5,
+        "north": 53.0,
+        "west": 168.0,
+        "east": 168.5
+      },
+      "status": "retained_for_followup_with_bounded_prior_site_nonhit; not globally novelty-cleared",
+      "native_evidence_file": "candidate_native_evidence.json",
+      "native_review_id": "D"
+    },
+    {
+      "id": "MS-03",
+      "review": "C",
+      "name": "242°E 北部低地扇區",
+      "role": "較低沙塵、低坡度與強近表層線索",
+      "why": "三點中區域平均坡度最低，MY34與MY35的沙塵均值及p95也最低，近表層SWIM線索較強；提供不同熱性質背景的探查對照。",
+      "trade": "1-5m指標低於另外兩點；TES僅79/100原生格有效，熱慣量範圍較寬。溫度粗格偏北且缺測多；不能推論冰量、硬度或設備性能。",
+      "question": "較低熱慣量與較強近表層冰線索並存時，覆土與地表材料可能造成哪些判讀歧義，應先取得什麼局部證據？",
+      "center": {
+        "lat": 57.75,
+        "lon": -117.75
+      },
+      "lon_east_0_360": 242.25,
+      "bounds": {
+        "south": 57.5,
+        "north": 58.0,
+        "west": -118.0,
+        "east": -117.5
+      },
+      "status": "retained_for_followup_with_bounded_prior_site_nonhit; not globally novelty-cleared",
+      "native_evidence_file": "candidate_native_evidence.json",
+      "native_review_id": "C"
+    }
+  ]
+}

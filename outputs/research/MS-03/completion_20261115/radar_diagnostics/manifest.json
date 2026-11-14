@@ -1,0 +1,67 @@
+{
+  "starting_main": "234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa",
+  "date_taipei": "2026-11-15",
+  "scope": "new radar method diagnostics, not ice detection",
+  "source_input": {
+    "path": "outputs/research/MS-03/local_validation/gap_completion/radar_local_arrays.npz",
+    "bytes": 111476,
+    "sha256": "ac36e98d8af635bf1078ac7689005e490b09f2d765a7e60aa170a24b266c095c"
+  },
+  "files": [
+    {
+      "path": "F-RAD01_peak_index_diagnostic.png",
+      "bytes": 172006,
+      "sha256": "6ed927827080a7b77aa2c8d35696e79b9f21359120953bfeb66642d6bcdc07c8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3641,
+      "sha256": "ada9ba6b8d5110173bb48d48a1cdc64642ac1a1f4ada223bc5001487958f8e4d"
+    },
+    {
+      "path": "analyze.py",
+      "bytes": 6089,
+      "sha256": "057cdeb626f042ec4a750fe5662eda27862e986be59ddc8ee3d3978e41815cdf"
+    },
+    {
+      "path": "plot.py",
+      "bytes": 1431,
+      "sha256": "f4b52393be39aefc1a4918b6a9851ac4cdf8f37dfbf7bf0746ae0b19be8b9051"
+    },
+    {
+      "path": "radar_diagnostic_summary.json",
+      "bytes": 1670,
+      "sha256": "e8d6377cc7baa5f683b101dfbbaeb1124901f3e349e2db471e40ca302ac60f5f"
+    },
+    {
+      "path": "radar_pick_diagnostic.csv",
+      "bytes": 7947,
+      "sha256": "8e9375b87db2c314941cef8e2d2975155e90a046ad30f71bb3b60da9ff91039d"
+    },
+    {
+      "path": "range_support.csv",
+      "bytes": 748,
+      "sha256": "ffc20a763f4a3e33a323c3d47db88f02b66f574078d971cd2fbfd98a3f0eb70d"
+    },
+    {
+      "path": "search_log.csv",
+      "bytes": 1343,
+      "sha256": "8ce5d8c94aa8ac8a4513f5ee7044002ff22cc31aa5970af4c7dd7495aae42400"
+    },
+    {
+      "path": "source_read_log.csv",
+      "bytes": 2552,
+      "sha256": "17803c5c569448eb25930b45e8fcf469d5f4958f58d2a30dcb3be05c360be477"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 420,
+      "sha256": "2594327564900a6edcb0fdc780cf3e011d75158aa8796e356c328d569be6af57"
+    },
+    {
+      "path": "visual_review.json",
+      "bytes": 241,
+      "sha256": "255a36cfd8bd5878010d0633943b164d5321bbbbd62c514e5ce9768d2fc45de6"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "status": "pending_actual_remote_publication",
+  "scientific_completion": false,
+  "note": "This placeholder is replaced only after a real branch, commit and PR have been created and read back. It is excluded from the inventory checksum graph."
+}

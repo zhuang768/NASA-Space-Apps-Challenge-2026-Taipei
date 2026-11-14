@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "clean_directory_has_no_data_raw": true,
+  "both_scripts_ran_with_no_arguments": true,
+  "network_not_needed": true,
+  "gzip_mtime_zero": true,
+  "gzip_has_no_stored_filename": true,
+  "decompressed_source_md5": "ae2133eac5c92c695c5f6ef93bcbbd25",
+  "decompressed_source_sha256": "c46d93e3dd07c6c91d700a814214716f00caa0d5cc3a520f8969ce0af63ecafd",
+  "gzip_sha256": "f2ab00f49fdfa9f64cb2e6fe15df3d32599f382292ba7b2e4b916f75c5f311f1",
+  "statistic_output_sha256": {
+    "earth_atmosphere_summary.csv": "5f4200f8412dec434ff3a30afdcb8739393a50d915223abe9d7ae4635228aad4",
+    "earth_atmosphere_monthly.csv": "20ea255952ee9ba2bcd11ab5c72541dc7cb1f54477db0029286bda14c4702e24"
+  },
+  "summary_and_monthly_byte_identical_to_pre_retention": true
+}

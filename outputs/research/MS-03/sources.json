@@ -155,5 +155,92 @@
     "locator": "149exact label URLs and hashes in generator_followup/duplicate_label_time_comparison.csv;MRO:OBSERVATION_START_TIME",
     "read_scope": "All149actual detached labels acquired and command-start fields compared;not first-line START_TIME substitution;no index correction",
     "access_date_taipei": "2026-11-15"
+  },
+  "CEW1": {
+    "url": "https://doi.org/10.5281/zenodo.10553882",
+    "locator": "Fixed version10553882; UniversityV_09_10_Campbell_data_good_only_calibrated.txt; second-row headers and third-row units; earth_input_receipt.json",
+    "read_scope": "Provider fixed-version listing and MD5 re-read; existing original short-export bytes independently SHA256/MD5 checked; all17705 rows parsed;16032 rows selected for11 complete months; no new download, untouched logger or clock-alignment claim",
+    "access_date_taipei": "2026-11-15",
+    "related_existing_source_id": "U4",
+    "dataset_doi": "10.5281/zenodo.10553882",
+    "source_file_sha256": "c46d93e3dd07c6c91d700a814214716f00caa0d5cc3a520f8969ce0af63ecafd",
+    "source_file_md5": "ae2133eac5c92c695c5f6ef93bcbbd25"
+  },
+  "CEW2": {
+    "url": "https://doi.org/10.1017/S0954102022000025",
+    "locator": "Meteorological measurements paragraphs on heights/instruments; Energy balance pressure paragraph after Eq6",
+    "read_scope": "Publisher HTML named Methods paragraphs and constant-pressure assumption re-read; no full-paper review or independent sensor calibration claimed;05103/05013 spelling difference retained",
+    "access_date_taipei": "2026-11-15",
+    "related_existing_source_id": "U1"
+  },
+  "CEW3": {
+    "url": "https://doi.org/10.1017/S0954102025100448",
+    "locator": "Environmental data: W coordinates/data-source; Discussion / Extrapolating up and down University Valley: surface boundary, approximations and one-year representativity; TableII caption",
+    "read_scope": "Named primary publisher HTML sections and publication metadata read; USGS70273131 used to crosscheck publication year; direct same-W same-process precedent classified; no independent model reproduction, full-paper review or new clock evidence",
+    "access_date_taipei": "2026-11-15",
+    "related_existing_source_id": "U5",
+    "authors": [
+      "Christopher P. McKay",
+      "Margarita M. Marinova",
+      "Kaj E. Williams",
+      "Michael T. Mellon"
+    ],
+    "title": "Summer snow determines the depth to ice-cemented ground under dry permafrost in Antarctica",
+    "year": 2026,
+    "online_publication_date": "2025-11-27",
+    "journal": "Antarctic Science",
+    "volume": 38,
+    "issue": 2,
+    "pages": "122–134",
+    "doi": "10.1017/S0954102025100448"
+  },
+  "CEA2": {
+    "url": "https://doi.org/10.1002/ppp.1985",
+    "locator": "Sections2,3.1 Instrumentation,3.2 Thermal parameters,4.1 Snow/thermal/hydrological regimes",
+    "read_scope": "Named publisher HTML sections re-read; hourly records,0.02m surface-temperature definition and snow-camera limitations; exact TR1-TR3 to AD1GIS correspondence unproved; no raw sensor supplement acquired",
+    "access_date_taipei": "2026-11-15",
+    "related_existing_source_id": "A2"
+  },
+  "MS03C01": {
+    "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa/outputs/research/MS-03/local_validation/piqueux_native_cell.csv",
+    "locator": "candidate_id=MS-03;row_0based=64;column_0based=484; DOI10.22002/D1.1316",
+    "read_scope": "Full named retained calculation/QA record; upstream original sources and exact byte hashes remain in its package. This is project analysis, not a second independent observation.",
+    "access_date_taipei": "2026-11-15",
+    "source_kind": "published_model_locally_extracted"
+  },
+  "MS03C02": {
+    "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa/outputs/research/MS-03/local_validation/gap_completion/moc_summary.json",
+    "locator": "roi_valid_nonzero_pixel_centres;tiles;original_dimensions;source_sha256",
+    "read_scope": "Full named retained calculation/QA record; upstream original sources and exact byte hashes remain in its package. This is project analysis, not a second independent observation.",
+    "access_date_taipei": "2026-11-15",
+    "source_kind": "archival_processed_image_and_derived_count"
+  },
+  "MS03C03": {
+    "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa/outputs/research/MS-03/local_validation/crism/qa.json",
+    "locator": "products;mask counts;matching DDR and WA calibration;original label flags",
+    "read_scope": "Full named retained calculation/QA record; upstream original sources and exact byte hashes remain in its package. This is project analysis, not a second independent observation.",
+    "access_date_taipei": "2026-11-15",
+    "source_kind": "derived_numeric_and_calibration_QA"
+  },
+  "MS03C04": {
+    "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa/outputs/research/MS-03/local_validation/bd1500_audit/results.json",
+    "locator": "strict subset BD1500_2 residual;production_history/README.md and t1811_run_artifacts/README.md",
+    "read_scope": "Full named retained calculation/QA record; upstream original sources and exact byte hashes remain in its package. This is project analysis, not a second independent observation.",
+    "access_date_taipei": "2026-11-15",
+    "source_kind": "derived_parameter_non_equivalence_diagnostic"
+  },
+  "MS03C05": {
+    "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa/outputs/research/MS-03/local_validation/gap_completion/radar_summary.json",
+    "locator": "array_shape;strict_roi_centre_count;row_sampling_us;source_inputs",
+    "read_scope": "Full named retained calculation/QA record; upstream original sources and exact byte hashes remain in its package. This is project analysis, not a second independent observation.",
+    "access_date_taipei": "2026-11-15",
+    "source_kind": "archival_radar_and_same_track_clutter_model"
+  },
+  "MS03C06": {
+    "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa/outputs/research/MS-03/local_validation/gap_completion/daubar2022_summary.json",
+    "locator": "rows;point_hits;original_headers;original_ice_flag_counts;source_sha256; DOI10.5281/zenodo.6604912",
+    "read_scope": "Full named retained calculation/QA record; upstream original sources and exact byte hashes remain in its package. This is project analysis, not a second independent observation.",
+    "access_date_taipei": "2026-11-15",
+    "source_kind": "original_catalogue_point_membership_calculation"
   }
 }

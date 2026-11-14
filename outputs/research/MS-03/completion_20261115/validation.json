@@ -1,0 +1,143 @@
+{
+  "schema": "MS03-delivery-offline-validation-v1",
+  "baseline_commit": "234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa",
+  "checks": [
+    {
+      "check": "unique_nonempty_ids:candidates.csv",
+      "passed": true,
+      "detail": "Unique nonempty candidate_id; rows=2"
+    },
+    {
+      "check": "unique_nonempty_ids:evidence.csv",
+      "passed": true,
+      "detail": "Unique nonempty evidence_id; rows=41"
+    },
+    {
+      "check": "unique_nonempty_ids:prior_work.csv",
+      "passed": true,
+      "detail": "Unique nonempty prior_id; rows=9"
+    },
+    {
+      "check": "unique_nonempty_ids:search_log.csv",
+      "passed": true,
+      "detail": "Unique nonempty search_id; rows=49"
+    },
+    {
+      "check": "at_least_two_candidates",
+      "passed": true,
+      "detail": "['MS-03-E01', 'MS-03-E02']"
+    },
+    {
+      "check": "candidate_coordinates_extent:MS-03-E01",
+      "passed": true,
+      "detail": "Coordinate range, finite values, extent JSON and Mars ID; no invented Earth-Mars equivalence."
+    },
+    {
+      "check": "published_candidate_anchor:MS-03-E01",
+      "passed": true,
+      "detail": "W deployment anchor or AD1 metadata event anchor; neither is silently relabelled a sensor/area centroid."
+    },
+    {
+      "check": "four_dimensions:MS-03-E01",
+      "passed": true,
+      "detail": "atmosphere_dust,temperature_thermal,terrain,water_ice"
+    },
+    {
+      "check": "candidate_scope_and_disposition:MS-03-E01",
+      "passed": true,
+      "detail": "Nonempty identity, extent basis, purpose, disposition, next step and inference limits."
+    },
+    {
+      "check": "prior_use_review:MS-03-E01",
+      "passed": true,
+      "detail": "Recorded prior-use rows=4"
+    },
+    {
+      "check": "candidate_coordinates_extent:MS-03-E02",
+      "passed": true,
+      "detail": "Coordinate range, finite values, extent JSON and Mars ID; no invented Earth-Mars equivalence."
+    },
+    {
+      "check": "published_candidate_anchor:MS-03-E02",
+      "passed": true,
+      "detail": "W deployment anchor or AD1 metadata event anchor; neither is silently relabelled a sensor/area centroid."
+    },
+    {
+      "check": "four_dimensions:MS-03-E02",
+      "passed": true,
+      "detail": "atmosphere_dust,temperature_thermal,terrain,water_ice"
+    },
+    {
+      "check": "candidate_scope_and_disposition:MS-03-E02",
+      "passed": true,
+      "detail": "Nonempty identity, extent basis, purpose, disposition, next step and inference limits."
+    },
+    {
+      "check": "prior_use_review:MS-03-E02",
+      "passed": true,
+      "detail": "Recorded prior-use rows=5"
+    },
+    {
+      "check": "fixed_mars_roi",
+      "passed": true,
+      "detail": "MS-03 center57.75N,242.25E; fixed57.50–58.00N,242.00–242.50E; -117.75E representation changes no geometry."
+    },
+    {
+      "check": "source_id_url_cross_references",
+      "passed": true,
+      "detail": "0 unresolved source cross-reference rows."
+    },
+    {
+      "check": "evidence_metadata",
+      "passed": true,
+      "detail": "Unknown is an explicit permitted value; blank provenance/support/limits are not permitted."
+    },
+    {
+      "check": "prior_classification",
+      "passed": true,
+      "detail": "Classification, locator and actual reading scope."
+    },
+    {
+      "check": "search_metadata",
+      "passed": true,
+      "detail": "Dates, platform, exact query, result and bounded limitation."
+    },
+    {
+      "check": "report_exists",
+      "passed": true,
+      "detail": "Current report present; correctness of scientific prose needs explicit reviewer inspection."
+    },
+    {
+      "check": "required_delivery_files",
+      "passed": true,
+      "detail": "Required machine-readable files and original parent manifest present."
+    },
+    {
+      "check": "relative_link_paths",
+      "passed": true,
+      "detail": "244 local relative links checked; 0 unresolved; tree-only targets are explicitly not downloaded bytes."
+    },
+    {
+      "check": "inventory_covers_owned_baseline",
+      "passed": true,
+      "detail": "All supplied baseline MS-03-owned paths represented or explicitly excluded from the checksum graph."
+    },
+    {
+      "check": "preserved_baseline_payloads",
+      "passed": true,
+      "detail": "Only explicitly allowed report/candidate/evidence/prior/search/source-registry updates may differ from baseline; unexpected changes=[]"
+    },
+    {
+      "check": "no_false_scientific_completion",
+      "passed": true,
+      "detail": "Research handoff verification is explicitly separate from all scientific questions being solved."
+    }
+  ],
+  "failed_checks": [],
+  "errors": [],
+  "handoff_structural_checks_passed": true,
+  "all_scientific_problems_solved": false,
+  "goal_complete": false,
+  "publication_verified": false,
+  "limit": "Offline structure, provenance identity, paths and manifest coverage only. Scientific unknowns and remote publication require different evidence."
+}

@@ -1,0 +1,10 @@
+path,stored_rows,sha256,columns_json
+outputs/research/MS-03/completion_20261115/earth_search_log.csv,4,ec8b2cdd83820ba2d9b10f04bd2ad1d3519cd683e20c978af7319862e2dd97c1,"[""search_id"",""date_taipei"",""platform"",""query"",""result"",""followup"",""search_scope""]"
+outputs/research/MS-03/completion_20261115/prior_search_log.csv,18,19892a732ce68965ec7df3160086bc07ca06d7558dace3765a667f2d047b5cd8,"[""date_taipei"",""platform"",""query_or_action"",""result"",""scope""]"
+outputs/research/MS-03/completion_20261115/radar_diagnostics/search_log.csv,6,8ce5d8c94aa8ac8a4513f5ee7044002ff22cc31aa5970af4c7dd7495aae42400,"[""search_id"",""platform"",""query_or_url"",""date_taipei"",""result"",""limitation""]"
+outputs/research/MS-03/local_validation/crism/literature_search_log.csv,8,6b7a3b24305bad48131a9316aab169bde262e747eeb849e61a59e14713c690dc,"[""platform"",""query"",""date_taipei"",""scope"",""outcome""]"
+outputs/research/MS-03/local_validation/gap_completion/search_log.csv,54,41821598a4e93b11d29cd5e07016dd70df4cb448673b9133034615d648fadabd,"[""log_id"",""date_taipei"",""platform"",""query_or_url"",""status"",""actual_read_scope"",""result"",""spatial_basis""]"
+outputs/research/MS-03/local_validation/production_history/search_log.csv,29,b26bf8915b183e581eee431618309081f5343cddeb829532fe7da63b20338182,"[""log_id"",""date_taipei"",""platform"",""query_or_url"",""status"",""actual_read_scope"",""result"",""spatial_basis""]"
+outputs/research/MS-03/local_validation/search_log.csv,401,803277e3bb947eb9dc23bf7ff3b35475bd0efda29e633b14877574d8a71abdb4,"[""log_id"",""date_taipei"",""platform"",""query_or_url"",""status"",""actual_read_scope"",""result"",""spatial_basis""]"
+outputs/research/MS-03/local_validation/t1811_run_artifacts/search_log.csv,22,eef45d305911eedbf416642b14dfca1232ec5e86ee89f96f52998497466a2272,"[""log_id"",""date_taipei"",""platform"",""query_or_url"",""status"",""actual_read_scope"",""result"",""spatial_basis""]"
+outputs/research/MS-03/search_log.csv,49,52c9a56a133ab6345dd470eff26d5264ddddf8f5c5658c202aa66c63a0b9d35e,"[""search_id"",""date_taipei"",""platform"",""query"",""source_ids"",""outcome"",""limitation""]"

@@ -1,0 +1,53 @@
+{
+  "pinned_main": "234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa",
+  "input_path": "outputs/research/MS-03/local_validation/gap_completion/radar_local_arrays.npz",
+  "input_sha256": "ac36e98d8af635bf1078ac7689005e490b09f2d765a7e60aa170a24b266c095c",
+  "product_id": "S_04624502_RGRAM",
+  "columns": 65,
+  "adjacent_column_pairs": 64,
+  "source_rows_0based": [
+    2182,
+    2450
+  ],
+  "source_columns_1based": [
+    2185,
+    2249
+  ],
+  "observed_max_minus_model_nadir_sample_quantiles": {
+    "min": -67.0,
+    "q25": -36.0,
+    "median": -29.0,
+    "q75": 134.0,
+    "max": 185.0
+  },
+  "observed_max_before_at_after_model_nadir": [
+    43,
+    0,
+    22
+  ],
+  "observed_adjacent_max_jump_samples_min_max": [
+    -202,
+    207
+  ],
+  "observed_adjacent_max_abs_jump_gt10_count": 13,
+  "observed_adjacent_max_abs_jump_gt100_count": 10,
+  "jump_thresholds": "10 and100 samples are descriptive thresholds, not detection criteria",
+  "observed_max_at_crop_edge_count": 0,
+  "simulated_max_minus_model_nadir_sample_quantiles": {
+    "min": -1.0,
+    "q25": 0.0,
+    "median": 0.0,
+    "q75": 1.0,
+    "max": 4.0
+  },
+  "simulation_is_model_not_independent_observation": true,
+  "conclusion": "Global crop argmax is not an independently validated surface or subsurface track. Large index changes and model disagreement cannot be uniquely assigned to geology, processing, ionosphere, sidelobes or clutter here.",
+  "inference_limits": [
+    "No time alignment or correction",
+    "No amplitude subtraction",
+    "No delay-to-local-depth conversion",
+    "No inferred dielectric constant",
+    "No calibrated SNR or detection limit",
+    "No ice presence/absence result"
+  ]
+}

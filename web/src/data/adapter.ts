@@ -10,7 +10,20 @@ const bundle: any = rawBundle;
 
 export const WORKBENCH_META = bundle.meta;
 export const EARTH_SOURCES = bundle.earth_sources as any[];
-export const MARS_SOURCES = bundle.mars_sources as Record<string, any>;
+// profiles.json stores Mars sources as a list of {file, url, sha256, version}.
+export const MARS_SOURCES = (bundle.mars_sources ?? []) as Array<{
+  file?: string;
+  url?: string;
+  sha256?: string;
+  version?: string;
+}>;
+
+/** Look up a Mars source record by its file name (exact match from outputs/). */
+export function marsSource(file: string) {
+  return MARS_SOURCES.find((s) => s.file === file);
+}
+
+const UNTRACED = "Unverified / Not traced in outputs/";
 export const SENSITIVITY = bundle.sensitivity as Record<string, any>;
 export const ROVER_TEMP_CONTEXT = bundle.rover_temperature_context as any;
 export const MARS_MISSING_REQUIREMENTS = (bundle.mars_missing_requirements ?? []) as string[];
@@ -56,10 +69,8 @@ export function getTargetBundle(targetId: TargetId): TargetBundle | null {
     const keySupport = `D=${c.terrain_distance.toFixed(4)} (slope ${c.slope_median_deg.toFixed(2)}°, relief ${Math.round(c.relief_m)} m)`;
     let mainGap = "No climate, temperature, ice, or mineral comparison scored yet";
     if (hasPower && typeof precip === "number") {
-      mainGap =
-        precip > 1.5
-          ? `Wet POWER climate (${precip.toFixed(2)} mm/day, T2M ${t2m?.toFixed(1)} °C); terrain-only match`
-          : `Arid POWER context (${precip.toFixed(2)} mm/day); lacks geology, LST, & dust scoring`;
+      // No aridity threshold is defined in outputs/, so report the value without a wet/arid verdict.
+      mainGap = `POWER context only (${precip.toFixed(2)} mm/day${typeof t2m === "number" ? `, T2M ${t2m.toFixed(1)} °C` : ""}); terrain-only match, no climate scoring`;
     }
 
     return {
@@ -105,7 +116,19 @@ export function buildComparisonRows(
   const mp = target.mars_profile ?? {};
   const mTerrain = mp.terrain ?? {};
   const mTi = mp.thermal_inertia ?? {};
-  const mIce = mp.ice ?? {};
+  // profiles.json keys SWIM layers as "0_1m" and "1_5m".
+  const mIceShallow = mp.ice?.["0_1m"];
+  const mIceDeep = mp.ice?.["1_5m"];
+  const iceAvailable = mIceShallow?.status === "available" || mIceDeep?.status === "available";
+  const swimShallowSrc = marsSource("SWIM2_c0_1.tif");
+  const swimDeepSrc = marsSource("SWIM2_c1_5.tif");
+  const tesSrc = marsSource("global_ti_night_2007.img");
+  const dust34Src = marsSource("dustscenario_MY34_v2-5.nc");
+  const dust35Src = marsSource("dustscenario_MY35_v2-5.nc");
+  const t2mMonths =
+    powerSummary?.T2M?.valid_months !== undefined && powerSummary?.T2M?.expected_months !== undefined
+      ? `${powerSummary.T2M.valid_months}/${powerSummary.T2M.expected_months} valid months`
+      : "valid-month count not recorded";
   const mDust34 = mp.dust?.dust_my34 ?? {};
   const mDust35 = mp.dust?.dust_my35 ?? {};
 
@@ -213,10 +236,8 @@ export function buildComparisonRows(
         title: "Regional 100×100 km Kinetic Land Surface Temperature (MOD11C3 vs. Mars Gap)",
         domain: "Temperature",
         earthSummary:
-          "24 monthly MOD11C3.061 HDF4 granules (2023–2024) verified on disk under data/raw/earth/temperature/lst/, awaiting pyhdf QA mask and 0.02 K scale-factor integration.",
-        marsSummary:
-          mp.surface_temperature?.note ??
-          "Regional dynamic surface temperature (diurnal/seasonal) is marked status='missing' in outputs/mars_profiles/profiles.json.",
+          "24 monthly MOD11C3.061 HDF4 granules (2023–2024) stored under data/raw/earth/temperature/ on the data-collection machine (not in the repo; per-file SHA-256 in docs/earth_inventory.csv). Readable with netCDF4.Dataset; QA mask and 0.02 K scale factor not yet applied.",
+        marsSummary: `Regional surface temperature is status='missing' in outputs/mars_profiles/profiles.json${mp.surface_temperature?.reason ? ` (reason: ${mp.surface_temperature.reason})` : ""}.`,
         sourceUrl: "https://lpdaac.usgs.gov/products/mod11c3v061/",
         productId: "MOD11C3.061 / Mars surface_temperature (missing)",
         version: "061 / N/A",
@@ -225,14 +246,14 @@ export function buildComparisonRows(
         nativeResolution: "Earth: 0.05° (~5.6 km) | Mars: Missing",
         analysisScale: "100×100 km target window (not yet scored)",
         processingMethod: "Not yet integrated; missing values explicitly preserved as Missing data (never 0)",
-        qaAndCoverage: "Earth: 24/24 files local | Mars: 0% regional LST coverage",
+        qaAndCoverage: "Earth: 24/24 files opened in local check (docs/earth_inventory.csv) | Mars: no regional LST product (missing)",
         measurementKind: "Design assumption / Missing",
         limitations: [
           "Mars TES thermal inertia (J m⁻² K⁻¹ s⁻⁰·⁵) and rover-local MEDA brightness temperature cannot replace regional LST",
           "Earth MOD11C3 requires mandatory cloud/emissivity QA filtering before computing 100 km window means",
         ],
-        localFile: "data/raw/earth/temperature/lst/MOD11C3.A2024*.hdf | outputs/mars_profiles/profiles.json",
-        checksumSha256: "Not recorded in results.json (unscored)",
+        localFile: "data/raw/earth/temperature/MOD11C3.A202*.hdf (24 files) | outputs/mars_profiles/profiles.json",
+        checksumSha256: "Earth: per-file SHA-256 in docs/earth_inventory.csv | Mars: not applicable (missing)",
       },
     },
     {
@@ -258,10 +279,10 @@ export function buildComparisonRows(
         title: "Earth 2m Air Temperature vs. Mars TES Nighttime Thermal Inertia",
         domain: "Temperature",
         earthSummary: powerSummary?.T2M
-          ? `NASA POWER MERRA2/POWER monthly mean T2M = ${powerSummary.T2M.value?.toFixed(2)} °C (24/24 valid months).`
+          ? `NASA POWER MERRA2/POWER monthly mean T2M = ${fmtNum(powerSummary.T2M.value, 2, "°C")} (${t2mMonths}).`
           : "NASA POWER was only queried for Ranks #1–#2 per target.",
         marsSummary: `TES Nighttime Thermal Inertia mean = ${mTi.mean?.toFixed(1) ?? "—"} J m⁻² K⁻¹ s⁻⁰·⁵ (infilled pixels excluded; with-infill mean = ${mTi.with_infilled_pixels?.mean?.toFixed(1) ?? "—"}).`,
-        sourceUrl: powerSrc?.url ?? "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_night_2007.lbl",
+        sourceUrl: [powerSrc?.url, tesSrc?.url].filter(Boolean).join(" | ") || UNTRACED,
         productId: "POWER Monthly API / global_ti_night_2007",
         version: "POWER v2.10.0 / TES v1",
         period: "Earth: 2023-01 to 2024-12 | Mars: TES archive (2007 release, obs. dates unlisted)",
@@ -275,8 +296,8 @@ export function buildComparisonRows(
           "Thermal inertia is NOT surface temperature and NOT a direct measure of soil hardness",
           "MOD11C3 (2023–2024) is collected locally but not yet decoded with QA/scale factors",
         ],
-        localFile: powerSrc?.file ?? "data/raw/mars/global_ti_night_2007.img",
-        checksumSha256: powerSrc?.sha256 ?? (MARS_SOURCES.tes_thermal_inertia_night?.sha256 ?? "Unverified"),
+        localFile: `Earth: ${powerSrc?.file ?? "not queried for this candidate"} | Mars: data/raw/mars/${tesSrc?.file ?? "global_ti_night_2007.img"}`,
+        checksumSha256: `Earth: ${powerSrc?.sha256 ?? "not queried"} | Mars: ${tesSrc?.sha256 ?? "Unverified"}`,
       },
     },
     {
@@ -336,17 +357,16 @@ export function buildComparisonRows(
         ? `${fmtNum(powerSummary.PRECTOTCORR.value, 3, "mm/day")}`
         : "Missing data (only Top-2 queried)",
       marsQuantity: "SWIM 2.0 Consistency (0–1 m / 1–5 m)",
-      marsValue: mIce?.shallow_0_1m
-        ? `0–1m: ${fmtNum(mIce.shallow_0_1m.mean, 3)} | 1–5m: ${fmtNum(mIce.deep_1_5m?.mean, 3)} (−1..+1)`
+      marsValue: iceAvailable
+        ? `0–1m: ${fmtNum(mIceShallow?.mean, 3)} | 1–5m: ${fmtNum(mIceDeep?.mean, 3)} (−1..+1)`
         : "Missing / Outside ±60°",
       periodAndSupport: "Earth: 2023–2024 · Mars: SWIM 2.0 composite (±60° lat)",
       methodAndThreshold: "SWIM score is NOT ice content, purity, or probability; 0 ≠ unknown",
       comparability: "Contextual",
+      // Contextual only: no aridity threshold or water/ice scoring exists in outputs/.
       status:
         powerSummary?.PRECTOTCORR?.value !== undefined && powerSummary.PRECTOTCORR.value !== null
-          ? powerSummary.PRECTOTCORR.value > 1.5
-            ? "Mismatch"
-            : "Supported"
+          ? "Not checked"
           : "Missing data",
       sourcePortalLabel: "NASA POWER ↔ SWIM 2.0 (PSI)",
       evidence: {
@@ -356,8 +376,8 @@ export function buildComparisonRows(
         earthSummary: powerSummary?.PRECTOTCORR
           ? `POWER 2023–2024 precipitation = ${powerSummary.PRECTOTCORR.value?.toFixed(3)} mm/day. GPM_3IMERGM & GLDAS downloaded locally for full grid.`
           : "POWER not queried for Ranks #3–#12; GPM_3IMERGM & GLDAS downloaded locally.",
-        marsSummary: `SWIM 2.0 mean consistency in 100 km window: 0–1m = ${mIce?.shallow_0_1m?.mean?.toFixed(4) ?? "—"}, 1–5m = ${mIce?.deep_1_5m?.mean?.toFixed(4) ?? "—"}.`,
-        sourceUrl: "https://swim.psi.edu/output/SWIM2/Global/Composite/SWIM2_c0_1.tif",
+        marsSummary: `SWIM 2.0 mean consistency in 100 km window: 0–1m = ${fmtNum(mIceShallow?.mean, 4)} (median ${fmtNum(mIceShallow?.median, 4)}), 1–5m = ${fmtNum(mIceDeep?.mean, 4)} (median ${fmtNum(mIceDeep?.median, 4)}). Not ice amount or probability.`,
+        sourceUrl: [swimShallowSrc?.url, swimDeepSrc?.url].filter(Boolean).join(" | ") || UNTRACED,
         productId: "SWIM2_c0_1 / SWIM2_c1_5",
         version: "2.0",
         period: "Earth: 2023–2024 | Mars: SWIM 2.0 multi-dataset composite",
@@ -365,15 +385,15 @@ export function buildComparisonRows(
         nativeResolution: "Earth: 0.5°×0.625° (POWER) | Mars: 20 px/deg (~±60° lat)",
         analysisScale: "100×100 km cos(lat)-weighted mean on Mars",
         processingMethod: "Kept separate; positive SWIM favors ice presence but is not extractable resource volume",
-        qaAndCoverage: `SWIM valid fraction: ${mIce?.shallow_0_1m?.valid_fraction !== undefined && mIce?.shallow_0_1m?.valid_fraction !== null ? `${(mIce.shallow_0_1m.valid_fraction * 100).toFixed(1)}%` : "Unknown"}`,
+        qaAndCoverage: `SWIM valid fraction: 0–1m ${typeof mIceShallow?.valid_fraction === "number" ? `${(mIceShallow.valid_fraction * 100).toFixed(1)}% (${mIceShallow.valid_native_cells}/${mIceShallow.native_cells_in_window} cells)` : "Unknown"} · 1–5m ${typeof mIceDeep?.valid_fraction === "number" ? `${(mIceDeep.valid_fraction * 100).toFixed(1)}%` : "Unknown"}`,
         measurementKind: "Model / Composite",
         limitations: [
           "SWIM covers roughly 60°S–60°N only",
-          "Precipitation >1.5 mm/day (e.g. Jezero #1/#2) disqualifies site as an arid Mars analog",
+          "No aridity threshold is defined in outputs/; precipitation is shown as context, not as a pass/fail test",
           "Martian ice sublimates rather than melting under ~0.6 kPa CO₂",
         ],
-        localFile: "data/raw/mars/SWIM2_c0_1.tif",
-        checksumSha256: MARS_SOURCES.ice_consistency_shallow?.sha256 ?? "Unverified",
+        localFile: "data/raw/mars/SWIM2_c0_1.tif | data/raw/mars/SWIM2_c1_5.tif",
+        checksumSha256: `0–1m: ${swimShallowSrc?.sha256 ?? "Unverified"} | 1–5m: ${swimDeepSrc?.sha256 ?? "Unverified"}`,
       },
     },
     {
@@ -395,7 +415,7 @@ export function buildComparisonRows(
         domain: "Water/Ice",
         earthSummary: "Downloaded to data/raw/earth/water_ice/ (permafrost/, gldas/, ndvi/), awaiting pipeline integration.",
         marsSummary: "Mars has no vegetation; low Earth NDVI can also reflect water, snow, or bad QA.",
-        sourceUrl: "https://dap.ceda.ac.uk/neodc/esacci/permafrost/data/permafrost_extent/L4/area4/pp/v04.0/",
+        sourceUrl: UNTRACED,
         productId: "ESACCI-PERMAFROST-L4-PFR / GLDAS_NOAH025_M / MOD13C2",
         version: "ESA v4.0 / GLDAS v2.1 / MODIS v061",
         period: "2021 (ESA) | 2023–2024 (GLDAS, MODIS)",
@@ -436,7 +456,7 @@ export function buildComparisonRows(
         domain: "Air/Dust",
         earthSummary: "POWER WS10M queried for Top-2; MERRA-2 DUEXTTAU (24 files) & VIIRS Deep Blue 550nm AOD (25 files) + M2TMNXSLV (wind/pressure) downloaded locally.",
         marsSummary: `Montabone v2.5 3° nearest cell (${mDust34.native_cell_lat ?? "—"}°, ${mDust34.native_cell_lon ?? "—"}°): MY34 storm year mean CDOD = ${mDust34.mean_cdodtot?.toFixed(4) ?? "—"}, MY35 typical = ${mDust35.mean_cdodtot?.toFixed(4) ?? "—"}.`,
-        sourceUrl: "https://www-mars.lmd.jussieu.fr/mars/dust_climatology/dataset_v2/dustscenario_MY34_v2-5.nc",
+        sourceUrl: [dust34Src?.url, dust35Src?.url].filter(Boolean).join(" | ") || UNTRACED,
         productId: "dustscenario_MY34_v2-5 / dustscenario_MY35_v2-5",
         version: "v2.5 (CC BY-SA 3.0)",
         period: "MY34 (2017–2019 global storm) & MY35 (669 sols each)",
@@ -450,8 +470,8 @@ export function buildComparisonRows(
           "Earth 550 nm extinction AOT and Mars 9.3 μm absorption CDOD measure different optical regimes",
           "Earth surface air (~101 kPa) is ~100× denser than Mars (~0.6 kPa CO₂), so wind forces are not equivalent",
         ],
-        localFile: "data/raw/mars/dustscenario_MY34_v2-5.nc",
-        checksumSha256: MARS_SOURCES.dust_my34?.sha256 ?? "Unverified",
+        localFile: "data/raw/mars/dustscenario_MY34_v2-5.nc | data/raw/mars/dustscenario_MY35_v2-5.nc",
+        checksumSha256: `MY34: ${dust34Src?.sha256 ?? "Unverified"} | MY35: ${dust35Src?.sha256 ?? "Unverified"}`,
       },
     },
   ];

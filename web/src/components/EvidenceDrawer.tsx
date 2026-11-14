@@ -26,8 +26,10 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({ row, onClose }) 
   if (!row) return null;
 
   const { evidence } = row;
-  const hasValidUrl =
-    evidence.sourceUrl.startsWith("http://") || evidence.sourceUrl.startsWith("https://");
+  // A row may cite several sources joined with " | "; render each http(s) URL as its own link.
+  const sourceParts = (evidence.sourceUrl || "").split(" | ").map((s) => s.trim()).filter(Boolean);
+  const isHttp = (s: string) => s.startsWith("http://") || s.startsWith("https://");
+  const hasValidUrl = sourceParts.length > 0 && sourceParts.every(isHttp);
 
   return (
     <div
@@ -78,14 +80,13 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({ row, onClose }) 
               <dt>Source URL</dt>
               <dd>
                 {hasValidUrl ? (
-                  <a
-                    href={evidence.sourceUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="external-link"
-                  >
-                    {evidence.sourceUrl} <ExternalLink size={12} aria-hidden="true" />
-                  </a>
+                  sourceParts.map((url) => (
+                    <div key={url}>
+                      <a href={url} target="_blank" rel="noreferrer" className="external-link">
+                        {url} <ExternalLink size={12} aria-hidden="true" />
+                      </a>
+                    </div>
+                  ))
                 ) : (
                   <span className="untraced">{evidence.sourceUrl || "Unverified / Not traced"}</span>
                 )}

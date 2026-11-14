@@ -8,7 +8,7 @@ interface Props {
   onSelectCandidate: (c: CandidateItem) => void;
 }
 
-type FilterMode = "all" | "with_climate" | "arid_only";
+type FilterMode = "all" | "with_climate";
 
 export function CandidateList({
   candidates,
@@ -24,12 +24,6 @@ export function CandidateList({
   const filtered = useMemo(() => {
     if (filter === "with_climate") {
       return candidates.filter((c) => c.earth_climate_context?.status === "context_only_not_ranked");
-    }
-    if (filter === "arid_only") {
-      return candidates.filter((c) => {
-        const p = c.earth_climate_context?.summary?.PRECTOTCORR?.value;
-        return typeof p === "number" && p < 1.0;
-      });
     }
     return candidates;
   }, [candidates, filter]);
@@ -61,14 +55,6 @@ export function CandidateList({
           style={{ padding: "4px 9px", fontSize: "0.75rem" }}
         >
           With POWER (Top 2)
-        </button>
-        <button
-          type="button"
-          className={`btn ${filter === "arid_only" ? "btn-active" : ""}`}
-          onClick={() => setFilter("arid_only")}
-          style={{ padding: "4px 9px", fontSize: "0.75rem" }}
-        >
-          Arid (&lt;1 mm/d)
         </button>
       </div>
 

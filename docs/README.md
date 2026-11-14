@@ -2,6 +2,10 @@
 
 | 用途 | 文件 |
 |---|---|
+| 本輪官方要求與英文提交準備 | [preparation.md](submission/preparation.md) |
+| 最後未完成checklist | [remaining_checklist.md](submission/remaining_checklist.md) |
+| 研究問題與五項需求 | [research_scope.md](research_scope.md) |
+| 既有方案與參照檢查 | [literature_review.md](literature_review.md) |
 | 提交前研究與資料總盤點 | [submission_readiness_2026-11-14.md](submission_readiness_2026-11-14.md) |
 | 53項缺口與責任交接 | [submission_gap_checklist_2026-11-14.csv](submission_gap_checklist_2026-11-14.csv) |
 | 三組候選與Oytag證據 | [research_report_three_analogs_2026-11-14.md](research_report_three_analogs_2026-11-14.md) |

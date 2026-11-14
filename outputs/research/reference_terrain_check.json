@@ -1,0 +1,133 @@
+{
+  "analysis_type": "limited_reference_interpretation_check",
+  "raw_inputs": [
+    {
+      "path": "data/raw/earth/ETOPO_2022_v1_60s_N90W180_surface.tif",
+      "sha256": "9d27d4b8ea8e76977e2988bca667d7c8fa68b927355feffcddd6b4875a7fd08e"
+    },
+    {
+      "path": "data/raw/earth/ne_110m_land.zip",
+      "sha256": "1926c621afd6ac67c3f36639bb1236134a48d82226dc675d3e3df53d02d2a3de"
+    },
+    {
+      "path": "data/raw/mars/megt90n000eb.img",
+      "sha256": "d18d9b9ab8c5516d02e157dd2cde0f1d0d160c21940e953ba22391269a545e7b"
+    }
+  ],
+  "code_sha256": "f060c9c77c024ec291278791f07ba25e5417029a83a2ab79f7fbb15ed4d066c5",
+  "source_metadata": "outputs/analysis/results.json sources and docs/earth_pipeline.md",
+  "parameters": {
+    "window_km": 100,
+    "spacing_km": 4,
+    "slope_stencil_km": 8,
+    "weights": [
+      0.25,
+      0.25,
+      0.5
+    ],
+    "tolerances": [
+      1.0,
+      2.0,
+      500.0
+    ]
+  },
+  "inputs": [
+    {
+      "path": "outputs/analysis/results.json",
+      "sha256": "40fe68f299654d5523adfaf076d5fc75c3937138fee4e1977d8f2649e7df8b36"
+    },
+    {
+      "path": "data/raw/earth/public_sources.json",
+      "sha256": "c4770b1cfda98e820da1ab6061d9dd00a726272f533d403e862fcc8462ac8140"
+    }
+  ],
+  "target_features_recomputed_match_stored": true,
+  "records": [
+    {
+      "name": "Death Valley regional reference",
+      "lat": 36.25,
+      "lon": -116.82,
+      "role": "known analog region; chosen regional center",
+      "features": {
+        "slope_median_deg": 2.9660396575927734,
+        "slope_p90_deg": 7.660924911499023,
+        "relief_m": 2455.6953125
+      },
+      "sampled_land_fraction": 1.0,
+      "eligible_by_land_rule": true,
+      "comparisons": {
+        "jezero": {
+          "distance": 1.276006220817566,
+          "contributions": {
+            "slope_median_deg": 0.4367474913597107,
+            "slope_p90_deg": 0.5819091200828552,
+            "relief_m": 0.257349609375
+          }
+        },
+        "gale": {
+          "distance": 3.015213086128235,
+          "contributions": {
+            "slope_median_deg": 0.2365567684173584,
+            "slope_p90_deg": 0.34732282161712646,
+            "relief_m": 2.43133349609375
+          }
+        },
+        "arcadia": {
+          "distance": 2.7490375081300735,
+          "contributions": {
+            "slope_median_deg": 0.550106942653656,
+            "slope_p90_deg": 0.6704708337783813,
+            "relief_m": 1.528459716796875
+          }
+        }
+      }
+    },
+    {
+      "name": "Amazon terrain contrast",
+      "lat": -3.0,
+      "lon": -61.0,
+      "role": "project-designed low-relief contrast; not a universal non-analog",
+      "features": {
+        "slope_median_deg": 0.06103697419166565,
+        "slope_p90_deg": 0.17308804392814636,
+        "relief_m": 55.645782470703125
+      },
+      "sampled_land_fraction": 1.0,
+      "eligible_by_land_rule": true,
+      "comparisons": {
+        "jezero": {
+          "distance": 2.7862735885083674,
+          "contributions": {
+            "slope_median_deg": 0.28950318694114685,
+            "slope_p90_deg": 0.3540704846382141,
+            "relief_m": 2.142699951171875
+          }
+        },
+        "gale": {
+          "distance": 7.077492895454168,
+          "contributions": {
+            "slope_median_deg": 0.9628074169158936,
+            "slope_p90_deg": 1.2833024263381958,
+            "relief_m": 4.8313828125
+          }
+        },
+        "arcadia": {
+          "distance": 1.31324230119586,
+          "contributions": {
+            "slope_median_deg": 0.17614373564720154,
+            "slope_p90_deg": 0.2655087411403656,
+            "relief_m": 0.87158984375
+          }
+        }
+      }
+    }
+  ],
+  "reference_source": "https://science.nasa.gov/earth/earth-observatory/mars-rover-curiosity-on-a-familiar-landscape-78860/",
+  "limitations": [
+    "Not a classification accuracy test",
+    "No calibration or new candidate ranking",
+    "Regional center is a design choice, not a located mineral sample",
+    "Terrain-only distance cannot establish geology or environment",
+    "Only two reference windows tested"
+  ]
+}

@@ -22,7 +22,7 @@
 | 地球多面向原始資料 | 隊友提供清單，原始檔未全數在本機 | [逐檔清單](docs/earth_inventory.csv)、[交接](docs/data_handoff.md) |
 | 四面向整合／場址驗證 | 尚未完成 | [物理量對照](docs/cross_reference.md) |
 | 互動工作台 | 已有本機原型，公開部署未核實 | [web/](web/)；本輪未重跑前端驗收 |
-| 正式英文展示與提交 | 尚未核實完成 | [簡報草稿](docs/presentation_outline.md) |
+| 正式英文展示與提交 | 尚未核實完成 | [英文提交準備與草稿](docs/submission/preparation.md) |
 
 ## 本機執行
 
@@ -129,3 +129,16 @@ docs/         方法、資料規格、競賽準備與歷史紀錄
 核對隊友清單為222檔、12.33GB，但完整原始批次未在本機；現有排名仍為terrain-only，三目標各12候選，只有各前2有POWER。建議先完成Gale／Oytag主案例及明確未知，不強行合成四面向分數。新增研究尚未進入前端bundle，介面部分local驗證文字與sources映射問題已列給隊友，沒有修改`web/`。
 
 已讀官方年度頁／條款及GitHub Navigator提交答覆；完整題目、正式指南與台北場細節仍未核實，不把搜尋摘要當完整規則。實際重跑Python測試57項通過（8個既有警告）、Ruff通過；未重跑前端、部署或官方提交。程式授權、英文展示、公開連結與Submitted狀態仍需團隊完成。OpenAI Codex協助本輪盤點與中文報告。
+
+
+### 2026-11-14：完成第1／第2項的提交準備與研究規格
+
+依使用者範圍，本輪完成[官方查核與英文提交文案](docs/submission/preparation.md)、[七頁英文文字稿](docs/submission/slides_en.md)、[授權建議／AI與分工表](docs/submission/disclosures_and_rights.md)，帳戶欄位留空；原創程式Apache-2.0只作建議，待全隊確認，尚未新增正式LICENSE。完整題目、Mars-only與正式指南仍未核實；沒有登入、發送問題或正式提交。
+
+研究補上[單一問題與五項需求](docs/research_scope.md)、[CSV矩陣](docs/research_requirements.csv)、[既有方案與有限文獻紀錄](docs/literature_review.md)、[英文主張證據表](docs/submission/claim_ledger.csv)。只承認地形為已計算搜尋條件，環境與同露頭材料維持部分／未知，不宣稱四面向整合或任務成功率。
+
+實際執行新命令 `python -m scripts.validate_research_scope`：由原始DEM重算三個Mars目標及Death Valley／Amazon兩個參照窗口，Mars特徵與既有值吻合，距離分項核對通過。[數值與輸入hash](outputs/research/reference_terrain_check.json)顯示Arcadia地形也會偏好低起伏對照，說明地形距離不足以判定整體環境類比；兩窗口不是完整外部有效性驗證。未更動正式排名、第三項候選地質／礦物調查或隊友介面。
+
+英文PDF／影片、隊伍／帳戶核對、全隊授權、完整文獻史與獨立參照組、匿名公開連結及SUBMIT狀態仍未完成，見[最後checklist](docs/submission/remaining_checklist.md)。OpenAI Codex協助研究規格、來源核對、計算與中英文文案；展示文字草稿不等於成品或已提交。
+
+本輪驗證：新參照檢查命令執行成功；Python測試57項通過（8個既有警告）、Ruff通過，9份文件本機連結檢查通過。未執行前端建置、瀏覽器驗收、公開部署或官方提交。

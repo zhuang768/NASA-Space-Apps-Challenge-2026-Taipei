@@ -1,0 +1,18 @@
+{
+  "version": "MR-20261114-v1",
+  "updated_taipei": "2026-11-14T18:11:04.746040+08:00",
+  "remote_main_base": "5901362d6347c71e0d41b84ebbb35685ca7b3911",
+  "local_main_synced": false,
+  "planned_branch": "codex/mars-research-mainline-20261114",
+  "commit": null,
+  "integrated_into_main": false,
+  "excel_modified": false,
+  "direct_thread_dispatch": {
+    "status": "not_sent",
+    "reason": "Codex list_threads returned app tool request failed; target thread IDs unavailable",
+    "ready_to_forward_sections": "docs/research/main_project_synthesis.md#三方可直接使用的交接需求"
+  },
+  "research_status": "proposal_only_incomplete",
+  "requirements_count": 24,
+  "git_record_semantics": "Commit field is populated locally after remote creation; authoritative published revision is the GitHub branch head."
+}

@@ -1,0 +1,15 @@
+{
+  "roi": [
+    242,
+    57.5,
+    242.5,
+    58
+  ],
+  "roi_area_km2_approx": 466.85978307897443,
+  "mars_sphere_radius_m": 3389500,
+  "union_catalogue_coverage_fraction": 1.0,
+  "method": "Intersect ODE corner footprints with ROI in lon/lat;area via local spherical Mars LAEA. Approximate catalogue support,not valid-pixel coverage or precision geolocation.",
+  "hirise_RDRV11_count": 0,
+  "hirise_RDR_count": 0,
+  "usgs_crosscheck": "HTTP403;not an independent negative confirmation"
+}

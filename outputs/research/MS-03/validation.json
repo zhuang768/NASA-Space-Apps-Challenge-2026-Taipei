@@ -352,5 +352,33 @@
     "clock_root_cause": "unknown",
     "hobo_depth_synchronization": "not independently verified",
     "clock_alignment_allowed": false
+  },
+  "MS03_AD1_morphology": {
+    "date": "2026-11-15",
+    "starting_sha": "7b3c865e85ffeb4db81277ef34e9c3f4a318fc9f",
+    "commands_passed": [
+      "morphology_geometry.py",
+      "plot_morphology.py",
+      "validate_morphology.py",
+      "validate.py",
+      "git diff --check"
+    ],
+    "checks": [
+      "185 source polygons;independent first-polygon shoelace/perimeter",
+      "source byte-range hashes;unaltered DN crop",
+      "successful3CTX and0HiRISE catalogue responses;errors not counted",
+      "outside HiRISE label bound",
+      "report relative links exist",
+      "all uv_w files byte-identical to starting SHA",
+      "figure opened and visually inspected"
+    ],
+    "scientific_result": "insufficient morphology evidence;AD1 downgraded to general method reference",
+    "not_done": [
+      "ROI-wide native-pixel mapping",
+      "precise camera geolocation or orthorectification",
+      "Mars polygon boundary/size/shape measurement",
+      "mechanism or ice validation",
+      "clock alignment"
+    ]
   }
 }

@@ -207,8 +207,13 @@
   "outputs": [
     {
       "path": "docs/research/MS-03/report.md",
-      "bytes": 33490,
-      "sha256": "f5311384aa159ab3b593f74ceebb24b8bf8482a4fb071177385ffb0026d6d48e"
+      "bytes": 40100,
+      "sha256": "4bf6a994cdd3298b24e5ce9b9f8f6c858548db1fc87bb45bef80fcf21ae6cfb5"
+    },
+    {
+      "path": "scripts/research/MS-03/acquire_morphology.py",
+      "bytes": 3144,
+      "sha256": "59b3badcab02664511ad2bdee8bdcb16b1e57aa63b23940558cbf11f3b1afebe"
     },
     {
       "path": "scripts/research/MS-03/audit_campbell_clock.py",
@@ -221,24 +226,179 @@
       "sha256": "afdb38f4f8cce6c2724506bba784cefa76c38c5d301e916ddf660434fd9ecf39"
     },
     {
+      "path": "scripts/research/MS-03/morphology_geometry.py",
+      "bytes": 5437,
+      "sha256": "bc4ee74866dd19b3d892eec374042c3ca64f05b1f2cf5d5d56f851f2de3577aa"
+    },
+    {
+      "path": "scripts/research/MS-03/plot_morphology.py",
+      "bytes": 7406,
+      "sha256": "f0d117637c5cec219971c82ad4128050651937179ae3acc5486c83dcf63e640f"
+    },
+    {
       "path": "scripts/research/MS-03/validate.py",
       "bytes": 4608,
       "sha256": "03a67857e976f28a0f43366596fefc6be607914ace6b8d630cd45667d2fdca00"
     },
     {
+      "path": "scripts/research/MS-03/validate_morphology.py",
+      "bytes": 3405,
+      "sha256": "e8966355be54fe7a8efbf1c0c3a7ac986c01f6c8da983a07d52a3265d9856f69"
+    },
+    {
       "path": "outputs/research/MS-03/candidates.csv",
-      "bytes": 2850,
-      "sha256": "a0f410983e66dafc4cb3831dbbbb8f30afe5282798c1ba24b0312abd0247a602"
+      "bytes": 2911,
+      "sha256": "ffc9c3683a051bc7797eff2ad356c8aaf054c2d5a6c55127be0d84b1185fa563"
     },
     {
       "path": "outputs/research/MS-03/evidence.csv",
-      "bytes": 14801,
-      "sha256": "20eef43aa62c08cfcdaaa317d2fcade6bf907eaa5a0b98e62a8cbfc74afa9f29"
+      "bytes": 17156,
+      "sha256": "6c50d947348c999894e66ee182f6615b4a28ca59bf85fc75074fd7221a942910"
     },
     {
       "path": "outputs/research/MS-03/mars_reference.json",
       "bytes": 13542,
       "sha256": "014ca34cb9eca59fe1623b4e5cbe602097c6b4a42a8e41de52a9bb108f972348"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/AD1_geometry_summary.json",
+      "bytes": 2081,
+      "sha256": "6c76690c0a68d46b651a10dc0d24240fac1cc02067d95ec11b825c0f33026d2e"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/AD1_recomputed_geometry.csv",
+      "bytes": 24837,
+      "sha256": "1a588571b18b34fdfdf7022dd67712f41c4356a533cbc68840a1bca6fea4b0ac"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/CTX_cumindex.lbl",
+      "bytes": 14728,
+      "sha256": "d09cb01caeb8c6a47373a31033d6eff1595430cee747840fba0072741c4388e0"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/CTX_footprints_mars.json",
+      "bytes": 2130,
+      "sha256": "00650e04ed2239c66d6b44b8ada2e51c6949dcef6168f5fa7c19313a49691fb9"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/D01_027566_2370_XN_57N117W_browse.jpg",
+      "bytes": 59584,
+      "sha256": "c702177589f56aa24aa1f96f5efcd232acbd5dc39ff405b20bcb50d5c875ff83"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/D01_label.txt",
+      "bytes": 1299,
+      "sha256": "e9dc5fd1302f256312e2403aae65bf840ad332ff77c20cf73a02f4f2ea271b2a"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/D01_label_record.bin",
+      "bytes": 5056,
+      "sha256": "f28ba04cb5d6b9a875f55d6b76657a81f8ac7eea7a8f99b1a151624159a4ba93"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/D01_native_crop_DN.png",
+      "bytes": 214449,
+      "sha256": "b44272ad5ba709b95bb851c62ddf99a5e8d71b6ee7222bdaa3999d7d32584b54"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/D01_native_crop_stretch.png",
+      "bytes": 215978,
+      "sha256": "e69a4d90a8e45f210bb614051aa69b1a314aa888c26999f9f16cb16c76d84e17"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/D01_native_rows.bin.gz",
+      "bytes": 1198415,
+      "sha256": "93dd09696264d396eda82e323ef09c4de943e3858e76dd5029ebd92a64717f07"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/G01_018718_2370_XN_57N118W_browse.jpg",
+      "bytes": 58477,
+      "sha256": "70603b5a65e4717fddd7d994cadd67084d58fc9cdd4dcca918c530d024e4e919"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/MS03_AD1_coverage_interpretation.pdf",
+      "bytes": 80744,
+      "sha256": "5e4812dd8860857cb65ae112e0df49aee74170e8c589cc83404fd89b32cd3897"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/MS03_AD1_coverage_interpretation.png",
+      "bytes": 568583,
+      "sha256": "4f2c52b9ff573fb2e38e4db4ae1693f68cf5f47583199e874df9af91fb0c4755"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/PSP_006864_2380_RED.LBL",
+      "bytes": 8157,
+      "sha256": "0ec93f75138dc57e84c80e33809ec3f352b848defb3657e45a5d976a972273f4"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/README.md",
+      "bytes": 7322,
+      "sha256": "26dd5f5cc8e362c3854701ba43b80098d6849676e523638b369136133b0d525a"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/V17_086802_2374_XN_57N118W_browse.jpg",
+      "bytes": 3454794,
+      "sha256": "4630cf1857507c35940e9b33c4fe25e7d10a882990de644c811ffebffd153ae2"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/acquisition_manifest.json",
+      "bytes": 5241,
+      "sha256": "3bd71d7274f621f246a9867de08c93db4abc23d8a521b43d7dca9af762c18a67"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/coverage_summary.json",
+      "bytes": 490,
+      "sha256": "0bc38e9f41b9e4d4e053e56631d96e6ac96f20086a4d36bb283348815753ddb3"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/hirise_page.html",
+      "bytes": 22521,
+      "sha256": "aa902fa0dae49d6986bfb24c524b0cbfa9004e3a1a95a98d565e009d9a392d6c"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/image_inventory.csv",
+      "bytes": 2025,
+      "sha256": "1ebf49b0f42c5a116e92a0a9842bdfbce343eb64f02c507bd972b9ea5ac644d9"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/native_crop_provenance.json",
+      "bytes": 1074,
+      "sha256": "32b516e3ecf40ff460994ee4845a6b051bd98343b07e2d4cc722a23f2f9498e0"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/observability_comparison.csv",
+      "bytes": 1061,
+      "sha256": "aad7254c1101b36cd0942392bae2e421c4e2a1b104f3d8c2537e1ccdb53c13fb"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/ode_CTX_EDR.json",
+      "bytes": 17421,
+      "sha256": "815d30cb337ee94e0d1e20e09a016279ea944c6511a6c28d0a3609fb696d620c"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/ode_HIRISE_EDR.json",
+      "bytes": 394,
+      "sha256": "24fa377414a674126d6618f102de87411b479eb11c5c84d179843c1b57c4f2d2"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/ode_HIRISE_RDR.json",
+      "bytes": 397,
+      "sha256": "0a5a6c1cab838d7d5522f4cbf30f3350abd6bb7b596844d4f410f1b3fea14800"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/ode_HIRISE_RDRV11.json",
+      "bytes": 400,
+      "sha256": "43fa7739f2ae256120df4ef1e9d04369b703ed71823d4c19d1a41cee4d8afbf7"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/ode_HIRISE_RDR_V11.json",
+      "bytes": 525,
+      "sha256": "34140bfa532326251abadb99f2c7d7c555b1d95ffdfe2dee8210ee4464e73a03"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/requirements-lock.txt",
+      "bytes": 299,
+      "sha256": "e505259112e4890718dcaf519678fefd5ee22bcd001aa11f7611233f96413e03"
     },
     {
       "path": "outputs/research/MS-03/polygons_Act-IWS_source.zip",
@@ -247,18 +407,18 @@
     },
     {
       "path": "outputs/research/MS-03/prior_work.csv",
-      "bytes": 4344,
-      "sha256": "ee7bc2ecada4bef1b29ba994eb7907e28db87b578ea0b4993f806970e7c6d4de"
+      "bytes": 4579,
+      "sha256": "48a085efb3a570e425ec5fa6037293b21b97a661ce557bd2cb9da6e6587a4a0d"
     },
     {
       "path": "outputs/research/MS-03/search_log.csv",
-      "bytes": 7016,
-      "sha256": "1648f9984c0f3722388c1ed3e5bc9b41ee9c36a55f013e79f1896259cd9783ac"
+      "bytes": 8224,
+      "sha256": "e236051092401bab7e5c205172f4a1a06067462710a05c6960d657844f4cd82c"
     },
     {
       "path": "outputs/research/MS-03/sources.json",
-      "bytes": 5241,
-      "sha256": "01b1256e0ed89c2745947f333f08be06ad468661b669d56e5bd5d6c7ef7fd2ec"
+      "bytes": 6391,
+      "sha256": "430e4c0fae18ecf579aab2153be506fb4f969e45b8c1b61b8d30f11b04b56f8f"
     },
     {
       "path": "outputs/research/MS-03/uv_w/campbell_clock_audit.json",
@@ -302,8 +462,8 @@
     },
     {
       "path": "outputs/research/MS-03/validation.json",
-      "bytes": 15769,
-      "sha256": "f4d75b5e5af59ace86b97ed69f6a8580d34bb81acc2e558216766a1da931c15a"
+      "bytes": 16797,
+      "sha256": "7b644e8487e8438ff9ac9820b534bb01a7e9be84af1116282838fa81bd799ec9"
     }
   ],
   "followup_date_taipei": "2026-11-15",
@@ -346,5 +506,19 @@
     "status": "prepared in PR7;not merged",
     "clock_correction": false,
     "hobo_alignment": false
+  },
+  "morphology_followup": {
+    "starting_sha": "7b3c865e85ffeb4db81277ef34e9c3f4a318fc9f",
+    "date": "2026-11-15",
+    "roi_planetocentric_east_positive": [
+      242,
+      57.5,
+      242.5,
+      58
+    ],
+    "decision": "MS-03-E02 downgrade_general_method_reference_not_specific_MS03_pair",
+    "result": "insufficient_evidence_not_absence",
+    "directory": "outputs/research/MS-03/morphology",
+    "clock_work": "unchanged"
   }
 }

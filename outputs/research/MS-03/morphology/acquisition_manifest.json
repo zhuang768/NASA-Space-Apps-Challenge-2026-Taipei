@@ -1,0 +1,114 @@
+{
+  "start_sha": "7b3c865e85ffeb4db81277ef34e9c3f4a318fc9f",
+  "review_date_taipei": "2026-11-15",
+  "files": [
+    {
+      "path": "G01_018718_2370_XN_57N118W_browse.jpg",
+      "url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_1190/extras/browse/G01_018718_2370_XN_57N118W.IMG.jpeg",
+      "bytes": 58477,
+      "sha256": "70603b5a65e4717fddd7d994cadd67084d58fc9cdd4dcca918c530d024e4e919",
+      "http_status": 200
+    },
+    {
+      "path": "D01_027566_2370_XN_57N117W_browse.jpg",
+      "url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_1677/extras/browse/D01_027566_2370_XN_57N117W.IMG.jpeg",
+      "bytes": 59584,
+      "sha256": "c702177589f56aa24aa1f96f5efcd232acbd5dc39ff405b20bcb50d5c875ff83",
+      "http_status": 200
+    },
+    {
+      "path": "V17_086802_2374_XN_57N118W_browse.jpg",
+      "url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_5268/extras/browse/V17_086802_2374_XN_57N118W.IMG.jpeg",
+      "bytes": 3454794,
+      "sha256": "4630cf1857507c35940e9b33c4fe25e7d10a882990de644c811ffebffd153ae2",
+      "http_status": 200
+    },
+    {
+      "path": "ode_CTX_EDR.json",
+      "url": "https://oderest.rsl.wustl.edu/live2/?easternlon=242.5&ihid=MRO&iid=CTX&limit=1000&maxlat=58&minlat=57.5&output=JSON&pt=EDR&query=PRODUCT&results=FMPC&target=mars&westernlon=242",
+      "bytes": 17421,
+      "sha256": "815d30cb337ee94e0d1e20e09a016279ea944c6511a6c28d0a3609fb696d620c",
+      "http_status": 200
+    },
+    {
+      "path": "ode_HIRISE_RDRV11.json",
+      "url": "https://oderest.rsl.wustl.edu/live2/?easternlon=242.5&ihid=MRO&iid=HIRISE&limit=1000&maxlat=58&minlat=57.5&output=JSON&pt=RDRV11&query=PRODUCT&results=FMPC&target=mars&westernlon=242",
+      "bytes": 400,
+      "sha256": "43fa7739f2ae256120df4ef1e9d04369b703ed71823d4c19d1a41cee4d8afbf7",
+      "http_status": 200
+    },
+    {
+      "path": "ode_HIRISE_RDR.json",
+      "url": "https://oderest.rsl.wustl.edu/live2/?easternlon=242.5&ihid=MRO&iid=HIRISE&limit=1000&maxlat=58&minlat=57.5&output=JSON&pt=RDR&query=PRODUCT&results=FMPC&target=mars&westernlon=242",
+      "bytes": 397,
+      "sha256": "0a5a6c1cab838d7d5522f4cbf30f3350abd6bb7b596844d4f410f1b3fea14800",
+      "http_status": 200
+    },
+    {
+      "path": "ode_HIRISE_RDR_V11.json",
+      "url": "https://oderest.rsl.wustl.edu/live2/?easternlon=242.5&ihid=MRO&iid=HIRISE&limit=1000&maxlat=58&minlat=57.5&output=JSON&pt=RDR_V11&query=PRODUCT&results=FMPC&target=mars&westernlon=242",
+      "bytes": 525,
+      "sha256": "34140bfa532326251abadb99f2c7d7c555b1d95ffdfe2dee8210ee4464e73a03",
+      "http_status": 200
+    },
+    {
+      "path": "ode_HIRISE_EDR.json",
+      "url": "https://oderest.rsl.wustl.edu/live2/?ihid=MRO&iid=HIRISE&limit=1000&output=JSON&pt=EDR&query=PRODUCT&results=FMPC&target=mars",
+      "bytes": 394,
+      "sha256": "24fa377414a674126d6618f102de87411b479eb11c5c84d179843c1b57c4f2d2",
+      "http_status": 200
+    },
+    {
+      "path": "hirise_page.html",
+      "url": "https://www.uahirise.org/PSP_006864_2380",
+      "bytes": 22521,
+      "sha256": "aa902fa0dae49d6986bfb24c524b0cbfa9004e3a1a95a98d565e009d9a392d6c",
+      "http_status": 200
+    },
+    {
+      "path": "PSP_006864_2380_RED.LBL",
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/PSP/ORB_006800_006899/PSP_006864_2380/PSP_006864_2380_RED.LBL",
+      "bytes": 8157,
+      "sha256": "0ec93f75138dc57e84c80e33809ec3f352b848defb3657e45a5d976a972273f4",
+      "http_status": 200
+    },
+    {
+      "path": "D01_label_record.bin",
+      "url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_1677/data/D01_027566_2370_XN_57N117W.IMG",
+      "request_headers": {
+        "Range": "bytes=0-16383"
+      },
+      "bytes": 5056,
+      "note": "First5056bytes retained from16384-byte response",
+      "sha256": "f28ba04cb5d6b9a875f55d6b76657a81f8ac7eea7a8f99b1a151624159a4ba93",
+      "http_status": 206
+    },
+    {
+      "path": "D01_native_rows.bin.gz",
+      "url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_1677/data/D01_027566_2370_XN_57N117W.IMG",
+      "request_headers": {
+        "Range": "bytes=182021056-187198399"
+      },
+      "content_range": "bytes 182021056-187198399/264049600",
+      "bytes_uncompressed": 5177344,
+      "sha256_uncompressed": "4ecf31416e3f76ce564dda7264d8ee0b8147d26f74ace17d5d2adf31d90aecae",
+      "bytes": 1198415,
+      "sha256": "93dd09696264d396eda82e323ef09c4de943e3858e76dd5029ebd92a64717f07",
+      "http_status": 206
+    },
+    {
+      "path": "CTX_cumindex.lbl",
+      "url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_1677/index/cumindex.lbl",
+      "bytes": 14728,
+      "sha256": "d09cb01caeb8c6a47373a31033d6eff1595430cee747840fba0072741c4388e0",
+      "http_status": 200
+    }
+  ],
+  "limitations": [
+    "ODE catalogue snapshot not completeness guarantee",
+    "USGS independent footprint query returned403",
+    "native D01 slice uncalibrated SQROOT DN;not orthorectified",
+    "native rows selected by approximate index corner locator,not precision camera model"
+  ],
+  "coordinate_check": "CTX cumindex label defines upper/lower left/right as areographic;ODE footprint is planetocentric. Crop locator uses ODE converted corners,not raw areographic index latitudes."
+}

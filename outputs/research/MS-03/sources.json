@@ -89,5 +89,23 @@
     "locator": "Overview and access status",
     "read_scope": "Official catalog:depth-to-ice survey,not W temperature series;not local raw archive retrieval",
     "access_date_taipei": "2026-11-15"
+  },
+  "MOR1": {
+    "url": "https://oderest.rsl.wustl.edu/live2/",
+    "locator": "saved ode_CTX_EDR.json and ode_HIRISE_RDRV11/RDR.json QuerySummary;Product fields and footprint WKT",
+    "read_scope": "Successful bounded catalogue API queries;3 actual browse downloads;D01 exact native EDR byte range and label record;not full raw frames",
+    "access_date_taipei": "2026-11-15"
+  },
+  "MOR2": {
+    "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/PSP/ORB_006800_006899/PSP_006864_2380/PSP_006864_2380_RED.LBL",
+    "locator": "START_TIME;MAP_SCALE;MINIMUM/MAXIMUM_LATITUDE;WESTERNMOST/EASTERNMOST_LONGITUDE",
+    "read_scope": "Full detached original label obtained;no HiRISE image pixels acquired;outside ROI confirmed by longitude bound",
+    "access_date_taipei": "2026-11-15"
+  },
+  "MOR3": {
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_1677/index/cumindex.lbl",
+    "locator": "columns18-25;areographic corner labels;USAGE_NOTE",
+    "read_scope": "Actual index definition retrieved;ODE planetocentric equivalents used for approximate locator;not SPICE camera calibration",
+    "access_date_taipei": "2026-11-15"
   }
 }

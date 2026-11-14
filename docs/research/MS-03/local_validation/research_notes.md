@@ -3,6 +3,7 @@
 ## 2026-11-15：官方 Resources → PDS → MRDR v4 補證據
 
 - 本輪起始 SHA：`44c2e03b8617c7bb536ad712b85f4716dd190d7c`；原分支核對後無更新。只新增／更新local_validation，不合併main。
+- 最後交付狀態另核實：PR #7於2026-11-14T19:38:25Z已合併舊head44c2e03；本輪未執行合併。已核對main08d2740不包含本輪aa8b5cb／c63d50a提交及新official_resources目錄。新資料保留原分支，PR描述提供連結；已合併PR的diff不會自動包含後續提交。詳見`official_resources/delivery_state.json`。
 - 官方題目Resources已實際取得HTTP200內容，解出 `resourcesTabContent` 的11個資源連結；其中有NASA PDS入口。網頁讀取工具先前失敗不代表官網沒有Resources，亦未用搜尋摘要冒充完整內容。
 - [官方入口追溯與方法](../../../../outputs/research/MS-03/local_validation/official_resources/README.md)；[新增QA圖](../../../../outputs/research/MS-03/local_validation/official_resources/F-RES01_MRDR_quality_and_parameters.png)。
 

@@ -103,8 +103,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/official_resources/README.md",
-      "bytes": 8417,
-      "sha256": "b2c7f80f111a9d7c45eb69baf9ecb6e94322bf7f8a4c807e8f840612e79da1a7"
+      "bytes": 8874,
+      "sha256": "75f8e4f44394e700a435351e471cc88c019621f351556f1b94bb326f8151e6e3"
     },
     {
       "path": "outputs/research/MS-03/local_validation/official_resources/acquire_resources.py",
@@ -115,6 +115,11 @@
       "path": "outputs/research/MS-03/local_validation/official_resources/analyze_mrdr.py",
       "bytes": 7935,
       "sha256": "f3715573e5b7a6b7ae63921ced18da8cdc126e3ef6def20f40c4032075d5ac7b"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/official_resources/delivery_state.json",
+      "bytes": 804,
+      "sha256": "8257c60adccb402911bd0153b8b467b77a5f31e329e461b5f79dc3af58e648f6"
     },
     {
       "path": "outputs/research/MS-03/local_validation/official_resources/fetch_local_labels.py",

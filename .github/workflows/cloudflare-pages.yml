@@ -3,10 +3,6 @@ name: Deploy TerraMatch Mission Lab to Cloudflare Pages
 on:
   push:
     branches: [main]
-    paths:
-      - "web/**"
-      - "outputs/**"
-      - ".github/workflows/cloudflare-pages.yml"
   workflow_dispatch:
 
 permissions:
@@ -19,9 +15,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      # Deploy step is skipped (build still runs) until the repo owner adds the secrets.
-      HAS_CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
 
@@ -35,7 +29,33 @@ jobs:
           cache: npm
           cache-dependency-path: web/package-lock.json
 
-      # Rebuild the data bundle from the committed outputs/ (stdlib only, no venv needed).
+      # Fail before building if deployment cannot run. Never report a skipped
+      # upload as a successful deployment, and never print credential values.
+      - name: Validate deployment configuration
+        env:
+          RAW_CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          RAW_CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const token = (process.env.RAW_CF_TOKEN || '').trim();
+          const account = (process.env.RAW_CF_ACCOUNT || '').trim();
+          const errors = [];
+          if (!token || /\s|[^\x21-\x7e]/.test(token)) {
+            errors.push('Replace CLOUDFLARE_API_TOKEN with the API token value only (no command, quotes, internal whitespace or invisible characters).');
+          }
+          if (!/^[a-f0-9]{32}$/i.test(account)) {
+            errors.push('Set CLOUDFLARE_ACCOUNT_ID to the 32-character account ID of the existing Pages project.');
+          }
+          if (errors.length) {
+            errors.forEach(message => console.error('::error::' + message));
+            process.exit(1);
+          }
+          process.stdout.write('::add-mask::' + token + '\n');
+          fs.appendFileSync(process.env.GITHUB_ENV, 'CF_API_TOKEN_CLEAN=' + token + '\nCF_ACCOUNT_CLEAN=' + account + '\n');
+          NODE
+
       - name: Build workbench data
         run: python3 web/scripts/build_workbench_data.py
 
@@ -45,37 +65,26 @@ jobs:
           npm ci
           npm run build
 
-      - name: Skip deploy (Cloudflare secrets not configured)
-        if: env.HAS_CF_TOKEN != 'true'
-        run: echo "::warning::CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID repo secrets are not set; build verified, deploy skipped."
-
-      - name: Validate deployment credential formatting
-        if: env.HAS_CF_TOKEN == 'true'
-        env:
-          RAW_CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        shell: bash
+      - name: Stamp release identity
         run: |
           node <<'NODE'
           const fs = require('node:fs');
-          const token = (process.env.RAW_CF_TOKEN || '').trim();
-          if (!token || /\s|[^\x21-\x7e]/.test(token)) {
-            console.error('Cloudflare token contains unsupported characters. Replace the repository secret with the API token only.');
-            process.exit(1);
-          }
-          // Mask before passing the normalized value to later steps. Never print it.
-          process.stdout.write('::add-mask::' + token + '\n');
-          fs.appendFileSync(process.env.GITHUB_ENV, 'CF_API_TOKEN_CLEAN=' + token + '\n');
+          fs.writeFileSync('web/dist/deployment.json', JSON.stringify({commit: process.env.GITHUB_SHA, run: process.env.GITHUB_RUN_ID}) + '\n');
           NODE
 
       - name: Deploy to Cloudflare Pages
-        if: env.HAS_CF_TOKEN == 'true'
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ env.CF_API_TOKEN_CLEAN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          accountId: ${{ env.CF_ACCOUNT_CLEAN }}
           wranglerVersion: "4.162.0"
           command: >-
             pages deploy web/dist
             --project-name=terramatch-mission-lab
             --branch=main
             --commit-hash=${{ github.sha }}
+
+      - name: Verify public release matches this commit
+        env:
+          SITE_URL: https://terramatch-mission-lab.pages.dev
+        run: python3 scripts/verify_public_release.py

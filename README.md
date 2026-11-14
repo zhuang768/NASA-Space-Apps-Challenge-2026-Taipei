@@ -205,3 +205,12 @@ At the user's request, pushed `f47c72c` with web run/deployment documentation to
 After syncing the teammate's manual-upload record, independently opened the public site and verified the organized layout served `index-C1XZWWZv.js`. Public Chromium checks passed at desktop 1440×1000 and mobile 390×844: default overview, three-view navigation, all three targets, candidate selection, evidence drawer opening/Escape closure and Demo-to-real reset. Mobile document width stayed 390 px with method details closed and open. No JavaScript page errors occurred in these tested flows. The public Gale comparison figure returned HTTP 200. No layout fixes were needed after these checks.
 
 The public organized-layout release is now verified. Automatic GitHub Actions deployment remains a separate unresolved configuration issue; successful manual upload does not repair it. No scientific results or website code changed in this verification. OpenAI Codex assisted browser checks and English reporting.
+
+
+### 2026-11-14: Automatic deployment workflow repair
+
+Changed the Pages workflow to run on every push to main, including documentation-only pushes, with manual dispatch retained. Configuration is validated before building: both token and account ID are required, surrounding whitespace is normalized, invalid input fails clearly, and an unavailable upload can no longer produce a misleading successful run. Credentials remain in GitHub secrets; no secret values were read into the workspace.
+
+Added a release stamp containing the commit/run identifiers to the built site and a post-upload verifier that checks the public commit stamp plus referenced application assets. An old public version or missing assets cannot pass. Three targeted tests for current release, stale release and missing assets passed; Ruff passed for the new verification code. The existing organized public layout remains available.
+
+Owner action is still needed: replace the malformed CLOUDFLARE_API_TOKEN with a Pages-edit token scoped to the existing project's account and configure CLOUDFLARE_ACCOUNT_ID. End-to-end automatic publication is pending those settings and a successful real workflow run; workflow edits alone are not reported as completed automatic deployment. OpenAI Codex assisted CI changes, verification tests and English documentation.

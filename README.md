@@ -142,3 +142,12 @@ docs/         方法、資料規格、競賽準備與歷史紀錄
 英文PDF／影片、隊伍／帳戶核對、全隊授權、完整文獻史與獨立參照組、匿名公開連結及SUBMIT狀態仍未完成，見[最後checklist](docs/submission/remaining_checklist.md)。OpenAI Codex協助研究規格、來源核對、計算與中英文文案；展示文字草稿不等於成品或已提交。
 
 本輪驗證：新參照檢查命令執行成功；Python測試57項通過（8個既有警告）、Ruff通過，9份文件本機連結檢查通過。未執行前端建置、瀏覽器驗收、公開部署或官方提交。
+
+
+### 2026-11-14: Matching results and website handoff
+
+Synced main before work. Exported [the English website handoff](outputs/matching_handoff/README.md) and [machine-readable matching data](outputs/matching_handoff/matching_data.json): 36 stored target–candidate records, six with POWER context, three Mars profiles, source hashes, scoring statuses and limitations. Added PNG/SVG figures explaining terrain-distance components and top-two sensitivity; existing maps and equal-scale terrain panels are linked with captions. No candidate reranking, candidate geological investigation, or website edits were performed.
+
+Verification: all 36 stored terrain distances recomputed from stored features; component sums, unique IDs and footprint count checked. Both new chart layouts were visually inspected. Python tests: 57 passed, eight existing warnings; Ruff passed. The export is reproducible with `python -m scripts.export_matching_handoff`. Website integration/build, browser testing, public deployment and official submission were not performed.
+
+Remaining Matching dependencies: Data teammate's QA-controlled Earth candidate feature handoff, compatible regional Mars day/night surface-temperature data, and a defensible cross-theme comparison/weighting/missing-data definition before any four-theme reranking. The handoff specifies the minimal Data-to-Matching schema and Reporting's integration steps. Unknown themes remain unscored; native dust, thermal inertia and ice consistency remain context, not identical cross-planet measurements. Original results are unchanged. OpenAI Codex assisted export code, numerical checks, figures and English documentation.

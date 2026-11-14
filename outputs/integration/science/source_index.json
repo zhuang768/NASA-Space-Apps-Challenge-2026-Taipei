@@ -1,0 +1,1219 @@
+{
+  "schema": "ZASA-SCIENCE-SOURCE-INDEX-v1",
+  "retrieval": "GitHub fixed-commit content; exact UTF8 bytes independently match Git blob SHA and size",
+  "sources": [
+    {
+      "source_id": "MS02_REPORT",
+      "pr_number": 6,
+      "commit_sha": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+      "path": "docs/research/MS-02/report.md",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/38b8fa0dea527b1cc47aeb02dc260e039da37122/docs/research/MS-02/report.md",
+      "bytes": 28146,
+      "git_blob_sha": "c60367ec3ef67394a45185b54bfa804f65161360",
+      "sha256": "1f603ac5a125befdd34af97c14a0c24b3a3591f2b6289a07d4ea62abf7caa0f4",
+      "byte_exact_match": true,
+      "headings": [
+        {
+          "line_1based": 1,
+          "text": "# MS-02 地球類比場址研究報告"
+        },
+        {
+          "line_1based": 6,
+          "text": "## 1. 結論摘要"
+        },
+        {
+          "line_1based": 16,
+          "text": "## 2. 資料基準與核對"
+        },
+        {
+          "line_1based": 32,
+          "text": "## 3. MS-02 已核實特徵與限制"
+        },
+        {
+          "line_1based": 44,
+          "text": "## 4. 地球候選"
+        },
+        {
+          "line_1based": 55,
+          "text": "## 5. 四面向比較"
+        },
+        {
+          "line_1based": 66,
+          "text": "### 各候選的差異摘要"
+        },
+        {
+          "line_1based": 73,
+          "text": "## 6. 可檢驗問題（研究假設，不是結論）"
+        },
+        {
+          "line_1based": 81,
+          "text": "## 7. 先例檢索與差異"
+        },
+        {
+          "line_1based": 101,
+          "text": "## 8. 處置理由、能驗證與不能外推"
+        },
+        {
+          "line_1based": 110,
+          "text": "## 8B. Adventdalen 三組證據查核（第四輪，2026-11-15）"
+        },
+        {
+          "line_1based": 120,
+          "text": "### 三組證據的實際範圍"
+        },
+        {
+          "line_1based": 130,
+          "text": "### 主張—直接證據—替代解釋"
+        },
+        {
+          "line_1based": 146,
+          "text": "### 與 University Valley 各自解決的問題"
+        },
+        {
+          "line_1based": 152,
+          "text": "### 相較既有火星類比／雷達研究，本次增加什麼"
+        },
+        {
+          "line_1based": 156,
+          "text": "### 本輪限制"
+        },
+        {
+          "line_1based": 160,
+          "text": "## 9. 缺口與限制"
+        },
+        {
+          "line_1based": 174,
+          "text": "## 10. 交付檔案"
+        },
+        {
+          "line_1based": 182,
+          "text": "## 來源"
+        }
+      ]
+    },
+    {
+      "source_id": "MS02_CANDIDATES",
+      "pr_number": 6,
+      "commit_sha": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+      "path": "outputs/research/MS-02/candidates.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/38b8fa0dea527b1cc47aeb02dc260e039da37122/outputs/research/MS-02/candidates.csv",
+      "bytes": 8051,
+      "git_blob_sha": "5e49c330ef6d13c2ae59e5d68f0b195334a75c63",
+      "sha256": "ed4f3fe42842f088b8029877b95bafd6ba9f5137477671d0fdee1d20c2da3450",
+      "byte_exact_match": true,
+      "columns": [
+        "candidate_id",
+        "name",
+        "lat_deg",
+        "lon_deg_east",
+        "research_extent",
+        "boundary_basis",
+        "available_data",
+        "testable_physical_processes",
+        "main_environment_differences",
+        "disposition",
+        "disposition_reason",
+        "cannot_extrapolate",
+        "next_verification_step"
+      ],
+      "data_records": 4
+    },
+    {
+      "source_id": "MS02_EVIDENCE",
+      "pr_number": 6,
+      "commit_sha": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+      "path": "outputs/research/MS-02/evidence.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/38b8fa0dea527b1cc47aeb02dc260e039da37122/outputs/research/MS-02/evidence.csv",
+      "bytes": 25451,
+      "git_blob_sha": "340c39c4213edc363c03108cfdf9a9a0774294e6",
+      "sha256": "86366de6f32dbcee7c3f851b596bba68c1b548dfc8d930c214d854b3ff095ae3",
+      "byte_exact_match": true,
+      "columns": [
+        "evidence_id",
+        "candidate_id",
+        "facet",
+        "variable",
+        "value",
+        "unit",
+        "evidence_type",
+        "observation_period",
+        "depth_or_height",
+        "resolution_or_representative_extent",
+        "source",
+        "locator",
+        "limitation_or_comparability"
+      ],
+      "data_records": 61
+    },
+    {
+      "source_id": "MS02_PRIOR",
+      "pr_number": 6,
+      "commit_sha": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+      "path": "outputs/research/MS-02/prior_work.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/38b8fa0dea527b1cc47aeb02dc260e039da37122/outputs/research/MS-02/prior_work.csv",
+      "bytes": 11508,
+      "git_blob_sha": "c477f3d025b9316b256b018c07ca61dc610fc82c",
+      "sha256": "581b4beb6bf5fc6716ec779008c53116606b27eef3ab3411b061dc7e05dab2cb",
+      "byte_exact_match": true,
+      "columns": [
+        "prior_id",
+        "candidate_id",
+        "work",
+        "venue_doi_or_url",
+        "site_covered",
+        "purpose",
+        "classification_vs_MS02_use",
+        "read_scope",
+        "difference_in_question",
+        "difference_in_scope",
+        "difference_in_data",
+        "difference_in_method",
+        "note"
+      ],
+      "data_records": 20
+    },
+    {
+      "source_id": "SOURCE_05",
+      "pr_number": 6,
+      "commit_sha": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+      "path": "outputs/research/MS-02/manifest.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/38b8fa0dea527b1cc47aeb02dc260e039da37122/outputs/research/MS-02/manifest.json",
+      "bytes": 10137,
+      "git_blob_sha": "ddcb96f43a4ea9e3806de9fc830f3d12e47609ac",
+      "sha256": "e098925c539b298f50074374fa203f6215aff7c8bf4f2c424a4b3c16fcd63c49",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "MS02_VERIFICATION",
+      "pr_number": 6,
+      "commit_sha": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+      "path": "outputs/research/MS-02/verification.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/38b8fa0dea527b1cc47aeb02dc260e039da37122/outputs/research/MS-02/verification.json",
+      "bytes": 7895,
+      "git_blob_sha": "41e81f755aea9c3c230ade40fa0d01320ad3f52b",
+      "sha256": "cdcb31b57ab970897b3d564c8eec7f31009154e0cfecbf07cd9c78bbd49b76d1",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "MS02_CLAIMS",
+      "pr_number": 6,
+      "commit_sha": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+      "path": "outputs/research/MS-02/claims.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/38b8fa0dea527b1cc47aeb02dc260e039da37122/outputs/research/MS-02/claims.csv",
+      "bytes": 5797,
+      "git_blob_sha": "98bd29c5632870f7e05428516f6e1de97a280981",
+      "sha256": "7f7a9db9b9a322dcbef12c622f14987bba5241a43ee815d00c5053239c465dfe",
+      "byte_exact_match": true,
+      "columns": [
+        "claim_id",
+        "claim",
+        "claim_origin",
+        "direct_evidence",
+        "site_year_depth_of_direct_evidence",
+        "independent_truth_for_the_claim",
+        "alternative_explanations_or_caveats",
+        "status",
+        "source_and_locator"
+      ],
+      "data_records": 9
+    },
+    {
+      "source_id": "MS02_FOOTPRINT",
+      "pr_number": 6,
+      "commit_sha": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+      "path": "outputs/research/MS-02/footprint.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/38b8fa0dea527b1cc47aeb02dc260e039da37122/outputs/research/MS-02/footprint.csv",
+      "bytes": 2983,
+      "git_blob_sha": "67ec2d6348fff3c0ce4cd9c1536fbaa1736685aa",
+      "sha256": "6ac85eb51dd5e72ad9eb6fabbdbbc239fd9a82f190bf620b5782c96b37b149a6",
+      "byte_exact_match": true,
+      "columns": [
+        "footprint_id",
+        "evidence_set",
+        "location",
+        "lat_deg",
+        "lon_deg_east",
+        "geometry_type",
+        "stated_extent",
+        "survey_or_sample_year",
+        "depth_range_m",
+        "measured_quantity",
+        "source",
+        "locator",
+        "geometry_status"
+      ],
+      "data_records": 9
+    },
+    {
+      "source_id": "SOURCE_09",
+      "pr_number": 6,
+      "commit_sha": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+      "path": "outputs/research/MS-02/search_log.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/38b8fa0dea527b1cc47aeb02dc260e039da37122/outputs/research/MS-02/search_log.csv",
+      "bytes": 13772,
+      "git_blob_sha": "90d42b3d8c0ae55ffe19daf96db13f8db07be04f",
+      "sha256": "f58e70175815895b333f1415c7b249b3c6be45dc876bba365c306c010499948a",
+      "byte_exact_match": true,
+      "columns": [
+        "search_id",
+        "date_taipei",
+        "platform",
+        "query_or_url",
+        "purpose",
+        "candidate",
+        "records_used",
+        "read_scope",
+        "outcome"
+      ],
+      "data_records": 65
+    },
+    {
+      "source_id": "MS03_REPORT",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "docs/research/MS-03/report.md",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/docs/research/MS-03/report.md",
+      "bytes": 67488,
+      "git_blob_sha": "f62b956bd270ded3e905011c7c63c69db041d9e1",
+      "sha256": "533063a5d0554dc5cf44abe51ee4711fc8d9bba92ea0349cb3d07d9f09fb9d07",
+      "byte_exact_match": true,
+      "headings": [
+        {
+          "line_1based": 1,
+          "text": "# MS-03 地球類比場址研究與用途查核"
+        },
+        {
+          "line_1based": 7,
+          "text": "## 2026-11-15生成元件追查：公開版本可核實，2026實跑版／SQL與根因仍未知"
+        },
+        {
+          "line_1based": 11,
+          "text": "### 公開版本與實際執行版必須分開"
+        },
+        {
+          "line_1based": 26,
+          "text": "### 149份產品標籤：可排除單一取整解釋，仍無法選定真值"
+        },
+        {
+          "line_1based": 39,
+          "text": "### 本輪能下的結論與仍缺的決定性證據"
+        },
+        {
+          "line_1based": 48,
+          "text": "## 2026-11-15正式交接：HiRISE索引已釐清事項、未知與新增證據"
+        },
+        {
+          "line_1based": 52,
+          "text": "### 已釐清與仍未知"
+        },
+        {
+          "line_1based": 64,
+          "text": "### 給主要對話：可直接引用與下一步"
+        },
+        {
+          "line_1based": 72,
+          "text": "### 給GPU：可用輸入、操作界線與後續條件"
+        },
+        {
+          "line_1based": 84,
+          "text": "## 2026-11-15續查：615筆格式警示與149列計數差的影響已釐清"
+        },
+        {
+          "line_1based": 88,
+          "text": "### 615筆的原因：本組檢核過嚴，不能稱為615筆缺失定位"
+        },
+        {
+          "line_1based": 98,
+          "text": "### 筆數差：實表有149組重複產品ID，生成原因仍未知"
+        },
+        {
+          "line_1based": 114,
+          "text": "### 是否可能因此漏掉MS-03格內影像？"
+        },
+        {
+          "line_1based": 120,
+          "text": "### 給主要對話與GPU的更新"
+        },
+        {
+          "line_1based": 128,
+          "text": "## 2026-11-15交接初版（115576b；索引異常狀態以上段續查為準）"
+        },
+        {
+          "line_1based": 132,
+          "text": "### 給主要對話：處置與可直接使用的敘述"
+        },
+        {
+          "line_1based": 148,
+          "text": "### 這輪新增的證據與讀取範圍"
+        },
+        {
+          "line_1based": 158,
+          "text": "### 給GPU：固定輸入、禁用推論與後續啟用條件"
+        },
+        {
+          "line_1based": 175,
+          "text": "## 2026-11-15形貌查核初版（5154b9b；原論文取得狀態以上段補證據為準）"
+        },
+        {
+          "line_1based": 181,
+          "text": "### 實際查詢與取得的影像"
+        },
+        {
+          "line_1based": 196,
+          "text": "### AD1實際GIS幾何與共同可觀測尺度"
+        },
+        {
+          "line_1based": 209,
+          "text": "### 用途先例、實際新增分析與處置"
+        },
+        {
+          "line_1based": 220,
+          "text": "## 2026-11-15 PR #7最後核對"
+        },
+        {
+          "line_1based": 226,
+          "text": "## 2026-11-15交接：主要對話與GPU的Campbell時標處理界線"
+        },
+        {
+          "line_1based": 230,
+          "text": "### 給主要對話：研究定位與缺件取得"
+        },
+        {
+          "line_1based": 243,
+          "text": "### 給GPU：可用輸入、禁用分析與解除條件"
+        },
+        {
+          "line_1based": 266,
+          "text": "## 2026-11-15追加搜尋：原碼、原始logger與2012操作紀錄仍未取得"
+        },
+        {
+          "line_1based": 285,
+          "text": "## 2026-11-15續查：Campbell −1／−5小時差異與作者補列紀錄"
+        },
+        {
+          "line_1based": 289,
+          "text": "### 原列證據與可重現核對"
+        },
+        {
+          "line_1based": 303,
+          "text": "### 作者程式、部署紀錄與取得限制"
+        },
+        {
+          "line_1based": 310,
+          "text": "### 目前判斷與交接"
+        },
+        {
+          "line_1based": 316,
+          "text": "## 2026-11-15續查：W站時序已取得，先完成地球站內描述"
+        },
+        {
+          "line_1based": 320,
+          "text": "### 取得的資料、版本與身份"
+        },
+        {
+          "line_1based": 336,
+          "text": "### QA發現與保守處理"
+        },
+        {
+          "line_1based": 348,
+          "text": "### 能先做的分析：2010年作者HOBO合併匯出檔的20／42cm描述"
+        },
+        {
+          "line_1based": 360,
+          "text": "### 對MS-03可以與不可以比較什麼"
+        },
+        {
+          "line_1based": 373,
+          "text": "### 重跑與尚缺證據"
+        },
+        {
+          "line_1based": 388,
+          "text": "## 2026-11-14初版紀錄（取得狀態已由前段2026-11-15更新取代）"
+        },
+        {
+          "line_1based": 392,
+          "text": "## 初版：版本與資料是否真正取得"
+        },
+        {
+          "line_1based": 407,
+          "text": "## MS-03：只沿用已核對的原生格結果"
+        },
+        {
+          "line_1based": 423,
+          "text": "## 候選與四面向比較"
+        },
+        {
+          "line_1based": 432,
+          "text": "### E01的資料與可執行工作"
+        },
+        {
+          "line_1based": 438,
+          "text": "### E02的實際資料取得與範圍"
+        },
+        {
+          "line_1based": 446,
+          "text": "## 同場址、同用途先例及可能差異"
+        },
+        {
+          "line_1based": 462,
+          "text": "## 給統籌的處置與完成程度"
+        }
+      ]
+    },
+    {
+      "source_id": "MS03_CANDIDATES",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/candidates.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/candidates.csv",
+      "bytes": 3125,
+      "git_blob_sha": "316c04fd3291c0cb01b087439170601475d3757e",
+      "sha256": "5267d22fb93cf72527aa722987b486a238752d92e3fc14e389aa8b9a0373b391",
+      "byte_exact_match": true,
+      "columns": [
+        "candidate_id",
+        "mars_id",
+        "name",
+        "aliases",
+        "region",
+        "latitude_deg",
+        "longitude_east_deg",
+        "coordinate_source",
+        "datum",
+        "extent_type",
+        "bounds_json",
+        "extent_basis",
+        "test_purpose",
+        "disposition",
+        "reason",
+        "data_status",
+        "next_step",
+        "novelty",
+        "cannot_infer"
+      ],
+      "data_records": 2
+    },
+    {
+      "source_id": "MS03_EVIDENCE",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/evidence.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/evidence.csv",
+      "bytes": 21879,
+      "git_blob_sha": "ae4435e28d464b4f26a36cfb743e5780d37ee07a",
+      "sha256": "b174740840b49d3501528abbad294643892fdeee2400d17702f32e109f0436aa",
+      "byte_exact_match": true,
+      "columns": [
+        "evidence_id",
+        "candidate_id",
+        "theme",
+        "metric",
+        "value",
+        "unit",
+        "period",
+        "measurement_depth_or_height",
+        "resolution",
+        "spatial_support",
+        "evidence_type",
+        "source_id",
+        "source_url",
+        "source_locator",
+        "read_scope",
+        "status",
+        "limitations"
+      ],
+      "data_records": 32
+    },
+    {
+      "source_id": "MS03_PRIOR",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/prior_work.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/prior_work.csv",
+      "bytes": 5504,
+      "git_blob_sha": "09195413caa5932d43d8fa725b201c3df35095ea",
+      "sha256": "16bfdcb2f1dbb764f454be55b867b1f38f502780666513c783ce9d91345aeb77",
+      "byte_exact_match": true,
+      "columns": [
+        "prior_id",
+        "candidate_id",
+        "classification",
+        "source_id",
+        "source_url",
+        "source_locator",
+        "read_scope",
+        "prior_question",
+        "prior_spatial_scope",
+        "prior_data_method",
+        "overlap_with_proposed_use",
+        "possible_difference_not_novelty_claim",
+        "unresolved",
+        "search_date_taipei"
+      ],
+      "data_records": 8
+    },
+    {
+      "source_id": "SOURCE_14",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/manifest.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/manifest.json",
+      "bytes": 33341,
+      "git_blob_sha": "0f8dd5681931adafde09a2f71a2407455940533c",
+      "sha256": "30e022d4bb216192dd77be4a413313727d1f92a4a514c002aaecc9e197ced68b",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "SOURCE_15",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/validation.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/validation.json",
+      "bytes": 20230,
+      "git_blob_sha": "9ac68e0a33837eeb7b31951dcb5287642880c483",
+      "sha256": "9b3a4c9fa6e1a3434a56f33316b8e15f55470080093604f18685df466f85bd94",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "SOURCE_16",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/mars_reference.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/mars_reference.json",
+      "bytes": 13542,
+      "git_blob_sha": "7a666eb9d9605b1e11a33d055dfd6944beebe61d",
+      "sha256": "014ca34cb9eca59fe1623b4e5cbe602097c6b4a42a8e41de52a9bb108f972348",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "SOURCE_17",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/morphology/README.md",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/morphology/README.md",
+      "bytes": 16029,
+      "git_blob_sha": "9627beb3c3a2dc7a93632d5fc8bda8a82848a882",
+      "sha256": "96826b0445f0a0b76e6cbd6f825c0f118fe60b8409b93123bac384432a479892",
+      "byte_exact_match": true,
+      "headings": [
+        {
+          "line_1based": 1,
+          "text": "# MS-03 morphology audit — 2026-11-15"
+        },
+        {
+          "line_1based": 7,
+          "text": "## Generator trace and149-label diagnostic — 2026-11-15"
+        },
+        {
+          "line_1based": 19,
+          "text": "## Main/GPU handoff and further checks — 2026-11-15"
+        },
+        {
+          "line_1based": 33,
+          "text": "## Index anomalies resolved for this fixed table — 2026-11-15"
+        },
+        {
+          "line_1based": 48,
+          "text": "## Evidence supplement and handoff — 2026-11-15"
+        },
+        {
+          "line_1based": 65,
+          "text": "## Deliverables"
+        },
+        {
+          "line_1based": 73,
+          "text": "## What was actually accessed"
+        },
+        {
+          "line_1based": 85,
+          "text": "## Geometry method and limits"
+        },
+        {
+          "line_1based": 93,
+          "text": "## Prior use and next evidence"
+        },
+        {
+          "line_1based": 101,
+          "text": "## Reproduce"
+        },
+        {
+          "line_1based": 108,
+          "text": "# Optional network reacquisition;stops if CTX catalogue count changes:"
+        }
+      ]
+    },
+    {
+      "source_id": "MS03_OBSERVABILITY",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/morphology/observability_comparison.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/morphology/observability_comparison.csv",
+      "bytes": 1070,
+      "git_blob_sha": "c9f181e09254ce14af0f8f71dcf02a22367591e3",
+      "sha256": "edd7b6f37f1cd9d83f55b4c9a0cc2d4a1138d8ab8ae4e88690be315d918189e5",
+      "byte_exact_match": true,
+      "columns": [
+        "metric",
+        "unit",
+        "AD1",
+        "MS03",
+        "comparison"
+      ],
+      "data_records": 7
+    },
+    {
+      "source_id": "MS03_GEOMETRY",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/morphology/AD1_geometry_summary.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/morphology/AD1_geometry_summary.json",
+      "bytes": 2081,
+      "git_blob_sha": "a38f1ba3c1ab0cfdc812b34aabf830dc21aef0f0",
+      "sha256": "6c76690c0a68d46b651a10dc0d24240fac1cc02067d95ec11b825c0f33026d2e",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "MS03_INDEX",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/resolution_summary.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/morphology/evidence_followup/index_anomalies/resolution_summary.json",
+      "bytes": 2783,
+      "git_blob_sha": "d08c5efdd3e4532613224f131ed5efe9f3272c42",
+      "sha256": "57c8d00c32b7692e3a9416188bfe55f885d4ffa903cc8827560636b747b5933b",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "MS03_HANDOFF",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/handoff_status.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/morphology/evidence_followup/index_handoff/handoff_status.json",
+      "bytes": 2123,
+      "git_blob_sha": "1d0a3deddc2e1872ee3786276836f0755713c954",
+      "sha256": "3927253edba71a3cf65cb6ccfb022272f190e2a69211b5ad4c783a4d92ed5497",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "MS03_DUPLICATES",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/morphology/evidence_followup/generator_followup/duplicate_label_time_summary.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/morphology/evidence_followup/generator_followup/duplicate_label_time_summary.json",
+      "bytes": 918,
+      "git_blob_sha": "a30c3966969a5801ccd3eb3e9ca39b9f5e61f1cc",
+      "sha256": "66c3d548915a546a65b02dba61351310297e305528dd8910d7c4721d2b52e52f",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "MS03_VERSIONS",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/morphology/evidence_followup/generator_followup/public_version_trace.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/morphology/evidence_followup/generator_followup/public_version_trace.json",
+      "bytes": 4346,
+      "git_blob_sha": "4de7378a64ef3fe583e2c68e397cf9431831debc",
+      "sha256": "d2fcd64440e31217a94e899ac234ceb534fb478ebf0a5c62246ec1b71829ffe4",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "MS03_CLOCK",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/uv_w/campbell_clock_audit.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/uv_w/campbell_clock_audit.json",
+      "bytes": 1224,
+      "git_blob_sha": "bc3002cbda6c73101cd286ca513b57676ed5a951",
+      "sha256": "41da5b4508cc37e9b0c342ca37d1785a99b0dac49e5ff11829a482648792e376",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "MS03_CLOCK_SEARCH",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/uv_w/clock_search_followup.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/uv_w/clock_search_followup.json",
+      "bytes": 1247,
+      "git_blob_sha": "64d30c44bc22d7dfedc5f5ad62ee9f933ced4417",
+      "sha256": "3366ad1aeeaeac4a397a17f6831ece521f409ae27d7931bed9ad27c8670e5447",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "MS03_UV_QA",
+      "pr_number": 7,
+      "commit_sha": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "path": "outputs/research/MS-03/uv_w/qa.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/8f6d3134bc5bfef6e83a4caddb1d602872d40708/outputs/research/MS-03/uv_w/qa.json",
+      "bytes": 6621,
+      "git_blob_sha": "04a5a4563cd3b511d435b95829d27264d3ae1575",
+      "sha256": "47d4ecd4ec26c1678b3ded7a11f45039e269e826311efa15ed6ad441eebb39ed",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "MS01_REPORT",
+      "pr_number": 8,
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "path": "docs/research/MS-01/report.md",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/docs/research/MS-01/report.md",
+      "bytes": 18898,
+      "git_blob_sha": "0439f69e91e9e4d8f6389f673fd0f4c451b8472f",
+      "sha256": "2e0af390f9148b7b9d17c6c70fbeb496dd09a8cb3437aa7a52c06bc9c361b669",
+      "byte_exact_match": true,
+      "headings": [
+        {
+          "line_1based": 1,
+          "text": "# MS-01 地球類比場址研究"
+        },
+        {
+          "line_1based": 7,
+          "text": "## 結論與用途"
+        },
+        {
+          "line_1based": 13,
+          "text": "## 共同基準與取得狀態"
+        },
+        {
+          "line_1based": 34,
+          "text": "## MS-01：重新核實的出發點"
+        },
+        {
+          "line_1based": 48,
+          "text": "## 候選位置、範圍與資料"
+        },
+        {
+          "line_1based": 59,
+          "text": "## 四面向獨立比較"
+        },
+        {
+          "line_1based": 70,
+          "text": "## 本次實際資料分析"
+        },
+        {
+          "line_1based": 87,
+          "text": "## 同場址同用途先例與本次差異"
+        },
+        {
+          "line_1based": 104,
+          "text": "## 可檢驗假設、處置與下一步"
+        },
+        {
+          "line_1based": 114,
+          "text": "## 交付、重跑與來源"
+        }
+      ]
+    },
+    {
+      "source_id": "MS01_THERMAL",
+      "pr_number": 8,
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "path": "docs/research/MS-01/thermal_followup.md",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/docs/research/MS-01/thermal_followup.md",
+      "bytes": 18263,
+      "git_blob_sha": "a9509267f515756536aba02d3857d844892bf85a",
+      "sha256": "7e3444758fae54713008f3afa38f96c1d783041fdcc1effd299017a457d84975",
+      "byte_exact_match": true,
+      "headings": [
+        {
+          "line_1based": 1,
+          "text": "# MS-01：已知冰界面能增加哪些熱訊號判讀依據？"
+        },
+        {
+          "line_1based": 7,
+          "text": "## 1. 實際取得與共同期間"
+        },
+        {
+          "line_1based": 25,
+          "text": "## 2. 位置、探針與時間核對後的限制"
+        },
+        {
+          "line_1based": 44,
+          "text": "## 3. 關鍵比較圖與計算"
+        },
+        {
+          "line_1based": 70,
+          "text": "## 4. 觀測—可能解釋—不能排除的解釋"
+        },
+        {
+          "line_1based": 85,
+          "text": "## 5. Marinova 已回答什麼，本輪具體新增什麼？"
+        },
+        {
+          "line_1based": 99,
+          "text": "## 6. 候選處置與 MS-01 的研究價值"
+        },
+        {
+          "line_1based": 109,
+          "text": "## 7. 重現與驗收"
+        }
+      ]
+    },
+    {
+      "source_id": "MS01_CANDIDATES",
+      "pr_number": 8,
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "path": "outputs/research/MS-01/candidates.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/outputs/research/MS-01/candidates.csv",
+      "bytes": 1936,
+      "git_blob_sha": "cb2a2dc8978952546a14047bf5d71c475b33beb6",
+      "sha256": "49da79bb01586eb4398bbe395b28e81c9f64c488c1547155c4c011b9bcd26efb",
+      "byte_exact_match": true,
+      "columns": [
+        "candidate_id",
+        "name",
+        "latitude",
+        "longitude",
+        "coordinate_basis",
+        "coordinate_precision",
+        "scope",
+        "south",
+        "north",
+        "west",
+        "east",
+        "boundary_basis",
+        "purpose",
+        "available_data",
+        "disposition",
+        "rationale",
+        "next_step",
+        "limits",
+        "source_ids"
+      ],
+      "data_records": 2
+    },
+    {
+      "source_id": "MS01_EVIDENCE",
+      "pr_number": 8,
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "path": "outputs/research/MS-01/evidence.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/outputs/research/MS-01/evidence.csv",
+      "bytes": 17582,
+      "git_blob_sha": "678fe14deb886ac1e206f451dd8f5381e1447565",
+      "sha256": "dc0db453e30c028309d8264d1af03799b1d7698bef65f43a158c81f8206cd9f7",
+      "byte_exact_match": true,
+      "columns": [
+        "evidence_id",
+        "candidate_id",
+        "dimension",
+        "quantity",
+        "value",
+        "unit",
+        "source_id",
+        "source_url",
+        "locator",
+        "data_kind",
+        "observation_period",
+        "depth_height",
+        "temporal_resolution",
+        "spatial_resolution",
+        "representative_extent",
+        "uncertainty",
+        "comparability_and_limit",
+        "accessed_date"
+      ],
+      "data_records": 33
+    },
+    {
+      "source_id": "MS01_PRIOR",
+      "pr_number": 8,
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "path": "outputs/research/MS-01/prior_work.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/outputs/research/MS-01/prior_work.csv",
+      "bytes": 3894,
+      "git_blob_sha": "a5d2cef50cf25425ebae240fe0725586e09f4449",
+      "sha256": "3ea845aa25e6ba5d36dd51bb4f990d8fe9d76e96a8de8314d96abb474fcdff32",
+      "byte_exact_match": true,
+      "columns": [
+        "prior_id",
+        "candidate_id",
+        "source_id",
+        "source_url",
+        "classification",
+        "read_locator",
+        "prior_scope",
+        "prior_question",
+        "prior_data",
+        "prior_method",
+        "this_work_difference",
+        "novelty_limit",
+        "accessed_date"
+      ],
+      "data_records": 8
+    },
+    {
+      "source_id": "SOURCE_32",
+      "pr_number": 8,
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "path": "outputs/research/MS-01/manifest.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/outputs/research/MS-01/manifest.json",
+      "bytes": 14300,
+      "git_blob_sha": "ff86b850db179e481b292b332b9e14b21d38cdc8",
+      "sha256": "8eda41f192a363679229eb63d73e97220666035beb3def12458c458bb7f9343d",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "SOURCE_33",
+      "pr_number": 8,
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "path": "outputs/research/MS-01/sources.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/outputs/research/MS-01/sources.json",
+      "bytes": 9999,
+      "git_blob_sha": "676fd3abc9e8794622b6e1ebb117bff7de4740c7",
+      "sha256": "0e602b59d1dcce7bcc72977c1db8b6874ff0d819d494c1ad601f84b160396e25",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "MS01_AMPLITUDES",
+      "pr_number": 8,
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "path": "outputs/research/MS-01/thermal_followup/amplitudes.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/outputs/research/MS-01/thermal_followup/amplitudes.csv",
+      "bytes": 6785,
+      "git_blob_sha": "42e0de1697963106bc15e4a7b55c6bd9982637cf",
+      "sha256": "8ac8df7962085c91603da54d483a3d38688fde327e7740e9aebbcae00253b52b",
+      "byte_exact_match": true,
+      "columns": [
+        "station",
+        "column",
+        "role",
+        "depth_m",
+        "common_n",
+        "amplitude_K",
+        "amplitude_to_upper_ratio",
+        "residual_rmse_K",
+        "leave_one_day_amplitude_min_K",
+        "leave_one_day_amplitude_max_K",
+        "amplitude_with_12h_nuisance_K",
+        "leave_one_day_ratio_min",
+        "leave_one_day_ratio_max",
+        "relative_lag_to_upper_h",
+        "lag_interpretation",
+        "logger",
+        "comparison"
+      ],
+      "data_records": 18
+    },
+    {
+      "source_id": "MS01_INTERPRETATION",
+      "pr_number": 8,
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "path": "outputs/research/MS-01/thermal_followup/interpretation_table.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/outputs/research/MS-01/thermal_followup/interpretation_table.csv",
+      "bytes": 3105,
+      "git_blob_sha": "9b3dcd96ea27129f5434e452aeff54f7640badcc",
+      "sha256": "d2fe62fe283d6d5c9f2ef9883446e6c073b79408295bd496c743112783c43459",
+      "byte_exact_match": true,
+      "columns": [
+        "id",
+        "observation",
+        "possible_explanation",
+        "alternatives_not_excluded",
+        "MS01_implication",
+        "source_locator"
+      ],
+      "data_records": 8
+    },
+    {
+      "source_id": "MS01_DELTA",
+      "pr_number": 8,
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "path": "outputs/research/MS-01/thermal_followup/prior_work_delta.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/outputs/research/MS-01/thermal_followup/prior_work_delta.csv",
+      "bytes": 1040,
+      "git_blob_sha": "cbd2db932b0c36a55be95afedb6f06f62546d845",
+      "sha256": "686c0fbe5ce032005b120e26aab71b9f76e22f18ac86837062aa877d01b18492",
+      "byte_exact_match": true,
+      "columns": [
+        "source_id",
+        "prior_answer",
+        "prior_scope_data",
+        "this_work_addition",
+        "contribution_boundary"
+      ],
+      "data_records": 4
+    },
+    {
+      "source_id": "MS01_STATIONS",
+      "pr_number": 8,
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "path": "outputs/research/MS-01/thermal_followup/station_metadata.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/outputs/research/MS-01/thermal_followup/station_metadata.csv",
+      "bytes": 2865,
+      "git_blob_sha": "44d24d4bb4c13293215ea11b85380baac4544182",
+      "sha256": "c0eacaec1c2b9cb2f88e4fd0cf2bad05b90b773b410ab4632e804f5e45bd51cf",
+      "byte_exact_match": true,
+      "columns": [
+        "station",
+        "logger_serial",
+        "paper_latitude",
+        "paper_longitude",
+        "deployment2009_latitude",
+        "deployment2009_longitude",
+        "coordinate_status",
+        "nominal_interface_m",
+        "temperature_column_mapping_1based",
+        "depth_basis",
+        "depth_limit",
+        "clock_status",
+        "source_locators"
+      ],
+      "data_records": 5
+    },
+    {
+      "source_id": "SOURCE_38",
+      "pr_number": 8,
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "path": "outputs/research/MS-01/thermal_followup/source_manifest.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/outputs/research/MS-01/thermal_followup/source_manifest.json",
+      "bytes": 5775,
+      "git_blob_sha": "83d2a8f83ac5ee62c211f40160a930e5d00d71c6",
+      "sha256": "242db0fc271db1f011ab96523f3e0bc397ed5da0a33097cb0e77ff4a63d22286",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "SOURCE_39",
+      "pr_number": 8,
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "path": "outputs/research/MS-01/thermal_followup/verification.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/outputs/research/MS-01/thermal_followup/verification.json",
+      "bytes": 918,
+      "git_blob_sha": "a0c88f6d6bc9ad0e2e6b3f04f9dfbecd8faf5088",
+      "sha256": "036478e3818a2f31d861f3698b9077b1446980856b2cb8e0fe4524e8575c4b2f",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "MARS_CSV",
+      "pr_number": null,
+      "commit_sha": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "path": "outputs/research/mars_reselection_20261114/final_candidates.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/3cc8488577535e2fa4d146021fde51f8ff6cc667/outputs/research/mars_reselection_20261114/final_candidates.csv",
+      "bytes": 5897,
+      "git_blob_sha": "2371ade1c27087efaa165acb98b7541266eaa606",
+      "sha256": "83a03d1f4273fa7c45c0d22b5c29a8b8cfc0544e481d5f2bbca2c85812534c4e",
+      "byte_exact_match": true,
+      "columns": [
+        "candidate_id",
+        "input_review_id",
+        "final_selection_status",
+        "review_role",
+        "lat",
+        "lon_east_minus180_180",
+        "lon_east_0_360",
+        "native_review_status",
+        "north_south_km",
+        "east_west_km",
+        "mola_relief_m",
+        "tes_mask_zero_cells",
+        "mola_elevation_m_native_cells",
+        "mola_elevation_m_valid_cells",
+        "mola_elevation_m_valid_fraction",
+        "mola_elevation_m_mean",
+        "mola_elevation_m_median",
+        "mola_elevation_m_min",
+        "mola_elevation_m_max",
+        "mola_elevation_m_std_population",
+        "mola_slope_deg_native_cells",
+        "mola_slope_deg_valid_cells",
+        "mola_slope_deg_valid_fraction",
+        "mola_slope_deg_mean",
+        "mola_slope_deg_median",
+        "mola_slope_deg_min",
+        "mola_slope_deg_max",
+        "mola_slope_deg_std_population",
+        "TES_TI_native_cells",
+        "TES_TI_valid_cells",
+        "TES_TI_valid_fraction",
+        "TES_TI_mean",
+        "TES_TI_median",
+        "TES_TI_min",
+        "TES_TI_max",
+        "TES_TI_std_population",
+        "SWIM_0_1m_native_cells",
+        "SWIM_0_1m_valid_cells",
+        "SWIM_0_1m_valid_fraction",
+        "SWIM_0_1m_mean",
+        "SWIM_0_1m_median",
+        "SWIM_0_1m_min",
+        "SWIM_0_1m_max",
+        "SWIM_0_1m_std_population",
+        "SWIM_0_1m_positive_cells",
+        "SWIM_0_1m_positive_fraction_of_valid",
+        "SWIM_1_5m_native_cells",
+        "SWIM_1_5m_valid_cells",
+        "SWIM_1_5m_valid_fraction",
+        "SWIM_1_5m_mean",
+        "SWIM_1_5m_median",
+        "SWIM_1_5m_min",
+        "SWIM_1_5m_max",
+        "SWIM_1_5m_std_population",
+        "SWIM_1_5m_positive_cells",
+        "SWIM_1_5m_positive_fraction_of_valid",
+        "stack_slope",
+        "stack_relief",
+        "stack_thermal_inertia",
+        "stack_ice_shallow",
+        "stack_ice_deep",
+        "stack_elevation_mean_m_areoid",
+        "dust_my34_mean_cdodtot",
+        "dust_my34_p95_cdodtot",
+        "dust_my34_max_cdodtot",
+        "dust_my34_peak_sol_of_year",
+        "dust_my34_peak_Ls_deg",
+        "dust_my34_valid_reconstructed_sols",
+        "dust_my34_expected_reconstructed_sols",
+        "dust_my34_native_cell_lat",
+        "dust_my34_native_cell_lon",
+        "dust_my34_reliability_mean",
+        "dust_my34_Ls0_90_mean",
+        "dust_my34_Ls90_180_mean",
+        "dust_my34_Ls180_270_mean",
+        "dust_my34_Ls270_360_mean",
+        "dust_my35_mean_cdodtot",
+        "dust_my35_p95_cdodtot",
+        "dust_my35_max_cdodtot",
+        "dust_my35_peak_sol_of_year",
+        "dust_my35_peak_Ls_deg",
+        "dust_my35_valid_reconstructed_sols",
+        "dust_my35_expected_reconstructed_sols",
+        "dust_my35_native_cell_lat",
+        "dust_my35_native_cell_lon",
+        "dust_my35_reliability_mean",
+        "dust_my35_Ls0_90_mean",
+        "dust_my35_Ls90_180_mean",
+        "dust_my35_Ls180_270_mean",
+        "dust_my35_Ls270_360_mean",
+        "MCS_valid_day_bins",
+        "MCS_valid_night_bins",
+        "MCS_paired_bins",
+        "MCS_expected_year_season_pairs",
+        "MCS_paired_contrast_median_K",
+        "MCS_native_lat",
+        "MCS_native_lon",
+        "MCS_populated_night_median_K",
+        "MCS_populated_day_median_K"
+      ],
+      "data_records": 3
+    },
+    {
+      "source_id": "MARS_SELECTION",
+      "pr_number": null,
+      "commit_sha": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "path": "outputs/research/mars_reselection_20261114/selected_targets.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/3cc8488577535e2fa4d146021fde51f8ff6cc667/outputs/research/mars_reselection_20261114/selected_targets.json",
+      "bytes": 3434,
+      "git_blob_sha": "a93c2ef45ef78922ec4ab88498ce92ef6aafabf5",
+      "sha256": "388ca89110b2a8fbb4fc6fa403994ab54cd193fd23eefd8aa5987a75e3255ba5",
+      "byte_exact_match": true
+    },
+    {
+      "source_id": "MARS_METADATA",
+      "pr_number": null,
+      "commit_sha": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "path": "outputs/research/mars_reselection_20261114/candidate_native_evidence.json",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/3cc8488577535e2fa4d146021fde51f8ff6cc667/outputs/research/mars_reselection_20261114/candidate_native_evidence.json",
+      "bytes": 38177,
+      "git_blob_sha": "faf4421c57da38852972efe36623c603c29eda4c",
+      "sha256": "3258b5c5bd7de7f15d96918bbce1c09afa6c5b7a329b8bc05cdb7c4fcd3f41c6",
+      "byte_exact_match": true
+    }
+  ]
+}

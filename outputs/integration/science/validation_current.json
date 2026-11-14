@@ -1,0 +1,109 @@
+{
+  "schema": "ZASA-INTEGRATION-RECONCILIATION-CHECKS-v1",
+  "main_source_sha": "08d2740a23694a54bcc11cabf7120114d2e120fc",
+  "date_Taipei": "2026-11-15",
+  "all_passed": true,
+  "check_count": 24,
+  "checks": [
+    {
+      "check": "source Git blob docs/research/MS-01/local_validation/research_notes.md",
+      "passed": true
+    },
+    {
+      "check": "source Git blob docs/research/MS-01/local_validation/constraints_followup_notes.md",
+      "passed": true
+    },
+    {
+      "check": "source Git blob docs/research/MS-02/local_validation/research_notes.md",
+      "passed": true
+    },
+    {
+      "check": "source Git blob outputs/research/MS-02/local_validation/claim_corrections.csv",
+      "passed": true
+    },
+    {
+      "check": "source Git blob docs/research/MS-03/local_validation/research_notes.md",
+      "passed": true
+    },
+    {
+      "check": "three unique fixed cases",
+      "passed": true
+    },
+    {
+      "check": "all research PRs actually merged",
+      "passed": true
+    },
+    {
+      "check": "handoff Excel now in main",
+      "passed": true
+    },
+    {
+      "check": "screened pool now in main",
+      "passed": true
+    },
+    {
+      "check": "no deployable application config in inspected main",
+      "passed": true
+    },
+    {
+      "check": "MS-01 ice unknown preserved",
+      "passed": true
+    },
+    {
+      "check": "MS-01 source path docs/research/MS-01/local_validation/research_notes.md",
+      "passed": true
+    },
+    {
+      "check": "MS-01 source path docs/research/MS-01/local_validation/constraints_followup_notes.md",
+      "passed": true
+    },
+    {
+      "check": "MS-02 ice unknown preserved",
+      "passed": true
+    },
+    {
+      "check": "MS-02 source path docs/research/MS-02/local_validation/research_notes.md",
+      "passed": true
+    },
+    {
+      "check": "MS-02 source path outputs/research/MS-02/local_validation/claim_corrections.csv",
+      "passed": true
+    },
+    {
+      "check": "MS-03 ice unknown preserved",
+      "passed": true
+    },
+    {
+      "check": "MS-03 source path docs/research/MS-03/local_validation/research_notes.md",
+      "passed": true
+    },
+    {
+      "check": "49 original claim IDs unique",
+      "passed": true
+    },
+    {
+      "check": "all16 MS02 corrections retained",
+      "passed": true
+    },
+    {
+      "check": "52 current audit rows and unique IDs",
+      "passed": true
+    },
+    {
+      "check": "3 comparison rows",
+      "passed": true
+    },
+    {
+      "check": "new ledger keeps AD1 downgrade",
+      "passed": true
+    },
+    {
+      "check": "deployment failure not relabeled",
+      "passed": true
+    }
+  ],
+  "current_claim_rows": 52,
+  "ms02_correction_rows": 16,
+  "comparison_rows": 3,
+  "scope": "Source Git-blob identity, path presence, fixed case/status transcription and current-document structure only. No original instrument-array reruns, no physics truth or deployment success validation."
+}

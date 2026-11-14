@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "main_baseline_sha": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+  "source_prs": {
+    "6": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+    "7": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+    "8": "b4b6929e890018668ef4faa9a74128a4ce5aa8df"
+  },
+  "counts": {
+    "comparison_rows": 3,
+    "scoped_candidates": 8,
+    "issue_records": 9,
+    "source_records": 42,
+    "source_bytes_rechecked": 42,
+    "CSV_metric_values_checked": 63,
+    "native_source_values_checked": 63,
+    "derived_source_values_checked": 15,
+    "output_hashes_checked": 0
+  },
+  "checks": [
+    "Coordinate ranges and0–360 representation",
+    "One row per Mars target and typed numeric transcription",
+    "Eight scoped IDs and latest downgrades",
+    "Unknown Mars morphology remains null",
+    "Source-version URLs, reference syntax and local links",
+    "Selected existing ratios,geometry,footprint/index numbers when source cache supplied",
+    "No source-branch or main mutation by this program"
+  ],
+  "limits": "Integration/transcription and provenance consistency only;not new observations,raw Mars reprocessing,instrument calibration,full prior-work audit,global novelty clearance or unique ice identification."
+}

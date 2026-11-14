@@ -1,0 +1,674 @@
+{
+  "schema": "ZASA-SCIENCE-CARDS-v1",
+  "main_baseline_sha": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+  "source_prs": [
+    {
+      "pr": 6,
+      "head": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+      "branch": "research/ms-02-earth-analogs",
+      "base": "handoff/verified-data-20261114",
+      "base_sha": "f7076c9fdc77e00244ed5d6863aad2bf78cfa28f",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/6",
+      "updated_at": "2026-11-14T17:17:19Z"
+    },
+    {
+      "pr": 7,
+      "head": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "branch": "research/ms-03-earth-analogs",
+      "base": "main",
+      "base_sha": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/7",
+      "updated_at": "2026-11-14T17:39:09Z"
+    },
+    {
+      "pr": 8,
+      "head": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "branch": "research/ms-01-earth-analogs",
+      "base": "main",
+      "base_sha": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/8",
+      "updated_at": "2026-11-14T17:24:08Z"
+    }
+  ],
+  "date_taipei": "2026-11-15",
+  "branch": "integration/research-synthesis",
+  "cards": [
+    {
+      "mars_id": "MS-01",
+      "center_latitude_n": 56.75,
+      "center_longitude_e": 72.75,
+      "bounds": {
+        "south": 56.5,
+        "north": 57.0,
+        "west": 72.5,
+        "east": 73.0
+      },
+      "coordinate_definition": "Mars planetocentric; east-positive0–360; nominal0.5degree sampling cell, not landing/drill footprint",
+      "metrics": {
+        "mola_slope_deg_mean": 0.28720680331472204,
+        "mola_relief_m": 76.0,
+        "TES_TI_mean": 325.1557373608713,
+        "SWIM_0_1m_mean": 0.6392249220197742,
+        "SWIM_1_5m_mean": 0.647481749755862,
+        "dust_my34_mean_cdodtot": 0.11926438338687068,
+        "dust_my35_mean_cdodtot": 0.10753491588259848,
+        "dust_my34_p95_cdodtot": 0.22245603501796724,
+        "dust_my35_p95_cdodtot": 0.18014705479145052,
+        "MCS_paired_contrast_median_K": 63.53643660583495,
+        "MCS_native_lat": 55.0,
+        "MCS_native_lon": 75.0,
+        "TES_TI_valid_cells": 73,
+        "TES_TI_native_cells": 100,
+        "tes_mask_zero_cells": 27,
+        "mola_slope_deg_valid_cells": 64,
+        "mola_slope_deg_native_cells": 64,
+        "SWIM_0_1m_valid_cells": 100,
+        "SWIM_1_5m_valid_cells": 100,
+        "MCS_paired_bins": 69,
+        "MCS_expected_year_season_pairs": 288
+      },
+      "metric_kind": "既有產品推估及團隊原生格摘要；本輪只核對固定來源並轉錄，未重算原始Mars產品",
+      "mars_refs": [
+        {
+          "source_id": "MARS_CSV",
+          "locator": "candidate_id=MS-01; native columns listed by metric key; stack_* not substituted"
+        },
+        {
+          "source_id": "MARS_METADATA",
+          "locator": "units_periods_and_support"
+        },
+        {
+          "source_id": "MARS_SELECTION",
+          "locator": "sites[id=MS-01].center/bounds/status"
+        }
+      ],
+      "question": "在本三點中較高的TES熱慣量與正SWIM一致性並存時，哪些熱響應仍可由材料／覆土解釋，哪些需要獨立冰界面證據？",
+      "research_value": "以已知界面剖面檢查熱傳模型與訊號多解，防止把產品共現誤作冰的因果證明。",
+      "validated_use": "University Valley已知冰膠結界面的多層響應、資料品質與模型可辨識性；Beacon提供可選的塊狀冰／物性文獻對照。",
+      "prior": "Marinova2022已研究同谷能量收支、振幅／相位與熱參數／冰深敏感度；Liu2018已有Beacon剖面與模型。",
+      "prior_refs": [
+        {
+          "source_id": "MS01_PRIOR",
+          "locator": "PW-U1;PW-B1"
+        },
+        {
+          "source_id": "MS01_DELTA",
+          "locator": "source_id=U1;B1"
+        }
+      ],
+      "contribution": "新增本次固定短窗四站描述性重算、同logger衰減及留一日敏感度、來源行欄交付、S/D座標與時間欄位問題，以及MS-01可支持／不可支持的判讀。",
+      "contribution_refs": [
+        {
+          "source_id": "MS01_THERMAL",
+          "locator": "§1–6"
+        },
+        {
+          "source_id": "MS01_AMPLITUDES",
+          "locator": "station=S8/M22/D36/W42_Campbell;role=ice"
+        },
+        {
+          "source_id": "MS01_INTERPRETATION",
+          "locator": "OBS-01–08"
+        }
+      ],
+      "limits": "沒有同材料同forcing無冰控制、獨立UV k/ρCp或MS-01冰真值；站間材料／日照／陰影／風與探針條件不受控；不反演MS-01冰深／含冰量。",
+      "disposition": "保留MS-01研究問題；E01保留限定熱傳用途；E02保留可選文獻補充、原序列待證；尚非完整環境配對。",
+      "candidates": [
+        {
+          "candidate_id": "MS-01-E01",
+          "name": "University Valley W/S/M/D",
+          "position": "W錨點−77.86215°,160.71010°E；S/D座標版本衝突",
+          "scope": "四個離散站及名義探針剖面，站間不補為連續測區",
+          "disposition": "保留，限定熱傳與可辨識性",
+          "verified_use": "已知8/22/36/42cm界面下的熱波響應及資料品質檢查",
+          "limit": "S/D定位未解；不同站不是控制冰深實驗；不能證明MS-01有冰",
+          "refs": [
+            {
+              "source_id": "MS01_THERMAL",
+              "locator": "§2,§3,§6"
+            },
+            {
+              "source_id": "MS01_STATIONS",
+              "locator": "S8/M22/D36/W42_Campbell"
+            }
+          ]
+        },
+        {
+          "candidate_id": "MS-01-E02",
+          "name": "central Beacon Valley",
+          "position": "約−77.8166667°,160.65000°E；文獻僅到角分",
+          "scope": "單一多邊形剖面與鄰孔；完整邊界／逐孔GPS未知",
+          "disposition": "保留可選文獻補充；原始序列待證",
+          "verified_use": "乾覆土下塊狀冰、土樣密度／比熱及界面模型假設的補充對照",
+          "limit": "本輪無新逐時序列比較，非UV結論不可替代的必要條件",
+          "refs": [
+            {
+              "source_id": "MS01_THERMAL",
+              "locator": "§6"
+            },
+            {
+              "source_id": "MS01_EVIDENCE",
+              "locator": "EV-021–029"
+            }
+          ]
+        }
+      ],
+      "thermal_followup": {
+        "period": "printed dates[2010-11-07T00:00,2010-11-18T00:00); no UTC/LTST correction",
+        "method": "intercept+centered trend+24h sine/cosine OLS; half-amplitude; no gapfill",
+        "sites": [
+          {
+            "station": "S8",
+            "n": 264,
+            "ice_to_upper_ratio": 0.45096952580077326
+          },
+          {
+            "station": "M22",
+            "n": 264,
+            "ice_to_upper_ratio": 0.08774147195568946
+          },
+          {
+            "station": "D36",
+            "n": 264,
+            "ice_to_upper_ratio": 0.020634607055127333
+          },
+          {
+            "station": "W42_Campbell",
+            "n": 528,
+            "ice_to_upper_ratio": 0.025261956933676763
+          }
+        ],
+        "comparison_limit": "M上層1cm，其餘近表面；日期名義相同不代表forcing相同或跨站時鐘已同步。"
+      }
+    },
+    {
+      "mars_id": "MS-02",
+      "center_latitude_n": 52.75,
+      "center_longitude_e": 168.25,
+      "bounds": {
+        "south": 52.5,
+        "north": 53.0,
+        "west": 168.0,
+        "east": 168.5
+      },
+      "coordinate_definition": "Mars planetocentric; east-positive0–360; nominal0.5degree sampling cell, not landing/drill footprint",
+      "metrics": {
+        "mola_slope_deg_mean": 0.3018454787700082,
+        "mola_relief_m": 117.0,
+        "TES_TI_mean": 217.26900902801015,
+        "SWIM_0_1m_mean": 0.6929869824270689,
+        "SWIM_1_5m_mean": 0.6224985573606443,
+        "dust_my34_mean_cdodtot": 0.12538406493417886,
+        "dust_my35_mean_cdodtot": 0.1100659862951402,
+        "dust_my34_p95_cdodtot": 0.2400146692991257,
+        "dust_my35_p95_cdodtot": 0.17312036752700807,
+        "MCS_paired_contrast_median_K": 66.83052292163086,
+        "MCS_native_lat": 55.0,
+        "MCS_native_lon": 170.0,
+        "TES_TI_valid_cells": 93,
+        "TES_TI_native_cells": 100,
+        "tes_mask_zero_cells": 7,
+        "mola_slope_deg_valid_cells": 64,
+        "mola_slope_deg_native_cells": 64,
+        "SWIM_0_1m_valid_cells": 100,
+        "SWIM_1_5m_valid_cells": 100,
+        "MCS_paired_bins": 75,
+        "MCS_expected_year_season_pairs": 288
+      },
+      "metric_kind": "既有產品推估及團隊原生格摘要；本輪只核對固定來源並轉錄，未重算原始Mars產品",
+      "mars_refs": [
+        {
+          "source_id": "MARS_CSV",
+          "locator": "candidate_id=MS-02; native columns listed by metric key; stack_* not substituted"
+        },
+        {
+          "source_id": "MARS_METADATA",
+          "locator": "units_periods_and_support"
+        },
+        {
+          "source_id": "MARS_SELECTION",
+          "locator": "sites[id=MS-02].center/bounds/status"
+        }
+      ],
+      "question": "在較低緯度、正冰一致性及區域沙塵背景下，如何避免把覆土、季節與不同測區的雷達／冰證據拼成同址探冰結論？",
+      "research_value": "將風成覆土、季節熱響應與冰線索分開，查明哪些地球證據具有同址、同年、相同深度的驗證鏈。",
+      "validated_use": "University Valley供已知界面熱響應參照；Adventdalen僅CS-1岩芯保留覆土累積與同生冰的子過程證據，整體雷達連結未成立。",
+      "prior": "Marinova2022已有UV能量／熱過程；Hauber2011已有Adventdalen與Mars形貌類比；Rasmussen2023已有CS-1沉積／冰史；Brighi的WISDOM用途已有先例，但本組主要讀摘要。",
+      "prior_refs": [
+        {
+          "source_id": "MS02_PRIOR",
+          "locator": "PW-02/PW-04/PW-05/PW-06/PW-18–20"
+        },
+        {
+          "source_id": "MS02_REPORT",
+          "locator": "§7,§8B"
+        }
+      ],
+      "contribution": "新增岩芯／鑽孔／雷達的證據足跡查核、CS-1與ADE距離、引用層級與數字適用期修正；撤回跨場址拼接及由CDOD換覆土沉積率的主張。",
+      "contribution_refs": [
+        {
+          "source_id": "MS02_REPORT",
+          "locator": "§8B"
+        },
+        {
+          "source_id": "MS02_CLAIMS",
+          "locator": "C1–C9"
+        },
+        {
+          "source_id": "MS02_FOOTPRINT",
+          "locator": "FP-01/FP-03及雷達列"
+        }
+      ],
+      "limits": "雷達測線位置與多邊形溝槽的獨立冰真值未得；摘要模型介電常數未證實為實測；MS-02材料、覆土、冰深與正式地質單元未知。",
+      "disposition": "保留MS-02研究問題及E01過程參照；E03降為一般方法參照；E02/E04待補證據；沒有同址雷達探冰驗證。",
+      "candidates": [
+        {
+          "candidate_id": "MS-02-E01",
+          "name": "University Valley",
+          "position": "谷錨點約−77.8667°,160.7500°E，不是W探針精孔",
+          "scope": "谷底站群與原文熱剖面；未取得測區polygon",
+          "disposition": "保留，限定熱響應參照",
+          "verified_use": "覆土、季節邊界與已知冰膠結界面的耦合",
+          "limit": "同名谷資料不等於MS-02真值或沉積史；年摘要不能直接比MCS",
+          "refs": [
+            {
+              "source_id": "MS02_CANDIDATES",
+              "locator": "candidate_id=MS-02-E01"
+            },
+            {
+              "source_id": "MS02_REPORT",
+              "locator": "§8B「與University Valley各自解決的問題」"
+            }
+          ]
+        },
+        {
+          "candidate_id": "MS-02-E02",
+          "name": "middle Beacon Valley",
+          "position": "本組未萃取可核對座標",
+          "scope": "本組摘要級來源，尚未建立與MS-01中央谷剖面的一對一對照",
+          "disposition": "待補證據",
+          "verified_use": "只保留埋冰過程的候選線索",
+          "limit": "足跡對應未完成前，不能套用MS-01所讀剖面升級本候選",
+          "refs": [
+            {
+              "source_id": "MS02_CANDIDATES",
+              "locator": "candidate_id=MS-02-E02"
+            }
+          ]
+        },
+        {
+          "candidate_id": "MS-02-E03",
+          "name": "Adventdalen",
+          "position": "CS-1:78.201°N,15.840°E；ADE:78.1722°N,16.0613°E；雷達未知",
+          "scope": "不同岩芯／鑽孔／雷達範圍；不是單一共址測區",
+          "disposition": "降為一般方法參照；CS-1子過程仍可引用",
+          "verified_use": "僅CS-1支援風成覆土累積與同生冰的地球過程；雷達只作方法參考",
+          "limit": "CS-1與ADE約5.97km；無證據把三組結果組成同址雷達偵冰",
+          "refs": [
+            {
+              "source_id": "MS02_REPORT",
+              "locator": "§8B"
+            },
+            {
+              "source_id": "MS02_CLAIMS",
+              "locator": "C7/C9"
+            },
+            {
+              "source_id": "MS02_FOOTPRINT",
+              "locator": "各足跡列"
+            }
+          ]
+        },
+        {
+          "candidate_id": "MS-02-E04",
+          "name": "Haughton River Valley",
+          "position": "約75.37°N,−89.53°E（西經89.53°）河谷錨點",
+          "scope": "九個局部LiDAR格／河谷測區，不是撞擊中心",
+          "disposition": "待補證據",
+          "verified_use": "可供圖案地形／融化深度與測區代表性的方法比較",
+          "limit": "缺本站含冰量與地溫序列；不能把其他北極場址GPR移入",
+          "refs": [
+            {
+              "source_id": "MS02_CANDIDATES",
+              "locator": "candidate_id=MS-02-E04"
+            },
+            {
+              "source_id": "MS02_PRIOR",
+              "locator": "PW-07/PW-14/PW-15"
+            }
+          ]
+        }
+      ],
+      "footprint_result": {
+        "CS1_ADE_distance_km": 5.9694541980050495,
+        "kind": "MS-02既有球面距離計算，本輪轉錄",
+        "interpretation": "距離已知；雷達位置未知，不能當共址控制。"
+      }
+    },
+    {
+      "mars_id": "MS-03",
+      "center_latitude_n": 57.75,
+      "center_longitude_e": 242.25,
+      "bounds": {
+        "south": 57.5,
+        "north": 58.0,
+        "west": 242.0,
+        "east": 242.5
+      },
+      "coordinate_definition": "Mars planetocentric; east-positive0–360; nominal0.5degree sampling cell, not landing/drill footprint",
+      "metrics": {
+        "mola_slope_deg_mean": 0.16275322089887925,
+        "mola_relief_m": 76.0,
+        "TES_TI_mean": 152.80772587767,
+        "SWIM_0_1m_mean": 0.9109040236045108,
+        "SWIM_1_5m_mean": 0.5099723017827722,
+        "dust_my34_mean_cdodtot": 0.09821451820087897,
+        "dust_my35_mean_cdodtot": 0.08866037474875582,
+        "dust_my34_p95_cdodtot": 0.17336168885231018,
+        "dust_my35_p95_cdodtot": 0.1409617453813553,
+        "MCS_paired_contrast_median_K": 67.05473789904781,
+        "MCS_native_lat": 60.0,
+        "MCS_native_lon": -120.0,
+        "TES_TI_valid_cells": 79,
+        "TES_TI_native_cells": 100,
+        "tes_mask_zero_cells": 21,
+        "mola_slope_deg_valid_cells": 64,
+        "mola_slope_deg_native_cells": 64,
+        "SWIM_0_1m_valid_cells": 100,
+        "SWIM_1_5m_valid_cells": 100,
+        "MCS_paired_bins": 60,
+        "MCS_expected_year_season_pairs": 288
+      },
+      "metric_kind": "既有產品推估及團隊原生格摘要；本輪只核對固定來源並轉錄，未重算原始Mars產品",
+      "mars_refs": [
+        {
+          "source_id": "MARS_CSV",
+          "locator": "candidate_id=MS-03; native columns listed by metric key; stack_* not substituted"
+        },
+        {
+          "source_id": "MARS_METADATA",
+          "locator": "units_periods_and_support"
+        },
+        {
+          "source_id": "MARS_SELECTION",
+          "locator": "sites[id=MS-03].center/bounds/status"
+        }
+      ],
+      "question": "低TES熱慣量與較強近表層SWIM一致性並存時，現有影像能否辨識足以比較的多邊形邊界？哪些材料／界面解釋仍需保留？",
+      "research_value": "先檢查取樣尺度與可觀測性是否允許形貌類比，避免從目錄零命中或模糊影像推成形貌不存在／有冰。",
+      "validated_use": "UV僅已知方法／歷史資料參照；AD1支援既有向量幾何與解析度適用性示例，退出目前具體MS-03配對。",
+      "prior": "Marinova2022已有UV熱傳用途；Ulrich2011已用AD1與Mars作定量地貌類比，185個向量及刊載統計屬既有資料。",
+      "prior_refs": [
+        {
+          "source_id": "MS03_PRIOR",
+          "locator": "MS03-PW01/MS03-PW04/MS03-PW08"
+        },
+        {
+          "source_id": "MS03_REPORT",
+          "locator": "形貌補充：原刊Tables2–4核對與降級"
+        }
+      ],
+      "contribution": "新增固定MS-03範圍的影像覆蓋／品質／尺度適用性查核、AD1既有向量重算與刊載數字重現、索引異常與149標籤診斷、UV作者匯出QA與分檔時標限制。",
+      "contribution_refs": [
+        {
+          "source_id": "MS03_REPORT",
+          "locator": "2026-11-15最新補充及形貌／時標交接"
+        },
+        {
+          "source_id": "MS03_OBSERVABILITY",
+          "locator": "各metric列"
+        },
+        {
+          "source_id": "MS03_INDEX",
+          "locator": "decision"
+        },
+        {
+          "source_id": "MS03_DUPLICATES",
+          "locator": "149標籤診斷"
+        }
+      ],
+      "limits": "MS-03格內多邊形、成因與地下冰仍未知；無可用Mars多邊形樣本作分布比較；索引執行版／SQL與重複根因未知；不同地球logger同步仍未核實。",
+      "disposition": "保留MS-03研究問題；E01只作已知方法參照；E02降級且退出具體配對；形貌unknown，不作不存在或成功類比結論。",
+      "candidates": [
+        {
+          "candidate_id": "MS-03-E01",
+          "name": "University Valley W",
+          "position": "W錨點−77.86215°,160.71010°E",
+          "scope": "W歷史剖面；作者處理後長版Campbell/HOBO分開使用",
+          "disposition": "保留為已知方法／歷史資料參照",
+          "verified_use": "來源QA、分檔時間欄位限制與已知界面資料需求",
+          "limit": "作者處理匯出已得；未處理logger／原校準碼／時鐘紀錄仍缺；禁止跨儀器配時或冰反演",
+          "refs": [
+            {
+              "source_id": "MS03_REPORT",
+              "locator": "2026-11-15時標交接及2010描述"
+            },
+            {
+              "source_id": "MS03_UV_QA",
+              "locator": "records"
+            },
+            {
+              "source_id": "MS03_CLOCK",
+              "locator": "regime_offsets_hours;correction_applied"
+            }
+          ]
+        },
+        {
+          "candidate_id": "MS-03-E02",
+          "name": "Adventdalen AD1 / Act-IWS",
+          "position": "事件起點78.184°N,15.913°E；metadata78.184–78.188°N,15.913–15.933°E",
+          "scope": "185個已發表向量；事件範圍不是感測器位置或連續冰真值",
+          "disposition": "降為一般方法參照，退出具體MS-03配對",
+          "verified_use": "既有幾何重現與影像取樣尺度檢查",
+          "limit": "未獲可可靠追描的格內Mars邊界，形貌與地下冰保持未知",
+          "refs": [
+            {
+              "source_id": "MS03_CANDIDATES",
+              "locator": "candidate_id=MS-03-E02"
+            },
+            {
+              "source_id": "MS03_GEOMETRY",
+              "locator": "n;metrics.equivalent_circle_diameter_m.median"
+            },
+            {
+              "source_id": "MS03_OBSERVABILITY",
+              "locator": "Equivalent-circle diameter;Available sampling"
+            }
+          ]
+        }
+      ],
+      "observability": {
+        "polygons": 185,
+        "median_equivalent_diameter_m": 18.48478542881041,
+        "CTX_example_m_per_pixel": 6.09,
+        "median_diameter_pixels": 3.035268543318623,
+        "kind": "MS-03既有向量重算與取樣示例，本輪轉錄並核算比值；非檢出閾值或Mars量測",
+        "Mars_polygon_count": null
+      },
+      "index_diagnostic": {
+        "physical_rows": 205451,
+        "unique_products": 205302,
+        "duplicate_products": 149,
+        "negative_longitude_flags": 615,
+        "latitude_eligible_rows": 305,
+        "current_labels_read": 149,
+        "pairs_floor_ceil_compatible": 78,
+        "pairs_not_both_compatible": 71,
+        "pairs_over_one_second": 29,
+        "scope": "固定索引及列明標籤；不是全部已發布／未發布觀測保證；根因未知"
+      }
+    }
+  ],
+  "issues": [
+    {
+      "id": "I01",
+      "classification": "歷史狀態與新版補充不一致",
+      "topic": "MS-01候選主表仍稱S/M/D待下載",
+      "sources": [
+        {
+          "source_id": "MS01_CANDIDATES",
+          "locator": "E01.available_data/next_step"
+        },
+        {
+          "source_id": "MS01_THERMAL",
+          "locator": "§1–3"
+        }
+      ],
+      "decision": "共同結論採已核hash及264有效列的新補充；原候選表保留歷史，不回寫他人成果。",
+      "unresolved": "來源表是否另行整理由統籌決定；不影響固定短窗結果。"
+    },
+    {
+      "id": "I02",
+      "classification": "同一報告用途敘述寬於最新處置",
+      "topic": "MS-02前段及候選用途仍提覆土＋雷達，與§8B降級不同",
+      "sources": [
+        {
+          "source_id": "MS02_REPORT",
+          "locator": "§5/§6對照§8B"
+        },
+        {
+          "source_id": "MS02_CANDIDATES",
+          "locator": "E01.disposition_reason;E03.testable_physical_processes"
+        },
+        {
+          "source_id": "MS02_CLAIMS",
+          "locator": "C7/C9"
+        }
+      ],
+      "decision": "採§8B限定；不引用H1/H2編號錯位或同址雷達已成立的措辭。",
+      "unresolved": "原稿措辭修訂歸原作者／統籌；本輪不補雷達真值。"
+    },
+    {
+      "id": "I03",
+      "classification": "歷史enum與取得狀態不同",
+      "topic": "MS-03 E01字串仍帶pending_raw_series，但data_status說處理後匯出已取得",
+      "sources": [
+        {
+          "source_id": "MS03_CANDIDATES",
+          "locator": "E01.disposition/data_status"
+        },
+        {
+          "source_id": "MS03_REPORT",
+          "locator": "2026-11-15時序取得與時標交接"
+        }
+      ],
+      "decision": "明寫作者處理匯出已得，未處理logger／原碼與時鐘記錄未得；不籠統寫原時序全未取。",
+      "unresolved": "enum是否更新由統籌決定；不能把已得匯出當未處理真值。"
+    },
+    {
+      "id": "I04",
+      "classification": "同名候選、不同用途與閱讀範圍",
+      "topic": "Beacon在MS-01保留補充、MS-02待證；UV／Adventdalen也不是同名即可同孔",
+      "sources": [
+        {
+          "source_id": "MS01_THERMAL",
+          "locator": "§6"
+        },
+        {
+          "source_id": "MS02_CANDIDATES",
+          "locator": "E01–E04"
+        },
+        {
+          "source_id": "MS03_CANDIDATES",
+          "locator": "E01/E02"
+        }
+      ],
+      "decision": "保留完整候選ID及各自處置；不按谷名合併、套座標或自動升級。",
+      "unresolved": "跨來源精確範圍對應未完成，留待統籌判定是否可共用。"
+    },
+    {
+      "id": "I05",
+      "classification": "匯出檔／時期不同，來源關係未知",
+      "topic": "W短版與長版時間欄位差不同",
+      "sources": [
+        {
+          "source_id": "MS01_THERMAL",
+          "locator": "§2時標；short09_10"
+        },
+        {
+          "source_id": "MS03_CLOCK",
+          "locator": "long09_13 offsets−1/−5h;2012boundary"
+        },
+        {
+          "source_id": "MS03_CLOCK_SEARCH",
+          "locator": "root_cause=unknown"
+        }
+      ],
+      "decision": "按檔／期間保留限制；不平均、不校時、不跨logger join，也不因2012長檔問題否定2010短窗全部數字。",
+      "unresolved": "真正對時與生成鏈未知，需原碼與logger紀錄；本輪不追查。"
+    },
+    {
+      "id": "I06",
+      "classification": "未經本輪核定的定義與數值",
+      "topic": "MS-02 EV-018約2560h同時水活度與溫度雙閾值",
+      "sources": [
+        {
+          "source_id": "MS02_EVIDENCE",
+          "locator": "EV-018;p161 Fig6"
+        },
+        {
+          "source_id": "MS02_REPORT",
+          "locator": "§8 E01"
+        }
+      ],
+      "decision": "列待核定，不納入共同關鍵結論；另外兩組未交付同定義雙閾值核算，不能由其他溫度統計補證。",
+      "unresolved": "需核對原文圖說、量的定義、年／深度與實測／模型別；本輪未重查原文。"
+    },
+    {
+      "id": "I07",
+      "classification": "定義差異，非已證實數字錯誤",
+      "topic": "原生格摘要與stack摘要不可混欄比較",
+      "sources": [
+        {
+          "source_id": "MARS_CSV",
+          "locator": "native SWIM/TES/MOLA columns vs stack_*"
+        },
+        {
+          "source_id": "MS02_VERIFICATION",
+          "locator": "checks;expected_scale_differences_not_errors"
+        }
+      ],
+      "decision": "三點總表統一原生格欄；保留stack是另一定義，不以同名近值相互替代。",
+      "unresolved": "不重做原始網格；共同數字的來源一致性不等於獨立真值。"
+    },
+    {
+      "id": "I08",
+      "classification": "測站座標版本衝突仍未解",
+      "topic": "UV的2009部署與2022論文把S/D具名座標對調；MS-02另用谷錨點",
+      "sources": [
+        {
+          "source_id": "MS01_STATIONS",
+          "locator": "S8/D36 paper vs deployment2009"
+        },
+        {
+          "source_id": "MS02_CANDIDATES",
+          "locator": "E01 coordinate/boundary_basis"
+        }
+      ],
+      "decision": "S/D按匯出與serial辨識；谷錨點與W孔位分開；不做未核對的坡向／陰影歸因。",
+      "unresolved": "哪版位置正確未知，本輪不代原作者修正。"
+    },
+    {
+      "id": "I09",
+      "classification": "舊警示已釐清，根因仍未知",
+      "topic": "MS-03舊615筆位置未知與新版緯度排除不同",
+      "sources": [
+        {
+          "source_id": "MS03_INDEX",
+          "locator": "legacy_flagged_rows;flagged_latitude_intersections;all_raw_rows_roi_bbox_intersections;decision"
+        },
+        {
+          "source_id": "MS03_REPORT",
+          "locator": "最新生成元件追查；正式交接"
+        },
+        {
+          "source_id": "MS03_DUPLICATES",
+          "locator": "149/78/71/29及causal_interpretation"
+        }
+      ],
+      "decision": "採新版：615筆有有效緯度且可排除本格；149額外列數量已對應，生成根因仍未知。",
+      "unresolved": "不能延伸成完整觀測無覆蓋、已修正官方表、已知SQL根因或形貌不存在。"
+    }
+  ],
+  "global_scope": "Only synthesis of completed research; no new site, source research, raw physical model, Earth-Mars subtraction or similarity weights."
+}

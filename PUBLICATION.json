@@ -1,0 +1,31 @@
+{
+  "status": "VERIFIED_PUBLISHED",
+  "verified_at_taipei": "2026-11-14T23:01:49.819281+08:00",
+  "repository": "zhuang768/NASA-Space-Apps-Challenge-2026-Taipei",
+  "branch": "main",
+  "verified_release_commit": "3408648ef9f16b3b21600574d1017136f4b30a21",
+  "verified_release_tree": "bda4a68a4a4bc268e03e4d38986d46f18a798a5d",
+  "pre_cleanup_main_commit": "e84da75d905ad43f260e74307752946862200dae",
+  "archive_branch": "archive/pre-msr-cleanup-20261114",
+  "archive_commit": "a9b5948d2ea29dbc7d9550d9fb9236beb266902a",
+  "selected_targets": [
+    "MS-01",
+    "MS-02",
+    "MS-03"
+  ],
+  "remote_release_files_checked": 53,
+  "remote_original_archive_files_checked": 24,
+  "immutable_files_checked_locally": 51,
+  "all_release_file_blob_hashes_match": true,
+  "all_original_archive_file_blob_hashes_match": true,
+  "report_and_candidate_links_present": true,
+  "cleanup_scope": "Current main tree replaced; old rankings, Earth workflows, website/deployment files and large downloads remain in archive/history rather than the active tree",
+  "clean_code_numerical_validation": "PASS; primary native evidence reproduced, global rebuild differences disclosed",
+  "global_novelty_established": false,
+  "landing_or_base_or_extraction_validated": false,
+  "force_push": false,
+  "original_local_uncommitted_work_preserved": true,
+  "local_original_worktree_synced": false,
+  "repository_visibility": "private, unchanged",
+  "receipt_note": "This receipt is committed after verification. The release commit above is the immutable verification anchor; this metadata-only commit does not change scientific outputs."
+}

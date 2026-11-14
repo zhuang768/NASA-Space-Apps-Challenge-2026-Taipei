@@ -1,0 +1,10 @@
+{
+  "starting_sha": "ddd04cfcb5ea810d73304b1cf6ae064c1f77a1c5",
+  "latest_main_preservation_base_sha": "521740108050ba16e406f8becb67a786179ff8bd",
+  "source_read": [
+    "bd1500_audit/README.md",
+    "production_history/README.md",
+    "t1811_run_artifacts/README.md"
+  ],
+  "integration": "Concurrent main evidence retained, own diagnostic overlap labelled as cross-check, not a new independent scientific contribution"
+}

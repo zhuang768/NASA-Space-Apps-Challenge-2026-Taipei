@@ -1,0 +1,10 @@
+﻿item_id,item,status,evidence_or_attempt,needed_to_resolve
+PH-A01,exact1.03.94 source/executable/build hash,unknown,actual label identifies version only; exact GitHub code query0 hits in this search,version-pinned source or executable plus dependency/build manifest
+PH-A02,T1811 runtime configuration/options,unknown,PDS labels/listings inspected; no configuration file identified,caller flags; channel selection; masks; ADR references; optimization options
+PH-A03,reflectance pre/post optimization arrays,unknown,final AL is available; not a controlled pre/post pair,same strip/pixels/channels before and after stage6; valid masks
+PH-A04,summary pre/post optimization arrays,unknown,second stage documented; intermediates not obtained,same BD1500_2 pixels before and after stage8; source assignments
+PH-A05,per-strip/per-parameter optimization coefficients,unknown,"method described, local weights/gains/offsets not obtained","coefficients, anchors, overlap graph, weights, fit diagnostics"
+PH-A06,execution/build logs and run database,unknown,author material describes framework; no actual run archive obtained,"run identifier, code revision, parameters, tasks and checksums"
+PH-A07,documented second summary optimization,confirmed_documented,2022 and2024 section8 text hashes identical,does not identify actual residual magnitude for T1811
+PH-A08,quantitative explanation of MS03 residual,unknown,"existing differences retained; documentation narrows mechanism, not numerical attribution",replay actual stages against actual intermediates; no fitted correction
+PH-A09,MS03 ice presence/depth/content,unknown,processing-history evidence is not independent local ice truth,validated spectral detection and independent subsurface observations

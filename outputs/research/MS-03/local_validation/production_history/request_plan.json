@@ -1,0 +1,122 @@
+[
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/document/crism_dpsis.htm",
+    "file": "sources/official_dpsis.htm",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/aareadme.txt",
+    "file": "sources/volume_aareadme.txt",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrral_60n243_0327_4.xml",
+    "file": "sources/T1811_AL_PDS4.xml",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrsu_60n243_0327_4.xml",
+    "file": "sources/T1811_SU_PDS4.xml",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://www.hou.usra.edu/meetings/lpsc2022/pdf/2361.pdf",
+    "file": "sources/author_lpsc2022_2361.pdf",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fpds-geosciences.wustl.edu%2Fmro%2Fmro-m-crism-5-rdr-multispectral-v1%2Fmrocr_3201%2Fdocument%2Fcrism_dpsis.htm&from=2022&to=2023&output=json&filter=statuscode%3A200&collapse=timestamp%3A4",
+    "file": "sources/wayback_dpsis_2022_2023.json",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://crism.jhuapl.edu/",
+    "file": "sources/author_crism_home.html",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://web.archive.org/web/20220930185840id_/https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/document/crism_dpsis.htm",
+    "file": "sources/historical_dpsis_20220930.htm",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3001/mrdr/mc03/",
+    "file": "sources/listing_mrocr_3001_mc03.html",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3001/aareadme.txt",
+    "file": "sources/readme_mrocr_3001.txt",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3101/mrdr/mc03/",
+    "file": "sources/listing_mrocr_3101_mc03.html",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3101/aareadme.txt",
+    "file": "sources/readme_mrocr_3101.txt",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/",
+    "file": "sources/listing_mrocr_3201_mc03.html",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/aareadme.txt",
+    "file": "sources/readme_mrocr_3201.txt",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/",
+    "file": "sources/listing_volume.html",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/catalog/",
+    "file": "sources/listing_catalog.html",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/document/",
+    "file": "sources/listing_document.html",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/catalog/mrdr_ds.cat",
+    "file": "sources/mrdr_ds.cat",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://api.github.com/search/repositories?q=org%3AJHUAPL+crism&per_page=100",
+    "file": "sources/github_author_repositories.json",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://api.github.com/search/repositories?q=crism_mapping_execute_flow&per_page=100",
+    "file": "sources/github_flow_repositories.json",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://michael-s-phillips.github.io/cv/",
+    "file": "sources/author_phillips_cv.html",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://api.github.com/search/repositories?q=user%3AMichael-S-Phillips+crism&per_page=100",
+    "file": "sources/github_author_phillips_repositories.json",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://api.github.com/repos/JHUAPL/JCAT/releases?per_page=100",
+    "file": "sources/github_JCAT_releases.json",
+    "max_bytes": 4500000
+  },
+  {
+    "url": "https://api.github.com/search/code?q=crism_mapping_execute_flow&per_page=100",
+    "file": "sources/github_exact_flow_code_search.json",
+    "max_bytes": 4500000
+  }
+]

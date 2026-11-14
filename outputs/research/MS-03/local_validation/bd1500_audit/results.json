@@ -1,0 +1,131 @@
+{
+  "starting_main_sha": "fbfa780cf587a0787739200898e80b4d27fea8d1",
+  "units": "dimensionless summary-index differences; map-centre counts are not independent observations",
+  "input_provenance": "official_resources/manifest.json and original MRDR URL/member locators in version_comparison.csv",
+  "cat_port_not_original_runtime": true,
+  "production_1_03_94_source_obtained": false,
+  "original_scientific_data_modified": false,
+  "ice_status": "unknown",
+  "cause_of_production_residual": "unknown",
+  "all_map_cells": 13284,
+  "strict_source_cells": 13169,
+  "reference_port_minus_existing_calculation": {
+    "n": 13169,
+    "median": 0.0,
+    "max_abs": 0.0,
+    "p05": 0.0,
+    "p95": 0.0
+  },
+  "float32_minus_float64": {
+    "n": 13169,
+    "median": -2.178162039623288e-09,
+    "max_abs": 1.3499623718882248e-07,
+    "p05": -6.33421521456512e-08,
+    "p95": 5.937054852189752e-08
+  },
+  "cat64_minus_official_all": {
+    "n": 13284,
+    "median": 0.000716466891466816,
+    "max_abs": 0.019347334519968284,
+    "p05": -0.003319146653475885,
+    "p95": 0.00833858428787722
+  },
+  "cat64_minus_official_strict": {
+    "n": 13169,
+    "median": 0.0007114219669197563,
+    "max_abs": 0.019347334519968284,
+    "p05": -0.0033188935069573323,
+    "p95": 0.008343958426089119
+  },
+  "ICER_identity_minus_official": {
+    "n": 13169,
+    "median": 0.00011367135974449383,
+    "max_abs": 0.0018218913848282448,
+    "p05": -0.0005229591341681994,
+    "p95": 0.0006277711357525637
+  },
+  "ICER_float32_perturbation": {
+    "n": 13169,
+    "median": -9.290290758912079e-10,
+    "max_abs": 1.7230439319781965e-07,
+    "p05": -9.386525392507394e-08,
+    "p95": 9.243631287070276e-08
+  },
+  "header_label_band_order_identical": true,
+  "band_count": 60,
+  "BD1500_band_index_0based": 24,
+  "point_checks": [
+    {
+      "original_product": "T1811_MRRSU_60N243_0327_4",
+      "original_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrsu_60n243_0327_4.img",
+      "map_row_0based": 1471,
+      "map_col_0based": 327,
+      "original_byte_offset": 177768848,
+      "source_band": 24,
+      "file": "sources/point_su_r1471_c327.bin",
+      "compare_range_file": "../official_resources/sources/t1811_mrrsu_60n243_0327_4_band24_rows.bin",
+      "matches_retained_bytes": true
+    },
+    {
+      "original_product": "T1811_MRRAL_60N243_0327_4",
+      "original_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrral_60n243_0327_4.img",
+      "map_row_0based": 1471,
+      "map_col_0based": 327,
+      "original_byte_offset": 242024384,
+      "source_band": 33,
+      "file": "sources/point_al_r1471_c327.bin",
+      "compare_range_file": "../official_resources/sources/t1811_mrral_60n243_0327_4_band33_rows.bin",
+      "matches_retained_bytes": true
+    },
+    {
+      "original_product": "T1811_MRRSU_60N243_0327_4",
+      "original_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrsu_60n243_0327_4.img",
+      "map_row_0based": 1552,
+      "map_col_0based": 367,
+      "original_byte_offset": 178122492,
+      "source_band": 24,
+      "file": "sources/point_su_r1552_c367.bin",
+      "compare_range_file": "../official_resources/sources/t1811_mrrsu_60n243_0327_4_band24_rows.bin",
+      "matches_retained_bytes": true
+    },
+    {
+      "original_product": "T1811_MRRAL_60N243_0327_4",
+      "original_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrral_60n243_0327_4.img",
+      "map_row_0based": 1552,
+      "map_col_0based": 367,
+      "original_byte_offset": 242378028,
+      "source_band": 33,
+      "file": "sources/point_al_r1552_c367.bin",
+      "compare_range_file": "../official_resources/sources/t1811_mrral_60n243_0327_4_band33_rows.bin",
+      "matches_retained_bytes": true
+    },
+    {
+      "original_product": "T1811_MRRSU_60N243_0327_4",
+      "original_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrsu_60n243_0327_4.img",
+      "map_row_0based": 1634,
+      "map_col_0based": 407,
+      "original_byte_offset": 178480500,
+      "source_band": 24,
+      "file": "sources/point_su_r1634_c407.bin",
+      "compare_range_file": "../official_resources/sources/t1811_mrrsu_60n243_0327_4_band24_rows.bin",
+      "matches_retained_bytes": true
+    },
+    {
+      "original_product": "T1811_MRRAL_60N243_0327_4",
+      "original_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrral_60n243_0327_4.img",
+      "map_row_0based": 1634,
+      "map_col_0based": 407,
+      "original_byte_offset": 242736036,
+      "source_band": 33,
+      "file": "sources/point_al_r1634_c407.bin",
+      "compare_range_file": "../official_resources/sources/t1811_mrral_60n243_0327_4_band33_rows.bin",
+      "matches_retained_bytes": true
+    }
+  ],
+  "limits": [
+    "CAT7.4 disclosed formula is not evidence of the exact MRDR1.03.94 caller/build/options.",
+    "ICER identity discrepancy is algebraically established; its processing cause is not.",
+    "Spatial/source grouping is confounded; no fitted gain/offset correction.",
+    "No change to prior numerical products or ice classification; no independent ice truth."
+  ]
+}

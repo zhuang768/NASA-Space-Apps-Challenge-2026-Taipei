@@ -1,0 +1,291 @@
+{
+  "starting_main_sha": "826780f0b270eebe9b6f2f64b8ba1ac5ddcc8177",
+  "synchronized_main_sha": "2b3984047b8983a1db8b9f15a585d88651d74a5b",
+  "branch": "codex/ms03-production-history",
+  "date_taipei": "2026-11-15",
+  "subject": "MRDR1.03.94 author/public history and normalization artifacts",
+  "status": "second summary optimization documented before product; numerical attribution unknown",
+  "scientific_values_changed": false,
+  "production_runtime_executed": false,
+  "visual_review": "F-PH01 opened; overflow corrected; final figure opened again",
+  "tests": {
+    "full": 62,
+    "retained_only": 52
+  },
+  "source_records": [
+    "retrievals.json",
+    "request_plan.json",
+    "source_audit.csv",
+    "history_sections.json",
+    "product_metadata.json",
+    "search_log.csv"
+  ],
+  "local_only": [
+    {
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/document/crism_dpsis.htm",
+      "file": "sources/official_dpsis.htm",
+      "utc": "2026-11-14T20:05:48.747143+00:00",
+      "request_headers": {},
+      "http_status": 200,
+      "final_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/document/crism_dpsis.htm",
+      "content_range": null,
+      "content_type": "text/html",
+      "status": "acquired",
+      "bytes": 3234023,
+      "sha256": "75bc4b07f1849b997bc268916d4a5c78c184955f5ac2bbd6acb4b9a2ee041d95"
+    },
+    {
+      "url": "https://web.archive.org/web/20220930185840id_/https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/document/crism_dpsis.htm",
+      "file": "sources/historical_dpsis_20220930.htm",
+      "utc": "2026-11-14T20:08:38.207474+00:00",
+      "request_headers": {},
+      "http_status": 200,
+      "final_url": "https://web.archive.org/web/20220930185840id_/https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/document/crism_dpsis.htm",
+      "content_range": null,
+      "content_type": "text/html",
+      "status": "acquired",
+      "bytes": 3031914,
+      "sha256": "963456ea207e3cd92274dee372382e0f3fd553c6a0b443565279eb7e02fbdd36"
+    },
+    {
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/",
+      "file": "sources/listing_mrocr_3201_mc03.html",
+      "utc": "2026-11-14T20:08:45.354571+00:00",
+      "request_headers": {},
+      "http_status": 200,
+      "final_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/",
+      "content_range": null,
+      "content_type": "text/html; charset=UTF-8",
+      "status": "acquired",
+      "bytes": 177349,
+      "sha256": "007ce3ac28b9b1430c834d3f64b04df635fe26531de2556999b01e4f55e23667"
+    },
+    {
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/",
+      "file": "sources/listing_volume.html",
+      "utc": "2026-11-14T20:09:49.544682+00:00",
+      "request_headers": {},
+      "http_status": 200,
+      "final_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/",
+      "content_range": null,
+      "content_type": "text/html; charset=UTF-8",
+      "status": "acquired",
+      "bytes": 1581,
+      "sha256": "2ac549b80a8feb6ebe599c0b478c8d9c68ee1cd9826e87a5342b52cf60929a4d"
+    },
+    {
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/catalog/",
+      "file": "sources/listing_catalog.html",
+      "utc": "2026-11-14T20:09:50.367528+00:00",
+      "request_headers": {},
+      "http_status": 200,
+      "final_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/catalog/",
+      "content_range": null,
+      "content_type": "text/html; charset=UTF-8",
+      "status": "acquired",
+      "bytes": 2593,
+      "sha256": "6025b1b6e0ce9f463b6705117949b140af2989ba44045e2ae8870250ec992b78"
+    },
+    {
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/document/",
+      "file": "sources/listing_document.html",
+      "utc": "2026-11-14T20:09:51.192093+00:00",
+      "request_headers": {},
+      "http_status": 200,
+      "final_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/document/",
+      "content_range": null,
+      "content_type": "text/html; charset=UTF-8",
+      "status": "acquired",
+      "bytes": 2659,
+      "sha256": "aa69fe54b2fc43234811b34735a331cd9e92cbd61ca1439a6d3ea74f0d386415"
+    },
+    {
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/catalog/mrdr_ds.cat",
+      "file": "sources/mrdr_ds.cat",
+      "utc": "2026-11-14T20:09:52.041035+00:00",
+      "request_headers": {},
+      "http_status": 200,
+      "final_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/catalog/mrdr_ds.cat",
+      "content_range": null,
+      "content_type": "text/plain",
+      "status": "acquired",
+      "bytes": 51052,
+      "sha256": "126e20cb75c7743ebf5b8c08f20f79cf6e129067244490689e739eaac6e36b71"
+    },
+    {
+      "url": "https://michael-s-phillips.github.io/cv/",
+      "file": "sources/author_phillips_cv.html",
+      "utc": "2026-11-14T20:09:54.036946+00:00",
+      "request_headers": {},
+      "http_status": 200,
+      "final_url": "https://michael-s-phillips.github.io/cv/",
+      "content_range": null,
+      "content_type": "text/html; charset=utf-8",
+      "status": "acquired",
+      "bytes": 46046,
+      "sha256": "95e03cd6171545d60e75031eaff68c24338f942bdc2bd6ba3695b090cdea94ed"
+    }
+  ],
+  "files": [
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/.gitignore",
+      "bytes": 76,
+      "sha256": "dd9f80d440ea78b825a15ba599a1c7e6c24bad52c26525709b76c6585a35336f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/F-PH01_documented_processing.png",
+      "bytes": 179670,
+      "sha256": "3be1e05c0ab347bf9df992c438606ba232a67191306330e23a09556585eaf0f5"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/README.md",
+      "bytes": 4988,
+      "sha256": "33c1de7c7067c4ed079e3bda477bc44e06e2084e3a645342112d4cbd7857ec64"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/acquire.py",
+      "bytes": 2671,
+      "sha256": "2dd60f9ca8aaec3b1cedef23a0f7c54fddd401c9a09a8d33a9182595df8fc0d3"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/availability.csv",
+      "bytes": 1755,
+      "sha256": "b495d0ac2eadad934160d2777127f4819b691b35d3afdeb12e7c87ebb6642f73"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/build_records.py",
+      "bytes": 8213,
+      "sha256": "7cef53caa4683403db7446c703122709a3ebc1eba6e936fc706a54b84e3b39d9"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/history_sections.json",
+      "bytes": 1487,
+      "sha256": "db37797098d7146945092c0ab7fb91bbfd05cdfd33c80c09262255ef3cdb90ff"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/inspect_history.py",
+      "bytes": 4836,
+      "sha256": "ac877b07f7268a105bef77f9ad8fc9e15e478df71b35b048415c2b29df7b191d"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/plot_workflow.py",
+      "bytes": 2160,
+      "sha256": "709f96c30c354b61eb682a91a0fea0dfe75b76fbfb0cf30c6f3562131ee002c4"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/preserved_inputs.json",
+      "bytes": 4898,
+      "sha256": "12afc12d6dd144fa0936dd35538f90a3796870aef89325e99ae6ff75ccae65cc"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/processing_stages.csv",
+      "bytes": 994,
+      "sha256": "24d92139e99fab3af3aa1687673884c729b113c97e3d982854b4d410663acced"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/product_metadata.json",
+      "bytes": 1495,
+      "sha256": "09f4a4780668fa79d3968ab273cf37f192a6c0f5e3eac1ca33e50bc54bcfe7fa"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/request_plan.json",
+      "bytes": 4626,
+      "sha256": "712bfafaaa278c112d0cad9912ecabb261fca50c3ed5e7b53dd49ac30237da0f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/results.json",
+      "bytes": 947,
+      "sha256": "728edafee658573cd819e219deeae5018daf1a93c341fc20a58027213098e2b1"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/retrievals.json",
+      "bytes": 12300,
+      "sha256": "36f0cf08e43cb20a881c9738aa837ef1c1d2316cbfffa1cd3e35a81a8b0b4367"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/search_log.csv",
+      "bytes": 9833,
+      "sha256": "b26bf8915b183e581eee431618309081f5343cddeb829532fe7da63b20338182"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/source_audit.csv",
+      "bytes": 2341,
+      "sha256": "b82557ba273f28b982269d3193042d7902ede45838b3c95af3898bfe05528b49"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/T1811_AL_PDS4.xml",
+      "bytes": 11770,
+      "sha256": "73b6ad77d19a1db64a94eb81fc09a438842ca7100d8750f5736b9000124fca94"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/T1811_SU_PDS4.xml",
+      "bytes": 64464,
+      "sha256": "ae52789304a930fd3ccb16bfc20b12c2d00ad40e75cacdf4ff703e411d1d4bf2"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/github_JCAT_releases.json",
+      "bytes": 3600,
+      "sha256": "6c8adf717189c60071533aa78d968f35aff41dbf44ec58d69c3f8e2fef1f3577"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/github_author_phillips_repositories.json",
+      "bytes": 18049,
+      "sha256": "dc5183c3935a745e5f5ae579673989b769f1c767102c53feb8eb7f0826eb07ce"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/github_author_repositories.json",
+      "bytes": 55,
+      "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/github_exact_flow_code_search.json",
+      "bytes": 55,
+      "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/github_flow_repositories.json",
+      "bytes": 55,
+      "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/readme_mrocr_3201.txt",
+      "bytes": 8553,
+      "sha256": "382114abfa220049e52d465f7d894bb3e960c39afe6ca21005c8e11c8d1bafca"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/volume_aareadme.txt",
+      "bytes": 8553,
+      "sha256": "382114abfa220049e52d465f7d894bb3e960c39afe6ca21005c8e11c8d1bafca"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/wayback_dpsis_2022_2023.json",
+      "bytes": 375,
+      "sha256": "6e5409d9d12ae87db267f340cfaae20c0bc7f87380077fa55dcfcef3a2d68439"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/update_manifests.py",
+      "bytes": 2482,
+      "sha256": "9eae98832a49356f029717084a961c48a86b0e2ea6f9249249c1ad85fb8877dd"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/validate.py",
+      "bytes": 3970,
+      "sha256": "e5801d2015d030811d52c0346885b29c4962f34863eee09609ea793a95df6e31"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/validation.json",
+      "bytes": 4085,
+      "sha256": "2612ae4c3a99be759799fb048b2f1c48b20488742542d45b4b7a771cc6ee3932"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/validation_retained_only.json",
+      "bytes": 3959,
+      "sha256": "79446e2435be8363f28ea72511b6b463cfe412053ac5cd59490b5a8e479be39f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/version_history.csv",
+      "bytes": 747,
+      "sha256": "7879079a5ab7e6677f785b265f18c40cccd8e9ad12fd58457829acf25b0e221f"
+    }
+  ]
+}

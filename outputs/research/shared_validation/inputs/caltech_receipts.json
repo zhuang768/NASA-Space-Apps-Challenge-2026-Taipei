@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Lat.ascii",
+    "url": "https://data.caltech.edu/api/records/ym7fc-x0r93/files/Lat.ascii/content",
+    "at": "2026-11-14T19:55:24.649Z",
+    "status": 200,
+    "bytes": 2660,
+    "content_type": "application/octet-stream",
+    "md5": "9b70d4b2f0297594ce7e02494cf8564b",
+    "expected": "md5:9b70d4b2f0297594ce7e02494cf8564b",
+    "sha256": "e85e1881c73691ae5dd58f7e1e5dbb805e900776c72a8b82b6efed14b545f0e3"
+  },
+  {
+    "name": "Lon.ascii",
+    "url": "https://data.caltech.edu/api/records/ym7fc-x0r93/files/Lon.ascii/content",
+    "at": "2026-11-14T19:55:24.650Z",
+    "status": 200,
+    "bytes": 4820,
+    "content_type": "application/octet-stream",
+    "md5": "c60b8ff5f8b0bc603c92967862ad7431",
+    "expected": "md5:c60b8ff5f8b0bc603c92967862ad7431",
+    "sha256": "d0ad069f1f456b3291cc57f7116e75696ffdcaff69b40c38189e9807c23de86a"
+  },
+  {
+    "name": "Notes.txt",
+    "url": "https://data.caltech.edu/api/records/ym7fc-x0r93/files/Notes.txt/content",
+    "at": "2026-11-14T19:55:24.650Z",
+    "status": 200,
+    "bytes": 1926,
+    "content_type": "text/plain",
+    "md5": "931c03a665d02755470be11becf7841b",
+    "expected": "md5:931c03a665d02755470be11becf7841b",
+    "sha256": "472a30fe9ce97f8e476eeceb5d42ac5e4ddb9cd55fb33f48a2741302cf3c75ca"
+  },
+  {
+    "name": "TI_SI.ascii",
+    "url": "https://data.caltech.edu/api/records/ym7fc-x0r93/files/TI_SI.ascii/content",
+    "at": "2026-11-14T19:55:24.651Z",
+    "status": 200,
+    "bytes": 2484261,
+    "content_type": "application/octet-stream",
+    "md5": "267810eb52f6c053dd2adefe4dc2010a",
+    "expected": "md5:267810eb52f6c053dd2adefe4dc2010a",
+    "sha256": "20e842167fcb4daa811cc83ba69a666d47a73338274d8a65f85e69b5b7e4d2fb"
+  },
+  {
+    "name": "d_m.ascii",
+    "url": "https://data.caltech.edu/api/records/ym7fc-x0r93/files/d_m.ascii/content",
+    "at": "2026-11-14T19:55:24.651Z",
+    "status": 200,
+    "bytes": 2434482,
+    "content_type": "application/octet-stream",
+    "md5": "080dd616a822fa74f20f4c923a1d79f1",
+    "expected": "md5:080dd616a822fa74f20f4c923a1d79f1",
+    "sha256": "1101d38a45c88f7531fcfa0e7af163d94e8fb337d53e0b7f766f81762ae5b1ff"
+  }
+]

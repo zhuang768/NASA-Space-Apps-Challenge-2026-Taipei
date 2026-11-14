@@ -1,0 +1,40 @@
+Widespread Shallow Water Ice on Mars at High and Mid Latitudes
+
+Geophysical Research Letters
+
+Sylvain Piqueux				Jet Propulsion Laboratory, California Institute of Technology, Pasadena, California
+Jennifer Buz				Department of Physics and Astronomy, Northern Arizona University, Flagstaff, Arizona
+Christopher S. Edwards		Department of Physics and Astronomy, Northern Arizona University, Flagstaff, Arizona
+Joshua L. Bandfield			Space Science Institute, Boulder, Colorado
+Armin Kleinböhl				Jet Propulsion Laboratory, California Institute of Technology, Pasadena, California
+David M. Kass				Jet Propulsion Laboratory, California Institute of Technology, Pasadena, California
+Paul O. Hayne				Department of Astrophysical & Planetary Sciences and Laboratory for Atmospheric & Space Physics, University of Colorado, Boulder, Colorado
+and the MCS and THEMIS teams
+
+Jet Propulsion Laboratory, California Institute of Technology
+
+Copyright 2019. All rights reserved.
+
+Jet Propulsion Laboratory
+M/S 183-301
+4800 Oak Grove Drive
+Pasadena, CA 91109
+USA
+
+sylvain.piqueux@jpl.caltech.edu
+Phone: 818-393-9595
+Fax: 818-354-2494
+
+
+The auxiliary information associated with "Widespread Shallow Water Ice on Mars at High and Mid Latitudes" 
+by Piqueux et al. consists of a set of 2 maps (d_m.ascii and TI_SI.ascii) and 2 coordinate files (Lon.ascii and Lat.ascii).
+- d_m.ascii (720 x 360): Depth to the top of the water ice table, in meter
+- TI_SI.ascii (720 x 360): Upper (dry) regolith thermal inertia, in J m^2 K-1 s^-1/2
+These maps are projected on a simple cylindrical canevas; the coordinates can be using these two files:
+- Lon.ascii (720 x 1)
+- Lat.ascii (1 x 360)
+
+Resolution is 2ppd. Empty bin are assigned -32768.
+
+These files were created from work performed at the Jet Propulsion Laboratory, California Institute of Technology, under a contract with NASA.
+Government Support Acknowledged.

@@ -20,6 +20,11 @@
   "actual_http_attempts": 52,
   "files": [
     {
+      "path": "outputs/research/MS-03/local_validation/gap_completion/.gitattributes",
+      "bytes": 29,
+      "sha256": "34c2bbbc6ce8c6ad0fd0f9a51e1b88c67940e7650c6292e959a3edec6c5b0921"
+    },
+    {
       "path": "outputs/research/MS-03/local_validation/gap_completion/.gitignore",
       "bytes": 109,
       "sha256": "796a96decc2ebe38784faffe08762fc011d7cb1b03a6364e4ce9bbb5dc12bf38"
@@ -31,8 +36,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/F-GAP02_spectral_implementation_QA.png",
-      "bytes": 257047,
-      "sha256": "84897b0aa850a8fa11d684d8d5b16f219372aed0099d29f2a35a16ccbf4f8e53"
+      "bytes": 256905,
+      "sha256": "608da91419a520a14c07d8f9438ee4c8b4d52709440da793844ef603b732417e"
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/F-GAP03_same_track_radar_clutter.png",
@@ -61,8 +66,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/README.md",
-      "bytes": 8416,
-      "sha256": "ed9ebafbfb763fcbbbddee865f7561221eecbab1605f207c32735a861576f370"
+      "bytes": 9257,
+      "sha256": "cf6ff8bd57586160ece80469f437a7fb08707056b78171bf9da6eb28d2db6fef"
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/acquire.py",
@@ -76,8 +81,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/analyze_catalogue.py",
-      "bytes": 3008,
-      "sha256": "507e627063f874dc03379f509433b2062b40d1ef21c101d6714f5dbe8d91cf34"
+      "bytes": 3028,
+      "sha256": "0dd464892b34327e3c450bd7a625b0eb3409a4fd64de36108c63a8fecef7c608"
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/analyze_moc.py",
@@ -86,8 +91,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/analyze_radar.py",
-      "bytes": 3866,
-      "sha256": "91e4bd00b9c7c4813ad272f1f5583867e817ddd4e47324f3c2083d74494e4b43"
+      "bytes": 3886,
+      "sha256": "fae8ea5457f93c259da962fe5ac8afa3cb0ee7ceaf11e4c6438724a064bd08b8"
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/analyze_spectra.py",
@@ -106,8 +111,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/daubar2022_membership.csv",
-      "bytes": 113258,
-      "sha256": "7ae854eba4843f0a1302832f5c7db1618dbbe26d2e35ab9b749cad52acfebff0"
+      "bytes": 112054,
+      "sha256": "e0267044a489d9de2a33990682ec5428a923b2fdd4259aa96263a726c1e02564"
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/daubar2022_summary.json",
@@ -121,13 +126,18 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/finalize_delivery.py",
-      "bytes": 25958,
-      "sha256": "3889eb265c4e7eb1f10cf35b7e0c59c5b4d08f05905fc1a667d655d7b9aa002d"
+      "bytes": 27117,
+      "sha256": "dd0f28de3ac67d8c9108c0bc07c092409000e695f6911854b07183a077232372"
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/gap_status.csv",
       "bytes": 2750,
       "sha256": "a22a9d294c23fde1b889cb5f59541833225b54f4fc94cc3ceff1d0a7e04436e0"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/gap_completion/integration_state.json",
+      "bytes": 423,
+      "sha256": "a608805076061f4bcd0307b6afaed5fa0d41d97f683f0620be97fdd6c2e7e46d"
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/local_prior_work.csv",
@@ -136,8 +146,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/make_figures.py",
-      "bytes": 6471,
-      "sha256": "f7c7d3a5c942cd0b1124eae2554f59362d2fb3526026fbef9f3d2b5306ea3017"
+      "bytes": 6484,
+      "sha256": "c6fd2f2598ad0140ddf1435adcaaee8834adb8d7fe98256251f54da9402eb365"
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/mars_ice_evidence.csv",
@@ -151,8 +161,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/morphology_comparability.csv",
-      "bytes": 930,
-      "sha256": "269d3fb85af2e3266e7dc9ce9e006a95c40ca41156b074402498091b5add0b37"
+      "bytes": 926,
+      "sha256": "fde7aa2a6c062cab22f128c47ba6c7e8124f57acf497e269f2875fab4c356d8e"
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/parameter_formula_diagnostics.csv",
@@ -176,8 +186,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/radar_roi_columns.csv",
-      "bytes": 8765,
-      "sha256": "31f7a0353d4d5a25ea2ca68fb4c5ec9dfb3ccf446de4ce0c0d41d09606175122"
+      "bytes": 8699,
+      "sha256": "0b872c0748d5693c2668b2f09a95a32cbb858d7e7424fd5d969b6a2e2142b68d"
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/radar_summary.json",
@@ -276,8 +286,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/source_read_log.csv",
-      "bytes": 5999,
-      "sha256": "aec4c4361c34fa4247769a330f8f1f1a2e2a04b8f471e02b10f8954db76f5cfe"
+      "bytes": 6588,
+      "sha256": "09d660fc6d7c1ee1ba047d4d1183e4af1920554783db09a8828e9e2e937de749"
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/sources/DSMAP.CAT",
@@ -421,8 +431,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/validate_gap.py",
-      "bytes": 9866,
-      "sha256": "f588b21bb96838cd604c0335be23e30ebb08838242dda03a6feb5d5689c16913"
+      "bytes": 11361,
+      "sha256": "f309f0d641ae2dcc318e79c3165f9bd2f27e022a7a65c5c70b25e2ad71e0f4d8"
     },
     {
       "path": "outputs/research/MS-03/local_validation/gap_completion/visual_review.json",

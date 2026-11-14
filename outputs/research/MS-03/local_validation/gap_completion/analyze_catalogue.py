@@ -27,7 +27,7 @@ for rn,d in rows[1:]:
     inside=57.5<=lat<=58 and 242<=lon<=242.5
     data.append(dict(source_excel_row=rn,HiRISE_observation_id=d.get('A',''),latitude_deg_planetocentric=lat,longitude_deg_east=lon,ice_exposing_flag_original=d.get('H',''),reference_original=d.get('T',''),inside_fixed_roi=str(inside).lower(),scope='catalogued impact point; not image footprint'))
 with (O/'daubar2022_membership.csv').open('w',encoding='utf-8-sig',newline='') as f:
-    w=csv.DictWriter(f,fieldnames=data[0]);w.writeheader();w.writerows(data)
+    w=csv.DictWriter(f,fieldnames=data[0],lineterminator="\n");w.writeheader();w.writerows(data)
 hits=[x for x in data if x['inside_fixed_roi']=='true']
 flags={x:sum(r['ice_exposing_flag_original']==x for r in data) for x in sorted(set(r['ice_exposing_flag_original'] for r in data))}
 q=dict(source_doi='10.5281/zenodo.6604912',paper_doi='10.1029/2021JE007145',source_sha256=hashlib.sha256(raw).hexdigest(),license='CC-BY-4.0 per author record metadata',original_headers=header,original_header_issue='B has Latitude (deg E, centric), C has Longitude (deg N): parenthetical cardinal-unit labels conflict with variable names. Coordinates read by variable name and independently checked against official HiRISE product PSP_007561_1290; original labels preserved.',rows=len(data),point_hits=len(hits),hits=hits,original_ice_flag_counts=flags,interpretation='No catalogued point in this bounded source is not no ice, no crater, no study, or no overlapping image.',selection_limit='Paper sections2–2.1: dated new impacts with before/after constraints and crater-resolving HiRISE confirmation; not equivalent to Dundas2021 TableS4 selection.',Dundas_TableS4_replacement=False,ice_presence='unknown',ice_depth_m=None,ice_fraction=None)

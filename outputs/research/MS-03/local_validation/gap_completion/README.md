@@ -6,6 +6,10 @@
 - Fixed cell: 57.50–58.00°N, 242.00–242.50°E, planetocentric/east-positive. No new site or moved boundary.
 - Scope: source data, calculation diagnostics, figures, structured judgments and bullet handoff notes. No formal report, abstract, conclusion prose or slides.
 
+- Concurrent main integrated at `521740108050ba16e406f8becb67a786179ff8bd`: existing `bd1500_audit/`, `production_history/` and `t1811_run_artifacts/` records are retained. Overlapping CAT diagnostics here are a cross-check, not an additional independent scientific result. Their documented extra summary optimization explains why delivered AL/SU need not preserve a simple formula relationship; exact T1811 run attribution remains unknown.
+- Our precision perturbation uses a specified narrow expression variant; its ~1.26e-7 maximum and the earlier audit's broader ~1.35e-7 result are not identical test definitions. Neither is a bound on every producer operation.
+- Original archival source bytes, including whitespace/line endings, are preserved; local attributes disable text normalization/style whitespace checks only for `sources/`.
+
 ## Read first
 
 |Evidence|Actual addition|Limit|

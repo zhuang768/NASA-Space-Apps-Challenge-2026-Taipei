@@ -1,11 +1,12 @@
 """Portable offline checks. Ignored source downloads are optional, not prerequisites."""
 from pathlib import Path
-import csv,json,hashlib,subprocess,re,runpy,io,contextlib
+import csv,json,hashlib,subprocess,re,runpy,io,contextlib,sys
 import numpy as np
 from PIL import Image
 from shapely import wkt
 from shapely.geometry import Point,box
 O=Path(__file__).resolve().parent;L=O.parent;ROOT=O.parents[4];BASE='ddd04cfcb5ea810d73304b1cf6ae064c1f77a1c5';checks=[]
+PBASE=json.loads((O/'integration_state.json').read_text())['latest_main_preservation_base_sha'] if (O/'integration_state.json').exists() else BASE
 def ck(name,ok):assert ok,name;checks.append(name)
 def readcsv(p):
  with p.open(encoding='utf-8-sig',newline='') as f:r=csv.DictReader(f);data=list(r)
@@ -65,14 +66,16 @@ ck('model not independent and no power subtraction/depth estimate',r['simulation
 tracks=readcsv(O/'radar_track_membership.csv');ck('four exact mapped tracks, two unresolved crosswalk cases',sum(bool(x['US_crosswalk_basename']) for x in tracks)==4 and sum(x['strict_GEOM_centre_hits']=='' for x in tracks)==2)
 ck('catalogue-intersecting but outside-centre track not treated as in-cell',next(x for x in tracks if '0796502' in x['italian_product_id'])['strict_GEOM_centre_hits']=='0')
 # No scientific data belonging to other roles or prior stages is rewritten.
-base_files=subprocess.check_output(['git','ls-tree','-r','--name-only',BASE,'--','outputs/research/MS-03/local_validation/crism/','outputs/research/MS-03/local_validation/official_resources/','outputs/research/MS-03/local_validation/original_tables_followup/'],cwd=ROOT,text=True).splitlines()
-for name in base_files:assert (ROOT/name).read_bytes()==subprocess.check_output(['git','show',BASE+':'+name],cwd=ROOT),name
+base_files=subprocess.check_output(['git','ls-tree','-r','--name-only',PBASE,'--','outputs/research/MS-03/local_validation/crism/','outputs/research/MS-03/local_validation/official_resources/','outputs/research/MS-03/local_validation/original_tables_followup/','outputs/research/MS-03/local_validation/bd1500_audit/','outputs/research/MS-03/local_validation/production_history/','outputs/research/MS-03/local_validation/t1811_run_artifacts/'],cwd=ROOT,text=True).splitlines()
+for name in base_files:assert (ROOT/name).read_bytes()==subprocess.check_output(['git','show',PBASE+':'+name],cwd=ROOT),name
 ck('all '+str(len(base_files))+' existing scientific/supplement files byte-preserved',len(base_files)>100)
 for n in ['observation_inventory.csv','local_prior_work.csv','mars_ice_evidence.csv','analog_validation.csv']:
- ck('original '+n+' unchanged',(L/n).read_bytes()==subprocess.check_output(['git','show',BASE+':outputs/research/MS-03/local_validation/'+n],cwd=ROOT))
+ ck('original '+n+' unchanged',(L/n).read_bytes()==subprocess.check_output(['git','show',PBASE+':outputs/research/MS-03/local_validation/'+n],cwd=ROOT))
 log=readcsv(L/'search_log.csv');ck('all search IDs remain unique',len(log)==len({r['log_id'] for r in log}))
 old=subprocess.check_output(['git','show',BASE+':outputs/research/MS-03/local_validation/search_log.csv'],cwd=ROOT);ck('starting main search log retained as exact byte prefix',(L/'search_log.csv').read_bytes().startswith(old))
+latestlog=subprocess.check_output(['git','show',PBASE+':outputs/research/MS-03/local_validation/search_log.csv'],cwd=ROOT);ck('integrated main search-log bytes retained as exact prefix',(L/'search_log.csv').read_bytes().startswith(latestlog))
 notes=ROOT/'docs/research/MS-03/local_validation/research_notes.md'
+prior_notes=subprocess.check_output(['git','show',PBASE+':docs/research/MS-03/local_validation/research_notes.md'],cwd=ROOT,text=True);ck('concurrent main research-note body retained verbatim',prior_notes.split('\n',1)[1].strip() in notes.read_text())
 for target in re.findall(r'\]\(([^)]+)\)',notes.read_text()):
  if not target.startswith(('http:','https:','#')):assert (notes.parent/target.split('#')[0]).exists(),target
 ck('all research-note links resolve',True)
@@ -87,5 +90,17 @@ try:
 finally:
  for p,b in snap.items():p.write_bytes(b)
 ck('both earlier-stage validators actually pass; prior outputs preserved',len(legacy)==2)
-result=dict(status='passed',date_taipei='2026-11-15',starting_sha=BASE,checks=checks,source_payloads_verified_when_present=verified,ignored_optional_payloads_absent=optional_absent,legacy_validation_stdout=legacy,branch_name_required=False,network_required=False,not_validated=['ice presence/depth/fraction','complete-cell morphology or closed boundaries','spectral cloud/frost classification and detection limits','origin of radar patterns','complete novelty clearance','UV cross-logger timing'])
+concurrent=[]
+saved_argv=list(sys.argv)
+try:
+ for folder in ['bd1500_audit','production_history','t1811_run_artifacts']:
+  p=L/folder/'validation_retained_only.json';saved=p.read_bytes();stream=io.StringIO()
+  try:
+   sys.argv=[str(L/folder/'validate.py'),'--retained-only']
+   with contextlib.redirect_stdout(stream):runpy.run_path(str(L/folder/'validate.py'),run_name='__main__')
+   concurrent.append(stream.getvalue().strip())
+  finally:p.write_bytes(saved)
+finally:sys.argv=saved_argv
+ck('three concurrent upstream retained validators pass; their stored outputs preserved',len(concurrent)==3)
+result=dict(status='passed',date_taipei='2026-11-15',starting_sha=BASE,preservation_base_sha=PBASE,checks=checks,source_payloads_verified_when_present=verified,ignored_optional_payloads_absent=optional_absent,legacy_validation_stdout=legacy,concurrent_validation_stdout=concurrent,branch_name_required=False,network_required=False,not_validated=['ice presence/depth/fraction','complete-cell morphology or closed boundaries','spectral cloud/frost classification and detection limits','origin of radar patterns','complete novelty clearance','UV cross-logger timing'])
 (O/'validation.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print('Passed',len(checks),'retained-evidence checks; previous validators:',legacy)

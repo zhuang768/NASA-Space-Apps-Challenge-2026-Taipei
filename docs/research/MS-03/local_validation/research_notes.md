@@ -5,6 +5,7 @@
 - 起始 main：`ddd04cfcb5ea810d73304b1cf6ae064c1f77a1c5`；隔離分支 `codex/ms03-gap-completion-20261115`；保留其他人的工作與以下歷史查核。
 - [本輪資料與重現方式](../../../../outputs/research/MS-03/local_validation/gap_completion/README.md)；[逐項缺口／交接表](../../../../outputs/research/MS-03/local_validation/gap_completion/gap_status.csv)；[原始來源實讀範圍](../../../../outputs/research/MS-03/local_validation/gap_completion/source_read_log.csv)。
 - 本輪為資料、方法、表格、圖與條列筆記；不代寫正式報告、摘要、結論或簡報。
+- 整合時發現 main 已新增同類 CAT／歷史流程／run-artifact 查核；實讀其交接並完整保留。光譜診斷列為互核，不當新增獨立研究；[既有歷史流程查核](../../../../outputs/research/MS-03/local_validation/production_history/README.md)、[既有執行缺件查核](../../../../outputs/research/MS-03/local_validation/t1811_run_artifacts/README.md)。
 
 |項目|本輪確實取得／完成|仍不可推論|
 |---|---|---|
@@ -34,6 +35,70 @@
 - 本輪實際新增的是固定格的原始影像／雷達取得與檢查、可重跑目錄查詢和參數診斷；沒有新增獨立冰真值，未完成歷史完整的新穎性排除。
 - 下方各輪紀錄保留；「尚無同軌雜波／只有目錄」等舊取得狀態，僅適用其當時材料，由本節與新表補充；未將舊unknown改成不存在。
 
+## 2026-11-15：T1811 執行設定、係數與配對中間資料補查
+
+- 起始main：`fee734610c6bacc57880eaaba1a1301f09fdd4d6`；只更新local_validation，保留以下歷史紀錄。
+- [來源與實讀範圍](../../../../outputs/research/MS-03/local_validation/t1811_run_artifacts/source_audit.csv)、[逐項判定](../../../../outputs/research/MS-03/local_validation/t1811_run_artifacts/artifact_status.csv)、[精確重現所需檔案](../../../../outputs/research/MS-03/local_validation/t1811_run_artifacts/replay_inputs_needed.csv)、[索引核對](../../../../outputs/research/MS-03/local_validation/t1811_run_artifacts/inventory_audit.json)。
+
+|本輪新增核對|結果|限制／處置|
+|---|---|---|
+|官方PDS4 bundle及資料集合清單|解析7056筆；T1811恰有AL／SU／DE／WV四個logical products，與15個實體檔名相符|受查項目未識別出run設定、optimizer係數或stage中間資料；不代表全球不存在|
+|標籤及索引是否藏有設定？|四份XML來源／檔名交叉核對；沿用原始index抽出4筆×792bytes及57欄定義，保存原始record位置與SHA|產品軟體版本、儀器欄位、storage byte offset、地圖offset及波長表都不等於optimizer係數；未讀到實際run options|
+|作者全文是否交付係數／前後資料？|Caltech原始PDF取得，34頁，MD5與典藏一致；完整讀取pp24-26、32，pp24-26已渲染看圖；典藏只有一個PDF，PDF無內嵌附件|新取得全文，不再只依摘錄；所讀方法／資料可用性未提供T1811數值係數或run檔；NTRS記錄亦無下載附件|
+|前後圖能否拿來驗證？|Fig23位於Jezero，17.0至19.5°N、76至79°E；RGB為716／599／534nm，前後均自動stretch|格外可見光展示，不是MS-03 BD1500_2配對；不能讀圖反推本地正規化量|
+|GPU下一步能否重現？|Fig21列出design matrix、weighting/data vectors及model parameters等實際應索取的類型；這些T1811 run檔仍未取得|五個格內來源strip不等於完整最佳化相依網路；需真實overlap／proximity／anchor資料與兩stage輸出，不能從最終SU擬合硬補|
+
+- 類別限制：一般儀器CDR、ADR大氣／光度lookup corrections及跨條帶optimizer參數分開。SIS §2.3.4.11記載的2023年ADR典藏計畫不能當成目前所有係數均無公開的證明。
+- 數值處置：沒有新增stage replay或修正值；既有公式重算、官方SU與殘差統計均維持。精確差異原因、冰存在／深度／含量仍unknown；AD1降級與形貌unknown不變。
+- 給主要對話：可說「已核對具體集合、標籤、索引及作者原文，尚未取得可重現T1811的run artifacts」；不能說「係數已還原」「差異已解釋」「官網確定沒有中間資料」。
+- 給GPU：收到versioned執行設定、兩stage的同來源前後陣列、實際係數／權重、anchors、遮罩及GLT／template後才啟用重現；不以原始TRR3與最終AL差值代替單一正規化stage。
+- 本輪沒有新增場址、冰偵測或新的物理資料處理。原始論文只作本地來源，未改圖或重新發布其PDF；來源、MD5、SHA與實讀頁碼保存在專用資料包。
+
+## 2026-11-15：1.03.94 歷史流程與中間資料查核
+
+- 起始 main：`826780f0b270eebe9b6f2f64b8ba1ac5ddcc8177`；提交前同步 `2b3984047b8983a1db8b9f15a585d88651d74a5b`，保留其他人的更新。
+- [來源與實讀範圍](../../../../outputs/research/MS-03/local_validation/production_history/source_audit.csv)、[缺件與取得狀態](../../../../outputs/research/MS-03/local_validation/production_history/availability.csv)、[歷史版本比較](../../../../outputs/research/MS-03/local_validation/production_history/version_history.csv)、[文件流程圖](../../../../outputs/research/MS-03/local_validation/production_history/F-PH01_documented_processing.png)、[方法與 GPU 交接](../../../../outputs/research/MS-03/local_validation/production_history/README.md)。
+
+|問題|本輪證據|可以判定／仍未知|
+|---|---|---|
+|第二次最佳化是否只是事後推測？|取得2022-09-30歷史存檔：SIS1.3.7.6，文件日期2022-06-22，Appendix P3 §8；該節與目前1.3.7.7的正規化文字SHA256完全相同|已確認是產品製作前就有記載的流程，不再僅列為可能的文件脈絡；不等於取得實際執行紀錄|
+|能否涵蓋BD1500_2？|§8涵蓋surface summary products；Table3-12的BD1500_2為第21項，在其指定範圍內|表格項次21不是T1811輸出band零起算24；不能互換當index|
+|差異為什麼可能出現？|P3 §6、§7、§8依序為反射率最佳化、參數計算及summary再次最佳化|公式單獨重算與交付SU的處理stage不等價；實際每筆殘差的數值歸因仍unknown|
+|確切程式／版本？|AL、SU的官方PDS4 XML均記載crism_mapping_execute_flow1.03.94及2023-07-18T18:12:54Z|確認產品標籤資訊；本次仍未取得對應source、executable、build hash或依賴版本|
+|作者公開資料？|LPSC2022 #2361兩頁經web reader讀取；作者CV公開連結及GitHub搜尋／release元資料已核對|只有方法框架和其他工具；沒有找到T1811設定或前後配對資料。另一份HSP作者稿僅讀到搜尋摘錄，不能當已讀全文|
+|能否拿舊版當正規化前資料？|P3 §13顯示v1、v3、v4的輸入、公式及產品組成不同；猜測的3001／3101目前路徑回404|不是受控前後配對；404不代表歷史產品不存在。沒有取得舊版影像，亦未計算跨版差值|
+
+- 明確缺件：1.03.94程式或可核驗build、T1811 run options、AL與SU各stage前後同來源資料、遮罩、逐條帶／波段／參數轉換係數、weights／anchors、traceability及執行日誌。
+- 給GPU：先保留官方值與formula-only結果分欄；收到上述配對資料後再做stage replay。不要以擬合gain/offset、截負值或換舊版公式把結果調成相等。
+- 給主要對話：可說「文件確認summary計算後另有最佳化，公式重算不是完整製作流程」；不能說「已證明這次0.01935由某個係數造成」「官方值有錯」或「已消除冰判讀不確定性」。
+- 本輪只檢查來源／處理歷史；27份既有實體資料及參考結果以SHA256保留核對。原始數值、先前殘差統計、AD1降級、形貌unknown與冰存在／深度／含量unknown均維持。
+- 搜尋界線：已保存原始URL、HTTP結果、查詢與實讀範圍；沒有進入作者限制區、沒有寄信索取資料。GitHub零命中只限本次查詢，不是歷史完整排除。
+- 以下前輪紀錄保留。先前「尚未找到具體summary處理階段」的保守狀態，由本輪§8歷史文件補足；精確執行與數值致因仍未解決。
+
+## 2026-11-15：BD1500_2 官方程式／版本查核（數值未修正）
+
+- 起始main：`fbfa780cf587a0787739200898e80b4d27fea8d1`；本輪依使用者指示驗證後整合main，只更新local_validation。
+- [版本與程式來源表](../../../../outputs/research/MS-03/local_validation/bd1500_audit/version_comparison.csv)、[逐項假說核對](../../../../outputs/research/MS-03/local_validation/bd1500_audit/hypothesis_checks.csv)、[診斷圖](../../../../outputs/research/MS-03/local_validation/bd1500_audit/F-BD01_version_and_arithmetic_audit.png)、[完整方法及缺件](../../../../outputs/research/MS-03/local_validation/bd1500_audit/README.md)。
+
+|查核問題|實際證據／數據|判定範圍|
+|---|---|---|
+|既有mapping公式是否抄錯？|官方CAT7.4的BD1500_2為兩個band depth各乘0.5，與2026文件相同；helper以最近單通道及實際波長計算continuum|未發現所查公開公式與既有重算不同；不能代表1.03.94實際caller|
+|移植公式能重現既有數值？|13169筆嚴格格內中心，Python移植公式與既有計算最大差0|只確認公式與算術；沒有執行原始IDL或完整製作流程|
+|是否只是浮點精度？|Float32相對Float64最大擾動約1.35×10⁻⁷；官方與重算最大差約0.01935|浮點差不足以解釋完整殘差；不代表其他製作運算無誤差|
+|是否讀錯band？|LBL／HDR的60個band名稱次序一致，BD1500_2為零起算24；資料型別與儲存方式一致|可排除本次依所供元資料選錯index；不認證製作端永遠無錯標|
+|是否取得錯誤byte ranges？|另向官方server重取3處×2欄位的6個4-byte值，均與已保存範圍相同|只對這6點核實，不冒稱完整檔案外部checksum|
+|官方summary是否保留CAT代數關係？|輸出BD1435、BD1500_2帶入ICER1_2公式，最大差約0.001822；同算術浮點擾動約1.72×10⁻⁷|確認輸出欄位不保留這項關係；不能據此指認廠商錯誤、stage或正規化原因|
+|差異能歸因哪個版本／流程？|實際MRDR標籤是crism_mapping_execute_flow1.03.94；CAT7.4與JCAT皆為不同工具；所查來源未取得確切製作source／executable／build/options|製作差異的原因維持unknown，不作校正|
+
+- 版本邊界：CAT release notes日期2018-12-28，短函式註記2012／2013；2026參數文件與該公式相同，不能僅憑文件年份較新解釋殘差。
+- 官方JHUAPL/JCAT已固定commit `ba093b070c6d535c15209c8fc2d7a6b2893eb017`（2024-10-31），4個blob驗證通過；所讀targeted路徑是1525nm高光譜kernel，不拿來代替MRDR mapping流程。pom的0.0.1-SNAPSHOT不等於已驗證下載版JCAT1.1的執行版本。
+- 搜尋界線：官方CAT小型程式包320個可讀成員、官方MRDR文件目錄、具來源的公開JCAT程式。未找到確切production flow不代表全球未公開；未存取release notes所列Team-only作者主機，未聯絡作者。
+- 分組觀察：殘差隨來源分組而異，但來源、地理位置、年代與流程互相混雜。最大差所屬來源1587c在嚴格子集僅1個mapped centre；不可把最大值當整格典型誤差或因果證據。
+- 尚缺：1.03.94原始程式或可核驗執行檔／build hash、caller的multi/hyper分支與選項、正規化前後AL／SU中間結果、gain/offset係數及SU逐像素來源指派。沒有這些不能證明哪一stage造成差異。
+- 已保留所有原始官方值與既有重算結果；沒有做擬合gain/offset、截負值、補0、調整參數以貼合官方值。
+- 冰存在、深度、含量與局部雲霜品質仍unknown；AD1降級及形貌unknown維持；未處理Earth時標。
+- 驗證：新增45項可用原檔檢查、33項僅保留材料檢查已實際通過；圖已開啟核對。這不是冰偵測驗收或官方製作軟體執行通過。
+- 以下前輪紀錄保留；較早「版本差異可能解釋」只作待查脈絡，本輪沒有證實其致因。
 
 ## 2026-11-15：官方 Resources → PDS → MRDR v4 補證據
 

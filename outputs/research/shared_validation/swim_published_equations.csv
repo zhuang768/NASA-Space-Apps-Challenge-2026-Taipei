@@ -1,0 +1,5 @@
+zone,formula,nominal_coefficients,source_url,locator,type,limit
+2019 introductory,CI=(CN+CT+CG+CRS+CRD)/5,1;1;1;1;1,https://swim.psi.edu/about.php?section=overview,SWIM Equation first-season formulation,published heuristic consistency equation,not a probability; no new team weights
+0-1m,CI=(CN+CT+0.2*CGS+0.2*CRS)/2.4,1;1;0.2;0.2,https://swim.psi.edu/about.php?section=overview,0-1m equation and shallowness definitions,published depth-sensitivity weighting,NOT verified actual per-cell contributor weights/masks; thermal internal combination unknown
+1-5m,CI=(CGS+CRS+0.3*CRD)/2.3,1;1;0.3,https://swim.psi.edu/about.php?section=overview,1-5m equation,published heuristic; decimal0.3 as printed,source states5/15 but prints0.3; do not silently replace with1/3 or infer exact implementation
+>5m,CI=(CGD+CRD)/2.0,1;1,https://swim.psi.edu/about.php?section=overview,>5m equation,published depth-sensitivity weighting,not direct abundance; not per-cell proof

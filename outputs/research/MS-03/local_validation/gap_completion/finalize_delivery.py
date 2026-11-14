@@ -23,6 +23,7 @@ source('GAP-S12','https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram
 source('GAP-S13','https://api.sciencebase.gov/catalog/item/5f99f0b8d34e198cb786e8e7?format=json','Exact alternate official API request','HTTP404 only; no science table','Records a new access attempt','No TableS4 or membership result')
 source('GAP-S14','https://dataverse.tdl.org/api/datasets/:persistentId/?persistentId=doi:10.18738/T8/DUCOYB','Exact native Dataverse DOI request','HTTP403 only; no science table','Records a new access attempt','No data/header bytes or membership result')
 source('GAP-S15','https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2008JE003273','Supporting Information list and exact S1 PDF download; historical AGU auxiliary URL','Actual support-list text; PDF and old endpoint HTTP403; web fetch failure retained in search log','Identity of alternate S1 representation and failed access','No S1 data rows or whole-footprint exclusion')
+source('GAP-S16','https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/tree/521740108050ba16e406f8becb67a786179ff8bd/outputs/research/MS-03/local_validation','bd1500_audit/README.md; production_history/README.md; t1811_run_artifacts/README.md','Read concurrent-main handoff records and versioned source tables; not a new independent reading of all cited PDFs','Existing arithmetic audit, documented processing-stage non-equivalence and missing run artifacts retained','Our CAT diagnostics overlap prior audit: cross-check only, not new scientific novelty or recovered execution')
 write('source_read_log.csv',readlog)
 q=[]
 def gap(i,topic,done,state,unknown,nextstep,owner,src):q.append(dict(gap_id=i,topic=topic,completed_this_round=done,state=state,remaining_unknown=unknown,next_required_evidence=nextstep,handoff_owner=owner,source_ids=src))
@@ -73,6 +74,7 @@ section='''
 - 起始 main：`ddd04cfcb5ea810d73304b1cf6ae064c1f77a1c5`；隔離分支 `codex/ms03-gap-completion-20261115`；保留其他人的工作與以下歷史查核。
 - [本輪資料與重現方式](../../../../outputs/research/MS-03/local_validation/gap_completion/README.md)；[逐項缺口／交接表](../../../../outputs/research/MS-03/local_validation/gap_completion/gap_status.csv)；[原始來源實讀範圍](../../../../outputs/research/MS-03/local_validation/gap_completion/source_read_log.csv)。
 - 本輪為資料、方法、表格、圖與條列筆記；不代寫正式報告、摘要、結論或簡報。
+- 整合時發現 main 已新增同類 CAT／歷史流程／run-artifact 查核；實讀其交接並完整保留。光譜診斷列為互核，不當新增獨立研究；[既有歷史流程查核](../../../../outputs/research/MS-03/local_validation/production_history/README.md)、[既有執行缺件查核](../../../../outputs/research/MS-03/local_validation/t1811_run_artifacts/README.md)。
 
 |項目|本輪確實取得／完成|仍不可推論|
 |---|---|---|
@@ -104,7 +106,11 @@ section='''
 
 '''
 if heading not in text:
- text=text.replace('# MS-03 — local validation evidence notes\n','# MS-03 — local validation evidence notes\n\n'+heading+'\n'+section,1);notes.write_text(text)
+ text=text.replace('# MS-03 — local validation evidence notes\n','# MS-03 — local validation evidence notes\n\n'+heading+'\n'+section,1)
+else:
+ start=text.index(heading);end=text.find('\n## ',start+len(heading));end=len(text) if end<0 else end
+ text=text[:start]+heading+'\n'+section.rstrip()+'\n'+text[end:]
+notes.write_text(text)
 # Original tables and analogue rows remain historical records; new tables are linked above.
 # Manifest covers retained new deliverables, not ignored optional local bodies.
 files=subprocess.check_output(['git','ls-files','--cached','--others','--exclude-standard','--',str(O.relative_to(ROOT))],cwd=ROOT,text=True).splitlines();entries=[]

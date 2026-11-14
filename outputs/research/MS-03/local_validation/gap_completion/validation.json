@@ -2,6 +2,7 @@
   "status": "passed",
   "date_taipei": "2026-11-15",
   "starting_sha": "ddd04cfcb5ea810d73304b1cf6ae064c1f77a1c5",
+  "preservation_base_sha": "521740108050ba16e406f8becb67a786179ff8bd",
   "checks": [
     "all new JSON parse without NaN or Infinity",
     "radar_track_membership.csv rectangular",
@@ -47,7 +48,7 @@
     "radar_track_membership.csv rectangular",
     "four exact mapped tracks, two unresolved crosswalk cases",
     "catalogue-intersecting but outside-centre track not treated as in-cell",
-    "all 132 existing scientific/supplement files byte-preserved",
+    "all 234 existing scientific/supplement files byte-preserved",
     "original observation_inventory.csv unchanged",
     "original local_prior_work.csv unchanged",
     "original mars_ice_evidence.csv unchanged",
@@ -55,14 +56,22 @@
     "search_log.csv rectangular",
     "all search IDs remain unique",
     "starting main search log retained as exact byte prefix",
+    "integrated main search-log bytes retained as exact prefix",
+    "concurrent main research-note body retained verbatim",
     "all research-note links resolve",
-    "both earlier-stage validators actually pass; prior outputs preserved"
+    "both earlier-stage validators actually pass; prior outputs preserved",
+    "three concurrent upstream retained validators pass; their stored outputs preserved"
   ],
   "source_payloads_verified_when_present": 46,
   "ignored_optional_payloads_absent": 0,
   "legacy_validation_stdout": [
     "Passed 26 checks",
     "Passed 35 follow-up checks; raw target tables acquired: 0; no spatial membership test performed."
+  ],
+  "concurrent_validation_stdout": [
+    "Passed 33 audit checks; retained-only True",
+    "Passed 52 provenance checks; retained-only True",
+    "Passed 67 checks; retained-only True"
   ],
   "branch_name_required": false,
   "network_required": false,

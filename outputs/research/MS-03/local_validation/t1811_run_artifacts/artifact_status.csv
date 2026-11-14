@@ -1,0 +1,8 @@
+﻿evidence_id,item,status,source_ids,value,limits
+RUN-E01,T1811 archive products,confirmed_in_checked_inventory,RUN-S01;RUN-S02;RUN-S03;RUN-S05;RUN-S06,4 logical products;15 listed physical files,bundle/data collection only; no claim all public archives exhaustively searched
+RUN-E02,actual execution configuration,unknown,RUN-S04;RUN-S05;RUN-S06,not obtained,Instrument/observation metadata or software version is not a recovered run options file
+RUN-E03,actual optimization coefficients,unknown,RUN-S05;RUN-S08;RUN-S11,not obtained,Fig21 describes model artifacts but supplies no T1811 numerical coefficient array
+RUN-E04,paired local normalization arrays,unknown,RUN-S08;RUN-S09,not obtained,"Fig23 before/after region17.0-19.5N,76-79E; RGB716/599/534nm; both autostretched; outside MS03"
+RUN-E05,optimization dependency set,unknown,RUN-S08,"five local source strips are known, full required network unknown","Request actual connected dependencies, overlap/proximity constraints and anchors; local contributors alone do not document that network"
+RUN-E06,numerical stage replay,not_performed_missing_inputs,RUN-E02;RUN-E03;RUN-E04;RUN-E05,no new predicted or corrected values,Prior formula-only values remain separate; documented mechanism does not quantify local residual
+RUN-E07,local ice presence/depth/content,unknown,RUN-E06,unknown,No new independent ice truth or validated spectral detection

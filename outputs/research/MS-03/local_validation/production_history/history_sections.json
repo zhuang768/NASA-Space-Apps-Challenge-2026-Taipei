@@ -1,0 +1,32 @@
+[
+  {
+    "source_id": "PH-S01",
+    "file": "sources/historical_dpsis_20220930.htm",
+    "document_version": "1.3.7.6",
+    "document_date": "2022-06-22",
+    "sha256": "963456ea207e3cd92274dee372382e0f3fd553c6a0b443565279eb7e02fbdd36",
+    "read_scope": "title/version; Appendix P3 sections 6-8, 11, 13; Table 3-12 BD1500_2 row",
+    "normalized_text_method": "HTMLParser cp1252; omit style/script; collapse whitespace",
+    "section8_start_offset": 571115,
+    "section8_end_offset": 571854,
+    "section8_character_count": 738,
+    "section8_sha256": "643acff266f355a47b099eebc96dc9857d2643e89532feff806f58bdd996fe1b",
+    "exact_production_flow_name_present": false,
+    "brief_quote": "the optimization procedure is applied a second time"
+  },
+  {
+    "source_id": "PH-S02",
+    "file": "sources/official_dpsis.htm",
+    "document_version": "1.3.7.7",
+    "document_date": "2024-11-05",
+    "sha256": "75bc4b07f1849b997bc268916d4a5c78c184955f5ac2bbd6acb4b9a2ee041d95",
+    "read_scope": "title/version; Appendix P3 sections 6-8, 11, 13; Table 3-12 BD1500_2 row",
+    "normalized_text_method": "HTMLParser cp1252; omit style/script; collapse whitespace",
+    "section8_start_offset": 573121,
+    "section8_end_offset": 573860,
+    "section8_character_count": 738,
+    "section8_sha256": "643acff266f355a47b099eebc96dc9857d2643e89532feff806f58bdd996fe1b",
+    "exact_production_flow_name_present": true,
+    "brief_quote": "the optimization procedure is applied a second time"
+  }
+]

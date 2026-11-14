@@ -1,0 +1,26 @@
+id,date_UTC,platform,query_or_action,source_read,read_scope,outcome
+Q01,2026-11-14,web engine1,"""Widespread Shallow Water Ice on Mars"" Caltech supporting",Piqueux paper and five-file archive,Abstract;section2;Supporting Information list,"2ppd/3ppd mismatch; supplement listed, not downloaded"
+Q02,2026-11-14,web engine1,site:swim.psi.edu/about.php thermal Piqueux Bandfield,official thermal overview,opening paragraphs and Other research groups,direct incorporation of three thermal analyses
+Q03,2026-11-14,web engine1,"""University_Valley_Met_Station_Calibration_all.m""",no relevant source-code result,search results only,no file acquired; not proof code absent
+Q04,2026-11-14,web engine1,"""Marinova"" ""University Valley"" 2022 thermal properties",Marinova2022,Methods and Appendix diffusivity equations12/18-20;Methods1-3,prior work and separate material-property limitation
+Q05,2026-11-14,web engine2,"""2019GL083947"" ""SI.docx""",publisher SI filename,Supporting Information file list,36.5MB DOCX listed; two direct failures retained
+Q06,2026-11-14,web engine2,"""Piqueux"" ""2019"" ""caltech.edu/records"" ice",no matching author-copy record acquired,search results,no transformation code recovered
+Q07,2026-11-14,web engine2,site:swim.psi.edu SWIM2 thermal weighting Piqueux,SWIM2/overview pages,published depth-zone formulas,method formulas available; exact local implementation unverified
+Q08,2026-11-14,web engine2,"""10553882"" ""UV2009_2011AllHobos""",official Zenodo,28-file list,use actual filename with spaces; contents not read
+Q09,2026-11-14,web engine1,"site:swim.psi.edu/SWIM2Products.php ""Thermal"" ""2021""",official overview and products snippets,equations in overview; product snippets only,direct SWIM2 page523; no downloaded intermediate raster
+Q10,2026-11-14,web engine1,"""UniversityValley_MetStation.CR1""",no relevant code result,search results only,no original logger program acquired
+Q11,2026-11-14,web engine1,"""University_Valley_Met_Station_Calibration_all""",no relevant code result,search results only,not an exhaustive absence claim
+Q12,2026-11-14,web engine1,"site:swim.psi.edu/SWIM2Products.php ""Thermal Ice Consistency""",official thermal overview,Other research groups,thermal family dependence documented
+Q13,2026-11-14,web engine1,"site:swim.psi.edu/SWIM2Products.php ""Thermal"" ""Piqueux""",official thermal overview,opening and combination paragraphs,release-specific submaps not obtained
+Q14,2026-11-14,web engine1,"""Widespread shallow water ice"" ""supporting"" ""3 ppd"" ""2""",paper/archive,section2 vs archive description,no verified grid conversion
+Q15,2026-11-14,web engine1,"""2019GL083947"" ""S3"" RMS",paper,section2 lowest RMS and FigureS3 reference,S3 itself not read; no local residual extraction
+Q16,2026-11-14,web engine1,"""UV 2009_2011 All Hobos.xlsx"" calibration",Zenodo listing,filename and MD5,workbook cannot be inferred from filename
+Q17,2026-11-14,web engine1,"""University Valley"" ""Campbell"" ""CR1"" calibration",paper and unrelated regional study,Methods instrument details,no original CR1; unrelated coordinate statement not adopted
+Q18,2026-11-14,web engine1,"""Siegler"" ""2011JE003938"" data download",Caltech author record and publisher,"PDFpp2,4-5,8,11-14,21-22",actual1.27MBPDF downloaded and MD5 matched; no separate numerical raw pulse archive acquired
+Q19,2026-11-14,web engine1,"""Marinova"" ""University Valley"" ""conductivity"" ""independent measurements""",Marinova2022,Appendix equation12 surrounding paragraph,no independent UVk/rho/Cp in that study
+Q20,2026-11-14,web open,McKay2026 DOI10.1017/S0954102025100448,publisher primary article,Environmental data paragraph2,locations cite2022; not independent GPS
+Q21,2026-11-14,local rg,rg --files data outputs | rg -i hobo|calibr|.cr1|.gpx|.m,limited local roots data/outputs,legacy calibrated W export; current own HTTPerror files excluded,no original calibration/program/GPS found in searched roots; not whole-computer claim
+Q22,2026-11-14,local rg,rg -n Hobos|Calibration_all|MetStation.CR1|logger outputs/handoff/local_file_inventory.csv,661-file historical inventory,no matching entries,inventory is historical and limited
+Q23,2026-11-14,Caltech API,"q=2019GL083947; q=""Widespread Shallow""; q=metadata.title:""Widespread Shallow Water Ice""",author API searches,JSONhits; title query returned unrelated records,not treated as paper or SI match
+Q24,2026-11-14,web binary access,Zenodo10553882 file link39 AllHobos workbook,web tool,400 Unicode decoding error,not a valid workbook read
+Q25,2026-11-14,web engine2,"""2017JF004535"" Liu Beacon Valley",publisher primary paper,DOI and title; section2 location/methods,confirmed DOI10.1029/2017JF004535; no disposition upgrade or new raw sequence

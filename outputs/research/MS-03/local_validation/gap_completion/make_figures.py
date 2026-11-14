@@ -32,7 +32,7 @@ from matplotlib.ticker import MaxNLocator
 axs[2].xaxis.set_major_locator(MaxNLocator(5));axs[2].hist(a['residual'][mask],bins=70,color='#287f8e');axs[2].set(title='C  Strict source-centre subset',xlabel='Residual (dimensionless)',ylabel='Map-grid centres')
 fig.suptitle('MS-03 | MRDR v4 T1811 implementation diagnostics',fontsize=15,x=.06,ha='left')
 fig.text(.06,.07,'13,169 source DDR centres inside fixed cell | Source observations 2006–2014; mosaic produced 2023-07-18. Official PDS MRDR albedo/summary + CAT 7.4 reference.',fontsize=9)
-fig.text(.06,.035,'Float32/64 difference ≤1.27e−7 cannot by itself explain residual up to 0.01935. Producer execution, clouds/frost and detection limits remain unvalidated; no ice inference.',fontsize=9)
+fig.text(.06,.035,'This precision variant: difference ≤1.27e−7 cannot by itself explain residual up to 0.01935. Producer execution, clouds/frost and detection limits remain unvalidated; no ice inference.',fontsize=9)
 fig.subplots_adjust(left=.07,right=.97,top=.83,bottom=.24,wspace=.5);save(fig,'F-GAP02_spectral_implementation_QA')
 # Same-observation radar and clutter. Display panels independently scaled, never subtracted.
 a=np.load(O/'radar_local_arrays.npz');cols=a['column_1based'];rows=a['row_0based'];fig,axs=plt.subplots(1,2,figsize=(12.5,6.5),sharex=True,sharey=True)

@@ -2,6 +2,41 @@
 
 Team zasa. Review date: **2026-11-14, Asia/Taipei**. Phase 1 repository baseline: `3e3ffff`; Phase 2 main baseline: `263269a`. Scope: literature and proposal checks for I-01, I-02, D-03 and D-04, followed by the supplied Earth candidate EARTH-UV-001. No new site selection, Earth pairing, environmental validation or ranking.
 
+## 2026-11-14：沿Head引用來源補查清單、GIS與提案對照
+
+本輪從main `14be2d5` 接續P8，只補查尚未對應的Head替代探索區。P1至P8已完成的範圍檢查、地球用途查核與QA紀錄全部保留；沒有重跑GIS交集。
+
+**結果：找到可追溯的地貌GIS補充資料入口，但仍未取得Head摘要Figure 2替代標記的逐項名稱、原始EZ邊界或提案對照。因此I-01與I-02對這批替代區均維持 `insufficient_data`。** 以下資料不能替代缺少的提案幾何。
+
+### 引用鏈與實際讀取範圍
+
+以P8簡報第7頁作者群及其原摘要[1033參考文獻](https://www.hou.usra.edu/meetings/explorationzone2015/pdf/1033.pdf)為入口，分開記錄地貌製圖、冰研究與探索區提案。P9至P11是本輪來源編號。
+
+| 編號／引用路徑 | 取得與讀取範圍 | 資料物件與本輪判斷 | 未完成部分 |
+|---|---|---|---|
+| P9：Head摘要[14] → Levy等2014，[原始期刊全文](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2014JE004685)，DOI `10.1002/2014JE004685` | 已讀網頁全文§2、§3與Supporting Information表。表列readme、Supplement_Download及GIS data set入口 | §3指向地貌輪廓shapefile；這是LDA／LVF／CCF研究資料，尚無證據對應Head替代EZ編號或提案邊界 | [Readme下載](https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2F2014JE004685&file=readme.pdf.pdf)及[Supplement_Download](https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2F2014JE004685&file=Supplement_Download.pdf)均回傳403。未讀指南或解壓GIS，未核對schema、座標系與要素幾何 |
+| P10：Head摘要[1] → Baker等2010（DOI `10.1016/j.icarus.2009.11.017`）；另取得同作者同題的[2009年LPSC 1822原始摘要](https://www.lpi.usra.edu/meetings/lpsc2009/pdf/1822.pdf) | 已讀2009摘要兩頁文字與圖說；不是已取得2010期刊全文 | 第1頁Introduction描述研究製圖範圍約43.3至47.3°N、36.4至42.2°E；第2頁Fig.1為地貌／流向圖。可定位研究區，不能將其直接改稱Head替代EZ | 未取得該研究區與Head Figure 2標記的原始對照；未由此推定探索區的範圍。2010期刊全文仍未取得 |
+| P11：Head摘要[18] → Chuang與Crown2009，USGS SIM3079，[官方目錄](https://pubs.usgs.gov/publication/sim3079)，DOI `10.3133/sim3079` | 取得官方搜尋索引中的標題與摘要；直接開啟[報告頁](https://pubs.usgs.gov/sim/3079/)與[圖幅說明PDF](https://pubs.usgs.gov/sim/3079/sim3079_pamphlet.pdf)均403 | 目錄確認是Deuteronilus地質圖及冰相關地貌研究。此層證據只能標示metadata／索引摘要，未確認GIS內容 | 未讀圖幅、圖幅說明全文或GIS。沒有取得替代EZ清單或提案編號關聯，不從圖幅名稱推導邊界 |
+
+P9的§2說明約30至50°緯度是初始搜尋帶，跨出該帶的地貌也納入。因此不能僅以I-01／I-02位於50°N以北，就宣稱該地貌資料或Head替代探索區不涵蓋候選。即使未來取得地貌polygon，仍須另有來源證明它代表哪個探索區及其具體用途，才能回答本輪的同範圍、同用途問題。
+
+### 兩候選的結論與剩餘缺件
+
+| 候選與沿用範圍（東經、planetocentric） | 本輪結論 | 還缺什麼 |
+|---|---|---|
+| I-01：54至54.5°N、1至1.5°E | P9至P11尚不能確認Head未對應替代區與此格重疊或不重疊；`insufficient_data` | Figure 2逐標記名稱／ID、與原始提案的對照，以及該提案的實際完整範圍與冰探查／資源評估用途 |
+| I-02：53.5至54°N、42至42.5°E | 同上；取得局部地貌研究範圍不等於取得替代EZ邊界；`insufficient_data` | 同上；不能用Baker研究區的緯度範圍代替尚未識別的EZ範圍 |
+
+可以直接寫入報告：「已沿Head的原始引用鏈核對地貌製圖與GIS補充資料入口；本次搜尋仍未找到可將其替代探索區標記逐一連接至原始提案及完整邊界的清單。已檢查公開提案圖層的排除結果僅適用於既有P1至P8所述物件，尚不能排除其餘替代區與I-01／I-02的重疊。」
+
+避免宣稱「找到了所有替代探索區」、「地貌GIS就是探索區GIS」、「50°N以北未被研究」或「這兩點沒有同用途先例」。本輪沒有確認新的同地點、同用途命中，也沒有解除新穎性疑點。
+
+### 搜尋紀錄與停止條件
+
+搜尋日期：2026-11-14，Asia/Taipei。查詢詞包括：`Head Dickson 2015 Deuteronilus exploration zone alternative sites GIS data`、`"Flow patterns of lobate debris aprons" "data" Baker Head 2010`、`"Sequestered glacial ice" "supporting" Levy 2014 data GIS`、`site.usgs.gov "3079" "Chuang" GIS`、`"2014JE004685" "Supplement_Download" GIS`、`"Head" "2015" "alternative exploration zones" Deuteronilus`。同時沿原摘要參考文獻及期刊補充連結直接讀取。
+
+這是對優先引用鏈的有限查核，未完整審讀Head全部參考文獻，也未取得作者的原始GIS工程或內部對照表。下載受限的內容維持未讀。後續若取得逐標記清單、原始提案編號或可驗證的EZ幾何，再補做對應；目前不從小比例尺圖猜邊界，也不重做已完成的範圍排除。
+
 ## 2026-11-14：Head替代探索區原始簡報追查
 
 本輪基準main `e040aef36a8940a937b5a17421d2bd824c164224`；同步保留隊友1新增的資料可用性／MR-v1回覆，沒有改其檔案。只追Head Figure2尚未對應的替代EZ，不重算P1–P7的幾何或重搜已完成地球用途。

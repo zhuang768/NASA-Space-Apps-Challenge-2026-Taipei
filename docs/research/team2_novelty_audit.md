@@ -2,6 +2,77 @@
 
 Team zasa. Review date: **2026-11-14, Asia/Taipei**. Phase 1 repository baseline: `3e3ffff`; Phase 2 main baseline: `263269a`. Scope: literature and proposal checks for I-01, I-02, D-03 and D-04, followed by the supplied Earth candidate EARTH-UV-001. No new site selection, Earth pairing, environmental validation or ranking.
 
+## 2026-11-14：主要對話、GPU與隊友1的直接交接
+
+交接基準：main `bc9fe3c`；研究需求沿用暫定 `MR-20261114-v1`。以下三份可分別閱讀／轉貼。**文件發布不代表已傳送到其他對話、取得收件確認或完成對方工作。**先前查核與QA紀錄完整保留於下方。
+
+### 共用資料與可重跑QA連結
+
+- [固定版本：Team 2報告、QA說明及重跑程式](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/bc9fe3c/docs/research/team2_novelty_audit.md)：見「五項延伸工作」的第2節與「重跑方式與數值來源」。
+- [固定版本：候選查核CSV與完整QA結果](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/bc9fe3c/outputs/research/team2_novelty_audit.csv)：`candidate_id=EARTH-002`，欄位 `executed_evidence_qa_json`。這是QA摘要，不是完整tidy時序；其他列的該欄空白不表示零或QA失敗。
+- [固定版本：Team 1候選與資料需求](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/bc9fe3c/outputs/research/team1_earth_analog_candidates.csv)：`earth_candidate_id=EARTH-002`，含來源與原GPU需求。
+- [原始108頁EH補充資料PDF](https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0954102019000269/resource/name/S0954102019000269sup001.pdf)；SHA-256 `20fe70f574bc394f05f0c720809f80a9602ac73f6ede34d322ea816cf25590d9`。
+- [McKay et al.2019原始論文](https://www.nasa.gov/wp-content/uploads/2019/09/mckay_etal_2019_dry_permafrost_ellsworth_land21.pdf)：Methods、Appendix及Table II（PDF p.5）。
+- [主線需求分支固定版本](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/9e5c49ea7b4d7272972e7d409e6a298e6ef3da4a/docs/research/main_research_requirements.csv)：記錄實際採用的版本，不冒稱已在main整合。
+
+### 給主要對話：研究定位與待決事項
+
+**Team 2交付版本：main `bc9fe3c`，EARTH-002 → I-02。**
+
+Elephant Head的108頁補充資料已完整轉錄，共8,922筆逐時紀錄。兩套PDF引擎逐列比對列號、第一時間與數值一致；重算年均與夏季均溫，四捨五入至0.1°C後與原論文Table II一致。這支持原印刷時標下的熱響應描述與既有分析重現，不能代表原感測器重新校準、獨立真值或場址適用性通過。
+
+目前已完成資料轉錄QA、均溫重現、研究先例整合及驗證需求草案。新盲判、覆土受控實驗、採樣升溫、冰質量收支、地球到火星性能驗證仍未完成。覆土影響熱響應、跨場址機制比較與受控加熱已有研究，不以此稱新發現。
+
+**主要對話下一步：**
+
+1. 將本階段定位為「重現、資料QA整合與驗證需求設計」。
+2. 若要新的科學分析，先明定問題、輸入及結果量，再評估現有資料是否足夠；不因QA成功直接宣稱新貢獻。
+3. 決定是否啟用Linnaeus備案；25／45cm矛盾尚未解，不自行選成唯一真值。
+4. 未取得獨立真值與可識別控制前，不報準確度、因果、冰損失或火星性能。協定草案仍待主線審查，不是已定案實驗。
+
+### 給GPU：接續QA與可重跑交付
+
+**對象：EARTH-002／Elephant Head → I-02。** Team 2實際執行的結果如下；請獨立重跑後再記GPU自己的驗證狀態。
+
+| 項目 | 已執行結果 |
+|---|---|
+| 原始補充資料 | 108頁，8,922筆；完整列號且第一時標逐時連續 |
+| 第一印刷時標 | 2017-11-28 00:00至2018-12-04 17:00 |
+| 第二印刷時標 | 全部比第一時標晚90分鐘；UTC／太陽時定義仍待獨立核實 |
+| 3cm通道 | 2,646筆；最後2018-03-18 05:00，後續保持缺值 |
+| 年窗口 | 第一時標2017-12-01含至2018-12-01不含，8,760筆 |
+| 夏季配對窗口 | 第一時標2017-12-01含至2018-03-01不含，2,160筆 |
+
+**GPU下一步：**
+
+1. 從上列原始網址重取PDF，核對hash，依報告內程式重跑，交付自己的版本、命令與差異檢查；不把Team 2結果直接標為GPU已驗證。
+2. 產出帶來源頁碼／列號、兩個原時間欄、單位、深度及缺值的tidy table和資料字典。現在CSV裡的QA摘要不能取代完整時序。
+3. 查明兩個印刷時標的實際定義；未核實前不轉UTC／太陽時，不做跨資料集時刻配準。
+4. 保留raw與corrected RH。49cm corrected RH有2,807筆超過100%，須檢查原校準脈絡並標記，不能默默裁切或直接當成水活性。
+5. QA後製作共同有效夏季的3cm／49cm溫度與配對溫差圖，標明期間、有效N、缺值與限制。這些圖尚未由本次交接製作。
+
+限制：不計3cm全年均值、不補冬季、不用兩深度唯一反演冰深／TI；逐時紀錄不是獨立樣本數。RH衍生量要先確認基準，這組表不能給出採樣冰損失。資料取得／解析成功不等於科學適用性全部通過。
+
+### 給隊友1：場址證據與用途修訂
+
+**對象：EARTH-002／Elephant Head。** 保留原ID、錨點、用途與修訂歷史。新QA支持將已知剖面作描述性方法參照，未完成新界面偵測，也未證明與I-02的冰深、材料或熱性質相等。
+
+既有先例保留：Site 3鄰近站點已有分層採土、鑽冰芯與低溫保存；10cm分層採土不等於10cm受控分段鑽冰，保存溫度不等於鑽進時樣品升溫。完整聯合流程與新試驗範圍仍資料不足。
+
+**隊友1下一步：**
+
+1. 分清歷史監測點、既有採樣點與提議試驗區；沒有可靠範圍就保留point anchor，不自行補半徑。
+2. 建立位置—日期—深度—方法對照，不把不同年代／位置的45或49cm移作同一真值。
+3. 盤點可取得的覆土粒徑、密度、孔隙率、含水／冰量及熱性質；分開實測與模型採用值，缺件寫unknown。
+4. 說明是否有同位、同期且獨立於判讀輸入的界面真值。公開歷史49cm不能同時作擬合答案與盲測留出答案。
+5. 若仍提議冰損失模組，先確認初始／回收冰量、樣品溫度、處理時間與質量校核是否可量測；缺件則維持未啟用，不報損失結果。
+
+本輪不用再找新場址或重跑排名。先回覆現有場址能支持哪些研究、哪些仍不可執行；Team 2在收到具體範圍與協定後才能續查完整同用途先例。
+
+**發布與檢查：** 以上交接整理自已執行QA及既有查核；僅增補Team 2報告，未改其他人的狀態或文件。各方回覆請帶固定ID、採用版本、來源與未完成項；尚無接收確認。
+
+---
+
 ## 2026-11-14：五項延伸工作、EH全表QA與驗證協定草案
 
 本輪依使用者「全部都做」指示，把前述五項工作推進到目前證據允許的程度。沒有改GPU程式或輸出；數值複核由本輪執行，不能歸為GPU隊友已交付。只更新Team2兩檔，歷史「尚未解析全表」保留為當時紀錄，以下為新狀態。

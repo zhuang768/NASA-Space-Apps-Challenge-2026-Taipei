@@ -1,0 +1,22 @@
+{
+  "starting_main_sha": "fee734610c6bacc57880eaaba1a1301f09fdd4d6",
+  "quantitative_attribution": "unknown",
+  "stage_replay_performed": false,
+  "actual_run_settings_obtained": false,
+  "actual_coefficients_obtained": false,
+  "paired_local_pre_post_data_obtained": false,
+  "scientific_values_changed": false,
+  "fitted_correction_applied": false,
+  "ice_presence": "unknown",
+  "ice_depth_m": "unknown",
+  "ice_fraction": "unknown",
+  "old_residual_reference": "../bd1500_audit/results.json",
+  "old_strict_residual_unchanged": {
+    "n": 13169,
+    "median": 0.0007114219669197563,
+    "max_abs": 0.019347334519968284,
+    "p05": -0.0033188935069573323,
+    "p95": 0.008343958426089119
+  },
+  "reason": "actual stage replay inputs not obtained in bounded archive/author-source checks"
+}

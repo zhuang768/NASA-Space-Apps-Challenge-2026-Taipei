@@ -1,0 +1,5 @@
+﻿member_status,lidvid,source_url
+P,urn:nasa:pds:mro_crism_mrdr:data_mrdr:t1811_mrral_60n243_0327_4::1.0,https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/collection_data_mrdr_inventory.csv
+P,urn:nasa:pds:mro_crism_mrdr:data_mrdr:t1811_mrrde_60n243_0327_4::1.0,https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/collection_data_mrdr_inventory.csv
+P,urn:nasa:pds:mro_crism_mrdr:data_mrdr:t1811_mrrsu_60n243_0327_4::1.0,https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/collection_data_mrdr_inventory.csv
+P,urn:nasa:pds:mro_crism_mrdr:data_mrdr:t1811_mrrwv_60n243_0327_4::1.0,https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/collection_data_mrdr_inventory.csv

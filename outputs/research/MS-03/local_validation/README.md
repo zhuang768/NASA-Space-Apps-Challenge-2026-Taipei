@@ -47,3 +47,8 @@
 
 - [Historical sources, processing stages and missing run artifacts](production_history/README.md).
 - A 2022 SIS snapshot documents a second optimization of surface summary products. This establishes a stage difference from formula-only evaluation, but does not recover build1.03.94 settings or explain the local residual numerically. Official values, previous calculations and ice unknowns are preserved.
+
+## T1811 execution artifacts (2026-11-15)
+
+- [Bundle/index cross-check, author-paper reading and replay input requests](t1811_run_artifacts/README.md).
+- Actual settings, optimizer coefficients and paired intermediate arrays remain unknown. The checked T1811 archive contains delivered products, and the author paper's illustrated pair is outside MS-03. No numerical correction or new stage replay was performed.

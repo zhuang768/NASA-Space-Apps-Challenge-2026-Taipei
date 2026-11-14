@@ -62,8 +62,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/README.md",
-      "bytes": 6028,
-      "sha256": "45679963143bb93693e26294c58855a295e588f0f8d4b85cedfa504924f33954"
+      "bytes": 6442,
+      "sha256": "ae9da45392a2c04e002723fee66f86e9741f1a6525d8601b9d5c55f24c6d3224"
     },
     {
       "path": "outputs/research/MS-03/local_validation/acquire.py",
@@ -1187,8 +1187,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/search_log.csv",
-      "bytes": 124500,
-      "sha256": "14ce00231e4b397f87308b8b7c0a8660c625ba75e3f6929a8e162e482dfb8412"
+      "bytes": 130897,
+      "sha256": "594472061ad263d13c6944afa26c1304bf6cb4f59b1150e82336905e9704b807"
     },
     {
       "path": "outputs/research/MS-03/local_validation/sharad_local_geometry.csv",
@@ -1621,6 +1621,181 @@
       "sha256": "5305a51221adde1cb2be13eebf5fa9c4843f8d6a5cdb9ecaae4e77953d2acb8e"
     },
     {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/.gitignore",
+      "bytes": 85,
+      "sha256": "840709db6206cb3e3f3d6b4379042f5a83474b94a9fb53b30407d4235fb9b2b6"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/README.md",
+      "bytes": 4255,
+      "sha256": "b35d40c155f3780feabb5ee98413a2bac03cab45227d73bfb0891c78b8bb72bc"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/T1811_index_fields.csv",
+      "bytes": 9035,
+      "sha256": "be61359358de56e0507a387acf52e9eafb685784adb0223a061a92556011765a"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/T1811_inventory_members.csv",
+      "bytes": 820,
+      "sha256": "be8447d26f419db78da3d5635b12ca85f5cb27b452eb8641fc69f400b086420b"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/T1811_label_references.csv",
+      "bytes": 4335,
+      "sha256": "dfdf1e14907df4359050a546e054cd2d2857adbac3d41ce332a85f74ad5036c3"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/T1811_product_files.csv",
+      "bytes": 1578,
+      "sha256": "a55224133fb35f5f1961cb914964c578ef8c2b8b8d32201b57d3fb1c733edd43"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/acquire.py",
+      "bytes": 1906,
+      "sha256": "6be416e9899e50310ab1e9e622935ed43355a7140d7209470999ee22d13de582"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/artifact_status.csv",
+      "bytes": 1411,
+      "sha256": "f9d534e9bfd9869249f8a00661ed9d8c89ee9e58cd5d0ae577254aab975c1d24"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/build_records.py",
+      "bytes": 8962,
+      "sha256": "628c965c0cce6cb317726a863bc4b8425103d121ecfdf235be15018500b8a378"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/inspect_inventory.py",
+      "bytes": 5166,
+      "sha256": "25b1e03f383364174d30dbe5c4095f7cef0c83b3b9b05572704f57bb1a2c7378"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/inspect_paper.py",
+      "bytes": 1856,
+      "sha256": "f8e1fcd2168df72285db58a32df6d4ba1d6a2f7841ab04e7a199c102888d0f11"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/inventory_audit.json",
+      "bytes": 2875,
+      "sha256": "71a6b13121f1174add43fe33671ed0f950dca4d6419c5f9c9f8faed29c29e48c"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/manifest.json",
+      "bytes": 10628,
+      "sha256": "e159bc6f6f37df8bb0f4957064ccb3c4155907f8d33ae864cd29cd21cad48816"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/paper_read_scope.json",
+      "bytes": 2145,
+      "sha256": "77ffb981a1b6fe3035f04a1712983f7052bed604ce854e350ac9c50f35f3a254"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/preserved_inputs.json",
+      "bytes": 4898,
+      "sha256": "12afc12d6dd144fa0936dd35538f90a3796870aef89325e99ae6ff75ccae65cc"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/replay_inputs_needed.csv",
+      "bytes": 1401,
+      "sha256": "63ac809dd44d95604800b7d4882860bd0ad39bd86d9071a6c46933438cac6ef5"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/replay_readiness.json",
+      "bytes": 792,
+      "sha256": "d60608189937d38f0aaa982051f800a9f2d3adaec200fde31dfc6e22f3134f0b"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/request_plan.json",
+      "bytes": 2508,
+      "sha256": "d6c9e991c0e85719c2d1129feae70313388366bb0809112505c6369e9f8bae30"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/retrievals.json",
+      "bytes": 7620,
+      "sha256": "a39e38bb74e6533aa8117d9933312bce3ff3a7a7dc9dead4915b391841241481"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/search_log.csv",
+      "bytes": 6488,
+      "sha256": "eef45d305911eedbf416642b14dfca1232ec5e86ee89f96f52998497466a2272"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/source_audit.csv",
+      "bytes": 3165,
+      "sha256": "5311d23de30ec629f5fb52401debb120366d461124d8bbdba00068b811ef43f9"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/sources/T1811_DE.xml",
+      "bytes": 31094,
+      "sha256": "f9c5e5435e97152087a63a2b16ccc99039bd7b5b2503dc647159be43e88bdb92"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/sources/T1811_WV.xml",
+      "bytes": 6770,
+      "sha256": "330f8bef2c98e0ae743dfdf470e9dda8984ec75463ae78c079b1bb54883fac13"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/sources/T1811_original_index_records.tab",
+      "bytes": 3168,
+      "sha256": "5b85d47a5d3e9bcb7803790dc09d26622e9f749b4120f627aae3b2fbccda3744"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/sources/bundle_crism_mrdr.xml",
+      "bytes": 5805,
+      "sha256": "cf92ab32f23d4e5561047128294838aff24cc7b2fd63f5f0a7e4b6919abd54fa"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/sources/caltech_record.json",
+      "bytes": 23926,
+      "sha256": "8e6522240326b18bb864ffdd4b4b085d702a443a9121b0058be74210363d072a"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/sources/collection_data_mrdr.xml",
+      "bytes": 5370,
+      "sha256": "08ac2f6848fb92da9245f971dd4a496f2d6eaaba6afabe45bfd8ae0f7ddcff78"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/sources/collection_miscellaneous_inventory.csv",
+      "bytes": 124,
+      "sha256": "f36ebe1b231bf91c3e213ca85a3130b54a5bf74f7567ec1acff73f7f8d81004e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/sources/errata.txt",
+      "bytes": 5348,
+      "sha256": "8caa8e432f1b5b68ffa8d78d36e863c34d395ac22b3d521673a55194ea9472ed"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/sources/index.lbl",
+      "bytes": 28976,
+      "sha256": "de5efdd0eee453250e60ad1bc5a0d3126cdb3a882b3b46ab88ecb59616a2798b"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/sources/ntrs_record.json",
+      "bytes": 4676,
+      "sha256": "f6d460524321241ae706dfaf21b8c48bcb0f976504a2411b10cb5025f3ef0b1b"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/update_manifests.py",
+      "bytes": 2382,
+      "sha256": "00d42c5ee20e6d1ae42d779efa4c61c227b02112c4e47adda4d2a0f943ca4626"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/validate.py",
+      "bytes": 5159,
+      "sha256": "9d57563cb7a3fa230aca4de4c29564633a6d229a836b7b06b0642d9b7c5992e7"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/validation.json",
+      "bytes": 4704,
+      "sha256": "7bb78912dbc61ccf5fadb2547e028391cba34f1778d10704485174c6afa25168"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/t1811_run_artifacts/validation_retained_only.json",
+      "bytes": 4321,
+      "sha256": "bb11cc7a1b91c2d1791765b69d5117a771a59bc3709d2144864c5b4b62015cc0"
+    },
+    {
       "path": "outputs/research/MS-03/local_validation/validate.py",
       "bytes": 3668,
       "sha256": "c9519d327e592ad4bd6becc913812a1a6bb466955d51dac37b1d1122ce34760c"
@@ -1632,8 +1807,8 @@
     },
     {
       "path": "docs/research/MS-03/local_validation/research_notes.md",
-      "bytes": 33899,
-      "sha256": "9d2633ef840db74a9a36bee6b12cc37bbfb95f86d1443733e1bd0b34c872a9b7"
+      "bytes": 37077,
+      "sha256": "8f336fc159fe8e1bb2fea8a57d6abd2e7f6ea21e2a9d2433de8d496f147f7d6b"
     }
   ],
   "source_preservation_note": "Original acquired PDS labels, KML and XML retain provider whitespace/CRLF; git diff whitespace warnings for source bytes are intentionally not normalized. Authored Python/Markdown passed whitespace check.",
@@ -1662,6 +1837,12 @@
       "date_taipei": "2026-11-15",
       "package": "production_history/manifest.json",
       "change": "dated historical documentation confirms second summary optimization; exact build/config/prepost/coefficient records not obtained; no numerical changes"
+    },
+    {
+      "starting_sha": "fee734610c6bacc57880eaaba1a1301f09fdd4d6",
+      "date_taipei": "2026-11-15",
+      "package": "t1811_run_artifacts/manifest.json",
+      "change": "official bundle/index/labels cross-checked; original author paper acquired and selected pages read; run coefficients/settings/paired arrays still unknown; no numerical replay/correction"
     }
   ],
   "original_tables_followup": {

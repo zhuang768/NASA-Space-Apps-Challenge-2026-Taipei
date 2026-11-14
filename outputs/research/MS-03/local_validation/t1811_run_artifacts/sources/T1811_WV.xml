@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/proc/v1/PDS4_PROC_1M00_1300.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/mission/mro/v1/PDS4_MRO_1M00_1320.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" 
+    xmlns:mro="http://pds.nasa.gov/pds4/mission/mro/v1" 
+    xmlns:proc="http://pds.nasa.gov/pds4/proc/v1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1       https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.xsd      http://pds.nasa.gov/pds4/proc/v1       https://pds.nasa.gov/pds4/proc/v1/PDS4_PROC_1M00_1300.xsd     http://pds.nasa.gov/pds4/mission/mro/v1    https://pds.nasa.gov/pds4/mission/mro/v1/PDS4_MRO_1M00_1320.xsd     ">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:mro_crism_mrdr:data_mrdr:t1811_mrrwv_60n243_0327_4</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>t1811_mrrwv_60n243_0327_4 MRDR WV</title>
+    <information_model_version>1.22.0.0</information_model_version>
+    <product_class>Product_Observational</product_class>
+    <Alias_List>
+      <Alias>
+        <alternate_id>T1811_MRRWV_60N243_0327_4</alternate_id>
+        <comment>PDS3 PRODUCT_ID</comment>
+      </Alias>
+    </Alias_List>
+    <Modification_History>
+      <Modification_Detail>
+        <modification_date>2024-09-24</modification_date>
+        <version_id>1.0</version_id>
+        <description>PDS4 conversion.</description>
+      </Modification_Detail>
+    </Modification_History>
+  </Identification_Area>
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time nilReason="inapplicable" xsi:nil="true"/>
+      <stop_date_time nilReason="inapplicable" xsi:nil="true"/>
+    </Time_Coordinates>
+    <Investigation_Area>
+      <name>MARS RECONNAISSANCE ORBITER</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:investigation:mission.mars_reconnaissance_orbiter</lid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component>
+        <name>MARS RECONNAISSANCE ORBITER</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.mro</lid_reference>
+          <reference_type>is_instrument_host</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>COMPACT RECONNAISSANCE IMAGING SPECTROMETER FOR MARS</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument:crism.mro</lid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>Mars</name>
+      <type>Planet</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:target:planet.mars</lid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+    <Mission_Area>
+      <mro:MRO_Parameters>
+        <mro:product_type>MRDR</mro:product_type>
+        <mro:product_version_id>1</mro:product_version_id>
+        <mro:producer_institution_name>Johns Hopkins University Applied Physics Laboratory</mro:producer_institution_name>
+      </mro:MRO_Parameters>
+    </Mission_Area>
+    <Discipline_Area>
+      <proc:Processing_Information>
+        <Local_Internal_Reference>
+          <local_identifier_reference>wavelength_source_table</local_identifier_reference>
+          <local_reference_type>processing_information_to_data_object</local_reference_type>
+        </Local_Internal_Reference>
+        <proc:Process>
+          <proc:Software>
+            <proc:Software_Program>
+              <proc:name>crism_mapping_execute_flow</proc:name>
+              <proc:program_version>1.03.94</proc:program_version>
+              <proc:program_stop_date_time>2023-07-18T18:12:54Z</proc:program_stop_date_time>
+            </proc:Software_Program>
+          </proc:Software>
+        </proc:Process>
+      </proc:Processing_Information>
+    </Discipline_Area>
+  </Observation_Area>
+  <File_Area_Observational>
+    <File>
+      <file_name>t1811_mrrwv_60n243_0327_4.tab</file_name>
+      <creation_date_time>2023-07-18T18:12:54Z</creation_date_time>
+      <comment>
+                A listfile including spectrometer identifier, detector row numbers,
+                and wavelengths in the Map Projected Multispectral RDR.
+            </comment>
+    </File>
+    <Table_Character>
+      <local_identifier>wavelength_source_table</local_identifier>
+      <offset unit="byte">0</offset>
+      <records>72</records>
+      <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+      <Record_Character>
+        <fields>3</fields>
+        <groups>0</groups>
+        <record_length unit="byte">20</record_length>
+        <Field_Character>
+          <name>spect_id</name>
+          <field_location unit="byte">1</field_location>
+          <data_type>ASCII_Integer</data_type>
+          <field_length unit="byte">1</field_length>
+          <description>Spectrometer identifier; 0 = IR; 1 = VNIR</description>
+        </Field_Character>
+        <Field_Character>
+          <name>rownum</name>
+          <field_location unit="byte">3</field_location>
+          <data_type>ASCII_Integer</data_type>
+          <field_length unit="byte">4</field_length>
+          <description>detector row number (0-479)</description>
+        </Field_Character>
+        <Field_Character>
+          <name>sampl_wav</name>
+          <field_location unit="byte">8</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">11</field_length>
+          <unit>nm</unit>
+          <description>Standard sampling center wavelength in nm</description>
+        </Field_Character>
+      </Record_Character>
+    </Table_Character>
+  </File_Area_Observational>
+  <File_Area_Observational_Supplemental>
+    <File>
+      <file_name>t1811_mrrwv_60n243_0327_4.lbl</file_name>
+    </File>
+    <Stream_Text>
+      <offset unit="byte">0</offset>
+      <parsing_standard_id>PDS3</parsing_standard_id>
+      <description>PDS3 label</description>
+      <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+    </Stream_Text>
+  </File_Area_Observational_Supplemental>
+</Product_Observational>

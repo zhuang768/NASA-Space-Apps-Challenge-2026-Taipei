@@ -973,3 +973,13 @@ input {
   .workbench-grid > .main-column { align-self: stretch; }
   .workbench-grid > .main-column > section:last-child { flex-grow: 1; }
 }
+
+/* Progressive disclosure keeps the default research view concise. */
+.progressive-details {border-top:1px solid var(--border);padding:14px 0;}
+.progressive-details>summary {cursor:pointer;font-size:.88rem;color:var(--text-secondary);font-weight:600;}
+.progressive-details[open]>summary {margin-bottom:16px;color:var(--cyan);}
+.progressive-details p {font-size:.86rem;line-height:1.65;}
+.shortlist-expand {width:100%;justify-content:center;margin-top:14px;}
+.map-method summary {cursor:pointer;color:var(--text-muted);font-size:.75rem;}
+.map-method p {max-width:78ch;}
+.discovery-detail .discovery-figure {margin:4px 0 18px;}

@@ -146,7 +146,7 @@ export function App() {
           onClick={() => setWorkspaceMode("discovery")}
           disabled={!discovery}
         >
-          Mars discovery references
+          Mars research candidates
         </button>
         <button
           type="button"
@@ -154,7 +154,7 @@ export function App() {
           aria-pressed={workspaceMode === "workbench"}
           onClick={() => setWorkspaceMode("workbench")}
         >
-          Earth↔Mars workbench
+          Earth analog search
         </button>
       </nav>
 
@@ -167,8 +167,7 @@ export function App() {
                   TerraMatch · Mars Site Discovery
                 </h1>
                 <p className="header-description">
-                  Team zasa reporting references from the GPT research handoff. Four themes retained;
-                  scores are experimental descriptors only.
+                  Explore provisional Mars locations by research purpose. Select a candidate for its map, evidence and open questions.
                 </p>
               </div>
               <span className="badge badge-amber">Novelty unchecked</span>
@@ -207,8 +206,7 @@ export function App() {
                   <span className="eyebrow">Research workflow</span>
                   <h2>Find a region. Understand the evidence.</h2>
                   <p>
-                    Choose a Mars target above, select an Earth candidate, then inspect the match
-                    and its limits. Do not reuse these rankings for the Mars discovery references.
+                    Choose a Mars target and an Earth region. Open evidence when you need the details.
                   </p>
                 </div>
                 <span className="scope-note">Terrain ranked · 3 other themes unscored</span>
@@ -255,7 +253,7 @@ export function App() {
                             : "Select an available candidate to continue."}
                         </p>
                       </div>
-                      {selectedCandidate && (
+                      {selectedCandidate && mobileTab !== "maps" && (
                         <div className="distance-readout">
                           <span className="mono">
                             {selectedCandidate.terrain_distance.toFixed(4)}
@@ -268,7 +266,7 @@ export function App() {
                       <div className="selection-findings">
                         <div>
                           <h3>What supports this match</h3>
-                          <p>{selectedCandidate.keySupport}</p>
+                          <p>{mobileTab === "maps" ? "Ranked using regional slope and relief statistics. Other themes do not contribute to this ranking." : selectedCandidate.keySupport}</p>
                         </div>
                         <div>
                           <h3>What remains unresolved</h3>

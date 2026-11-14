@@ -82,15 +82,25 @@ function CardDetail({
         <div>
           <h3>研究用途</h3>
           <p>{card.intended_use}</p>
-          <p className="summary-limit">{card.treatment}</p>
+
         </div>
         <div>
           <h3>缺點與限制</h3>
           <p>{card.weaknesses}</p>
-          <p className="summary-limit">下一步：{card.next_checks}</p>
+
         </div>
       </div>
 
+        <figure className="discovery-figure">
+          <img
+            src={figureSrc}
+            alt={`Map context for ${card.id} (${card.purpose_key})`}
+            loading="lazy"
+          />
+          <figcaption>Regional descriptor map; not a validated landing-site assessment.</figcaption>
+        </figure>
+      <details className="progressive-details"><summary>研究備註與下一步 / Research notes</summary><p>{card.treatment}</p><p>{card.next_checks}</p></details>
+      <details className="progressive-details"><summary>四大面向與比較條件 / Four-theme evidence</summary>
       <section aria-label="Four themes for this reference">
         <h3 className="panel-title" style={{ marginBottom: 10 }}>
           四大面向（實驗性描述指標）
@@ -119,6 +129,8 @@ function CardDetail({
         </div>
       </section>
 
+      </details>
+      <details className="progressive-details"><summary>完整數值 / All measurements</summary>
       <section className="discovery-metrics" aria-label="Layer values">
         <h3 className="panel-title">資料數值（0.5° stack）</h3>
         <dl className="discovery-metric-list">
@@ -164,6 +176,8 @@ function CardDetail({
         </p>
       </section>
 
+      </details>
+      <details className="progressive-details"><summary>來源與引用 / Sources</summary>
       <section aria-label="Sources and map">
         <h3 className="panel-title">來源與地圖</h3>
         <ul className="discovery-source-list">
@@ -186,16 +200,11 @@ function CardDetail({
             );
           })}
         </ul>
-        <figure className="discovery-figure">
-          <img
-            src={figureSrc}
-            alt={`Map context for ${card.id} (${card.purpose_key})`}
-            loading="lazy"
-          />
-          <figcaption className="mono">{card.map_figure}</figcaption>
-        </figure>
+
       </section>
 
+      </details>
+      <details className="progressive-details"><summary>適用限制 / Interpretation limits</summary>
       <section aria-label="Prohibited claims">
         <h3 className="panel-title">禁止宣稱</h3>
         <ul className="discovery-prohibit-list">
@@ -204,6 +213,7 @@ function CardDetail({
           ))}
         </ul>
       </section>
+      </details>
     </article>
   );
 }
@@ -227,9 +237,8 @@ export function MarsDiscoveryPanel({ discovery, selectedId, onSelectId }: Props)
         <div className="guardrail-banner" role="note">
           <AlertTriangle size={16} aria-hidden="true" />
           <span>
-            {discovery.novelty_policy}. Earth analog pairing:{" "}
-            <strong>{discovery.earth_analog_pairing}</strong>. Firm-rocky claim:{" "}
-            {discovery.firm_rocky_status}.
+            Research references only. Earth pairing and exact-site novelty remain unverified.
+            Firm-ground suitability is not established.
           </span>
         </div>
 
@@ -250,7 +259,7 @@ export function MarsDiscoveryPanel({ discovery, selectedId, onSelectId }: Props)
                     {fmtLatLon(card.lat, card.lon)}
                   </span>
                   <span className="discovery-card-role">{roleLabel(card.role)}</span>
-                  <span className="badge badge-amber">{noveltyLabel(card.novelty_status)}</span>
+                  {active && <span className="badge badge-amber">{noveltyLabel(card.novelty_status)}</span>}
                 </button>
               </li>
             );
@@ -259,7 +268,9 @@ export function MarsDiscoveryPanel({ discovery, selectedId, onSelectId }: Props)
 
         {discovery.limitations.length > 0 && (
           <details className="discovery-limits">
-            <summary>Stack limitations</summary>
+            <summary>Full research limitations</summary>
+            <p>{discovery.novelty_policy}</p>
+            <p>Earth pairing: {discovery.earth_analog_pairing}. Firm-ground claim: {discovery.firm_rocky_status}.</p>
             <ul>
               {discovery.limitations.map((item) => (
                 <li key={item}>{item}</li>
@@ -271,7 +282,7 @@ export function MarsDiscoveryPanel({ discovery, selectedId, onSelectId }: Props)
 
       <main className="panel discovery-main" role="main">
         {selected ? (
-          <CardDetail card={selected} discovery={discovery} />
+          <CardDetail key={selected.id} card={selected} discovery={discovery} />
         ) : (
           <p className="empty-state">No discovery cards available.</p>
         )}

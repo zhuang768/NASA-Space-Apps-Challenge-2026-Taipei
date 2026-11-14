@@ -152,10 +152,11 @@ export function DualSideMap({ target, selectedCandidate, onSelectCandidate }: Pr
       <div className="panel-header">
         <div>
           <h2 className="panel-title">Earth & Mars spatial context</h2>
-          <p style={{ margin: "2px 0 0", fontSize: "0.78rem", color: "var(--text-muted)" }}>
+          <p className="summary-limit">100 km regions on separate planetary coordinate maps. No Mars image basemap loaded.</p>
+          <details className="map-method"><summary>Map scale & method</summary>          <p style={{ margin: "2px 0 0", fontSize: "0.78rem", color: "var(--text-muted)" }}>
             Earth (R = 6,371.0 km, Δlat ≈ {earthWindowLatDeg.toFixed(2)}° per 100 km) vs. Mars (R = 3,396.0 km, IAU2000 planetocentric, Δlat ≈ {((100 / 3396.0) * (180 / Math.PI)).toFixed(2)}° per 100 km).
             Physical 100×100 km windows — never synced by raw zoom level or Web Mercator.
-          </p>
+          </p></details>
         </div>
         <button
           type="button"

@@ -15,10 +15,12 @@ export function CandidateList({
   selectedCandidate,
   onSelectCandidate,
 }: Props) {
+  const [showAll, setShowAll] = useState(false);
   const [filter, setFilter] = useState<FilterMode>("all");
 
   useEffect(() => {
     setFilter("all");
+    setShowAll(false);
   }, [candidates]);
 
   const featuredCount = candidates.filter((c) => c.featured).length;
@@ -33,13 +35,17 @@ export function CandidateList({
     return candidates;
   }, [candidates, filter]);
 
+  const visible = showAll ? filtered : filtered.slice(0, 3);
+  const current = filtered.find(c => c.candidate_id === selectedCandidate?.candidate_id);
+  const displayed = current && !visible.includes(current) ? [...visible, current] : visible;
+
   return (
     <aside className="panel candidate-shortlist" aria-label="Earth candidate shortlist">
       <div className="panel-header" style={{ marginBottom: 8 }}>
         <div>
           <h2 className="panel-title">Earth candidates</h2>
           <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", marginTop: 2 }}>
-            Ranked within 60°S–60°N (≥300 km separation, terrain D only)
+            Select a region to explore. Terrain ranking only.
           </div>
         </div>
       </div>
@@ -96,7 +102,7 @@ export function CandidateList({
         </div>
       ) : (
         <div className="candidate-card-list">
-          {filtered.map((c) => {
+          {displayed.map((c) => {
             const isSel = selectedCandidate?.candidate_id === c.candidate_id;
             return (
               <button
@@ -154,17 +160,15 @@ export function CandidateList({
                   </div>
                 )}
 
-                {isSel && <div style={{ fontSize: "0.75rem", color: "var(--text-secondary)" }}>
-                  <strong style={{ color: "#34d399" }}>Support:</strong> {c.keySupport}
-                </div>}
-                {isSel && <div style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>
-                  <strong style={{ color: "#fbbf24" }}>Gap:</strong> {c.mainGap}
-                </div>}
               </button>
             );
           })}
         </div>
       )}
+      {filtered.length > 3 && <button className="btn shortlist-expand" aria-expanded={showAll} onClick={() => setShowAll(!showAll)}>
+        {showAll ? "Show fewer candidates" : `Show all ${filtered.length} candidates`}
+      </button>}
+      <p className="summary-limit">Showing {displayed.length} of {filtered.length}. Full results remain available.</p>
     </aside>
   );
 }

@@ -1,30 +1,10 @@
 .venv/
 __pycache__/
-*.egg-info/
-.pytest_cache/
-.ruff_cache/
-.DS_Store
+*.py[cod]
+.cache/
+.mplconfig/
+data/raw/
+data/processed/
+*.part
 
-# Earth raw downloads are multi-GB; keep them out of git.
-# Mars raw + processed grids are tracked (each file < 100 MB).
-data/**
-!data/README.md
-!data/raw/
-!data/raw/mars/
-!data/raw/mars/**
-!data/processed/
-!data/processed/**
-data/raw/earth/
-data/**/*.part
-NASA_SpaceApps_2026_Earth_Data/
-
-# Web build artefacts
-web/node_modules/
-web/dist/
-
-# Credentials
-.netrc
-.env
-
-# Wrangler local state
-.wrangler/
+outputs/research/mars_reselection_20261114/screened_pool.csv.gz

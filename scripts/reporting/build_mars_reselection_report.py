@@ -6,9 +6,11 @@ alter original data, old candidates, weights, EH, the workbook, or website.
 """
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import math
+import os
 import unicodedata
 from datetime import datetime
 from pathlib import Path
@@ -19,6 +21,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 from matplotlib.font_manager import FontProperties
+from matplotlib import font_manager
+from matplotlib.ft2font import FT2Font
 from matplotlib.patches import Rectangle
 import numpy as np
 import pandas as pd
@@ -26,8 +30,8 @@ import xarray as xr
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "outputs/research/mars_reselection_20261114"
-VERSION = "MARS-RESELECT-20261114-v1"
-FONT = FontProperties(fname="/Library/Fonts/Arial Unicode.ttf")
+VERSION = "MARS-RESELECT-20261114-v1-clean"
+FONT = FontProperties()
 BLUE, INK, GREY, LIGHT = "#173f59", "#172b3a", "#526575", "#edf3f6"
 SPECS = [
     dict(id="MS-01", review="A", name="72°E 北部低地扇區", role="雙深度冰線索與低起伏並存",
@@ -73,6 +77,47 @@ USAGE = [
     ["探測車", "MEDA局部亮溫等159418列", "品質與尺度參照", "Jezero局部且完整QA合格0列；不移植"],
     ["未取得", "局部風壓、材料、冰真值、細地形等", "明列未知", "沒有數值，不補造或視為條件通過"],
 ]
+
+
+def resolve_report_font(requested=None):
+    """Choose a readable CJK font, allowing portable CLI/environment overrides."""
+    supplied = requested or os.environ.get("MARS_REPORT_FONT")
+    selection = "--font" if requested else ("MARS_REPORT_FONT" if supplied else "automatic")
+    candidates = [supplied] if supplied else [
+        "/Library/Fonts/Arial Unicode.ttf",  # Preserve the original Mac default.
+        "/System/Library/Fonts/PingFang.ttc",
+        "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+        "/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc",
+        "/usr/share/fonts/truetype/noto/NotoSansTC-Regular.ttf",
+        "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+        "C:/Windows/Fonts/msjh.ttc",
+    ]
+    if not supplied:
+        cjk_names = {"Noto Sans CJK TC", "Noto Sans CJK SC", "Noto Sans TC",
+                     "Noto Serif CJK TC", "Microsoft JhengHei", "PingFang TC",
+                     "WenQuanYi Zen Hei", "Arial Unicode MS"}
+        candidates += [entry.fname for entry in font_manager.fontManager.ttflist
+                       if entry.name in cjk_names]
+    attempted = []
+    for raw in dict.fromkeys(candidates):
+        path = Path(raw).expanduser()
+        if not path.is_file():
+            attempted.append(f"{path}: missing")
+            continue
+        try:
+            face = FT2Font(str(path))
+            if not all(face.get_char_index(ord(ch)) for ch in "火星研究資料候選臺灣"):
+                attempted.append(f"{path}: missing required Traditional Chinese glyphs")
+                continue
+        except (OSError, RuntimeError) as exc:
+            attempted.append(f"{path}: unreadable ({exc})")
+            continue
+        return path.resolve(), selection
+    raise RuntimeError(
+        "No readable Traditional Chinese report font was found. Install a CJK font "
+        "such as Noto Sans CJK, then use --font /path/to/font.ttf (or .ttc/.otf), "
+        "or set MARS_REPORT_FONT. Checked: " + "; ".join(attempted)
+    )
 
 
 def sha(p):
@@ -135,7 +180,7 @@ class Page:
         if self.y < .82:
             raise ValueError(f"PDF page {self.number} overflows: y={self.y}")
         self.ax.plot([.55,7.72],[.61,.61], color="#d5e1e8", lw=.7)
-        self.text(.55,.44,"MARS-RESELECT-20261114-v1 | 條件式研究候選 / 限定範圍查核",8,GREY)
+        self.text(.55,.44,f"{VERSION} | 條件式研究候選 / 限定範圍查核",8,GREY)
         self.text(7.42,.44,str(self.number),8,GREY)
         self.pdf.savefig(self.fig); plt.close(self.fig)
 
@@ -159,7 +204,10 @@ def map_figure(records, points):
     return p
 
 
-def build():
+def build(font_path=None):
+    global FONT
+    resolved_font, font_selection = resolve_report_font(font_path)
+    FONT = FontProperties(fname=str(resolved_font))
     native=json.loads((OUT/"candidate_native_evidence.json").read_text())
     method=json.loads((OUT/"method.json").read_text())
     audit=json.loads((OUT/"bounded_prior_site_audit.json").read_text())
@@ -307,11 +355,16 @@ def build():
     md[i:i]=["- preservation_check.json另核對既有MR-v3/EH檔與固定main Git blob、Excel與既有驗收hash；與Mars輸入manifest的保護範圍分開。", "- final_candidates.csv的native_review_status保留原生QA交接狀態；final_selection_status才表示本報完成限定查核後保留，不回寫原生輸入狀態。", ""]
     for sid,title,url,scope in SOURCES:md += [f"- [{sid} {title}]({url})：{scope}。"]
     (OUT/"report.md").write_text("\n".join(md)+"\n")
-    manifest={"version":VERSION,"created_taipei":datetime.now(ZoneInfo("Asia/Taipei")).isoformat(),"status":"local_report_built_pending_visual_QA","selected_review_ids":[s["review"] for s in SPECS],"selected_ids":[s["id"] for s in SPECS],"files":[]}
+    manifest={"version":VERSION,"created_taipei":datetime.now(ZoneInfo("Asia/Taipei")).isoformat(),"status":"local_report_built_pending_visual_QA","selected_review_ids":[s["review"] for s in SPECS],"selected_ids":[s["id"] for s in SPECS],"report_font":{"path":str(resolved_font),"selection":font_selection,"sha256":sha(resolved_font)},"files":[]}
     for name in ["mars_three_candidates_report_zh.pdf","report.md","candidate_map.png","final_candidates.csv","selected_targets.json","all_data_usage.csv","bounded_prior_site_audit.json"]:
         q=OUT/name;manifest["files"].append({"path":q.relative_to(ROOT).as_posix(),"bytes":q.stat().st_size,"sha256":sha(q)})
     (OUT/"report_manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n")
     print(pdf_path);print(OUT/"report.md")
 
 
-if __name__=="__main__":build()
+if __name__=="__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--font", type=Path,
+                        help="Traditional Chinese font file; overrides MARS_REPORT_FONT and automatic discovery")
+    arguments = parser.parse_args()
+    build(arguments.font)

@@ -1,113 +1,49 @@
-# Mars Analog Finder
+# ZASA | Mars Reconnaissance Candidates
 
-### Earth–Mars analog research · NASA Space Apps 2026 Taipei · Team zasa
+NASA Space Apps 2026 · Team zasa
 
-Search open terrain data for Earth candidate regions, compare them with Mars targets, and expose the supporting evidence, missing data and limits of each analogy.
+Three regional targets for follow-up investigation of shallow subsurface ice. The team selected **MS-01, MS-02 and MS-03** on 14 November 2026 after a new inventory of available Mars data, unweighted trade-off screening, native-grid checks and a bounded prior-site review.
 
-**[Live dashboard → nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev)** · [Methods](docs/README.md) · [Mars discovery](outputs/mars_discovery/README.md) · [Research handoff](docs/mars_discovery_handoff.md) · [Mars data](outputs/mars_profiles/handoff.md) · [Data guide](data/README.md) · [Contributing](CONTRIBUTING.md)
+**These are conditional research targets.** A non-hit in the inspected catalogs does not establish that a place has never been studied or proposed. Ice presence, depth, quantity, extractability and landing safety remain unverified.
 
-> **Status:** four Mars reporting references are available. Earth pairing and same-purpose novelty checks remain research work; validated four-theme scoring is unfinished. Not NASA-endorsed, and the competition submission is not complete. Earth–Mars-only scope is a locked team decision.
+## The three selected targets
 
-## Results
+| Target | Center (planetocentric latitude, east-positive longitude) | Why retain it? | Main trade-off |
+|---|---|---|---|
+| **MS-01** | **56.75°N, 72.75°E** | Positive, relatively strong ice-consistency descriptors in both depth zones; low regional relief | 73/100 native TES cells remain after excluding interpolation; local material and ice truth unknown |
+| **MS-02** | **52.75°N, 168.25°E** | Lowest latitude of this three-case set; positive ice descriptors and the most complete TES support | Higher MY34 dust p95 and greater regional relief than the other two |
+| **MS-03** | **57.75°N, 242.25°E** | Lowest regional mean slope and reconstructed dust in this set; strong shallow-ice descriptor | Lower 1-5 m consistency; partial TES support and coarse, sparse temperature context |
 
-![Experimental shallow-ice candidate screening](outputs/mars_discovery/figures/isru_shallow_ice_map.png)
+![Selected research targets and published ice-exposing impact points](outputs/research/mars_reselection_20261114/candidate_map.png)
 
-Current reporting references are I-01, I-02, D-03 and D-04. They require environmental, geological and prior-literature verification. The map does not establish landing safety, novelty or mission success. Previous Jezero/Gale/Arcadia Earth rankings and their 4 km / 10 km comparison outputs have been removed at the owner's request.
+## Read the results
 
-| Workstream | Status | Evidence |
-|---|---|---|
-| Common physical-scale terrain methods | Methods retained; previous ranking outputs removed | [Method](docs/earth_pipeline.md) |
-| Mars MOLA / TES / SWIM / dust context | Integrated | [Method](docs/mars_pipeline.md), [sources and values](outputs/mars_profiles/profiles.json) |
-| Regional day/night temperature context | New coarse MCS time-corrected derivative; unscored and metadata incomplete | [Source, extraction and remaining gaps](outputs/mars_regional_temperature/README.md) |
-| Rover day/night brightness temperature | Exploratory; incomplete quality support | [MEDA method](docs/mars_temperature.md), [quality summary](outputs/mars_temperature/summary.json) |
-| Multi-theme Earth raw data | Teammate inventory; complete batch not on this machine | [Inventory](docs/earth_inventory.csv), [handoff](docs/data_handoff.md) |
-| Four-theme scoring and field-site validation | Unfinished | [Quantity comparison](docs/cross_reference.md) |
-| Interactive workbench | Official site on the team Cloudflare Worker; auto-deploy from `main` waits for the team API token | [Public site](#public-site-cloudflare), [deployment check](docs/deployment_check_2026-11-14.md) |
-| English presentation and official submission | Previous slide draft removed; final materials pending | [Submission preparation](docs/submission/preparation.md) |
+- [English research report](docs/REPORT.md)
+- [中文報告 PDF](outputs/research/mars_reselection_20261114/mars_three_candidates_report_zh.pdf) · [中文文字版](outputs/research/mars_reselection_20261114/report.md)
+- [Three-target data table](outputs/research/mars_reselection_20261114/final_candidates.csv) · [Target footprints](outputs/research/mars_reselection_20261114/selected_targets.json)
+- [Every data product and its role](outputs/research/mars_reselection_20261114/all_data_usage.csv)
+- [Bounded prior-site checks and search scope](outputs/research/mars_reselection_20261114/bounded_prior_site_audit.json)
+- [Numerical checks](outputs/research/mars_reselection_20261114/numerical_validation.json) · [Report checks](outputs/research/mars_reselection_20261114/report_validation.json)
+- [Reproduce the analysis](docs/REPRODUCE.md) · [Data attribution and terms](DATA_LICENSES.md)
 
-## Run locally
+## What was considered
 
-Python 3.11 or later is required; previous runs used Python 3.12. Run from the repository root:
+MOLA elevation, slope and relief; TES thermal inertia and interpolation mask; both available SWIM depth-zone products; MY34 and MY35 dust time series, seasons, p95, maxima and reliability; MCS time-adjusted 03:00/15:00 temperature context; and the availability/quality limits of rover-local MEDA records.
 
-```bash
-python3.12 -m venv .venv
-.venv/bin/python -m pip install -e ".[dev]"
-.venv/bin/python -m scripts.profile_mars --strict
-.venv/bin/python -m scripts.process_mars_temperature
-.venv/bin/python -m pytest -q
-.venv/bin/ruff check .
-```
+Six directional descriptors were used for exploratory trade-offs. Other variables were retained as context or limitations instead of being forced into a scalar suitability score. Missing local wind, pressure, material, ice ground truth and fine hazards remain unknown.
 
-Existing Mars inputs and outputs are versioned. Processing commands rebuild their outputs; use the linked files directly when reading results. `--strict` checks core grid inputs, not MEDA quality acceptance.
+All three targets are above 50°N. They do **not** meet the latitude envelope used by the cited MCOA2025 study or the current SkyFall design. This work is scoped to ice-investigation research; it does not recommend a validated crewed base or a mission-approved landing site.
 
-Website (`web/`, Node 22):
+## Clean-code rebuild
 
-```bash
-python3 web/scripts/build_workbench_data.py   # rebuild the data bundle from outputs/
-cd web && npm ci && npm run dev               # http://127.0.0.1:5173
-```
+The clean package was tested from checksum-verified public source files. Its rebuilt global NetCDF is not byte-identical and has small measured floating-point differences, which are disclosed in [the rebuild comparison](outputs/research/mars_reselection_20261114/cleanup_rebuild_validation.json). Pool/front memberships and the 22 review coordinates were unchanged; 88 non-stack native numerical columns and both dust/MCS sequence files reproduced exactly. The frozen report retains its original version; active scripts use v1-clean.
 
-Earth screening additionally needs ETOPO and the land mask; see [Earth execution](docs/earth_pipeline.md). Some Earthdata products require an account. Never commit credentials. [requirements-lock.txt](requirements-lock.txt) records the tested environment; cross-platform installation still requires verification.
+## Repository scope
 
-```text
-analog/       Scientific readers, scale handling and analysis
-scripts/      Download, processing, export and plotting entry points
-tests/        Data and method checks
-data/         Mars inputs and processed data; large Earth files handed off separately
-outputs/      Candidates, provenance, sensitivity, profiles and figures
-docs/         Methods, data contracts, submission drafts and historical records
-web/          TerraMatch Mission Lab: React + Vite workbench built from outputs/
-```
+This main branch contains the selected three-target research release, its evidence and the minimum code needed to reproduce it. Large downloaded source grids are obtained from their providers and verified using the input manifest.
 
-See the [data guide](data/README.md), [output guide](outputs/README.md) and [file inventory](docs/repository_inventory.csv).
+The earlier research delivery, Earth-analog work, exploratory rankings, website and deployment history are retained in the [pre-cleanup archive](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/tree/archive/pre-msr-cleanup-20261114). The original Earth-analog discovery objective remains separate from this Mars-target update.
 
-## Public site (Cloudflare)
+The PDFs and original report manifests are frozen as-produced records. Their statements about the earlier local-only delivery describe the time they were generated. The current GitHub release state is recorded in [CURRENT_STATUS.json](CURRENT_STATUS.json).
 
-| Item | Value |
-|---|---|
-| Official URL | [nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev) |
-| Cloudflare account | Team account "zizi" |
-| Account ID | `5a215a2a3ffc384e958ae5bcb53687d0` (not a secret) |
-| Service | Workers & Pages → Worker `nasa-space-apps-challenge-2026-taipei` (static assets only) |
-| Config | Root [`wrangler.jsonc`](wrangler.jsonc): Worker name, assets from `web/dist`, single-page-app fallback |
-| Auto-deploy | [`.github/workflows/cloudflare-pages.yml`](.github/workflows/cloudflare-pages.yml): every push to `main` builds `web/dist`, stamps `deployment.json`, runs `wrangler deploy`, then checks the live URL serves that commit |
-| Retired | `terramatch-mission-lab.pages.dev` (personal account) is no longer updated; do not share it |
-
-**Repository secrets** (Settings → Secrets and variables → Actions; values are pasted in GitHub only, never committed):
-
-- `CLOUDFLARE_ACCOUNT_ID` = the team account ID above.
-- `CLOUDFLARE_API_TOKEN` = a token created in the team account (My Profile → API Tokens → Create Token → *Edit Cloudflare Workers* template, scoped to the team account). Paste the token value only, with no quotes, spaces or command text.
-
-Until both secrets are set, the workflow stops at "Validate deployment configuration" and the site changes only through a manual deploy. Use either GitHub Actions or Cloudflare's own Git build for this Worker, not both.
-
-**Manual deploy** (needs Workers access to the team account):
-
-```bash
-python3 web/scripts/build_workbench_data.py
-(cd web && npm ci && npm run build)
-CLOUDFLARE_ACCOUNT_ID=5a215a2a3ffc384e958ae5bcb53687d0 npx wrangler deploy
-```
-
-## Scientific boundaries
-
-- Define comparison windows in kilometers using the appropriate planetary radius. Equal angular grids do not imply equal physical support; interpolation creates no new detail.
-- MODIS kinetic LST, MEDA ground brightness temperature, POWER 2 m air temperature and TES thermal inertia are different quantities.
-- SWIM consistency is not ice amount or probability. Permafrost fraction is not extractable ice. Low NDVI is not evidence of lifelessness.
-- Earth 550 nm extinction AOT is not directly equivalent to Mars 9.3 µm absorption CDOD.
-- Missing or quality-incomplete evidence cannot count as confirmed support. Similar terrain statistics do not establish matching geology, origin or mission suitability.
-
-## Sources, rights and submission
-
-Versions, units and processing are documented in the [method index](docs/README.md) and output manifests. Dust-derived material has [separate CC-BY-SA terms](outputs/mars_profiles/LICENSE-data.md). Other products retain their providers' terms. An original-code license remains pending team confirmation; Apache-2.0 is a proposal, not an adopted license.
-
-[Official challenge](https://www.spaceappschallenge.org/2026/challenges/permanent-moon-base-locations-and-mars/) · [Official terms](https://www.spaceappschallenge.org/legal/)
-
-The official-repository Navigator reply supports preparing up to seven slides or a video of at most 30 seconds. The complete submission guide, account details and Taipei-specific requirements remain unverified. Drafts are not proof of submission. See the [remaining checklist](docs/submission/remaining_checklist.md).
-
-## Current research
-
-- [Selection principles](docs/site_discovery_brief.md) and [Mars research handoff](docs/mars_discovery_handoff.md).
-- [Experimental Mars references](outputs/mars_discovery/README.md): I-01, I-02, D-03 and D-04.
-- Team-specific research reports are under `docs/research/` on the branches where their authors publish them.
-- Previous terrain-ranking outputs, matching exports, old slide drafts and work logs were removed. Scientific input data, source metadata, methods, rights records and the new Mars references remain.
-- AI assistance and contribution records: [disclosures and rights](docs/submission/disclosures_and_rights.md).
+This is an independent team research project, not NASA endorsement or certification. Original observations remain attributed to their providers. AI assisted code, checks and writing; actual execution used Mac CPU, without GPU acceleration or model training.

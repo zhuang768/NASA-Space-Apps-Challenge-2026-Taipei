@@ -1,6 +1,6 @@
 {
-  "version": "MARS-RESELECT-20261114-v1-exploratory",
-  "generated_utc": "2026-11-14T14:17:46.408847+00:00",
+  "version": "MARS-RESELECT-20261114-v1-clean",
+  "generated_utc": "2026-11-14T14:46:06.670310+00:00",
   "status": "exploration_only_prior_site_audit_pending",
   "scope": "Mars regional ice-investigation candidates; no landing or extractability approval",
   "grid": {
@@ -59,12 +59,6 @@
     "Different product periods and footprints do not constitute one contemporaneous controlled experiment."
   ],
   "sources": [
-    {
-      "path": "data/processed/mars_stack_0p5deg.nc",
-      "url": null,
-      "bytes": 9341696,
-      "sha256": "a351dada81b4105825b8e3baa1d060a4f3ee25c09fef303409abdd36dbdcf7aa"
-    },
     {
       "path": "data/raw/mars/megt90n000eb.img",
       "url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg016/megt90n000eb.img",
@@ -132,24 +126,31 @@
       "sha256": "a75dbcd5e77fbc0d78591e62427843f0dadde10cd0e87e7767789025a2b7fecd"
     },
     {
-      "path": "data/raw/mars/temperature/mcs_corrected/record.json",
-      "url": "https://zenodo.org/api/records/17947556",
-      "bytes": 4938,
-      "sha256": "12d984134bbce03b661343f2e986a9c449b94c20c7f0bbf3e098c556b3e30b69"
+      "path": "data/processed/mars_stack_0p5deg.nc",
+      "url": null,
+      "bytes": 9341844,
+      "sha256": "6575c84778146fa28e46b702f312d831ab1a9598b7fba6fb8cc46481a202ac36"
     },
     {
-      "path": "outputs/mars_temperature/summary.json",
+      "path": "config/raw_inputs_manifest.json",
       "url": null,
-      "bytes": 9125,
-      "sha256": "f6b7d441e616f564171fa47b351e45622634d5ded5f980d2dd4392deea2a29a9"
+      "bytes": 4349,
+      "sha256": "fef7c389371c06a659cd8225f1fe4a2879d7f2b24591d5e4a21708b9acdb2e8f"
     },
     {
-      "path": "outputs/mars_discovery/mars_site_discovery.json",
+      "path": "config/reselection_exclusions.json",
       "url": null,
-      "bytes": 18852,
-      "sha256": "3c45d6af3c786394b856e36a726eada5cf00118e7a0cec39b24a88e8f992b7e9"
+      "bytes": 1554,
+      "sha256": "db5d24aa4930aa0fc77d7f1ac00d0b7eeee2674952ee7e198b3f63c2b5c0eb62"
+    },
+    {
+      "path": "config/source_context.json",
+      "url": null,
+      "bytes": 8806,
+      "sha256": "f1b024620d7759766fa784f4158e9045b177ba5c1a21a5ae663117b7ba8a1fce"
     }
   ],
-  "script_sha256": "f0b516a76f9cba816b65dcb6efd06d4e399d52d0fe81f092307943cdd285474d",
+  "script_sha256": "6d4f126496938f3b577a424252d0ff556fb578c5ed91dde596ad5d6bdf75e2e3",
+  "source_lineage_config": "config/source_context.json",
   "protected_inputs_hashes_unchanged": true
 }

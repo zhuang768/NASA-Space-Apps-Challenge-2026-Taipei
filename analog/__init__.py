@@ -1,1 +1,1 @@
-"""Tools for comparing Mars and Earth on common global grids."""
+"""Mars-only data readers and regional candidate methods for Team zasa."""

@@ -1,0 +1,266 @@
+{
+  "version": "MARS-RESELECT-20261114-v1-clean",
+  "scope": "immutable files in curated main; publication metadata excluded to avoid self-referential hashes",
+  "dynamic_metadata": [
+    "CURRENT_STATUS.json",
+    "PUBLICATION.json",
+    "release_manifest.json"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 148,
+      "sha256": "5df536946f922b9acf002f1f062a91b912d40e177c6a71fb131586b54fa12842"
+    },
+    {
+      "path": "DATA_LICENSES.md",
+      "bytes": 1776,
+      "sha256": "3b77d6eeddfeac64d379307900acc09890c2240b9d0d5626171a3ad60ad7ea02"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5008,
+      "sha256": "25ffa831bd0829af19621d451c8c37674e70848d77efdb1486c31518261a2954"
+    },
+    {
+      "path": "analog/__init__.py",
+      "bytes": 75,
+      "sha256": "726dbb2f8e8cfd582b53265cad0f1a7ec897f76e88fd6ab1859547db50be06a3"
+    },
+    {
+      "path": "analog/dust.py",
+      "bytes": 3781,
+      "sha256": "2178af7c960ed963b7e23c1e16dedc621b7eed8be5d988178a667b98bd7ede46"
+    },
+    {
+      "path": "analog/mars.py",
+      "bytes": 2780,
+      "sha256": "93513dc36ff8f602f97d7983be812c35f132aabea476f10d2ae778f4605643a5"
+    },
+    {
+      "path": "analog/mars_profiles.py",
+      "bytes": 1946,
+      "sha256": "e6940e624b299e0103c3902e6688ad83fb0426e482e07b05b71ef4de89ff94a7"
+    },
+    {
+      "path": "analog/pds.py",
+      "bytes": 3146,
+      "sha256": "e6d9bfb6b8a346df0876be8409ab5b24cb89f656db41d89bfea095fd8b3591f4"
+    },
+    {
+      "path": "analog/regional_temperature.py",
+      "bytes": 4156,
+      "sha256": "490fcdc9012e83f3e3b48e25d8bd8f1b85c7e0bc40f4ca4de81ca03b48932edb"
+    },
+    {
+      "path": "analog/stack.py",
+      "bytes": 4546,
+      "sha256": "c7de207c9e7b1d3ad35e60c49bac9b3fff01e91b232acc045dc2728936e5bebb"
+    },
+    {
+      "path": "analog/swim.py",
+      "bytes": 3214,
+      "sha256": "00821308786922f586730d75a497c6abe68825e30f2eef632616f32665e4d115"
+    },
+    {
+      "path": "analog/terrain.py",
+      "bytes": 1543,
+      "sha256": "62e5e34b6606fea77df658cd6e1bd8da15a13a4146fca33e3fee97c409b04346"
+    },
+    {
+      "path": "config/raw_inputs_manifest.json",
+      "bytes": 4349,
+      "sha256": "fef7c389371c06a659cd8225f1fe4a2879d7f2b24591d5e4a21708b9acdb2e8f"
+    },
+    {
+      "path": "config/reselection_exclusions.json",
+      "bytes": 1554,
+      "sha256": "db5d24aa4930aa0fc77d7f1ac00d0b7eeee2674952ee7e198b3f63c2b5c0eb62"
+    },
+    {
+      "path": "config/source_context.json",
+      "bytes": 8806,
+      "sha256": "f1b024620d7759766fa784f4158e9045b177ba5c1a21a5ae663117b7ba8a1fce"
+    },
+    {
+      "path": "docs/ARCHIVE.md",
+      "bytes": 1111,
+      "sha256": "7c5427c0a435a0e015d993dafe3ece89cb3f14258537ed42389e4b5cb0202dd2"
+    },
+    {
+      "path": "docs/REPORT.md",
+      "bytes": 7660,
+      "sha256": "36db20ee8f67b482cec01a4338703606d91620ef73724198df88c11550bc6bc2"
+    },
+    {
+      "path": "docs/REPRODUCE.md",
+      "bytes": 3799,
+      "sha256": "707bcacbe0577010c52bc71e9d380b399027a706c868adfbe3278093a1da374c"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/COMPUTATION.md",
+      "bytes": 9609,
+      "sha256": "e3ef245034f9db9aa4ab84e7c2252f22fc4b1b675c5bd6566ab0e02e69591af8"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/README.md",
+      "bytes": 1987,
+      "sha256": "50a6604d70da94cc430c5e8e6d02360faba89bd46b4067186b0710ee129bf07a"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/all_data_usage.csv",
+      "bytes": 803,
+      "sha256": "384fd5358f45c0ba4965a829f51a5e28496efbb5c90435f57823ec747ef345bd"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/bounded_prior_site_audit.json",
+      "bytes": 9162,
+      "sha256": "c9091e3155c5c6300eccb071ac2062dcd1611bf04559577385c8c40e9cd3e7aa"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/candidate_dust_series.csv.gz",
+      "bytes": 129644,
+      "sha256": "2df1349622536cf48270a8bf9c02dd970ebde3d1212aa9607252a1974adab308"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/candidate_map.png",
+      "bytes": 348396,
+      "sha256": "883e8b5432ebaae2e7a53a7be8254feec4cb650e7e7841795675bbc18b5ff1f5"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/candidate_mcs_bins.csv.gz",
+      "bytes": 17830,
+      "sha256": "f123c2055567327409cef64c51c51b1630a77290a7571c9f97ddb5d20a023d7d"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/candidate_metrics.csv",
+      "bytes": 6825,
+      "sha256": "1967086cd50f44bd3f309642e75239e3614ac6b69b3337ba29ffe4fe0ad4cb50"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/candidate_native_evidence.json",
+      "bytes": 38177,
+      "sha256": "3258b5c5bd7de7f15d96918bbce1c09afa6c5b7a329b8bc05cdb7c4fcd3f41c6"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/cleanup_rebuild_validation.json",
+      "bytes": 4942,
+      "sha256": "3e90709216278ac4ef2879178e7b77027709a97426987045441dd37302cf2fd0"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/exploratory_candidates.csv",
+      "bytes": 18828,
+      "sha256": "4f1ecd3e0383dda1c68128c2d6554ee54c05bbf0c33fcea068312536f8ff0ec3"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/final_candidates.csv",
+      "bytes": 5897,
+      "sha256": "83a03d1f4273fa7c45c0d22b5c29a8b8cfc0544e481d5f2bbca2c85812534c4e"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/fixed_targets.json",
+      "bytes": 412,
+      "sha256": "e819f6825da591bd09d816aebec93d21981b81b8562bad384414be58dbd796cc"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/known_ice_points_morgan2025.csv",
+      "bytes": 567,
+      "sha256": "00e32cfc0666ea56a6901dae365dc00d59d8fd60d7590f76d8a994483a0e41a6"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/mars_three_candidates_report_zh.pdf",
+      "bytes": 469106,
+      "sha256": "b0b17d071ffb0fedc90bfac150b189c4c9b446d389135a9a0345c5cf0d869bb8"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/method.json",
+      "bytes": 7543,
+      "sha256": "9629b682ed05ed6a456375ff26aa4c943c872f9ab6d818ad33bfce5fa71e47ff"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/numerical_validation.json",
+      "bytes": 1095,
+      "sha256": "347beba050a3e67c5b881ee2592bf67faa55742c956ac5a1de09c5124ebd3643"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/pareto_front.csv.gz",
+      "bytes": 75902,
+      "sha256": "fd1cab5d697ca7bc2c2fc61adbce535ed826ace8e7954a518dcd35a9e2ae4414"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/preservation_check.json",
+      "bytes": 3714,
+      "sha256": "efc0ce3286f2adbc135f14d195e3e1a99016a4c7fb47b2e9b3d2f5ab538e6b12"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/report.md",
+      "bytes": 16524,
+      "sha256": "1708e2d7af86118edf2a88c3e896464406d5bd617f9ab197f7c4d412f5969e4b"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/report_manifest.json",
+      "bytes": 2479,
+      "sha256": "4cf9e098edff3b02c887b167ac06313643db5290ffe7b3e215ce796c3919249d"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/report_validation.json",
+      "bytes": 1012,
+      "sha256": "9a069647d6caf0172e3c329921d7a079c4c1805f38c92e567fb2eab58faf37d7"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/selected_targets.json",
+      "bytes": 3434,
+      "sha256": "388ca89110b2a8fbb4fc6fa403994ab54cd193fd23eefd8aa5987a75e3255ba5"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 220,
+      "sha256": "75c5217b185d9ae75c052f75dc324799c1d1e79a08576701ea47fd8b6e118c83"
+    },
+    {
+      "path": "scripts/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "scripts/build_mars_stack.py",
+      "bytes": 1310,
+      "sha256": "5f4ebff0a281e66d18c5dbf6c233fc7d8701aad2571a4cf92ab0a44ab2f18a8c"
+    },
+    {
+      "path": "scripts/download_mars.py",
+      "bytes": 3054,
+      "sha256": "4feaed83ad67126aa5f6aa25acd06f9064f882c7a15bd170cd1b680950161153"
+    },
+    {
+      "path": "scripts/rebuild.py",
+      "bytes": 1539,
+      "sha256": "114f8a2a2a635898cb0306afbdfaccec0e2c4b55b017be3fcec3bd8d5acef986"
+    },
+    {
+      "path": "scripts/reporting/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "scripts/reporting/build_mars_reselection_report.py",
+      "bytes": 33651,
+      "sha256": "29665e5b446f45d8abf627baecdf771340d18a056889c3c2c0c15da87908e2e3"
+    },
+    {
+      "path": "scripts/research/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "scripts/research/mars_reselection_20261114.py",
+      "bytes": 30764,
+      "sha256": "6d4f126496938f3b577a424252d0ff556fb578c5ed91dde596ad5d6bdf75e2e3"
+    },
+    {
+      "path": "scripts/verify_release.py",
+      "bytes": 2186,
+      "sha256": "9c36b6c0dbe933a488410543bddcf7f3a796ee7144258e2176181c16aef6da32"
+    }
+  ]
+}

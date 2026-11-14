@@ -1,18 +1,32 @@
-# Mars reselection computation - 2026-11-14
+# Mars reselection computation - clean three-candidate package
 
-This package is a new, isolated Mars regional research-candidate analysis. It does not modify the former discovery scores, old I-01/I-02 cards, Earth data, Elephant Head exports, workbook or website. Execution used the project's Mac CPU Python environment; no GPU, model training or generated observations were used.
+The runnable package is `MARS-RESELECT-20261114-v1-clean`. It retains the completed three-candidate science and replaces old project-path dependencies with explicit configuration and checksum-pinned public inputs. The original PDF, report text, report manifest and visual review remain as-produced historical artifacts with their own hashes. Clean method/native/validation files are a newer reconstruction record, not the original byte-identical version. Source lineage is recorded in `config/source_context.json` and `cleanup_rebuild_validation.json`.
+
+The original project files were preserved while this clean package was prepared. Execution used Mac CPU Python; no GPU, model training or generated observations were used.
 
 ## Reproduce
 
-From the repository root:
+From the repository root, use Python 3.12 and install `requirements.txt`. The 11 required public originals total 383,526,092 bytes and are not committed to the repository. Download is explicit and checks each byte count and SHA-256; with existing local inputs, omit `--download` for an offline rebuild.
 
 ```sh
+.venv/bin/python -m scripts.rebuild --download --skip-report
+```
+
+To rebuild the PDF as well, omit `--skip-report` and use `--font /path/to/NotoSansCJK-Regular.ttc` where needed. `MARS_REPORT_FONT` is also supported; the original Mac font remains a default. The static bounded prior-site audit is reused, not re-searched by this command.
+
+Equivalent individual commands:
+
+```sh
+.venv/bin/python -m scripts.download_mars --download
+.venv/bin/python -m scripts.build_mars_stack
 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m scripts.research.mars_reselection_20261114
 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m scripts.research.mars_reselection_20261114 --finalize-targets outputs/research/mars_reselection_20261114/fixed_targets.json
 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m scripts.research.mars_reselection_20261114 --validate
 ```
 
-The script requires the existing project numpy, pandas, xarray, scipy and rasterio dependencies and the local raw Mars files. It does not download new data. Native source URLs, byte counts and SHA-256 values are in `method.json` and `candidate_native_evidence.json`.
+`scripts.download_mars --verify-only` checks existing inputs without network requests. The large full `screened_pool.csv.gz` may be omitted from the published package: run screening and native extraction before `--validate`, which needs this generated pool to check all front points against it. Downloading raw files alone does not generate the pool. Its absence after cloning is not a statement that the completed three-site data or original observations are unfinished.
+
+The standalone runtime uses only the retained Mars readers plus numpy, pandas, xarray, scipy, rasterio, matplotlib, requests and netCDF4. Original URLs, byte counts and SHA-256 values are in `config/raw_inputs_manifest.json`; the actual rebuilt inputs/configuration hashes are in `method.json` and `candidate_native_evidence.json`. No private repository raw URL or former project checkout is needed.
 
 ## What was screened
 
@@ -23,7 +37,7 @@ The script requires the existing project numpy, pandas, xarray, scipy and raster
 - 22 geographically spread examples from that front were delivered for independent prior-site review. The example-selection rule includes northern examples and low-slope/low-dust extremes. Its geographic spacing is a review/diversity convention, not a local hazard buffer, mission requirement or novelty test.
 - TI, elevation, MCS adjusted-temperature summaries and dust seasonal/maximum/reliability information are retained as context and trade-offs. No unsupported universally favourable TI, elevation or temperature target was invented.
 
-`screened_pool.csv.gz` and `pareto_front.csv.gz` preserve the comparison population and favourable percentiles. Percentiles describe that pool, not confidence or a success probability. Pareto status means no other pool cell is at least as good in every declared objective and strictly better in one. It does not establish mission optimality.
+The generated `screened_pool.csv.gz` and retained `pareto_front.csv.gz` describe the comparison population and favourable percentiles. Percentiles describe that pool, not confidence or a success probability. Pareto status means no other pool cell is at least as good in every declared objective and strictly better in one. It does not establish mission optimality. The eight historical coordinate exclusions and old boxes are explicit in `config/reselection_exclusions.json`, with their source hash; no old ranking file is read.
 
 ## Native evidence and four fixed review targets
 
@@ -44,7 +58,7 @@ Primary native summaries use actual native grid centres inside half-open nominal
 | File | Purpose |
 |---|---|
 | `method.json` | Exact scope, screening choices, input hashes and final script hash |
-| `screened_pool.csv.gz` | Full 58,238-row comparison pool |
+| `screened_pool.csv.gz` | Generated full 58,238-row comparison pool; may be omitted from Git and regenerated before validation |
 | `pareto_front.csv.gz` | Exact 453-row unweighted front |
 | `exploratory_candidates.csv` | 22 examples supplied for literature/footprint review |
 | `fixed_targets.json` | Four reproducible detailed-review coordinates and their review roles |
@@ -53,9 +67,16 @@ Primary native summaries use actual native grid centres inside half-open nominal
 | `candidate_dust_series.csv.gz` | 5,352 candidate/year/sol rows, including the held-out target |
 | `candidate_mcs_bins.csv.gz` | 1,152 candidate/MY/Ls rows with missingness retained |
 | `numerical_validation.json` | Read-back, provenance, series and brute-force Pareto checks |
+| `cleanup_rebuild_validation.json` | Comparison with the as-produced version, including disclosed global-stack differences |
+
+## Clean reconstruction verification
+
+The offline clean reconstruction verified all 11 public original files, rebuilt the stack, regenerated the full pool and four native-review records, and passed the 13 numerical checks. The pool/front coordinate memberships, 22 review coordinates/order and all 88 non-stack native numerical columns were unchanged. The fixed A/D/C evidence and both dust/MCS series files reproduced exactly, including byte-identical series archives.
+
+The regenerated global NetCDF is a new artifact. Its byte hash and some global array values differ slightly from the historical stack. `cleanup_rebuild_validation.json` records the measured differences and an exploratory tolerance diagnostic that did not pass universally; no universal scientific-equivalence tolerance is asserted. No tolerance, objective, criterion or coordinate was changed to obtain the same candidate memberships. Preserve the original report's as-produced hashes separately from the clean script and data-manifest hashes.
 
 ## Limits that remain
 
-The MCS derivative has no distributed QA, per-bin count or uncertainty fields. It is context only and does not close the formal local temperature-quality requirement. The Jezero MEDA pilot has only rover-local support and its existing full-quality screen yielded no qualified rows; it is inventoried in the source record and is not transplanted to new coordinates. Local pressure, wind, mineralogy, material strength, hazards, independent ice truth and equipment-specific operating limits remain unknown. None is filled with zero or inferred from TI, CDOD or SWIM.
+The MCS derivative has no distributed QA, per-bin count or uncertainty fields. It is context only and does not close the formal local temperature-quality requirement. The Jezero MEDA pilot has only rover-local support and its existing full-quality screen yielded no qualified rows. Its source/QA context and original source hash are retained in `config/source_context.json`; neither the old MEDA output path nor that pipeline is a runtime dependency, and no values are transplanted to new coordinates. Local pressure, wind, mineralogy, material strength, hazards, independent ice truth and equipment-specific operating limits remain unknown. None is filled with zero or inferred from TI, CDOD or SWIM.
 
 Data years and footprints differ. Repeated coarse grid values are not independent observations. A successful numerical validation only confirms the stated extraction/provenance/reproduction checks; it does not validate novelty, resource quantity, field safety, landing suitability or Earth-to-Mars equipment performance.

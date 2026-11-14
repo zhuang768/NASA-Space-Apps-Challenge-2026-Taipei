@@ -1,0 +1,183 @@
+{
+  "version": "MARS-RESELECT-20261114-v1-clean",
+  "MEDA_inherited_context": {
+    "status": "quality_incomplete",
+    "quantity": "ground_brightness_temperature",
+    "units": "K",
+    "scope": "Jezero rover-local observations; not a 100 km target mean or global grid",
+    "global_kinetic_surface_temperature_available": false,
+    "records": 159418,
+    "quality_supported_records": 0,
+    "quality_flags": {
+      "WHEEL_OUTSIDE_TIRS_DOWNWARD_LOOKING_FOV": {
+        "good": 0,
+        "bad": 0,
+        "unknown": 159418
+      },
+      "ROVER_LOW_TILT": {
+        "good": 159418,
+        "bad": 0,
+        "unknown": 0
+      },
+      "TIRS_GROUND_FOOTPRINT_NOT_IN_SHADOW": {
+        "good": 130855,
+        "bad": 28563,
+        "unknown": 0
+      },
+      "ROVER_HGA_OFF": {
+        "good": 0,
+        "bad": 0,
+        "unknown": 159418
+      },
+      "SKYCAM_OFF": {
+        "good": 0,
+        "bad": 0,
+        "unknown": 159418
+      },
+      "ROVER_STILL": {
+        "good": 159418,
+        "bad": 0,
+        "unknown": 0
+      }
+    },
+    "sources": [
+      {
+        "file": "WE__0700___________CAL_TIRS________________P01.CSV",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0660_0779/sol_0700/WE__0700___________CAL_TIRS________________P01.CSV",
+        "bytes": 5434236,
+        "sha256": "2afa4a3621f0434381cdfd03a5aa3a4b2a09e227fb89f000e6bc0d5a93392242",
+        "recorded_utc": "2026-11-14T02:53:05.579865+00:00",
+        "logical_identifier": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0700___________cal_tirs________________p",
+        "version": "1.0",
+        "utc_start": "2023-02-07T10:15:26.668Z",
+        "utc_stop": "2023-02-08T09:59:21.341Z",
+        "quantity": "ground_brightness_temperature",
+        "units": "K",
+        "spatial_support": "rover-local TIRS footprint; no gridded CRS or regional representativeness",
+        "records": 47774,
+        "temporal_support": "SCLK-indexed instrument samples; analysis uses hourly LTST bins",
+        "spatial_resolution": "Instrument footprint dimensions not established in this pilot"
+      },
+      {
+        "file": "WE__0700___________CAL_TIRS________________P01.xml",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0660_0779/sol_0700/WE__0700___________CAL_TIRS________________P01.xml",
+        "bytes": 14686,
+        "sha256": "9a1d456f9dbf348ab648c7cf402242eac1b614fce6387562f8f5df184cebc894",
+        "recorded_utc": "2026-11-14T02:53:05.579923+00:00",
+        "product": "PDS4 label"
+      },
+      {
+        "file": "WE__0701___________CAL_TIRS________________P01.CSV",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0660_0779/sol_0701/WE__0701___________CAL_TIRS________________P01.CSV",
+        "bytes": 7082543,
+        "sha256": "10ff7a49bbc80a2dffe9ee8bffa6241c03cc697eea776f74790dac108b925d2b",
+        "recorded_utc": "2026-11-14T02:53:05.653689+00:00",
+        "logical_identifier": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0701___________cal_tirs________________p",
+        "version": "1.0",
+        "utc_start": "2023-02-08T10:55:06.368Z",
+        "utc_stop": "2023-02-09T11:34:37.067Z",
+        "quantity": "ground_brightness_temperature",
+        "units": "K",
+        "spatial_support": "rover-local TIRS footprint; no gridded CRS or regional representativeness",
+        "records": 62020,
+        "temporal_support": "SCLK-indexed instrument samples; analysis uses hourly LTST bins",
+        "spatial_resolution": "Instrument footprint dimensions not established in this pilot"
+      },
+      {
+        "file": "WE__0701___________CAL_TIRS________________P01.xml",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0660_0779/sol_0701/WE__0701___________CAL_TIRS________________P01.xml",
+        "bytes": 14686,
+        "sha256": "3c81a23309c13ba34cbae45375fa58866b7a19891d22cb210ecbddbf80fca123",
+        "recorded_utc": "2026-11-14T02:53:05.653745+00:00",
+        "product": "PDS4 label"
+      },
+      {
+        "file": "WE__0702___________CAL_TIRS________________P01.CSV",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0660_0779/sol_0702/WE__0702___________CAL_TIRS________________P01.CSV",
+        "bytes": 5661913,
+        "sha256": "2811109af51d404063a36997bfe5469c88507d3a3cb32a05361a2ce76f34d2d9",
+        "recorded_utc": "2026-11-14T02:53:05.713208+00:00",
+        "logical_identifier": "urn:nasa:pds:mars2020_meda:data_calibrated_env:we__0702___________cal_tirs________________p",
+        "version": "1.0",
+        "utc_start": "2023-02-09T11:34:38.067Z",
+        "utc_stop": "2023-02-10T11:18:31.741Z",
+        "quantity": "ground_brightness_temperature",
+        "units": "K",
+        "spatial_support": "rover-local TIRS footprint; no gridded CRS or regional representativeness",
+        "records": 49624,
+        "temporal_support": "SCLK-indexed instrument samples; analysis uses hourly LTST bins",
+        "spatial_resolution": "Instrument footprint dimensions not established in this pilot"
+      },
+      {
+        "file": "WE__0702___________CAL_TIRS________________P01.xml",
+        "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_calibrated_env/sol_0660_0779/sol_0702/WE__0702___________CAL_TIRS________________P01.xml",
+        "bytes": 14686,
+        "sha256": "aaf8321b46fe17ad4d86cbdc81979bf3475e15e56ef3365b9ec245a8ae1b22aa",
+        "recorded_utc": "2026-11-14T02:53:05.713260+00:00",
+        "product": "PDS4 label"
+      }
+    ],
+    "method": "LTST day [12,15), night [0,3); median of hourly medians; minimum 2 hour bins per window",
+    "window_basis": "Project design assumption; fixed clock windows, not solar illumination classification",
+    "same_ground_patch_confirmed": false,
+    "limitations": [
+      "Not kinetic surface temperature or full daily extrema",
+      "Short sample is not a seasonal climatology",
+      "Rover motion/footprint changes across windows are not resolved",
+      "Reported uncertainty is instrument standard deviation, not window confidence"
+    ]
+  },
+  "MEDA_provenance": {
+    "original_file": "outputs/mars_temperature/summary.json",
+    "sha256": "f6b7d441e616f564171fa47b351e45622634d5ded5f980d2dd4392deea2a29a9",
+    "public_archive": "https://doi.org/10.17189/1522849",
+    "verification_status": "Inherited source and QA record; not reprocessed or transplanted to new coordinates in this clean build."
+  },
+  "MCS_metadata_context": {
+    "version_doi": "10.5281/zenodo.17947556",
+    "paper_doi": "10.1029/2025JE009381",
+    "license": "CC-BY-4.0",
+    "expected_md5": "921ebf89ba5f1ac35d89d62f83369c27",
+    "metadata_basis": "Original fixed record and author methods/code; dynamic record download counters are not a runtime input.",
+    "original_record_sha256": "12d984134bbce03b661343f2e986a9c449b94c20c7f0bbf3e098c556b3e30b69",
+    "public_record_url": "https://zenodo.org/records/17947556"
+  },
+  "source_report_lineage": {
+    "version": "MARS-RESELECT-20261114-v1-exploratory",
+    "source_main": "e84da75d905ad43f260e74307752946862200dae",
+    "original_project_preserved": true,
+    "files": [
+      {
+        "original_path": "outputs/research/mars_reselection_20261114/method.json",
+        "bytes": 7574,
+        "sha256": "af2347cf6a8f56f3693f1713a70916862db91227b6d0163ecf66da6f59352fe4"
+      },
+      {
+        "original_path": "outputs/research/mars_reselection_20261114/candidate_native_evidence.json",
+        "bytes": 38206,
+        "sha256": "1b752bb1f045f1a9f57302f26865f6a82cf2e306c2fdb7081668b93c827719a5"
+      },
+      {
+        "original_path": "outputs/research/mars_reselection_20261114/numerical_validation.json",
+        "bytes": 1038,
+        "sha256": "4c84f74d2d0556b3a6130b463442840efb250be0b2e0640294162745c69e2e99"
+      },
+      {
+        "original_path": "outputs/research/mars_reselection_20261114/report_manifest.json",
+        "bytes": 2479,
+        "sha256": "4cf9e098edff3b02c887b167ac06313643db5290ffe7b3e215ce796c3919249d"
+      },
+      {
+        "original_path": "outputs/research/mars_reselection_20261114/report.md",
+        "bytes": 16524,
+        "sha256": "1708e2d7af86118edf2a88c3e896464406d5bd617f9ab197f7c4d412f5969e4b"
+      },
+      {
+        "original_path": "outputs/research/mars_reselection_20261114/mars_three_candidates_report_zh.pdf",
+        "bytes": 469106,
+        "sha256": "b0b17d071ffb0fedc90bfac150b189c4c9b446d389135a9a0345c5cf0d869bb8"
+      }
+    ]
+  },
+  "cleanup_change_scope": "Dependencies, packaging and portability only; unchanged six-objective science, pool criteria, coordinates, source arrays, extraction and numerical values."
+}

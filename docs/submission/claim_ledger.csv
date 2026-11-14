@@ -1,7 +1,0 @@
-id,english_claim,basis_type,evidence,boundary
-C02,Earth and Mars terrain use a common 100 km window and explicit planetary radii.,computed,analog/screening.py,4 km sampling is not guaranteed physical resolution
-C03,The retained terrain-distance method uses terrain statistics only.,method; previous ranking outputs removed,analog/matching.py,not a four-theme score or similarity percentage
-C05,The existing geological evidence is partial.,literature and inference,docs/research_report_three_analogs_2026-11-14.md,no complete same-outcrop sulfate sample chain; no new investigation this turn
-C06,The reference checks demonstrate limits of terrain-only interpretation.,computed,outputs/research/reference_terrain_check.json,two designed windows; not accuracy or validation of complete analog suitability
-C07,The workflow proposes candidates for further investigation.,design scope,docs/research_scope.md,not landing certification or field access approval
-C08,Mars-only challenge eligibility remains unconfirmed.,unconfirmed official requirement,docs/submission/preparation.md,resolve before final submission; do not claim full compliance

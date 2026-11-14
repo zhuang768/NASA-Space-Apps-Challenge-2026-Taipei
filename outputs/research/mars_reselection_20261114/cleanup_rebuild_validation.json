@@ -1,0 +1,123 @@
+{
+  "version": "MARS-RESELECT-20261114-v1-clean",
+  "status": "PASS_PRIMARY_EVIDENCE_WITH_GLOBAL_REBUILD_DIFFERENCES",
+  "scope": "Offline clean-package reconstruction and original-v1 numerical comparison; no new research, engineering or novelty validation",
+  "checks": {
+    "stack_coordinate_and_NaN_masks_match": true,
+    "screen_counts_unchanged": true,
+    "objectives_and_directions_unchanged": true,
+    "screened_pool.csv.gz_coordinate_membership_unchanged": true,
+    "pareto_front.csv.gz_coordinate_membership_unchanged": true,
+    "22_review_coordinates_and_order_unchanged": true,
+    "all_native_numeric_columns_exactly_unchanged": true,
+    "A_D_C_primary_native_values_unchanged": true,
+    "candidate_dust_series.csv.gz_identical_bytes": true,
+    "candidate_mcs_bins.csv.gz_identical_bytes": true,
+    "preserved_original_report_source_hashes_unchanged": true,
+    "seven_reader_algorithm_modules_identical": true,
+    "summarize_dust_function_AST_identical": true,
+    "six_scientific_functions_AST_identical": true,
+    "raw_observations_all_checksum_pinned": true
+  },
+  "stack_rebuild": {
+    "original_sha256": "a351dada81b4105825b8e3baa1d060a4f3ee25c09fef303409abdd36dbdcf7aa",
+    "clean_sha256": "6575c84778146fa28e46b702f312d831ab1a9598b7fba6fb8cc46481a202ac36",
+    "byte_identical": false,
+    "variables": {
+      "slope": {
+        "source_dtype": "float64",
+        "rebuild_dtype": "float64",
+        "identical_NaN_mask": true,
+        "bit_equal_arrays": false,
+        "max_abs_difference": 1.7763568394002505e-15
+      },
+      "relief": {
+        "source_dtype": "float64",
+        "rebuild_dtype": "float64",
+        "identical_NaN_mask": true,
+        "bit_equal_arrays": true,
+        "max_abs_difference": 0.0
+      },
+      "thermal_inertia": {
+        "source_dtype": "float64",
+        "rebuild_dtype": "float64",
+        "identical_NaN_mask": true,
+        "bit_equal_arrays": false,
+        "max_abs_difference": 0.00012207031295474735
+      },
+      "ice_shallow": {
+        "source_dtype": "float64",
+        "rebuild_dtype": "float64",
+        "identical_NaN_mask": true,
+        "bit_equal_arrays": false,
+        "max_abs_difference": 2.885553329612378e-08
+      },
+      "dust_cdod": {
+        "source_dtype": "float32",
+        "rebuild_dtype": "float32",
+        "identical_NaN_mask": true,
+        "bit_equal_arrays": true,
+        "max_abs_difference": 0.0
+      }
+    },
+    "interpretation": "The source checkout readers/build algorithm were copied unchanged and all public source bytes were checksum-verified. NetCDF attributes/serialization and some global array values differ by the measured amounts. No universal scientific-equivalence tolerance has been established. The complete exploration-pool/front coordinate membership and all 88 native numerical columns, including fixed A/D/C, are exactly unchanged; both raw-derived series files are byte-identical. No tolerance was inserted into selection and no criteria were changed."
+  },
+  "counts": {
+    "examined_grid_cells": 172800,
+    "finite_core_cells": 172581,
+    "positive_both_cells": 59332,
+    "exploratory_pool": 58238,
+    "pareto_front": 453,
+    "exploratory_candidates": 22
+  },
+  "native_numeric_columns_compared": 88,
+  "maximum_native_column_difference": 0.0,
+  "clean_rescreen_script_sha256": "6d4f126496938f3b577a424252d0ff556fb578c5ed91dde596ad5d6bdf75e2e3",
+  "source_rescreen_script_sha256": "f0b516a76f9cba816b65dcb6efd06d4e399d52d0fe81f092307943cdd285474d",
+  "tested_runtime": {
+    "python": "3.12.15",
+    "system": "Darwin",
+    "machine": "arm64",
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "xarray": "2026.9.0",
+      "scipy": "1.18.1",
+      "rasterio": "1.5.2",
+      "matplotlib": "3.11.2",
+      "requests": "2.34.2",
+      "netCDF4": "1.7.5.1.post1"
+    }
+  },
+  "diagnostics": {
+    "trial_generic_allclose": {
+      "rtol": 2e-07,
+      "atol": 2e-12,
+      "passed": false,
+      "role": "Exploratory comparison only; this is not a calibrated science acceptance criterion and was not used to alter selection or mask differences."
+    },
+    "variables": {
+      "slope": {
+        "finite_bit_different_cells": 22163,
+        "trial_allclose_different_cells": 0
+      },
+      "relief": {
+        "finite_bit_different_cells": 0,
+        "trial_allclose_different_cells": 0
+      },
+      "thermal_inertia": {
+        "finite_bit_different_cells": 28506,
+        "trial_allclose_different_cells": 58
+      },
+      "ice_shallow": {
+        "finite_bit_different_cells": 91131,
+        "trial_allclose_different_cells": 1013
+      },
+      "dust_cdod": {
+        "finite_bit_different_cells": 0,
+        "trial_allclose_different_cells": 0
+      }
+    }
+  },
+  "accepted_scope": "Exact reproduction of selection memberships, fixed-site native evidence and raw-derived sequences; global stack is a disclosed new rebuild, not a byte-identical old artifact."
+}

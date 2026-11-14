@@ -1,0 +1,71 @@
+{
+  "version": "MARS-RESELECT-20261114-v1-clean",
+  "purpose": "Exact exclusions used by the already-completed six-objective screen; no new or broadened exclusions introduced by cleanup",
+  "coordinate_convention": "Mars planetocentric latitude; east-positive longitude -180 to 180",
+  "old_ice_candidate_cells": [
+    {
+      "lat": 54.25,
+      "lon": 1.25
+    },
+    {
+      "lat": 53.75,
+      "lon": 42.25
+    },
+    {
+      "lat": 54.75,
+      "lon": 86.25
+    },
+    {
+      "lat": 55.75,
+      "lon": 61.75
+    },
+    {
+      "lat": 53.75,
+      "lon": 123.75
+    },
+    {
+      "lat": 53.25,
+      "lon": -79.75
+    },
+    {
+      "lat": 51.75,
+      "lon": 12.75
+    },
+    {
+      "lat": 55.75,
+      "lon": 96.25
+    }
+  ],
+  "excluded_boxes": {
+    "arcadia_planitia": {
+      "south": 38,
+      "north": 48,
+      "west": -180,
+      "east": -160
+    },
+    "jezero_crater": {
+      "south": 17.5,
+      "north": 19.5,
+      "west": 76.5,
+      "east": 78.5
+    },
+    "utopia_planitia": {
+      "south": 40,
+      "north": 50,
+      "west": 110,
+      "east": 130
+    },
+    "gale_crater": {
+      "south": -6.5,
+      "north": -3.5,
+      "west": 136.5,
+      "east": 139.5
+    }
+  },
+  "source": {
+    "original_file": "outputs/mars_discovery/mars_site_discovery.json",
+    "sha256": "3c45d6af3c786394b856e36a726eada5cf00118e7a0cec39b24a88e8f992b7e9",
+    "source_main": "e84da75d905ad43f260e74307752946862200dae",
+    "inspection": "Exact coordinate and box values copied; old scores/signatures/rank file are not runtime inputs."
+  }
+}

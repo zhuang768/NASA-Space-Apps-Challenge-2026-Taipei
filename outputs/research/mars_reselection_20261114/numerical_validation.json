@@ -23,6 +23,7 @@
     "dust_rows": 5352,
     "MCS_rows": 1152
   },
-  "script_sha256": "f0b516a76f9cba816b65dcb6efd06d4e399d52d0fe81f092307943cdd285474d",
+  "script_sha256": "6d4f126496938f3b577a424252d0ff556fb578c5ed91dde596ad5d6bdf75e2e3",
+  "source_lineage_config": "config/source_context.json",
   "protected_input_hashes_unchanged": true
 }

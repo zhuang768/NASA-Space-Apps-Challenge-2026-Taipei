@@ -24,7 +24,7 @@ from analog.terrain import slope_deg
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "outputs/research/mars_reselection_20261114"
-VERSION = "MARS-RESELECT-20261114-v1-exploratory"
+VERSION = "MARS-RESELECT-20261114-v1-clean"
 OBJECTIVES = {
     "ice_shallow": "maximize",
     "ice_deep": "maximize",
@@ -41,24 +41,23 @@ def sha(path: Path) -> str:
 
 
 def source_manifest() -> list[dict]:
-    paths = [ROOT / "data/processed/mars_stack_0p5deg.nc"]
-    urls = {}
-    for module in [mars, swim, dust]:
-        for key, url in module.PRODUCTS.items():
-            p = mars.RAW_DIR / url.rsplit("/", 1)[1]
-            paths.append(p)
-            urls[p.relative_to(ROOT).as_posix()] = url
-            if module is mars:
-                paths.append(p.with_suffix(".lbl"))
-                urls[p.with_suffix(".lbl").relative_to(ROOT).as_posix()] = url.rsplit(".", 1)[0] + ".lbl"
-    paths += [ROOT / "data/raw/mars/temperature/mcs_corrected/MCS_tsurf_corrected.nc",
-              ROOT / "data/raw/mars/temperature/mcs_corrected/record.json",
-              ROOT / "outputs/mars_temperature/summary.json",
-              ROOT / "outputs/mars_discovery/mars_site_discovery.json"]
-    urls["data/raw/mars/temperature/mcs_corrected/MCS_tsurf_corrected.nc"] = "https://zenodo.org/api/records/17947556/files/MCS_tsurf_corrected.nc/content"
-    urls["data/raw/mars/temperature/mcs_corrected/record.json"] = "https://zenodo.org/api/records/17947556"
-    return [{"path": p.relative_to(ROOT).as_posix(), "url": urls.get(p.relative_to(ROOT).as_posix()), "bytes": p.stat().st_size,
-             "sha256": sha(p)} for p in paths]
+    """Checksum-pinned public originals plus clean local configuration and rebuilt stack."""
+    manifest_path = ROOT / "config/raw_inputs_manifest.json"
+    spec = json.loads(manifest_path.read_text())
+    sources = []
+    for item in spec["files"]:
+        p = ROOT / item["path"]
+        if not p.is_file():
+            raise FileNotFoundError(f"Missing {item['path']}; run python -m scripts.download_mars --download")
+        actual = sha(p)
+        if p.stat().st_size != item["bytes"] or actual != item["sha256"]:
+            raise ValueError(f"Input checksum/size mismatch: {item['path']}")
+        sources.append({"path": item["path"], "url": item["url"], "bytes": p.stat().st_size, "sha256": actual})
+    local = [ROOT / "data/processed/mars_stack_0p5deg.nc", manifest_path,
+             ROOT / "config/reselection_exclusions.json", ROOT / "config/source_context.json"]
+    for p in local:
+        sources.append({"path":p.relative_to(ROOT).as_posix(),"url":None,"bytes":p.stat().st_size,"sha256":sha(p)})
+    return sources
 
 
 def to_common(grid: xr.DataArray) -> xr.DataArray:
@@ -180,8 +179,8 @@ def build() -> None:
     finite_keys = list(OBJECTIVES) + ["thermal_inertia", "elevation_mean_m_areoid"]
     frame["finite_core_descriptors"] = np.isfinite(frame[finite_keys]).all(axis=1)
     frame["positive_both_ice_consistency"] = (frame.ice_shallow > 0) & (frame.ice_deep > 0)
-    old = json.loads((ROOT / "outputs/mars_discovery/mars_site_discovery.json").read_text())
-    old_coords = {(p["lat"], p["lon"]) for p in old["purposes"]["isru_shallow_ice"]["picks"]}
+    old = json.loads((ROOT / "config/reselection_exclusions.json").read_text())
+    old_coords = {(p["lat"], p["lon"]) for p in old["old_ice_candidate_cells"]}
     frame["old_ice_candidate_cell"] = [(a,b) in old_coords for a,b in zip(frame.lat,frame.lon)]
     # Famous old project boxes remain exclusions, with no implication that every site outside is new.
     frame["inside_old_known_box"] = False
@@ -223,7 +222,7 @@ def build() -> None:
             "unavailable":"local pressure/wind, material strength, mineralogy, independent ice truth, instrument-specific thresholds, local hazard and extraction readiness remain unknown"
         },
         "limits":["No novelty clearance: all candidates require bounded footprint and same-purpose literature audit.","The front depends on declared objectives and incomplete available products; non-dominated does not mean mission-optimal.","MOLA terrain variables and the two SWIM layers are correlated/shared-source evidence; variable count is not independent evidence count.","5deg MCS and 3deg reconstructed dust support are retained; interpolated 0.5deg columns do not increase native resolution.","Different product periods and footprints do not constitute one contemporaneous controlled experiment."],
-        "sources":sources,"script_sha256":sha(Path(__file__)),
+        "sources":sources,"script_sha256":sha(Path(__file__)),"source_lineage_config":"config/source_context.json",
     }
     after = {r["path"]:sha(ROOT/r["path"]) for r in sources}
     if before != after:
@@ -353,7 +352,7 @@ def details(targets_path: Path | None = None) -> None:
                  "dust":{"years":["MY34","MY35"],"period":"669 reconstructed equally spaced sols per year","quantity":"local-column 9.3 micron absorption optical depth; dimensionless","native_grid_deg":[3,3],"cdod610":"610 Pa-normalized optical depth is not local pressure"},
                  "MCS":{"years":[29,36],"MY_Ls_possible_pairs":288,"nominal_times_LTST":[3,15],"grid_deg":[5,5],"temperature":"K from paper/author code, absent NetCDF units attribute","status":"context-only model-time-adjusted; QA, counts, uncertainties absent; populated-bin medians not full-year mean or daily amplitude"},
                  "coordinate_model":{"Mars_radius_m":mars.MARS_RADIUS_M,"cell":"0.5 degree nominal lat/lon cell, not landing ellipse/drill site","native_summary":"cos(latitude)-weighted mean over included native grid centres; no interpolation for primary native checks"}},
-             "protected_inputs_hashes_unchanged":True,"sources":protected,"script_sha256":sha(Path(__file__)),"records":result}
+             "protected_inputs_hashes_unchanged":True,"sources":protected,"script_sha256":sha(Path(__file__)),"source_lineage_config":"config/source_context.json","records":result}
     (OUT/"candidate_native_evidence.json").write_text(json.dumps(package,ensure_ascii=False,indent=2)+"\n")
     pd.DataFrame(metrics).to_csv(OUT/"candidate_metrics.csv",index=False)
     pd.concat(dust_tables,ignore_index=True).to_csv(OUT/"candidate_dust_series.csv.gz",index=False,compression={"method":"gzip","mtime":0})
@@ -399,7 +398,7 @@ def validate_outputs() -> None:
             break
     checks["all_front_points_bruteforce_nondominated"]=nondominated
     checks={k:bool(v) for k,v in checks.items()}
-    validation={"scope":"File, provenance, geometry, finite support and numerical reproduction; not science validity, originality, ice truth or mission approval","checks":checks,"status":"PASS" if all(checks.values()) else "FAIL","counts":{"pool":len(pool),"front":len(front),"native_targets":len(metrics),"dust_rows":len(ds),"MCS_rows":len(ms)},"script_sha256":sha(Path(__file__)),"protected_input_hashes_unchanged":checks["all_protected_input_hashes_match"]}
+    validation={"scope":"File, provenance, geometry, finite support and numerical reproduction; not science validity, originality, ice truth or mission approval","checks":checks,"status":"PASS" if all(checks.values()) else "FAIL","counts":{"pool":len(pool),"front":len(front),"native_targets":len(metrics),"dust_rows":len(ds),"MCS_rows":len(ms)},"script_sha256":sha(Path(__file__)),"source_lineage_config":"config/source_context.json","protected_input_hashes_unchanged":checks["all_protected_input_hashes_match"]}
     (OUT/"numerical_validation.json").write_text(json.dumps(validation,indent=2)+"\n")
     print(json.dumps(validation,indent=2))
     if not all(checks.values()):raise RuntimeError("Numerical output validation failed")

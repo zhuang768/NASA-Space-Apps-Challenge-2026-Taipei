@@ -1,0 +1,92 @@
+{
+  "version": "MARS-RESELECT-20261114-v1-clean",
+  "scope": "Public original inputs only; binary inputs are reacquired, not committed",
+  "checksum_policy": "Verify bytes and SHA-256; fail on mismatch rather than silently accepting a replacement. Existing source files are never overwritten.",
+  "files": [
+    {
+      "path": "data/raw/mars/megt90n000eb.img",
+      "url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg016/megt90n000eb.img",
+      "bytes": 33177600,
+      "sha256": "d18d9b9ab8c5516d02e157dd2cde0f1d0d160c21940e953ba22391269a545e7b",
+      "required_for_reselection": true
+    },
+    {
+      "path": "data/raw/mars/megt90n000eb.lbl",
+      "url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg016/megt90n000eb.lbl",
+      "bytes": 4813,
+      "sha256": "0f2bd919dddb86d83489a008d3007bd915507c892a0f22ce49ad5dd5d2fc7d8a",
+      "required_for_reselection": true
+    },
+    {
+      "path": "data/raw/mars/global_ti_night_2007.img",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_night_2007.img",
+      "bytes": 51840000,
+      "sha256": "faee32838da40045ee7ebd21bed156cc649620312c01165b556d77a2128258f4",
+      "required_for_reselection": true
+    },
+    {
+      "path": "data/raw/mars/global_ti_night_2007.lbl",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_night_2007.lbl",
+      "bytes": 2415,
+      "sha256": "c1c897d9bd5399292166f99d84a29a73e42432cedfb9dd9a81a1441b3004b72b",
+      "required_for_reselection": true
+    },
+    {
+      "path": "data/raw/mars/global_ti_msk_night_2007.img",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_msk_night_2007.img",
+      "bytes": 25920000,
+      "sha256": "fca7ec6fab8b3e81226e1d14dbb3a22509ad111bda4e03bf2b64f050bd550d0b",
+      "required_for_reselection": true
+    },
+    {
+      "path": "data/raw/mars/global_ti_msk_night_2007.lbl",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_msk_night_2007.lbl",
+      "bytes": 2485,
+      "sha256": "164838970c1405b2dc6cf367a74c60c0de96d18f05f5e924db6c00f77038ee8a",
+      "required_for_reselection": true
+    },
+    {
+      "path": "data/raw/mars/SWIM2_c0_1.tif",
+      "url": "https://swim.psi.edu/output/SWIM2/Global/Composite/SWIM2_c0_1.tif",
+      "bytes": 70995819,
+      "sha256": "0dd22f8a07172112c68fb304af9966bcdd788bbedf6ea40187a30f70130fea37",
+      "required_for_reselection": true
+    },
+    {
+      "path": "data/raw/mars/SWIM2_c1_5.tif",
+      "url": "https://swim.psi.edu/output/SWIM2/Global/Composite/SWIM2_c1_5.tif",
+      "bytes": 70995805,
+      "sha256": "2ade8ab6aa4aae1c51ec71f10139e9b9ffa0a31ef1948566d0929ab7e91713ed",
+      "required_for_reselection": true
+    },
+    {
+      "path": "data/raw/mars/dustscenario_MY35_v2-5.nc",
+      "url": "https://www-mars.lmd.jussieu.fr/mars/dust_climatology/dataset_v2/dustscenario_MY35_v2-5.nc",
+      "bytes": 57832064,
+      "sha256": "95613d68e2d03904bfd93612f2fe70e84f8410b00ef33cafe59d77d50a41063a",
+      "required_for_reselection": true
+    },
+    {
+      "path": "data/raw/mars/dustscenario_MY34_v2-5.nc",
+      "url": "https://www-mars.lmd.jussieu.fr/mars/dust_climatology/dataset_v2/dustscenario_MY34_v2-5.nc",
+      "bytes": 57814188,
+      "sha256": "032b9627247e9cc4397c9f007cc8f97a01acf689006b46ff3a51e5abed828797",
+      "required_for_reselection": true
+    },
+    {
+      "path": "data/raw/mars/temperature/mcs_corrected/MCS_tsurf_corrected.nc",
+      "url": "https://zenodo.org/api/records/17947556/files/MCS_tsurf_corrected.nc/content",
+      "bytes": 14940903,
+      "sha256": "a75dbcd5e77fbc0d78591e62427843f0dadde10cd0e87e7767789025a2b7fecd",
+      "required_for_reselection": true,
+      "md5": "921ebf89ba5f1ac35d89d62f83369c27"
+    }
+  ],
+  "derived_stack": {
+    "path": "data/processed/mars_stack_0p5deg.nc",
+    "rebuild_command": "python -m scripts.build_mars_stack",
+    "source_reference_sha256": "a351dada81b4105825b8e3baa1d060a4f3ee25c09fef303409abdd36dbdcf7aa",
+    "source_reference_bytes": 9341696,
+    "note": "Rebuild from checksum-verified originals. Byte hash may depend on library serialization; cleanup validation compares arrays and all A/D/C metrics."
+  }
+}

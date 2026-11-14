@@ -32,7 +32,11 @@
     "ScienceBase CSV and Texas Dataverse API access failures: inventory membership unknown",
     "IOP HTTP200 is CAPTCHA, not article",
     "USRDR query invalid product class, not zero coverage",
-    "CTX patches opaque/nonempty does not certify scientific-pixel quality"
+    "CTX patches opaque/nonempty does not certify scientific-pixel quality",
+    "Cohen-Zada exact file identities confirmed by DataCite; original table/header bytes not acquired",
+    "Levy Data Set S1 TXT/XLS and Dundas TableS4 CSV not acquired; table membership remains unknown",
+    "USGS AIS is the same existing FGDC metadata, not an independent observation table",
+    "A speculative historical lab alias returned an HTTP200 sign-in page, not readable public research"
   ],
   "methods": {
     "analyze.py": "native grid extraction, original geology intersection, pinned SWIM reproduction, actual ODE geometries and CTX bounds",
@@ -58,8 +62,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/README.md",
-      "bytes": 4352,
-      "sha256": "87ca1bc8dc7f6ff74e02adbd264b340c765d3a6dce5ce95473d08eb045b68a4c"
+      "bytes": 5576,
+      "sha256": "75ba42e21510b82697286da93fe4343320068adc07c072400f918eb747fef9b5"
     },
     {
       "path": "outputs/research/MS-03/local_validation/acquire.py",
@@ -543,13 +547,13 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/local_prior_work.csv",
-      "bytes": 7794,
-      "sha256": "7e67cdfada43c286bdd61b1fcb55410640dc08f33eaf924b2cf1d2f06b3251ea"
+      "bytes": 9872,
+      "sha256": "16d5e866221ba16d0e1763784ca7b18cc9d38f48c6b07dcdb451ac657a646bc8"
     },
     {
       "path": "outputs/research/MS-03/local_validation/mars_ice_evidence.csv",
-      "bytes": 15611,
-      "sha256": "b4d9fc8c3ecc990ebaaa0784b8fa1f50805e7f9b284600a6c8b62d7c53e21888"
+      "bytes": 15990,
+      "sha256": "b8548713a6a722b848ae4dc7befeb82ae8c009a6fea3ae1a69ae067601141ebe"
     },
     {
       "path": "outputs/research/MS-03/local_validation/observation_inventory.csv",
@@ -867,6 +871,131 @@
       "sha256": "39510afa43164882db0b73c7e379c7fd1d579085c98a2e5d7b09a0883cac7d57"
     },
     {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/.gitignore",
+      "bytes": 24,
+      "sha256": "3a39659e2ccc3d1455926667f4611b746785255f2e5207f04a43fa41f317e33c"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/README.md",
+      "bytes": 5828,
+      "sha256": "5282d56912deea9df33ebed535c1200842699ef2397f8140d1236da47295ce72"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/collect.py",
+      "bytes": 2878,
+      "sha256": "b44718e7d94791617684a050cf03ed111ced1bd6cfc30faa5903ee5a75e63836"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/content_checks.json",
+      "bytes": 9944,
+      "sha256": "82cdca2e47ef1ba942152a76119025ca91f4dceea962b88a49101619b23e0fa9"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/finalize.py",
+      "bytes": 2878,
+      "sha256": "32a7779d6b2e110cdde357ebff0483878ee87474593d8a2bec34364d9fcfd9dc"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/integrate_tables.py",
+      "bytes": 8392,
+      "sha256": "359816aee49fe5140feddddc011bdc6293af82431b4237382300709fb5e86cc8"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/metadata/cz_data.json",
+      "bytes": 4941,
+      "sha256": "93f584f6b5669255e019fe644c2028e3122ea9e373d241c9810225d6253917f2"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/metadata/cz_headers.json",
+      "bytes": 5039,
+      "sha256": "8c281269d3f3643f00e6c1169800d052b9ecff5e8dba0099cc66048f2883e87d"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/metadata/cz_parent.json",
+      "bytes": 10144,
+      "sha256": "f0936025b3e205e6cb18341da25b9b0b5cd8115527432c610a89f1f7830b14c5"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/metadata/cz_si.json",
+      "bytes": 4941,
+      "sha256": "58f627705a8217b323acd034ca5121628eaa31a0a2f1ef5b1db7a76282eb711e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/metadata/hood_MBARS_tree.json",
+      "bytes": 1477,
+      "sha256": "6473949d7980b842680937feaa8a94c0edc1137a6ccb428bd4d464eeef9a3e1d"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/metadata/hood_repos.json",
+      "bytes": 10172,
+      "sha256": "8ea8859bf50133cc2a2cf3ac186deeb660712251acb8856697efee1d8f37c6ab"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/requests_round1.json",
+      "bytes": 4139,
+      "sha256": "cff9f84ac0d5769fd5ec7b50966059970b3fb38e481b783bc11af3770c547439"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/requests_round1_retrievals.json",
+      "bytes": 12126,
+      "sha256": "a98618e4baaa8161004791350ff75eceb3248cdfee4136adc9013f714818f566"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/requests_round2.json",
+      "bytes": 2114,
+      "sha256": "5ffc9431bb7551f47f7b9e979598b13ed5ab7e08f3122aebbbd1baf85e0cc26a"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/requests_round2_retrievals.json",
+      "bytes": 5439,
+      "sha256": "8f47a35bab31c9dc47bdea6e431e8d196dc52207dc9a69ca72d4bac858dbac9c"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/requests_round3.json",
+      "bytes": 1156,
+      "sha256": "376bd7f0976da56ff5edf43f1789c0350bcdac06a67bdab1f8274ae88a5d20f9"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/requests_round3_retrievals.json",
+      "bytes": 3172,
+      "sha256": "667719c350f1968165f82c1b66ac0e44864cd1645103da0c83ce635e807d0343"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/requests_round4.json",
+      "bytes": 332,
+      "sha256": "90d4069b7c2b0bc4dbf6a5c7907bcf56667c0cb319a2e395e4f98acc62b34211"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/requests_round4_retrievals.json",
+      "bytes": 768,
+      "sha256": "93805e967406f4e9cfd08e526436acbb6cfe20b713a5a6e90edfc988d234d489"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/source_column_notes.csv",
+      "bytes": 2774,
+      "sha256": "f775d9e8174f487a1d9ea2d0b3bcdf59986c435dd89809b9babaa0b9045d79d1"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/table_acquisition.csv",
+      "bytes": 3388,
+      "sha256": "82b0fdf87312da798e1c8076ccf4402ff1e81b29d6f1232ec331d87940c43868"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/validate_followup.py",
+      "bytes": 8639,
+      "sha256": "232a25fcca5239cdc8d27ca617f28c3a1941f70eb1f4e0860dd73f40eabc3b19"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/validation.json",
+      "bytes": 2650,
+      "sha256": "c598255ba753b05add03680cbcbf9974ca37b8f9bb1ad6a24dde1f9ec670cd31"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/original_tables_followup/validation_retained_only.json",
+      "bytes": 3224,
+      "sha256": "4c18847c588907e013baeb84e94108fc8741c80d462bbfcb5cf5518f7d621197"
+    },
+    {
       "path": "outputs/research/MS-03/local_validation/piqueux_native_cell.csv",
       "bytes": 501,
       "sha256": "f22c4079294f6a6a4c4f138bd328a21c14875e13bb7728f6c0519994c63e273f"
@@ -893,8 +1022,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/search_log.csv",
-      "bytes": 96598,
-      "sha256": "aa1eb9469ceabcd3f63265bf6429a95929d6b5496b79a26662fc813e6588a27b"
+      "bytes": 114758,
+      "sha256": "27267bc7987aae5295c3a26fa287dcf28dce8f5d5a934dcb7480ff8e8a1184d2"
     },
     {
       "path": "outputs/research/MS-03/local_validation/sharad_local_geometry.csv",
@@ -1328,8 +1457,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/validate.py",
-      "bytes": 3667,
-      "sha256": "8b2a89943914e5d27d8cffc938903fe850cc6829d7d84f165cc88276e6f0a0e5"
+      "bytes": 3668,
+      "sha256": "c9519d327e592ad4bd6becc913812a1a6bb466955d51dac37b1d1122ce34760c"
     },
     {
       "path": "outputs/research/MS-03/local_validation/validation.json",
@@ -1338,8 +1467,8 @@
     },
     {
       "path": "docs/research/MS-03/local_validation/research_notes.md",
-      "bytes": 25571,
-      "sha256": "f99f8031226cecf3d4108f074740d62ebc532f485a3c44b2521afc8fe2145d52"
+      "bytes": 30343,
+      "sha256": "66fc19ce02bb58a6f002996ab77277ee9088cae2e759dcea94b994e9934ff0e8"
     }
   ],
   "source_preservation_note": "Original acquired PDS labels, KML and XML retain provider whitespace/CRLF; git diff whitespace warnings for source bytes are intentionally not normalized. Authored Python/Markdown passed whitespace check.",
@@ -1363,5 +1492,19 @@
       "package": "bd1500_audit/manifest.json",
       "change": "verified disclosed equation, byte points, band metadata and roundoff exclusions; exact production cause unknown; no scientific value changes"
     }
-  ]
+  ],
+  "original_tables_followup": {
+    "date_taipei": "2026-11-15",
+    "starting_sha": "778af696c654a191fe2a720f24d9f30ebd7d247b",
+    "delivery_state": "prepared for user-authorized follow-up PR and merge; actual status recorded by GitHub",
+    "integration_base_sha": "fbfa780cf587a0787739200898e80b4d27fea8d1",
+    "branch": "codex/ms03-original-tables-followup",
+    "prior_delivery_state": "initial local-only checkpoint superseded by later push-and-merge authorization",
+    "public_requests_recorded": 29,
+    "original_target_tables_acquired": 0,
+    "fixed_cell_membership_computed": false,
+    "new_scientific_disposition": "unchanged; unknown morphology, independent local ice/depth/content unconfirmed",
+    "validation": "original_tables_followup/validation.json",
+    "timestamp_utc": "2026-11-14T19:55:16.073530+00:00"
+  }
 }

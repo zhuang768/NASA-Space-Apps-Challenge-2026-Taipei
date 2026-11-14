@@ -1,0 +1,26 @@
+[
+  {
+    "id": "D-official-AIS",
+    "url": "https://www1.usgs.gov/pir/api/identifiers/USGS:5f99f0b8d34e198cb786e8e7",
+    "output": "dundas_ais.xml",
+    "route_basis": "Exact identifier URL embedded by official USGS Data Catalog; inspect resolved download locations"
+  },
+  {
+    "id": "CZ-author-repos",
+    "url": "https://api.github.com/users/dhood14/repos?per_page=100",
+    "output": "hood_repos.json",
+    "route_basis": "GitHub profile linked from actual author homepage; inspect public repositories only"
+  },
+  {
+    "id": "L-author-research-old",
+    "url": "https://sites.google.com/site/colddirt/research",
+    "output": "levy_oldsite.html",
+    "route_basis": "Potential historical public lab alias from Cold Dirt name; conjectured alias, not a verified original link"
+  },
+  {
+    "id": "CZ-author-data-paper",
+    "url": "https://www.academia.edu/121188177/The_Role_of_Ice_and_Latitude_Dependent_Mantling_on_Boulder_Distributions_Across_the_Martian_Northern_Lowlands",
+    "output": "cohen_author_paper.html",
+    "route_basis": "Indexed author-uploaded original paper; distinguish manuscript from downloadable supplementary table"
+  }
+]

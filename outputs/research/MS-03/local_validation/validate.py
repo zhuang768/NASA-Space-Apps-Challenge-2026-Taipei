@@ -10,7 +10,7 @@ def rows(name):
  with (O/name).open(encoding='utf-8-sig',newline='') as f:
   rd=csv.DictReader(f);out=list(rd)
   check(name+' rectangular',all(None not in r and all(v is not None for v in r.values()) for r in out));return out
-for fn,key,n in [('local_prior_work.csv','prior_work_id',9),('mars_ice_evidence.csv','evidence_id',13),('analog_validation.csv','earth_candidate_id',2),('search_log.csv','log_id',None)]:
+for fn,key,n in [('local_prior_work.csv','prior_work_id',10),('mars_ice_evidence.csv','evidence_id',13),('analog_validation.csv','earth_candidate_id',2),('search_log.csv','log_id',None)]:
  r=rows(fn);check(fn+' unique IDs',len({x[key] for x in r})==len(r));check(fn+' count',len(r)==n if n else len(r)>100)
  for x in r:
   for k,v in x.items():

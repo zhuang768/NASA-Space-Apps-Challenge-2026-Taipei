@@ -60,3 +60,10 @@ Python standard library is sufficient for acquisition and the original XLSX cach
 7. `validate_gap.py`: offline CSV/JSON, source-byte, geometry, missing-value and preservation checks. No branch-name assumption, credentials or missing ignored-response requirement. `finalize_delivery.py` refreshes evidence notes, logs and manifests; no Git or network mutation.
 
 Actual publication/merge status is recorded by GitHub. Historical PR #7 and PR #15 were already merged; this is a separate main-based supplement.
+
+## Executed verification
+
+- Local evidence checks:57 passed, including the optional complete MOC checksum/source-pixel comparison.
+- Fresh detached checkout with20 ignored payloads absent:56 retained-evidence checks passed. The catalogue, spectral, radar and figure scripts executed using only retained inputs; scientific tables/arrays/figures were byte-identical. See `validation_retained_only.json` for the tested commit.
+- Earlier validators:26 and35 checks passed; concurrent-main retained validators:33,52 and67 checks passed. Their stored files were restored byte-for-byte after execution. These checks validate provenance/reproduction, not ice detection or analogue performance.
+- All three figures were actually opened; footprint convention, caption clipping, tick crowding and legend placement were checked and corrected.

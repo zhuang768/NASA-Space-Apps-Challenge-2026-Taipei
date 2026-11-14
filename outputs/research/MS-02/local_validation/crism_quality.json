@@ -1,0 +1,31 @@
+{
+  "product": "msp0001565d_01_if213l_trr3",
+  "geometry": "msp0001565d_01_de213l_ddr1",
+  "period": "2010-01-08",
+  "shape_bands_lines_samples": [
+    55,
+    900,
+    64
+  ],
+  "roi_pixel_centres": 912,
+  "roi_spectral_samples": 50160,
+  "numeric_usable_fraction": 0.9581339712918661,
+  "sentinel_65535_count": 2100,
+  "latitude_range": [
+    52.924991607666016,
+    52.9999885559082
+  ],
+  "longitude_range": [
+    168.24786376953125,
+    168.49977111816406
+  ],
+  "if_quantiles": [
+    -0.02455742470920086,
+    0.020025071445852517,
+    0.13687589764595032,
+    0.1576242054998873,
+    0.3391447961330414
+  ],
+  "evidence": "calibrated I/F science + matching DDR; numeric/geometric QA only; not corrected for atmosphere/photometry",
+  "unknown": "wavelength calibration and per-band bad pixel masks not acquired; no ice or hydrated-mineral identification; buried ice not constrained"
+}

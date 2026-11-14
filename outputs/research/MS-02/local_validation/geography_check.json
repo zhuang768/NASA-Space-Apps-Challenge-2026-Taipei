@@ -1,0 +1,19 @@
+{
+  "coordinate_system": "planetocentric, east positive; Mars sphere R=3396190 m",
+  "quadrangle": "MC-7 Cebrenia; I-1140 map states 30-65N,180-240W (=120-180E)",
+  "unit": {
+    "source_record_zero_based": 1251,
+    "OBJECTID": 1252,
+    "Shape_Leng": 1860503.30065,
+    "Shape_Area": 86354969601.1,
+    "Unit": "mAl",
+    "UnitDesc": "Middle Amazonian lowland unit",
+    "SphArea_km": 77886.1
+  },
+  "unit_roi_area_fraction": 1.0,
+  "arcadia_MDIM20_bbox_intersects": true,
+  "arcadia_MDIM21_polygon_intersects": false,
+  "arcadia_boundary_approximate": true,
+  "arcadia_MDIM21_min_projected_gap_km": 7.690696430218193,
+  "limitation": "Gazetteer outlines approximate; global geologic map 1:20,000,000 cannot supply local mineralogy or cover thickness"
+}

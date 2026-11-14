@@ -1,0 +1,247 @@
+{
+  "task": "MS-02 Earth analog research, Team zasa, NASA Space Apps 2026",
+  "mars_point": {
+    "id": "MS-02",
+    "lat_deg_N": 52.75,
+    "lon_deg_E": 168.25,
+    "nominal_bounds": {
+      "lat": [
+        52.5,
+        53.0
+      ],
+      "lon": [
+        168.0,
+        168.5
+      ]
+    }
+  },
+  "created_taipei": "2026-11-14",
+  "branch": "research/ms-02-earth-analogs",
+  "base_commit_sha": "f7076c9fdc77e00244ed5d6863aad2bf78cfa28f",
+  "base_commit_ref": "origin/handoff/verified-data-20261114 (adds the verified workbook and full screening data to main)",
+  "origin_main_sha_at_start": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+  "base_choice_note": "No common SHA was specified. The hand-off branch is the only remote version containing both large files, so it was used as base; main's SHA is recorded as well.",
+  "common_data_check": {
+    "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx": {
+      "bytes": 23035176,
+      "sha256": "157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175",
+      "opened": "zip test OK; 33 sheets listed via openpyxl read-only"
+    },
+    "outputs/research/mars_reselection_20261114/screened_pool.csv.gz": {
+      "bytes": 7702846,
+      "sha256": "7c5559e40fca9fa304b7799e4490bfb4ff0d55ea0a02819c53f432377462ff92",
+      "opened": "gzip -t OK; 58,238 rows x 54 columns; MS-02 cell found"
+    },
+    "ms02_value_cross_check": "outputs/research/MS-02/verification.json (14 consistency checks, all pass)"
+  },
+  "files": [
+    {
+      "path": "docs/research/MS-02/report.md",
+      "bytes": 28146,
+      "sha256": "1f603ac5a125befdd34af97c14a0c24b3a3591f2b6289a07d4ea62abf7caa0f4"
+    },
+    {
+      "path": "outputs/research/MS-02/candidates.csv",
+      "bytes": 8051,
+      "sha256": "ed4f3fe42842f088b8029877b95bafd6ba9f5137477671d0fdee1d20c2da3450"
+    },
+    {
+      "path": "outputs/research/MS-02/evidence.csv",
+      "bytes": 25451,
+      "sha256": "86366de6f32dbcee7c3f851b596bba68c1b548dfc8d930c214d854b3ff095ae3"
+    },
+    {
+      "path": "outputs/research/MS-02/prior_work.csv",
+      "bytes": 11508,
+      "sha256": "581b4beb6bf5fc6716ec779008c53116606b27eef3ab3411b061dc7e05dab2cb"
+    },
+    {
+      "path": "outputs/research/MS-02/search_log.csv",
+      "bytes": 13772,
+      "sha256": "f58e70175815895b333f1415c7b249b3c6be45dc876bba365c306c010499948a"
+    },
+    {
+      "path": "outputs/research/MS-02/footprint.csv",
+      "bytes": 2983,
+      "sha256": "6ac85eb51dd5e72ad9eb6fabbdbbc239fd9a82f190bf620b5782c96b37b149a6"
+    },
+    {
+      "path": "outputs/research/MS-02/claims.csv",
+      "bytes": 5797,
+      "sha256": "7f7a9db9b9a322dcbef12c622f14987bba5241a43ee815d00c5053239c465dfe"
+    },
+    {
+      "path": "outputs/research/MS-02/figures/fig3_adventdalen_evidence_footprint.png",
+      "bytes": 266886,
+      "sha256": "25926715bfab3fc3c9c6135389878a848f35e186521700eda4bd1a16e06eb423"
+    },
+    {
+      "path": "outputs/research/MS-02/verification.json",
+      "bytes": 7895,
+      "sha256": "cdcb31b57ab970897b3d564c8eec7f31009154e0cfecbf07cd9c78bbd49b76d1"
+    },
+    {
+      "path": "outputs/research/MS-02/figures/fig1_team_targets_context.png",
+      "bytes": 227934,
+      "sha256": "37d0004bdc611af1c712f43934c0d716ede68ab45e207399bc6fd537752bd9f0"
+    },
+    {
+      "path": "outputs/research/MS-02/figures/fig2_latitude_context.png",
+      "bytes": 77597,
+      "sha256": "c004a8e00a613e1f71aa56be7fb02c2268c682c3faa8909b374a36b9beaaf751"
+    },
+    {
+      "path": "scripts/research/ms02_earth_analogs/verify_ms02.py",
+      "bytes": 10531,
+      "sha256": "d101d9e8cb823277d3e009bd3089cf114c5066778d19291e13b4f8909aee6de3"
+    },
+    {
+      "path": "scripts/research/ms02_earth_analogs/build_tables.py",
+      "bytes": 77500,
+      "sha256": "a13d72c0177455ccd949e5ae5c31c40ae1162c9cddfb36e5c8b384ecd38f2c85"
+    },
+    {
+      "path": "scripts/research/ms02_earth_analogs/make_figures.py",
+      "bytes": 10134,
+      "sha256": "9423c83e569886818f2d5c36c6d2e89ef12a828966e4fbff5f41e1bf0e9d7e1d"
+    }
+  ],
+  "sources": [
+    {
+      "id": "SWIM",
+      "ref": "https://swim.psi.edu/SWIM2Products.php"
+    },
+    {
+      "id": "MORGAN",
+      "ref": "https://doi.org/10.1038/s41550-020-01290-z"
+    },
+    {
+      "id": "HAUBER",
+      "ref": "https://doi.org/10.1144/SP356.7"
+    },
+    {
+      "id": "MARINOVA",
+      "ref": "https://doi.org/10.1017/S0954102022000025"
+    },
+    {
+      "id": "HELDMANN",
+      "ref": "https://doi.org/10.1016/j.pss.2013.05.019"
+    },
+    {
+      "id": "BANNISTER",
+      "ref": "https://doi.org/10.5281/zenodo.1154854"
+    },
+    {
+      "id": "BRIGHI",
+      "ref": "https://meetingorganizer.copernicus.org/EPSC-DPS2025/EPSC-DPS2025-710.html"
+    },
+    {
+      "id": "RASMUSSEN",
+      "ref": "https://doi.org/10.1016/j.quascirev.2023.108137"
+    },
+    {
+      "id": "ROTEM",
+      "ref": "https://doi.org/10.5194/tc-17-3363-2023"
+    },
+    {
+      "id": "ROTEM_TC",
+      "ref": "https://tc.copernicus.org/articles/17/3363/2023/"
+    },
+    {
+      "id": "RASMUSSEN_PDF",
+      "ref": "https://backend.orbit.dtu.dk/ws/files/329047704/1_s2.0_S0277379123001853_main.pdf"
+    },
+    {
+      "id": "BRIGHI2026",
+      "ref": "https://meetingorganizer.copernicus.org/EPSC2026/EPSC2026-988.html"
+    },
+    {
+      "id": "HARRAR2025",
+      "ref": "https://meetingorganizer.copernicus.org/EPSC-DPS2025/EPSC-DPS2025-1457.html"
+    },
+    {
+      "id": "PLETTEMEIER_EGU25",
+      "ref": "https://meetingorganizer.copernicus.org/EGU25/EGU25-9766.html"
+    },
+    {
+      "id": "PLETTEMEIER_EGU23",
+      "ref": "https://meetingorganizer.copernicus.org/EGU23/EGU23-16376.html"
+    },
+    {
+      "id": "ANDRES",
+      "ref": "https://core.ac.uk/download/364350841.pdf"
+    },
+    {
+      "id": "HIBBARD",
+      "ref": "https://ir.lib.uwo.ca/etd/8120"
+    },
+    {
+      "id": "PANGAEA_921087",
+      "ref": "https://doi.pangaea.de/10.1594/PANGAEA.921087"
+    },
+    {
+      "id": "UNISCALM_AGU2016",
+      "ref": "https://ui.adsabs.harvard.edu/abs/2016AGUFMGC31H1202S"
+    },
+    {
+      "id": "SESS2018",
+      "ref": "https://doi.org/10.5281/zenodo.4777825"
+    },
+    {
+      "id": "NIETO_STEWART2003",
+      "ref": "https://www.crewes.org/Documents/ResearchReports/2003/2003-08.pdf"
+    },
+    {
+      "id": "CSEG_STEWART",
+      "ref": "https://csegrecorder.com/articles/view/mars-in-canada-the-nasa-haughton-mars-project-devon-island-nunavut"
+    },
+    {
+      "id": "KOWALEWSKI2006",
+      "ref": "https://doi.org/10.1017/S0954102006000460"
+    },
+    {
+      "id": "MCKAY2009",
+      "ref": "https://doi.org/10.1017/S0954102008001508"
+    },
+    {
+      "id": "ELSTON1979_USGS_IMAP1140",
+      "ref": "https://pubs.usgs.gov/publication/i1140"
+    },
+    {
+      "id": "CEBRENIA_QUADRANGLE",
+      "ref": "https://en.wikipedia.org/wiki/Cebrenia_quadrangle"
+    },
+    {
+      "id": "HANDOFF",
+      "ref": "outputs/research/mars_reselection_20261114/"
+    }
+  ],
+  "disposition_summary": {
+    "MS-02-E01": "保留",
+    "MS-02-E02": "待補證據",
+    "MS-02-E03": "降為一般方法參照 (CS-1 loess core retained only as a process analog of aeolian cover + syngenetic ice; the radar link is 證據不足)",
+    "MS-02-E04": "待補證據"
+  },
+  "unresolved_gaps": [
+    "docs/TEAM_START.md does not exist on main or the hand-off branch.",
+    "scripts/restore_team_data.py does not exist on main or the hand-off branch (data are committed directly on the hand-off branch, so no restore step was needed).",
+    "Raw PDS/SWIM/Montabone/Zenodo products could not be downloaded in the sandbox (HTTP 403 via proxy); MS-02 values were cross-checked among three hand-off files, not recomputed from raw rasters.",
+    "MS-02 lies inside Cebrenia quadrangle MC-7 (30-65N, 120-180E; includes parts of Utopia and Arcadia Planitia and Phlegra Montes) but the formal geologic unit and whether MS-02 is in Arcadia Planitia were NOT determined (USGS IMAP 1140 plate not read).",
+    "No Earth-site thermal inertia (only soil conductivity/diffusivity for E01), slope/relief or wind-speed values were obtained for any candidate (marked 未知).",
+    "E02 rests on four abstracts (no coordinates, no temperature table; Kowalewski 2006 full text unavailable); E03 evidence is mostly abstracts plus Hauber 2011; E04 has thaw depth, polygon geometry and GPR/seismic permafrost-top depths but no ground-ice quantity and no borehole temperature series; only Hauber 2011, Marinova 2022, Andres 2020 and the CREWES report were read beyond abstracts (extracted text, some tables absent).",
+    "Adventdalen borehole temperatures (SESS 2018 PDF) and polygon values (PANGAEA zip files) could not be read or downloaded from this environment.",
+    "Hibbard (2021) dissertation body was not read; its abstract names no Arctic sites.",
+    "USGS SIM 3292 (Tanaka 2014) page offers no shapefile or geodatabase link in the fetched content, so the unit at MS-02 could not be looked up here.",
+    "Haughton: p.6 coordinate is the impact-structure centre and Fig 1.8 is the river-valley study area (~4.3 km apart); Table 3.1 LiDAR grids were converted from UTM 16N by a pure-Python inverse (this-study calc; no independent library cross-check, but results agree with Fig 1.8 within ~0.1 deg).",
+    "One literature page (Antarctic Science depth-to-ice paper via proxy URL) was access-denied and not read.",
+    "SWIM composite resolution/units are not stated on the provider page.",
+    "Marchant & Head 2007 and Sugden 1995 were not found or read.",
+    "Beacon Valley depth ranges differ between sources (10-60 cm Heldmann; 40-80 cm Kowalewski) and were not reconciled.",
+    "Fourth-round Adventdalen audit: full Brighi et al. WISDOM paper (polygon-line coordinates, ground truth, ε derivation) not obtained (abstracts only); Rasmussen read chars 0-100,000 of 107,876 and Rotem 0-100,000 of 114,191 via extracted text; Rasmussen DOI and HAL record blocked; CS-1 coring date, CALM grid location and the WISDOM polygon location remain unknown."
+  ],
+  "not_claimed": [
+    "No ice amount or probability for MS-02",
+    "No Mars-likeness score/percentage",
+    "No claim that any pairing was never studied"
+  ]
+}

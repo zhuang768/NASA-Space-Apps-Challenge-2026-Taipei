@@ -2,7 +2,7 @@
   "check_date": "2026-11-15",
   "all_passed": true,
   "checks_count": 232,
-  "hashed_files_verified": 212,
+  "hashed_files_verified": 181,
   "checks": [
     {
       "check": "fixed ROI and archived thermal pixel",
@@ -157,19 +157,19 @@
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/extracted/marinova2022.txt",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/extracted/marinova_p162.png",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/extracted/rasmussen2023.txt",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/extracted/sim3292_pamphlet.txt",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
@@ -333,7 +333,7 @@
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/cebrenia1979.pdf",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
@@ -349,7 +349,7 @@
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/marinova2022.pdf",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
@@ -389,27 +389,27 @@
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/pathare2018.pdf",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/piqueux/Lat.ascii",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/piqueux/Lon.ascii",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/piqueux/Notes.txt",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/piqueux/TI_SI.ascii",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/piqueux/d_m.ascii",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
@@ -581,7 +581,7 @@
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_de213l_ddr1.img",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
@@ -589,7 +589,7 @@
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/products/msp0001565d_01_if213l_trr3.img",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
@@ -677,7 +677,7 @@
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/products/s_00464501_browse_combined.tif",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
@@ -697,7 +697,7 @@
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/products/s_00464501_rgram.img",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
@@ -725,7 +725,7 @@
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/products/s_01983502_browse_combined.tif",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
@@ -745,7 +745,7 @@
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/products/s_01983502_rgram.img",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
@@ -773,7 +773,7 @@
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/products/s_02004601_browse_combined.tif",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
@@ -793,7 +793,7 @@
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/products/s_02004601_rgram.img",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
@@ -829,7 +829,7 @@
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/rasmussen2023.pdf",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
@@ -837,7 +837,7 @@
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/sim3292_pamphlet.pdf",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
@@ -845,39 +845,39 @@
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/usgs_geology/SIM3292_Global_Geology.dbf",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/usgs_geology/SIM3292_Global_Geology.prj",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/usgs_geology/SIM3292_Global_Geology.sbn",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/usgs_geology/SIM3292_Global_Geology.sbx",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/usgs_geology/SIM3292_Global_Geology.shp",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/usgs_geology/SIM3292_Global_Geology.shp.xml",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/usgs_geology/SIM3292_Global_Geology.shx",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/wendt2026.html",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {
-      "check": "hash outputs/research/MS-02/local_validation/sources/wisdom2025.html",
+      "check": "only local-only files may be absent",
       "passed": true
     },
     {

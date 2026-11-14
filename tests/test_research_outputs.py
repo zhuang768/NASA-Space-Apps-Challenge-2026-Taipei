@@ -25,14 +25,18 @@ def test_claim_levels_use_shared_vocabulary():
 
 def test_evidence_records_keyed_by_canonical_ids():
     data = load("three_candidate_evidence.json")
-    base = json.loads((ROOT / "outputs/analysis/results_with_context.json").read_text())
-    ids = {c["candidate_id"] for cands in base["candidates"].values() for c in cands}
+    ids = {record["candidate_id"] for record in data["records"]}
+    assert len(ids) == len(data["records"])
     for record in data["records"]:
-        assert record["candidate_id"] == record["candidate"]["candidate_id"] in ids
+        assert record["candidate_id"] == record["candidate"]["candidate_id"]
         assert record["mars_target"] in data["mars_profiles"]
         assert record["scale10km_rank"] is None or isinstance(record["scale10km_rank"], int)
         status = record["prior_analog_literature"]["status"]
         assert record["candidate"]["prior_analog_literature_status"] == status
+    overlap = load("oytag_overlap.json")
+    transect = load("oytag_transect_check.json")
+    assert overlap["candidate_id"] in ids
+    assert transect["candidate_id"] == overlap["candidate_id"]
 
 
 def test_oytag_points_numeric_and_disjoint_from_supplement():

@@ -4,26 +4,26 @@
 
 Search open terrain data for Earth candidate regions, compare them with Mars targets, and expose the supporting evidence, missing data and limits of each analogy.
 
-**[Live dashboard → nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev)** · [Methods](docs/README.md) · [Candidate results](outputs/analysis/candidate_handoff.md) · [Website handoff](outputs/matching_handoff/README.md) · [Mars data](outputs/mars_profiles/handoff.md) · [Data guide](data/README.md) · [Contributing](CONTRIBUTING.md)
+**[Live dashboard → nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev)** · [Methods](docs/README.md) · [Mars discovery](outputs/mars_discovery/README.md) · [Research handoff](docs/mars_discovery_handoff.md) · [Mars data](outputs/mars_profiles/handoff.md) · [Data guide](data/README.md) · [Contributing](CONTRIBUTING.md)
 
-> **Status:** research pipeline and candidate-analysis prototype. Regional terrain results are available; validated four-theme scoring is unfinished. Not NASA-endorsed, and the competition submission is not complete. Earth–Mars-only scope is a locked team decision.
+> **Status:** four Mars reporting references are available. Earth pairing and same-purpose novelty checks remain research work; validated four-theme scoring is unfinished. Not NASA-endorsed, and the competition submission is not complete. Earth–Mars-only scope is a locked team decision.
 
 ## Results
 
-![Terrain candidate search, not overall Mars similarity](outputs/analysis/figures/candidate_map.png)
+![Experimental shallow-ice candidate screening](outputs/mars_discovery/figures/isru_shallow_ice_map.png)
 
-Candidates come from sparse regional terrain screening and require further environmental, geological and prior-literature verification. The map does not establish landing safety, novelty or mission success.
+Current reporting references are I-01, I-02, D-03 and D-04. They require environmental, geological and prior-literature verification. The map does not establish landing safety, novelty or mission success. Previous Jezero/Gale/Arcadia Earth rankings and their 4 km / 10 km comparison outputs have been removed at the owner's request.
 
 | Workstream | Status | Evidence |
 |---|---|---|
-| Common physical-scale terrain comparison | Actual results available | [Method](docs/earth_pipeline.md), [candidates and limits](outputs/analysis/candidate_handoff.md) |
+| Common physical-scale terrain methods | Methods retained; previous ranking outputs removed | [Method](docs/earth_pipeline.md) |
 | Mars MOLA / TES / SWIM / dust context | Integrated | [Method](docs/mars_pipeline.md), [sources and values](outputs/mars_profiles/profiles.json) |
 | Regional day/night temperature context | New coarse MCS time-corrected derivative; unscored and metadata incomplete | [Source, extraction and remaining gaps](outputs/mars_regional_temperature/README.md) |
 | Rover day/night brightness temperature | Exploratory; incomplete quality support | [MEDA method](docs/mars_temperature.md), [quality summary](outputs/mars_temperature/summary.json) |
 | Multi-theme Earth raw data | Teammate inventory; complete batch not on this machine | [Inventory](docs/earth_inventory.csv), [handoff](docs/data_handoff.md) |
 | Four-theme scoring and field-site validation | Unfinished | [Quantity comparison](docs/cross_reference.md) |
 | Interactive workbench | Official site on the team Cloudflare Worker; auto-deploy from `main` waits for the team API token | [Public site](#public-site-cloudflare), [deployment check](docs/deployment_check_2026-11-14.md) |
-| English presentation and official submission | Drafts available; completion unverified | [Submission preparation](docs/submission/preparation.md) |
+| English presentation and official submission | Previous slide draft removed; final materials pending | [Submission preparation](docs/submission/preparation.md) |
 
 ## Run locally
 
@@ -34,7 +34,6 @@ python3.12 -m venv .venv
 .venv/bin/python -m pip install -e ".[dev]"
 .venv/bin/python -m scripts.profile_mars --strict
 .venv/bin/python -m scripts.process_mars_temperature
-.venv/bin/python -m scripts.export_matching_handoff
 .venv/bin/python -m pytest -q
 .venv/bin/ruff check .
 ```
@@ -105,43 +104,10 @@ Versions, units and processing are documented in the [method index](docs/README.
 
 The official-repository Navigator reply supports preparing up to seven slides or a video of at most 30 seconds. The complete submission guide, account details and Taipei-specific requirements remain unverified. Drafts are not proof of submission. See the [remaining checklist](docs/submission/remaining_checklist.md).
 
-## Work log
+## Current research
 
-All entries are from 2026-11-14. Full reports with verification details and per-entry AI disclosures are in the [work log](docs/work_log.md); earlier records are in the [pre-cleanup archive](docs/archive/README_before_cleanup_2026-11-14.md), [Earth work log](docs/work_report_2026-11-14.md) and [MEDA log](docs/mars_temperature.md). A past status is not necessarily the latest. Some linked documents are still in Chinese.
-
-- **Cleanup:** reorganized docs, data and output navigation; added a [file inventory](docs/repository_inventory.csv). No scientific values changed.
-- **Candidate research:** [three evidence records](outputs/research/three_candidate_evidence.json) for `gale-01` (39°N 75°E), `arcadia-01` (29°N 105°W) and `arcadia-02` (35°N 57°E). Top-2 retention across four configurations was 4/4, 3/4 and 2/4, which is not confidence. See the [report](docs/research_report_three_analogs_2026-11-14.md).
-- **Oytag literature (`gale-01`):** three Bershaw et al. (2012) rock samples, an approximate Sun et al. (2013) gypsum-bearing transect and ten Table DR1 zircon parent-rock coordinates fall inside the window. Gypsum GPS, same-outcrop XRD and gypsum/clay/iron-oxide co-occurrence remain unverified.
-- **Research schema:** candidate-ID keys, shared evidence levels (`VERIFIED` / `INFERRED` / `EXTERNAL` / `UNVERIFIED`, which describe support, not confidence) and numeric coordinates. Values unchanged.
-- **Matching handoff:** [36 target–candidate records](outputs/matching_handoff/README.md) with figures. No reranking.
-- **Regional Mars temperature:** MCS-derived day/night context (DOI `10.5281/zenodo.17947556`) for Jezero, Gale and Arcadia; unscored, metadata incomplete. See the [source report](outputs/mars_regional_temperature/README.md).
-- **Submission preparation:** [readiness audit](docs/submission_readiness_2026-11-14.md) (53 checklist items, not official requirements), [English copy and slide text](docs/submission/preparation.md), [research scope](docs/research_scope.md) and a two-window [reference check](outputs/research/reference_terrain_check.json), which is not full validation. Account fields are blank and nothing has been submitted.
-- **Website:** candidates, dual maps, evidence drawer and sensitivity views; deep-dive candidates and the Oytag overlay; three views (Overview & map, Evidence & sources, Sensitivity & gaps). Browser-checked at 1440 px and 390 px.
-- **Participant guides:** [English rules digest](docs/submission/official_rules_digest.md) with submission fields, 7-slide / 30-second limits, judging criteria and dates, plus a printable [Chinese team checklist PDF](output/pdf/spaceapps_2026_team_checklist_zh-TW.pdf) for internal use.
-- **Mars discovery handoff:** literature checks on the top five sites per use (handoff files not yet committed); novelty of exact locations remains unconfirmed.
-- **Deployment:** official site moved to the team Cloudflare Worker; the workflow now runs `wrangler deploy` with release verification. The team site passed public desktop and mobile checks; the full deployment pipeline passed run 43569162001; main-push trigger verification is in progress (see [Public site](#public-site-cloudflare)).
-
-Open: original-code license, challenge-specific and Taipei event details, Earth QA-controlled data handoff, qualified regional Mars temperature, and four-theme scoring.
-
-AI assistance (OpenAI Codex, Antigravity, Claude) is disclosed per entry in the full log.
-
-
-### 2026-11-14: Deployment credentials repaired and pipeline verified
-
-After the owner updated the configuration, [workflow run 43569162001](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/actions/runs/43569162001) completed successfully: configuration validation, data build, web build, Worker upload and public release verification all passed. The public deployment stamp reported commit `bc25d3ae4d89b2b1c62eef1f42268f3d78988f59` and this run ID. The previous credential-format blocker is resolved for this tested run.
-
-The official site remains https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/ . Every main push is configured to trigger this same workflow; this report update is also being used to exercise the push trigger separately from manual dispatch. No science, ranking or website code was changed. OpenAI Codex assisted verification and English reporting.
-
-
-### 2026-11-14: Full-height Earth candidate sidebar
-
-Removed the desktop candidate-list height cap and nested scrolling so all candidates continue down the page. The candidate sidebar stretches with the right analysis column; the final right panel fills the shared row height. Removed desktop sticky positioning for this sidebar. Mobile retains its bounded, scrollable candidate list. No values, rankings or filters changed.
-
-Validated in Chromium at 1440 px: both Overview and Evidence views have matching left/right column bottoms, all 12 cards fit without internal list scrolling, and the sidebar is static. At 390 px the document has no horizontal overflow and the list remains at most 260 px tall. TypeScript/Vite build passed; a desktop screenshot was reviewed. OpenAI Codex assisted layout changes and validation.
-
-
-### 2026-11-14: Reduced information density
-
-Reorganized both website modes around progressive disclosure. Mars research candidates show research purpose, key gaps and the regional map first; research notes, four-theme evidence, measurements, sources and interpretation limits are available in five expandable sections. Shortened repeated warnings while preserving critical unverified status. Earth analog search initially shows three candidates, with a control to reveal the full list; a selected candidate outside the initial three remains visible. Map-scale explanations are expandable. No source records, scientific values, rankings or evidence were deleted or recalculated.
-
-TypeScript/Vite build passed. Chromium checks passed for five initially collapsed sections, visible regional map, measurement expansion, reset on candidate change, three/all candidate toggle, target switching, evidence drawer, and both modes at 390 px without horizontal overflow or page errors. Desktop screenshots were reviewed. These checks used the local site; public deployment is verified separately by the deployment workflow. OpenAI Codex assisted implementation, validation and this English report.
+- [Selection principles](docs/site_discovery_brief.md) and [Mars research handoff](docs/mars_discovery_handoff.md).
+- [Experimental Mars references](outputs/mars_discovery/README.md): I-01, I-02, D-03 and D-04.
+- Team-specific research reports are under `docs/research/` on the branches where their authors publish them.
+- Previous terrain-ranking outputs, matching exports, old slide drafts and work logs were removed. Scientific input data, source metadata, methods, rights records and the new Mars references remain.
+- AI assistance and contribution records: [disclosures and rights](docs/submission/disclosures_and_rights.md).

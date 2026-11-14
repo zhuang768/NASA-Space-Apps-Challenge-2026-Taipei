@@ -17,7 +17,7 @@ mkdir -p data/raw
 tar -xzf data/downloads/spaceapps-terrain-inputs-2026-11-14.tar.gz -C data/raw
 ```
 
-資料包頂層為 `earth/` 與 `mars/`，解壓後對應管線使用的 `data/raw/earth/` 與 `data/raw/mars/`。若既有同名檔，請先比對 SHA-256，再決定是否解壓覆寫。來源與原始檔校驗碼在資料包的 `earth/public_sources.json` 及 repo `outputs/analysis/results.json`；資料包校驗碼另在 Release 的 `SHA256SUMS.txt`。
+資料包頂層為 `earth/` 與 `mars/`，解壓後對應管線使用的 `data/raw/earth/` 與 `data/raw/mars/`。若既有同名檔，請先比對 SHA-256，再決定是否解壓覆寫。來源與原始檔校驗碼在資料包的 `earth/public_sources.json` 及 repo `outputs/analysis/source_metadata/public_sources.json`；資料包校驗碼另在 Release 的 `SHA256SUMS.txt`。
 
 `earth/power/` 包含六個候選的月氣候資料，另含一筆 33°N, 87°E 的連線檢查資料；連線檢查未進入排名。地形原始檔只提供資料取得依據；候選仍是未驗證的區域地形候選。
 

@@ -81,7 +81,7 @@
    - **[NASA Mars Trek](https://trek.nasa.gov/mars/)**：完全免登入。預先熟悉要對照的火星目標區截圖（如 Jezero Crater、Arcadia Planitia、Gale Crater、Arsia Mons 天窗）。
 
 3. **建立簡報與場址分析的「定性子題」資料夾／清單**
-   - 等相似度排名一出，就能直接把 Top 1–2 場址的 Worldview 截圖、Mars Trek 截圖與四大面向子題（礦物、洞穴、極端生物文獻）填入 `docs/presentation_outline.md` 第 4 頁。
+   - 等相似度排名一出，就能直接把 Top 1–2 場址的 Worldview 截圖、Mars Trek 截圖與四大面向子題（礦物、洞穴、極端生物文獻）填入 後續依最新研究問題製作的展示文案（舊簡報已移除）。
 
 ---
 

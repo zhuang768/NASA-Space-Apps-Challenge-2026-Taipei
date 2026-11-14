@@ -72,7 +72,7 @@ Original-code license: pending team confirmation. Third-party material retains i
 ## 展示製作與送出順序
 
 1. 先核對完整題目／指南與Mars-only；未回覆時保留待確認，不自行寫「符合所有規則」。
-2. 依[七頁英文文案](slides_en.md)製作PDF，加入實際截圖及可讀引用；本輪尚未產出完成PDF／影片。
+2. 依最新火星候選與用途研究重新製作英文展示 PDF（舊版逐頁文案已移除），加入實際截圖及可讀引用；本輪尚未產出完成PDF／影片。
 3. 全隊核對姓名、貢獻與[AI紀錄](disclosures_and_rights.md)，確認授權。不要把待確認欄位原樣當最終提交。
 4. 指定release commit，驗證公開repo／展示／PDF的匿名存取。Cloudflare workflow存在不代表已部署。
 5. 依實際表單填入文案、資料與引用；檢查儲存結果，完成SUBMIT後確認狀態與時間。

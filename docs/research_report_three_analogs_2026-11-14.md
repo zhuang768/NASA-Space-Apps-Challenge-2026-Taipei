@@ -12,9 +12,9 @@
 
 ### 本地證據（VERIFIED）
 
-- [候選與氣候背景](../outputs/analysis/results_with_context.json)：`targets`、`candidates`、`parameters`、`sources`。
-- [敏感度](../outputs/analysis/sensitivity.json)：各目標的 `base_4km_top2`、`alternative_10km_top2`、`weight_variants`。
-- [10 km 對照](../outputs/analysis_scale10km/results.json)。
+- 候選與氣候背景（舊檔已移除；歷史來源：`outputs/analysis/results_with_context.json`）：`targets`、`candidates`、`parameters`、`sources`。
+- 敏感度（舊檔已移除；歷史來源：`outputs/analysis/sensitivity.json`）：各目標的 `base_4km_top2`、`alternative_10km_top2`、`weight_variants`。
+- 10 km 對照（舊檔已移除；歷史來源：`outputs/analysis_scale10km/results.json`）。
 - [火星描述與來源](../outputs/mars_profiles/profiles.json)：`profiles.gale`、`profiles.arcadia` 及 `sources`。
 - [地形距離函式](../analog/matching.py)：`terrain_distance`、`TOLERANCES`、`WEIGHTS`。
 - [共同物理窗口](../analog/screening.py)：`local_coordinates`、`sample_patch`、`patch_features`。

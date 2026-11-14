@@ -148,14 +148,16 @@ export function App() {
         >
           Mars research candidates
         </button>
-        <button
-          type="button"
-          className={`btn ${workspaceMode === "workbench" ? "btn-active" : ""}`}
-          aria-pressed={workspaceMode === "workbench"}
-          onClick={() => setWorkspaceMode("workbench")}
-        >
-          Earth analog search
-        </button>
+        {targetIds.length > 0 && (
+          <button
+            type="button"
+            className={`btn ${workspaceMode === "workbench" ? "btn-active" : ""}`}
+            aria-pressed={workspaceMode === "workbench"}
+            onClick={() => setWorkspaceMode("workbench")}
+          >
+            Earth analog search
+          </button>
+        )}
       </nav>
 
       {workspaceMode === "discovery" && discovery ? (

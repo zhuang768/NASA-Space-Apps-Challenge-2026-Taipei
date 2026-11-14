@@ -181,16 +181,27 @@ def build_mars_discovery() -> dict:
 
 
 def main() -> None:
-    results = load_json("outputs/analysis/results_with_context.json")
-    results_10km = load_json("outputs/analysis_scale10km/results.json")
-    sensitivity = load_json("outputs/analysis/sensitivity.json")
+    # The previous terrain rankings can be retired without removing discovery.
+    legacy_paths = (
+        "outputs/analysis/results_with_context.json",
+        "outputs/analysis_scale10km/results.json",
+        "outputs/analysis/sensitivity.json",
+    )
+    available = [(ROOT / path).is_file() for path in legacy_paths]
+    if any(available) and not all(available):
+        raise SystemExit("Incomplete legacy ranking inputs; restore or retire the full set.")
+    legacy_available = all(available)
+    results = load_json(legacy_paths[0]) if legacy_available else {}
+    results_10km = load_json(legacy_paths[1]) if legacy_available else {}
+    sensitivity = load_json(legacy_paths[2]) if legacy_available else {}
     mars_profiles = load_json("outputs/mars_profiles/profiles.json")
     mars_temp = load_json("outputs/mars_temperature/summary.json")
 
     bundle = {
         "meta": {
             "app_name": "TerraMatch Mission Lab",
-            "analysis_type": results.get("analysis_type"),
+            "analysis_type": results.get("analysis_type", "mars_site_discovery"),
+            "legacy_rankings_status": "available" if legacy_available else "removed",
             "generated_utc": results.get("generated_utc"),
             "base_commit": results.get("base_commit"),
             "parameters": results.get("parameters"),
@@ -205,7 +216,7 @@ def main() -> None:
         "sensitivity": sensitivity,
         "scale10km_counts": results_10km.get("counts"),
         "rover_temperature_context": mars_temp,
-        "research": build_research(),
+        "research": build_research() if legacy_available else {},
         "mars_discovery": build_mars_discovery(),
     }
 
@@ -229,6 +240,14 @@ def main() -> None:
         json.dump(bundle, f, indent=2)
 
     PUB_FIGURES.mkdir(parents=True, exist_ok=True)
+    if not legacy_available:
+        for name in (
+            "candidate_map.png",
+            "jezero_terrain_comparison.png",
+            "gale_terrain_comparison.png",
+            "arcadia_terrain_comparison.png",
+        ):
+            (PUB_FIGURES / name).unlink(missing_ok=True)
     fig_dir = ROOT / "outputs" / "analysis" / "figures"
     if fig_dir.exists():
         for png in fig_dir.glob("*.png"):

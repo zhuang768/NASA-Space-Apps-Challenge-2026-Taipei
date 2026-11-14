@@ -1,5 +1,30 @@
 # MS-03 — local validation evidence notes
 
+## 2026-11-15：BD1500_2 官方程式／版本查核（數值未修正）
+
+- 起始main：`fbfa780cf587a0787739200898e80b4d27fea8d1`；本輪依使用者指示驗證後整合main，只更新local_validation。
+- [版本與程式來源表](../../../../outputs/research/MS-03/local_validation/bd1500_audit/version_comparison.csv)、[逐項假說核對](../../../../outputs/research/MS-03/local_validation/bd1500_audit/hypothesis_checks.csv)、[診斷圖](../../../../outputs/research/MS-03/local_validation/bd1500_audit/F-BD01_version_and_arithmetic_audit.png)、[完整方法及缺件](../../../../outputs/research/MS-03/local_validation/bd1500_audit/README.md)。
+
+|查核問題|實際證據／數據|判定範圍|
+|---|---|---|
+|既有mapping公式是否抄錯？|官方CAT7.4的BD1500_2為兩個band depth各乘0.5，與2026文件相同；helper以最近單通道及實際波長計算continuum|未發現所查公開公式與既有重算不同；不能代表1.03.94實際caller|
+|移植公式能重現既有數值？|13169筆嚴格格內中心，Python移植公式與既有計算最大差0|只確認公式與算術；沒有執行原始IDL或完整製作流程|
+|是否只是浮點精度？|Float32相對Float64最大擾動約1.35×10⁻⁷；官方與重算最大差約0.01935|浮點差不足以解釋完整殘差；不代表其他製作運算無誤差|
+|是否讀錯band？|LBL／HDR的60個band名稱次序一致，BD1500_2為零起算24；資料型別與儲存方式一致|可排除本次依所供元資料選錯index；不認證製作端永遠無錯標|
+|是否取得錯誤byte ranges？|另向官方server重取3處×2欄位的6個4-byte值，均與已保存範圍相同|只對這6點核實，不冒稱完整檔案外部checksum|
+|官方summary是否保留CAT代數關係？|輸出BD1435、BD1500_2帶入ICER1_2公式，最大差約0.001822；同算術浮點擾動約1.72×10⁻⁷|確認輸出欄位不保留這項關係；不能據此指認廠商錯誤、stage或正規化原因|
+|差異能歸因哪個版本／流程？|實際MRDR標籤是crism_mapping_execute_flow1.03.94；CAT7.4與JCAT皆為不同工具；所查來源未取得確切製作source／executable／build/options|製作差異的原因維持unknown，不作校正|
+
+- 版本邊界：CAT release notes日期2018-12-28，短函式註記2012／2013；2026參數文件與該公式相同，不能僅憑文件年份較新解釋殘差。
+- 官方JHUAPL/JCAT已固定commit `ba093b070c6d535c15209c8fc2d7a6b2893eb017`（2024-10-31），4個blob驗證通過；所讀targeted路徑是1525nm高光譜kernel，不拿來代替MRDR mapping流程。pom的0.0.1-SNAPSHOT不等於已驗證下載版JCAT1.1的執行版本。
+- 搜尋界線：官方CAT小型程式包320個可讀成員、官方MRDR文件目錄、具來源的公開JCAT程式。未找到確切production flow不代表全球未公開；未存取release notes所列Team-only作者主機，未聯絡作者。
+- 分組觀察：殘差隨來源分組而異，但來源、地理位置、年代與流程互相混雜。最大差所屬來源1587c在嚴格子集僅1個mapped centre；不可把最大值當整格典型誤差或因果證據。
+- 尚缺：1.03.94原始程式或可核驗執行檔／build hash、caller的multi/hyper分支與選項、正規化前後AL／SU中間結果、gain/offset係數及SU逐像素來源指派。沒有這些不能證明哪一stage造成差異。
+- 已保留所有原始官方值與既有重算結果；沒有做擬合gain/offset、截負值、補0、調整參數以貼合官方值。
+- 冰存在、深度、含量與局部雲霜品質仍unknown；AD1降級及形貌unknown維持；未處理Earth時標。
+- 驗證：新增45項可用原檔檢查、33項僅保留材料檢查已實際通過；圖已開啟核對。這不是冰偵測驗收或官方製作軟體執行通過。
+- 以下前輪紀錄保留；較早「版本差異可能解釋」只作待查脈絡，本輪沒有證實其致因。
+
 ## 2026-11-15：官方 Resources → PDS → MRDR v4 補證據
 
 - 本輪起始 SHA：`44c2e03b8617c7bb536ad712b85f4716dd190d7c`；原分支核對後無更新。只新增／更新local_validation，不合併main。

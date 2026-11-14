@@ -37,3 +37,8 @@
 
 - `official_resources/README.md` records the verified challenge→PDS source chain, acquired local corrected-band/summary data, source dates, native projection and unresolved ice interpretation.
 - Official MRDR parameters and a documented multispectral recalculation are now available in that separate package. This supersedes neither the original raw-product OFF flags nor the retained historical acquisition records. Negative parameters and numeric coverage are not an ice-absence result.
+
+## BD1500_2 disclosed-code / version audit
+
+- `bd1500_audit/README.md` documents official CAT/JCAT source/version distinctions, numerical checks and remaining missing production files. Existing values are retained; no cause-specific correction is applied.
+- When regenerating parent tables, run the prior CRISM and official-resource refresh scripts, followed by `bd1500_audit/refresh_parent.py` to retain the additive LV-ICE13 audit record.

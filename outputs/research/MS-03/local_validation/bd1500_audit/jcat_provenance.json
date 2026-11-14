@@ -1,0 +1,46 @@
+[
+  {
+    "path": "src/main/java/javafx/TRDRSummaryParameters.java",
+    "pinned_commit": "ba093b070c6d535c15209c8fc2d7a6b2893eb017",
+    "url": "https://github.com/JHUAPL/JCAT/blob/ba093b070c6d535c15209c8fc2d7a6b2893eb017/src/main/java/javafx/TRDRSummaryParameters.java",
+    "local_file": "sources/jcat_TRDRSummaryParameters.java",
+    "sha256": "1efaa6a9240a87cb06e3826809cb5322634ee4ce83499b04511d14ed7bc33b66",
+    "git_blob_sha1": "94f8b76c0951db7eefaa6b1ea49f1156d0e08683",
+    "blob_verified": true,
+    "access": "GitHub connector; public source",
+    "checked_utc": "2026-11-14T19:55:10.710038+00:00"
+  },
+  {
+    "path": "src/main/java/util/spBandDepth.java",
+    "pinned_commit": "ba093b070c6d535c15209c8fc2d7a6b2893eb017",
+    "url": "https://github.com/JHUAPL/JCAT/blob/ba093b070c6d535c15209c8fc2d7a6b2893eb017/src/main/java/util/spBandDepth.java",
+    "local_file": "sources/jcat_spBandDepth.java",
+    "sha256": "a6fedc88f65adaee50eceeb07ec9e981484801d3c818c7c54574826726657bae",
+    "git_blob_sha1": "a185c5db54193857ea7017588102e486bf449252",
+    "blob_verified": true,
+    "access": "GitHub connector; public source",
+    "checked_utc": "2026-11-14T19:55:10.710226+00:00"
+  },
+  {
+    "path": "LICENSE.md",
+    "pinned_commit": "ba093b070c6d535c15209c8fc2d7a6b2893eb017",
+    "url": "https://github.com/JHUAPL/JCAT/blob/ba093b070c6d535c15209c8fc2d7a6b2893eb017/LICENSE.md",
+    "local_file": "sources/jcat_LICENSE.md",
+    "sha256": "56e990900d55e61ca7d8f5c81829fb80bfb552aad614fbb8374efdf0616fbf83",
+    "git_blob_sha1": "00a3656f5cd90a91be70c7fbcd61d7dd7607390c",
+    "blob_verified": true,
+    "access": "GitHub connector; public source",
+    "checked_utc": "2026-11-14T19:55:10.710322+00:00"
+  },
+  {
+    "path": "pom.xml",
+    "pinned_commit": "ba093b070c6d535c15209c8fc2d7a6b2893eb017",
+    "url": "https://github.com/JHUAPL/JCAT/blob/ba093b070c6d535c15209c8fc2d7a6b2893eb017/pom.xml",
+    "local_file": "sources/jcat_pom.xml",
+    "sha256": "a6f14a1974660c957cf957821479733c568beb6d44b3de10be928677dd130caf",
+    "git_blob_sha1": "cd889295fcaa6f42c8e47289f9d169b2151ddba8",
+    "blob_verified": true,
+    "access": "GitHub connector; public source",
+    "checked_utc": "2026-11-14T19:55:10.710459+00:00"
+  }
+]

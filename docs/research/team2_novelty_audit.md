@@ -2,6 +2,100 @@
 
 Team zasa. Review date: **2026-11-14, Asia/Taipei**. Phase 1 repository baseline: `3e3ffff`; Phase 2 main baseline: `263269a`. Scope: literature and proposal checks for I-01, I-02, D-03 and D-04, followed by the supplied Earth candidate EARTH-UV-001. No new site selection, Earth pairing, environmental validation or ranking.
 
+## 2026-11-14：EARTH-003 接收、25／45 cm 來源鏈與 MR-v1 比較
+
+本輪基準 main `409a2e77dbeb741486901f840da3643180bed2ac`，開始時工作區乾淨；保留 `01142ca` 的 Elephant Head 組成先例與所有火星範圍排除。只補本節與 CSV 的 EARTH-003，不重搜 EH 或重算 GIS。
+
+**結論：25／45 cm 的矛盾已定位到來源，但原因尚未釐清。現階段主線適合稱「既有研究重現、來源與 QA 整合、後續驗證需求設計」，尚無已證實的新科學分析差異或新實驗結果。**
+
+### 身份、版本與兩層範圍
+
+接收 Team 1 main `409a2e77dbeb741486901f840da3643180bed2ac` 的 `EARTH-003 → I-02`（候選 CSV 第4列）：Linnaeus Terrace／LT／GGD6，歷史站點 77°36′S、161°05′E，即 −77.6°、161.083333333°（北東為正）。只有 point anchor，沒有新試驗區；guide 明列 datum `none`，不指定 WGS84。配對、ID 與座標未改。
+
+主線三檔 `main_mars_research_cards.md`、`main_research_requirements.csv`、`main_project_synthesis.md` 於本輪 main 均未整合；實讀 `origin/codex/mars-research-mainline-20261114` commit `9e5c49ea7b4d7272972e7d409e6a298e6ef3da4a` 的 MR-20261114-v1，不修改其文件。需求仍為暫定設計、門檻未定。研究分兩層：
+
+- **A：已發表資料 QA、熱響應描述與驗證需求。** 可立即比對既有文獻，不等待未來硬體。
+- **B：未來盲判／覆土控制／新取芯與冰損失實驗。** 組成方法有先例；完整新協定仍資料不足，不能由本次未找到證明從未做過。
+
+Team 1 CSV SHA-256 `cb45ebafe1d7e43506462bdc467b402bc6f2446cea3c1d0f7b2ee52468ef107a`；需求 CSV 的 branch 版本 SHA-256 `89fe4d295856c09edeaabd8a32b6e63fcb5cbc1ea3fe762e211eb6a773ccfaf3`。本輪只讀交接中的 raw 取得紀錄，沒有代替 GPU 解析原始時序或產生統計。
+
+### 25／45 cm：各來源實際說了什麼
+
+| 來源／實讀定位 | 數值與性質 | 同站／同年判斷及限制 |
+|---|---|---|
+| LTA2，1998 原論文出版者及 NASA 作者摘要 | 25 cm，描述 1994 年歷史冰膠結界面；不是我們反演的深度 | 本次可追到的最早期刊來源。全文未取得，不能宣稱檢查完原始剖面／圖表或所有調查點 |
+| LTA1，1998 CAPS 原作者指南，printed pp.2–5（PDF pp.3–6） | 0／17／23／40 cm 感測器，23 cm 稱在冰層上方；挖坑到界面後向冰層鑽孔 15 cm | 與 GGD6／同一引用文獻有明確連結；guide 儲存期為1994–1995。40−15=25 cm 是與安裝敘述一致的解讀，不是另一筆獨立界面量測 |
+| LTA4，2009 作者研究之摘要 | 25 cm；雪再現與冰穩定性解釋 | 沿用 LT 背景做機制研究，不是新的同站深度監測。只讀摘要 |
+| EHA1，2019 Introduction PDF p.1（既有來源重用） | 25 cm，引用 McKay et al.1998 | 後續轉述，非2019新量測LT；未重搜EH |
+| LTA3，2022 Introduction printed p.144／PDF p.1 | **45 cm**，明文引用1998研究 | 本次鏈中最早核實到45cm的位置；引用同一作者、年份、地區／高度，沒有另述新LT調查年、座標或剖面 |
+| LTA6，2026 Table I printed p.124／PDF p.3 | 25 cm，再引用1998研究 | 同一歷史文獻的比較值，不是2026新量測LT；不能拿兩篇出版年份當冰層變化時序 |
+
+**已釐清的是來源性質與引用關係，未釐清的是差異成因。** 現有證據較直接支持「25cm是1998作者報告值」，而45cm是後來轉述；但沒有原全文／明確勘誤，不能正式判定45cm必是筆誤，也不能排除未讀的不同剖面或其他脈絡。這些只是待查可能性，不是等權或已證實解釋。本次查詢未找到能確認成因的勘誤；不宣稱不存在勘誤。
+
+資料處理應保留 `reported_depth_cm=25, source=LTA2` 與 `quoted_depth_cm=45, source=LTA3`，附 `conflict_unresolved`。若主線要用其中一值作模型幾何，須記採用理由、限制及敏感度設計；本次不替主線選定「唯一正確真值」。兩值都不是現況或新實驗留出答案。
+
+**23cm層位限制：** guide 深度誤差為 ±0.03m，與25cm只差2cm；原文的「在冰上方」是安裝描述，不能升級成精確、全年、無誤差的純乾土分類。不能把這個誤差寫成常態分布、95%信心，不能在25／45未解時擅自重分層；交GPU保留名義深度與來源限制，不代算。
+
+### 文獻比較：問題、控制、真值與已回答內容
+
+下表 A 是當前檔案研究；B 是尚未執行的實驗設計。`真值`需分清現地結構、擬合資料、獨立留出驗證；有現地深度不代表做過盲測。EHA、U編號沿用舊來源，本輪不重做其搜尋。
+
+| 原始來源／範圍 | 問題、資料與考慮的變因 | 真值、方法與結果／已回答什麼 | 對A／B的差異判斷與實讀限制 |
+|---|---|---|---|
+| LTA1／LTA2：LT歷史站點 | 多深度溫度與氣象；地下冰穩定性 | 現地安裝／歷史界面；年溫與水汽平衡推論。不是獨立盲測 | **A有同用途**：描述溫度與冰穩定性已有研究。LTA2僅摘要；熱性質方法細節不能冒稱原文已讀 |
+| LTA4：LT及UV／Beacon背景 | 雪再現與覆土下冰能否維持；理論＋現地背景 | 雪頻率可解釋穩定深度；模型假設不是隨機覆土實驗 | A泛稱「表面條件影響地下冰」已有答案；B精確驗證未能判定。僅作者摘要 |
+| LTA5：UV模型區域 | 薄雪補水、表層鹽脫水；氣象驅動土雪模型 | 情境模型顯示雪與鹽可產生不同穩定性效應；不是取芯保冰量測 | A機制／敏感度已有先例；摘要不能確立完整控制、誤差或驗證切分。未取得全文 |
+| LTA3：UV W及其他實測站，2009–2013背景 | 能量平衡／熱擴散；多深度T/RH與氣象；albedo、粗糙度、濕度及感測器干擾 | 現地界面支持剖面，量測亦用於模型約束；三種擴散率方法，季節變化與含濕導熱相關；未見本組所需的盲判留出 | **A問題實質重疊**，多深度溫差／擴散率與覆土影響不是新題。B未定。讀Methods、模型與Appendix相關全文段落，不等於所有補充與引文已讀 |
+| EHA1：EH監測站，既有查核 | 乾覆土、冰界面、T/RH、水汽與棲地 | 挖溝與站點感測；提供局部結構與自然環境解釋 | A為已有觀測／相關研究；不等於盲判工程測試。沿用既有PDF方法查核 |
+| EHA2：EH Site1／3，既有查核 | 微生物目的的分層土樣、取芯與保存 | 已有取樣組成；並非鑽進升溫曲線／初末冰量收支 | B組成先例保留。新試驗區未定就不能判同範圍完整協定；不重搜 |
+| LTA6：UV／EH主序列及LT文獻比較 | 夏季雪、表面水汽與熱波相位如何維持冰界面 | 以原序列／模型比較機制；LT無地下RH；雪事件變更的模型結果已有 | A跨場址比較與表層—地下機制**已有實質答案**；B不由此完成。讀Environmental data、Table I、Results及相關Discussion段落 |
+| U2／U3：UV舊鑽孔與方法，既有查核 | 分段鑽採、鑽頭溫控與相變控制 | 已執行方法組成；與W新試驗區不等同 | B分段／控溫不是新方法；U3仍僅摘要，不擴張舊讀取聲明 |
+
+LTA3定位：printed pp.145–151（PDF pp.2–8）方法／參數，Appendix printed pp.165–171（PDF pp.22–28），尤其pp.166、169、171 的方法比較與限制。它也指出導熱率、密度、熱容量沒有獨立量測，且感測器配置會限制反推；**「需要更多材料觀測／更合適層位」也已有研究依據**。本組若只把該建議重新列清單，應標資料整合，不稱新方法。此處不是把已有模型內的參數擬合認作本組需要的留出測試。
+
+### 五個層次的判定與目前可檢查的差異
+
+1. **觀測／製圖：** LT、UV、EH 已有現地量測；本輪沒有新增觀測。
+2. **相關研究：** 三地熱／水汽／冰穩定性已有研究，不能說未研究。
+3. **相同用途組成：** 熱響應描述、熱物性估計、模型敏感度已有；UV鑽採控溫與EH取樣先例保留。
+4. **同範圍、同問題與結果量：** 對LT歷史剖面的溫度／冰穩定性描述，A層 `same_use_exists`；對跨站自然機制亦有明確先例。但新問題若是「特定演算法的盲判誤差」，它需要別的結果量，不能由已有描述表直接判重複或判新穎。
+5. **完整未來協定：** B層 `insufficient_data`。新試驗範圍、儀器、輸入、覆土控制、獨立真值及結果量未定，無法完成同範圍同用途查核。
+
+**當前工作定位：** 重現已有熱描述／機制脈絡，加上來源追溯、數據QA與證據限制整合。具體可檢查的交付差異是25／45引用衝突帳、深度不確定性與量測量／模型可用性的清單；這是本專案的資料治理交付，**未證明是文獻首創或新的科學發現**。目前沒找到已完成、有數據支持的新分析差異。若想研究判讀誤差如何隨覆土改變，須另定演算法、可識別控制與獨立評估；現有多站非同期序列本身不足以證因果。
+
+### 可直接採用的措辭、撤回主張與交接
+
+**A．報告可用文案：**
+
+> 本專案以已發表的南極乾覆土—冰膠結地層研究作參照，整理資料來源、品質與熱響應的解讀限制，並提出火星候選I-01／I-02後續驗證所需的獨立冰證據與控制條件。這一階段屬重現、資料整合及驗證需求設計；未完成新盲判、覆土受控實驗、採樣冰量收支或火星性能驗證。Linnaeus歷史冰深的25／45cm引述尚未完全釐清。
+
+**B．應撤回／避免：** 首次發現覆土影響熱響應、首次比較UV／EH／LT、全新聯合方法、三地已受控比較、25cm是當前真值、45cm證明冰層變深、已確認23cm為純乾層、已驗證I-02冰或資源量。不能以把已知方法串成長句作原創性證據。
+
+**C．主要對話需決定：** 接受本階段為重現／QA整合與驗證設計，或另定可測的新結果量；若用LT深度作模型輸入，先訂衝突處理規則；決定是否有理由啟用備案GPU（本輪不啟用）。要做B層則先補完整協定與資料可行性，不自行加門檻。
+
+**D．隊友1需補：** 歷史LT資料與原全文／現場剖面連結；任何新試驗區、datum與誤差；覆土粒徑／密度／水冰狀態的實際可取得性；真值的同位／同期／獨立性；原有三站用途版本如何對應MR-v1。已知缺件就寫unknown，不能用公開歷史答案充當盲測。
+
+### 本輪來源、取得範圍與搜尋限制
+
+| 編號 | 原始來源／網址 | 本輪讀取範圍 |
+|---|---|---|
+| LTA1 | [GGD6作者指南](https://nsidc.org/sites/default/files/20ggd6-userguide-v001.pdf) | 全指南，printed pp.2–5／PDF pp.3–6 的方法、siteLT、精度；歷史1998 CAPS文字、guide更新2021 |
+| LTA2 | [1998 DOI](https://doi.org/10.1017/S0954102098000054)；[NASA NTRS](https://ntrs.nasa.gov/citations/20040089259) | 出版者HTML作者摘要已讀；NTRS摘要。PDF請求回傳HTML存取頁，**不是原始PDF全文**。未取得補充資料或勘誤 |
+| LTA3 | [Marinova et al.2022 PDF](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/432141245F43EF744DD8ABDB56580A5F/S0954102022000025a.pdf/climate-and-energy-balance-of-the-ground-in-university-valley-antarctica.pdf) | 28頁PDF已取得，實讀上列方法／模型／Appendix段落；不是新現地資料 |
+| LTA4 | [McKay2009 DOI](https://doi.org/10.1017/S0954102008001508) | 出版者摘要，2008線上／2009卷期；未取得完整模型／補充 |
+| LTA5 | [Williams et al.2018出版者頁](https://www.cambridge.org/core/journals/antarctic-science/article/effects-of-snow-and-salt-on-ice-table-stability-in-university-valley-antarctica/62069847A335AEDFDACD88EFF144C46F) | 作者摘要，2017線上／2018卷期。PMC遇驗證；EuropePMC XML回500，沒有把indexed全文片段當作已讀全文 |
+| LTA6 | [McKay et al.2026 PDF](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/5B2E97EBA4C91035CAFCECC234A532A0/S0954102025100448a.pdf/summer-snow-determines-the-depth-to-ice-cemented-ground-under-dry-permafrost-in-antarctica.pdf) | 13頁PDF已取得；2025-11-27線上、2026卷38，Environmental data／Table I／Results／相關Discussion；未宣稱全引文鏈完成 |
+
+LTA3 PDF SHA-256 `3090b004f5d633897e447eb9b58d7e3ab9ab32f47f56d18c50b2331bc0a6e1a1`；LTA6 `749416df3b1c3de64dacf02040817382ba05e711469f9dd4a386230b16cb9915`。未提交原始PDF；未處理GPU時序。
+
+搜尋日期2026-11-14（Asia/Taipei）。新查詢：`"McKay" "1998" "Linnaeus" filetype:pdf soil temperatures stability`；`"Climate and energy balance" "45 cm" Linnaeus`；`"S0954102098000054" pdf`；`"Soil temperatures and stability" site:nasa.gov`；`"Linnaeus" "45 cm" ice McKay`；`"Linnaeus" "45 cm" "corrigendum"`；`"Snow recurrence sets" filetype:pdf McKay`；`"The effects of snow and salt on ice table stability" cambridge`。另直接讀取已知原始來源與MR-v1三檔。
+
+此為有界的來源與問題查核，不是所有資料庫／歷年提案完整排除。原1998全文、明確勘誤、全部補充與後續引文仍缺。沒有取得新的幾何，不改火星交集結果。文獻A層比較已完成；B層缺件如上，不等待B才交付A。
+
+驗證：新增EARTH-003一列，保留原6列與45欄，追加3個明確的版本／結構欄（舊列留空）；來源ID、固定座標與Team1原用途比對；JSON可解析；舊報告全文保留。OpenAI Codex協助來源核對與撰寫，沒有新增實驗、統計或科學通過結果。
+
+---
+
 ## 2026-11-14 新版交接：已知用途、待查缺口與 EARTH-002
 
 本段以最新 main `cf72039` 的 Team 1 版本 `TEAM1-ICE-REDO-v1`（`EARTH-002 → I-02`，`EARTH-UV-001 → I-01`）更新交接；下方舊階段敘述保留為當時紀錄。研究需求 `TEAM1-PROVISIONAL-ICE-v1 / 2026-11-14` 尚待主要對話定案；`docs/research_requirements.csv` 仍是較早的綜合需求，不能當作新冰探查規格。清理提交 `5901362` 已包含在此 main 歷史中；總 Excel 不是本輪新配對的交付證據。本次只改本報告與 Team 2 CSV。

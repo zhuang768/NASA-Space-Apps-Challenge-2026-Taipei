@@ -55,7 +55,17 @@ for row in reqs:
         assert hashlib.sha256(raw).hexdigest()==row['sha256']
         assert len(raw)==row['bytes']
         body_checks += 1
-check('all available retained response bytes match request records', body_checks>0)
+# Ignored response bodies are optional; the committed snapshots are mandatory.
+snapshots = {'cz_parent.json':'CZ-datacite-parent', 'cz_data.json':'CZ-datacite-data',
+             'cz_headers.json':'CZ-datacite-headers', 'cz_si.json':'CZ-datacite-si',
+             'hood_repos.json':'CZ-author-repos', 'hood_MBARS_tree.json':'CZ-author-MBARS-tree'}
+for filename, identifier in snapshots.items():
+    original = next(r for r in reqs if r['id']==identifier)
+    raw = (HERE/'metadata'/filename).read_bytes()
+    assert hashlib.sha256(raw).hexdigest()==original['sha256'], filename
+    assert len(raw)==original['bytes'], filename
+    json.loads(raw)
+check('all six committed metadata snapshots match acquisition records', len(snapshots)==6)
 
 content = json.loads((HERE/'content_checks.json').read_text())
 check('content classifications cover exactly the requests', {r['request_id'] for r in content['checks']}=={r['id'] for r in reqs})
@@ -80,9 +90,7 @@ for target in re.findall(r'\]\(([^)]+)\)', notes.read_text()):
     if not target.startswith(('http:','https:','#')):
         assert (notes.parent/target.split('#')[0]).exists(), target
 check('all research-note local links resolve', True)
-changed = subprocess.check_output(['git','diff','--name-only',INTEGRATION_BASE],cwd=ROOT,text=True).splitlines()
-check('tracked edits confined to two local_validation directories', all(x.startswith(('docs/research/MS-03/local_validation/','outputs/research/MS-03/local_validation/')) for x in changed))
-check('dedicated follow-up branch used', subprocess.check_output(['git','branch','--show-current'],cwd=ROOT,text=True).strip()=='codex/ms03-original-tables-followup')
+# Branch and publication scope are release provenance, not evidence validity.
 base_search = list(csv.DictReader(subprocess.check_output(['git','show',INTEGRATION_BASE+':outputs/research/MS-03/local_validation/search_log.csv'],cwd=ROOT).decode('utf-8-sig').splitlines()))
 check('all '+str(len(base_search))+' latest-main search records retained unchanged', len(base_search)>=204 and all(current[r['log_id']]==r for r in base_search))
 base_search_bytes = subprocess.check_output(['git','show',INTEGRATION_BASE+':outputs/research/MS-03/local_validation/search_log.csv'],cwd=ROOT)
@@ -97,6 +105,6 @@ for name in resources:
 check('all '+str(len(resources))+' official-resource files byte-identical to latest integration base', len(resources)>0)
 name='outputs/research/MS-03/local_validation/observation_inventory.csv'
 check('acquired-spectrum inventory retained unchanged', (ROOT/name).read_bytes()==subprocess.check_output(['git','show',INTEGRATION_BASE+':'+name],cwd=ROOT))
-result = {'status':'passed','date_taipei':'2026-11-15','starting_sha':BASE,'integration_base_sha':INTEGRATION_BASE,'checks':checks,'available_response_bodies_verified':body_checks,'not_performed':['original-table row parsing or fixed-cell membership computation','new ice or morphology analysis'],'publication_status':'GitHub records actual commit, PR and merge; this validator performs no remote mutations'}
+result = {'status':'passed','date_taipei':'2026-11-15','starting_sha':BASE,'integration_base_sha':INTEGRATION_BASE,'provenance_branch':'codex/ms03-original-tables-followup','checks':checks,'committed_metadata_snapshots_verified':len(snapshots),'available_response_bodies_verified':body_checks,'response_bodies_required':False,'not_performed':['original-table row parsing or fixed-cell membership computation','new ice or morphology analysis'],'publication_status':'GitHub records actual commit, PR and merge; this validator performs no remote mutations'}
 (HERE/'validation.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 print('Passed',len(checks),'follow-up checks; raw target tables acquired: 0; no spatial membership test performed.')

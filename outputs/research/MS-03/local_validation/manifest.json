@@ -712,8 +712,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/original_tables_followup/README.md",
-      "bytes": 5307,
-      "sha256": "a4ebca1d12f2c8842548811767209c509729c7b1d790250d0cfa3a5eca086c25"
+      "bytes": 5668,
+      "sha256": "d4d484e0ceefc6f10288892a3d9a29164f7dc074f80fb53a4d7ab19a5bc572c8"
     },
     {
       "path": "outputs/research/MS-03/local_validation/original_tables_followup/collect.py",
@@ -817,13 +817,13 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/original_tables_followup/validate_followup.py",
-      "bytes": 8231,
-      "sha256": "e740c934f53bb6df1a0dca15f0f7779fe9f94ec3d8be73f4c748dd3ffac3b540"
+      "bytes": 8639,
+      "sha256": "232a25fcca5239cdc8d27ca617f28c3a1941f70eb1f4e0860dd73f40eabc3b19"
     },
     {
       "path": "outputs/research/MS-03/local_validation/original_tables_followup/validation.json",
-      "bytes": 2607,
-      "sha256": "b29013723410b59d3eb145589da53e5e0f0ff60dd3f825740c4f9f2a9281bfba"
+      "bytes": 2650,
+      "sha256": "c598255ba753b05add03680cbcbf9974ca37b8f9bb1ad6a24dde1f9ec670cd31"
     },
     {
       "path": "outputs/research/MS-03/local_validation/piqueux_native_cell.csv",
@@ -1324,6 +1324,6 @@
     "fixed_cell_membership_computed": false,
     "new_scientific_disposition": "unchanged; unknown morphology, independent local ice/depth/content unconfirmed",
     "validation": "original_tables_followup/validation.json",
-    "timestamp_utc": "2026-11-14T19:50:45.646243+00:00"
+    "timestamp_utc": "2026-11-14T19:54:09.449150+00:00"
   }
 }

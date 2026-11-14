@@ -44,4 +44,6 @@ python3 outputs/research/MS-03/local_validation/original_tables_followup/validat
 
 `finalize.py` reapplies the small evidence-table supplement, runs the offline checks and refreshes retained hashes. It performs no network, Git commit, push or merge. The existing CRISM files, official-resource/MRDR files and observation inventory must remain byte-identical to the integration base.
 
+Offline validation works on main, another branch, or detached HEAD in a full-history clone. It verifies all six committed `metadata/` snapshots against acquisition hashes. Ignored `responses/` bodies are optional and are verified only when present; no network reacquisition is required. The historical branch name is provenance, not a validation prerequisite.
+
 Acquisition requires public network access and may return different responses later. Raw HTTP bodies are retained locally under ignored `responses/`; approved public metadata snapshots are copied under `metadata/`. Do not upload challenge tokens, error-page scripts, or large/raw scientific datasets as research results. No credentials or author messages were used.

@@ -20,3 +20,6 @@ data/**/*.part
 # Credentials
 .netrc
 .env
+
+# Wrangler local state
+.wrangler/

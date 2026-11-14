@@ -1,0 +1,669 @@
+{
+  "generated_for": "Matching / site-discovery role",
+  "stack": "data/processed/mars_stack_0p5deg.nc",
+  "excluded_boxes": {
+    "arcadia_planitia": {
+      "south": 38,
+      "north": 48,
+      "west": -180,
+      "east": -160
+    },
+    "jezero_crater": {
+      "south": 17.5,
+      "north": 19.5,
+      "west": 76.5,
+      "east": 78.5
+    },
+    "utopia_planitia": {
+      "south": 40,
+      "north": 50,
+      "west": 110,
+      "east": 130
+    },
+    "gale_crater": {
+      "south": -6.5,
+      "north": -3.5,
+      "west": 136.5,
+      "east": 139.5
+    }
+  },
+  "known_box_signatures": {
+    "arcadia_planitia": {
+      "box": {
+        "south": 38,
+        "north": 48,
+        "west": -180,
+        "east": -160
+      },
+      "median": {
+        "slope": 0.12252519491440661,
+        "relief": 43.0,
+        "thermal_inertia": 192.54103088378906,
+        "ice_shallow": 0.26000181497214303,
+        "dust_cdod": 0.1478046327829361
+      },
+      "iqr": {
+        "slope": 0.08738608228387808,
+        "relief": 34.25,
+        "thermal_inertia": 23.561283111572266,
+        "ice_shallow": 0.25135887192548517,
+        "dust_cdod": 0.02505895495414734
+      }
+    },
+    "jezero_crater": {
+      "box": {
+        "south": 17.5,
+        "north": 19.5,
+        "west": 76.5,
+        "east": 78.5
+      },
+      "median": {
+        "slope": 1.6973806901814015,
+        "relief": 761.5,
+        "thermal_inertia": 333.4458465576168,
+        "ice_shallow": -0.2739178561730031,
+        "dust_cdod": 0.1919729858636856
+      },
+      "iqr": {
+        "slope": 0.7092473747278512,
+        "relief": 377.5,
+        "thermal_inertia": 53.32105255126805,
+        "ice_shallow": 0.02407935418960122,
+        "dust_cdod": 0.0007429830729961395
+      }
+    },
+    "utopia_planitia": {
+      "box": {
+        "south": 40,
+        "north": 50,
+        "west": 110,
+        "east": 130
+      },
+      "median": {
+        "slope": 0.20619129063923847,
+        "relief": 78.0,
+        "thermal_inertia": 234.44922637939453,
+        "ice_shallow": -0.055604119931358026,
+        "dust_cdod": 0.14968174695968628
+      },
+      "iqr": {
+        "slope": 0.13312756911358223,
+        "relief": 63.0,
+        "thermal_inertia": 49.788330078125,
+        "ice_shallow": 0.18099640482922433,
+        "dust_cdod": 0.028916463255882263
+      }
+    },
+    "gale_crater": {
+      "box": {
+        "south": -6.5,
+        "north": -3.5,
+        "west": 136.5,
+        "east": 139.5
+      },
+      "median": {
+        "slope": 4.619895980057606,
+        "relief": 2502.5,
+        "thermal_inertia": 240.41436767578125,
+        "ice_shallow": 0.09128306793038966,
+        "dust_cdod": 0.17004214227199554
+      },
+      "iqr": {
+        "slope": 2.290440027056852,
+        "relief": 1163.25,
+        "thermal_inertia": 78.22075653076172,
+        "ice_shallow": 0.03960989326179688,
+        "dust_cdod": 0.0
+      }
+    }
+  },
+  "purposes": {
+    "isru_shallow_ice": {
+      "label": "Shallow-ice / ISRU screening",
+      "why": "Prefer mid-latitude cells with higher SWIM shallow-ice consistency and low slope.",
+      "weights": {
+        "ice_shallow": 2.0,
+        "slope": 1.5,
+        "relief": 1.0,
+        "dust_cdod": 0.5
+      },
+      "signature": {
+        "ice_shallow": {
+          "median": 0.35,
+          "iqr": 0.2
+        },
+        "slope": {
+          "median": 0.3,
+          "iqr": 0.25
+        },
+        "relief": {
+          "median": 80.0,
+          "iqr": 60.0
+        },
+        "dust_cdod": {
+          "median": 0.12,
+          "iqr": 0.04
+        }
+      },
+      "latitude_window": [
+        30.0,
+        60.0
+      ],
+      "interpretation": "Experimental within-Mars descriptor ranking after excluding Jezero, Gale, Arcadia and Utopia boxes. Not novelty proof, landing approval, or ice quantity.",
+      "figure": "outputs/mars_discovery/figures/isru_shallow_ice_map.png",
+      "picks": [
+        {
+          "lat": 54.25,
+          "lon": 1.25,
+          "score": 0.9437740152757202,
+          "layers": {
+            "slope": 0.3025961974521107,
+            "relief": 76.0,
+            "thermal_inertia": 244.7096710205078,
+            "ice_shallow": 0.3543070239029174,
+            "dust_cdod": 0.10687771439552307
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": 53.75,
+          "lon": 42.25,
+          "score": 0.9388455040774983,
+          "layers": {
+            "slope": 0.3057384545431363,
+            "relief": 88.0,
+            "thermal_inertia": 160.6666717529297,
+            "ice_shallow": 0.3550860505459027,
+            "dust_cdod": 0.11224822700023651
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": 54.75,
+          "lon": 86.25,
+          "score": 0.9307994627894423,
+          "layers": {
+            "slope": 0.2794360060444877,
+            "relief": 86.0,
+            "thermal_inertia": 344.7802124023438,
+            "ice_shallow": 0.3518628723120814,
+            "dust_cdod": 0.11067644506692886
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": 55.75,
+          "lon": 61.75,
+          "score": 0.92585664074291,
+          "layers": {
+            "slope": 0.2837473263067328,
+            "relief": 87.0,
+            "thermal_inertia": 292.5588378906243,
+            "ice_shallow": 0.3496330570641562,
+            "dust_cdod": 0.10661382228136063
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": 53.75,
+          "lon": 123.75,
+          "score": 0.9221644788040977,
+          "layers": {
+            "slope": 0.26414080417805147,
+            "relief": 83.0,
+            "thermal_inertia": 343.967041015625,
+            "ice_shallow": 0.356685235597986,
+            "dust_cdod": 0.11414793133735657
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": 53.25,
+          "lon": -79.75,
+          "score": 0.9175839531589773,
+          "layers": {
+            "slope": 0.31229080586180724,
+            "relief": 86.0,
+            "thermal_inertia": 292.31109619140625,
+            "ice_shallow": 0.3385199975355797,
+            "dust_cdod": 0.10867910832166672
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": 51.75,
+          "lon": 12.75,
+          "score": 0.9155538138606343,
+          "layers": {
+            "slope": 0.2719747041010717,
+            "relief": 89.0,
+            "thermal_inertia": 181.7096710205078,
+            "ice_shallow": 0.3493222247789283,
+            "dust_cdod": 0.11070390790700912
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": 55.75,
+          "lon": 96.25,
+          "score": 0.9137226564102231,
+          "layers": {
+            "slope": 0.315917281000855,
+            "relief": 89.0,
+            "thermal_inertia": 349.89010620117176,
+            "ice_shallow": 0.3637291579291322,
+            "dust_cdod": 0.11453234404325485
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        }
+      ]
+    },
+    "dusty_flat_ops": {
+      "label": "Dusty flat-ops screening",
+      "why": "Prefer low-slope plains with higher reconstructed dust optical depth.",
+      "weights": {
+        "dust_cdod": 2.0,
+        "slope": 1.5,
+        "relief": 1.0,
+        "thermal_inertia": 0.5
+      },
+      "signature": {
+        "dust_cdod": {
+          "median": 0.2,
+          "iqr": 0.05
+        },
+        "slope": {
+          "median": 0.25,
+          "iqr": 0.2
+        },
+        "relief": {
+          "median": 60.0,
+          "iqr": 50.0
+        },
+        "thermal_inertia": {
+          "median": 180.0,
+          "iqr": 40.0
+        }
+      },
+      "latitude_window": [
+        -50.0,
+        50.0
+      ],
+      "interpretation": "Experimental within-Mars descriptor ranking after excluding Jezero, Gale, Arcadia and Utopia boxes. Not novelty proof, landing approval, or ice quantity.",
+      "figure": "outputs/mars_discovery/figures/dusty_flat_ops_map.png",
+      "picks": [
+        {
+          "lat": 35.75,
+          "lon": 126.75,
+          "score": 0.9159078853019542,
+          "layers": {
+            "slope": 0.22995593022327535,
+            "relief": 69.0,
+            "thermal_inertia": 174.2899932861328,
+            "ice_shallow": -0.15174696336965957,
+            "dust_cdod": 0.19901815056800842
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": 37.75,
+          "lon": 114.75,
+          "score": 0.8958319722998628,
+          "layers": {
+            "slope": 0.22138588706177698,
+            "relief": 67.0,
+            "thermal_inertia": 191.66000366210938,
+            "ice_shallow": -0.09142209388548493,
+            "dust_cdod": 0.1987239420413971
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": -46.25,
+          "lon": 82.75,
+          "score": 0.8883475754502905,
+          "layers": {
+            "slope": 0.23225438385070896,
+            "relief": 66.0,
+            "thermal_inertia": 187.4946289062506,
+            "ice_shallow": 0.13566895069535947,
+            "dust_cdod": 0.20615935325622559
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": 7.75,
+          "lon": 154.25,
+          "score": 0.8874774621147884,
+          "layers": {
+            "slope": 0.24081872559728568,
+            "relief": 83.0,
+            "thermal_inertia": 176.02020263671875,
+            "ice_shallow": -0.03073068619753915,
+            "dust_cdod": 0.19942979514598846
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": 5.75,
+          "lon": 145.75,
+          "score": 0.8612981438982769,
+          "layers": {
+            "slope": 0.2637797712822651,
+            "relief": 81.0,
+            "thermal_inertia": 180.26881408691406,
+            "ice_shallow": -0.3677185102861556,
+            "dust_cdod": 0.19439943134784698
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": 9.25,
+          "lon": 131.25,
+          "score": 0.854804765665316,
+          "layers": {
+            "slope": 0.2049137819835706,
+            "relief": 56.0,
+            "thermal_inertia": 164.49000549316406,
+            "ice_shallow": -0.13062667327342062,
+            "dust_cdod": 0.20432953536510468
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": 34.75,
+          "lon": 82.25,
+          "score": 0.8546511366851371,
+          "layers": {
+            "slope": 0.23882211415229015,
+            "relief": 65.0,
+            "thermal_inertia": 227.02040100097727,
+            "ice_shallow": -0.2537607987083823,
+            "dust_cdod": 0.2003677636384964
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": -0.75,
+          "lon": -5.75,
+          "score": 0.8409340153291817,
+          "layers": {
+            "slope": 0.1770006875877096,
+            "relief": 63.0,
+            "thermal_inertia": 185.4639129638672,
+            "ice_shallow": 0.06046490788359225,
+            "dust_cdod": 0.19522473216056824
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        }
+      ]
+    },
+    "firm_rocky_surface": {
+      "label": "Firm / rocky surface screening",
+      "why": "Prefer higher TES nightside thermal inertia with moderate relief (less dust mantle).",
+      "weights": {
+        "thermal_inertia": 2.0,
+        "slope": 1.0,
+        "relief": 1.0,
+        "dust_cdod": 0.5
+      },
+      "signature": {
+        "thermal_inertia": {
+          "median": 400.0,
+          "iqr": 120.0
+        },
+        "slope": {
+          "median": 1.0,
+          "iqr": 0.8
+        },
+        "relief": {
+          "median": 250.0,
+          "iqr": 150.0
+        },
+        "dust_cdod": {
+          "median": 0.1,
+          "iqr": 0.04
+        }
+      },
+      "latitude_window": [
+        -60.0,
+        60.0
+      ],
+      "interpretation": "Experimental within-Mars descriptor ranking after excluding Jezero, Gale, Arcadia and Utopia boxes. Not novelty proof, landing approval, or ice quantity.",
+      "figure": "outputs/mars_discovery/figures/firm_rocky_surface_map.png",
+      "picks": [
+        {
+          "lat": 52.25,
+          "lon": -19.75,
+          "score": 0.9102432575761917,
+          "layers": {
+            "slope": 0.971244271902614,
+            "relief": 234.0,
+            "thermal_inertia": 397.50537109375,
+            "ice_shallow": 0.08012884864853366,
+            "dust_cdod": 0.11912054568529129
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": -59.75,
+          "lon": 3.75,
+          "score": 0.8817347228184668,
+          "layers": {
+            "slope": 0.8662967737131124,
+            "relief": 207.0,
+            "thermal_inertia": 403.109588623046,
+            "ice_shallow": 0.49996676433151915,
+            "dust_cdod": 0.09513872116804123
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": -54.75,
+          "lon": 13.75,
+          "score": 0.851686317508226,
+          "layers": {
+            "slope": 0.6704886955570335,
+            "relief": 233.0,
+            "thermal_inertia": 410.14605712890625,
+            "ice_shallow": 0.2974391866434885,
+            "dust_cdod": 0.09775255620479584
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": 52.25,
+          "lon": -27.75,
+          "score": 0.8479440792867291,
+          "layers": {
+            "slope": 0.7424822831484296,
+            "relief": 265.0,
+            "thermal_inertia": 396.1836853027344,
+            "ice_shallow": 0.03875889963524122,
+            "dust_cdod": 0.12053842097520828
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": -58.25,
+          "lon": -52.25,
+          "score": 0.8120358433412169,
+          "layers": {
+            "slope": 0.5527285306941954,
+            "relief": 238.0,
+            "thermal_inertia": 410.4333190917942,
+            "ice_shallow": 0.45608869099648197,
+            "dust_cdod": 0.10991764813661575
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": -50.25,
+          "lon": -41.75,
+          "score": 0.8064668272297604,
+          "layers": {
+            "slope": 0.8406147663407588,
+            "relief": 251.0,
+            "thermal_inertia": 401.3548278808594,
+            "ice_shallow": -0.35443927926581015,
+            "dust_cdod": 0.159155011177063
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": 49.25,
+          "lon": -50.25,
+          "score": 0.8027055696778512,
+          "layers": {
+            "slope": 0.677771520213541,
+            "relief": 266.0,
+            "thermal_inertia": 392.9325866699219,
+            "ice_shallow": -0.055087796877638755,
+            "dust_cdod": 0.12893682718276978
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        },
+        {
+          "lat": 57.25,
+          "lon": -36.25,
+          "score": 0.792496986746643,
+          "layers": {
+            "slope": 0.761773631896972,
+            "relief": 190.0,
+            "thermal_inertia": 388.047607421875,
+            "ice_shallow": 0.13706337130853022,
+            "dust_cdod": 0.11196480691432953
+          },
+          "excluded_known_sites": [
+            "arcadia_planitia",
+            "jezero_crater",
+            "utopia_planitia",
+            "gale_crater"
+          ]
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Scores are experimental within-Mars descriptor matches only.",
+    "Excluding famous boxes is not proof a pick is understudied; literature checks remain required.",
+    "SWIM ice_shallow covers roughly \u00b160\u00b0; no ice score outside support.",
+    "Dust is 3\u00b0 reconstructed climatology context, not local weather.",
+    "Earth analogs are not ranked in this script."
+  ]
+}

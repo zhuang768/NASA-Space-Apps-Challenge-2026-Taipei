@@ -154,24 +154,28 @@ Translated the entire root README to English while preserving historical finding
 
 Verification for this temperature update: 62 Python tests passed (eight existing warnings), Ruff passed, provider checksum and export context equality checked, root README checked for remaining Chinese text, and local links checked. Formal regional temperature remains missing and the new context remains unscored. No website build, browser or deployment tests were run.
 
-### 2026-11-14：研究輸出資料結構整理（數值不變）
+### 2026-11-14: Teammate research-schema cleanup
 
-已整理 `outputs/research/` 三份研究 JSON 的結構，供前端串接；所有科學數值、排名、足跡與 Top-2 結果均與原檔逐項比對一致。
+The teammate standardized three research JSON outputs for frontend use, preserving numerical values, ranks, footprints and top-two results. `analog/evidence_status.py` introduced VERIFIED / INFERRED / EXTERNAL / UNVERIFIED levels with explanations; these describe evidence support, not confidence.
 
-- **統一驗證等級**：新增 `analog/evidence_status.py`，以 `VERIFIED`／`INFERRED`／`EXTERNAL`／`UNVERIFIED` 加說明取代自由文字前綴；等級表示支持方式，不是信賴度。
-- **`three_candidate_evidence.json`**：以 `candidate_id` 為主鍵（Tarim/Oytag 候選為 `gale-01`，非 `gale-02`）；`coarse_shortlist_rank` 改名為 `scale10km_rank`（`null` 表示不在 10 km 執行的 12 名內）；`recalculated_distance` 改為 `distance_check`；重複的火星剖面移至頂層 `mars_profiles`；新增 `schema_version`、`generated_utc`、`field_notes`（含足跡 `[lon, lat]` 軸序）。
-- **文獻狀態**：`gale-01` 的 `prior_analog_literature_status` 由 `not_checked` 更新為 `checked_partial`，並附上 Oytag 樣點與剖面的逐項主張；石膏 GPS、同露頭 XRD 及石膏／黏土／氧化鐵共現仍為 `UNVERIFIED`。
-- **`oytag_overlap.json`**：樣點經緯度改為數值；標明 Table 1 岩性樣點與 Table DR1 鋯石母岩座標為兩組不重疊的點集（無共用樣品 ID）。
-- **`oytag_transect_check.json`**：TLS 未驗證的下載改為結構化 `source_transport`（獨立雜湊核對：待辦）。
+`three_candidate_evidence.json` now uses candidate IDs (Oytag is `gale-01`, not `gale-02`), renames `coarse_shortlist_rank` to `scale10km_rank` (null means absent from that run's 12-item shortlist), and replaces `recalculated_distance` with `distance_check`. Shared profiles moved to top-level `mars_profiles`; schema version, generation time and field notes include footprint axis order `[lon,lat]`. Gale literature status became `checked_partial`, with individual claims; gypsum GPS, same-outcrop XRD and gypsum/clay/iron-oxide co-occurrence remain unverified. Overlap coordinates became numeric, with no shared IDs between Table 1 lithology points and Table DR1 zircon parent-rock points. Transect transport information now records unverified TLS and pending independent hash confirmation.
 
-已執行三支產生腳本、輸入 SHA-256 鏈核對、`ruff check` 及新增的 `tests/test_research_outputs.py`（3 項通過）。剖面腳本重跑結果與原檔僅有約 1e-12 km 浮點差，保留原數值。本輪未重新排名、未修改 `web/`。Claude 協助本輪結構整理與中文紀錄。
+The teammate reported three generator runs, source SHA-256 checks, Ruff and three research-output tests passing. Approximately 1e-12 km rerun differences were handled by retaining original values. No reranking or website edits in that schema task. Claude assisted schema cleanup and documentation.
 
-### 2026-11-14：三個深入研究候選與 Oytag 文獻點接入前端
+### 2026-11-14: Teammate research integration into the website
 
-已將整理後的 `outputs/research/` 接入 `web/`：`build_workbench_data.py` 新增 `research` 區塊（深入研究候選、Oytag 樣點與 A–B 剖面、逐項主張與檔案 SHA-256）；其餘資料包內容與原本逐項相同。
+The teammate added a `research` section to the web data builder: three deep-dive cases, Oytag literature samples, approximate A–B transect, claims and file hashes. Other bundle content remained unchanged.
 
-- **候選清單**：新增 `Deep-dive (n)` 篩選；`gale-01`、`arcadia-01`、`arcadia-02` 顯示 Top-2 保留次數（4/4、3/4、2/4，明標非機率或信賴度）；`gale-01` 分類改為 `Literature checked (partial)`。
-- **地圖**：全球圖以青色虛線環標示深入研究候選；選取 `gale-01` 的 `100 km Footprint` 時，在足跡內標出 3 個 Bershaw（2012）樣點，並以放大插圖顯示樣點、近似 A–B 含石膏剖面與窗口東界，註明石膏 GPS／XRD 未驗證。順帶修正足跡圖比例尺與範圍文字重疊。
-- **證據矩陣與抽屜**：新增「Published Lithology & Prior Analog Literature」列（Contextual／Provisional；火星端標明未載入礦物層，不做礦物比對）；`EvidenceDrawer` 逐項顯示 `VERIFIED`／`INFERRED`／`EXTERNAL`／`UNVERIFIED` 主張與限制。完整度仍為 1/4，文獻背景不計入評分。
+Candidate filtering gained Deep-dive, with retention counts 4/4, 3/4 and 2/4 explicitly not confidence. Gale's partial literature classification is visible. The map highlights deep-dive candidates; Gale's footprint includes three Bershaw points and an inset with the approximate gypsum-bearing transect and eastern boundary. Gypsum GPS/XRD remain unverified. A previous scale-label overlap was corrected.
 
-已執行 `npm ci`、`tsc -b`、`vite build` 及資料包重建（本機 stdlib Python 重建結果逐位元相同）；以 Chrome 實測 1440 px 與 390 px：Gale／Arcadia／Jezero 切換、篩選、足跡插圖與證據抽屜，0 個 console 錯誤、0 個失敗請求。既有問題：390 px 下任務列統計格造成水平捲動（914 px，修改前即存在）。未重新排名、未修改科學數值。Claude 協助本輪前端串接與中文紀錄。
+The evidence matrix/drawer includes published lithology and prior-literature claims as contextual/provisional, with no loaded Mars mineral layer or mineral score. Scored-theme count remains one of four. The teammate reported npm installation, TypeScript/Vite build and bit-identical stdlib data regeneration, plus Chrome checks at 1440 and 390 px for targets, filters, footprint inset and drawer, without console/network failures. A pre-existing 390 px horizontal overflow (914 px document width) in the header statistics was noted. No scientific values or rankings changed. Claude assisted frontend integration and documentation.
+
+### 2026-11-14: Website information organization
+
+Synced main and reorganized the existing workbench into three views: Overview & map, Evidence & sources, and Sensitivity & gaps. The default view now introduces the task and shows one selected-region summary before the spatial comparison. Candidate selection remains available across views; inactive cards are compact, while the selected candidate retains its support and gap details. Method, timing, search settings and source provenance remain accessible in a collapsed disclosure instead of occupying the initial screen. Removed misleading numbered panel headings and repeated per-candidate completion bars; the one-of-four scored status remains explicit.
+
+Selection clears any open evidence drawer to prevent showing a previous candidate's source context. Demo preview retains its warning and isolated synthetic state. Scientific values, ranking, evidence records, geology and source datasets were not changed. Root README entries appended by teammates were translated to English with their facts and attribution preserved.
+
+Validation: TypeScript/Vite production build passed. Headless Chromium checked default overview, target switching, evidence/sensitivity navigation, Demo-to-real reset and mobile overflow with method details closed and open. At 390 px the document width was 390 px. No page errors were observed in these flows. Desktop/mobile screenshots were captured for review. These local checks do not establish public deployment or official submission. OpenAI Codex assisted information hierarchy, React/CSS changes, browser checks and English documentation.
+
+Additional browser checks passed: evidence drawer opens and closes with Escape, all three targets update the selected summary, and selecting Gale rank 2 updates the summary without changing stored ranks. A first smoke-test attempt used an incorrect accessible button name; the selector was corrected to the existing evidence-specific label and the complete flow passed. Browser-test dependencies and screenshots stayed outside the repository.

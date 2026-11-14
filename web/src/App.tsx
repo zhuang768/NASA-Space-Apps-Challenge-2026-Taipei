@@ -17,7 +17,7 @@ import { ComparisonPanel } from "./components/ComparisonPanel";
 import { EvidenceDrawer } from "./components/EvidenceDrawer";
 import { RobustnessPanel } from "./components/RobustnessPanel";
 
-type MobileTab = "all" | "maps" | "candidates" | "comparison" | "robustness";
+type MobileTab = "maps" | "comparison" | "robustness";
 
 function buildDemoTargetBundle(base: TargetBundle): TargetBundle {
   const demoCandidate: CandidateItem = {
@@ -64,7 +64,7 @@ export function App() {
     targetIds[0] ?? "jezero"
   );
   const [demoMode, setDemoMode] = useState(false);
-  const [mobileTab, setMobileTab] = useState<MobileTab>("all");
+  const [mobileTab, setMobileTab] = useState<MobileTab>("maps");
 
   const realBundle = useMemo(
     () => getTargetBundle(activeTargetId),
@@ -122,10 +122,10 @@ export function App() {
 
   const handleSelectCandidate = (candidate: CandidateItem) => {
     setSelectedCandidateId(candidate.candidate_id);
+    setInspectedRowId(null);
   };
 
-  const showSection = (section: Exclude<MobileTab, "all">) =>
-    mobileTab === "all" || mobileTab === section;
+  const showSection = (section: MobileTab) => mobileTab === section;
 
   return (
     <div className="app-shell">
@@ -149,20 +149,24 @@ export function App() {
         </main>
       ) : (
         <>
-          <nav className="mobile-tabs" aria-label="Narrow viewport sections">
+          <section className="reading-guide" aria-label="How to use this workbench">
+            <div><span className="eyebrow">Research workflow</span><h2>Find a region. Understand the evidence.</h2>
+            <p>Choose a Mars target above, select an Earth candidate, then inspect the match and its limits.</p></div>
+            <span className="scope-note">Terrain ranked · 3 other themes unscored</span>
+          </section>
+          <nav className="workspace-nav" aria-label="Analysis views">
             {(
               [
-                ["all", "All Panels"],
-                ["maps", "Maps"],
-                ["candidates", "Candidates"],
-                ["comparison", "Comparison"],
-                ["robustness", "Robustness"],
+                ["maps", "Overview & map"],
+                ["comparison", "Evidence & sources"],
+                ["robustness", "Sensitivity & gaps"],
               ] as [MobileTab, string][]
             ).map(([tab, label]) => (
               <button
                 key={tab}
                 type="button"
                 className={`btn ${mobileTab === tab ? "btn-active" : ""}`}
+                aria-pressed={mobileTab === tab}
                 onClick={() => setMobileTab(tab)}
               >
                 {label}
@@ -171,7 +175,7 @@ export function App() {
           </nav>
 
           <div className="workbench-grid">
-            {showSection("candidates") && (
+            {(
               <CandidateList
                 candidates={activeBundle.candidates}
                 selectedCandidate={selectedCandidate}
@@ -179,7 +183,19 @@ export function App() {
               />
             )}
 
-            <main className="main-column">
+            <main className="main-column" id="analysis-content">
+              <section className="panel selection-summary" aria-label="Selected candidate summary">
+                <div className="selection-heading"><div><span className="eyebrow">Selected Earth region</span>
+                  <h2>{selectedCandidate?.candidate_id ?? "No candidate selected"}</h2>
+                  <p className="mono">{selectedCandidate ? `${selectedCandidate.lat.toFixed(2)}°, ${selectedCandidate.lon.toFixed(2)}° · terrain rank #${selectedCandidate.rank}` : "Select an available candidate to continue."}</p>
+                </div>{selectedCandidate && <div className="distance-readout"><span className="mono">{selectedCandidate.terrain_distance.toFixed(4)}</span><small>Terrain distance · lower is closer</small></div>}</div>
+                {selectedCandidate && <div className="selection-findings">
+                  <div><h3>What supports this match</h3><p>{selectedCandidate.keySupport}</p></div>
+                  <div><h3>What remains unresolved</h3><p>{selectedCandidate.mainGap}</p></div>
+                </div>}
+                <p className="summary-limit">{demoMode ? "Synthetic preview only. Return to real results before interpreting any values." : "A regional terrain candidate, not a validated complete Mars analog or landing-safety assessment."}</p>
+                {mobileTab === "maps" && selectedCandidate && <button className="btn" onClick={() => setMobileTab("comparison")}>Inspect evidence and sources →</button>}
+              </section>
               {showSection("maps") && (
                 <DualSideMap
                   target={activeBundle}

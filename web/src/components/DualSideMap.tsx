@@ -151,7 +151,7 @@ export function DualSideMap({ target, selectedCandidate, onSelectCandidate }: Pr
     <section className="panel" aria-label="Dual-side planetary map">
       <div className="panel-header">
         <div>
-          <h2 className="panel-title">2. Dual-Side Spatial Context (Independent Planetary Projections)</h2>
+          <h2 className="panel-title">Earth & Mars spatial context</h2>
           <p style={{ margin: "2px 0 0", fontSize: "0.78rem", color: "var(--text-muted)" }}>
             Earth (R = 6,371.0 km, Δlat ≈ {earthWindowLatDeg.toFixed(2)}° per 100 km) vs. Mars (R = 3,396.0 km, IAU2000 planetocentric, Δlat ≈ {((100 / 3396.0) * (180 / Math.PI)).toFixed(2)}° per 100 km).
             Physical 100×100 km windows — never synced by raw zoom level or Web Mercator.

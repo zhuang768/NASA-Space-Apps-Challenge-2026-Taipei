@@ -45,14 +45,10 @@ export function TargetMissionBar({
             </h1>
             <span className="badge badge-cyan">Earth–Mars Analog Workbench</span>
             <span className="badge badge-amber">
-              {WORKBENCH_META.analysis_type ?? "terrain_only_screening"}
+              Terrain screening
             </span>
           </div>
-          <p style={{ margin: "4px 0 0", fontSize: "0.84rem", color: "var(--text-muted)" }}>
-            NASA Space Apps Challenge 2026 · Team zasa · Commit{" "}
-            <span className="mono">{WORKBENCH_META.base_commit ?? "—"}</span> · Generated{" "}
-            <span className="mono">{WORKBENCH_META.generated_utc?.slice(0, 19).replace("T", " ")} UTC</span>
-          </p>
+          <p className="header-description">Find Earth regions for Mars research. Trace what matches and what is still unknown.</p>
         </div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
@@ -91,16 +87,19 @@ export function TargetMissionBar({
             title="Toggle isolated demo preview mode"
           >
             <Radio size={14} aria-hidden="true" />
-            {demoMode ? "Demo Mode On" : "Real Data Only"}
+            {demoMode ? "Demo preview on" : "Preview synthetic demo"}
           </button>
         </div>
       </div>
 
       {target ? (
+        <details className="method-details">
+        <summary>Research question, method & data provenance</summary>
+        <p className="provenance-line">NASA Space Apps 2026 · Team zasa · Analysis commit <span className="mono">{WORKBENCH_META.base_commit ?? "unknown"}</span> · Generated {WORKBENCH_META.generated_utc ?? "unknown"}</p>
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "minmax(260px, 1.6fr) repeat(4, minmax(140px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(220px, 100%), 1fr))",
             gap: 12,
             paddingTop: 10,
             borderTop: "1px solid var(--border)",
@@ -168,6 +167,7 @@ export function TargetMissionBar({
             </div>
           </div>
         </div>
+        </details>
       ) : (
         <div className="notice-banner" role="status">
           Target data unavailable. Select another Mars target.

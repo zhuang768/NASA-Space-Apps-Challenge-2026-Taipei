@@ -712,3 +712,28 @@ input {
   flex-direction: column;
   gap: 6px;
 }
+
+/* Reading hierarchy: one analysis view, persistent candidate context. */
+.reading-guide {display:flex;justify-content:space-between;align-items:center;gap:24px;padding:18px 4px 8px;}
+.eyebrow {color:var(--cyan);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;}
+.reading-guide h2 {font-size:clamp(1.35rem,2.5vw,2rem);letter-spacing:-.035em;line-height:1.2;margin:7px 0 9px;font-weight:650;}
+.reading-guide p,.header-description {color:var(--text-muted);font-size:.87rem;margin:5px 0;max-width:68ch;}
+.scope-note {max-width:190px;border-left:2px solid var(--amber);padding-left:12px;color:var(--text-secondary);font-size:.8rem;}
+.workspace-nav {display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--border);padding-bottom:12px;}
+.workspace-nav .btn {padding:10px 16px;}
+.selection-heading {display:flex;justify-content:space-between;gap:18px;align-items:start;flex-wrap:wrap;}
+.selection-heading h2 {margin:4px 0;font-size:1.4rem;letter-spacing:-.025em;}
+.selection-heading p {margin:4px 0;color:var(--text-muted);font-size:.8rem;}
+.distance-readout {text-align:right;display:grid;gap:2px;}
+.distance-readout>span {font-size:1.8rem;color:var(--cyan);}
+.distance-readout small {color:var(--text-muted);font-size:.72rem;}
+.selection-findings {display:grid;grid-template-columns:1fr 1fr;gap:24px;border-top:1px solid var(--border);padding-top:14px;margin-top:16px;}
+.selection-findings h3 {font-size:.75rem;font-weight:600;margin:0 0 6px;color:var(--text-muted);}
+.selection-findings p {font-size:.85rem;margin:0;overflow-wrap:anywhere;}
+.summary-limit {color:var(--text-muted);font-size:.76rem;margin:16px 0 12px;max-width:80ch;}
+.method-details {border-top:1px solid var(--border);padding-top:10px;margin-top:10px;}
+.method-details summary {cursor:pointer;font-size:.8rem;color:var(--text-secondary);padding:6px 0;}
+.provenance-line {font-size:.75rem;color:var(--text-muted);overflow-wrap:anywhere;}
+@media(min-width:1101px) {.workbench-grid>aside {position:sticky;top:16px;}}
+@media(max-width:1100px) and (min-width:761px) {.workbench-grid{grid-template-columns:280px minmax(0,1fr);}.dual-map-grid{grid-template-columns:1fr;}}
+@media(max-width:760px) {.reading-guide{align-items:start;flex-direction:column;gap:12px;}.scope-note{max-width:none;}.selection-findings{grid-template-columns:1fr;gap:14px;}.workbench-grid>aside>div:last-child{max-height:260px!important;}.workspace-nav .btn{padding:8px 10px;}.app-shell{padding:12px 12px 36px;}}

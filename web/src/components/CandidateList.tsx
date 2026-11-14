@@ -37,7 +37,7 @@ export function CandidateList({
     <aside className="panel" aria-label="Earth candidate shortlist">
       <div className="panel-header" style={{ marginBottom: 8 }}>
         <div>
-          <h2 className="panel-title">3. Candidate Shortlist</h2>
+          <h2 className="panel-title">Earth candidates</h2>
           <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", marginTop: 2 }}>
             Ranked within 60°S–60°N (≥300 km separation, terrain D only)
           </div>
@@ -95,7 +95,7 @@ export function CandidateList({
           </p>
         </div>
       ) : (
-        <div style={{ display: "flex", flexDirection: "column", gap: 8, maxHeight: 680, overflowY: "auto", paddingRight: 2 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 8, maxHeight: 560, overflowY: "auto", paddingRight: 2 }}>
           {filtered.map((c) => {
             const isSel = selectedCandidate?.candidate_id === c.candidate_id;
             return (
@@ -136,23 +136,7 @@ export function CandidateList({
                   </span>
                 </div>
 
-                <div>
-                  <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.72rem", color: "var(--text-muted)", marginBottom: 3 }}>
-                    <span>Evidence completeness (not confidence)</span>
-                    <span className="mono">{c.evidenceCompleteness.scoredDomains}/{c.evidenceCompleteness.totalDomains}</span>
-                  </div>
-                  <div style={{ height: 5, borderRadius: 999, background: "#090e1a", overflow: "hidden" }}>
-                    <div
-                      style={{
-                        width: `${(c.evidenceCompleteness.scoredDomains / c.evidenceCompleteness.totalDomains) * 100}%`,
-                        height: "100%",
-                        background: "var(--cyan)",
-                      }}
-                    />
-                  </div>
-                </div>
-
-                {c.featured && (
+                {isSel && c.featured && (
                   <div
                     style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap", fontSize: "0.72rem" }}
                   >
@@ -170,12 +154,12 @@ export function CandidateList({
                   </div>
                 )}
 
-                <div style={{ fontSize: "0.75rem", color: "var(--text-secondary)" }}>
+                {isSel && <div style={{ fontSize: "0.75rem", color: "var(--text-secondary)" }}>
                   <strong style={{ color: "#34d399" }}>Support:</strong> {c.keySupport}
-                </div>
-                <div style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>
+                </div>}
+                {isSel && <div style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>
                   <strong style={{ color: "#fbbf24" }}>Gap:</strong> {c.mainGap}
-                </div>
+                </div>}
               </button>
             );
           })}

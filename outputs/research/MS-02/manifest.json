@@ -37,33 +37,43 @@
   "files": [
     {
       "path": "docs/research/MS-02/report.md",
-      "bytes": 16672,
-      "sha256": "4bbe793b883ef1741fa797146ef75d65811b16b803911e925d7e01b0664f5e39"
+      "bytes": 18786,
+      "sha256": "ad28ae44dbc64789357ff6856efd5865cebb6da6434e9bb033248ea69a4c5110"
     },
     {
       "path": "outputs/research/MS-02/candidates.csv",
-      "bytes": 6605,
-      "sha256": "2e08d3e0e857719604f7af033d5a8e28bceca8dff2b7481328dc6d63d3059357"
+      "bytes": 7294,
+      "sha256": "54ec401e10e5864f5f039361c5f1b7790d7f1cb6d8b0c4b8aa1186b6a2a2fb4b"
     },
     {
       "path": "outputs/research/MS-02/evidence.csv",
-      "bytes": 16667,
-      "sha256": "b0d3c004431a797c1e17ccd97ef4efb82a9e4a7cfaac678f3b49023811042409"
+      "bytes": 19731,
+      "sha256": "3874182346587cb2b79eb178878551e89fc7543307d4bfbc666984b2df45f9e8"
     },
     {
       "path": "outputs/research/MS-02/prior_work.csv",
-      "bytes": 7303,
-      "sha256": "32ca3f2501170d3b22d2151e7e0163ea3ffb2433a2b2012011e2e4cd2e38d4ec"
+      "bytes": 9546,
+      "sha256": "8f89e74f8c107a101233facc06a2ae0dcf8571102c6910c93df63bc266e6e37a"
     },
     {
       "path": "outputs/research/MS-02/search_log.csv",
-      "bytes": 7487,
-      "sha256": "fd3db90af79d3e0011476579cddd5cf8e79e28f98ce9e3eae8551b133e19fa91"
+      "bytes": 10783,
+      "sha256": "b65706552312071b6d146cad92c79a997672d0949bb7bb69fe59f3abbcd99a8a"
     },
     {
       "path": "outputs/research/MS-02/verification.json",
       "bytes": 7366,
       "sha256": "6036a8d53044b6e548195e505f11e831b6291bef21f1a4f5598b1587ded41b34"
+    },
+    {
+      "path": "outputs/research/MS-02/figures/fig1_team_targets_context.png",
+      "bytes": 227934,
+      "sha256": "37d0004bdc611af1c712f43934c0d716ede68ab45e207399bc6fd537752bd9f0"
+    },
+    {
+      "path": "outputs/research/MS-02/figures/fig2_latitude_context.png",
+      "bytes": 77597,
+      "sha256": "c004a8e00a613e1f71aa56be7fb02c2268c682c3faa8909b374a36b9beaaf751"
     },
     {
       "path": "scripts/research/ms02_earth_analogs/verify_ms02.py",
@@ -72,8 +82,13 @@
     },
     {
       "path": "scripts/research/ms02_earth_analogs/build_tables.py",
-      "bytes": 45607,
-      "sha256": "c3b15c273c2ebe2fc1943f38ded0ecc2dfc8938cfc21d19e16897394650fc217"
+      "bytes": 56419,
+      "sha256": "03623cf018dd2d5d1da40dd4ed950e62c7ea02394dc6b1d251dd8fa9cfe6afdf"
+    },
+    {
+      "path": "scripts/research/ms02_earth_analogs/make_figures.py",
+      "bytes": 5053,
+      "sha256": "82c6d68167f74f54ce9c9874f697cec08a8091fd0a4d85146cc9fe7de6840a0f"
     }
   ],
   "sources": [
@@ -122,6 +137,26 @@
       "ref": "https://ir.lib.uwo.ca/etd/8120"
     },
     {
+      "id": "PANGAEA_921087",
+      "ref": "https://doi.pangaea.de/10.1594/PANGAEA.921087"
+    },
+    {
+      "id": "UNISCALM_AGU2016",
+      "ref": "https://ui.adsabs.harvard.edu/abs/2016AGUFMGC31H1202S"
+    },
+    {
+      "id": "SESS2018",
+      "ref": "https://doi.org/10.5281/zenodo.4777825"
+    },
+    {
+      "id": "NIETO_STEWART2003",
+      "ref": "https://www.crewes.org/Documents/ResearchReports/2003/2003-08.pdf"
+    },
+    {
+      "id": "CSEG_STEWART",
+      "ref": "https://csegrecorder.com/articles/view/mars-in-canada-the-nasa-haughton-mars-project-devon-island-nunavut"
+    },
+    {
       "id": "KOWALEWSKI2006",
       "ref": "https://doi.org/10.1017/S0954102006000460"
     },
@@ -154,11 +189,14 @@
     "Raw PDS/SWIM/Montabone/Zenodo products could not be downloaded in the sandbox (HTTP 403 via proxy); MS-02 values were cross-checked among three hand-off files, not recomputed from raw rasters.",
     "MS-02 lies inside Cebrenia quadrangle MC-7 (30-65N, 120-180E; includes parts of Utopia and Arcadia Planitia and Phlegra Montes) but the formal geologic unit and whether MS-02 is in Arcadia Planitia were NOT determined (USGS IMAP 1140 plate not read).",
     "No Earth-site thermal inertia (only soil conductivity/diffusivity for E01), slope/relief or wind-speed values were obtained for any candidate (marked 未知).",
-    "E02 rests on four abstracts (no coordinates, no temperature table); E03 evidence is mostly abstracts plus Hauber 2011; E04 has thaw depth and polygon geometry but no ground-ice, GPR or temperature series; only Hauber 2011, Marinova 2022 and Andres 2020 were read beyond abstracts (extracted text, some tables absent).",
+    "E02 rests on four abstracts (no coordinates, no temperature table; Kowalewski 2006 full text unavailable); E03 evidence is mostly abstracts plus Hauber 2011; E04 has thaw depth, polygon geometry and GPR/seismic permafrost-top depths but no ground-ice quantity and no borehole temperature series; only Hauber 2011, Marinova 2022, Andres 2020 and the CREWES report were read beyond abstracts (extracted text, some tables absent).",
+    "Adventdalen borehole temperatures (SESS 2018 PDF) and polygon values (PANGAEA zip files) could not be read or downloaded from this environment.",
+    "Hibbard (2021) dissertation body was not read; its abstract names no Arctic sites.",
+    "USGS SIM 3292 (Tanaka 2014) page offers no shapefile or geodatabase link in the fetched content, so the unit at MS-02 could not be looked up here.",
     "Haughton: p.6 coordinate is the impact-structure centre and Fig 1.8 is the river-valley study area (~4.3 km apart); Table 3.1 LiDAR grids were converted from UTM 16N by a pure-Python inverse (this-study calc; no independent library cross-check, but results agree with Fig 1.8 within ~0.1 deg).",
     "One literature page (Antarctic Science depth-to-ice paper via proxy URL) was access-denied and not read.",
     "SWIM composite resolution/units are not stated on the provider page.",
-    "PANGAEA polygon dataset (Adventdalen), Marchant & Head 2007 and Sugden 1995 were leads only, not read.",
+    "Marchant & Head 2007 and Sugden 1995 were not found or read.",
     "Beacon Valley depth ranges differ between sources (10-60 cm Heldmann; 40-80 cm Kowalewski) and were not reconciled.",
     "No figure produced."
   ],

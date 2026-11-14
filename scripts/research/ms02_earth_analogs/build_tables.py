@@ -27,6 +27,11 @@ SRC = {
     "ROTEM": "https://doi.org/10.5194/tc-17-3363-2023",
     "ANDRES": "https://core.ac.uk/download/364350841.pdf",
     "HIBBARD": "https://ir.lib.uwo.ca/etd/8120",
+    "PANGAEA_921087": "https://doi.pangaea.de/10.1594/PANGAEA.921087",
+    "UNISCALM_AGU2016": "https://ui.adsabs.harvard.edu/abs/2016AGUFMGC31H1202S",
+    "SESS2018": "https://doi.org/10.5281/zenodo.4777825",
+    "NIETO_STEWART2003": "https://www.crewes.org/Documents/ResearchReports/2003/2003-08.pdf",
+    "CSEG_STEWART": "https://csegrecorder.com/articles/view/mars-in-canada-the-nasa-haughton-mars-project-devon-island-nunavut",
     "KOWALEWSKI2006": "https://doi.org/10.1017/S0954102006000460",
     "MCKAY2009": "https://doi.org/10.1017/S0954102008001508",
     "ELSTON1979_USGS_IMAP1140": "https://pubs.usgs.gov/publication/i1140",
@@ -65,26 +70,26 @@ cands = [
   "Read Kowalewski 2006 and McKay 2009 full text for site coordinates and instrument/depth details; read Marchant & Head 2007 (not yet read)"],
  ["MS-02-E03", "Adventdalen, central Spitsbergen, Svalbard (Norway)",
   78.1722, 16.0613,
-  "Valley floor/terraces of Adventdalen (~40 km long, up to ~3 km wide); point anchor = ADE terrace site; polygon troughs surveyed by WISDOM team",
-  "Hauber 2011 p.113 (valley dimensions, no coordinates); Rotem 2023 (ADE 78.1722°N 16.0613°E, 23 m a.s.l.; valley centre 78.110°N 16.180°E)",
-  "Svalbard Airport climate 1912-1993 (Hauber Table 1 p.114); Adventdalen 'Polygons' MAAT -5.8 °C (Rotem 2023); HRSC-AX DEMs 0.5-1 m (Hauber pp.112-113); WISDOM GPR Mar 2022 (Brighi 2025); loess OSL record (Rasmussen 2023); PANGAEA polygon geomorphometry dataset (lead, not read)",
+  "Valley floor/terraces of Adventdalen (~40 km long, up to ~3 km wide); point anchor = ADE terrace site; HRSC-AX polygon sites span 78.182-78.206°N, 15.79-16.559°E (8 sites); polygon troughs surveyed by WISDOM team",
+  "Hauber 2011 p.113 (valley dimensions, no coordinates); Rotem 2023 (ADE 78.1722°N 16.0613°E, 23 m a.s.l.; valley centre 78.110°N 16.180°E); PANGAEA 921087 site table (bounding box and 8 site coordinates, CC BY 4.0)",
+  "Svalbard Airport climate 1912-1993 (Hauber Table 1 p.114); Adventdalen 'Polygons' MAAT -5.8 °C (Rotem 2023); HRSC-AX DEMs 0.5-1 m (Hauber pp.112-113); WISDOM GPR Mar 2022 (Brighi 2025); loess OSL record (Rasmussen 2023); PANGAEA polygon geomorphometry dataset (site table read; polygon values are in zip files that could not be downloaded); UNISCALM CALM active-layer series on a loess terrace (since 2000; AGU 2016 abstract)",
   "Ice-wedge polygons and mantled ground ice; aeolian silt cover (loess) building syngenetic permafrost; radar detection of ice beneath an active layer; polygon geometry vs Mars (Hauber)",
   "Latitude 78°N; thicker, wetter, vegetated-valley setting not described in what I read; MAAT -5.8 °C; saline/epigenetic permafrost part (Rotem); polygons 10-20 m vs Mars example 5-10 m (Hauber Fig 4)",
   "保留",
   "Best-documented case for the 'mantle + wind + ice detection' questions (H2, H3): measured loess accumulation rate, polygon-trough GPR ice reflector, and a published Mars mid-latitude landform comparison",
   "Svalbard loess accumulation rates and active-layer depth cannot be transferred to Mars dust deposition or MS-02 cover thickness; GPR ε values are for Earth materials",
-  "Download polygon dataset (PANGAEA 10.1594/PANGAEA.921087 lead) and read Hauber Section 3 for polygon statistics; collect active-layer and borehole series from public permafrost networks (not yet searched)"],
+  "Download the polygon zip files (PANGAEA 10.1594/PANGAEA.921087; blocked from this sandbox) and read Hauber Section 3 for polygon statistics; read the SESS 2018 report PDF (Zenodo 4777825; unreadable via the fetch tool) for Adventdalen borehole temperatures"],
  ["MS-02-E04", "Haughton River Valley, Haughton impact structure, Devon Island, Nunavut (Canada)",
   75.37, -89.53,
   "Nine LiDAR grids (0.1-0.5 m/px) within ~3.9 km N-S x ~4.0 km E-W (this-study calc from Table 3.1 UTM 16N); valley ~1.5 km wide, elevation 75-151 m a.s.l.",
   "Andres 2020 Table 3.1 (UTM 16N grids converted to 75.359-75.394°N, 89.510-89.655°W) and Fig 1.8 p.20 (75.37, -89.53); the structure centre 75°22'N 89°41'W (p.6) is a different anchor ~4.3 km away",
-  "MAAT ~-16 °C Devon / ~-15 °C valley (cited, Andres p.1,6); LiDAR 2016 (36 DEMs, 9 analysed); thaw depth 0.52-0.67 m (2019, Andres pp.102-106); polygon/stripe diameters 5-31 m (pp.114-115); no Haughton GPR; no Haughton ground-ice quantity",
+  "MAAT ~-16 °C Devon / ~-15 °C valley (cited, Andres p.1,6); LiDAR 2016 (36 DEMs, 9 analysed); thaw depth 0.52-0.67 m (2019, Andres pp.102-106); polygon/stripe diameters 5-31 m (pp.114-115); GPR 250 MHz and seismic at the Haughton base camp/landing strip (Nieto & Stewart 2003; CSEG article) giving permafrost top ~0.6-0.9 m; no Haughton ground-ice quantity",
   "Polar-desert patterned-ground geometry (polygons, stripes, stone circles) and active-layer thaw depth at LiDAR scale; Arcadia-class comparison only via Hibbard thesis (abstract)",
   "Impact structure setting at 75°N, MAAT ~-15 to -16 °C; ground-ice content (10-20%) is a Canadian High Arctic generality, not Haughton data; Axel Heiberg GPR/ice-wedge volume is a different site; author states nine grids in a very small locale may not generalise (p.115)",
   "待補證據",
-  "Measured thaw depth and polygon geometry exist, but no Haughton ground-ice quantity, ground-temperature series, GPR or Mars-point comparison were found in the text read",
-  "Thaw depth (0.52-0.67 m) is a July 2019 snapshot; the 10-20% ice content must not be applied to Haughton or MS-02",
-  "Find Haughton ground-temperature/borehole or GPR data (not found in searches so far); read Hibbard thesis body to see whether Devon/Haughton is among its Arctic sites"],
+  "Measured thaw depth (2019), polygon geometry, and GPR/seismic permafrost-top depths (~0.6-0.9 m) exist, but no Haughton ground-ice quantity, no borehole temperature series (a '-17 °C crater average' is stated without period or depth), and no Mars-point comparison were found",
+  "Thaw depth (0.52-0.67 m, July 2019) and GPR permafrost-top depth are snapshots from different sites in the valley; the 10-20% ice content must not be applied to Haughton or MS-02",
+  "Find a Haughton borehole/ground-temperature series (searches so far found none); the Hibbard dissertation text does not name Devon/Haughton in its abstract, so its body would need to be read from the repository PDF"],
 ]
 
 # ------------------------------------------------------------------ evidence
@@ -173,6 +178,14 @@ ev(S, "大氣/沙塵", "Loess deposition rate / mass accumulation rate (max)", "
    SRC["RASMUSSEN"], "abstract", "Earth dust source/wind regime; cannot be converted to Mars deposition; ice content increases with depth (syngenetic permafrost)")
 ev(S, "大氣/沙塵", "Annual precipitation, Svalbard Airport", "180.7 (SD 49.8; 86.4-317.0)", "mm", "實測", "1912-1993", "gauge", "airport", SRC["HAUBER"], "Table 1 p.114", "Atmosphere/pressure/humidity regime differ from Mars: 未知 for direct comparison")
 
+ev(S, "水/冰", "Active-layer thickness at UNISCALM (CALM site on a loess-covered terrace): early vs later period", "<1 m for the first six years (min 74 cm in 2005); ≥1 m since 2006; increasing over 17 years", "cm / m", "實測(機械探測+地溫內插)", "2000-2016 (abstract Dec 2016)", "active layer", "single CALM grid, Adventdalen",
+   "https://ui.adsabs.harvard.edu/abs/2016AGUFMGC31H1202S", "abstract (authors not shown on page; bibcode 2016AGUFMGC31H1202S)",
+   "Newer than the 60-100 cm values cited by Rotem 2023; interannual variability reported as large; abstract only")
+ev(S, "熱性質", "Permafrost thermal state, Adventdalen: 11 boreholes across five Svalbard sites, hydrological year 2016-2017", "values not extracted (report PDF unreadable via fetch)", "°C", "未知", "2016-2017", "depths not stated on the record page", "five sites incl. Adventdalen",
+   "https://doi.org/10.5281/zenodo.4777825", "record page (Christiansen et al. 2019, SESS report 2018, ch.1)", "Dataset exists; Adventdalen temperatures not read: 未知")
+ev(S, "地形", "HRSC-AX polygon-pattern sites (8) with mapped geometry parameters", "bbox 78.182-78.206°N, 15.79-16.559°E; parameters: area, perimeter, length, width, thickness ratio, circularity", "m2; m; ratios 0-1", "實測(航空立體影像製圖)", "2009 campaign", "surface", "polygon networks, shapefiles",
+   "https://doi.pangaea.de/10.1594/PANGAEA.921087", "dataset page, Ulrich, Härtel & Hauber 2020, CC BY 4.0", "Polygon values are in zip files that could not be downloaded here; resolution and polygon counts not stated on the page")
+
 H = "MS-02-E04"
 ev(H, "地形", "Coordinates: impact-structure centre vs Haughton River Valley study area", "75°22'N 89°41'W (structure, p.6) vs 75.37°N, 89.53°W (study area, Fig 1.8 p.20); separation ~4.3 km (this-study calc)", "degrees", "文獻+本次計算", "n/a", "n/a", "structure (23 km diameter) / valley ~1.5 km wide",
    SRC["ANDRES"], "sec 1.2.2 p.6; Fig 1.8 p.20; sec 3.2", "Two different anchors, not an error; the nine LiDAR grids of Table 3.1 convert (UTM 16N, this-study calc) to 75.359-75.394°N, 89.510-89.655°W")
@@ -186,6 +199,12 @@ ev(H, "地形", "Patterned-ground geometry at Haughton River Valley", "polygons 
    SRC["ANDRES"], "pp.106-107, 114-115", "Table 2.1 in the thesis is Strand Fiord (Axel Heiberg), not Haughton; cannot be mixed")
 ev(H, "水/冰", "Polygon width range (general, from thesis background table)", "0.5-10", "m", "文獻(一般)", "n/a", "surface", "general", SRC["ANDRES"], "Table 1.1 p.12", "General background range, not Haughton data")
 ev(H, "水/冰", "Haughton ground-ice quantity, GPR, borehole temperatures", "not found in text read", "n/a", "未知", "n/a", "n/a", "n/a", SRC["ANDRES"], "chapter 3 (extracted text, 3 chunks; some tables absent); no Haughton GPR; 43.28 m3 ice-wedge volume is Strand Fiord (p.123)", "The 10-20% ice content is a Canadian High Arctic generality; Axel Heiberg values cannot be used for Haughton")
+ev(H, "水/冰", "GPR depth to frozen ground (top of permafrost), Haughton base camp 3D and landing strip", "0.60-0.78 (base camp 3D; ~0.65 on p.11); 0.7-0.9 (landing strip quasi-3D)", "m", "實測(GPR 250 MHz)", "Devon Island field survey (report vol. 15, 2003)", "0.6-0.9 m", "3D grids near base camp / landing strip; no site coordinates",
+   "https://www.crewes.org/Documents/ResearchReports/2003/2003-08.pdf", "Nieto & Stewart 2003: abstract p.1; p.11; conclusions p.14-15", "Thawed-layer velocity ~0.065 m/ns from rebar test; diffractions interpreted as ice lenses or cobbles at the permafrost top; no ice thickness quantified (pp.1,3,11)")
+ev(H, "水/冰", "Seismic P/S velocity: near-surface silt vs permafrost", "silt Vp 260 / Vs 168; permafrost Vp 3100 / Vs 2060", "m/s", "實測(多分量地震)", "2002 survey", "top ~0.6 m is silt", "Haughton base area",
+   "https://csegrecorder.com/articles/view/mars-in-canada-the-nasa-haughton-mars-project-devon-island-nunavut", "CSEG Recorder article (R. R. Stewart; year not stated on page), Fig. 9", "Preliminary interpretation; article swaps latitude/longitude labels in its coordinate sentence")
+ev(H, "熱性質", "'Crater average' temperature stated in the article summary", "-17", "°C", "文獻(未註明量與期間)", "not stated", "not stated", "crater", "https://csegrecorder.com/articles/view/mars-in-canada-the-nasa-haughton-mars-project-devon-island-nunavut", "Summary section",
+   "Not stated whether air or ground, nor the period; not used in comparisons; Andres cites about -16 °C (Devon) and about -15 °C (valley)")
 ev(H, "大氣/沙塵", "Dust / wind / loess", "not found", "n/a", "未知", "n/a", "n/a", "n/a", "n/a", "n/a", "Not covered in text read")
 
 # ------------------------------------------------------------------ prior work
@@ -216,7 +235,7 @@ P = [
   "Extracted text characters 0-257,352 in three reads (some tables absent, e.g., Table 3.3)", "Landsystem mapping and thaw depth vs MS-02 ice-detection questions", "Haughton River Valley (9 grids) and Strand Fiord (Axel Heiberg); Mars discussion mentions Oxia Planum/Jezero, not Arcadia", "LiDAR 0.1-0.5 m, thaw depth 2019, GPR only at Strand Fiord", "Landsystem analysis", "Author: nine grids in a very small locale may not generalise (p.115)"],
  ["PW-08", "MS-02-E04", "Hibbard (PhD, Western), Surface Morphology and Subsurface Ice Content Relationships in Arcadia Planitia, Mars and the Canadian High Arctic", SRC["HIBBARD"],
   "Arcadia Planitia; unnamed Canadian High Arctic sites", "Ice-related features for ISRU landing-site ice access", "證據不足 (same-site match unknown; closest regional-class precedent)",
-  "Abstract page only; year not stated", "Feature/ice-access mapping vs MS-02 cover/season/wind questions", "No coordinates or named Arctic sites on page", "Orbital data, GPR, LiDAR", "Morphology-ice relationship", "Must read body before claiming relation to MS-02"],
+  "Abstract pages (two repository records); year 2021 per the second record, authorship inferred from the PDF file name", "Feature/ice-access mapping vs MS-02 cover/season/wind questions", "No coordinates or named Arctic sites on page", "Orbital data, GPR, LiDAR", "Morphology-ice relationship", "Must read body before claiming relation to MS-02"],
  ["PW-09", "MS-02", "Morgan et al. 2021, Availability of subsurface water-ice resources in the northern mid-latitudes of Mars", SRC["MORGAN"], "Northern mid-latitudes (Arcadia, Deuteronilus)", "SWIM composite ice-consistency maps", "用途不同 (Mars-side context)",
   "Abstract page", "Defines the ice-consistency scoring MS-02 uses", "Mars only", "Orbital datasets", "Composite consistency", "Not an Earth-analog precedent"],
  ["PW-11", "MS-02-E02", "Kowalewski, Marchant, Levy & Head 2006, Quantifying low rates of summertime sublimation for buried glacier ice in Beacon Valley, Antarctica", "https://doi.org/10.1017/S0954102006000460",
@@ -228,7 +247,17 @@ P = [
  ["PW-13", "MS-02", "Elston 1979, Geologic map of the Cebrenia quadrangle of Mars (USGS IMAP 1140)", "https://pubs.usgs.gov/publication/i1140",
   "Cebrenia quadrangle MC-7 (30-65°N, 120-180°E)", "Regional geologic context for MS-02", "用途不同 (Mars-side context)", "USGS abstract only; plate not read",
   "Geologic mapping, not ice detection", "Quadrangle scale (1:4,336,000)", "Viking-era map", "Geologic mapping", "Abstract mentions circumpolar plains with wind, glacial and periglacial processes; formal units at MS-02 not read"],
- ["PW-10", "MS-02-E01;MS-02-E02;MS-02-E03;MS-02-E04", "MS-02-specific Earth-analog precedent search (see search_log S02-S06, S12-S14, S19-S21, S30-S31)", "see search_log.csv", "n/a",
+ ["PW-14", "MS-02-E04", "Nieto & Stewart 2003, Geophysical experiments in periglacial environments: Devon Island, Nunavut (CREWES Research Report vol. 15)", "https://www.crewes.org/Documents/ResearchReports/2003/2003-08.pdf",
+  "Haughton base camp, Greenhouse and landing strip (no coordinates)", "GPR survey of permafrost top at a Mars-like site", "部分重疊", "Text of the report as extracted by the fetch tool (summary-level)",
+  "Method test and permafrost-top depth vs MS-02 cover/dust/season ice-detection questions", "Local 3D grids near camp", "GPR 250 MHz; velocity calibration", "Geophysical survey", "Calls Haughton one of the most Mars-like places on Earth; no direct GPR-Mars comparison"],
+ ["PW-15", "MS-02-E04", "Stewart (CSEG Recorder), Mars in Canada: the NASA Haughton-Mars Project, Devon Island, Nunavut", "https://csegrecorder.com/articles/view/mars-in-canada-the-nasa-haughton-mars-project-devon-island-nunavut",
+  "Haughton structure", "Overview of HMP geophysical surveys", "用途不同", "Article text via fetch; year not stated", "Overview vs hypothesis testing", "Haughton", "GPR, seismic", "Geophysical survey", "Gives seismic velocities and permafrost top ~60 cm; mentions Mars only generally"],
+ ["PW-16", "MS-02-E03", "Ulrich, Härtel & Hauber 2020, Mapped polygon pattern geomorphometry from HRSC-AX, 2009, Adventdalen (PANGAEA dataset)", "https://doi.pangaea.de/10.1594/PANGAEA.921087",
+  "Adventdalen (8 sites)", "Polygon geometry data supporting Mars-analog comparison", "部分重疊", "Dataset page only (values in zip files not obtained)",
+  "Geometry of polygons vs MS-02 ice-detection question", "8 sites in a ~25 km reach", "HRSC-AX 2009 mapped polygons", "Photogrammetric mapping", "CC BY 4.0"],
+ ["PW-17", "MS-02-E03", "UNISCALM CALM monitoring, Adventdalen (AGU Fall Meeting 2016 abstract 2016AGUFMGC31H1202S) and Christiansen et al. 2019 SESS permafrost snapshot", "https://ui.adsabs.harvard.edu/abs/2016AGUFMGC31H1202S ; https://doi.org/10.5281/zenodo.4777825",
+  "Adventdalen loess terrace; five Svalbard sites", "Permafrost thermal state and active-layer monitoring", "用途不同", "Abstract and record page only", "Climate monitoring, no Mars question", "Regional", "Active-layer probing, boreholes", "Monitoring", "Provides active-layer time series context"],
+ ["PW-10", "MS-02-E01;MS-02-E02;MS-02-E03;MS-02-E04", "MS-02-specific Earth-analog precedent search (see search_log S02-S06, S12-S14, S19-S21, S30-S31, S37)", "see search_log.csv", "n/a",
   "Same Mars point + same Earth site + same use", "證據不足", "Search results listing only for most items", "n/a", "n/a", "n/a", "n/a",
   "No MS-02-specific precedent was found within searched platforms/terms; this is NOT proof it was never studied"],
 ]
@@ -274,6 +303,22 @@ sl("WebFetch", "https://pubs.usgs.gov/publication/i1140", "USGS geologic map rec
 sl("WebFetch", "https://cambridge.org/core/journals/antarctic-science/article/snow-recurrence-sets-the-depth-of-dry-permafrost-at-high-elevations-in-the-mcmurdo-dry-valleys-of-antarctica/CF01B0520168E3A900CD4BD360049E2F", "Read McKay 2009 abstract", "E01;E02", "McKay 2009", "abstract", "snow recurrence ~2 yr fits 25 cm ice; >10 yr on Beacon floor")
 sl("WebFetch", "https://cambridge.org/core/journals/antarctic-science/article/quantifying-low-rates-of-summertime-sublimation-for-buried-glacier-ice-in-beacon-valley-antarctica/5D51C5CAD844F98485B008634A1EF5E6", "Read Kowalewski 2006 abstract", "E02", "Kowalewski 2006", "abstract", "till 40-80 cm; net loss ~0.017 mm; no coordinates")
 sl("python", "scripts/research/ms02_earth_analogs/verify_ms02.py (UTM 16N inverse of Andres Table 3.1)", "Convert Haughton LiDAR grids to lat/lon", "E04", "Andres Table 3.1", "this-study calculation", "grids 75.359-75.394N, 89.510-89.655W; ~3.9 x 4.0 km")
+sl("WebSearch(standard)", "Tanaka 2014 geologic map of Mars SIM 3292 Vastitas Borealis Arcadia Planitia units", "Find geologic unit at MS-02", "MS-02", "USGS SIM 3292 page", "titles/URLs only", "lead")
+sl("WebSearch(standard)", "Adventdalen active layer thickness ground temperature borehole CALM Svalbard permafrost", "E03 ground temperature/active layer", "E03", "UNISCALM AGU abstract; Christiansen 2019 SESS", "titles/URLs only", "leads")
+sl("WebFetch", "https://doi.pangaea.de/10.1594/PANGAEA.921087", "Polygon dataset record", "E03", "Ulrich et al. 2020", "dataset page", "8 sites, bbox, parameters, CC BY 4.0")
+sl("WebSearch(standard)", "Marchant Head 2007 Antarctic Dry Valleys microclimate zonation variable geomorphic processes implications assessing climate change on Mars Icarus", "Find Marchant & Head 2007", "E02", "none new", "titles/URLs only", "Paper not returned by this search")
+sl("WebSearch(standard)", "Haughton impact structure Devon Island ground penetrating radar permafrost ice active layer", "E04 GPR/ground temperature", "E04", "CREWES reports; CSEG article", "titles/URLs only", "leads")
+sl("WebFetch", "https://doi.pangaea.de/10.1594/PANGAEA.921087?format=textfile", "Polygon values", "E03", "PANGAEA", "page text", "Site table only; polygon values in zip files")
+sl("WebFetch", "https://zenodo.org/records/4777825", "SESS 2018 permafrost snapshot record", "E03", "Christiansen et al. 2019", "record page", "Adventdalen among 5 sites; values not on page")
+sl("WebFetch", "https://www.crewes.org/Documents/ResearchReports/2003/2003-08.pdf", "Haughton GPR report", "E04", "Nieto & Stewart 2003", "report text (extracted)", "permafrost top 0.60-0.9 m by GPR")
+sl("WebFetch", "https://csegrecorder.com/articles/view/mars-in-canada-the-nasa-haughton-mars-project-devon-island-nunavut", "Haughton seismic/GPR overview", "E04", "Stewart article", "article text", "Vp 260/3100 m/s; permafrost top ~60 cm; '-17 C crater average' unspecified")
+sl("WebFetch", "https://pubs.usgs.gov/sim/3292", "Tanaka 2014 map record", "MS-02", "SIM 3292", "page text", "No shapefile/geodatabase link on page; units at MS-02 not determined")
+sl("WebFetch", "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S0954102006000460", "Kowalewski 2006 full text", "E02", "Kowalewski 2006", "abstract only (full text unavailable)", "Coordinates/instrument depths not obtainable")
+sl("WebFetch", "https://zenodo.org/records/4777825/files/SESS2018_PermaSval.pdf?download=1", "Adventdalen borehole values", "E03", "none", "binary PDF unreadable by fetch tool", "No values extracted")
+sl("WebFetch", "https://ui.adsabs.harvard.edu/abs/2016AGUFMGC31H1202S", "UNISCALM abstract", "E03", "AGU 2016 abstract", "abstract", "ALT <1 m first 6 yr (min 74 cm 2005); >=1 m since 2006")
+sl("curl", "zenodo SESS2018 PDF; PANGAEA polygons_AD3.zip", "Try to download data files directly", "E03", "none", "n/a", "403 from sandbox proxy; not retried")
+sl("WebFetch", "https://openpolar.no/Record/ftunivwestonta:oai:ir.lib.uwo.ca:etd-10632", "Hibbard dissertation record", "E04", "Hibbard 2021", "abstract record", "Year 2021; no named Arctic sites")
+sl("python", "scripts/research/ms02_earth_analogs/make_figures.py; dataviz validate_palette (blue/orange/aqua, light, all-pairs)", "Two context figures", "MS-02", "final_candidates.csv", "this-study", "Palette passes; aqua contrast WARN handled with visible value labels")
 
 
 def write_csv(name, cols, rows):
@@ -294,7 +339,10 @@ files = ["docs/research/MS-02/report.md",
          "outputs/research/MS-02/candidates.csv", "outputs/research/MS-02/evidence.csv",
          "outputs/research/MS-02/prior_work.csv", "outputs/research/MS-02/search_log.csv",
          "outputs/research/MS-02/verification.json",
-         "scripts/research/ms02_earth_analogs/verify_ms02.py", "scripts/research/ms02_earth_analogs/build_tables.py"]
+         "outputs/research/MS-02/figures/fig1_team_targets_context.png",
+         "outputs/research/MS-02/figures/fig2_latitude_context.png",
+         "scripts/research/ms02_earth_analogs/verify_ms02.py", "scripts/research/ms02_earth_analogs/build_tables.py",
+         "scripts/research/ms02_earth_analogs/make_figures.py"]
 manifest = {
     "task": "MS-02 Earth analog research, Team zasa, NASA Space Apps 2026",
     "mars_point": {"id": "MS-02", "lat_deg_N": 52.75, "lon_deg_E": 168.25,
@@ -318,11 +366,14 @@ manifest = {
         "Raw PDS/SWIM/Montabone/Zenodo products could not be downloaded in the sandbox (HTTP 403 via proxy); MS-02 values were cross-checked among three hand-off files, not recomputed from raw rasters.",
         "MS-02 lies inside Cebrenia quadrangle MC-7 (30-65N, 120-180E; includes parts of Utopia and Arcadia Planitia and Phlegra Montes) but the formal geologic unit and whether MS-02 is in Arcadia Planitia were NOT determined (USGS IMAP 1140 plate not read).",
         "No Earth-site thermal inertia (only soil conductivity/diffusivity for E01), slope/relief or wind-speed values were obtained for any candidate (marked 未知).",
-        "E02 rests on four abstracts (no coordinates, no temperature table); E03 evidence is mostly abstracts plus Hauber 2011; E04 has thaw depth and polygon geometry but no ground-ice, GPR or temperature series; only Hauber 2011, Marinova 2022 and Andres 2020 were read beyond abstracts (extracted text, some tables absent).",
+        "E02 rests on four abstracts (no coordinates, no temperature table; Kowalewski 2006 full text unavailable); E03 evidence is mostly abstracts plus Hauber 2011; E04 has thaw depth, polygon geometry and GPR/seismic permafrost-top depths but no ground-ice quantity and no borehole temperature series; only Hauber 2011, Marinova 2022, Andres 2020 and the CREWES report were read beyond abstracts (extracted text, some tables absent).",
+        "Adventdalen borehole temperatures (SESS 2018 PDF) and polygon values (PANGAEA zip files) could not be read or downloaded from this environment.",
+        "Hibbard (2021) dissertation body was not read; its abstract names no Arctic sites.",
+        "USGS SIM 3292 (Tanaka 2014) page offers no shapefile or geodatabase link in the fetched content, so the unit at MS-02 could not be looked up here.",
         "Haughton: p.6 coordinate is the impact-structure centre and Fig 1.8 is the river-valley study area (~4.3 km apart); Table 3.1 LiDAR grids were converted from UTM 16N by a pure-Python inverse (this-study calc; no independent library cross-check, but results agree with Fig 1.8 within ~0.1 deg).",
         "One literature page (Antarctic Science depth-to-ice paper via proxy URL) was access-denied and not read.",
         "SWIM composite resolution/units are not stated on the provider page.",
-        "PANGAEA polygon dataset (Adventdalen), Marchant & Head 2007 and Sugden 1995 were leads only, not read.",
+        "Marchant & Head 2007 and Sugden 1995 were not found or read.",
         "Beacon Valley depth ranges differ between sources (10-60 cm Heldmann; 40-80 cm Kowalewski) and were not reconciled.",
         "No figure produced."],
     "not_claimed": ["No ice amount or probability for MS-02", "No Mars-likeness score/percentage", "No claim that any pairing was never studied"],

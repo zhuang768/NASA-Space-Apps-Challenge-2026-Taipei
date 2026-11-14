@@ -47,7 +47,7 @@ Team zasa｜NASA Space Apps 2026｜研究日期：2026-11-14（Asia/Taipei）
 |---|---|---|---|---|
 | MS-02-E01 | University Valley，McMurdo Dry Valleys（南極） | 77.87°S、160.75°E，約 1700 m | 觀測站群（1661–1697 m）所在谷底；邊界依 Marinova 2022 p.145–146；**未取得**精確範圍 | **保留** |
 | MS-02-E02 | Beacon Valley（南極） | 座標未取得 | 僅讀 4 篇摘要，範圍未定 | **待補證據** |
-| MS-02-E03 | Adventdalen，Svalbard | ADE 階地點 78.1722°N、16.0613°E，海拔 23 m | 谷底與階地（谷長約 40 km、寬至約 3 km，Hauber 2011 p.113） | **保留** |
+| MS-02-E03 | Adventdalen，Svalbard | ADE 階地點 78.1722°N、16.0613°E，海拔 23 m | 谷底與階地（谷長約 40 km、寬至約 3 km，Hauber 2011 p.113）；PANGAEA 多邊形資料集（Ulrich 等 2020）另有 8 個場址的範圍框 | **保留** |
 | MS-02-E04 | Haughton River Valley，Devon Island，Nunavut | 75.37°N、89.53°W（Andres Fig. 1.8） | 9 個 LiDAR 格（Table 3.1，UTM 16N 換算為 75.359–75.394°N、89.510–89.655°W），約 3.9 × 4.0 km（本次計算）；河谷寬約 1.5 km | **待補證據** |
 
 E04 有兩個不同的錨點，並非矛盾：p.6 的 75°22′N、89°41′W 是 23 km 撞擊構造中心，Fig. 1.8 與 LiDAR 格是河谷研究區，兩者相距約 **4.3 km**（本次計算）。本報告以河谷研究區為 E04 的位置。
@@ -60,7 +60,7 @@ E04 有兩個不同的錨點，並非矛盾：p.6 的 75°22′N、89°41′W �
 |---|---|---|---|---|
 | 地形 | 區域坡度 0.30°、高差 117 m（3.7 km 尺度） | 谷底高程約 1677–1697 m；坡度與高差**未知** | 谷長 ~40 km、寬 ≤ 3 km；多邊形直徑 10–20 m（Mars 例 5–10 m，Hauber Fig. 4） | 尺度不同：Mars 是 km 尺度格，Earth 是 m 尺度地貌；只能問「哪種局部地貌值得先看」，不能比坡度數字 |
 | 溫度／熱性質 | 熱慣量 217；MCS 03／15 LTST 中位 171／246 K | 空氣 MAAT −23.4 °C（249.75 K），42 cm 冰面處地溫 −24.1 °C；導熱係數乾土 0.6 ± 0.1、冰膠結 2.5 ± 0.5 W m⁻¹ K⁻¹（引用值，Marinova 附錄 p.165）；**熱慣量不能導出**（缺密度與熱容） | MAAT −5.8 °C（267.35 K，Rotem 2023）；Svalbard Airport −6.3 °C（1912–1993）；**熱慣量未知** | MAAT 與 MCS 中位不同量；意義在於 E01 提供「冰面上下多深度溫度」可用來檢驗覆土如何改變熱訊號 |
-| 水／冰 | SWIM 0.69／0.62（一致性） | 冰膠結層頂 42 cm（站點），沿谷底約 0 至 >1 m；活動層約 15 cm | 活動層 60–100 cm（Rotem 引用）；多邊形溝槽約 1.5 m 處 GPR 冰狀反射（ε≈3.2，活動層 ε≥7，2022 年 3 月） | E01 是**乾燥覆土下的冰膠結**，E03 是**含水的活動層下的冰**；MS-02 的冰深與類型**未知**，不能借用 |
+| 水／冰 | SWIM 0.69／0.62（一致性） | 冰膠結層頂 42 cm（站點），沿谷底約 0 至 >1 m；活動層約 15 cm | 活動層 60–100 cm（Rotem 引用）；UNISCALM 摘要稱 2006 年起活動層 ≥1 m（前 6 年 <1 m，2005 年最小 74 cm），兩者不同期，未調和；多邊形溝槽約 1.5 m 處 GPR 冰狀反射（ε≈3.2，活動層 ε≥7，2022 年 3 月） | E01 是**乾燥覆土下的冰膠結**，E03 是**含水的活動層下的冰**；MS-02 的冰深與類型**未知**，不能借用 |
 | 大氣／沙塵 | CDOD MY34 p95 0.240、MY35 0.173 | 風速計 1.08 m 已安裝但文中**未找到風速值**；感測器曾被薄土覆蓋，風可能移除；McKay 2009 摘要指高原風吹雪使冰膠結層深度出現梯度 | 風成粉砂（loess）堆積最高約 0.35 cm/yr、約 2900 g m⁻² yr⁻¹（過去約 3000 年，OSL 岩芯，Rasmussen 2023） | 地球的堆積速率、粉塵來源與火星光學厚度**不可換算**；E03 提供「覆土如何累積並與永凍層一起生長」的物理過程 |
 
 ### 各候選的差異摘要
@@ -68,7 +68,7 @@ E04 有兩個不同的錨點，並非矛盾：p.6 的 75°22′N、89°41′W �
 - **E01 vs MS-02**：緯度（77.9°S 對 52.75°N）、氣壓、日照、大氣與冰來源都不同；優點是有冰面以上與以下的實測溫度（10／42／49 cm，2010–2013）與能量平衡模型。
 - **E03 vs MS-02**：Adventdalen 比 E01 溫暖潮濕，具薄活動層與厚粉砂堆積；用途是檢驗**多邊形＋覆土＋雷達**，不是溫度。
 - **E02**：只有 4 篇摘要。Heldmann 2013 稱冰在 10–60 cm；Kowalewski 等 2006 稱 Beacon 谷中部冰上覆有 40–80 cm 的昇華堆積物（sublimation till），2004-11-18 至 12-29 冰的淨損失約 0.017 mm；McKay 2009 推論谷底雪再現期 >10 年；Bannister 2007（學士論文）稱厚冰 >100 m。前兩者深度範圍不同，**未調和**；座標仍未取得。
-- **E04**：有實測融化深度（2019 年 7 月：0.52–0.67 m）、多邊形／條紋直徑 5–31 m、East Camp Polygons 平均面積 984 ± 452 m²；**沒有** Haughton 的含冰量、地溫序列或 GPR。論文裡 10–20% 含冰量是加拿大高北極一般範圍，Strand Fiord 的 43.28 m³ 冰楔體積也是別的場址，兩者都不能用在 Haughton。
+- **E04**：有實測融化深度（2019 年 7 月：0.52–0.67 m）、多邊形／條紋直徑 5–31 m、East Camp Polygons 平均面積 984 ± 452 m²；**沒有** Haughton 的含冰量或地溫序列；GPR／震測只給出永凍層頂深度約 0.6–0.9 m（Nieto & Stewart 2003；CSEG 文章另載 Vp 約 260／3100 m/s 與未說明來源的「−17 °C」，不採用為場址地溫）。論文裡 10–20% 含冰量是加拿大高北極一般範圍，Strand Fiord 的 43.28 m³ 冰楔體積也是別的場址，兩者都不能用在 Haughton。
 
 ## 6. 可檢驗問題（研究假設，不是結論）
 
@@ -80,7 +80,7 @@ E04 有兩個不同的錨點，並非矛盾：p.6 的 75°22′N、89°41′W �
 
 ## 7. 先例檢索與差異
 
-**檢索平台**：WebSearch（一般模式）與 WebFetch，日期 2026-11-14；完整字串與讀取範圍見 `outputs/research/MS-02/search_log.csv`（S01–S36）。多數結果只讀到標題或摘要，已在 `prior_work.csv` 註明；只有 Hauber 2011、Marinova 2022 與 Andres 2020 讀到內文（萃取文字，部分表格缺漏）。
+**檢索平台**：WebSearch（一般模式）與 WebFetch，日期 2026-11-14；完整字串與讀取範圍見 `outputs/research/MS-02/search_log.csv`（S01–S52）。多數結果只讀到標題或摘要，已在 `prior_work.csv` 註明；只有 Hauber 2011、Marinova 2022、Andres 2020 與 Nieto & Stewart 2003（CREWES 報告）讀到內文（萃取文字，部分表格缺漏）。
 
 | 先例 | 場址 | 分類 | 與本次差異 |
 |---|---|---|---|
@@ -104,8 +104,8 @@ E04 有兩個不同的錨點，並非矛盾：p.6 的 75°22′N、89°41′W �
 |---|---|---|---|---|---|
 | E01 | 保留 | 多深度實測溫度橫跨冰面；有能量平衡模型；有 a_w＞0.6 且 T＞−18 °C 約 2560 h/年（約 29%）的數值 | H1：覆土與冰面深度對熱訊號的影響 | 42 cm 冰面深度、溫度、水活度不可套到 MS-02 | 取 Table II／Fig. 6 原始序列；找土壤熱性質與風速 |
 | E02 | 待補證據 | 4 篇摘要有數值（覆土 40–80 cm、昇華約 0.017 mm／6 週），但無座標、溫度表與全文；兩個冰深範圍未調和；Bannister 100 m 未核對 | 塊狀冰與冰膠結的對照；覆土下冰的昇華對溫濕度的敏感性（暫定） | 厚冰深度、昇華量 | 讀 Kowalewski 2006、McKay 2009 全文取座標；讀 Marchant & Head 2007（未讀） |
-| E03 | 保留 | 有粉砂堆積速率、多邊形 GPR 反射、火星中緯度地貌比較 | H2、H3 | Loess 速率、ε 值不可轉成 Mars 沉積率或介電值 | 讀 Hauber 第 3 節多邊形統計；下載多邊形資料集；查活動層與鑽孔序列 |
-| E04 | 待補證據 | 有融化深度與多邊形幾何，但沒有 Haughton 含冰量、地溫序列或 GPR | 圖案化地形幾何與活動層厚度（LiDAR 尺度） | 高北極一般含冰量；7 月單次融化深度 | 找 Haughton 地溫／鑽孔或 GPR 資料；讀 Hibbard 本文確認是否含 Devon／Haughton |
+| E03 | 保留 | 有粉砂堆積速率、多邊形 GPR 反射、火星中緯度地貌比較 | H2、H3 | Loess 速率、ε 值不可轉成 Mars 沉積率或介電值 | 讀 Hauber 第 3 節多邊形統計；下載多邊形資料集；取 PANGAEA 多邊形資料（zip）與 SESS 2018 鑽孔序列（本環境下載被拒、PDF 無法讀取），需在可連線環境取得 |
+| E04 | 待補證據 | 有融化深度、多邊形幾何與 GPR／震測的永凍層頂深度（約 0.6–0.9 m），但沒有 Haughton 含冰量或地溫序列 | 圖案化地形幾何與活動層厚度（LiDAR 尺度） | 高北極一般含冰量；7 月單次融化深度 | 找 Haughton 地溫／鑽孔與含冰量資料；讀 Hibbard 本文確認是否含 Devon／Haughton |
 
 ## 9. 缺口與限制
 
@@ -113,14 +113,20 @@ E04 有兩個不同的錨點，並非矛盾：p.6 的 75°22′N、89°41′W �
 2. 原始 PDS／SWIM 檔案無法從沙箱取得（403），MS-02 數值未從原始網格重算。
 3. MS-02 在 Cebrenia 四邊形（MC-7）內，但正式地質單元，以及是否在 Arcadia Planitia，仍未確認（需讀 USGS IMAP 1140 圖版）。
 4. 四個候選皆未取得地球側的熱慣量（E01 只有導熱係數與擴散率）、坡度高差與風速。
-5. E02 只有摘要；E03 多為摘要加 Hauber 2011；E04 無含冰量、地溫序列與 GPR；一個文獻頁（以代理網址）被拒絕存取，未讀；Marchant & Head 2007、Sugden 1995 與 PANGAEA 多邊形資料集只是線索。
+5. E02 只有摘要（Kowalewski 2006 全文取不到）；E03 多為摘要加 Hauber 2011；E04 無含冰量與地溫序列（僅 GPR／震測永凍層頂深度）；一個文獻頁（以代理網址）被拒絕存取，未讀；Marchant & Head 2007 與 Sugden 1995 未找到；Hibbard 博論本文未讀（摘要無北極場址名）。
+   - Adventdalen 鑽孔溫度（SESS 2018 PDF）與 PANGAEA 多邊形數值（zip）在本環境無法下載或讀取（403／二進位），未取得數值。
+   - USGS SIM 3292（Tanaka 2014）頁面未提供可取的向量資料連結，MS-02 的地質單元無法在此查出。
 6. E04 的 LiDAR 格座標由 UTM 16N 以純 Python 反算（本次計算，未用獨立函式庫交叉驗證，但與論文 Fig. 1.8 差在約 0.1° 內）。
 7. Beacon Valley 兩個冰深範圍（10–60 cm 與 40–80 cm）未調和。
-8. 本次未產生圖表。
+8. 圖 1 只是三個團隊目標的原生格值並列，圖 2 只比較絕對緯度；兩者都不是評分或排名，圖 2 未納入無座標的 E02，也未比較日照或傾角。
 
 ## 10. 交付檔案
 
-`outputs/research/MS-02/candidates.csv`、`evidence.csv`、`prior_work.csv`、`search_log.csv`、`manifest.json`、`verification.json`；分析程式在 `scripts/research/ms02_earth_analogs/`。
+`outputs/research/MS-02/candidates.csv`、`evidence.csv`、`prior_work.csv`、`search_log.csv`、`manifest.json`、`verification.json`；圖：`outputs/research/MS-02/figures/fig1_team_targets_context.png`（MS-01／02／03 原生格值，各面板獨立座標軸）、`fig2_latitude_context.png`（絕對緯度）；分析程式（`verify_ms02.py`、`build_tables.py`、`make_figures.py`）在 `scripts/research/ms02_earth_analogs/`。
+
+![圖 1](../../../outputs/research/MS-02/figures/fig1_team_targets_context.png)
+
+![圖 2](../../../outputs/research/MS-02/figures/fig2_latitude_context.png)
 
 ## 來源
 
@@ -139,3 +145,9 @@ E04 有兩個不同的錨點，並非矛盾：p.6 的 75°22′N、89°41′W �
 - McKay 2009：https://doi.org/10.1017/S0954102008001508
 - Elston 1979（USGS IMAP 1140）：https://pubs.usgs.gov/publication/i1140
 - Cebrenia 四邊形：https://en.wikipedia.org/wiki/Cebrenia_quadrangle
+- Ulrich 等 2020（PANGAEA 多邊形資料集）：https://doi.pangaea.de/10.1594/PANGAEA.921087
+- UNISCALM（AGU 2016 摘要）：https://ui.adsabs.harvard.edu/abs/2016AGUFMGC31H1202S
+- Christiansen 等 2019（SESS 2018，Zenodo）：https://doi.org/10.5281/zenodo.4777825
+- Nieto & Stewart 2003（CREWES）：https://www.crewes.org/Documents/ResearchReports/2003/2003-08.pdf
+- Stewart（CSEG Recorder）：https://csegrecorder.com/articles/view/mars-in-canada-the-nasa-haughton-mars-project-devon-island-nunavut
+- Tanaka 等 2014（USGS SIM 3292）：https://pubs.usgs.gov/sim/3292

@@ -10,5 +10,8 @@
   "new_commits_ancestors_of_verified_main": false,
   "official_resources_manifest_present_in_verified_main": false,
   "task_performed_merge": false,
-  "delivery": "new data retained on original branch; merged PR description can link them but merged diff does not include them; no new PR created"
+  "delivery": "new data retained on original branch; merged PR description can link them but merged diff does not include them; no new PR created",
+  "snapshot_kind": "pre-merge-authorization observation, not an assertion of later main state",
+  "subsequent_user_instruction": "\u76f4\u63a5\u5408\u4f75\u5c31\u597d\u4e86",
+  "subsequent_action_authorized": "merge the new branch commits via a new integration PR; PR7 is already merged"
 }

@@ -1,11 +1,11 @@
 # Official Resources follow-up: local MRDR v4 evidence
 
-- Start SHA: `44c2e03b8617c7bb536ad712b85f4716dd190d7c`; branch `research/ms-03-earth-analogs`; this task does not merge main.
+- Start SHA: `44c2e03b8617c7bb536ad712b85f4716dd190d7c`; branch `research/ms-03-earth-analogs`; initial no-merge scope was subsequently replaced by the user’s explicit merge instruction.
 - Fixed ROI:57.50–58.00N,242.00–242.50E, planetocentric/east-positive.
 - Official challenge Resources actually acquired via HTTP200 HTML. The web-reader initially failed; Next flight text was decoded without executing scripts. `resourcesTabContent` points to11 resource links, including NASA PDS. `resources_links.csv` retains exact listed URLs plus canonical URLs without tracking parameters.
 - Source chain: [challenge Resources](https://www.spaceappschallenge.org/2026/challenges/permanent-moon-base-locations-and-mars/?tab=resources) → [NASA PDS](https://pds.nasa.gov/) → PDS Geosciences → [CRISM products](https://pds-geosciences.wustl.edu/missions/mro/crism.htm). The challenge names the PDS gateway, not these specific products or a validation of this analysis.
 
-## Delivery-state update
+## Delivery snapshot before the subsequent merge authorization
 
 - Final check found PR7 already MERGED at2026-11-14T19:38:25Z with old head44c2e03. This task performed no merge. New science/acquisition commits are not in verified main08d2740 and the new package is absent there.
 - The original branch contains the new delivery; PR7 description links to it, but a merged PR diff cannot absorb later branch commits. `delivery_state.json` records the checked refs. No new PR was created.

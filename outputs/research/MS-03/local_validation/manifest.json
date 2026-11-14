@@ -398,8 +398,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/official_resources/README.md",
-      "bytes": 8874,
-      "sha256": "75f8e4f44394e700a435351e471cc88c019621f351556f1b94bb326f8151e6e3"
+      "bytes": 8974,
+      "sha256": "d5ed4d05e70d19f484ce664468adbb4937307ae5c9f49d5519ea99a4c2c40871"
     },
     {
       "path": "outputs/research/MS-03/local_validation/official_resources/acquire_resources.py",
@@ -413,8 +413,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/official_resources/delivery_state.json",
-      "bytes": 804,
-      "sha256": "8257c60adccb402911bd0153b8b467b77a5f31e329e461b5f79dc3af58e648f6"
+      "bytes": 1093,
+      "sha256": "cabbe29ec6f05f84b189e386f91c7124a06cbdd1c78d615404e0c72149ee9f21"
     },
     {
       "path": "outputs/research/MS-03/local_validation/official_resources/fetch_local_labels.py",
@@ -443,8 +443,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/official_resources/manifest.json",
-      "bytes": 17857,
-      "sha256": "ecc5e774facdad7c64d6742b6fc5f13c53206f8807288e22b8234a5d92e8bb5d"
+      "bytes": 17858,
+      "sha256": "e3e0b4a4d807b6c56a1296f578c069552fdb885e4e52ca3eea29bb8ea252661a"
     },
     {
       "path": "outputs/research/MS-03/local_validation/official_resources/mrdr_band_qa.csv",
@@ -1168,8 +1168,8 @@
     },
     {
       "path": "docs/research/MS-03/local_validation/research_notes.md",
-      "bytes": 21444,
-      "sha256": "07840eb106d02f9d122d54d2156fb6bfa9f7789a29752539daa756004509c8c1"
+      "bytes": 21635,
+      "sha256": "e6dfa826a3828a9f75608daf514dffc2ae55e4669ee5e03b957ff83829aa4b1c"
     }
   ],
   "source_preservation_note": "Original acquired PDS labels, KML and XML retain provider whitespace/CRLF; git diff whitespace warnings for source bytes are intentionally not normalized. Authored Python/Markdown passed whitespace check.",

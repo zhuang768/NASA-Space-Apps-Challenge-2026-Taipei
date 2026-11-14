@@ -103,8 +103,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/official_resources/README.md",
-      "bytes": 8874,
-      "sha256": "75f8e4f44394e700a435351e471cc88c019621f351556f1b94bb326f8151e6e3"
+      "bytes": 8974,
+      "sha256": "d5ed4d05e70d19f484ce664468adbb4937307ae5c9f49d5519ea99a4c2c40871"
     },
     {
       "path": "outputs/research/MS-03/local_validation/official_resources/acquire_resources.py",
@@ -118,8 +118,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/official_resources/delivery_state.json",
-      "bytes": 804,
-      "sha256": "8257c60adccb402911bd0153b8b467b77a5f31e329e461b5f79dc3af58e648f6"
+      "bytes": 1093,
+      "sha256": "cabbe29ec6f05f84b189e386f91c7124a06cbdd1c78d615404e0c72149ee9f21"
     },
     {
       "path": "outputs/research/MS-03/local_validation/official_resources/fetch_local_labels.py",

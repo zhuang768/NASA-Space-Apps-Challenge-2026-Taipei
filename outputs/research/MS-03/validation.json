@@ -461,5 +461,20 @@
       "causal origin of149duplicates"
     ],
     "timestamp_correction": false
+  },
+  "duplicate149_handoff": {
+    "date": "2026-11-15",
+    "basis_commit": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+    "checks": [
+      "149source label ZIP/individual SHA intact",
+      "149products correspond75observation IDs",
+      "78compatible71incompatible;29subsetof71",
+      "report relative links exist",
+      "all underlying MS03results and inputs byte-identical to basis",
+      "existingvalidate.py andvalidate_morphology.py passed"
+    ],
+    "scope": "Documentation handoff and provenance verification only;no causal inference or timestamp selection",
+    "root_cause": "unknown",
+    "main_merge": false
   }
 }

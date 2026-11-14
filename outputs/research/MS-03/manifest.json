@@ -207,8 +207,8 @@
   "outputs": [
     {
       "path": "docs/research/MS-03/report.md",
-      "bytes": 67488,
-      "sha256": "533063a5d0554dc5cf44abe51ee4711fc8d9bba92ea0349cb3d07d9f09fb9d07"
+      "bytes": 74658,
+      "sha256": "2d2209b42de1a982e3c1e9a26aa2f38197e39335675213934091df16d4a7b27d"
     },
     {
       "path": "scripts/research/MS-03/acquire_morphology.py",
@@ -672,8 +672,8 @@
     },
     {
       "path": "outputs/research/MS-03/validation.json",
-      "bytes": 20230,
-      "sha256": "9b3a4c9fa6e1a3434a56f33316b8e15f55470080093604f18685df466f85bd94"
+      "bytes": 20861,
+      "sha256": "a562fb1fa2f1d517749cc21de5b22f4d8e369d589c78e4662e23be801c082bb3"
     }
   ],
   "followup_date_taipei": "2026-11-15",
@@ -770,5 +770,21 @@
     "causal_root": "unknown",
     "actual2026build_and_SQL": "not obtained",
     "new_scope": "public version trace and bounded time-field diagnostic;not morphology or clock correction"
+  },
+  "duplicate149_handoff": {
+    "date": "2026-11-15",
+    "basis_commit": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+    "location": "docs/research/MS-03/report.md",
+    "recipients": [
+      "main research conversation",
+      "GPU"
+    ],
+    "delivery": "prepared in report/PR7;not externally sent",
+    "new_data_or_analysis": false,
+    "missing": [
+      "actual executed2026build",
+      "actualSQL/config andsource snapshot",
+      "same-build write/count logs"
+    ]
   }
 }

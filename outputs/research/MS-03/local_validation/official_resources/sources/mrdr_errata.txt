@@ -1,0 +1,161 @@
+PDS_VERSION_ID        = PDS3
+RECORD_TYPE           = STREAM
+OBJECT                = TEXT
+  INTERCHANGE_FORMAT    = ASCII
+  PUBLICATION_DATE      = 2023-08-11
+  NOTE                  = "Comments on Mars Reconnaissance Orbiter Compact
+                           Reconnaissance Imaging Spectrometer for Mars,
+                           Map-Projected Multispectral Reduced Data Record
+                           (MRDR) Archives (ERRATA.TXT)"
+END_OBJECT            = TEXT
+
+END
+
+
+INTRODUCTION
+
+     This file contains an accumulation of corrections and notes for the
+MRO CRISM MRDR Archives. The most recent entries are listed first.
+
+CORRECTIONS AND NOTES
+
+August 11, 2023.
+----------------
+
+Additional Version 4 MRDRs are released, filling in data for Mars Charts 
+MC02 through MC07 and MC24 through MC30. This completes the MRDR archive.
+ 
+
+April 13, 2023.
+---------------
+
+Additional Version 4 MRDRs are released, filling in data for Mars Charts 
+MC02 through MC07 and MC24 through MC29.
+ 
+
+January 9, 2023.
+----------------
+
+Additional Version 4 MRDRs are released, filling in data for Mars Charts 
+MC08, MC09, MC10, MC14, MC15, MC17, MC24, and MC25. This completes the 
+equatorial set of Mars Charts (MC08-MC23).
+ 
+
+December 12, 2022.
+------------------
+
+Additional Version 4 MRDRs are released, filling in data for Mars Charts 
+MC16, MC17, MC20, MC21, MC22, MC23, MC24, MC27, MC28, and MC29. 
+MC16, MC20, MC21, MC22, and MC23 are now complete.
+ 
+
+October 17, 2022.
+-----------------
+
+Additional Version 4 MRDRs are released, filling in data for Mars Charts 
+MC12, MC19, MC20, MC26, and MC27. MC12 and MC19 are now complete. 
+
+All previously released browse products are redelivered with this release.
+PRODUCT_CREATION_TIME and SOFTWARE_VERSION_ID are updated in the revised 
+files.
+ 
+
+July 25, 2022.
+--------------
+
+Additional Version 4 MRDRs are released, filling in data for Mars Charts 
+10-14, 17-22, and 25-26. This release completes MC11, MC13, and MC18. 
+
+
+June 29, 2022.
+--------------
+
+This is the first release of the CRISM MRDR Version 4 data products 
+(VOLUME_ID MROCR_3201). 
+
+Version 4 MRDRs include the full multispectral survey VNIR+IR data set, 
+downselected for data quality and low atmospheric opacity, with corrections 
+applied to mitigate noise in the data, calibration artifacts, and effects of 
+spatial and temporal variations in atmospheric opacity. Included are Lambert 
+albedo maps, spectral summary product maps, browse versions of the data, and 
+information that provides traceability to the source observations.
+
+Additional Version 4 MRDRs are expected to be released every 3 months.
+
+
+June 1, 2022.
+-------------
+
+1. The CRISM Data Product SIS (crism_dpsis.pdf) and the CRISM Archive Volume 
+SIS (crism_avsis.pdf) have been updated.
+
+2. The MRDR dataset catalog file (mrdr_ds.cat), the reference catalog file 
+(ref.cat), and the MRDR map projection catalog files 
+(mrr_map.cat, mrr_polar_map.cat) have also been revised.
+
+
+March 1, 2012.
+--------------
+
+1. Volumes MROCR_3101 and MROCR_3102 contain IF and DE MRDRs that have been 
+reprocessed using version 3 of the radiometric calibration. The other MRDR 
+data types will be available at a later date. The version 2 files can be 
+accessed on volumes MROCR_3001 and MROCR_3002. 
+
+2. The CRISM Data Product SIS (crism_dpsis.pdf) has been updated with this 
+release.
+
+3. Browse data in the form of PNG images are planned for the MRDR archive, 
+but these are not yet available. When they become available, they will be 
+included in a future release in a directory named BROWSE.
+
+
+February 9, 2012.
+-----------------
+
+3 sets of MRDRs from MC10 were found to cover duplicate geographic extents. 
+The following files and their associated labels have been removed:
+
+mc10/t1366_mrrsu_25n297_0256_1.img
+mc10/t1367_mrrsu_25n302_0256_1.img
+mc10/t1368_mrrsu_25n307_0256_1.img
+
+
+February 3, 2012.
+-----------------
+
+Several MRDRs from MC25 and MC26 were found to be missing. The missing files 
+have been added to the archive.
+
+Please note:
+Browse data in the form of PNG images are planned for the MRDR archive, but 
+these are not yet available. When they become available, they will be 
+included in a future release in a directory named BROWSE.
+
+
+June 1, 2011. Release 17.
+-------------------------
+
+No MRDRs are included in this release, however the following documentation 
+files have been updated: crism_avsis.pdf and crism_dpsis.pdf.
+
+
+December 1, 2010. Release 15.
+-----------------------------
+
+No MRDRs are included in this release, however the following documentation 
+files have been updated and are currently under review: 
+browinfo.txt (BROWSE directory), mrr_map.cat and mrr_polar_map.cat (CATALOG 
+directory), crism_avsis.pdf and crism_dpsis.pdf (DOCUMENT directory). Please 
+be aware that these files may undergo additional revisions as a result of 
+this review.
+
+
+December 7, 2007. Release 3.
+----------------------------
+
+This is the first MRO release that has included CRISM MRDR data products.
+
+Browse data in the form of PNG images are planned for the MRDR archive, but 
+these are not yet available. When they become available, they will be 
+included in a future release in a directory named BROWSE.

@@ -1,0 +1,8 @@
+{
+  "status": "not_a_valid_coverage_test",
+  "reason": "Original MRDR index uses signed longitudes; T1811 EASTERNMOST_LONGITUDE also conflicts with its projection. An initial direct0\u2013360 numeric bbox filter returned zero and is rejected. No zero-coverage conclusion.",
+  "replacement": "mrdr_extraction_plan.json uses original PDS projection and independent HDR checks; actual local bytes acquired",
+  "ODE_MRDR_query": "invalid IIPT, not zero coverage",
+  "ODE_MRDR4_query": "valid class,134 metadata bbox candidates; not134 confirmed intersections",
+  "TER_MTRDR_queries": "valid catalogue requests each returned0; bounded indexed-result statement only"
+}

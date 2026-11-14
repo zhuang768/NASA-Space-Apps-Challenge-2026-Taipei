@@ -1,5 +1,44 @@
 # MS-03 — local validation evidence notes
 
+## 2026-11-15：官方 Resources → PDS → MRDR v4 補證據
+
+- 本輪起始 SHA：`44c2e03b8617c7bb536ad712b85f4716dd190d7c`；原分支核對後無更新。只新增／更新local_validation，不合併main。
+- 後續指示更新：使用者明確要求「直接合併就好了」，已取代原先不合併限制；保留以下授權前狀態快照，由新的整合PR承接本輪新增提交。
+- 合併授權前狀態另核實：PR #7於2026-11-14T19:38:25Z已合併舊head44c2e03；本輪未執行合併。已核對main08d2740不包含本輪aa8b5cb／c63d50a提交及新official_resources目錄。新資料保留原分支，PR描述提供連結；已合併PR的diff不會自動包含後續提交。詳見`official_resources/delivery_state.json`。
+- 官方題目Resources已實際取得HTTP200內容，解出 `resourcesTabContent` 的11個資源連結；其中有NASA PDS入口。網頁讀取工具先前失敗不代表官網沒有Resources，亦未用搜尋摘要冒充完整內容。
+- [官方入口追溯與方法](../../../../outputs/research/MS-03/local_validation/official_resources/README.md)；[新增QA圖](../../../../outputs/research/MS-03/local_validation/official_resources/F-RES01_MRDR_quality_and_parameters.png)。
+
+|缺口|本輪實際取得／計算|仍未知或不可推論|
+|---|---|---|
+|格內已校正光譜產品|MRDR v4 T1811：6個Lambert-albedo波段、3個官方參數、6個來源欄位的原始byte ranges；軟體1.03.94，製作日期2023-07-18|不是完整72波段cube，也不是本隊新做完整大氣反演|
+|覆蓋與基本值|13284個原生投影網格中心位於固定格；所取欄位數值非65535且有限；13169個來源DDR中心亦位於格內|115個邊界重採樣來源中心在格外，嚴格圖遮罩排除；不等於全格科學品質合格、完整光學足跡或獨立樣本數|
+|原始來源時空|追到5個Target ID及segment，來源時間2006-12-01至2014-07-26；嚴格子集有11359組不同來源tuple|不同tuple不保證偵測器獨立；拼接不可當同一時刻或新觀測|
+|投影與單位|依產品R=3381164.4m，map grid180.4662m；PDS offset與ENVI header獨立核對|不能套地球或一般Mars3396190m半徑；map grid不等於有效PSF|
+|冰參數公式|2026年7月官方PDF pp1–2、5提供multispectral BD1500_2=.5RB1505+.5RB1558，continuum anchors1367／1808nm|不再把稀疏mapping資料誤套高光譜1525nm kernel；公式計算不是冰偵測驗收|
+|官方值與重算核對|官方BD1500_2約−0.03692至−0.001752；重算減官方中位數約+0.0007165、最大絕對差約0.01935|差異原因unknown；未硬調數值，負值不能寫成無冰|
+|已校正targeted產品|有效TER／MTRDR格內目錄查詢各0筆|只代表本次索引查詢結果，不代表所有存檔不存在|
+
+- 正式來源：官方Resources的PDS入口 → PDS Geosciences → CRISM產品頁 → 原始MRDR_3201。官方入口未專門列出此tile，也未認證本隊分析。
+- 來源鏈、URL、取得UTC、HTTP與SHA256：`official_resources/resources_links.csv`、`resource_chain.json`、`retrievals.json`；產品與每筆重要數值欄位：`mrdr_extraction_plan.json`、`mrdr_band_qa.csv`、`mrdr_roi_pixels.csv.gz`。
+- 元資料限制：T1811原始東界`+113.32495`與投影出的東側約`−113.328`衝突；未修改來源。選點採原始投影及header交叉核對，沒有用錯誤bbox判定格內覆蓋。初次MRDR類別查詢無效，改用官方IIPT所列MRDR4；回傳134個bbox候選不能稱134個真正相交產品。
+- 品質補充：官方產品頁明說較大binning的原始mapping產品不在targeted高光譜噪聲filter的適用範圍，TRR3版本尾碼不能單獨證明噪聲已移除。MRDR v4有自己記載的大氣、光度、噪聲、smile及跨條帶正規化流程。
+- 大氣流程限制：catalogue記載2012年5月前的radiative-transfer/MARCI資料分支，以及之後的volcano-scan分支；後者本身不校正aerosol，再經參照條帶正規化。不能把標籤註解中的ON當逐像素QA，也不能把目標ice aerosol opacity=0當地表無冰證據。
+- 標準公式與產品差異：SIS §3.5.1說明v4之albedo與summary條帶均在拼接前正規化；產品軟體2023與參數文件2026也有版本差異。這些只是待查脈絡，**尚未證明本次殘差由哪一項造成**。
+- 光譜只保留已測通道；continuum線性插算屬官方參數定義，沒有補造缺失的光譜量測。未設定無來源檢出門檻、未將負值截成0。
+- 輸入依賴：MRDR重用CRISM觀測，不能與前輪原始I/F當獨立多次冰確認；本輪沒有把兩份原始excerpt與五來源拼接圖作同像素前後差分。
+
+|研究判定|本輪狀態|需要的人類／GPU決定|
+|---|---|---|
+|已確認格內有可讀取的校正產品？|是，原始band bytes與來源欄位已取得核對|可作有來源的資料比較與品質盤點|
+|可確認冰存在／不存在？|unknown|需要校正殘差追溯、雲霜及表面成分分辨、校準過的檢出與陰性界限|
+|可量測覆土下冰深／含量？|unknown|光學summary不能單獨提供覆土下真值，仍需獨立地下資料|
+|AD1可恢復具體形貌配對？|維持降級、形貌unknown|180m級map grid不提供可靠多邊形閉合邊界|
+|UV／Campbell與HOBO配時？|沒有執行，限制維持|不從本輪光譜更新Earth時標或反推Mars冰深|
+
+- 已執行檢查：90項含原始本機檔案檢查通過；79項只依Git保留材料的檢查通過；13284筆投影／原始bytes／公式獨立解碼。圖已實際開啟核對，這些不是冰判讀通過。
+- 尚待處理：重現廠商1.03.94的summary／albedo處理關係、查證局部雲霜與殘差、必要時取完整適用校正資料；未把可行後續設計寫成已完成實驗。
+- 以下前輪記錄保留；其中「尚未取得校正產品／尚未計算參數」適用各前輪當時版本，由本節補充新的MRDR資料與條件式方法檢查。
+
 ## 2026-11-15：CRISM 格內光譜新增資料與條列判定
 
 - 本輪起始 SHA：`778af696c654a191fe2a720f24d9f30ebd7d247b`；已連線核對原分支，沒有隊友未同步更新。固定範圍未變。

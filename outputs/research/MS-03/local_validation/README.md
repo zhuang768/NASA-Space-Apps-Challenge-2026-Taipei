@@ -25,3 +25,8 @@
 - Two local I/F subsets, exact wavelength calibration and DDR geolocation are now acquired; the earlier catalogue-only status for these two products is retained in `crism/previous_catalogue_status.json` and superseded in current tables.
 - Start with `crism/README.md`, `crism/qa.json` and `crism/F-CRISM01_pixel_QA_spectra.png`. Ice classification remains unknown; basic numeric checks are not final scientific validity.
 - If regenerating parent tables with `build_tables.py`, run `crism/refresh_crism_evidence.py` afterwards to apply the new acquisition statuses while preserving prior history.
+
+## Official Resources / MRDR v4 follow-up
+
+- `official_resources/README.md` records the verified challenge→PDS source chain, acquired local corrected-band/summary data, source dates, native projection and unresolved ice interpretation.
+- Official MRDR parameters and a documented multispectral recalculation are now available in that separate package. This supersedes neither the original raw-product OFF flags nor the retained historical acquisition records. Negative parameters and numeric coverage are not an ice-absence result.

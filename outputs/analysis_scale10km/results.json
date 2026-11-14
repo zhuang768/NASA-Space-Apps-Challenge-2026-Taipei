@@ -1,0 +1,1753 @@
+{
+  "analysis_type": "terrain_only_screening",
+  "generated_utc": "2026-11-14T01:31:54.808952+00:00",
+  "base_commit": "330666e",
+  "parameters": {
+    "earth_search_latitude_bounds": [
+      -60,
+      60
+    ],
+    "earth_centre_step_deg": 2.0,
+    "window_km": 100.0,
+    "sample_spacing_km": 10.0,
+    "slope_stencil_km": 20.0,
+    "earth_spherical_radius_m": 6371008.8,
+    "mars_spherical_radius_m": 3396000.0,
+    "minimum_sampled_land_fraction": 0.95,
+    "shortlist_separation_km": 300,
+    "excluded_boxes": [
+      [
+        -81,
+        -65,
+        -31,
+        -17,
+        "Atacama search exclusion"
+      ],
+      [
+        -26,
+        -12,
+        62,
+        68,
+        "Iceland"
+      ],
+      [
+        -161,
+        -154,
+        18,
+        23,
+        "Hawaii"
+      ]
+    ],
+    "feature_order": [
+      "slope_median_deg",
+      "slope_p90_deg",
+      "relief_m"
+    ],
+    "distance_tolerances": [
+      1.0,
+      2.0,
+      500.0
+    ],
+    "within_terrain_weights": [
+      0.25,
+      0.25,
+      0.5
+    ]
+  },
+  "counts": {
+    "land_centres_before_window_filter": 2897,
+    "water_window_exclusions": 296,
+    "valid_windows": 2601
+  },
+  "targets": {
+    "jezero": {
+      "lat": 18.44,
+      "lon": 77.45,
+      "label": "Jezero regional terrain",
+      "coordinate_source": "https://ntrs.nasa.gov/citations/20230016428",
+      "slope_median_deg": 1.0313053131103516,
+      "slope_p90_deg": 2.1406166553497314,
+      "relief_m": 1933.6927490234375
+    },
+    "gale": {
+      "lat": -4.59,
+      "lon": 137.44,
+      "label": "Gale regional terrain",
+      "coordinate_source": "https://doi.org/10.1002/2013JE004576",
+      "slope_median_deg": 4.4260029792785645,
+      "slope_p90_deg": 8.127350807189941,
+      "relief_m": 4727.5380859375
+    },
+    "arcadia": {
+      "lat": 40.0,
+      "lon": -170.0,
+      "label": "Arcadia design target (not a selected landing site)",
+      "coordinate_source": "project design assumption",
+      "slope_median_deg": 0.5029174089431763,
+      "slope_p90_deg": 1.3016232252120972,
+      "relief_m": 886.3046875
+    }
+  },
+  "sources": [
+    {
+      "file": "ETOPO_2022_v1_60s_N90W180_surface.tif",
+      "url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/60s/60s_surface_elev_gtif/ETOPO_2022_v1_60s_N90W180_surface.tif",
+      "bytes": 465969062,
+      "sha256": "9d27d4b8ea8e76977e2988bca667d7c8fa68b927355feffcddd6b4875a7fd08e",
+      "recorded_utc": "2026-11-14T01:31:30.875253+00:00",
+      "dataset": "ETOPO 2022",
+      "version": "v1",
+      "units": "m",
+      "resolution": "60 arcsec native; averaged to 120 arcsec for screening",
+      "crs": "EPSG:9518",
+      "vertical_datum": "EGM2008",
+      "period": "static composite, 2022 release",
+      "native_dimensions": [
+        10800,
+        21600
+      ]
+    },
+    {
+      "file": "ne_110m_land.zip",
+      "url": "https://naciscdn.org/naturalearth/110m/physical/ne_110m_land.zip",
+      "bytes": 69700,
+      "sha256": "1926c621afd6ac67c3f36639bb1236134a48d82226dc675d3e3df53d02d2a3de",
+      "recorded_utc": "2026-11-14T01:31:30.876505+00:00",
+      "dataset": "Natural Earth land",
+      "version": "4.1.0",
+      "resolution": "1:110 million cartographic polygons",
+      "crs": "EPSG:4326",
+      "units": "polygon mask",
+      "period": "static"
+    },
+    {
+      "file": "megt90n000eb.img",
+      "url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg016/megt90n000eb.img",
+      "bytes": 33177600,
+      "sha256": "d18d9b9ab8c5516d02e157dd2cde0f1d0d160c21940e953ba22391269a545e7b",
+      "recorded_utc": "2026-11-14T01:31:54.808818+00:00",
+      "dataset": "MGS MOLA MEGDR",
+      "dataset_id": "MGS-M-MOLA-5-MEGDR-L3-V1.0",
+      "version": "2.0",
+      "period": "1997-09-15 to 2001-06-30 (source label)",
+      "units": "m above Mars areoid",
+      "resolution": "16 pixels per degree",
+      "crs": "Mars simple cylindrical, east-positive planetocentric"
+    },
+    {
+      "file": "megt90n000eb.lbl",
+      "url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg016/megt90n000eb.lbl",
+      "bytes": 4813,
+      "sha256": "0f2bd919dddb86d83489a008d3007bd915507c892a0f22ce49ad5dd5d2fc7d8a",
+      "recorded_utc": "2026-11-14T01:31:54.808948+00:00",
+      "dataset": "MGS MOLA MEGDR",
+      "dataset_id": "MGS-M-MOLA-5-MEGDR-L3-V1.0",
+      "version": "2.0",
+      "period": "1997-09-15 to 2001-06-30 (source label)",
+      "units": "m above Mars areoid",
+      "resolution": "16 pixels per degree",
+      "crs": "Mars simple cylindrical, east-positive planetocentric"
+    }
+  ],
+  "candidates": {
+    "jezero": [
+      {
+        "lat": -1.0,
+        "lon": 29.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 1.1119178533554077,
+        "slope_p90_deg": 2.098200798034668,
+        "relief_m": 1941.5029296875,
+        "candidate_id": "jezero-01",
+        "rank": 1,
+        "mars_target": "jezero",
+        "terrain_distance": 0.03326529788970947,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 1,
+          "relief_emphasis": 1
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            28.55020047452507,
+            -1.4496247614551927
+          ],
+          [
+            29.44979952547496,
+            -1.4496247614551927
+          ],
+          [
+            29.449676307870362,
+            -0.5503136381764107
+          ],
+          [
+            28.550323692129638,
+            -0.5503136381764107
+          ],
+          [
+            28.55020047452507,
+            -1.4496247614551927
+          ]
+        ]
+      },
+      {
+        "lat": 13.0,
+        "lon": 37.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.9079475402832031,
+        "slope_p90_deg": 2.235694169998169,
+        "relief_m": 1904.255615234375,
+        "candidate_id": "jezero-02",
+        "rank": 2,
+        "mars_target": "jezero",
+        "terrain_distance": 0.0721612663269043,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 2,
+          "relief_emphasis": 3
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            36.53933759492415,
+            12.549937794777744
+          ],
+          [
+            37.46066240507585,
+            12.549937794777744
+          ],
+          [
+            37.462334747896506,
+            13.449247450278829
+          ],
+          [
+            36.537665252103494,
+            13.449247450278829
+          ],
+          [
+            36.53933759492415,
+            12.549937794777744
+          ]
+        ]
+      },
+      {
+        "lat": -3.0,
+        "lon": 137.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.8032926917076111,
+        "slope_p90_deg": 2.245875120162964,
+        "relief_m": 1953.33935546875,
+        "candidate_id": "jezero-03",
+        "rank": 3,
+        "mars_target": "jezero",
+        "terrain_distance": 0.08980706989765166,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 7,
+          "relief_emphasis": 2
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            136.5495282310631,
+            -3.449563052118539
+          ],
+          [
+            137.45047176893695,
+            -3.449563052118539
+          ],
+          [
+            137.45010136423252,
+            -2.5502519964711916
+          ],
+          [
+            136.54989863576753,
+            -2.5502519964711916
+          ],
+          [
+            136.5495282310631,
+            -3.449563052118539
+          ]
+        ]
+      },
+      {
+        "lat": 53.0,
+        "lon": 101.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 1.2032033205032349,
+        "slope_p90_deg": 2.1590099334716797,
+        "relief_m": 1841.3583984375,
+        "candidate_id": "jezero-04",
+        "rank": 4,
+        "mars_target": "jezero",
+        "terrain_distance": 0.13760801219940186,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 6,
+          "relief_emphasis": 28
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            100.26053898912085,
+            52.54802700611088
+          ],
+          [
+            101.73946101087915,
+            52.54802700611088
+          ],
+          [
+            101.75502452624931,
+            53.447289362033196
+          ],
+          [
+            100.24497547375069,
+            53.447289362033196
+          ],
+          [
+            100.26053898912085,
+            52.54802700611088
+          ]
+        ]
+      },
+      {
+        "lat": 45.0,
+        "lon": 23.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.9124200344085693,
+        "slope_p90_deg": 2.710632085800171,
+        "relief_m": 1970.80029296875,
+        "candidate_id": "jezero-05",
+        "rank": 5,
+        "mars_target": "jezero",
+        "terrain_distance": 0.138080792427063,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 25,
+          "relief_emphasis": 9
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            22.369036107222286,
+            44.54859365964214
+          ],
+          [
+            23.630963892777714,
+            44.54859365964214
+          ],
+          [
+            23.640945492184528,
+            45.44787709465548
+          ],
+          [
+            22.359054507815472,
+            45.44787709465548
+          ],
+          [
+            22.369036107222286,
+            44.54859365964214
+          ]
+        ]
+      },
+      {
+        "lat": 43.0,
+        "lon": -1.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.9756253361701965,
+        "slope_p90_deg": 2.6488358974456787,
+        "relief_m": 1994.3489990234375,
+        "candidate_id": "jezero-06",
+        "rank": 6,
+        "mars_target": "jezero",
+        "terrain_distance": 0.13810364949703216,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 14,
+          "relief_emphasis": 12
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            -1.6103675894338494,
+            42.548710948909694
+          ],
+          [
+            -0.3896324105661506,
+            42.548710948909694
+          ],
+          [
+            -0.3806330108475606,
+            43.44799799605402
+          ],
+          [
+            -1.6193669891524394,
+            43.44799799605402
+          ],
+          [
+            -1.6103675894338494,
+            42.548710948909694
+          ]
+        ]
+      },
+      {
+        "lat": 29.0,
+        "lon": 61.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 1.3154093027114868,
+        "slope_p90_deg": 2.1114490032196045,
+        "relief_m": 1998.8740234375,
+        "candidate_id": "jezero-07",
+        "rank": 7,
+        "mars_target": "jezero",
+        "terrain_distance": 0.1398532283306122,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 13,
+          "relief_emphasis": 15
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            60.48809875810997,
+            28.549370573998463
+          ],
+          [
+            61.51190124189003,
+            28.549370573998463
+          ],
+          [
+            61.51637443712457,
+            29.448673195758072
+          ],
+          [
+            60.48362556287543,
+            29.448673195758072
+          ],
+          [
+            60.48809875810997,
+            28.549370573998463
+          ]
+        ]
+      },
+      {
+        "lat": 33.0,
+        "lon": -109.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 1.0301915407180786,
+        "slope_p90_deg": 1.8759504556655884,
+        "relief_m": 1811.51025390625,
+        "candidate_id": "jezero-08",
+        "rank": 8,
+        "mars_target": "jezero",
+        "terrain_distance": 0.1555442131757736,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 5,
+          "relief_emphasis": 40
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            -109.53344595519893,
+            32.549204345486686
+          ],
+          [
+            -108.46655404480107,
+            32.549204345486686
+          ],
+          [
+            -108.46108878135334,
+            33.4485037967708
+          ],
+          [
+            -109.53891121864666,
+            33.4485037967708
+          ],
+          [
+            -109.53344595519893,
+            32.549204345486686
+          ]
+        ]
+      },
+      {
+        "lat": 39.0,
+        "lon": -105.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 1.0003548860549927,
+        "slope_p90_deg": 2.7397563457489014,
+        "relief_m": 1860.05224609375,
+        "candidate_id": "jezero-09",
+        "rank": 9,
+        "mars_target": "jezero",
+        "terrain_distance": 0.15627057099342345,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 19,
+          "relief_emphasis": 21
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            -105.57495475983264,
+            38.5489245744636
+          ],
+          [
+            -104.42504524016738,
+            38.5489245744636
+          ],
+          [
+            -104.41769076382401,
+            39.44821754415848
+          ],
+          [
+            -105.582309236176,
+            39.44821754415848
+          ],
+          [
+            -105.57495475983264,
+            38.5489245744636
+          ]
+        ]
+      },
+      {
+        "lat": 21.0,
+        "lon": 41.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.5950857400894165,
+        "slope_p90_deg": 1.7842309474945068,
+        "relief_m": 1946.5845947265625,
+        "candidate_id": "jezero-10",
+        "rank": 10,
+        "mars_target": "jezero",
+        "terrain_distance": 0.16649495244026183,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 85,
+          "relief_emphasis": 6
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            40.519786989373586,
+            20.549669126119984
+          ],
+          [
+            41.480213010626414,
+            20.549669126119984
+          ],
+          [
+            41.48311510030695,
+            21.448976176737233
+          ],
+          [
+            40.51688489969305,
+            21.448976176737233
+          ],
+          [
+            40.519786989373586,
+            20.549669126119984
+          ]
+        ]
+      },
+      {
+        "lat": 33.0,
+        "lon": 47.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 1.3633869886398315,
+        "slope_p90_deg": 2.7999613285064697,
+        "relief_m": 1930.29833984375,
+        "candidate_id": "jezero-11",
+        "rank": 11,
+        "mars_target": "jezero",
+        "terrain_distance": 0.16883291220664978,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 96,
+          "relief_emphasis": 5
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            46.466554044801086,
+            32.549204345486686
+          ],
+          [
+            47.533445955198914,
+            32.549204345486686
+          ],
+          [
+            47.53891121864666,
+            33.4485037967708
+          ],
+          [
+            46.46108878135334,
+            33.4485037967708
+          ],
+          [
+            46.466554044801086,
+            32.549204345486686
+          ]
+        ]
+      },
+      {
+        "lat": 21.0,
+        "lon": 19.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.7313353419303894,
+        "slope_p90_deg": 1.7806792259216309,
+        "relief_m": 1988.02001953125,
+        "candidate_id": "jezero-12",
+        "rank": 12,
+        "mars_target": "jezero",
+        "terrain_distance": 0.1743119419813156,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 47,
+          "relief_emphasis": 16
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            18.519786989373586,
+            20.549669126119984
+          ],
+          [
+            19.480213010626414,
+            20.549669126119984
+          ],
+          [
+            19.483115100306946,
+            21.448976176737233
+          ],
+          [
+            18.516884899693054,
+            21.448976176737233
+          ],
+          [
+            18.519786989373586,
+            20.549669126119984
+          ]
+        ]
+      }
+    ],
+    "gale": [
+      {
+        "lat": -11.0,
+        "lon": -77.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 3.8823437690734863,
+        "slope_p90_deg": 6.691537380218506,
+        "relief_m": 4721.943359375,
+        "candidate_id": "gale-01",
+        "rank": 1,
+        "mars_target": "gale",
+        "terrain_distance": 0.32098620748519896,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 1,
+          "relief_emphasis": 1
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            -77.4587852624747,
+            -11.449312049933376
+          ],
+          [
+            -76.54121473752531,
+            -11.449312049933376
+          ],
+          [
+            -76.54261236308614,
+            -10.550001964684691
+          ],
+          [
+            -77.45738763691388,
+            -10.550001964684691
+          ],
+          [
+            -77.4587852624747,
+            -11.449312049933376
+          ]
+        ]
+      },
+      {
+        "lat": 39.0,
+        "lon": 75.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 3.0691235065460205,
+        "slope_p90_deg": 5.727861404418945,
+        "relief_m": 4552.291015625,
+        "candidate_id": "gale-02",
+        "rank": 2,
+        "mars_target": "gale",
+        "terrain_distance": 0.8144031138420105,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 5,
+          "relief_emphasis": 2
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            74.42504524016738,
+            38.5489245744636
+          ],
+          [
+            75.57495475983262,
+            38.5489245744636
+          ],
+          [
+            75.582309236176,
+            39.44821754415848
+          ],
+          [
+            74.417690763824,
+            39.44821754415848
+          ],
+          [
+            74.42504524016738,
+            38.5489245744636
+          ]
+        ]
+      },
+      {
+        "lat": -1.0,
+        "lon": -79.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 3.05448317527771,
+        "slope_p90_deg": 6.399425029754639,
+        "relief_m": 5056.5185546875,
+        "candidate_id": "gale-03",
+        "rank": 3,
+        "mars_target": "gale",
+        "terrain_distance": 0.8878511419296264,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 4,
+          "relief_emphasis": 5
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            -79.44979952547494,
+            -1.4496247614551927
+          ],
+          [
+            -78.55020047452504,
+            -1.4496247614551927
+          ],
+          [
+            -78.55032369212962,
+            -0.5503136381764107
+          ],
+          [
+            -79.44967630787036,
+            -0.5503136381764107
+          ],
+          [
+            -79.44979952547494,
+            -1.4496247614551927
+          ]
+        ]
+      },
+      {
+        "lat": 31.0,
+        "lon": 79.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 2.2970199584960938,
+        "slope_p90_deg": 6.693284511566162,
+        "relief_m": 4527.41015625,
+        "candidate_id": "gale-04",
+        "rank": 4,
+        "mars_target": "gale",
+        "terrain_distance": 0.9116319718360901,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 7,
+          "relief_emphasis": 3
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            78.47786666044556,
+            30.549289172724126
+          ],
+          [
+            79.52213333955444,
+            30.549289172724126
+          ],
+          [
+            79.52708092481964,
+            31.448590305102208
+          ],
+          [
+            78.4729190751803,
+            31.448590305102208
+          ],
+          [
+            78.47786666044556,
+            30.549289172724126
+          ]
+        ]
+      },
+      {
+        "lat": 27.0,
+        "lon": 89.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 2.5957536697387695,
+        "slope_p90_deg": 5.644304275512695,
+        "relief_m": 4482.55712890625,
+        "candidate_id": "gale-05",
+        "rank": 5,
+        "mars_target": "gale",
+        "terrain_distance": 1.0129241008758545,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 9,
+          "relief_emphasis": 4
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            88.49733692726585,
+            26.549448939852347
+          ],
+          [
+            89.50266307273415,
+            26.549448939852347
+          ],
+          [
+            89.5066992491353,
+            27.448752881138965
+          ],
+          [
+            88.4933007508647,
+            27.448752881138965
+          ],
+          [
+            88.49733692726585,
+            26.549448939852347
+          ]
+        ]
+      },
+      {
+        "lat": 35.0,
+        "lon": 73.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 3.364166736602783,
+        "slope_p90_deg": 6.825448989868164,
+        "relief_m": 4098.4833984375,
+        "candidate_id": "gale-06",
+        "rank": 6,
+        "mars_target": "gale",
+        "terrain_distance": 1.0572514753341675,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 3,
+          "relief_emphasis": 13
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            72.45406055366067,
+            34.549115650671276
+          ],
+          [
+            73.54593944633933,
+            34.549115650671276
+          ],
+          [
+            73.5519726419127,
+            35.448413203061556
+          ],
+          [
+            72.4480273580873,
+            35.448413203061556
+          ],
+          [
+            72.45406055366067,
+            34.549115650671276
+          ]
+        ]
+      },
+      {
+        "lat": 29.0,
+        "lon": 95.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 3.716169595718384,
+        "slope_p90_deg": 6.453122615814209,
+        "relief_m": 3977.7587890625,
+        "candidate_id": "gale-07",
+        "rank": 7,
+        "mars_target": "gale",
+        "terrain_distance": 1.1365161666870116,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 2,
+          "relief_emphasis": 16
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            94.48809875810997,
+            28.549370573998463
+          ],
+          [
+            95.51190124189003,
+            28.549370573998463
+          ],
+          [
+            95.51637443712457,
+            29.448673195758072
+          ],
+          [
+            94.48362556287543,
+            29.448673195758072
+          ],
+          [
+            94.48809875810997,
+            28.549370573998463
+          ]
+        ]
+      },
+      {
+        "lat": 31.0,
+        "lon": 103.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 3.025406837463379,
+        "slope_p90_deg": 5.140681743621826,
+        "relief_m": 4255.36669921875,
+        "candidate_id": "gale-08",
+        "rank": 8,
+        "mars_target": "gale",
+        "terrain_distance": 1.1956540551185608,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 10,
+          "relief_emphasis": 7
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            102.47786666044556,
+            30.549289172724126
+          ],
+          [
+            103.52213333955444,
+            30.549289172724126
+          ],
+          [
+            103.5270809248197,
+            31.448590305102208
+          ],
+          [
+            102.47291907518036,
+            31.448590305102208
+          ],
+          [
+            102.47786666044556,
+            30.549289172724126
+          ]
+        ]
+      },
+      {
+        "lat": -13.0,
+        "lon": -73.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 3.571575403213501,
+        "slope_p90_deg": 5.611789226531982,
+        "relief_m": 4059.57421875,
+        "candidate_id": "gale-09",
+        "rank": 9,
+        "mars_target": "gale",
+        "terrain_distance": 1.1960159587860106,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 6,
+          "relief_emphasis": 15
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            -73.4623347478965,
+            -13.449247450278829
+          ],
+          [
+            -72.5376652521035,
+            -13.449247450278829
+          ],
+          [
+            -72.53933759492416,
+            -12.549937794777744
+          ],
+          [
+            -73.46066240507585,
+            -12.549937794777744
+          ],
+          [
+            -73.4623347478965,
+            -13.449247450278829
+          ]
+        ]
+      },
+      {
+        "lat": 29.0,
+        "lon": 83.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 2.685500144958496,
+        "slope_p90_deg": 6.223550319671631,
+        "relief_m": 4167.40625,
+        "candidate_id": "gale-10",
+        "rank": 10,
+        "mars_target": "gale",
+        "terrain_distance": 1.233232605457306,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 8,
+          "relief_emphasis": 10
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            82.48809875810997,
+            28.549370573998463
+          ],
+          [
+            83.51190124189003,
+            28.549370573998463
+          ],
+          [
+            83.51637443712457,
+            29.448673195758072
+          ],
+          [
+            82.48362556287543,
+            29.448673195758072
+          ],
+          [
+            82.48809875810997,
+            28.549370573998463
+          ]
+        ]
+      },
+      {
+        "lat": 5.0,
+        "lon": -75.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 2.6578280925750732,
+        "slope_p90_deg": 4.948906898498535,
+        "relief_m": 4261.10302734375,
+        "candidate_id": "gale-11",
+        "rank": 11,
+        "mars_target": "gale",
+        "terrain_distance": 1.3057842688560486,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 15,
+          "relief_emphasis": 9
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            -75.45107729040625,
+            4.550190162720033
+          ],
+          [
+            -74.54892270959377,
+            4.550190162720033
+          ],
+          [
+            -74.54830285089662,
+            5.4495010824425885
+          ],
+          [
+            -75.4516971491034,
+            5.4495010824425885
+          ],
+          [
+            -75.45107729040625,
+            4.550190162720033
+          ]
+        ]
+      },
+      {
+        "lat": -33.0,
+        "lon": -69.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 1.8338052034378052,
+        "slope_p90_deg": 5.689772129058838,
+        "relief_m": 4305.57763671875,
+        "candidate_id": "gale-12",
+        "rank": 12,
+        "mars_target": "gale",
+        "terrain_distance": 1.3747072279453278,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 22,
+          "relief_emphasis": 8
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            -69.53891121864665,
+            -33.4485037967708
+          ],
+          [
+            -68.46108878135334,
+            -33.4485037967708
+          ],
+          [
+            -68.46655404480107,
+            -32.549204345486686
+          ],
+          [
+            -69.53344595519893,
+            -32.549204345486686
+          ],
+          [
+            -69.53891121864665,
+            -33.4485037967708
+          ]
+        ]
+      }
+    ],
+    "arcadia": [
+      {
+        "lat": 35.0,
+        "lon": 9.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.5048795342445374,
+        "slope_p90_deg": 1.1095446348190308,
+        "relief_m": 893.3167724609375,
+        "candidate_id": "arcadia-01",
+        "rank": 1,
+        "mars_target": "arcadia",
+        "terrain_distance": 0.03151244008541107,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 3,
+          "relief_emphasis": 1
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            8.454060553660668,
+            34.549115650671276
+          ],
+          [
+            9.545939446339332,
+            34.549115650671276
+          ],
+          [
+            9.551972641912698,
+            35.448413203061556
+          ],
+          [
+            8.448027358087302,
+            35.448413203061556
+          ],
+          [
+            8.454060553660668,
+            34.549115650671276
+          ]
+        ]
+      },
+      {
+        "lat": 55.0,
+        "lon": 59.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.511699914932251,
+        "slope_p90_deg": 1.0828557014465332,
+        "relief_m": 892.7568359375,
+        "candidate_id": "arcadia-02",
+        "rank": 2,
+        "mars_target": "arcadia",
+        "terrain_distance": 0.03599371540546417,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 7,
+          "relief_emphasis": 3
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            58.224746584992715,
+            54.54785241617335
+          ],
+          [
+            59.775253415007285,
+            54.54785241617335
+          ],
+          [
+            59.79282727029715,
+            55.44710705660349
+          ],
+          [
+            58.20717272970285,
+            55.44710705660349
+          ],
+          [
+            58.224746584992715,
+            54.54785241617335
+          ]
+        ]
+      },
+      {
+        "lat": -21.0,
+        "lon": -43.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.3975962996482849,
+        "slope_p90_deg": 1.3070932626724243,
+        "relief_m": 876.7978515625,
+        "candidate_id": "arcadia-03",
+        "rank": 3,
+        "mars_target": "arcadia",
+        "terrain_distance": 0.03652086794376373,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 5,
+          "relief_emphasis": 5
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            -43.48311510030695,
+            -21.448976176737233
+          ],
+          [
+            -42.51688489969305,
+            -21.448976176737233
+          ],
+          [
+            -42.519786989373586,
+            -20.549669126119984
+          ],
+          [
+            -43.480213010626414,
+            -20.549669126119984
+          ],
+          [
+            -43.48311510030695,
+            -21.448976176737233
+          ]
+        ]
+      },
+      {
+        "lat": 1.0,
+        "lon": 113.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.5835110545158386,
+        "slope_p90_deg": 1.2968547344207764,
+        "relief_m": 869.120849609375,
+        "candidate_id": "arcadia-04",
+        "rank": 4,
+        "mars_target": "arcadia",
+        "terrain_distance": 0.037928310632705686,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 2,
+          "relief_emphasis": 11
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            112.55032369212961,
+            0.5503136381764108
+          ],
+          [
+            113.44967630787039,
+            0.5503136381764108
+          ],
+          [
+            113.44979952547499,
+            1.449624761455193
+          ],
+          [
+            112.55020047452507,
+            1.449624761455193
+          ],
+          [
+            112.55032369212961,
+            0.5503136381764108
+          ]
+        ]
+      },
+      {
+        "lat": 33.0,
+        "lon": 93.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.5534634590148926,
+        "slope_p90_deg": 1.2876324653625488,
+        "relief_m": 913.2080078125,
+        "candidate_id": "arcadia-05",
+        "rank": 5,
+        "mars_target": "arcadia",
+        "terrain_distance": 0.04128867781162262,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 1,
+          "relief_emphasis": 27
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            92.46655404480106,
+            32.549204345486686
+          ],
+          [
+            93.53344595519894,
+            32.549204345486686
+          ],
+          [
+            93.53891121864666,
+            33.4485037967708
+          ],
+          [
+            92.46108878135334,
+            33.4485037967708
+          ],
+          [
+            92.46655404480106,
+            32.549204345486686
+          ]
+        ]
+      },
+      {
+        "lat": -31.0,
+        "lon": 27.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.6004960536956787,
+        "slope_p90_deg": 1.2610316276550293,
+        "relief_m": 903.2730712890625,
+        "candidate_id": "arcadia-06",
+        "rank": 6,
+        "mars_target": "arcadia",
+        "terrain_distance": 0.046436994671821594,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 9,
+          "relief_emphasis": 16
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            26.47291907518033,
+            -31.448590305102208
+          ],
+          [
+            27.52708092481967,
+            -31.448590305102208
+          ],
+          [
+            27.522133339554472,
+            -30.549289172724126
+          ],
+          [
+            26.477866660445528,
+            -30.549289172724126
+          ],
+          [
+            26.47291907518033,
+            -31.448590305102208
+          ]
+        ]
+      },
+      {
+        "lat": 27.0,
+        "lon": 63.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.5633665919303894,
+        "slope_p90_deg": 1.5399835109710693,
+        "relief_m": 888.4031372070312,
+        "candidate_id": "arcadia-07",
+        "rank": 7,
+        "mars_target": "arcadia",
+        "terrain_distance": 0.04700578117370605,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 22,
+          "relief_emphasis": 2
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            62.49733692726585,
+            26.549448939852347
+          ],
+          [
+            63.50266307273415,
+            26.549448939852347
+          ],
+          [
+            63.506699249135295,
+            27.448752881138965
+          ],
+          [
+            62.493300750864705,
+            27.448752881138965
+          ],
+          [
+            62.49733692726585,
+            26.549448939852347
+          ]
+        ]
+      },
+      {
+        "lat": 5.0,
+        "lon": -59.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.4375159740447998,
+        "slope_p90_deg": 1.5537158250808716,
+        "relief_m": 884.1240234375,
+        "candidate_id": "arcadia-08",
+        "rank": 8,
+        "mars_target": "arcadia",
+        "terrain_distance": 0.050042597770690915,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 29,
+          "relief_emphasis": 4
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            -59.451077290406246,
+            4.550190162720033
+          ],
+          [
+            -58.54892270959377,
+            4.550190162720033
+          ],
+          [
+            -58.54830285089662,
+            5.4495010824425885
+          ],
+          [
+            -59.451697149103396,
+            5.4495010824425885
+          ],
+          [
+            -59.451077290406246,
+            4.550190162720033
+          ]
+        ]
+      },
+      {
+        "lat": -27.0,
+        "lon": 17.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.5202708840370178,
+        "slope_p90_deg": 1.0719023942947388,
+        "relief_m": 903.3884887695312,
+        "candidate_id": "arcadia-09",
+        "rank": 9,
+        "mars_target": "arcadia",
+        "terrain_distance": 0.05013727390766144,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 11,
+          "relief_emphasis": 17
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            16.493300750864705,
+            -27.448752881138965
+          ],
+          [
+            17.506699249135295,
+            -27.448752881138965
+          ],
+          [
+            17.50266307273415,
+            -26.549448939852347
+          ],
+          [
+            16.49733692726585,
+            -26.549448939852347
+          ],
+          [
+            16.493300750864705,
+            -27.448752881138965
+          ]
+        ]
+      },
+      {
+        "lat": -47.0,
+        "lon": -69.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.49744853377342224,
+        "slope_p90_deg": 1.64752995967865,
+        "relief_m": 894.3643188476562,
+        "candidate_id": "arcadia-10",
+        "rank": 10,
+        "mars_target": "arcadia",
+        "terrain_distance": 0.05266519194841385,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 26,
+          "relief_emphasis": 6
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            -69.66492104707815,
+            -47.44774730112972
+          ],
+          [
+            -68.33507895292185,
+            -47.44774730112972
+          ],
+          [
+            -68.34617698409934,
+            -46.54846801999335
+          ],
+          [
+            -69.65382301590064,
+            -46.54846801999335
+          ],
+          [
+            -69.66492104707815,
+            -47.44774730112972
+          ]
+        ]
+      },
+      {
+        "lat": 55.0,
+        "lon": 99.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.36010804772377014,
+        "slope_p90_deg": 1.2609565258026123,
+        "relief_m": 872.742431640625,
+        "candidate_id": "arcadia-11",
+        "rank": 11,
+        "mars_target": "arcadia",
+        "terrain_distance": 0.05434793359041214,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 19,
+          "relief_emphasis": 15
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            98.22474658499272,
+            54.54785241617335
+          ],
+          [
+            99.77525341500728,
+            54.54785241617335
+          ],
+          [
+            99.79282727029715,
+            55.44710705660349
+          ],
+          [
+            98.20717272970285,
+            55.44710705660349
+          ],
+          [
+            98.22474658499272,
+            54.54785241617335
+          ]
+        ]
+      },
+      {
+        "lat": 27.0,
+        "lon": 59.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.5071367621421814,
+        "slope_p90_deg": 1.164903998374939,
+        "relief_m": 924.3545532226562,
+        "candidate_id": "arcadia-12",
+        "rank": 12,
+        "mars_target": "arcadia",
+        "terrain_distance": 0.05619460737705231,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 4,
+          "relief_emphasis": 40
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            58.49733692726585,
+            26.549448939852347
+          ],
+          [
+            59.50266307273415,
+            26.549448939852347
+          ],
+          [
+            59.506699249135295,
+            27.448752881138965
+          ],
+          [
+            58.493300750864705,
+            27.448752881138965
+          ],
+          [
+            58.49733692726585,
+            26.549448939852347
+          ]
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "No four-theme score; no calibrated probability or mission success rate.",
+    "Novelty, minerals, climate, water/ice, accessibility and permits are unverified.",
+    "2-degree centre sampling is incomplete and latitude-dependent; polar regions excluded.",
+    "Bilinear interpolation and nominal scale matching do not establish subpixel detail.",
+    "Regional topography does not establish rover traversability or landing safety.",
+    "MOLA label reports interpolated bins and profile gaps up to 12 km near equator.",
+    "Natural Earth mask is coarse and does not exclude every inland water body."
+  ]
+}

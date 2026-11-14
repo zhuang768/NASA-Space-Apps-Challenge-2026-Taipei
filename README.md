@@ -50,12 +50,13 @@ python3.12 -m venv .venv
 4. **大氣與沙塵（Air）**：懸浮沙塵與沙塵暴（影響太陽能與設備）；子題包含**風力與風蝕地形**（沙丘、雅丹）及**大氣成分與氣壓**（0.6 kPa CO₂）。
 - **地球無法複製的限制**（0.38 g 重力、低氣壓、強輻射與高氯酸鹽土壤等）將於各場址分析中明確標註。
 
-地球端資料已透過 `earthaccess` 與合作太空機構公開歸檔完成下載並分類至 `data/raw/earth/`（共 ~7.6 GB，見 `docs/earth_data_plan.md` 與 `docs/cross_reference.md`）：`SRTMGL30`（地形）、`MOD11C3`（溫度）、`GPM_3IMERGM` + `GLDAS_NOAH025_M` + `MOD13C2` + **ESA CCI Permafrost v4.0**（水／冰與永凍土／植被）、`M2TMNXAER`（MERRA-2 沙塵 AOT），待隊友 A 接入相似度計算管線。支援與子題佐證另搭配 ESA Copernicus、CSA RADARSAT、JAXA G-Portal 與 NASA Worldview。
+隊友回報已下載約 7.6 GB 地球資料至其 `data/raw/earth/`：`SRTMGL30`（官方 collection 002，實際下載識別碼待確認）、`MOD11C3`、`GPM_3IMERGM`、`GLDAS_NOAH025_M`、`MOD13C2`、`M2TMNXAER`，以及選取 2021 年的 ESA CCI Permafrost v4.0。這批原始檔與讀取紀錄尚未透過 repo 交接；依表格預期為 148 個，與先前回報開啟 145 個的範圍有差異，尚待核對，不能直接宣稱完整性已驗證。規格與限制見 `docs/earth_data_plan.md`、`docs/cross_reference.md`，交接方式見 `docs/data_handoff.md`。
+
+MODIS 地表溫度與 TES 熱慣量、地球乾濕條件與 SWIM 地下冰一致性均不是同一物理量；NDVI 不代表生命存在與否，永凍土面積比例也不是可開採冰量。這些面向先作分開的證據描述，尚未整合為四面向相似度分數。
 
 ## 尺度對齊
 
-火星的 1 度約 59 km，地球的 1 度約 111 km。比較兩個行星時用實際距離對齊，不是用度數：
-火星 1 度的網格大約對應地球 0.5 度的網格。
+沿子午線，火星與地球的 1 度分別約為 59 km 與 111 km；經度方向的距離還會隨緯度改變，因此地球 0.5 度不是火星 1 度的通用等價網格。現有分析以各天體半徑建立 100×100 km 視窗，採 4 km 點距並做 10 km 尺度敏感度比較。取樣與插值不代表新增真實解析度。
 
 ## AI 工具使用紀錄
 
@@ -63,4 +64,21 @@ python3.12 -m venv .venv
 
 - 2026-11-13：使用 Cursor（Claude）整理挑戰說明與資料來源、建立專案骨架、撰寫火星資料的下載與讀取程式及測試。
 - 2026-11-14：使用 Gemini 整理 2026 挑戰規範與評分重點、確定聚焦地球與火星類比（排除月球）、整併四大主題與子題，撰寫「地球無法複製的火星條件」、7 頁簡報架構、地球端資料下載規劃與跨行星對照表（`docs/`），並下載分類地球端四大面向資料：2023–2024 兩年全球網格（`MOD11C3`、`GPM_3IMERGM`、`GLDAS_NOAH025_M`、`MOD13C2`、`M2TMNXAER`）、地形 `SRTMGL30`，以及 2021 年北半球 `ESA CCI Permafrost v4.0`。
-- 2026-11-14：使用 Claude Code 授權 Earthdata Login 資料中心應用程式（LP DAAC、NSIDC）、以 Homebrew 安裝 Python 3.12 並建立 `.venv`、監看下載範圍與容量，逐一開啟驗證 145 個地球端資料檔，並修正 `docs/` 中的資料讀取說明與資料集名稱。
+- 2026-11-14：隊友回報使用 Claude Code 協助授權 Earthdata 資料中心、建立 Python 3.12 環境、監看下載及開啟 145 個資料檔。此為隊友環境的紀錄；與清單推算 148 個的差異、實際檔案及讀取紀錄尚待核對。
+- 2026-11-14：使用 OpenAI Codex 核對官方規格，修正 SRTMGL30 版本、資料計數狀態、永凍土／NDVI 解釋、跨行星配對與 HDF4 環境限制。本次文件修正未使用 C2C。
+
+## 地球管線與第一輪實際結果（2026-11-14）
+
+已加入免登入 ETOPO 地形篩選、NASA POWER 候選氣候背景、Earthdata 月資料清單與下載入口。
+本輪是 **terrain-only regional screening**，尚未完成四面向綜合相似度。
+
+- 方法與執行：[docs/earth_pipeline.md](docs/earth_pipeline.md)
+- 原始資料下載與交接：[docs/data_handoff.md](docs/data_handoff.md)
+- 候選交接：[outputs/analysis/candidate_handoff.md](outputs/analysis/candidate_handoff.md)
+- 完整工作回報：[docs/work_report_2026-11-14.md](docs/work_report_2026-11-14.md)
+- 數值結果與來源：`outputs/analysis/results_with_context.json`
+- 權重及尺度敏感度：`outputs/analysis/sensitivity.json`
+
+AI 使用紀錄補充：2026-11-14，OpenAI Codex 協助本輪地球資料程式、方法說明、測試及工作報告。
+已嘗試 Codex with ChatGPT 規劃審查，但工作區讀取服務失敗，未取得其獨立程式審查。
+所有候選數值來自下載資料與公開 API，未以 AI 生成地形或補造缺值。

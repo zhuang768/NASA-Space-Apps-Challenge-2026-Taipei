@@ -19,32 +19,43 @@
 | **4. 大氣與沙塵** | `analog/dust.py` | Montabone v2.5 沙塵柱光學厚度（MY35 平常年、MY34 全球沙塵暴年） | 3°（~177 km） | 全球 | 年平均 `mean_cdod`（無因次） |
 
 **對齊規則（來自 `README.md`）：**
-- 火星 `1° ≈ 59 km`，地球 `1° ≈ 111 km`。
-- 空間尺度對齊：以實際地面距離為準（火星 `1°` 網格 ≈ 地球 `0.5°` 網格；MOLA 3.7 km 對應地球 ~3–4 km 粗網格聚合）。
+- 火星與地球沿子午線的 `1°` 分別約為 59 km 與 111 km；經向距離另隨緯度改變，不能把火星 `1°` 與地球 `0.5°` 視為各地皆相同的物理尺度。
+- 以各天體座標與半徑建立相同公里範圍的視窗，確認原始資料有效尺度後再聚合。現有程式採 100×100 km 視窗、4 km 取樣，另有 10 km 敏感度分析；插值不代表新增真實細節。
 - 所有網格統一格式：`xarray.DataArray`，座標 `(lat, lon)`，緯度由北到南（遞減），經度 `-180` 到 `180`。
 
 ---
 
-## 2. 地球端已下載之 Core 資料清單（2023–2024 兩年完整網格＋2021 永凍土，共 ~7.6 GB）
+## 2. 隊友回報的地球端資料清單（約 7.6 GB，完整性待清單核對）
 
-以下資料已下載並分類至 `data/raw/earth/`（不進 Git）；NASA 資料透過 `earthaccess`，永凍土資料來自 ESA CCI 公開歸檔：
+隊友回報以下資料已下載至其 `data/raw/earth/`（不進 Git）；NASA 資料透過 `earthaccess`，永凍土來自 ESA CCI 歸檔。本輪尚未取得這批原始檔與讀取紀錄，因此下表保留回報的數量與容量，不代表已在本機驗證。資料交接方式見 [data_handoff.md](data_handoff.md)。
 
 | 面向 | 資料夾 (`data/raw/earth/`) | 資料集（Shortname） | 檔案數與容量 | 原始解析度／網格 | 關鍵變數與讀取備註 |
 | --- | --- | --- | --- | --- | --- |
-| **1. 地形** | `terrain/` | **`SRTMGL30`** (v003) | 27 個 `.dem.zip`（266 MB） | 30 arc-sec（~900 m） | `*.DEM`（16-bit signed big-endian 整數高程，每塊 4800×6000，zip 內**無 `.HDR`**，需依檔名左上角座標自行定位，例如 `w020n40` = 20°W、40°N；涵蓋 60°S–90°N；需重採樣至 ~3–4 km 算 `slope_deg`/`relief`） |
-| **2. 溫度** | `temperature/` | **`MOD11C3`** (v061, 2023–2024) | 24 個 `.hdf`（1.9 GB） | 0.05° 月平均（~5.6 km） | MODIS Terra LST 日夜地表溫度 `LST_Day_CMG`／`LST_Night_CMG`（HDF4 格式，用 `netCDF4.Dataset` 讀取；檔內無 lat/lon 變數） |
+| **1. 地形** | `terrain/` | **`SRTMGL30`**（官方 collection **002**；實際下載識別碼待核對） | 回報 27 個 `.dem.zip`（266 MB） | 30 arc-sec（~900 m） | 隊友回報 `.DEM` 為 16-bit signed big-endian、每塊 4800×6000、無 `.HDR`，圖磚集合涵蓋 60°S–90°N。需用實際檔案大小與產品中繼資料確認邊界及維度，檔名不代表版本；按相同物理尺度計算坡度／起伏。 |
+| **2. 溫度** | `temperature/` | **`MOD11C3`** (v061, 2023–2024) | 24 個 `.hdf`（1.9 GB） | 0.05° 月平均（~5.6 km） | `LST_Day_CMG`／`LST_Night_CMG`，K；讀取 scale、fill 與 QA。月合成日夜值之差不是 TES 熱慣量；月合成值的年內最小／最大也不是瞬時極端溫度。HDF4 讀取依環境支援而定。 |
 | **3. 水／冰（乾旱度）** | `water_ice/gpm/` | **`GPM_3IMERGM`** (v07, 2023–2024) | 24 個 `.HDF5`（444 MB） | 0.1° 月平均（`1800×3600`） | `xarray(..., group='Grid')` 讀取 `precipitation` |
 | **3. 水／冰（土壤濕度）** | `water_ice/gldas/` | **`GLDAS_NOAH025_M`** (v2.1, 2023–2024) | 24 個 `.nc4`（584 MB） | 0.25° 月平均（`600×1440`） | `xarray` 直接讀取 `SoilMoi0_10cm_inst`（取代原規劃的每日 9 km 衛星觀測 `SPL3SMP_E`；注意 GLDAS 為陸面模式輸出，非衛星直接觀測，涵蓋 60°S–90°N） |
-| **3. 水／冰（植被扣分）** | `water_ice/ndvi/` | **`MOD13C2`** (v061, 2023–2024) | 24 個 `.hdf`（2.6 GB） | 0.05° 月平均（~5.6 km） | MODIS Terra NDVI `CMG 0.05 Deg Monthly NDVI`（HDF4 格式，用 `netCDF4.Dataset` 讀取；檔內無 lat/lon 變數） |
-| **3. 水／冰（永凍土）** | `water_ice/permafrost/` | **ESA CCI Permafrost** (v4.0, 2021) | 1 個 `.nc`（12 MB） | 0.01° 規則經緯網格（`6000×36000`），僅 25°N–85°N | `xarray` 直接讀取 `PFR`（永凍土比例 %）與 `PFR_uncertainty`；只有 2021 單一年份，且僅北半球，無法做全球評分 |
+| **3. 水／冰（植被背景）** | `water_ice/ndvi/` | **`MOD13C2`** (v061, 2023–2024) | 24 個 `.hdf`（2.6 GB） | 0.05° 月平均（~5.6 km） | `CMG 0.05 Deg Monthly NDVI`，需處理 QA、scale 與 fill。僅作植被背景，尚未定義扣分規則；HDF4 讀取依環境支援而定。 |
+| **3. 水／冰（永凍土）** | `water_ice/permafrost/` | **ESA CCI Permafrost** (v4.0，回報選取 2021) | 1 個 `.nc`（12 MB） | 回報 0.01° 經緯網格（`6000×36000`），25°N–85°N；需確認有效資料遮罩 | `PFR` 與 `PFR_uncertainty` 為 %，由熱模型及衛星／再分析輸入推算。產品序列涵蓋 1997–2021，隊友只回報選取 2021；PFR 是永凍土面積比例，不是地下冰含量、純度、深度或可開採性。 |
 | **4. 大氣與沙塵** | `air/` | **`M2TMNXAER`** (MERRA-2, 2023–2024) | 24 個 `.nc4`（1.9 GB） | 0.5° × 0.625°（`361×576`） | `xarray` 直接讀取 `DUEXTTAU`（純沙塵消光 AOT，取代原規劃的 `MOD08_M3` 總 AOD；注意 MERRA-2 為再分析資料，非衛星直接觀測） |
 
 > [!NOTE]
-> **格式讀取備註**（145 個檔案已全部實測可開啟）：
+> **數量與讀取狀態待核對**：表格數量合計為 `27 + 5×24 + 1 = 148`；先前隊友回報成功開啟 145 個，計數範圍尚未釐清。148 是依表格推算的預期數量，不是新增的驗證通過數。需提供實際檔名、容量、校驗碼、產品識別碼與讀取紀錄，才能確認完整性。
 > - `GPM_3IMERGM`（需 `group='Grid'`）、`GLDAS_NOAH025_M`、`M2TMNXAER` 與 ESA CCI Permafrost 可用 `xarray` 直接開啟，並帶有 lat/lon 座標。
-> - `MOD11C3` 與 `MOD13C2` 為 NASA HDF4-EOS 格式：`xarray` 與內建 `rasterio` wheel（無 HDF4 驅動）都無法開啟，但專案 `.venv` 內的 `netCDF4.Dataset(path)` 可直接讀取，**不需另裝 `pyhdf`**。
+> - `MOD11C3` 與 `MOD13C2` 為 HDF4-EOS。隊友回報其環境可用 `netCDF4.Dataset(path)` 開啟；這需要底層 netCDF-C 編譯支援 HDF4 SD，不能保證其他 wheel 或電腦也可讀。應以同一原始檔測試實際環境；若不支援，再使用具 HDF4 支援的讀取器或經驗證的轉檔工具。
 > - MODIS CMG 檔案**沒有 lat/lon 變數**，需自行建立 0.05° 網格（3600×7200）：lat 由 89.975 遞減至 −89.975，lon 由 −179.975 遞增至 179.975（皆為格點中心）。
-> - `SRTMGL30` 的 27 個 zip 只含 `.DEM`、沒有 `.HDR`，需依檔名定位；其中一塊檔名為大寫 `W020N40`，其餘為小寫，以檔名比對時請忽略大小寫。
+> - 隊友回報 `SRTMGL30` zip 只有 `.DEM`、無 `.HDR`，其中 `W020N40` 為大寫。可用檔名協助定位，但仍要核對中繼資料、位元組數與缺值定義。
+
+### 判讀與配對限制
+
+- NASA 官方 SRTMGL30 目錄列 collection `002`，並註明未隨 SRTM V3 更新；原文件的 `v003` 已更正。實際取得的檔案仍需核對 collection ID，不能只改標籤就宣稱原始檔版本已驗證。
+- NDVI 只用於植被背景，低值或負值可能涉及水、雪或品質問題，不能證明無生命。必須套用 QA 與地表遮罩。
+- GPM 降水與 GLDAS 表層土壤水分描述地球乾濕條件，不能直接等同或相減於 SWIM 地下冰一致性。SWIM 分數也不是冰含量或機率。
+- MODIS 日夜溫度差與 TES 熱慣量的量綱不同；需取得相同物理量或驗證轉換模型，再進行定量配對，不能直接推論地面硬度。
+- MERRA-2 `DUEXTTAU` 是 550 nm 沙塵光學厚度。與火星 CDOD 比較前，仍需對齊波長、氣壓正規化、季節與時間尺度；不能因兩者都量沙塵就直接視為等量。
+- 現有正式結果仍為地形篩選；四面向綜合分數尚未完成，未知條件保留未知。
+
+來源：[NASA SRTMGL30 官方目錄](https://cmr.earthdata.nasa.gov/search/collections.umm_json?short_name=SRTMGL30)、[ESA/CEDA 永凍土 v4.0](https://catalogue.ceda.ac.uk/uuid/93444bc1c4364a59869e004bf9bfd94a/)、[Unidata HDF4 編譯支援](https://docs.unidata.ucar.edu/nug/current/getting_and_building_netcdf.html)。
 
 ---
 

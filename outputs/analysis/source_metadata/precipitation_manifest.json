@@ -1,0 +1,325 @@
+{
+  "product": {
+    "short_name": "GPM_3IMERGM",
+    "version": "07",
+    "native_resolution": "0.1 degree",
+    "role": "Earth precipitation context"
+  },
+  "start": "2023-01-01",
+  "end": "2024-12-31",
+  "granules": [
+    {
+      "concept_id": "G2833518859-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20230101-S000000-E235959.01.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2023/3B-MO.MS.MRG.3IMERG.20230101-S000000-E235959.01.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-01-01T00:00:00.000Z",
+          "EndingDateTime": "2023-01-31T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2833356571-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20230201-S000000-E235959.02.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2023/3B-MO.MS.MRG.3IMERG.20230201-S000000-E235959.02.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-02-01T00:00:00.000Z",
+          "EndingDateTime": "2023-02-28T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2833395021-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20230301-S000000-E235959.03.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2023/3B-MO.MS.MRG.3IMERG.20230301-S000000-E235959.03.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-03-01T00:00:00.000Z",
+          "EndingDateTime": "2023-03-31T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2833349532-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20230401-S000000-E235959.04.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2023/3B-MO.MS.MRG.3IMERG.20230401-S000000-E235959.04.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-04-01T00:00:00.000Z",
+          "EndingDateTime": "2023-04-30T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2833559784-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20230501-S000000-E235959.05.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2023/3B-MO.MS.MRG.3IMERG.20230501-S000000-E235959.05.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-05-01T00:00:00.000Z",
+          "EndingDateTime": "2023-05-31T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2833551697-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20230601-S000000-E235959.06.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2023/3B-MO.MS.MRG.3IMERG.20230601-S000000-E235959.06.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-06-01T00:00:00.000Z",
+          "EndingDateTime": "2023-06-30T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2833739714-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20230701-S000000-E235959.07.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2023/3B-MO.MS.MRG.3IMERG.20230701-S000000-E235959.07.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-07-01T00:00:00.000Z",
+          "EndingDateTime": "2023-07-31T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2837511896-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20230801-S000000-E235959.08.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2023/3B-MO.MS.MRG.3IMERG.20230801-S000000-E235959.08.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-08-01T00:00:00.000Z",
+          "EndingDateTime": "2023-08-31T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2921452469-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20230901-S000000-E235959.09.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2023/3B-MO.MS.MRG.3IMERG.20230901-S000000-E235959.09.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-09-01T00:00:00.000Z",
+          "EndingDateTime": "2023-09-30T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2921835338-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20231001-S000000-E235959.10.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2023/3B-MO.MS.MRG.3IMERG.20231001-S000000-E235959.10.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-10-01T00:00:00.000Z",
+          "EndingDateTime": "2023-10-31T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2921989334-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20231101-S000000-E235959.11.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2023/3B-MO.MS.MRG.3IMERG.20231101-S000000-E235959.11.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-11-01T00:00:00.000Z",
+          "EndingDateTime": "2023-11-30T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2984603690-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20231201-S000000-E235959.12.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2023/3B-MO.MS.MRG.3IMERG.20231201-S000000-E235959.12.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-12-01T00:00:00.000Z",
+          "EndingDateTime": "2023-12-31T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3087531387-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20240101-S000000-E235959.01.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2024/3B-MO.MS.MRG.3IMERG.20240101-S000000-E235959.01.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-01-01T00:00:00.000Z",
+          "EndingDateTime": "2024-01-31T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3144085255-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20240201-S000000-E235959.02.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2024/3B-MO.MS.MRG.3IMERG.20240201-S000000-E235959.02.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-02-01T00:00:00.000Z",
+          "EndingDateTime": "2024-02-29T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3181376270-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20240301-S000000-E235959.03.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2024/3B-MO.MS.MRG.3IMERG.20240301-S000000-E235959.03.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-03-01T00:00:00.000Z",
+          "EndingDateTime": "2024-03-31T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3228670382-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20240401-S000000-E235959.04.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2024/3B-MO.MS.MRG.3IMERG.20240401-S000000-E235959.04.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-04-01T00:00:00.000Z",
+          "EndingDateTime": "2024-04-30T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3268863526-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20240501-S000000-E235959.05.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2024/3B-MO.MS.MRG.3IMERG.20240501-S000000-E235959.05.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-05-01T00:00:00.000Z",
+          "EndingDateTime": "2024-05-31T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3290997722-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20240601-S000000-E235959.06.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2024/3B-MO.MS.MRG.3IMERG.20240601-S000000-E235959.06.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-06-01T00:00:00.000Z",
+          "EndingDateTime": "2024-06-30T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3365978518-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20240701-S000000-E235959.07.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2024/3B-MO.MS.MRG.3IMERG.20240701-S000000-E235959.07.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-07-01T00:00:00.000Z",
+          "EndingDateTime": "2024-07-31T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3385101388-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20240801-S000000-E235959.08.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2024/3B-MO.MS.MRG.3IMERG.20240801-S000000-E235959.08.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-08-01T00:00:00.000Z",
+          "EndingDateTime": "2024-08-31T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3385088375-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20240901-S000000-E235959.09.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2024/3B-MO.MS.MRG.3IMERG.20240901-S000000-E235959.09.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-09-01T00:00:00.000Z",
+          "EndingDateTime": "2024-09-30T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3432241522-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20241001-S000000-E235959.10.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2024/3B-MO.MS.MRG.3IMERG.20241001-S000000-E235959.10.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-10-01T00:00:00.000Z",
+          "EndingDateTime": "2024-10-31T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3474816818-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20241101-S000000-E235959.11.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2024/3B-MO.MS.MRG.3IMERG.20241101-S000000-E235959.11.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-11-01T00:00:00.000Z",
+          "EndingDateTime": "2024-11-30T23:59:59.999Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3522220647-GES_DISC",
+      "granule_id": "GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20241201-S000000-E235959.12.V07B.HDF5",
+      "urls": [
+        "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGM.07/2024/3B-MO.MS.MRG.3IMERG.20241201-S000000-E235959.12.V07B.HDF5"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-12-01T00:00:00.000Z",
+          "EndingDateTime": "2024-12-31T23:59:59.999Z"
+        }
+      }
+    }
+  ],
+  "status": "discovered_not_downloaded"
+}

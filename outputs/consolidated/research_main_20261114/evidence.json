@@ -1,6 +1,6 @@
 {
   "version": "MR-20261114-v3-final",
-  "checked_taipei": "2026-11-15T04:59:02.055039+08:00",
+  "checked_taipei": "2026-11-15T05:01:59.599408+08:00",
   "workbook_sha256": "157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175",
   "status": "PASS_FIXED_SCOPE_FINAL_ARTIFACTS",
   "executable_cell_checks": 44,
@@ -645,5 +645,12 @@
   "final_delivery_branch": "archive/mr-v3-final-delivery-20261114",
   "workbook_remote_verified": true,
   "workbook_git_blob_sha": "3cad1ffc711dbddeef6def24447e1bd1ff3fb5ba",
-  "current_main_scientific_cases_not_replaced": true
+  "current_main_scientific_cases_not_replaced": true,
+  "final_delivery_publication": {
+    "content_commit": "eec57517b15138c75f810fc40836eca621d4ea58",
+    "branch": "archive/mr-v3-final-delivery-20261114",
+    "status": "verified_complete_archival_branch",
+    "original_novelty_goal_completed": false,
+    "new_experiments_executed": false
+  }
 }

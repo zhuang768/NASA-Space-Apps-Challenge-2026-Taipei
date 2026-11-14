@@ -1,6 +1,6 @@
 {
   "version": "MR-20261114-v3-final",
-  "checked_taipei": "2026-11-15T04:59:02.055039+08:00",
+  "checked_taipei": "2026-11-15T05:01:59.599408+08:00",
   "remote_main_at_start": "501d6454624108cf7b7e7f8ad572540bc7f774eb",
   "remote_source_main": "ab1da697ad2093ca8185d29932e3fc5b85e7f80b",
   "remote_source_tree": null,
@@ -247,6 +247,10 @@
     "workbook_reused_from_existing_git_blob": "3cad1ffc711dbddeef6def24447e1bd1ff3fb5ba",
     "workbook_same_bytes_as_local": true,
     "figure_link_repair_commit": "1506ede572435588eb5e64f95f24639279b77e56",
-    "old_upload_blocker_resolved": true
+    "old_upload_blocker_resolved": true,
+    "content_commit": "eec57517b15138c75f810fc40836eca621d4ea58",
+    "content_tree": "dd942239118a690e4e87d31daefe7a27b8a4046a",
+    "status": "verified_complete_archival_branch",
+    "required_artifact_gaps": []
   }
 }

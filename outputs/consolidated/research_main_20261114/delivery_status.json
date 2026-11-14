@@ -1,6 +1,6 @@
 {
   "version": "MR-20261114-v3-final",
-  "updated_taipei": "2026-11-15T04:59:02.055039+08:00",
+  "updated_taipei": "2026-11-15T05:01:59.599408+08:00",
   "scope": "fixed_archival_QA_descriptive_reproduction_and_evidence_requirements",
   "main_case": "I-02/EARTH-002",
   "content_acceptance": "complete",
@@ -30,14 +30,14 @@
   "scientific_limits_retained": true,
   "future_experiments_executed": false,
   "known_limits_closed_no_further_tasks": true,
-  "publication_commit": null,
+  "publication_commit": "eec57517b15138c75f810fc40836eca621d4ea58",
   "workbook_remote_verified": true,
   "integrated_into_main": false,
   "research_documents_integrated_into_main": false,
   "remote_artifact_gaps": [],
   "remote_upload_blocker": null,
-  "remote_delivery_status": "final_branch_publication_in_progress",
-  "task_delivery_label": "本輪檔案驗收完成；交付分支發布待核對",
+  "remote_delivery_status": "verified_complete_archival_branch",
+  "task_delivery_label": "本輪完整交付完成",
   "artifact_manifest": "outputs/consolidated/research_main_20261114/final_artifact_manifest.json",
   "validation": {
     "version": "MR-20261114-v3-final",
@@ -103,5 +103,7 @@
   "research_documents_previously_integrated_into_main": true,
   "delivery_branch_is_historical": true,
   "main_preservation": "Current MS research retained; only the two historical EH figure targets and their explanatory index were added.",
-  "figure_link_repair_commit": "1506ede572435588eb5e64f95f24639279b77e56"
+  "figure_link_repair_commit": "1506ede572435588eb5e64f95f24639279b77e56",
+  "publication_scope": "All MR-v3 deliverables verified in the historical final-delivery branch. The current main MS research was preserved; only two old-workbook figure links and their historical index were repaired.",
+  "metadata_verification_note": "publication_commit pins the checked content tree; final mutable status/receipt metadata is committed afterward and has no self-referential hash."
 }

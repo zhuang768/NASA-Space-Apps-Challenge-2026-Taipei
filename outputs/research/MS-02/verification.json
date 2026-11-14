@@ -1,0 +1,202 @@
+{
+  "script": "scripts/research/ms02_earth_analogs/verify_ms02.py",
+  "inputs": [
+    "outputs/research/mars_reselection_20261114/final_candidates.csv",
+    "outputs/research/mars_reselection_20261114/screened_pool.csv.gz",
+    "outputs/research/mars_reselection_20261114/candidate_native_evidence.json"
+  ],
+  "screened_pool_rows": 58238,
+  "all_consistency_checks_pass": true,
+  "checks": [
+    {
+      "item": "lat",
+      "source_a": 52.75,
+      "source_b": 52.75,
+      "abs_diff": 0.0,
+      "tolerance": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "item": "lon_east",
+      "source_a": 168.25,
+      "source_b": 168.25,
+      "abs_diff": 0.0,
+      "tolerance": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "item": "mola_relief_m final_vs_pool",
+      "source_a": 117.0,
+      "source_b": 117.0,
+      "abs_diff": 0.0,
+      "tolerance": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "item": "SWIM_0_1m stack final_vs_pool",
+      "source_a": 0.6932274578326338,
+      "source_b": 0.6932274578326338,
+      "abs_diff": 0.0,
+      "tolerance": 1e-09,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "item": "SWIM_1_5m stack final_vs_pool",
+      "source_a": 0.6189903151676877,
+      "source_b": 0.6189903151676877,
+      "abs_diff": 0.0,
+      "tolerance": 1e-09,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "item": "dust_my34_p95 final_vs_pool",
+      "source_a": 0.2400146692991257,
+      "source_b": 0.2400146692991257,
+      "abs_diff": 0.0,
+      "tolerance": 1e-09,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "item": "dust_my35_p95 final_vs_pool",
+      "source_a": 0.17312036752700807,
+      "source_b": 0.17312036752700807,
+      "abs_diff": 0.0,
+      "tolerance": 1e-09,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "item": "dust_my34_mean final_vs_pool",
+      "source_a": 0.12538406493417886,
+      "source_b": 0.12538408,
+      "abs_diff": 1.5065821146187375e-08,
+      "tolerance": 1e-06,
+      "pass": true,
+      "note": "pool stores float32"
+    },
+    {
+      "item": "dust_my35_mean final_vs_pool",
+      "source_a": 0.1100659862951402,
+      "source_b": 0.110066004,
+      "abs_diff": 1.7704859800460326e-08,
+      "tolerance": 1e-06,
+      "pass": true,
+      "note": "pool stores float32"
+    },
+    {
+      "item": "MCS night median K final_vs_pool",
+      "source_a": 171.27207542254638,
+      "source_b": 171.27207542254638,
+      "abs_diff": 0.0,
+      "tolerance": 1e-09,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "item": "MCS day median K final_vs_pool",
+      "source_a": 246.30527977136228,
+      "source_b": 246.30527977136228,
+      "abs_diff": 0.0,
+      "tolerance": 1e-09,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "item": "MCS paired contrast K final_vs_pool",
+      "source_a": 66.83052292163086,
+      "source_b": 66.83052292163086,
+      "abs_diff": 0.0,
+      "tolerance": 1e-09,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "item": "TES TI native-vs-final",
+      "source_a": 217.26900902801015,
+      "source_b": 217.26900902801015,
+      "abs_diff": 0.0,
+      "tolerance": 1e-09,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "item": "MOLA slope native-vs-final",
+      "source_a": 0.3018454787700082,
+      "source_b": 0.3018454787700082,
+      "abs_diff": 0.0,
+      "tolerance": 1e-09,
+      "pass": true,
+      "note": ""
+    }
+  ],
+  "expected_scale_differences_not_errors": {
+    "TES_TI coarse stack vs native-cell mean (excl. infill)": {
+      "stack": 217.3010711669922,
+      "native_mean": 217.26900902801015,
+      "diff": 0.03206213898204169,
+      "why": "stack is a 0.5-degree coarsened product; native value averages 93 non-infill cells (hand-off README discloses this)"
+    },
+    "MOLA slope coarse stack vs native-cell mean": {
+      "stack": 0.30232444039130707,
+      "native_mean": 0.3018454787700082,
+      "diff": 0.0004789616212988457,
+      "why": "different aggregation scale"
+    },
+    "SWIM_1_5m stack vs native-cell mean": {
+      "stack": 0.6189903151676877,
+      "native_mean": 0.6224985573606443,
+      "diff": -0.0035082421929566454,
+      "why": "different aggregation scale"
+    }
+  },
+  "geometry": {
+    "mars_km_per_degree": 59.27138139772743,
+    "nominal_NS_km_from_bounds": 29.635690698863716,
+    "nominal_EW_km_at_center_lat": 17.93830541152093,
+    "dust_cell_center_(52.5,168.0)_distance_km": 17.33422198491386,
+    "mcs_bin_center_(55.0,170.0)_distance_km": 146.70074443798975,
+    "mcs_bin_note": "5-degree MCS bin center is ~2.25 deg north of MS-02: a regional background, not a site value"
+  },
+  "earth_coordinates_and_conversions": {
+    "E01_UniversityValley": {
+      "lat": -77.86666666666666,
+      "lon": 160.75,
+      "src": "Marinova 2022 p.145 (valley); met station 77deg51.729'S 160deg42.606'E p.146",
+      "lat_abs_deg": 77.86666666666666
+    },
+    "E03_Adventdalen_ADE": {
+      "lat": 78.1722,
+      "lon": 16.0613,
+      "src": "Rotem 2023 (valley terrace site ADE)",
+      "lat_abs_deg": 78.1722
+    },
+    "E04_Haughton_p6_DMS": {
+      "lat": 75.36666666666666,
+      "lon": -89.68333333333334,
+      "src": "Andres 2020 sec.1.2.2 p.6",
+      "lat_abs_deg": 75.36666666666666
+    },
+    "E04_Haughton_fig1.8": {
+      "lat": 75.37,
+      "lon": -89.53,
+      "src": "Andres 2020 Fig 1.8 p.20",
+      "lat_abs_deg": 75.37
+    },
+    "E04_coordinate_discrepancy_km": 4.322791258876751,
+    "unit_conversions_K": {
+      "UV_MAAT_-23.4C": 249.74999999999997,
+      "UV_42cm_-24.1C": 249.04999999999998,
+      "Svalbard_Polygons_MAAT_-5.8C": 267.34999999999997,
+      "Devon_MAAT_-16C": 257.15,
+      "UV_SpecialRegion_threshold_255K_as_C": -18.149999999999977,
+      "UV_2560h_fraction_of_year": 0.2922374429223744
+    }
+  },
+  "not_computed": "no weights, no composite score, no 'most Mars-like' percentage"
+}

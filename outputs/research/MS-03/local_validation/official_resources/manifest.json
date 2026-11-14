@@ -108,8 +108,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/official_resources/acquire_resources.py",
-      "bytes": 1762,
-      "sha256": "a0363af687a3f395ea0a8d025db6f452813e1df35bf1e2869418a703eed883db"
+      "bytes": 2010,
+      "sha256": "84bfc230d98efde5009350e54ce7ecf78f528c7d5ed38af61558e597fafa3a5b"
     },
     {
       "path": "outputs/research/MS-03/local_validation/official_resources/analyze_mrdr.py",

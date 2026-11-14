@@ -12,7 +12,7 @@ def fetch(url,name,max_bytes=12000000,headers=None):
  except Exception as e:row.update(status='not_acquired',error=str(e))
  lp=O/'retrievals.json';a=json.loads(lp.read_text()) if lp.exists() else [];a.append(row);lp.write_text(json.dumps(a,indent=2)+'\n');print(name,row['status'],row.get('bytes'),row.get('error',''),flush=True);return row
 if __name__=='__main__':
- for name,url in [('pds_home.html','https://pds.nasa.gov/'),('pds_crism.html','https://pds-geosciences.wustl.edu/missions/mro/crism.htm')]:fetch(url,name)
+ for name,url in [('challenge_resources.html','https://www.spaceappschallenge.org/2026/challenges/permanent-moon-base-locations-and-mars/?tab=resources'),('challenge.html','https://www.spaceappschallenge.org/2026/challenges/permanent-moon-base-locations-and-mars/'),('pds_home.html','https://pds.nasa.gov/'),('pds_crism.html','https://pds-geosciences.wustl.edu/missions/mro/crism.htm')]:fetch(url,name)
  for pt in ['MRDR','TER','MTRDR']:
   q=dict(target='mars',ihid='MRO',iid='CRISM',pt=pt,minlat=57.5,maxlat=58,westernlon=242,easternlon=242.5,query='product',results='fmpc',output='JSON',limit=1000)
   fetch('https://oderest.rsl.wustl.edu/live2/?'+urllib.parse.urlencode(q),'ode_'+pt+'.json')

@@ -2,6 +2,49 @@
 
 Team zasa. Review date: **2026-11-14, Asia/Taipei**. Phase 1 repository baseline: `3e3ffff`; Phase 2 main baseline: `263269a`. Scope: literature and proposal checks for I-01, I-02, D-03 and D-04, followed by the supplied Earth candidate EARTH-UV-001. No new site selection, Earth pairing, environmental validation or ranking.
 
+## 2026-11-14：作者所屬機構公開資料與歷史存檔續查
+
+基準main：`f6d4c18`。本輪延續尚未取得的Head替代EZ清單／邊界／提案對照，不重查P1至P11已完成的範圍或地貌來源。新增P12至P14；既有紀錄與候選分類保持不變。
+
+**本次仍未找到可驗證的替代區完整清單或邊界。新增解決的是一項提案身份混淆：2017年的同名Deuteronilus製圖摘要直接引用Plaut 1044，不能據此補成Head 1033的替代區。I-01與I-02對未對應替代區仍為 `insufficient_data`。**
+
+### P12：Brown機構歷史新聞，能確認用途，未提供替代區對照
+
+已取得並讀取Brown的[2015-10-28校方歷史新聞](https://archive2.news.brown.edu/2007-2015/articles/2015/10/mars.html)全文及其公開連結（HTML實取35,517 bytes）。這是作者所屬機構的當年報導，包含Head直接引述；不是作者的原始研究資料包。正文談Deuteronilus冰資源、覆蓋物與科學價值，但沒有Figure 2逐標記名稱、座標表、GIS下載或提案對照。文中另提一個古湖泊三角洲候選，也沒有證據可將它當成圖中的冰相關替代EZ。
+
+實際讀取範圍：網頁正文、圖片說明、連結目標；其中第二張圖片連結 `https://archive2.news.brown.edu/2007-2015/files/deutero.png` 開啟逾時，未判讀圖片本身，未從圖說或檔名推導幾何。這份新聞支持的是當年用途脈絡，無法確認I-01或I-02的同範圍用途。
+
+### P13：2017製圖摘要的原始引用，明確對應Plaut 1044
+
+已讀[Maue、Burr與Jacobsen，LPSC2017 #2766](https://www.hou.usra.edu/meetings/lpsc2017/pdf/2766.pdf)兩頁全文與圖說。第1頁Introduction描述約41°N、22°E、半徑100 km的研究圈；第2頁References [1]直接列 **Plaut J. J. (2015), LS/EZ Workshop, #1044**。此為原始作者摘要中的明文提案對照，並非依同地名推定。
+
+因此此來源補強P7的Plaut提案身份脈絡，不能當作Head Figure 2某個未識別標記的對照。研究使用ArcGIS與製圖資料，也不代表本次已取得其GIS檔或EZ原始polygon。摘要的概略中心未取代P7既有幾何，沒有重新計算或新增I-01／I-02排除結果。
+
+### P14：作者網站與Wayback查詢，存取限制逐項保留
+
+| 入口／查詢 | 實際回覆 | 可下的結論 |
+|---|---|---|
+| `https://www.planetary.brown.edu/`；另以HTTP根目錄讀取 | 網頁工具無法存取；HTTP讀取逾時 | 未取得作者網站內容，不能稱已審讀其全部公開檔案 |
+| Wayback CDX：`url=www.planetary.brown.edu/head/*`、`output=json`、`filter=statuscode:200`、`collapse=urlkey`、`limit=100` | HTTP200，空陣列 | 這個路徑查詢沒有列出結果；不證明作者沒有其他路徑或副本 |
+| Wayback CDX：`url=www.planetary.brown.edu/*deuteronilus*`、`output=json`、`collapse=urlkey`、`limit=30` | HTTP200，空陣列 | 僅此URL模式未取得索引；不等於內文搜尋或整個歷史檔案的完整排除 |
+| [Wayback availability查詢](https://archive.org/wayback/available?url=http%3A%2F%2Fwww.planetary.brown.edu%2Fhead%2F&timestamp=20151028) | HTTP200，`archived_snapshots={}` | 指定URL未回傳可用快照；未取得2015年作者目錄 |
+| 跨子域CDX：`url=planetary.brown.edu`、`matchType=domain`、`filter=original:.*(explor\|1033\|humans_to_mars\|deuteronilus).*`、`collapse=urlkey`、`fl=timestamp,original,statuscode,mimetype`、`limit=100` | HTTP503 | 查詢未完成，不作「本次未找到清單」以外的內容排除，更不宣稱整個網域無存檔 |
+
+CDX入口為 `https://web.archive.org/cdx/search/cdx`。以上是本輪實際請求的模式與回覆，不是已取得的歷史目錄。P8已取回的NASA原始簡報不重新下載。沒有發信給作者，也未取得未公開資料。
+
+### 搜尋範圍、兩候選結論與交接
+
+日期：2026-11-14，Asia/Taipei。搜尋詞：`Head Dickson 2015 Deuteronilus "exploration" "alternative"`、`site.planetary.brown.edu Head 1033 exploration zones 2015`、`"head_humans_to_mars" alternatives`、`"Deuteronilus" "exploration zones" Head GIS`、`site.brown.edu "Geologists help NASA" Mars Head 2015`、`site.planetary.brown.edu "Deuteronilus" "2015"`、`"Geomorphologic Map of an Icy Human Exploration Zone"`、`site.brown.edu "1033" "Deuteronilus"`、`site.planetary.brown.edu "exploration zone"`。一般搜尋出現的二手文章只用作線索，結論依上列原始摘要與機構原文。
+
+| 候選 | Head未對應替代區的重疊判斷 | 本輪新增證據的作用 |
+|---|---|---|
+| I-01：54至54.5°N、1至1.5°E | 範圍／提案資料不足，仍未知 | P12確認區域用途脈絡；P13釐清另一研究的提案身份；P14記錄未取得作者目錄的限制 |
+| I-02：53.5至54°N、42至42.5°E | 範圍／提案資料不足，仍未知 | 同上；不從地名或概略中心推定Head替代區幾何 |
+
+可用措辭：「本次續查作者所屬機構歷史資料與公開存檔，仍未取得Head替代探索區的逐項清單及原始邊界。已核對的2017同名製圖研究引用Plaut 1044，不能用來補齊Head 1033替代區對照。」
+
+仍缺：Figure 2標記名稱／固定ID、每個標記的原始提案連結與用途、完整邊界及座標定義。若後續取得作者資料，需先核對這三項再判定重疊。目前不能說「全部替代區已排除」、「兩候選沒有同用途先例」或「地貌GIS就是探索區邊界」。本輪的查詢範圍有限，部分端點失敗，沒有形成歷史完整排除。
+
 ## 2026-11-14：沿Head引用來源補查清單、GIS與提案對照
 
 本輪從main `14be2d5` 接續P8，只補查尚未對應的Head替代探索區。P1至P8已完成的範圍檢查、地球用途查核與QA紀錄全部保留；沒有重跑GIS交集。

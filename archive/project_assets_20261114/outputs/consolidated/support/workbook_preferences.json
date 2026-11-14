@@ -1,0 +1,14 @@
+{
+  "language": "English",
+  "background": "white",
+  "font_color": "black",
+  "font_family": "Arial",
+  "font_size": 11,
+  "body_row_height_pt": 20,
+  "header_row_height_pt": 48,
+  "colored_bands": false,
+  "conditional_fill_colors": false,
+  "preserve_numeric_values": true,
+  "preserve_source_identifiers": true,
+  "requested": "2026-11-14 Asia/Taipei"
+}

@@ -1,0 +1,15 @@
+{
+  "url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Campbell_data_good_only_calibrated.txt?download=1",
+  "dataset_doi": "10.5281/zenodo.10553882",
+  "retrieval_date": "2026-11-14",
+  "retrieved_utc": null,
+  "verified_utc": "2026-11-14T12:07:14.209739+00:00",
+  "acquisition_method": "Chrome native browser download; original downloaded bytes independently verified, then copied into data/raw/earth",
+  "bytes": 2673975,
+  "md5": "ae2133eac5c92c695c5f6ef93bcbbd25",
+  "publisher_expected_md5": "ae2133eac5c92c695c5f6ef93bcbbd25",
+  "sha256": "c46d93e3dd07c6c91d700a814214716f00caa0d5cc3a520f8969ce0af63ecafd",
+  "archive_publication_date": "2024-01-23",
+  "download_seconds": null,
+  "note": "No timing or response headers captured by native browser. Filename good_only_calibrated denotes prior author processing, not untouched logger data."
+}

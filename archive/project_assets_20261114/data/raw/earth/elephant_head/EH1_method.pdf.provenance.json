@@ -1,0 +1,11 @@
+{
+  "url": "https://www.nasa.gov/wp-content/uploads/2019/09/mckay_etal_2019_dry_permafrost_ellsworth_land21.pdf",
+  "retrieval_date": "2026-11-14",
+  "retrieved_utc": null,
+  "verified_utc": "2026-11-14T12:27:07.923340+00:00",
+  "sha256": "1d64eb94184a5e4fd7e8e0985a23a8c9a6e35ad2626f268ad8a3a80ffc21b6db",
+  "bytes": 557969,
+  "method": "HTTPS download via managed Node runtime; original PDF bytes, no OCR rewrite",
+  "source_version": "published 2019 source",
+  "download_seconds": null
+}

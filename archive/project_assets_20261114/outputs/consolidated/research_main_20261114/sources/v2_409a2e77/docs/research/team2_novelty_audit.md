@@ -1,0 +1,332 @@
+# Team 2: Same-purpose research and novelty audit
+
+Team zasa. Review date: **2026-11-14, Asia/Taipei**. Phase 1 repository baseline: `3e3ffff`; Phase 2 main baseline: `263269a`. Scope: literature and proposal checks for I-01, I-02, D-03 and D-04, followed by the supplied Earth candidate EARTH-UV-001. No new site selection, Earth pairing, environmental validation or ranking.
+
+## 2026-11-14 新版交接：已知用途、待查缺口與 EARTH-002
+
+本段以最新 main `cf72039` 的 Team 1 版本 `TEAM1-ICE-REDO-v1`（`EARTH-002 → I-02`，`EARTH-UV-001 → I-01`）更新交接；下方舊階段敘述保留為當時紀錄。研究需求 `TEAM1-PROVISIONAL-ICE-v1 / 2026-11-14` 尚待主要對話定案；`docs/research_requirements.csv` 仍是較早的綜合需求，不能當作新冰探查規格。清理提交 `5901362` 已包含在此 main 歷史中；總 Excel 不是本輪新配對的交付證據。本次只改本報告與 Team 2 CSV。
+
+### 隊友 1 選點可用的已知用途簡表
+
+| 地點／區域 | 已知研究或測試用途、原始來源 | 已取得範圍 | 與目前用途相近及已確定重複的部分 | 尚不能判定；給新候選的提醒 |
+|---|---|---|---|---|
+| University Valley，W 站與山谷 | W 站冰界面及氣象監測 [U1]；Icebreaker 火星類比鑽探、短段取樣及控溫 [U2–U3]；樣品處理 [U5] | U1 的 W 點位；U2 另一鑽孔點約離 W 2.13 km；U5 未定位到 W | 山谷尺度的火星類比鑽探和分段、控溫用途已有先例；W 點的冰界面也已量測 | `EARTH-UV-001` 的「周邊」未畫範圍；盲判、獨立取芯誤差與冰質量收支的完整聯合流程未證實。保留為已知用途對照，不能稱首次鑽探 |
+| Elephant Head，Mount Dolence 北側監測站／Site 3 | 壕溝確認冰界面與熱濕監測 [EHA1]；Site 1/3 分層採土、鑽取冰芯與低溫保存 [EHA2]；與 UV 的冰界面機制比較 [EHA3] | 監測站點位；EHA1 明載站點在 Site 3 的 10 m 內；EHA2 的 Site 1、3 座標，兩點約 0.3 km；無新試驗區 | 冰界面已有直接真值；Site 3 附近已有分層採樣及鑽冰芯。跨 UV/EH 的自然機制比較已做過 | 現有原文未顯示盲判深度誤差、鑽採時樣品升溫或初末冰量收支。不可把「10 cm 分層採土」改述為「10 cm 分段鑽冰」，也不能以低溫保存代替升溫量測；需界定新試驗區 |
+| I-01／I-02 火星名義格 | SWIM 冰一致性製圖與冰資源探索區先例 [N1–N3, P1–P5] | 兩個 0.5° 名義格；已查 I-MIM 初始 RZ、已釋出的 SWIM4MIM RZ 及兩個 ASU 圓；其他替代 EZ／ROI 未取得完整幾何 | 廣域冰探查與資源評估已有研究；上述具名受查範圍與兩格不重疊 | 未取得所有替代 EZ／ROI 與後續提案的原始邊界及用途對照。不得從已查的不重疊推成所有提案均不重疊；低溫及 SWIM 指標不證明可挖冰 |
+| D-03 Hellas／D-04 Elysium 周邊 | 已有區域沙塵與地表變化研究 [N6–N9] | 區域研究；候選格與研究／任務完整範圍的交集仍有缺口 | 已研究區域與沙塵背景，不能稱發現全新沙塵區 | 隊友 1 尚未交新地球 ID、範圍與測試用途；先等交接，不自行配對 |
+
+狀態整理：既有四個火星格的區域文獻與已查幾何結果屬**已完成、沒有新疑點**；若得到完整替代 EZ／ROI 資料或新提案，才更新那些範圍結論。`EARTH-UV-001` 的山谷先例已完成，確切 W 周邊範圍仍待 Team 1。`EARTH-002` 已收到並於下方逐項查核。D-03／D-04 的新地球候選待 Team 1；儀器、深度、誤差、冰損失門檻與正式聯合流程待主要對話。
+
+### EARTH-002 → I-02：新候選逐項查核
+
+**交接身份與問題。** 固定 ID `EARTH-002`；Elephant Head monitoring station／Elephants Head Permafrost Site，Mount Dolence 北側，南極洲。Team 1 的地球錨點 `−79.820216667°, −83.314333333°`（北、東為正，原始文獻 `79°49.213′S, 83°18.860′W`）；火星 I-02 `53.75°N, 42.25°E` 為 planetocentric／東經。地球文獻未報水平 datum 或定位誤差。新測試區只有已發表站點錨點，無半徑、多邊形或鑽孔；不得用站點與 Site 3 的 10 m 既有關係冒充新試驗範圍。用途版本 `TEAM1-PROVISIONAL-ICE-v1 / 2026-11-14`：盲判乾覆土下冰膠結界面並以獨立真值驗證，接著受控分段採樣，分開量測樣品升溫與冰質量損失；屬**提議、未執行**。查核 Team 1 §8 四項問題，尤其分清觀測、取樣、工程驗證與整套流程。
+
+| 層次／組成部分 | 讀到的原始證據與範圍 | 本次判定 |
+|---|---|---|
+| A. 站點與冰界面研究 | [EHA1] 2016 年在 Elephant Head 四處以挖溝定冰界面；監測站在 Site 3 的 10 m 內，長期感測器置於 49 cm 界面。[EHA3] 已研究本站與 UV 冰界面受夏季積雪、熱及水汽影響的機制 | `related_research_exists`；本站不是未研究場址，UV–EH 自然機制比較也已有先例 |
+| B1. 分層土樣、冰芯與冷藏 | [EHA2] 2020 年在 Site 1／Site 3 每 10 cm 分層以無菌勺取乾凍土，在 30／45 cm 見冰界面，以手持電鑽及鑽石取芯鑽頭取得 13／3 cm 冰芯，現地、運輸、實驗室維持 −20°C。Site 3 的發表座標與 EHA1 的 Site 3 相同，而站點在 Site 3 10 m 內 | **站點鄰近尺度的用途組成先例已確認**；先前 Team 1 僅從 EHA2 摘要得知微生物用途，現在讀到全文方法，應補記分層與取芯。這不是受控分段鑽進、鑽頭／樣品升溫曲線或冰損失量測 |
+| B2. 盲判界面與獨立真值 | [EHA1] 壕溝與 [EHA2] 採樣提供已知界面；兩者所讀方法未述隱藏真值、固定盲判演算法、預先登記誤差／漏判／誤判 | 已有**真值測定**，本次未找到**盲判驗證**；不能把文獻沒提到直接寫成從未執行 |
+| B3. 升溫、冰損失與完整流程 | [EHA2] 的 −20°C 是保存條件，不是鑽進時樣品溫度；[EHA1] 的冰界面長期水汽穩定性，[EHA3] 的冰界面機制也不是回收冰芯初末質量量測 | 本次未找到可驗證的升溫曲線、初末冰量或完整聯合流程；`complete_joint_protocol_status=insufficient_data` |
+| C. 相同範圍、相同完整用途 | EHA1 明載站點與舊 Site 3 的距離關係；EHA2 重用 Site 3 座標，但未提供鑽孔的精確位置或新提議試驗區 | **既有取芯活動可能與提議站點周邊高度接近**，不能說沒有同址先例；完整同範圍同用途仍 `insufficient_data`，不設定無來源的半徑 |
+
+**可保留的研究差異（待證實，不是新穎性結論）：** 將已有實測界面當獨立真值，在明定場址、儀器與輸入後，先盲判界面深度與漏誤判，再同一試驗設計量測分段取芯的樣品溫度、處理時間、初末含冰量及質量變化。這些輸出會回答「探查方法的誤差」與「採樣是否保存冰」，與 EHA1 的熱濕平衡、EHA2 的微生物取樣、EHA3 的自然形成機制所報量測不同；是否有未查到的同流程研究仍未排除。站點可作**待設計的方法參照候選**，不稱已證實新研究場址或已可施工。與 I-02 的關係僅是方法問題：不得由 Elephant Head 冰芯推算火星格內冰深、可採量、能耗或安全性。
+
+**查核與存取紀錄。** 2026-11-14（Asia/Taipei）查詢公開網頁及出版者／NASA 原文，詞組：`"Elephant Head" Antarctica ice cemented drilling sampling core ice loss blind detection`；`"Elephant Head" "ice-cemented" drilling sampling Mars analog`；`"Elephants Head" permafrost site ice probe borehole thermophysical experiment`；`"Elephant Head" "ice table" thermal probe McKay sampling`；`"Elephant Head" Antarctica "drill" "ice" Mars 2021 2022 2023`；`"Elephant Head" "ice-cemented" "radar" Antarctica`；`"Elephant Head" Antarctica "ice loss" sampling`；`"Elephant Head" Antarctica "blind" "ice" probe`。實際讀到 EHA1 NASA 原文 PDF 的 Methods、Table I、Discussion；EHA2 作者原文 PDF 的 Site description／field sampling／Figure 1，檔案由 Semantic Scholar 鏡像取得並核對出版者 DOI；EHA3 出版者 PDF 的方法及結論。EHA2 出版者 HTML 開啟失敗，PMC 直接開啟遇瀏覽器驗證；未以搜尋摘要代替原文。未完整查 ADS／Scopus、所有後續引文、所有會議摘要、EHA2 補充資料及未公開野外紀錄；故「未找到」只限本次所列查詢與可讀材料。
+
+| 來源 | 原始文獻與本次支持範圍 |
+|---|---|
+| EHA1 | McKay et al. (2019), [Dry permafrost over ice-cemented ground at Elephant Head](https://www.nasa.gov/wp-content/uploads/2019/09/mckay_etal_2019_dry_permafrost_ellsworth_land21.pdf)，Methods、Table I、Discussion；2016 挖溝、2017–2018 站點量測及 Site 3／站點位置。 |
+| EHA2 | Wood et al. (2024), [Active microbiota persist in dry permafrost and active layer from Elephant Head](https://doi.org/10.1093/ismeco/ycad002)，[可讀原文 PDF](https://pdfs.semanticscholar.org/6702/fb238f8ae546875a33f0e1348cf9807ac160.pdf)，Methods pp.2–3／Figure 1；2020 分層土樣、鑽冰芯及保存條件。原研究目的是微生物學，不是儀器盲判或冰損失工程驗證。 |
+| EHA3 | McKay et al. (2026，2025-11-27 線上發表), [Summer snow determines the depth to ice-cemented ground under dry permafrost in Antarctica](https://doi.org/10.1017/S0954102025100448)，[出版者 PDF](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/5B2E97EBA4C91035CAFCECC234A532A0/S0954102025100448a.pdf/summer-snow-determines-the-depth-to-ice-cemented-ground-under-dry-permafrost-in-antarctica.pdf)，結果及結論；UV–EH 機制比較，非新取芯實驗。 |
+
+**交接。** 隊友 1：將 EHA2 的 Site 3 分層／取芯先例加入 `EARTH-002` 自己的來源核對，明確標示「取芯已做；升溫與冰質量收支未驗證」，並提供預定試驗區、儀器與量測流程；可保留候選作方法參照，也可修訂用途，不能以新 ID 隱藏先例。主要對話：可說「利用已研究的乾覆土—冰界面場址，設計盲判探查與採樣保冰性的聯合驗證」，**不可說**首次在 Elephant Head 發現冰、首次取芯、首次與 UV 比較、已證實完整流程新穎、I-02 有可挖冰或地球測試能直接預測火星性能。正式用途、誤差／損失指標與是否實作由主要對話決定。GPU 若只處理既有熱濕時序，可用於背景與 QA；那組表不能代替新流程的樣品升溫和初末冰量觀測。
+
+CSV 沿用原有 45 欄，新增 `EARTH-002` 一列而未改欄名。此列 `classification=related_research_exists` 表示站點有研究；`site_level_same_use_status=related_research_exists` 表示相近的取樣／取芯**方法組成**已做，但 EHA2 的微生物研究目的不同；`exact_site_same_use_status=insufficient_data` 與 `complete_joint_protocol_status=insufficient_data` 表示新試驗區及完整用途尚不能判定。這些欄位是不同層次，不是分數或新穎性保證。原有 `EARTH-UV-001` 山谷尺度 `same_use_exists` 結論保留，不移用到 EARTH-002。
+
+### 目前真正未完成的查核
+
+1. **EARTH-002／EARTH-UV-001 的精確範圍：** Team 1 需提供試驗圖、半徑或多邊形，以及規劃鑽孔與歷史 Site 3／UV 鑽孔的關係；目前只能說站點錨點與已知採樣點的關係，不能判定整套流程的同範圍重複。
+2. **用途版本：** 主要對話需定儀器、探測深度、盲判輸入與真值、分段採樣方法、樣品溫度及冰損失量測、決策門檻。定版後才檢索是否有完全相同的方法研究；EHA2 的補充資料和後續引文也是具體可查缺口。
+3. **I-01／I-02 未覆蓋的火星提案：** 需取得 Head et al. 替代 EZ／資源 ROI 的原始幾何和名稱對應，以及 MarsGIS 的完整 EZ／ROI 圖層；得到資料才做相同座標慣例下的交集。P1–P3 已確定的分離結果不重算。也需核對後續具名冰探查目標，避免把目前搜尋未找到寫成沒有提案。
+4. **D-03／D-04：** 等 Team 1 固定 ID、地點、座標、範圍、用途版本、來源及具體查核問題；目前沒有可逐項審查的新地球交接。
+
+Latest ice-footprint results are in the dated follow-up immediately below. Earlier sections remain as the audit history.
+
+## Ice-purpose footprint follow-up, 2026-11-14
+
+This follow-up uses main `74c7ed6` and retains the earlier audit below. Only unfinished I-01/I-02 proposal-extent checks were extended. Purpose: **subsurface ice characterization and preliminary resource assessment research**. The fixed planetocentric, east-positive nominal cells remain **I-01: 54.00–54.50°N, 1.00–1.50°E** and **I-02: 53.50–54.00°N, 42.00–42.50°E**. These are project screening cells, not proposed drill footprints.
+
+**Both candidates remain `insufficient_data` for the overall exact-site, same-purpose proposal question.** Several inspected targeting footprints are now confirmed separate from both cells. No same-footprint, same-purpose hit was confirmed in this follow-up. The unresolved alternative-EZ inventory prevents novelty clearance.
+
+### Results by inspected footprint
+
+| Inspected object and purpose | I-01 | I-02 | Evidence and boundary of conclusion |
+|---|---|---|---|
+| I-MIM 2022 initial reconnaissance zone: ice survey and resource assessment | Confirmed inspected footprint does not overlap | Confirmed inspected footprint does not overlap | P1, printed p.152 / PDF page 160: the entire initial RZ is restricted to ±40° latitude and maximum 0 km elevation. Both cells are entirely north of that band. This excludes the specified priority RZ only; it does not exclude future high-latitude observations or every mission objective. |
+| Released SWIM4MIM notional reconnaissance-zone geometry: future orbital buried-ice targeting | Confirmed inspected footprint does not overlap | Confirmed inspected footprint does not overlap | P2: downloaded provider SHP/SHX/PRJ and README; actual polygon intersections are empty. Released geometry reaches only 51.217655°N. Do not equate this download automatically with the engineering-clipped I-MIM map. |
+| ASU catalog “Deuteronilus Mensae”: represented 100 km EZ circle | Confirmed inspected footprint does not overlap | Confirmed inspected footprint does not overlap | P3 stores radius 100 km at approximately 23.20, 39.10. N2 already establishes ice/resource purpose for the primary EZ. The complete catalog circle is well south of both cells. This reuses the primary proposal's earlier purpose check. |
+| ASU catalog “Deuteronilus Mensae 2”: represented 100 km EZ circle | Confirmed inspected footprint does not overlap | Confirmed inspected footprint does not overlap | P3 stores radius 100 km at 22, 41; even the northern edge is below 42.70° in the stated spherical calculation. The catalog provides no source citation establishing which Figure 2 marker or resource ROI this entry represents. Its individual purpose linkage remains insufficient. |
+| Other alternative Deuteronilus EZs / associated resource ROIs in N2 Figure 2 | Extent or purpose insufficient; unresolved | Extent or purpose insufficient; unresolved | Original figure inspected in P4. It locates alternatives with similar objectives, but does not provide a coordinate table or full resource-ROI polygons. The two ASU entries do not establish completeness or a one-to-one crosswalk. |
+| NASA MarsGIS full EZ / science-and-resource ROI inventory | Extent or purpose insufficient; unresolved | Extent or purpose insufficient; unresolved | P5 identifies a GIS product, but no public downloadable full layer was obtained. A software catalog description cannot substitute for the actual footprint data. |
+
+The existing Protonilus and primary Deuteronilus checks remain in the historical record; no new regional geology or candidate matching was performed. “Confirmed separate” applies to each named representation above, never to every prior proposal in that region.
+
+### Geometry, provenance and reproducibility
+
+P2 is a released targeting polygon, distinct from the broad SWIM consistency-map coverage. The ancillary README describes notional lowest-latitude buried-ice targeting and refers to Morgan et al. (2025), section 7, DOI [10.3847/PSJ/ad9b24](https://doi.org/10.3847/PSJ/ad9b24). Publisher full access was restricted; the downloaded README and geometry support the intersection result independently. The provider does not identify in the ancillary attributes whether this is the filtered or unfiltered figure variant; that identity remains unverified.
+
+- Accessed 2026-11-14. Provider lists reconnaissance product update **2025-08-05 09:13:41**. This is a provider timestamp, not an independently verified collection version.
+- File `SWIM4MIM_RZ_GIS.shp`, SHA-256 `d652283966a46b93979010d4ffcd28171bd05d9e006f2857a36e4557f5209796`; inner ancillary ZIP SHA-256 `e2963b9a02966d1db83e0c8c4128708e195977079b96a935060ddf9f41445429`.
+- PRJ: `Mars2000_equicylindrical_clon0`, spherical Mars radius **3,396,190 m**, Plate Carrée, central longitude 0°, false easting/northing 0, metre units. No Earth CRS or Earth distance formula was used.
+- One valid MultiPolygon, five parts, 10,764 vertices. No DBF was supplied in the retrieved archive; no region names or feature attributes were inferred.
+- Inverse-projected bounds: approximately **−179.999989 to 179.999989° longitude, −57.217651 to 51.217655° latitude**. Whole-cell north/south exclusion independently agrees with polygon intersection. Longitude wrapping cannot affect this latitude-based exclusion.
+- Both `intersects` results are false and intersection areas are zero. Projected areas/distances are not reported as geodesic physical measurements. These calculations say nothing about ice abundance, accessibility or absence.
+
+Minimal reproduction after downloading and extracting P2 (Python packages `pyshp`, `shapely`):
+
+```python
+from math import pi
+import shapefile
+from shapely.geometry import shape, box
+
+stem = "SWIM4MIM_RZ_Ancillary/SWIM4MIM_RZ_GIS"
+r = shapefile.Reader(shp=stem + ".shp", shx=stem + ".shx")
+g = shape(r.shapes()[0].__geo_interface__)
+assert g.is_valid
+m = 3396190.0 * pi / 180.0  # metres per degree in the supplied PRJ
+for site, lat, lon in [("I-01", 54.25, 1.25), ("I-02", 53.75, 42.25)]:
+    cell = box((lon-.25)*m, (lat-.25)*m, (lon+.25)*m, (lat+.25)*m)
+    print(site, g.intersects(cell), g.intersection(cell).area)
+# I-01 False 0.0; I-02 False 0.0
+```
+
+P3's XML explicitly supplies a `Radius` field and `RadiusKm` geometry units, so these checks use complete represented circles rather than distances to unbounded centers. For a spherical circle, its northern bound is center latitude plus `100000 / 3396190 * 180/pi` degrees: **40.788°** and **42.688°**, respectively. The catalog latitude convention is not explicit; adding a conservative 0.5° convention allowance still leaves both circles south of 43.2°N and both candidate cells north of 53.5°N. Longitude orientation is therefore immaterial to this exclusion. Stored longitudes agree approximately with the primary N2 center, but a normalized all-ROI longitude overlay was not performed. The 0.5° allowance is an audit robustness check, not a provider accuracy specification. No editable JMARS layer was changed or saved back to its provider.
+
+P3 file `2015_proposed_exp_zones.jlf` SHA-256: `51b371b8fc0dff5d00be2d9a2470ee9c59d0eda19cf752294d1d75ee2f79704e`. The tutorial session is dated 2016-02-09; this is a catalog snapshot, not proof of the complete current proposal inventory.
+
+### Additional primary-source register
+
+| Ref | Source and inspected material | What it supports / access limit |
+|---|---|---|
+| P1 | [I-MIM MDT final report, 31 August 2022](https://science.nasa.gov/wp-content/uploads/2023/10/i-mim-mdt-final-report-31-aug-2022-final-hi-qual-copy-tagged.pdf), §6.1.1, printed p.152, Figure 6.1 | Explicit initial-RZ bounds. The figure's black circles are illustrative, randomly positioned prospective TAIs, not actual selected targets. Local PDF SHA-256 `17d0212d4a7727a392153766ea41c9112909c1b3d3243e507f9c52b78c986778`. |
+| P2 | [SWIM4MIM provider page](https://swim.psi.edu/SWIM4MIMProducts.php), [ancillary selection download](https://swim.psi.edu/SWIM4MIMProducts.php?RZ-Ancillary=True&DL-Sel=True), bundled README and SHP/SHX/PRJ | Actual released notional targeting extent. Download redirects to a temporary ZIP; retain hashes above to identify this snapshot. Broader mapping is a separate product. |
+| P3 | [ASU JMARS2035 description](https://jmars.asu.edu/jmars2035/), [saved session](https://jmars.mars.asu.edu/static/saved-sessions/2035_tutorial.jmars), [original proposed-EZ XML layer](https://jmars.mars.asu.edu/static/saved-layers/mars2035/2015_proposed_exp_zones.jlf) | Catalog circle radii and centers. Read as XML, without executing serialized session objects. The second entry lacks a proposal/ROI cross-reference. |
+| P4 | [NASA-hosted 2015 abstract collection](https://www.nasa.gov/wp-content/uploads/2015/06/mars-c-abstracts_in_order_of_presentation10242015_0.pdf), Head abstract 1033, PDF pp.55–56 / printed pp.49–50; same abstract as [N2](https://www.hou.usra.edu/meetings/explorationzone2015/pdf/1033.pdf) | Figure 2 visually inspected. Alternative locations and shared objectives are established; exact individual boundaries remain unavailable. No claim that the whole collection was reviewed. |
+| P5 | [NASA MarsGIS software catalog, LAR-19183-1](https://software.nasa.gov/software/LAR-19183-1) | Leads to the potentially fuller GIS inventory; actual full EZ/ROI geometry not obtained. No access request or message sent. |
+
+### Follow-up query log and remaining evidence
+
+All additional searches: 2026-11-14, Asia/Taipei. Exact representative queries are retained here; landing pages, downloaded source contents and figure inspection determine conclusions, rather than search snippets.
+
+| Group | Exact queries | Result and limit |
+|---|---|---|
+| Q10, reconnaissance footprints | `International Mars Ice Mapper reconnaissance zones 2022 report boundaries latitude`; `"SWIM4MIM" "RZ" shapefile`; `"ad9b24" "RZs" "boundaries"` | P1 and P2 obtained; published targeting boundaries can now be distinguished from mapping coverage. |
+| Q11, alternative exploration / resource zones | `Mars exploration zones GIS shapefile 2015 human landing sites Deuteronilus alternative`; `"Deuteronilus" "exploration zone" "Figure 2" alternatives`; `"Head" "Deuteronilus" site:nasa.gov "2015" "pdf"`; `"MarsGIS" "FeatureServer"`; `"MarsGIS" "arcgis.com"` | P3/P4 inspected; P5 remains a catalog lead. No verified public full MarsGIS endpoint found in this search. |
+| Q12, additional regional planning lead | `"Multi-criteria Overlay Analysis for Identifying Preferred Exploration Zones on Mars" pdf`; `"ade30e" "50°" "mask"` | Located [2025 paper DOI](https://doi.org/10.3847/PSJ/ade30e) and [Zenodo v1](https://zenodo.org/records/15854213). Publisher full access restricted; 140.8 MB analysis archive not downloaded. No footprint exclusion or candidate-purpose conclusion is based on this lead. |
+
+Remaining evidence: a full alternative-EZ/resource-ROI polygon inventory with coordinate metadata and original-proposal crosswalks; the specific purpose and provenance of the ASU second entry; and any later named ice-survey/resource targets that include either whole cell or a documented subarea. Regional names, marker dots and unverified search-result summaries cannot close those gaps. Previously documented observation/mapping and regional science remain established and are not promoted to site proposals.
+
+Permitted wording: “Neither nominal candidate cell intersects the inspected I-MIM initial RZ or the released SWIM4MIM notional RZ geometry. The inspected ASU Deuteronilus circles are also separate. This bounded search has not verified an overlapping same-purpose proposal; alternative-ROI coverage remains incomplete.” Do not claim “never studied,” “first ice-resource site,” “outside all exploration proposals,” “no ice,” or that SWIM mapping itself proves a new targeted proposal. D-03/D-04 remain unchanged references. No additional Earth candidates were audited; further Earth checks wait for Team 1's new list.
+
+Follow-up verification: downloaded P2 geometry read successfully; validity, both exact cell intersections and an independent latitude-bound check agreed. P3 radius units and the two stored records were inspected. CSV retains all five prior records and all original fields, adding dated structured checks only for I-01/I-02. Only the two Team 2 deliverables changed.
+
+## Decision for Team 1 (prior audit, retained)
+
+**All four Mars candidates have related prior research. No exact-footprint, same-purpose Mars site proposal was verified in this bounded search. None is cleared as new or understudied.** These statements describe different checks: regional research is established; exact proposal overlap remains unresolved.
+
+| ID | Classification | Exact-site / same-purpose result | Handoff |
+|---|---|---|---|
+| I-01 | Related research exists | No verified proposal hit; proposal inventory incomplete | Retain only as a conditional shallow-ice research candidate. Prior SWIM mapping covers this sector; that mapping coverage is distinct from a targeting reconnaissance-zone footprint (see the follow-up). |
+| I-02 | Related research exists | No verified proposal hit; proposal inventory incomplete | Same treatment. The inspected Deuteronilus and Protonilus exploration zones are geographically separate. |
+| D-03 | Related research exists | No verified dust-observation or equipment-test site proposal in this nominal cell | Existing eastern Hellas geological mapping encompasses the nominal coordinates. Keep as a context reference; withdraw any unstudied-terrain claim. |
+| D-04 | Related research exists | No verified exact-cell operations proposal; published dust-study footprints remain unresolved | Cerberus/Elysium dust sources, sinks and surface changes are established research topics. Keep as a context reference; withdraw any newly identified dusty-region claim. |
+
+Classification vocabulary: `same_use_exists` = 已有相同用途, requiring both compatible footprint and explicit purpose; `related_research_exists` = 已有相關研究; `not_found_in_this_search` = 本次搜尋未找到, always bounded by the logged search; `insufficient_data` = 資料不足. A related-research classification does not establish an exact same-use proposal. The exact-site proposal status remains `insufficient_data` for the four Mars candidates. This is not a claim that no such proposals exist. The Earth review below distinguishes a verified valley-scale use precedent from an unresolved exact station/vicinity footprint.
+
+**Phase 2: first supplied Earth candidate reviewed.** Git fetch found `outputs/research/team1_earth_analog_candidates.csv` on `team1/earth-analog-first-case-2026-11-14` at `5efa19766342a5a9ab24fcbbe3dbf02ed05805a6`, not on main. It contains only **EARTH-UV-001 → I-01**. University Valley already has Mars-analog drilling, depth-segmented sampling and thermal-control research. This is a material same-use precedent for Team 1 to assess. Exact overlap with station W and the complete proposed interface-detection/ice-loss protocol is unverified. Earth candidates for I-02, D-03 and D-04 are **waiting for Team 1's list additions**. No older Jezero/Gale/Arcadia Earth matches were substituted.
+
+## Phase 2: EARTH-UV-001 → I-01
+
+### Fixed input and source identity
+
+Read both Team 1 files directly from the fetched commit, without checking out, merging or modifying that branch:
+
+- [Candidate CSV at the reviewed commit](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/5efa19766342a5a9ab24fcbbe3dbf02ed05805a6/outputs/research/team1_earth_analog_candidates.csv), SHA-256 `4a901e4bc2625dc516018cb468a35fdecf5574736b378545448059020db12e8b`.
+- [Team 1 research handoff at the reviewed commit](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/5efa19766342a5a9ab24fcbbe3dbf02ed05805a6/docs/research/team1_earth_analog_matching.md), SHA-256 `dc25c4d609ed5b9332567758c25680e14b1b1fb332cac4cb9c9ab6356ea9c5f4`.
+
+ID **EARTH-UV-001**, associated Mars ID **I-01**. Site: **University Valley meteorological station W vicinity**, Antarctica. Earth anchor **−77.862150°, 160.710100°E**, retained exactly as supplied. This is a station reference, not a specified new borehole. No polygon or vicinity radius was supplied; the inspected coordinate passage does not state the horizontal datum.
+
+Original CSV purpose, unchanged: `辨識乾覆土下冰膠結界面；驗證分段取樣升溫與冰損失。研究提議，尚未執行。` English reading: identify the ice-cemented interface below dry overburden and evaluate heating and ice loss during segmented sampling; proposed research, not performed. The handoff additionally proposes blind probe interpretation followed by physical sampling. No new pairing or replacement site is proposed here.
+
+### Finding: substantial use precedent, exact joint protocol unresolved
+
+**Anchor-level classification: related research exists. Valley-level component-use status: same use exists. Complete protocol at the W-station vicinity: insufficient data. Novelty is not cleared.**
+
+| Part of Team 1's proposed use | Existing work actually supports | Spatial / methodological boundary |
+|---|---|---|
+| Dry overburden and an independently known ice interface | Marinova et al. (2022) locate the meteorological station at the supplied coordinate and instrument the 42 cm boundary [U1]. | Direct station-level study. This establishes earlier characterization, not blind interface-detection accuracy or current conditions. |
+| Mars-analog segmented drilling and temperature control | Paulsen et al. (2011) report a 2010 University Valley field trial through dry soil into ice-cemented ground, using 10 cm sampling intervals and bit-temperature feedback [U2]. | Explicit same-use components at the named valley. Reported drill coordinates differ from W; no borehole overlap is inferred. |
+| Sampling while limiting phase changes | Zacny et al. (2013) explicitly describe short sampling bites intended to prevent thawing/phase changes [U3]. | Publisher abstract supports the engineering purpose. Full paper access was restricted; this is not an exact-W experiment or a measured ice-loss curve. |
+| Automated drilling and sample transfer | Glass et al. (2013) discuss University Valley among field sites and integrated operations [U4]. | Its detailed 2012 results are from Haughton; Antarctic repetition is described as planned in the Results section. Do not transfer those outcomes to W. |
+| Delivery yield and sublimation-related sample handling | Steel et al.'s 2017 NASA Ames abstract uses University Valley soil in laboratory sample-delivery tests [U5]. | Prepared dry/frozen material in a chamber, not a W-station field test. Sublimation-related clogging is listed as further work, not a demonstrated completed ice-loss experiment. |
+
+The original task is therefore partly an established experimental use of this valley. A new label or the association with I-01 does not establish a new site or first use. Conversely, the inspected literature does not prove that the full combination of blind interface detection, ground-truth depth error and a quantified sample ice-mass balance has already been executed at W. The correct result is a component-level use overlap with an unresolved complete-protocol check.
+
+### Footprint and coordinate check
+
+U2 reports its ice-cemented-ground drill at **77°51.891′S, 160°48.029′E**, converted to **−77.864850°, 160.800483°E**. The W anchor is **77°51.729′S, 160°42.606′E** [U1]. A spherical-Earth haversine check, **R = 6,371 km**, gives an approximate separation of **2.13 km**. This calculation uses the printed coordinates; it does not resolve their unreported datums, possible transcription issues, or field-survey accuracy.
+
+This demonstrates that the published coordinate strings are different. It does not establish whether the earlier borehole is inside Team 1's undefined “vicinity,” nor whether a new experimental plot overlaps older work. Do not move EARTH-UV-001 to the U2 borehole or transfer the station's 42 cm interface to it. Formal footprint clearance requires Team 1 to define a plot/polygon or radius and prior studies' actual sampling extents.
+
+### Research differences worth specifying, subject to Team 1's decision
+
+These are proposed refinements within the supplied use, not established new methods:
+
+1. Define the **blind detection protocol** and held-out ground truth: who predicts the boundary, which observations are withheld, and how depth errors and missed boundaries are measured. The station study is a reference dataset, not proof of this new protocol's accuracy.
+2. Separate **bit temperature, recovered-sample temperature and ice mass loss**. An above-freezing limit or a subzero bit reading does not quantify retained ice. Specify initial/final ice measurements, handling time, repeatability and a closed mass balance before reporting ice-loss results. Review U3's full text and later sample-delivery work before calling this protocol novel.
+3. State which unresolved **I-01 measurement requirement** the test would inform. No inspected source established a specific historical I-01 ↔ W pairing, but that bounded non-finding cannot establish novelty. Earth field results still require environmental modeling/chamber validation before any Mars performance inference.
+
+**Team 1 action requested:** treat University Valley as a known Mars drilling/sampling analog. Decide whether to retain it as a validation/reference site with a precisely specified additional question, or propose a different candidate through Team 1's own process. Keep EARTH-UV-001 unchanged while that decision is pending. This audit does not select a replacement or certify the site unsuitable.
+
+**Prohibited claims:** first Mars drilling analog in University Valley; previously unused dry-soil/ice-cemented site; first segmented thermal-control sampling; confirmed full-protocol novelty; previous field tests at the exact W borehole; measured ice loss or drilling performance at I-01. No number in Team 1's climate/environment extraction was reprocessed or independently validated by this literature audit.
+
+### Earth sources and inspected scope
+
+Search/access date: **2026-11-14, Asia/Taipei**. Source IDs U1–U5 belong to this audit; Team 1's E1/E5 labels are retained only in its own files.
+
+| Ref | Original source | Material inspected / actual support |
+|---|---|---|
+| U1 | Marinova et al. (2022), [Climate and energy balance of the ground in University Valley, Antarctica](https://doi.org/10.1017/S0954102022000025) | Public full-text Introduction and Methods, meteorological measurements. Independently checked station coordinate and interface instrumentation. No claim of blind boundary testing. |
+| U2 | Paulsen et al. (2011), [Field testing of the Icebreaker Mars drill in the Antarctic, LPSC 1901](https://www.lpi.usra.edu/meetings/lpsc2011/pdf/1901.pdf) | Both pages, especially the first field-test section. Explicit valley, drill location and thermal/segmented-sampling procedure. Includes a separate massive-ice trial; it is not the W plot. |
+| U3 | Zacny et al. (2013), [Reaching 1 m Deep on Mars: The Icebreaker Drill](https://journals.sagepub.com/doi/10.1089/ast.2013.1038), doi:10.1089/ast.2013.1038 | Publisher abstract and contents only. Short bites and phase-change control are explicit; full text/PDF unavailable. Related to U2's hardware program, not an independent field campaign count. |
+| U4 | Glass et al. (2013), [Planetary-prototype drilling and sample acquisition tests at analog sites, LPSC 1334](https://www.lpi.usra.edu/meetings/lpsc2013/pdf/1334.pdf) | Both pages, Field Test Sites and Results. Distinguishes Haughton results from planned Antarctic repetition. |
+| U5 | Steel et al. (2017), **Testing A Sample Delivery System for Planetary Surface Missions**, [NASA Ames Jamboree 2017 abstract collection](https://ntrs.nasa.gov/api/citations/20200001147/downloads/20200001147.pdf?attachment=true), printed p. 92 / PDF page 93, PS.1 | Downloaded public NASA PDF and extracted this abstract locally after web-section requests timed out. Material provenance, sample handling and further-work section inspected. NTRS accession year 2020 is not the 2017 meeting year. University Valley material does not establish W provenance. |
+
+### Earth search log and remaining scope
+
+The following exact queries were submitted on 2026-11-14 (Asia/Taipei):
+
+| Group | Queries | Outcome |
+|---|---|---|
+| Q07 | `University Valley Antarctica Icebreaker drilling ice sampling heating sublimation 2013`; `University Valley station W ice cemented soil drilling Icebreaker 42 cm` | U1/U2/U4 and the existing U3 lead. |
+| Q08 | `"University Valley" "ice loss" drill`; `"University Valley" "drill" "77" "51"`; `"University Valley" "thermal" "probe" ice table drilling sample heating` | Located explicit field-drill context and further thermophysical work; no exact-W full protocol verified. |
+| Q09 | `"Reaching 1 m Deep on Mars" PMC`; `"University Valley" "thermal probe" "ice" drilling`; `"University Valley" "sublimation" "Icebreaker" samples loss` | U3 publisher record and U5 laboratory-delivery precedent. |
+
+Directly opened Team 1's U1/U3 DOI leads, U2/U4 abstracts, and U5 NASA PDF. U3 DOI/PDF requests timed out; its publisher HTML abstract was accessible. PubMed returned only a footer and supplied no usable abstract in this session. A snow/salt ice-stability lead at `PMC7430506` returned a browser check on direct access; it was not used to establish a completed sampling experiment. A separate NASA water-rich mission PDF returned 403. Search excerpts/secondary news were not used as proof of full-paper or exact-site inspection.
+
+This is a bounded public-web review of one supplied candidate. No exhaustive ADS/Scopus search, full U3 methods/supplement review, later citation-chain review, or spatial intersection of every historical borehole was completed. The absence of a supplied vicinity polygon and a completed mass-balance protocol limits the exact-use conclusion. University Valley and Beacon Valley are related search contexts, not interchangeable experimental coordinates.
+
+CSV schema update: four original Mars rows are retained; one Earth row is appended with `candidate_id=earth_candidate_id=EARTH-UV-001`, `mars_candidate_id=I-01`. Earth coordinates occupy the explicit `earth_lat_deg`/`earth_lon_east_deg` fields; Mars planetocentric and nominal-box fields are blank for that row. `site_level_same_use_status=same_use_exists` records the valley-level precedent, while `classification=related_research_exists` and `exact_site_same_use_status=insufficient_data` describe the unresolved W-vicinity footprint. `verified_same_use_hit_found` remains an exact-footprint flag, not the valley-level status.
+
+## Inputs and completed checks reused
+
+Read the current repository copies of [site_discovery_brief.md](../site_discovery_brief.md), [mars_discovery_handoff.md](../mars_discovery_handoff.md), [mars_discovery_novelty_checks.csv](../mars_discovery_novelty_checks.csv), and [mars_discovery_search_scope.json](../mars_discovery_search_scope.json). The original 15-row review already covered literal coordinate queries, regional precedents, Protonilus and InSight center distances, and the D-01/D-02 Utopia monitoring-circle overlap. Those are inherited checks, not new discoveries in this audit.
+
+The requested filename `ice_candidate_followup_2026-11-14.md` was not found in the current checkout. The supplied `NASA_Space_Apps_2026_All_Data.xlsx` contains its apparent successor as an English rendering of **`docs/research/ice_candidate_followup/README.md`**, in `Report Text!A475:G505`, with supporting search records in `JSON Source Records!A20680:H20730`. Read all these records. They document native-grid QA, the nominal 2015 latitude/radius envelope, Luzzi et al.'s AP-1/AP-8/AP-9 checks, Protonilus ice-exposing craters, and unresolved actual proposal footprints. These checks were reused without rerunning data processing. The original Markdown is authoritative and is absent from this checkout; the workbook is a supplied snapshot, not a replacement original.
+
+Workbook identity: snapshot `2026-11-14T15:42:59.879915+08:00` (`Overview!A4`); SHA-256 `a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731`. `Earth Candidates` contains 72 versioned rows: 36 for `earth_100km_sample4km` and 36 for `earth_100km_sample10km`. These are older Jezero/Gale/Arcadia results, not 72 independent new analog sites. The workbook was read only and was not copied into Git.
+
+## Spatial interpretation
+
+The stored Mars centers use planetocentric latitude and east-positive longitude. For the Mars audit, a **nominal cell** means center ±0.25° in both axes, inferred from the documented 0.5° grid. It is not a landing ellipse or a verified instrument footprint. The Earth anchor has separate coordinate fields and no assumed cell footprint.
+
+| ID | Latitude bounds, degrees | East longitude bounds, degrees | Search labels, not certified site boundaries |
+|---|---:|---:|---|
+| I-01 | 54.00 to 54.50 | 1.00 to 1.50 | Northern plains / Vastitas Borealis; eastern Acidalia context; Ismenius Lacus context |
+| I-02 | 53.50 to 54.00 | 42.00 to 42.50 | Northern plains / Ismenius Lacus; Lyot, Protonilus and Deuteronilus regional terms |
+| D-03 | -46.50 to -46.00 | 82.50 to 83.00 | Eastern Hellas Planitia / basin floor and rim |
+| D-04 | 7.50 to 8.00 | 154.00 to 154.50 | Elysium Planitia / Cerberus plains and classical Cerberus albedo feature |
+
+Slope/relief cell support, interpolated SWIM support, and the dust layer's native 3° support are different. In particular, a dust study outside a nominal 0.5° cell may still overlap the broader atmospheric context. No native dust-contribution polygon was reconstructed here. No complete GIS overlay of study/ROI/landing polygons was completed.
+
+Center distances below are geometric calculations, using a Mars sphere of radius **3,396 km** and the haversine formula `2R atan2(sqrt(a), sqrt(1-a))`, where `a = sin²(Δlat/2) + cos(lat1) cos(lat2) sin²(Δlon/2)`. They are rounded context checks; source datum differences were not rigorously transformed. They cannot exclude uninspected alternative sites or extended ROIs.
+
+## Candidate findings
+
+### I-01: 54.25°N, 1.25°E
+
+- **Already observed/studied:** SWIM's published 2019 reconnaissance domain includes this sector [N1]. This establishes prior ice-resource mapping context, not a local independent ice detection. Reusing its product does not make this a newly discovered ice deposit.
+- **Proposal check:** the inspected Deuteronilus exploration zone explicitly combines science and ice-resource use [N2]. Its center, 39.11°N, 23.199°E, is approximately **1,255.5 km** away; the stated primary circle has a 100 km radius. Its alternative EZs in Figure 2 were not digitized. The inherited Protonilus separation is approximately 1,939.6 km [N3].
+- **Scope correction:** Orgel et al.'s Acidalia geomorphological survey is a 300 km strip centered on **22.5°W**, extending 20°N to 84°N [N4]. That regional citation does not establish imagery interpretation or ice landforms at 1.25°E. No local landform was assigned from it.
+- **Possible research difference:** compare follow-up observations needed here with I-02, where the existing descriptors show similar ice consistency and slope but different TI. A documented comparison of missing evidence could add value. This is a proposed question, not a novelty finding or extraction-performance result.
+- **Cannot claim:** first ice-resource proposal, an unstudied area, confirmed shallow ice, extractable water, or a suitable crewed base. The inherited nominal 2015 envelope exclusion also reflects historical latitude constraints [N5].
+
+### I-02: 53.75°N, 42.25°E
+
+- **Already observed/studied:** the same published SWIM reconnaissance domain applies [N1]. The specific candidate selection is a project interpretation of an existing reconnaissance product.
+- **Proposal check:** the already reviewed Protonilus proposal is at **42.187°N, 48.062°E**, approximately **722.5 km** away, with resources/ROIs described around its habitation zone [N3]. The newly inspected primary Deuteronilus circle is approximately **1,158.2 km** away [N2]. These named proposals are not this nominal cell. Their existence establishes a related ice-resource use in the wider region, not exact duplication.
+- **Remaining uncertainty:** no complete set of alternative Deuteronilus sites, later prospecting proposals or their actual ROI polygons was obtained. Nearby Lyot/Ismenius search terms did not establish an exact same-use proposal. The already checked Protonilus ice-exposing craters remain separate observations, not measurements at I-02.
+- **Possible research difference:** test which observation would resolve the ambiguity between surface thermophysical context and the inferred subsurface ice resource at this specific cell, using I-01 as a comparison. Any Earth experiment must wait for Team 1's explicit pairing and use.
+- **Cannot claim:** the Protonilus EZ, a validated alternative to it, first ice-prospecting site, independent confirmation from multiple SWIM depth maps, or demonstrated lower drilling cost.
+
+### D-03: 46.25°S, 82.75°E
+
+- **Already studied:** the USGS SIM 3096 publication record describes mapping of **37.5°S to 47.5°S, 270°W to 280°W** [N6], equivalent to 80°E to 90°E. The nominal candidate box is numerically inside that published extent. This is geological mapping coverage, not a dust-test recommendation. The full sheet/pamphlet could not be retrieved, so no unit or landform was assigned to this cell. Astropedia's indexed geometry appears to show only one northern quadrangle; it was not substituted for the publication's four-quadrangle extent.
+- **Dust footprint check:** Szwast et al.'s Hellas dust/albedo ROI is **31°S to 53°S, 54°E to 82°E** [N7, §5.3/Figure 9]. The nominal cell begins at 82.5°E and is outside that particular ROI, despite sharing the basin name. The coarser atmospheric support may overlap; its seasonal result was not transferred to D-03.
+- **Proposal check:** Rice et al.'s eastern Hellas human-exploration proposal has a **200 km diameter** zone near **40°S, 104°E**, approximately **987.3 km** away [N8]. Its purpose includes geological/ice-resource exploration, not an equipment dust-tolerance test at D-03.
+- **Possible research difference:** define this eastern-basin cell as an explicit contrast in a seasonal dust-column/terrain comparison, then check the difference against local transport observations. Neither such a result nor an unclaimed prior use is established yet.
+- **Cannot claim:** unstudied Hellas terrain, a new dust source/hotspot, locally measured deposition/abrasion, equipment suitability, or a safe operating surface.
+
+### D-04: 7.75°N, 154.25°E
+
+- **Already studied:** Geissler [N9, §4.4] examines dust deposition/erosion in classical Cerberus around **10°N, 205°W = 155°E**, approximately **140.4 km** from D-04. The study covers an extended feature, not just that center; a center mismatch cannot exclude overlap. Its actual changed-surface polygon was not obtained.
+- **Closely related research purpose:** the 2018 Elysium study [N10] proposes relating dust sources/sinks to terrain types using thermal-image differences. Thus, comparing dust and terrain in Elysium already has methodological precedent. Its exact image/ROI overlap with D-04 remains unverified. This is an abstract describing work and next steps, not a completed validation of D-04.
+- **Further prior work:** Wolfe et al. [N11] combine diurnal EMIRS temperatures and modeling to constrain dust redistribution over an Elysium ROI. The inspected text/Figure 2 caption does not provide a usable numeric D-04 polygon. None of its regional dust-thickness estimates is assigned to this point.
+- **Operations-footprint check:** Yao et al.'s Tianwen-1 monitoring circle is centered at **17°N, 107°E**, radius **2,000 km** [N12]. D-04 is approximately **2,782.8 km** away, so its nominal cell is outside that circle. This excludes only that monitoring footprint, not all Elysium operations studies. The earlier InSight site separation is inherited from the handoff; its observations are not ground truth here.
+- **Possible research difference:** explicitly separate atmospheric column dust from surface dust transport for this candidate and compare their seasonal behavior. That physical distinction is established in prior work; a contribution would require a new, reproducible candidate-specific result.
+- **Cannot claim:** first dust/terrain study, newly discovered dusty region, InSight-validated conditions here, or proved absence of prior operational interest.
+
+## Sources and what was actually inspected
+
+All access/search dates below are 2026-11-14 (Asia/Taipei). References identify author research or official records, not agency endorsement of these candidates. Broadly relevant works found in search results were not treated as exact-site evidence.
+
+| Ref | Source | Inspected material and supported scope |
+|---|---|---|
+| N1 | Putzig, Morgan & SWIM team (2022), [LPSC abstract 2443](https://www.hou.usra.edu/meetings/lpsc2022/pdf/2443.pdf) | Two-page abstract, Introduction/Motivation. Stated 2019 domain: 0 to 60°N and 0 to 225°E, 290 to 360°E; resource reconnaissance supports future missions. Domain membership is not local detection or a selected landed site. |
+| N2 | Head et al. (2015), [Deuteronilus EZ, abstract 1033](https://www.hou.usra.edu/meetings/explorationzone2015/pdf/1033.pdf) | Both pages, primary EZ center and Figure 1 radius. Same broad resource purpose at a separate primary zone; Figure 2 alternatives remain unresolved. |
+| N3 | Gallegos & Newsom (2015), [Protonilus EZ, abstract 1053](https://www.hou.usra.edu/meetings/explorationzone2015/pdf/1053.pdf) | Existing checked lead reopened for spatial comparison; both pages, proposed center and ROI discussion. No claim that its resources extend to either ice candidate. |
+| N4 | Orgel et al. (2019), [doi:10.1029/2018JE005664](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018JE005664) | §2.1 study-area definition. Narrows the geographic relevance of an inherited Acidalia citation. |
+| N5 | Hoffman & Bussey (2016), [NASA NTRS 20160001040](https://ntrs.nasa.gov/citations/20160001040) | Official abstract reopened; full-paper nominal-envelope analysis inherited from the supplied follow-up. 47 workshop proposals, ±50° criterion and approximately 100 km EZ definition do not constitute a complete modern site inventory. |
+| N6 | Bleamaster & Crown (2010), [USGS SIM 3096](https://doi.org/10.3133/sim3096), [publication record](https://pubs.usgs.gov/publication/sim3096), [Astropedia record](https://astrogeology.usgs.gov/search/map/mars_geologic_map_of_mtm_40277_45277_40272_and_45272_quadrangles_eastern_hellas_planitia_region) | Indexed official publication abstract/metadata returned the full stated extent and 1:1,000,000 map scale. Direct pages and attempted pamphlet access returned 403. Extent comparison only; full map and coordinate-reference details unverified. |
+| N7 | Szwast, Richardson & Vasavada (2006), [doi:10.1029/2005JE002485](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2005JE002485) | Full-text abstract and Hellas §5.3/Figure 9 text. Explicit ROI bounds enable a nominal-box exclusion; basin-wide phenomena are not cell measurements. |
+| N8 | Rice et al. (2015), [Eastern Hellas EZ, abstract 1038](https://www.hou.usra.edu/meetings/explorationzone2015/pdf/1038.pdf) | Entire one-page abstract; center, diameter and resource purpose. Regional proposal at a different location. |
+| N9 | Geissler (2005), [doi:10.1029/2004JE002345](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2004JE002345) | §4.4/Figure 9 caption. Cerberus surface-change research near D-04; no digitized deposit or image polygon. |
+| N10 | Kozdon et al. (2018), [LPSC abstract 2514](https://www.hou.usra.edu/meetings/lpsc2018/pdf/2514.pdf) | Both pages: Elysium ROI rationale, methods and proposed follow-up. Direct regional precedent for dust/terrain comparison; no numeric local polygon validated. |
+| N11 | Wolfe et al. (2023), [doi:10.1029/2023JE007794](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023JE007794) | Abstract, §§2.2, 3.1, 4.1, Figure 2 caption and data-availability statement. Regional dust/thermal work, with uncertainties permitting zero net change. Exact D-04 support remains unchecked; original EMIRS products were not downloaded. |
+| N12 | Yao et al. (2020), [doi:10.1029/2020EA001242](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020EA001242) | Figure 1 caption and §2.2: numeric monitoring circle, distinct from preferred landing areas. |
+
+## Search log
+
+Public-web search, 2026-11-14 (Asia/Taipei). Queries are grouped below but each string was submitted separately. Search output was screened for original papers, NASA/USGS records and formal abstracts. Commercial hits, games, Wikipedia, fictional Ares III material and unsupported aggregation pages were excluded. A failed literal query is not evidence of absence.
+
+| Group | Candidate / purpose | Exact submitted queries |
+|---|---|---|
+| Q01 | I-01 and northern-plains resources | `Mars "54" "1" Acidalia ice exploration zone landing site`; `site:hou.usra.edu explorationzone2015 "Acidalia"`; `Mars "54" "0" "ice" landing site Acidalia`; `site:hou.usra.edu/meetings/explorationzone2015 "Acidalia" ice`; `Mars ice "Acidalia" "0" "55"`; `Mars Acidalia eastern northern plains ice ISRU landing exploration zone Cydnus`; `"54" "1" "ice" "Acidalia" ISRU`; `"Acidalia" "ice" "landing" "site" -site:wikipedia.org -site:researchgate.net` |
+| Q02 | I-02 and regional ice proposals | `Mars "53" "42" ice exploration site Deuteronilus Protonilus`; `site:hou.usra.edu explorationzone2015 "ice" "Deuteronilus"`; `Mars "53.75" "42.25"`; `Mars "54" "42" "ice" Vastitas`; `Mars Lyot northern plains ice prospecting Ismenius human landing site`; `site:hou.usra.edu "Ismenius" "ice" "exploration"`; `"53" "42" "ice" "Mars" landing`; `"Ismenius" "ice" "landing" site:hou.usra.edu` |
+| Q03 | Ice-method / proposal leads | `"Mars Water Ice Prospecting" "pdf" NASA`; `"Subsurface water ice mapping" "0" "60" "2021"` |
+| Q04 | D-03, Hellas | `Mars Hellas "82" dust storms landing site`; `"Hellas" "explorationzone2015"`; `"Mars" "82.75" dust`; `Hellas basin dust monitoring terrain landing site study eastern floor`; `"Geologic map" "Eastern Hellas" "37.5" "47.5"`; `"Hellas" "dust" "46" "83" study`; `"Hellas" "dust" "82" "46" Mars operations` |
+| Q05 | D-04, Elysium/Cerberus | `Mars "154" "8" Elysium dust landing site`; `"Elysium" "explorationzone2015"`; `"Mars" "154.25" dust`; `Elysium Cerberus plains dust monitoring deposition study landing site 150 east`; `"Elysium" "dust" "154" study` |
+| Q06 | Explicit surrounding-area queries | `Mars northern plains Vastitas Borealis eastern Acidalia shallow ice prospecting site 50 60 north 0 10 east`; `Mars Lyot Ismenius Lacus northern plains 50 60 north 40 east ice resource landing proposal`; `Mars eastern Hellas Planitia dust column terrain operations 40 50 south 80 90 east site`; `Mars Cerberus Elysium Planitia 5 10 north 150 160 east dust monitoring operations proposal` |
+
+Q01/Q02 returned regional leads, including N1/N2/N4 and a 2025 Acidalia rampart-crater abstract; no exact same-use site was verified. Q03 returned Phlegra-focused prospecting reports and SWIM; Phlegra reports were screened as different-region leads and were not used to assign a site overlap. Q04 returned N6/N7/N8. Q05/Q06 returned N9/N10/N11/N12. Literal coordinate results were often unrelated numerical matches. The source table records what was inspected beyond search output.
+
+Additional bounded source inspection: Deuteronilus 1033, Protonilus 1053, Eastern Hellas 1038, Ismenius Cavus 1027 and Apollinaris Sulci 1043 abstracts were opened. The latter two did not establish overlap with these candidates. LPSC 2025 abstract 2282 was inspected as regional cryosphere research; its individual crater polygons were not checked. The 2024 Tianwen-3 paper `10.1029/2024EA003634` was reopened as a dust-operations precedent; no new exact candidate overlap was established. SWIM pilot and northern-hemisphere product pages were reviewed for domain context, without treating different releases as interchangeable. No complete workshop abstract inventory, ADS/Scopus search, non-English review, instrument-image catalog search or systematic citation chaining was performed.
+
+Access limitations: the 2015 program page could not be retrieved; USGS SIM 3096 and Astropedia direct access returned 403; the 2011 USGS mapping abstract-volume request timed out; a NASA-hosted Cerberus landing abstract request timed out; a Hellas dust-dynamics publisher page returned 403. The USGS mirror of Geissler failed, but publisher full text was accessible. Wolfe publisher access initially failed and succeeded on retry. These failures were not interpreted as absent prior work. No conclusions depend on inaccessible full-map units or unseen supplements.
+
+## Remaining work and handoff checklist
+
+- [x] Reuse the prior 15-point review and supplied ice follow-up instead of presenting them as new work.
+- [x] Check all four fixed Mars IDs with regional names, surrounding-area terms and use keywords.
+- [x] Separate observations, regional research and explicit site proposals; record source scope and access failures.
+- [x] Record nominal boxes and bounded spatial comparisons; no novelty clearance from center mismatch.
+- [ ] Obtain actual alternative EZ/ROI, changed-surface and EMIRS ROI geometry where overlap is unresolved. Normalize coordinate conventions before formal intersections.
+- [ ] Complete a broader modern same-use proposal inventory before any first-use or understudied claim.
+- [ ] Team 1 to evaluate the regional purpose precedents, particularly the Elysium dust/terrain precedent. No exact duplicate requiring automatic replacement is established; keep/change decisions belong to Team 1.
+- [x] Read Team 1's first candidate from its uploaded branch and audit EARTH-UV-001 under its original ID, coordinates and purpose.
+- [ ] **Team 1 decision pending:** University Valley has existing drilling/segmented thermal-control use. Retain as a known reference with a precise additional protocol, or revise through Team 1's process. W-vicinity bounds and exact full-protocol overlap remain unresolved.
+- [ ] **Waiting for Team 1 additions:** Earth candidates for I-02, D-03 and D-04 in `outputs/research/team1_earth_analog_candidates.csv`. Require fixed IDs, coordinates, footprints, intended tests and original evidence links.
+
+Companion machine-readable file: [team2_novelty_audit.csv](../../outputs/research/team2_novelty_audit.csv), four Mars records and one Earth record. `novelty_cleared=false` is a research status, not a rejection of the candidate's future usefulness.
+
+Verification: the original four Mars IDs/coordinates were checked against the repository novelty CSV and supplied workbook. Phase 2 checks cover the appended Earth record against the pinned Team 1 CSV, exact preservation of its purpose text, distinct Earth/Mars coordinate fields, unchanged prior Mars findings, CSV structure, source-reference completeness and local report links. Numeric distances were independently calculated as described above. Only the two Team 2 deliverables were written. No `analog/`, ranking, Team 1 file, total workbook, README or website change was made. OpenAI Codex assisted literature screening, geometric context calculations and reporting; every external scientific claim is tied to the inspected source scope above.

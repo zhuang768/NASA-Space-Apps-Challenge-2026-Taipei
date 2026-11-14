@@ -1,0 +1,8 @@
+{
+  "authoring": "Artifact Tool for workbook, all non-raw tables, formulas, table layout and bounded previews",
+  "raw_serialization_fallback": "Standard-library ZIP/XML streaming for the MEDA raw worksheet only",
+  "reason": "Full 3.35-million-value raw worksheet exceeded the Node 4 GiB heap at XLSX serialization (exit 134). Raw serialization unavailable at this scale in the authoring tool.",
+  "text_ingress_fix": "Set number format @ before writing every text column; targeted API probe confirmed exact ISO microseconds/timezone preservation.",
+  "data_policy": "All source rows retained. Raw data and scientific scoring code unchanged.",
+  "verification": "Independent source-to-bundle and workbook-to-bundle full-cell checks, plus visual sheet review."
+}

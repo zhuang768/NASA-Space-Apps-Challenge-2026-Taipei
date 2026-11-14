@@ -1,0 +1,14 @@
+{
+  "moves": [
+    {
+      "from": "docs/ice_candidate_followup_2026-11-14.md",
+      "to": "docs/research/ice_candidate_followup/README.md"
+    },
+    {
+      "from": "scripts/audit_ice_candidates.py",
+      "to": "scripts/research/audit_ice_candidates.py"
+    }
+  ],
+  "metadata_path_update": "outputs/research/ice_candidate_followup/search_scope.json",
+  "numeric_sources_unchanged": true
+}

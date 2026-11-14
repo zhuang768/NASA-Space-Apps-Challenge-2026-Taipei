@@ -1,0 +1,15 @@
+{
+  "checked_taipei": "2026-11-14T16:37:49.803825+08:00",
+  "source_sha256": "a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731",
+  "status": "PASS",
+  "reviewed_sheet_samples": 24,
+  "background": "white",
+  "text": "black Arial 11",
+  "body_row_height_pt": 20,
+  "header_row_height_pt": 48,
+  "rechecked_after_header_adjustment": [
+    "Mars Discovery",
+    "Earth Terrain Ranks"
+  ],
+  "note": "Bounded samples use the saved workbook values and formatting; complete data preservation verified separately."
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0954102019000269/resource/name/S0954102019000269sup001.pdf",
+  "retrieval_date": "2026-11-14",
+  "retrieved_utc": null,
+  "verified_utc": "2026-11-14T12:27:07.922270+00:00",
+  "sha256": "20fe70f574bc394f05f0c720809f80a9602ac73f6ede34d322ea816cf25590d9",
+  "bytes": 1165179,
+  "method": "HTTPS download via managed Node runtime; original PDF bytes, no OCR rewrite",
+  "source_version": "published 2019 source",
+  "download_seconds": null
+}

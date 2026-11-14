@@ -1,0 +1,85 @@
+{
+  "checked_utc": "2026-11-14T07:16:47.981362+00:00",
+  "candidate_ids": [
+    "I-01",
+    "I-02"
+  ],
+  "novelty_status": "unchecked_exact_site",
+  "engines": [
+    "system2_search_query",
+    "system1_search_query"
+  ],
+  "queries": [
+    "\"54\" \"1\" \"Mars\" \"ice\" Acidalia landing",
+    "\"53\" \"42\" Mars ice landing ISRU",
+    "\"SWIM\" \"0–1\" \"Equation\" \"2025\"",
+    "Mars \"ice\" \"landing\" \"54\" \"Acidalia\"",
+    "Mars \"ice\" \"landing\" \"53\" \"42\"",
+    "\"SWIM\" \"2025\" \"Refined Mapping\" ice",
+    "Mars \"Acidalia\" \"ISRU\" ice landing site 2024 2025 2026",
+    "Mars \"Protonilus\" \"ice\" \"landing\" 2025",
+    "Mars \"54.25\" ice \"1.25\"",
+    "Mars \"53.75\" \"42.25\"",
+    "site:usgs.gov \"Thermal detectability of subsurface water ice\""
+  ],
+  "query_note": "Search engines return many irrelevant numeric-coordinate hits. Absence of a returned exact match is not a novelty test.",
+  "checked_sources": [
+    {
+      "url": "https://swim.psi.edu/SWIM2Products.php",
+      "scope": "Provider product definitions and shared inputs; no native component rasters downloaded."
+    },
+    {
+      "url": "https://ntrs.nasa.gov/citations/20160001040",
+      "scope": "Abstract and paper definitions, latitude limits, Appendix D and proposed-EZ browse map. Nominal envelope only, not actual polygons."
+    },
+    {
+      "url": "https://www.hou.usra.edu/meetings/explorationzone2015/pdf/1053.pdf",
+      "scope": "Protonilus center, ISRU purpose and nominal 100 km ROI radius."
+    },
+    {
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JE008724",
+      "scope": "Named AP-1/AP-8/AP-9 centers and imagery-footprint scope in introduction/methods; not all modern ISRU proposals."
+    },
+    {
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020JE006617",
+      "scope": "Figure 14 coordinates of two Protonilus ice-exposing craters; not an extraction-proposal catalog."
+    },
+    {
+      "url": "https://www.usgs.gov/publications/thermal-detectability-subsurface-water-ice-mars-a-comparative-analysis-subsurface",
+      "scope": "2026 author abstract only, thermal detection limits; SWIM23 not loaded."
+    },
+    {
+      "url": "https://www.usgs.gov/publications/refined-mapping-subsurface-water-ice-mars-support-future-missions",
+      "scope": "2025 author abstract only; newer geomorphic results not substituted into local SWIM2."
+    },
+    {
+      "url": "https://software.nasa.gov/software/LAR-19183-1",
+      "scope": "GIS catalog description only, not downloaded GIS."
+    },
+    {
+      "url": "https://www.nasa.gov/missions/nasa-seeks-ideas-for-where-on-mars-the-next-giant-leap-will-take-place/",
+      "scope": "Workshop hub and linked proposed-EZ map; not every abstract or presentation."
+    }
+  ],
+  "not_completed": [
+    "Download and intersect the full 2015 GIS EZ/ROI geometry.",
+    "Exhaustive post-2015 ISRU or ice-prospecting proposal catalog, including supplements and alternate coordinate conventions.",
+    "Native SWIM component-level coverage and independence audit.",
+    "Local CTX/HiRISE image or stereo-DTM hazard mapping at either candidate.",
+    "Independent radar/ice-exposure confirmation within either nominal cell.",
+    "Seasonal temperature, power, landing/ascent and excavation feasibility."
+  ],
+  "access_limits": [
+    "USGS Publications Warehouse thermal record returned 403; equivalent usgs.gov author abstract accessible.",
+    "USGS landing page abstracts available; IOP full-text not inspected.",
+    "Workshop full abstract compilation not inspected end-to-end; map/summary are not a complete polygon inventory."
+  ],
+  "decisions": {
+    "I-01": "retain_conditional_research_candidate; novelty unchecked",
+    "I-02": "retain_conditional_research_candidate; novelty unchecked",
+    "rerank": "none",
+    "earth_pairing": "not performed; retain four-theme Earth-to-Mars contract"
+  },
+  "handoff": "docs/research/ice_candidate_followup/README.md",
+  "desktop_status_sync": "blocked_by_filesystem; Desktop original read, Cursor section unchanged"
+}

@@ -1,0 +1,20 @@
+test_malformed_numeric_column_count_is_an_error (test_eh_adapter.EHExportTests.test_malformed_numeric_column_count_is_an_error) ... ok
+test_no_annual_3cm_and_pair_is_same_row (test_eh_adapter.EHExportTests.test_no_annual_3cm_and_pair_is_same_row) ... ok
+test_no_valid_pairs_retains_missing_summary (test_eh_adapter.EHExportTests.test_no_valid_pairs_retains_missing_summary) ... ok
+test_omitted_3cm_triad_stays_blank_and_supersaturated_RH_retained (test_eh_adapter.EHExportTests.test_omitted_3cm_triad_stays_blank_and_supersaturated_RH_retained) ... ok
+test_shifted_second_clock_blocks_export (test_eh_adapter.EHExportTests.test_shifted_second_clock_blocks_export) ... ok
+test_calendar_leap_year_and_single_month_do_not_create_annual_mean (test_pipeline.ScientificExtractionTests.test_calendar_leap_year_and_single_month_do_not_create_annual_mean) ... ok
+test_conflicting_duplicate_blocks_extraction (test_pipeline.ScientificExtractionTests.test_conflicting_duplicate_blocks_extraction) ... ok
+test_decimal_day_disagreement_blocks_time_series (test_pipeline.ScientificExtractionTests.test_decimal_day_disagreement_blocks_time_series) ... ok
+test_gap_count_and_no_interpolation (test_pipeline.ScientificExtractionTests.test_gap_count_and_no_interpolation) ... ok
+test_identical_duplicate_deduplicated (test_pipeline.ScientificExtractionTests.test_identical_duplicate_deduplicated) ... ok
+test_missing_scale_fill_and_range_are_separate (test_pipeline.ScientificExtractionTests.test_missing_scale_fill_and_range_are_separate) ... ok
+test_modified_file_fails_checksum (test_pipeline.ScientificExtractionTests.test_modified_file_fails_checksum) ... ok
+test_next_candidate_via_config_preserves_original_fields (test_pipeline.ScientificExtractionTests.test_next_candidate_via_config_preserves_original_fields) ... ok
+test_pair_uses_only_intersection_of_same_time_observations (test_pipeline.ScientificExtractionTests.test_pair_uses_only_intersection_of_same_time_observations) ... ok
+test_station_cannot_be_reassigned_to_other_coordinate (test_pipeline.ScientificExtractionTests.test_station_cannot_be_reassigned_to_other_coordinate) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.009s
+
+OK

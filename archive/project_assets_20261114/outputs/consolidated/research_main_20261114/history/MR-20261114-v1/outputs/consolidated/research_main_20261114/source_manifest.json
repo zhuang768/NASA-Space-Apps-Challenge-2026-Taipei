@@ -1,0 +1,157 @@
+{
+  "version": "MR-20261114-v1",
+  "checked_taipei": "2026-11-14T18:11:04.746040+08:00",
+  "remote_main_base": "cf72039a4bdfb94666c8df176de41eefd55f30ee",
+  "local_head_at_start": "9a6a02f1806cadbb3698478fe379b12d91e25f69",
+  "git_sync": {
+    "status": "blocked_local_metadata_write",
+    "attempt": "git fetch origin main",
+    "error": "cannot open .git/FETCH_HEAD: Operation not permitted",
+    "local_main_updated": false,
+    "remote_baseline_read_via_connector": true
+  },
+  "source_files": [
+    {
+      "source_path": "docs/site_discovery_brief.md",
+      "read_path": "docs/site_discovery_brief.md",
+      "role": "main_core_local_original",
+      "remote_ref": "5901362d6347c71e0d41b84ebbb35685ca7b3911",
+      "git_blob_sha": "48e6459facee980327357f363854d877362e0025",
+      "sha256": "0aaf9bef15278b7a41431b2e5f3fcab1ac5c35d99fffdcac0131bc3de5ec4318",
+      "byte_identical_to_remote": true
+    },
+    {
+      "source_path": "docs/mars_discovery_handoff.md",
+      "read_path": "docs/mars_discovery_handoff.md",
+      "role": "main_core_local_original",
+      "remote_ref": "5901362d6347c71e0d41b84ebbb35685ca7b3911",
+      "git_blob_sha": "66020fee9090b2b42e20d3b38d1231f7711112b1",
+      "sha256": "4f5f6b553e341a14dca557dadbdf3d857c7e78c76444e5649f00ab3609721fb9",
+      "byte_identical_to_remote": true
+    },
+    {
+      "source_path": "docs/mars_discovery_novelty_checks.csv",
+      "read_path": "docs/mars_discovery_novelty_checks.csv",
+      "role": "main_core_local_original",
+      "remote_ref": "5901362d6347c71e0d41b84ebbb35685ca7b3911",
+      "git_blob_sha": "505e4191898fa67d5bc9eb676f3cd7307a62a156",
+      "sha256": "8e12c53889a6f2ac7a52c6d38905c9039289c4a0014f3dc9d55fbd4aa6c1b960",
+      "byte_identical_to_remote": true
+    },
+    {
+      "source_path": "outputs/mars_discovery/mars_site_discovery.json",
+      "read_path": "outputs/mars_discovery/mars_site_discovery.json",
+      "role": "main_core_local_original",
+      "remote_ref": "5901362d6347c71e0d41b84ebbb35685ca7b3911",
+      "git_blob_sha": "e784af374986f1569d1d687a19d5a523890e5990",
+      "sha256": "3c45d6af3c786394b856e36a726eada5cf00118e7a0cec39b24a88e8f992b7e9",
+      "byte_identical_to_remote": true
+    },
+    {
+      "source_path": "outputs/mars_discovery/reporting_cards.json",
+      "read_path": "outputs/mars_discovery/reporting_cards.json",
+      "role": "main_core_local_original",
+      "remote_ref": "5901362d6347c71e0d41b84ebbb35685ca7b3911",
+      "git_blob_sha": "add822e1923c785f56541b5b49e5d5ee2ab547d3",
+      "sha256": "98c5e9589e1c6b2e2ba7a01103cd59af785178a4c8a3ac83770d6a258582c498",
+      "byte_identical_to_remote": true
+    },
+    {
+      "source_path": "outputs/research/ice_candidate_followup/native_audit.json",
+      "read_path": "outputs/research/ice_candidate_followup/native_audit.json",
+      "role": "local_uncommitted_original_or_workbook_snapshot",
+      "remote_ref": null,
+      "sha256": "5a914b5a5be79ce43b9d20fc5e1a396b7892646047eda56803d9275ff9cedb08",
+      "bytes": 22177,
+      "modified_taipei": "2026-11-14T15:14:56.442510+08:00"
+    },
+    {
+      "source_path": "docs/research/ice_candidate_followup/README.md",
+      "read_path": "docs/research/ice_candidate_followup/README.md",
+      "role": "local_uncommitted_original_or_workbook_snapshot",
+      "remote_ref": null,
+      "sha256": "dd0556061d4fb2a89b1f0bef89112ff597142016326071ac2305a55fc3cd3689",
+      "bytes": 9783,
+      "modified_taipei": "2026-11-14T15:37:02.043150+08:00"
+    },
+    {
+      "source_path": "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
+      "read_path": "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
+      "role": "local_uncommitted_original_or_workbook_snapshot",
+      "remote_ref": null,
+      "sha256": "a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731",
+      "bytes": 21402463,
+      "modified_taipei": "2026-11-14T16:36:38.995584+08:00"
+    },
+    {
+      "source_path": "docs/research/team1_earth_analog_matching.md",
+      "read_path": "outputs/consolidated/research_main_20261114/sources/team1/docs/research/team1_earth_analog_matching.md",
+      "role": "team1",
+      "remote_ref": "5efa19766342a5a9ab24fcbbe3dbf02ed05805a6",
+      "git_blob_sha": "e8412154d96342de6d40af12ad27ff1556d7a309",
+      "sha256": "dc25c4d609ed5b9332567758c25680e14b1b1fb332cac4cb9c9ab6356ea9c5f4",
+      "byte_identical_to_remote": true,
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/5efa19766342a5a9ab24fcbbe3dbf02ed05805a6/docs/research/team1_earth_analog_matching.md"
+    },
+    {
+      "source_path": "outputs/research/team1_earth_analog_candidates.csv",
+      "read_path": "outputs/consolidated/research_main_20261114/sources/team1/outputs/research/team1_earth_analog_candidates.csv",
+      "role": "team1",
+      "remote_ref": "5efa19766342a5a9ab24fcbbe3dbf02ed05805a6",
+      "git_blob_sha": "00b6fce6514dddfb38daeb7d3b9a1711aa35411b",
+      "sha256": "4a901e4bc2625dc516018cb468a35fdecf5574736b378545448059020db12e8b",
+      "byte_identical_to_remote": true,
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/5efa19766342a5a9ab24fcbbe3dbf02ed05805a6/outputs/research/team1_earth_analog_candidates.csv"
+    },
+    {
+      "source_path": "docs/research/team2_novelty_audit.md",
+      "read_path": "outputs/consolidated/research_main_20261114/sources/main/docs/research/team2_novelty_audit.md",
+      "role": "main",
+      "remote_ref": "5901362d6347c71e0d41b84ebbb35685ca7b3911",
+      "git_blob_sha": "42f5376bf4f7d1d8a9d0915c2154d47d0b8dad35",
+      "sha256": "0f78292761e11722927f616ce46b4c040cf68a535165015cc52dfacf32b4bd6b",
+      "byte_identical_to_remote": true,
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/5901362d6347c71e0d41b84ebbb35685ca7b3911/docs/research/team2_novelty_audit.md"
+    },
+    {
+      "source_path": "outputs/research/team2_novelty_audit.csv",
+      "read_path": "outputs/consolidated/research_main_20261114/sources/main/outputs/research/team2_novelty_audit.csv",
+      "role": "main",
+      "remote_ref": "5901362d6347c71e0d41b84ebbb35685ca7b3911",
+      "git_blob_sha": "8fb92986964b4d6134fe36d250de978f65707102",
+      "sha256": "e256b2d057be5f7ec91516c44e6b5c3b57fba050d4ca79b9fad4278985c70c2e",
+      "byte_identical_to_remote": true,
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/5901362d6347c71e0d41b84ebbb35685ca7b3911/outputs/research/team2_novelty_audit.csv"
+    },
+    {
+      "source_path": "docs/research/team1_earth_analog_matching.md",
+      "read_path": "outputs/consolidated/research_main_20261114/sources/main/docs/research/team1_earth_analog_matching.md",
+      "role": "latest_team1_main_supersedes_historical_branch",
+      "remote_ref": "cf72039a4bdfb94666c8df176de41eefd55f30ee",
+      "git_blob_sha": "4d07a0823842e7ce6b22919356bb16b7de09aa4f",
+      "sha256": "957e5be370c119f6c8bbfa5bba9f22b85b1b300a069a64ec46328eb261bac353",
+      "byte_identical_to_remote": true,
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/cf72039a4bdfb94666c8df176de41eefd55f30ee/docs/research/team1_earth_analog_matching.md"
+    },
+    {
+      "source_path": "outputs/research/team1_earth_analog_candidates.csv",
+      "read_path": "outputs/consolidated/research_main_20261114/sources/main/outputs/research/team1_earth_analog_candidates.csv",
+      "role": "latest_team1_main_supersedes_historical_branch",
+      "remote_ref": "cf72039a4bdfb94666c8df176de41eefd55f30ee",
+      "git_blob_sha": "ba33858abbf9d75881fb77e0bd41eba2b1430653",
+      "sha256": "2b2cbe0b60a2c49e743c58d389f6143b580f53d40cdff713918ac1517990dde7",
+      "byte_identical_to_remote": true,
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/cf72039a4bdfb94666c8df176de41eefd55f30ee/outputs/research/team1_earth_analog_candidates.csv"
+    }
+  ],
+  "excluded_current_inputs": [
+    "retired outputs/analysis ranking runs",
+    "retired outputs/analysis_scale10km rankings",
+    "historical Earth rankings retained only inside workbook snapshot"
+  ],
+  "no_external_paper_research_or_raw_processing_rerun": true,
+  "delivery_record": "delivery_status.json",
+  "remote_main_at_start": "5901362d6347c71e0d41b84ebbb35685ca7b3911",
+  "updated_taipei": "2026-11-14T18:16:59.986504+08:00",
+  "update_reason": "Latest main added TEAM1-ICE-REDO-v1, UV known-use decision and EARTH-002 I02 candidate."
+}

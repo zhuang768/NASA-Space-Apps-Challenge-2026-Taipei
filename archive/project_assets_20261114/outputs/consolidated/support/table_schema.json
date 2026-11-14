@@ -1,0 +1,3358 @@
+[
+  {
+    "name": "火星發現候選",
+    "title": "火星用途候選：完整24點與查核狀態",
+    "note": "原始順序與分數完整保留；15點有初查、4點有Reporting卡片。分數非信心或落地許可，未查者明示未查，firm-ground工程用途證據不足。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "candidate_id",
+        "label": "候選ID",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "purpose",
+        "label": "purpose",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "purpose_label",
+        "label": "purpose_label",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "original_order",
+        "label": "原始候選順序",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "lat",
+        "label": "緯度（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "lon",
+        "label": "東經（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "descriptor_score",
+        "label": "實驗性描述分數（非信心）",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "slope",
+        "label": "slope",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "relief",
+        "label": "relief",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "thermal_inertia",
+        "label": "thermal_inertia",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "ice_shallow",
+        "label": "ice_shallow",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust_cdod",
+        "label": "dust_cdod",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "review_status",
+        "label": "review_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "editorial_recommendation",
+        "label": "editorial_recommendation",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "review_note",
+        "label": "review_note",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "reporting_card_status",
+        "label": "reporting_card_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "intended_use",
+        "label": "intended_use",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "treatment",
+        "label": "treatment",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "weaknesses",
+        "label": "weaknesses",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "prohibited_claims",
+        "label": "prohibited_claims",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "novelty_status",
+        "label": "novelty_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_pointer",
+        "label": "來源JSON pointer",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "review_source",
+        "label": "review_source",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "card_source",
+        "label": "card_source",
+        "type": "text",
+        "width": 25
+      }
+    ],
+    "rows": 24
+  },
+  {
+    "name": "冰候選原生QA",
+    "title": "I-01／I-02 原生資料查核",
+    "note": "兩點未重新評分或排序。深淺SWIM共用輸入；通過缺值檢查不證明有可挖冰。2015名義區域檢查不是完整新穎性證明。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "candidate_id",
+        "label": "候選ID",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "lat",
+        "label": "緯度（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "lon",
+        "label": "東經（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "slope",
+        "label": "slope",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "relief",
+        "label": "relief",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "thermal_inertia",
+        "label": "thermal_inertia",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "ice_shallow",
+        "label": "ice_shallow",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust_cdod",
+        "label": "dust_cdod",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "stored_score_unchanged",
+        "label": "stored_score_unchanged",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "nominal_NS_km",
+        "label": "nominal_NS_km",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "nominal_EW_km",
+        "label": "nominal_EW_km",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_pointer",
+        "label": "來源JSON pointer",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "mola_native_cell.total_pixels",
+        "label": "mola_native_cell.total_pixels",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "mola_native_cell.valid_pixels",
+        "label": "mola_native_cell.valid_pixels",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "mola_native_cell.mean",
+        "label": "mola_native_cell.mean",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "mola_native_cell.min",
+        "label": "mola_native_cell.min",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "mola_native_cell.max",
+        "label": "mola_native_cell.max",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "mola_native_cell.std_population",
+        "label": "mola_native_cell.std_population",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "mola_native_cell_slopes.total_pixels",
+        "label": "mola_native_cell_slopes.total_pixels",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "mola_native_cell_slopes.valid_pixels",
+        "label": "mola_native_cell_slopes.valid_pixels",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "mola_native_cell_slopes.mean",
+        "label": "mola_native_cell_slopes.mean",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "mola_native_cell_slopes.min",
+        "label": "mola_native_cell_slopes.min",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "mola_native_cell_slopes.max",
+        "label": "mola_native_cell_slopes.max",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "mola_native_cell_slopes.std_population",
+        "label": "mola_native_cell_slopes.std_population",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "tes_native_non_infilled_cell.total_pixels",
+        "label": "tes_native_non_infilled_cell.total_pixels",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "tes_native_non_infilled_cell.valid_pixels",
+        "label": "tes_native_non_infilled_cell.valid_pixels",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "tes_native_non_infilled_cell.mean",
+        "label": "tes_native_non_infilled_cell.mean",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "tes_native_non_infilled_cell.min",
+        "label": "tes_native_non_infilled_cell.min",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "tes_native_non_infilled_cell.max",
+        "label": "tes_native_non_infilled_cell.max",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "tes_native_non_infilled_cell.std_population",
+        "label": "tes_native_non_infilled_cell.std_population",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "nominal_2015_EZ_screen.assumption",
+        "label": "nominal_2015_EZ_screen.assumption",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "nominal_2015_EZ_screen.minimum_cell_distance_to_50N_km",
+        "label": "nominal_2015_EZ_screen.minimum_cell_distance_to_50N_km",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "nominal_2015_EZ_screen.clearance_beyond_nominal_100km_radius_km",
+        "label": "nominal_2015_EZ_screen.clearance_beyond_nominal_100km_radius_km",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "nominal_2015_EZ_screen.interpretation",
+        "label": "nominal_2015_EZ_screen.interpretation",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "native_recomputed_minus_stored.slope",
+        "label": "native_recomputed_minus_stored.slope",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "native_recomputed_minus_stored.relief",
+        "label": "native_recomputed_minus_stored.relief",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "native_recomputed_minus_stored.thermal_inertia",
+        "label": "native_recomputed_minus_stored.thermal_inertia",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "native_recomputed_minus_stored.ice_shallow",
+        "label": "native_recomputed_minus_stored.ice_shallow",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "tes_mask_zero_pixels_excluded",
+        "label": "tes_mask_zero_pixels_excluded",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "swim_0_1m.coarsened_then_interpolated",
+        "label": "swim_0_1m.coarsened_then_interpolated",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "swim_0_1m.native.total_pixels",
+        "label": "swim_0_1m.native.total_pixels",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "swim_0_1m.native.valid_pixels",
+        "label": "swim_0_1m.native.valid_pixels",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "swim_0_1m.native.mean",
+        "label": "swim_0_1m.native.mean",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "swim_0_1m.native.min",
+        "label": "swim_0_1m.native.min",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "swim_0_1m.native.max",
+        "label": "swim_0_1m.native.max",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "swim_0_1m.native.std_population",
+        "label": "swim_0_1m.native.std_population",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "swim_1_5m_context_only.coarsened_then_interpolated",
+        "label": "swim_1_5m_context_only.coarsened_then_interpolated",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "swim_1_5m_context_only.native.total_pixels",
+        "label": "swim_1_5m_context_only.native.total_pixels",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "swim_1_5m_context_only.native.valid_pixels",
+        "label": "swim_1_5m_context_only.native.valid_pixels",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "swim_1_5m_context_only.native.mean",
+        "label": "swim_1_5m_context_only.native.mean",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "swim_1_5m_context_only.native.min",
+        "label": "swim_1_5m_context_only.native.min",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "swim_1_5m_context_only.native.max",
+        "label": "swim_1_5m_context_only.native.max",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "swim_1_5m_context_only.native.std_population",
+        "label": "swim_1_5m_context_only.native.std_population",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      }
+    ],
+    "rows": 2
+  },
+  {
+    "name": "地球候選",
+    "title": "地球候選：主分析與尺度敏感度",
+    "note": "兩版各36點；ID必須連同分析版本使用。POWER為2023–2024氣候背景，未參與地形排名。全部JSON細節另存JSON原值。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "run_id",
+        "label": "分析版本",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "window_km",
+        "label": "視窗大小（km）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "sample_spacing_km",
+        "label": "採樣間距（km）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "slope_stencil_km",
+        "label": "坡度差分尺度（km）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "candidate_key",
+        "label": "版本＋候選識別碼",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "lat",
+        "label": "緯度（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "lon",
+        "label": "東經（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "land_fraction",
+        "label": "land_fraction",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "slope_median_deg",
+        "label": "slope_median_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "slope_p90_deg",
+        "label": "slope_p90_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "relief_m",
+        "label": "relief_m",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "candidate_id",
+        "label": "候選ID",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "rank",
+        "label": "rank",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "mars_target",
+        "label": "火星參照區",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "terrain_distance",
+        "label": "地形描述距離（越小越近）",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "status",
+        "label": "status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "temperature_status",
+        "label": "temperature_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "water_ice_status",
+        "label": "water_ice_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "air_status",
+        "label": "air_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "logistics_status",
+        "label": "logistics_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "prior_analog_literature_status",
+        "label": "prior_analog_literature_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "has_power_context",
+        "label": "has_power_context",
+        "type": "boolean",
+        "width": 15
+      },
+      {
+        "key": "footprint_json",
+        "label": "footprint_json",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "slope_emphasis_raw_rank",
+        "label": "slope_emphasis_raw_rank",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "relief_emphasis_raw_rank",
+        "label": "relief_emphasis_raw_rank",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "earth_climate_status",
+        "label": "earth_climate_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "power_T2M_value",
+        "label": "power_T2M_value",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "power_T2M_unit",
+        "label": "power_T2M_unit",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "power_T2M_valid_months",
+        "label": "power_T2M_valid_months",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "power_T2M_expected_months",
+        "label": "power_T2M_expected_months",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "power_T2M_MAX_value",
+        "label": "power_T2M_MAX_value",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "power_T2M_MAX_unit",
+        "label": "power_T2M_MAX_unit",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "power_T2M_MAX_valid_months",
+        "label": "power_T2M_MAX_valid_months",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "power_T2M_MAX_expected_months",
+        "label": "power_T2M_MAX_expected_months",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "power_T2M_MIN_value",
+        "label": "power_T2M_MIN_value",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "power_T2M_MIN_unit",
+        "label": "power_T2M_MIN_unit",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "power_T2M_MIN_valid_months",
+        "label": "power_T2M_MIN_valid_months",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "power_T2M_MIN_expected_months",
+        "label": "power_T2M_MIN_expected_months",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "power_PRECTOTCORR_value",
+        "label": "power_PRECTOTCORR_value",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "power_PRECTOTCORR_unit",
+        "label": "power_PRECTOTCORR_unit",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "power_PRECTOTCORR_valid_months",
+        "label": "power_PRECTOTCORR_valid_months",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "power_PRECTOTCORR_expected_months",
+        "label": "power_PRECTOTCORR_expected_months",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "power_WS10M_value",
+        "label": "power_WS10M_value",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "power_WS10M_unit",
+        "label": "power_WS10M_unit",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "power_WS10M_valid_months",
+        "label": "power_WS10M_valid_months",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "power_WS10M_expected_months",
+        "label": "power_WS10M_expected_months",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_pointer",
+        "label": "來源JSON pointer",
+        "type": "text",
+        "width": 65
+      }
+    ],
+    "rows": 72
+  },
+  {
+    "name": "火星新穎性查核",
+    "title": "火星新穎性查核",
+    "note": "15點的既有查核紀錄；無命中不證明新穎性，所有精確同用途查核仍有範圍限制。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "candidate_id",
+        "label": "候選ID",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "purpose",
+        "label": "purpose",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "original_rank",
+        "label": "original_rank",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "latitude_deg",
+        "label": "latitude_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "longitude_east_signed_deg",
+        "label": "longitude_east_signed_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "longitude_east_0_360_deg",
+        "label": "longitude_east_0_360_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "stored_descriptor_score",
+        "label": "stored_descriptor_score",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "slope",
+        "label": "slope",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "relief",
+        "label": "relief",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "thermal_inertia",
+        "label": "thermal_inertia",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "ice_shallow",
+        "label": "ice_shallow",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust_cdod",
+        "label": "dust_cdod",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "same_purpose_exact_site_status",
+        "label": "same_purpose_exact_site_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "regional_prior_art_status",
+        "label": "regional_prior_art_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "novelty_cleared",
+        "label": "novelty_cleared",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "editorial_recommendation",
+        "label": "editorial_recommendation",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "review_note",
+        "label": "review_note",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "coordinate_query",
+        "label": "coordinate_query",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "coordinate_query_outcome",
+        "label": "coordinate_query_outcome",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "regional_query_scope",
+        "label": "regional_query_scope",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_refs",
+        "label": "source_refs",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_urls",
+        "label": "source_urls",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "search_date_taipei",
+        "label": "search_date_taipei",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "tian_utopia_center_distance_km",
+        "label": "tian_utopia_center_distance_km",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "inside_tian_2000km_monitoring_circle",
+        "label": "inside_tian_2000km_monitoring_circle",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "protonilus_ez_center_distance_km",
+        "label": "protonilus_ez_center_distance_km",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "insight_center_distance_km",
+        "label": "insight_center_distance_km",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_row",
+        "label": "來源起始行號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      }
+    ],
+    "rows": 15
+  },
+  {
+    "name": "火星參照區",
+    "title": "既有三個火星參照區的100 km摘要",
+    "note": "Jezero/Gale/Arcadia既有參照。熱慣量不是溫度／硬度；SWIM不是含冰量；塵埃是3°背景。不可與發現候選0.5°單元混用。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "mars_target",
+        "label": "火星參照區",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "lat",
+        "label": "緯度（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "lon",
+        "label": "東經（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "label",
+        "label": "label",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "coordinate_source",
+        "label": "coordinate_source",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "body",
+        "label": "body",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "window_km",
+        "label": "視窗大小（km）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "terrain.status",
+        "label": "terrain.status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "terrain.slope_median_deg",
+        "label": "terrain.slope_median_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "terrain.slope_p90_deg",
+        "label": "terrain.slope_p90_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "terrain.relief_m",
+        "label": "terrain.relief_m",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "terrain.sample_spacing_km",
+        "label": "terrain.sample_spacing_km",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "terrain.slope_stencil_km",
+        "label": "terrain.slope_stencil_km",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "terrain.radius_m",
+        "label": "terrain.radius_m",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "thermal_inertia.native_cells_in_window",
+        "label": "thermal_inertia.native_cells_in_window",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "thermal_inertia.valid_native_cells",
+        "label": "thermal_inertia.valid_native_cells",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "thermal_inertia.valid_fraction",
+        "label": "thermal_inertia.valid_fraction",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "thermal_inertia.aggregation",
+        "label": "thermal_inertia.aggregation",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "thermal_inertia.status",
+        "label": "thermal_inertia.status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "thermal_inertia.mean",
+        "label": "thermal_inertia.mean",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "thermal_inertia.median",
+        "label": "thermal_inertia.median",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "thermal_inertia.min",
+        "label": "thermal_inertia.min",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "thermal_inertia.max",
+        "label": "thermal_inertia.max",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "thermal_inertia.units",
+        "label": "thermal_inertia.units",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "thermal_inertia.infilled_pixels_excluded",
+        "label": "thermal_inertia.infilled_pixels_excluded",
+        "type": "boolean",
+        "width": 15
+      },
+      {
+        "key": "thermal_inertia.is_temperature",
+        "label": "thermal_inertia.is_temperature",
+        "type": "boolean",
+        "width": 15
+      },
+      {
+        "key": "thermal_inertia.is_hardness_measurement",
+        "label": "thermal_inertia.is_hardness_measurement",
+        "type": "boolean",
+        "width": 15
+      },
+      {
+        "key": "thermal_inertia.with_infilled_pixels.native_cells_in_window",
+        "label": "thermal_inertia.with_infilled_pixels.native_cells_in_window",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "thermal_inertia.with_infilled_pixels.valid_native_cells",
+        "label": "thermal_inertia.with_infilled_pixels.valid_native_cells",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "thermal_inertia.with_infilled_pixels.valid_fraction",
+        "label": "thermal_inertia.with_infilled_pixels.valid_fraction",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "thermal_inertia.with_infilled_pixels.aggregation",
+        "label": "thermal_inertia.with_infilled_pixels.aggregation",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "thermal_inertia.with_infilled_pixels.status",
+        "label": "thermal_inertia.with_infilled_pixels.status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "thermal_inertia.with_infilled_pixels.mean",
+        "label": "thermal_inertia.with_infilled_pixels.mean",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "thermal_inertia.with_infilled_pixels.median",
+        "label": "thermal_inertia.with_infilled_pixels.median",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "thermal_inertia.with_infilled_pixels.min",
+        "label": "thermal_inertia.with_infilled_pixels.min",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "thermal_inertia.with_infilled_pixels.max",
+        "label": "thermal_inertia.with_infilled_pixels.max",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "ice.0_1m.native_cells_in_window",
+        "label": "ice.0_1m.native_cells_in_window",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "ice.0_1m.valid_native_cells",
+        "label": "ice.0_1m.valid_native_cells",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "ice.0_1m.valid_fraction",
+        "label": "ice.0_1m.valid_fraction",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "ice.0_1m.aggregation",
+        "label": "ice.0_1m.aggregation",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "ice.0_1m.status",
+        "label": "ice.0_1m.status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "ice.0_1m.mean",
+        "label": "ice.0_1m.mean",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "ice.0_1m.median",
+        "label": "ice.0_1m.median",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "ice.0_1m.min",
+        "label": "ice.0_1m.min",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "ice.0_1m.max",
+        "label": "ice.0_1m.max",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "ice.0_1m.units",
+        "label": "ice.0_1m.units",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "ice.0_1m.quantity",
+        "label": "ice.0_1m.quantity",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "ice.0_1m.is_ice_amount",
+        "label": "ice.0_1m.is_ice_amount",
+        "type": "boolean",
+        "width": 15
+      },
+      {
+        "key": "ice.0_1m.is_probability",
+        "label": "ice.0_1m.is_probability",
+        "type": "boolean",
+        "width": 15
+      },
+      {
+        "key": "ice.0_1m.source_crs",
+        "label": "ice.0_1m.source_crs",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "ice.1_5m.native_cells_in_window",
+        "label": "ice.1_5m.native_cells_in_window",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "ice.1_5m.valid_native_cells",
+        "label": "ice.1_5m.valid_native_cells",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "ice.1_5m.valid_fraction",
+        "label": "ice.1_5m.valid_fraction",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "ice.1_5m.aggregation",
+        "label": "ice.1_5m.aggregation",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "ice.1_5m.status",
+        "label": "ice.1_5m.status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "ice.1_5m.mean",
+        "label": "ice.1_5m.mean",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "ice.1_5m.median",
+        "label": "ice.1_5m.median",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "ice.1_5m.min",
+        "label": "ice.1_5m.min",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "ice.1_5m.max",
+        "label": "ice.1_5m.max",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "ice.1_5m.units",
+        "label": "ice.1_5m.units",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "ice.1_5m.quantity",
+        "label": "ice.1_5m.quantity",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "ice.1_5m.is_ice_amount",
+        "label": "ice.1_5m.is_ice_amount",
+        "type": "boolean",
+        "width": 15
+      },
+      {
+        "key": "ice.1_5m.is_probability",
+        "label": "ice.1_5m.is_probability",
+        "type": "boolean",
+        "width": 15
+      },
+      {
+        "key": "ice.1_5m.source_crs",
+        "label": "ice.1_5m.source_crs",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "dust.dust_my34.status",
+        "label": "dust.dust_my34.status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "dust.dust_my34.mean_cdodtot",
+        "label": "dust.dust_my34.mean_cdodtot",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my34.p95_cdodtot",
+        "label": "dust.dust_my34.p95_cdodtot",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my34.max_cdodtot",
+        "label": "dust.dust_my34.max_cdodtot",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my34.peak_sol_of_year",
+        "label": "dust.dust_my34.peak_sol_of_year",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my34.peak_Ls_deg",
+        "label": "dust.dust_my34.peak_Ls_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my34.valid_reconstructed_sols",
+        "label": "dust.dust_my34.valid_reconstructed_sols",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my34.expected_reconstructed_sols",
+        "label": "dust.dust_my34.expected_reconstructed_sols",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my34.units",
+        "label": "dust.dust_my34.units",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "dust.dust_my34.wavelength_micron",
+        "label": "dust.dust_my34.wavelength_micron",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my34.optical_quantity",
+        "label": "dust.dust_my34.optical_quantity",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "dust.dust_my34.native_cell_lat",
+        "label": "dust.dust_my34.native_cell_lat",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my34.native_cell_lon",
+        "label": "dust.dust_my34.native_cell_lon",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my34.reconstructed",
+        "label": "dust.dust_my34.reconstructed",
+        "type": "boolean",
+        "width": 15
+      },
+      {
+        "key": "dust.dust_my34.reliability_interpretation",
+        "label": "dust.dust_my34.reliability_interpretation",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "dust.dust_my34.seasons_by_Ls.0_90.valid_sols",
+        "label": "dust.dust_my34.seasons_by_Ls.0_90.valid_sols",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my34.seasons_by_Ls.0_90.mean_cdodtot",
+        "label": "dust.dust_my34.seasons_by_Ls.0_90.mean_cdodtot",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my34.seasons_by_Ls.90_180.valid_sols",
+        "label": "dust.dust_my34.seasons_by_Ls.90_180.valid_sols",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my34.seasons_by_Ls.90_180.mean_cdodtot",
+        "label": "dust.dust_my34.seasons_by_Ls.90_180.mean_cdodtot",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my34.seasons_by_Ls.180_270.valid_sols",
+        "label": "dust.dust_my34.seasons_by_Ls.180_270.valid_sols",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my34.seasons_by_Ls.180_270.mean_cdodtot",
+        "label": "dust.dust_my34.seasons_by_Ls.180_270.mean_cdodtot",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my34.seasons_by_Ls.270_360.valid_sols",
+        "label": "dust.dust_my34.seasons_by_Ls.270_360.valid_sols",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my34.seasons_by_Ls.270_360.mean_cdodtot",
+        "label": "dust.dust_my34.seasons_by_Ls.270_360.mean_cdodtot",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my34.reliability_mean",
+        "label": "dust.dust_my34.reliability_mean",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my35.status",
+        "label": "dust.dust_my35.status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "dust.dust_my35.mean_cdodtot",
+        "label": "dust.dust_my35.mean_cdodtot",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my35.p95_cdodtot",
+        "label": "dust.dust_my35.p95_cdodtot",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my35.max_cdodtot",
+        "label": "dust.dust_my35.max_cdodtot",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my35.peak_sol_of_year",
+        "label": "dust.dust_my35.peak_sol_of_year",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my35.peak_Ls_deg",
+        "label": "dust.dust_my35.peak_Ls_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my35.valid_reconstructed_sols",
+        "label": "dust.dust_my35.valid_reconstructed_sols",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my35.expected_reconstructed_sols",
+        "label": "dust.dust_my35.expected_reconstructed_sols",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my35.units",
+        "label": "dust.dust_my35.units",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "dust.dust_my35.wavelength_micron",
+        "label": "dust.dust_my35.wavelength_micron",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my35.optical_quantity",
+        "label": "dust.dust_my35.optical_quantity",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "dust.dust_my35.native_cell_lat",
+        "label": "dust.dust_my35.native_cell_lat",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my35.native_cell_lon",
+        "label": "dust.dust_my35.native_cell_lon",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my35.reconstructed",
+        "label": "dust.dust_my35.reconstructed",
+        "type": "boolean",
+        "width": 15
+      },
+      {
+        "key": "dust.dust_my35.reliability_interpretation",
+        "label": "dust.dust_my35.reliability_interpretation",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "dust.dust_my35.seasons_by_Ls.0_90.valid_sols",
+        "label": "dust.dust_my35.seasons_by_Ls.0_90.valid_sols",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my35.seasons_by_Ls.0_90.mean_cdodtot",
+        "label": "dust.dust_my35.seasons_by_Ls.0_90.mean_cdodtot",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my35.seasons_by_Ls.90_180.valid_sols",
+        "label": "dust.dust_my35.seasons_by_Ls.90_180.valid_sols",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my35.seasons_by_Ls.90_180.mean_cdodtot",
+        "label": "dust.dust_my35.seasons_by_Ls.90_180.mean_cdodtot",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my35.seasons_by_Ls.180_270.valid_sols",
+        "label": "dust.dust_my35.seasons_by_Ls.180_270.valid_sols",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my35.seasons_by_Ls.180_270.mean_cdodtot",
+        "label": "dust.dust_my35.seasons_by_Ls.180_270.mean_cdodtot",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my35.seasons_by_Ls.270_360.valid_sols",
+        "label": "dust.dust_my35.seasons_by_Ls.270_360.valid_sols",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "dust.dust_my35.seasons_by_Ls.270_360.mean_cdodtot",
+        "label": "dust.dust_my35.seasons_by_Ls.270_360.mean_cdodtot",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "dust.dust_my35.reliability_mean",
+        "label": "dust.dust_my35.reliability_mean",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "surface_temperature.status",
+        "label": "surface_temperature.status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "surface_temperature.reason",
+        "label": "surface_temperature.reason",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_pointer",
+        "label": "來源JSON pointer",
+        "type": "text",
+        "width": 65
+      }
+    ],
+    "rows": 3
+  },
+  {
+    "name": "地球視窗全量",
+    "title": "地球視窗全量",
+    "note": "兩版皆為100 km視窗；4/10 km是採樣間距。完整CSV列，非新增評分。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "run_id",
+        "label": "分析版本",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "window_km",
+        "label": "視窗大小（km）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "sample_spacing_km",
+        "label": "採樣間距（km）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "slope_stencil_km",
+        "label": "坡度差分尺度（km）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "lat",
+        "label": "緯度（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "lon",
+        "label": "東經（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "land_fraction",
+        "label": "land_fraction",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "slope_median_deg",
+        "label": "slope_median_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "slope_p90_deg",
+        "label": "slope_p90_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "relief_m",
+        "label": "relief_m",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "jezero_terrain_distance",
+        "label": "jezero_terrain_distance",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "gale_terrain_distance",
+        "label": "gale_terrain_distance",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "arcadia_terrain_distance",
+        "label": "arcadia_terrain_distance",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_row",
+        "label": "來源起始行號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      }
+    ],
+    "rows": 5212
+  },
+  {
+    "name": "地球排序明細",
+    "title": "地球排序明細",
+    "note": "保留原始target與距離欄名；terrain_distance越小越近，不是信心或百分比。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "run_id",
+        "label": "分析版本",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "window_km",
+        "label": "視窗大小（km）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "sample_spacing_km",
+        "label": "採樣間距（km）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "slope_stencil_km",
+        "label": "坡度差分尺度（km）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "mars_target",
+        "label": "火星參照區",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_distance_column",
+        "label": "source_distance_column",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "terrain_distance",
+        "label": "地形描述距離（越小越近）",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "lat",
+        "label": "緯度（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "lon",
+        "label": "東經（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "slope_median_deg",
+        "label": "slope_median_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "slope_p90_deg",
+        "label": "slope_p90_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "relief_m",
+        "label": "relief_m",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "arcadia_terrain_distance",
+        "label": "arcadia_terrain_distance",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "slope_emphasis_raw_rank",
+        "label": "slope_emphasis_raw_rank",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "relief_emphasis_raw_rank",
+        "label": "relief_emphasis_raw_rank",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_row",
+        "label": "來源起始行號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "gale_terrain_distance",
+        "label": "gale_terrain_distance",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "jezero_terrain_distance",
+        "label": "jezero_terrain_distance",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      }
+    ],
+    "rows": 15636
+  },
+  {
+    "name": "地球POWER氣候",
+    "title": "NASA POWER 2023–2024月值與年值",
+    "note": "YYYY13是年值，month留空，不是第13個月，不能與月值混合平均。T2M是2m氣溫，不是MODIS地表溫度。原始fill值保留並列source_fill_value。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "lat",
+        "label": "緯度（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "lon",
+        "label": "東經（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "period_key",
+        "label": "period_key",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "period_type",
+        "label": "period_type",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "year",
+        "label": "year",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "month",
+        "label": "month",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "source_fill_value",
+        "label": "source_fill_value",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "time_standard",
+        "label": "time_standard",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "PRECTOTCORR",
+        "label": "PRECTOTCORR",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "PRECTOTCORR_unit",
+        "label": "PRECTOTCORR_unit",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "T2M",
+        "label": "T2M",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "T2M_unit",
+        "label": "T2M_unit",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "T2M_MAX",
+        "label": "T2M_MAX",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "T2M_MAX_unit",
+        "label": "T2M_MAX_unit",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "T2M_MIN",
+        "label": "T2M_MIN",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "T2M_MIN_unit",
+        "label": "T2M_MIN_unit",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "WS10M",
+        "label": "WS10M",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "WS10M_unit",
+        "label": "WS10M_unit",
+        "type": "text",
+        "width": 25
+      }
+    ],
+    "rows": 156
+  },
+  {
+    "name": "火星塵埃序列",
+    "title": "火星塵埃序列",
+    "note": "MY34/MY35、9.3μm吸收CDOD。cdodtot/cdod610/cdodrel保留各自意義。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "mars_target",
+        "label": "火星參照區",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "mars_year",
+        "label": "mars_year",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "Time",
+        "label": "Time",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "SOY",
+        "label": "SOY",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "Ls",
+        "label": "Ls",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "cdodtot",
+        "label": "cdodtot",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "cdod610",
+        "label": "cdod610",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "cdodrel",
+        "label": "cdodrel",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_row",
+        "label": "來源起始行號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      }
+    ],
+    "rows": 4014
+  },
+  {
+    "name": "火星區域溫度背景",
+    "title": "火星區域溫度背景：完整864個季節格",
+    "note": "5°格網、MY29–36、每年36個Ls格；缺值保留null。03/15時取樣不是同一sol日極值；metadata incomplete、scoring_eligible=false。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "mars_target",
+        "label": "火星參照區",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "requested_lat",
+        "label": "requested_lat",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "requested_lon",
+        "label": "requested_lon",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "selected_lat",
+        "label": "selected_lat",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "selected_lon",
+        "label": "selected_lon",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "mars_year",
+        "label": "mars_year",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "Ls_coordinate_deg",
+        "label": "Ls_coordinate_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "night_03_K",
+        "label": "night_03_K",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "day_15_K",
+        "label": "day_15_K",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "sampled_contrast_K",
+        "label": "sampled_contrast_K",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "status",
+        "label": "status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "scoring_eligible",
+        "label": "scoring_eligible",
+        "type": "boolean",
+        "width": 15
+      },
+      {
+        "key": "quantity",
+        "label": "quantity",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "units",
+        "label": "units",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_pointer",
+        "label": "來源JSON pointer",
+        "type": "text",
+        "width": 65
+      }
+    ],
+    "rows": 864
+  },
+  {
+    "name": "漫遊車暫定溫度",
+    "title": "漫遊車暫定溫度",
+    "note": "原始72行provisional資料，未完成品質資格確認；非全球或候選區溫度。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "ltst_sol",
+        "label": "ltst_sol",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "ltst_hour",
+        "label": "ltst_hour",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "temperature_K",
+        "label": "temperature_K",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "reported_uncertainty_K",
+        "label": "reported_uncertainty_K",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "samples",
+        "label": "samples",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_row",
+        "label": "來源起始行號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      }
+    ],
+    "rows": 72
+  },
+  {
+    "name": "研究需求",
+    "title": "研究需求",
+    "note": "原始CSV全部行；保留原欄與來源行號，空欄為null。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "id",
+        "label": "id",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "question",
+        "label": "question",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "condition_type",
+        "label": "condition_type",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "required_conditions",
+        "label": "required_conditions",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "decision_rule",
+        "label": "decision_rule",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "status",
+        "label": "status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "evidence",
+        "label": "evidence",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "limitation",
+        "label": "limitation",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_row",
+        "label": "來源起始行號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      }
+    ],
+    "rows": 5
+  },
+  {
+    "name": "報告主張",
+    "title": "報告主張",
+    "note": "原始CSV全部行；保留原欄與來源行號，空欄為null。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "id",
+        "label": "id",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "english_claim",
+        "label": "english_claim",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "basis_type",
+        "label": "basis_type",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "evidence",
+        "label": "evidence",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "boundary",
+        "label": "boundary",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_row",
+        "label": "來源起始行號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      }
+    ],
+    "rows": 8
+  },
+  {
+    "name": "提交缺口",
+    "title": "提交缺口",
+    "note": "原始CSV全部行；保留原欄與來源行號，空欄為null。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "id",
+        "label": "id",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "priority",
+        "label": "priority",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "category",
+        "label": "category",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "item",
+        "label": "item",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "current_status",
+        "label": "current_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "evidence",
+        "label": "evidence",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "completion_condition",
+        "label": "completion_condition",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "suggested_owner",
+        "label": "suggested_owner",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_row",
+        "label": "來源起始行號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      }
+    ],
+    "rows": 53
+  },
+  {
+    "name": "Oytag文獻座標",
+    "title": "Oytag文獻座標",
+    "note": "原始CSV全部行；保留原欄與來源行號，空欄為null。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "sample_id",
+        "label": "sample_id",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "latitude_deg",
+        "label": "latitude_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "longitude_deg",
+        "label": "longitude_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "reported_rock_type",
+        "label": "reported_rock_type",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_doi",
+        "label": "source_doi",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_locator",
+        "label": "source_locator",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "coordinate_datum",
+        "label": "coordinate_datum",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_row",
+        "label": "來源起始行號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      }
+    ],
+    "rows": 3
+  },
+  {
+    "name": "Oytag補充座標",
+    "title": "Oytag補充座標",
+    "note": "原始CSV全部行；保留原欄與來源行號，空欄為null。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "parent_sample_id",
+        "label": "parent_sample_id",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "latitude_deg",
+        "label": "latitude_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "longitude_deg",
+        "label": "longitude_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "sample_type",
+        "label": "sample_type",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "metadata_excel_row",
+        "label": "metadata_excel_row",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "source_sheet",
+        "label": "source_sheet",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "inside_candidate_polygon",
+        "label": "inside_candidate_polygon",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "same_gypsum_outcrop_link",
+        "label": "same_gypsum_outcrop_link",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "coordinate_datum",
+        "label": "coordinate_datum",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_row",
+        "label": "來源起始行號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      }
+    ],
+    "rows": 10
+  },
+  {
+    "name": "地球候選CSV",
+    "title": "地球候選CSV",
+    "note": "原始shortlist CSV完整保留；與JSON主候選視圖重複，不作獨立樣本加總。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "run_id",
+        "label": "分析版本",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "window_km",
+        "label": "視窗大小（km）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "sample_spacing_km",
+        "label": "採樣間距（km）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "slope_stencil_km",
+        "label": "坡度差分尺度（km）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "lat",
+        "label": "緯度（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "lon",
+        "label": "東經（度）",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "land_fraction",
+        "label": "land_fraction",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "slope_median_deg",
+        "label": "slope_median_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "slope_p90_deg",
+        "label": "slope_p90_deg",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "relief_m",
+        "label": "relief_m",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "candidate_id",
+        "label": "候選ID",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "rank",
+        "label": "rank",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "mars_target",
+        "label": "火星參照區",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "terrain_distance",
+        "label": "地形描述距離（越小越近）",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "status",
+        "label": "status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "temperature_status",
+        "label": "temperature_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "water_ice_status",
+        "label": "water_ice_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "air_status",
+        "label": "air_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "logistics_status",
+        "label": "logistics_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "prior_analog_literature_status",
+        "label": "prior_analog_literature_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "earth_T2M_C_2023_2024",
+        "label": "earth_T2M_C_2023_2024",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "earth_precip_mm_day_2023_2024",
+        "label": "earth_precip_mm_day_2023_2024",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "climate_role",
+        "label": "climate_role",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_row",
+        "label": "來源起始行號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      }
+    ],
+    "rows": 36
+  },
+  {
+    "name": "既有檔案清單",
+    "title": "既有檔案清單",
+    "note": "原始清單是當時快照，非目前磁碟完整性結論；list_origin區分原始來源。",
+    "kind": "data",
+    "columns": [
+      {
+        "key": "list_origin",
+        "label": "list_origin",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "folder",
+        "label": "folder",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "file",
+        "label": "file",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "bytes",
+        "label": "bytes",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "sha256",
+        "label": "sha256",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "read_status",
+        "label": "read_status",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "reader",
+        "label": "reader",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_row",
+        "label": "來源起始行號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "path",
+        "label": "path",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "role",
+        "label": "role",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "decision",
+        "label": "decision",
+        "type": "text",
+        "width": 25
+      }
+    ],
+    "rows": 345
+  },
+  {
+    "name": "MEDA原始紀錄",
+    "title": "MEDA原始紀錄",
+    "note": "三份完整校準CSV；GROUND_TEMP=地表亮溫(K)，AIR_TEMP=氣溫(K)；原始旗標不合格列仍保留，未據此認證可用。LMST/LTST保留文字；filename sol不等於每筆LTST sol；8個狀態欄與不確定度完整保留。",
+    "kind": "raw",
+    "columns": [
+      {
+        "key": "SCLK",
+        "label": "SCLK",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "LMST",
+        "label": "LMST",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "LTST",
+        "label": "LTST",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "DOWNWARD_LW_IRRADIANCE",
+        "label": "DOWNWARD_LW_IRRADIANCE",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "DOWNWARD_LW_IRRADIANCE_UNCERTAINTY",
+        "label": "DOWNWARD_LW_IRRADIANCE_UNCERTAINTY",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "AIR_TEMP",
+        "label": "AIR_TEMP 氣溫（K）",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "AIR_TEMP_UNCERTAINTY",
+        "label": "AIR_TEMP 不確定度（K）",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "UPWARD_SW_IRRADIANCE",
+        "label": "UPWARD_SW_IRRADIANCE",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "UPWARD_SW_IRRADIANCE_UNCERTAINTY",
+        "label": "UPWARD_SW_IRRADIANCE_UNCERTAINTY",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "UPWARD_LW_IRRADIANCE",
+        "label": "UPWARD_LW_IRRADIANCE",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "UPWARD_LW_IRRADIANCE_UNCERTAINTY",
+        "label": "UPWARD_LW_IRRADIANCE_UNCERTAINTY",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "GROUND_TEMP",
+        "label": "GROUND_TEMP 亮溫（K）",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "GROUND_TEMP_UNCERTAINTY",
+        "label": "GROUND_TEMP 不確定度（K）",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "RSM_HEAD_OUTSIDE_TIRS_UPWARD_LOOKING_FOV",
+        "label": "RSM_HEAD_OUTSIDE_TIRS_UPWARD_LOOKING_FOV",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "WHEEL_OUTSIDE_TIRS_DOWNWARD_LOOKING_FOV",
+        "label": "WHEEL_OUTSIDE_TIRS_DOWNWARD_LOOKING_FOV",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "SUN_OUTSIDE_TIRS_FOV",
+        "label": "SUN_OUTSIDE_TIRS_FOV",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "ROVER_LOW_TILT",
+        "label": "ROVER_LOW_TILT",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "TIRS_GROUND_FOOTPRINT_NOT_IN_SHADOW",
+        "label": "TIRS_GROUND_FOOTPRINT_NOT_IN_SHADOW",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "ROVER_HGA_OFF",
+        "label": "ROVER_HGA_OFF",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "SKYCAM_OFF",
+        "label": "SKYCAM_OFF",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "ROVER_STILL",
+        "label": "ROVER_STILL",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "source_row",
+        "label": "來源起始行號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      }
+    ],
+    "rows": 159418
+  },
+  {
+    "name": "JSON原值",
+    "title": "全部科學JSON／GeoJSON原值",
+    "note": "包含outputs/docs/data的全部純量葉值、null、空物件與空陣列；排除consolidated避免遞迴。number_value是數值，text_value同時保留數字字面值。字串分片須按source_file/json_pointer/part重組。不是獨立樣本表，不能跨檔相加。",
+    "kind": "archive",
+    "columns": [
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "json_pointer",
+        "label": "JSON pointer",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "value_type",
+        "label": "原值型別",
+        "type": "text",
+        "width": 25
+      },
+      {
+        "key": "number_value",
+        "label": "數值原值",
+        "type": "number",
+        "width": 17,
+        "format": "0.000000"
+      },
+      {
+        "key": "boolean_value",
+        "label": "布林原值",
+        "type": "boolean",
+        "width": 15
+      },
+      {
+        "key": "text_value",
+        "label": "文字原值／JSON字面值",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "part",
+        "label": "分片序號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "parts",
+        "label": "總分片數",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      }
+    ],
+    "rows": 21818
+  },
+  {
+    "name": "報告內容",
+    "title": "非網站專案Markdown完整段落",
+    "note": "保留原始文件路徑、段落順序與行號；每片不超過600個UTF-16字元單位，依文件/paragraph/part重組。含歷史報告與限制，不代表所有舊狀態都是最新狀態。",
+    "kind": "archive",
+    "columns": [
+      {
+        "key": "source_file",
+        "label": "來源檔案",
+        "type": "text",
+        "width": 65
+      },
+      {
+        "key": "paragraph",
+        "label": "段落序號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "start_line",
+        "label": "原始起始行",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "end_line",
+        "label": "原始結束行",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "part",
+        "label": "分片序號",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "parts",
+        "label": "總分片數",
+        "type": "number",
+        "width": 17,
+        "format": "0"
+      },
+      {
+        "key": "content",
+        "label": "完整段落文字",
+        "type": "text",
+        "width": 65
+      }
+    ],
+    "rows": 1071
+  }
+]

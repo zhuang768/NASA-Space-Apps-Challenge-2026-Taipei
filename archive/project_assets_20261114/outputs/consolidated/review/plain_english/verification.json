@@ -1,0 +1,322 @@
+{
+  "checked_taipei": "2026-11-14T16:37:15.744283+08:00",
+  "status": "PASS",
+  "source": "PROJECT_ROOT/outputs/consolidated/review/plain_english/original_workbook.xlsx.bak",
+  "output": "PROJECT_ROOT/outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
+  "source_sha256": "71830825cf69839f03b1a1bdd52fd159b7cd4c2aacc3e355d84365fda3b4c83b",
+  "output_sha256": "a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731",
+  "sheets": [
+    {
+      "sheet": "Overview",
+      "source_name": "總覽",
+      "rows": 45,
+      "cells": 270,
+      "formulas": 29,
+      "row_heights": {
+        "48": 4,
+        "20": 41
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "source_name": "火星發現候選",
+      "rows": 25,
+      "cells": 625,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 24
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "source_name": "冰候選原生QA",
+      "rows": 3,
+      "cells": 162,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 2
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Earth Candidates",
+      "source_name": "地球候選",
+      "rows": 73,
+      "cells": 3504,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 72
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Mars Novelty Review",
+      "source_name": "火星新穎性查核",
+      "rows": 16,
+      "cells": 464,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 15
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Mars Reference Regions",
+      "source_name": "火星參照區",
+      "rows": 4,
+      "cells": 464,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 3
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Earth Terrain Windows",
+      "source_name": "地球視窗全量",
+      "rows": 5213,
+      "cells": 78195,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 5212
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Earth Terrain Ranks",
+      "source_name": "地球排序明細",
+      "rows": 15637,
+      "cells": 297103,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 15636
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Earth POWER Climate",
+      "source_name": "地球POWER氣候",
+      "rows": 157,
+      "cells": 2983,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 156
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Mars Dust Series",
+      "source_name": "火星塵埃序列",
+      "rows": 4015,
+      "cells": 40150,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 4014
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Mars Regional Temp",
+      "source_name": "火星區域溫度背景",
+      "rows": 865,
+      "cells": 13840,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 864
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Rover Temp Provisional",
+      "source_name": "漫遊車暫定溫度",
+      "rows": 73,
+      "cells": 511,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 72
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Research Requirements",
+      "source_name": "研究需求",
+      "rows": 6,
+      "cells": 60,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 5
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Report Claims",
+      "source_name": "報告主張",
+      "rows": 9,
+      "cells": 63,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 8
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Submission Gaps",
+      "source_name": "提交缺口",
+      "rows": 54,
+      "cells": 540,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 53
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Oytag Literature Points",
+      "source_name": "Oytag文獻座標",
+      "rows": 4,
+      "cells": 36,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 3
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Oytag Supplement Points",
+      "source_name": "Oytag補充座標",
+      "rows": 11,
+      "cells": 121,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 10
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Earth Shortlist CSV",
+      "source_name": "地球候選CSV",
+      "rows": 37,
+      "cells": 925,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 36
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Legacy File Inventories",
+      "source_name": "既有檔案清單",
+      "rows": 346,
+      "cells": 4152,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 345
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "MEDA Raw Records",
+      "source_name": "MEDA原始紀錄",
+      "rows": 159419,
+      "cells": 3666637,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 159418
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "JSON Source Records",
+      "source_name": "JSON原值",
+      "rows": 21819,
+      "cells": 174552,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 21818
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Report Text",
+      "source_name": "報告內容",
+      "rows": 1072,
+      "cells": 7504,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 1071
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "File Index",
+      "source_name": "檔案索引",
+      "rows": 427,
+      "cells": 4270,
+      "formulas": 426,
+      "row_heights": {
+        "48": 1,
+        "20": 426
+      },
+      "semantic_hashes_match": true
+    },
+    {
+      "sheet": "Source Crosswalk",
+      "source_name": "匯入對照",
+      "rows": 120,
+      "cells": 600,
+      "formulas": 0,
+      "row_heights": {
+        "48": 1,
+        "20": 119
+      },
+      "semantic_hashes_match": true
+    }
+  ],
+  "sheet_count": 24,
+  "all_numeric_boolean_null_and_types_preserved": true,
+  "all_untranslated_English_date_clock_strings_preserved": true,
+  "authorized_overrides": [
+    {
+      "source_sheet": "總覽",
+      "cell": "D42",
+      "english": "Numeric values preserved; explanatory source text translated into English. Original files retain verbatim text."
+    },
+    {
+      "source_sheet": "總覽",
+      "cell": "D43",
+      "english": "English rendering of report text; source paths and paragraph/part fields retained. Original Markdown files remain authoritative."
+    },
+    {
+      "source_sheet": "JSON原值",
+      "cell": "F1",
+      "english": "Text value (English rendering)"
+    }
+  ],
+  "cjk_source_identifier_exceptions": [],
+  "failures": [],
+  "capacity_fallback": "Streaming edit of Artifact Tool-authored existing workbook; full object-model export exceeded 4GB Node heap",
+  "atomic_replace": true
+}

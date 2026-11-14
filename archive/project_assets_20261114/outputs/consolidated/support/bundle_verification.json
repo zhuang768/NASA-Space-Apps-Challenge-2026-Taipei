@@ -1,0 +1,70 @@
+{
+  "checked_taipei": "2026-11-14T15:45:11.218223+08:00",
+  "bundle": "outputs/consolidated/support/workbook_data.json",
+  "bundle_sha256": "9483f95ccea42e3a77a7a4bff9a1bced97771bcbd196b704a8e92039f0c263e7",
+  "meda_original_columns_checked": 21,
+  "meda_rows_checked": 159418,
+  "meda_cells_compared": 3347778,
+  "meda_clock_strings_preserved": true,
+  "meda_numeric_values_decimal_equal_to_source": true,
+  "markdown_documents_reassembled_exactly": 44,
+  "markdown_chunk_utf16_limit": 600,
+  "json_distinct_leaves_validated": 21818,
+  "json_files_validated": 35,
+  "source_coverage_entries_hash_checked": 119,
+  "status": "PASS",
+  "max_text_cell": {
+    "sheet": "報告內容",
+    "row": 22,
+    "column": "content",
+    "utf16_units": 600
+  },
+  "max_json_text_value_cell": {
+    "sheet": "JSON原值",
+    "row": 12,
+    "column": "text_value",
+    "utf16_units": 561
+  },
+  "formula_like_text_cells_starting_equals": 0,
+  "xml_control_characters": 0,
+  "power_annual_rows": 12,
+  "power_monthly_rows": 144,
+  "power_annual_month_cells_null": true,
+  "mars_discovery_rows": 24,
+  "mars_initially_reviewed_rows": 15,
+  "mars_reporting_cards": 4,
+  "original_discovery_order_unchanged": true,
+  "earth_candidate_keys_unique": 72,
+  "earth_candidates_per_run": {
+    "earth_100km_sample4km": 36,
+    "earth_100km_sample10km": 36
+  },
+  "earth_full_windows_per_run": {
+    "earth_100km_sample4km": 2611,
+    "earth_100km_sample10km": 2601
+  },
+  "earth_window_km": 100,
+  "sample_stencil_pairs": [
+    [
+      4,
+      8
+    ],
+    [
+      10,
+      20
+    ]
+  ],
+  "meda_qa_columns_preserved": [
+    "RSM_HEAD_OUTSIDE_TIRS_UPWARD_LOOKING_FOV",
+    "WHEEL_OUTSIDE_TIRS_DOWNWARD_LOOKING_FOV",
+    "SUN_OUTSIDE_TIRS_FOV",
+    "ROVER_LOW_TILT",
+    "TIRS_GROUND_FOOTPRINT_NOT_IN_SHADOW",
+    "ROVER_HGA_OFF",
+    "SKYCAM_OFF",
+    "ROVER_STILL"
+  ],
+  "meda_LMST_LTST_types": "text",
+  "meda_ground_temperature_label": "GROUND_TEMP 亮溫（K）",
+  "bundle_unchanged": true
+}

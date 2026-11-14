@@ -1,0 +1,19 @@
+{
+  "removed_own_intermediates": [
+    {
+      "path": "support/workbook_data.json",
+      "bytes": 46111787
+    },
+    {
+      "path": "support/workbook_base.xlsx",
+      "bytes": 4108806
+    },
+    {
+      "path": "support/workbook_base.xlsx.inspect.ndjson",
+      "bytes": 182465410
+    }
+  ],
+  "bytes_freed": 232686003,
+  "final_xlsx_retained": "NASA_Space_Apps_2026_All_Data.xlsx",
+  "original_data_deleted_or_moved": false
+}

@@ -1,0 +1,400 @@
+{
+  "version": "MR-20261114-v1",
+  "checked_taipei": "2026-11-14T18:11:04.746040+08:00",
+  "workbook_sha256": "a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731",
+  "status": "PASS",
+  "executable_cell_checks": 44,
+  "checks": [
+    {
+      "sheet": "Mars Discovery",
+      "cell": "E2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "cell": "F2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "cell": "G2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "cell": "H2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "cell": "I2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "cell": "J2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "cell": "K2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "cell": "L2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "B2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "C2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "D2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "E2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "F2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "G2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "H2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "I2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "J2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "K2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "AA2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "AN2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "AR2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "AB2",
+      "matches_source": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "cell": "E3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "cell": "F3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "cell": "G3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "cell": "H3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "cell": "I3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "cell": "J3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "cell": "K3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Mars Discovery",
+      "cell": "L3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "B3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "C3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "D3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "E3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "F3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "G3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "H3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "I3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "J3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "K3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "AA3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "AN3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "AR3",
+      "matches_source": true
+    },
+    {
+      "sheet": "Ice Candidate QA",
+      "cell": "AB3",
+      "matches_source": true
+    }
+  ],
+  "candidates": [
+    {
+      "id": "I-01",
+      "source_json_pointer": "/purposes/isru_shallow_ice/picks/0",
+      "excel_row": 2,
+      "center_lat_lon": [
+        54.25,
+        1.25
+      ],
+      "stored_score_unchanged": 0.9437740152757202,
+      "stored_layers": {
+        "slope": 0.3025961974521107,
+        "relief": 76.0,
+        "thermal_inertia": 244.7096710205078,
+        "ice_shallow": 0.3543070239029174,
+        "dust_cdod": 0.10687771439552307
+      },
+      "nominal_cell_bounds": {
+        "south": 54.0,
+        "north": 54.5,
+        "west": 1.0,
+        "east": 1.5
+      },
+      "nominal_size_km_NS_EW_at_center": [
+        29.635690698863716,
+        17.31464238174555
+      ],
+      "mola_native_cell": {
+        "shape": [
+          8,
+          8
+        ],
+        "total_pixels": 64,
+        "valid_pixels": 64,
+        "mean": -4621.65625,
+        "min": -4662.0,
+        "max": -4586.0,
+        "std_population": 20.3471579326819
+      },
+      "tes_native_non_infilled_cell": {
+        "shape": [
+          10,
+          10
+        ],
+        "total_pixels": 100,
+        "valid_pixels": 93,
+        "mean": 244.70967741935485,
+        "min": 185.0,
+        "max": 284.0,
+        "std_population": 18.622209335658944
+      },
+      "tes_excluded": 7,
+      "swim_nominal_native": {
+        "shape": [
+          10,
+          10
+        ],
+        "total_pixels": 100,
+        "valid_pixels": 100,
+        "mean": 0.35579622745513917,
+        "min": 0.30571669340133667,
+        "max": 0.4420803189277649,
+        "std_population": 0.02700541554524723
+      },
+      "swim_coarsened_then_interpolated": 0.3543070239029174,
+      "candidate_temperature": null,
+      "candidate_ice_depth": null,
+      "candidate_ice_content": null,
+      "exact_same_purpose_status_latest_team2": "insufficient_data",
+      "novelty_cleared": false
+    },
+    {
+      "id": "I-02",
+      "source_json_pointer": "/purposes/isru_shallow_ice/picks/1",
+      "excel_row": 3,
+      "center_lat_lon": [
+        53.75,
+        42.25
+      ],
+      "stored_score_unchanged": 0.9388455040774983,
+      "stored_layers": {
+        "slope": 0.3057384545431363,
+        "relief": 88.0,
+        "thermal_inertia": 160.6666717529297,
+        "ice_shallow": 0.3550860505459027,
+        "dust_cdod": 0.11224822700023651
+      },
+      "nominal_cell_bounds": {
+        "south": 53.5,
+        "north": 54.0,
+        "west": 42.0,
+        "east": 42.5
+      },
+      "nominal_size_km_NS_EW_at_center": [
+        29.635690698863716,
+        17.52386984615699
+      ],
+      "mola_native_cell": {
+        "shape": [
+          8,
+          8
+        ],
+        "total_pixels": 64,
+        "valid_pixels": 64,
+        "mean": -3642.34375,
+        "min": -3672.0,
+        "max": -3584.0,
+        "std_population": 19.108423167218692
+      },
+      "tes_native_non_infilled_cell": {
+        "shape": [
+          10,
+          10
+        ],
+        "total_pixels": 100,
+        "valid_pixels": 96,
+        "mean": 160.66666666666666,
+        "min": 135.0,
+        "max": 190.0,
+        "std_population": 11.723077904524715
+      },
+      "tes_excluded": 4,
+      "swim_nominal_native": {
+        "shape": [
+          10,
+          10
+        ],
+        "total_pixels": 100,
+        "valid_pixels": 100,
+        "mean": 0.3519712156057358,
+        "min": 0.298789381980896,
+        "max": 0.4351530373096466,
+        "std_population": 0.024099483541608166
+      },
+      "swim_coarsened_then_interpolated": 0.3550860505459027,
+      "candidate_temperature": null,
+      "candidate_ice_depth": null,
+      "candidate_ice_content": null,
+      "exact_same_purpose_status_latest_team2": "insufficient_data",
+      "novelty_cleared": false
+    }
+  ],
+  "notes": [
+    "Only existing source values compared; no raw data rerun or reranking.",
+    "Native pixel counts are product-grid sample counts, not independent observations.",
+    "No null in an archived QA row does not fill missing scientific quantities."
+  ],
+  "latest_team1_main": "cf72039a4bdfb94666c8df176de41eefd55f30ee",
+  "earth_pairings": [
+    {
+      "earth_candidate_id": "EARTH-UV-001",
+      "mars_candidate_id": "I-01",
+      "role": "known_use_reference",
+      "pair_status": "incomplete_v1_protocol_and_QA",
+      "new_plot": null
+    },
+    {
+      "earth_candidate_id": "EARTH-002",
+      "mars_candidate_id": "I-02",
+      "role": "conditional_method_reference",
+      "anchor_lat_lon": [
+        -79.820216667,
+        -83.314333333
+      ],
+      "new_plot": null,
+      "Team1_literature_interface_cm": 49,
+      "new_measurement": false,
+      "gpu_QA": "pending",
+      "team2_audit": "pending"
+    }
+  ]
+}

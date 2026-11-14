@@ -1,0 +1,16 @@
+{
+  "checked_taipei": "2026-11-14T15:44:14.178255+08:00",
+  "bundle": "outputs/consolidated/support/workbook_data.json",
+  "bundle_sha256": "9483f95ccea42e3a77a7a4bff9a1bced97771bcbd196b704a8e92039f0c263e7",
+  "meda_original_columns_checked": 21,
+  "meda_rows_checked": 159418,
+  "meda_cells_compared": 3347778,
+  "meda_clock_strings_preserved": true,
+  "meda_numeric_values_decimal_equal_to_source": true,
+  "markdown_documents_reassembled_exactly": 44,
+  "markdown_chunk_utf16_limit": 600,
+  "json_distinct_leaves_validated": 21818,
+  "json_files_validated": 35,
+  "source_coverage_entries_hash_checked": 119,
+  "status": "PASS"
+}

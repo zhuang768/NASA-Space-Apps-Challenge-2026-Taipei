@@ -1,0 +1,148 @@
+{
+  "file": "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
+  "sha256": "71830825cf69839f03b1a1bdd52fd159b7cd4c2aacc3e355d84365fda3b4c83b",
+  "checks": [
+    {
+      "sheet": "火星發現候選",
+      "rows": 24,
+      "columns": 25,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "冰候選原生QA",
+      "rows": 2,
+      "columns": 54,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "地球候選",
+      "rows": 72,
+      "columns": 48,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "火星新穎性查核",
+      "rows": 15,
+      "columns": 29,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "火星參照區",
+      "rows": 3,
+      "columns": 116,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "地球視窗全量",
+      "rows": 5212,
+      "columns": 15,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "地球排序明細",
+      "rows": 15636,
+      "columns": 19,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "地球POWER氣候",
+      "rows": 156,
+      "columns": 19,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "火星塵埃序列",
+      "rows": 4014,
+      "columns": 10,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "火星區域溫度背景",
+      "rows": 864,
+      "columns": 16,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "漫遊車暫定溫度",
+      "rows": 72,
+      "columns": 7,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "研究需求",
+      "rows": 5,
+      "columns": 10,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "報告主張",
+      "rows": 8,
+      "columns": 7,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "提交缺口",
+      "rows": 53,
+      "columns": 10,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "Oytag文獻座標",
+      "rows": 3,
+      "columns": 9,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "Oytag補充座標",
+      "rows": 10,
+      "columns": 11,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "地球候選CSV",
+      "rows": 36,
+      "columns": 25,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "既有檔案清單",
+      "rows": 345,
+      "columns": 12,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "MEDA原始紀錄",
+      "rows": 159418,
+      "columns": 23,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "JSON原值",
+      "rows": 21818,
+      "columns": 8,
+      "all_values_checked": true
+    },
+    {
+      "sheet": "報告內容",
+      "rows": 1071,
+      "columns": 7,
+      "all_values_checked": true
+    }
+  ],
+  "source_files_verified": 106,
+  "numeric_sources_unchanged": true,
+  "authorized_metadata_changes": [
+    "outputs/research/ice_candidate_followup/search_scope.json"
+  ],
+  "comparison": "All populated source-bundle cells; numeric tolerance 1e-12 relative / 1e-10 absolute",
+  "engine": "openpyxl read-only, independent of authoring engine",
+  "summary_counts_verified_against_written_tables": [
+    24,
+    15,
+    5212,
+    72,
+    159418,
+    21818
+  ],
+  "source_coverage_entries_verified": 119
+}

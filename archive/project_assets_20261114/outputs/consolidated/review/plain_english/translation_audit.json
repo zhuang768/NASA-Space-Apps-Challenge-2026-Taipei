@@ -1,0 +1,40 @@
+{
+  "input_strings": 945,
+  "output_strings": 945,
+  "authorized_heading_numerals": [
+    {
+      "id": "T0603",
+      "issue": "numeric literals",
+      "lost": {},
+      "added": {
+        "1": 1
+      }
+    },
+    {
+      "id": "T0619",
+      "issue": "numeric literals",
+      "lost": {},
+      "added": {
+        "3": 1
+      }
+    },
+    {
+      "id": "T0816",
+      "issue": "numeric literals",
+      "lost": {},
+      "added": {
+        "4": 1
+      }
+    },
+    {
+      "id": "T0826",
+      "issue": "numeric literals",
+      "lost": {},
+      "added": {
+        "7": 1
+      }
+    }
+  ],
+  "issues": [],
+  "heading_note": "Four Chinese section ordinals were translated to equivalent Arabic section ordinals; these are prose headings, not numerical observations."
+}

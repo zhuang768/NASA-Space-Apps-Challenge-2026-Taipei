@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "file": "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
+  "sha256": "a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731",
+  "checked_taipei": "2026-11-14T16:37:15.744283+08:00",
+  "sheet_count": 24,
+  "language": "English",
+  "layout": "white background, black Arial 11; body 20pt, headers 48pt; no colored bands",
+  "all_numeric_boolean_null_and_types_preserved": true,
+  "all_untranslated_English_date_clock_strings_preserved": true,
+  "cjk_remaining_exceptions": [],
+  "source_files_verified_at_import": 106,
+  "raw_meda_rows": 159418,
+  "details": "plain_english/verification.json",
+  "source_import_evidence": "plain_english/data_import_verification_before_edit.json"
+}

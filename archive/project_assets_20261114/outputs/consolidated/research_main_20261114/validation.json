@@ -1,0 +1,26 @@
+{
+  "version": "MR-20261114-v1",
+  "checked_taipei": "2026-11-14T18:19:28.923023+08:00",
+  "status": "PASS",
+  "workbook_cells_compared": 44,
+  "source_hashes_verified": 14,
+  "requirements": 27,
+  "duplicate_requirement_ids": 0,
+  "undefined_thresholds_blank": true,
+  "fixed_pairing_scopes": true,
+  "original_workbook_unchanged": true,
+  "all_sources_unchanged": true,
+  "retired_rankings_not_restored": true,
+  "remote_diff_only_six_owned_additions": true,
+  "published_files_blob_verified_before_local_delivery_stamp": {
+    "docs/research/main_mars_research_cards.md": "4ffac68a38c190b58e4d60a81d1102e414a33522",
+    "docs/research/main_project_synthesis.md": "ac5509a9d3da2cf43ba79094e77faac1a2f74884",
+    "docs/research/main_research_requirements.csv": "c188677a92a1d25ab966a0c87577af2b682e4730",
+    "outputs/consolidated/research_main_20261114/evidence.json": "bb3ef73d0b7b7556e82d4567d7c3e2c34c84dbd7",
+    "outputs/consolidated/research_main_20261114/source_manifest.json": "f7154283aab7b6d6848ed8948fc40bd87012cf87",
+    "outputs/consolidated/research_main_20261114/delivery_status.json": "614056d0508b5421879324dc43419e8fd2cc8805"
+  },
+  "main_integrated": false,
+  "native_excel_opening_repair_not_attempted": true,
+  "direct_thread_dispatch": "not_sent_tool_failure"
+}

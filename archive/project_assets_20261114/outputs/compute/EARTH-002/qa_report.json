@@ -1,0 +1,1817 @@
+{
+  "schema_version": "1.0",
+  "generated_utc": "2026-11-14T12:33:21.923449+00:00",
+  "requirement_version": "MR-20261114-v2",
+  "candidate_contract": {
+    "earth_candidate_id": "EARTH-002",
+    "mars_candidate_id": "I-02",
+    "earth_site_name": "Elephant Head monitoring station, north flank of Mount Dolence",
+    "country_or_region": "Ellsworth Land, Antarctica; no single sovereign country assigned",
+    "earth_lat_deg": "-79.820216667",
+    "earth_lon_east_deg": "-83.314333333",
+    "coordinate_basis": "EH1 Methods/Fig.1: 79deg49.213minS,83deg18.860minW; signed north/east degrees; datum/accuracy unstated; station anchor only",
+    "mars_lat_deg": "53.75",
+    "mars_lon_east_deg": "42.25",
+    "test_purpose": "Provisional blinded dry-overburden/ice-cemented-interface detection validation, followed by controlled segmented sampling with separately measured sample heating and ice-mass loss. New experiments not performed; existing time series alone cannot execute this protocol.",
+    "pairing_evidence": "Conditional interface-investigation method analog; Earth measured station structure does not establish I-02 ice or matching depth.",
+    "terrain_evidence": "EH1 station location; no compatible DEM calculation or test-plot hazard survey.",
+    "temperature_evidence": "EH1/EH2 hourly point sensors; 3 cm series incomplete. GPU QA pending; no new numerical climate result.",
+    "water_ice_evidence": "EH1 Methods and Table I/II: located ice-cemented boundary; no mapped deposit purity/continuity/quantity. Team2 EHA2 fulltext review reports2020 Site3 stratified soil sampling and ice-core retrieval nearby;inherited review,not independently reread by Team1;no transfer of depths across dates.",
+    "atmosphere_evidence": "EH1 point air T/RH; station pressure and wind unknown. Reanalysis not extracted.",
+    "dust_evidence": "unknown; no measured deposition, abrasion or local dust optical depth",
+    "mars_slope_deg": "0.3057384545431363",
+    "mars_relief_m": "88.0",
+    "mars_TI_J_m2_K_s05": "160.6666717529297",
+    "mars_SWIM_shallow_consistency": "0.3550860505459027",
+    "mars_CDOD_MY35_9p3um": "0.11224822700023651",
+    "mars_surface_temperature_status": "missing_qualified_candidate_temperature",
+    "source_ids": "EH1;EH2;EH3;EH4;M1;T2;Team2-EHA2",
+    "source_urls": "https://doi.org/10.1017/S0954102019000269;https://www.nasa.gov/wp-content/uploads/2019/09/mckay_etal_2019_dry_permafrost_ellsworth_land21.pdf;https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0954102019000269/resource/name/S0954102019000269sup001.pdf;https://doi.org/10.1017/S0954102025100448;https://doi.org/10.1093/ismeco/ycad002;https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/01142ca0f42c23422f83972729070bd6a74e294e/docs/research/team2_novelty_audit.md",
+    "source_publication_years": "EH1:2019;EH2:2019 supplement;EH3:online2025-11-27/issue2026;EH4:2024",
+    "observation_periods": "EH1:survey2016;station2017-2018;Mars dust MY35;other Mars layers multi-period",
+    "spatial_temporal_resolution": "Earth station point/hourly; no survey polygon; Mars nominal0.5deg, dust native3deg",
+    "data_gaps": "Exact new plot/datum; contemporary ice depth/purity; particle-size/strength; paired thermal QA; ice-loss mass balance; qualified I-02 surface temperature; no actual field test.",
+    "similarities": "Measured Earth dry-overburden/ice-cemented interface supports method reference for investigating possible Mars ice; no numeric environmental equivalence established.",
+    "cannot_simulate": "Mars low-pressure CO2,0.38g,radiation,full thermal seasons,dust transport; no direct I-02 resource or drilling performance prediction.",
+    "existing_pool_reassessment": "New fixed project ID, known studied site outside McMurdo; neither site discovery nor novelty clearance.",
+    "test_metrics": "Proposed boundary-depth error and missed interfaces; sample temperature, recovered mass and initial/final ice content. No acceptance threshold or result.",
+    "evidence_status": "conditional_method_reference_pending_QA_protocol_and_novelty_audit",
+    "team2_review_status": "review_received_01142ca_existing_stratified_sampling_and_ice_core_component_precedent_complete_protocol_insufficient",
+    "novelty_status": "not_cleared_known_component_methods_full_protocol_insufficient",
+    "master_workbook_sha256": "",
+    "github_baseline_commit": "5901362d6347c71e0d41b84ebbb35685ca7b3911",
+    "review_date": "2026-11-14",
+    "report_path": "docs/research/team1_earth_analog_matching.md",
+    "requirements_version": "MR-20261114-v1 / 2026-11-14 / branch commit 9e5c49ea7b4d7272972e7d409e6a298e6ef3da4a (previous: TEAM1-PROVISIONAL-ICE-v1 / 2026-11-14)",
+    "requirements_status": "mainline_v1_read_from_pinned_branch_not_in_main_76ba95f; thresholds not_defined; previous status: provisional_main_requirement_file_absent",
+    "site_extent_type": "published_station_point",
+    "site_extent_description": "Published station point only; datum and survey error not stated in inspected Methods; no new plot/polygon assigned",
+    "earth_horizontal_datum": "not_stated_in_inspected_Methods; EPSG4326 not asserted",
+    "candidate_treatment": "conditional_method_reference_pending_team2_and_GPU",
+    "revision_date": "2026-11-14",
+    "revision_reason": "First additional Earth location this round; I-02 is provisional administrative association, not optimized match; same evidence could inform I-01. Late sync2026-11-14:accept Team2 commit01142ca EHA2 Site3 stratified soil sampling/ice-core/cold-storage precedent;preserve ID,anchor,purpose;full joint protocol unresolved. | Round2 2026-11-14 (started from main f54e107bbc8b80045774ab1679181ed78d8cd2d3; rebased on 76ba95f067089716cc86e42cb0cbd769aa683df1): identity, anchor, purpose unchanged; EH1/EH2 stable URLs, sensor depths, time labels and RH columns documented in the availability CSV; hashes inherited and not recomputed.",
+    "previous_team1_commit": "5efa19766342a5a9ab24fcbbe3dbf02ed05805a6",
+    "raw_access_this_run": "EH1 full PDF downloaded; EH2 108-page tabulated supplement downloaded and header/sample pages inspected only; no full numeric extraction or Earth raster read. | Round2 2026-11-14 (started from main f54e107bbc8b80045774ab1679181ed78d8cd2d3; rebased on 76ba95f067089716cc86e42cb0cbd769aa683df1): EH1 text and EH2 header plus rows 1-3 re-read through a web text fetch; no file saved, no hash recomputed; 108 page count and table end not re-confirmed.",
+    "gpu_handoff_status": "requests_published_in_Team1_files_not_executed_or_acknowledged; availability rows EH1 and EH2 in outputs/research/team1_data_availability.csv; still not executed or acknowledged",
+    "gpu_requests_json": "[{\"request_id\":\"GPU-EARTH-002-01\",\"priority\":1,\"source_url\":\"https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0954102019000269/resource/name/S0954102019000269sup001.pdf\",\"source_sha256\":\"20fe70f574bc394f05f0c720809f80a9602ac73f6ede34d322ea816cf25590d9\",\"spatial_support\":\"Published station anchor only; no areal extrapolation\",\"period\":\"2017-11-28 to 2018-12-04 as reported; validate exact end from rows\",\"variables\":[\"original_time_label\",\"row_id\",\"T_air_C\",\"RH_air_water_pct\",\"RH_air_ice_corrected_pct\",\"T_49cm_C\",\"RH_49cm_water_pct\",\"RH_49cm_ice_corrected_pct\",\"T_3cm_C\",\"RH_3cm_water_pct\",\"RH_3cm_ice_corrected_pct\"],\"question\":\"Can a reproducible hourly table be recovered with consistent columns, units, missingness and time labels?\",\"checks\":[\"Preserve both printed time columns; resolve GMT-07:00 versus Local Time GMT-5:30 before UTC or solar-time conversion\",\"Check each parsed page against a manually inspected first/middle/last row; exclude page headers and repeated summary blocks\",\"Count duplicate timestamps, gaps and valid paired observations by depth/month\",\"Preserve raw and corrected RH; no silent clipping or water/ice basis conversion\",\"Do not interpolate absent 3 cm winter observations\"],\"deliverables\":[\"tidy table with source page and row\",\"data dictionary, units and timezone status\",\"input hash and parser command\",\"QA counts and exceptions\"],\"execution_status\":\"queued_in_team1_handoff_not_executed\"},{\"request_id\":\"GPU-EARTH-002-02\",\"priority\":2,\"depends_on\":\"GPU-EARTH-002-01 QA accepted\",\"spatial_support\":\"Same station, paired 3 cm and 49 cm measurements only\",\"period\":\"2017-12-01 to 2018-02-28 common summer window; annual ice/air separate\",\"variables\":[\"T_3cm_C\",\"T_49cm_C\",\"T_air_C\",\"paired_valid_n\",\"missing_fraction\",\"temperature_difference_C\"],\"question\":\"What paired thermal range and observed 3-to-49 cm difference can inform a proposed sampling-temperature control experiment?\",\"checks\":[\"3 cm is subsurface soil temperature, not radiometric surface temperature\",\"Compare reported Table II only using identical window and valid records\",\"No annual 3 cm statistic; no thermal-inertia or ice-depth inversion from these two depths\",\"No hard pass threshold; equipment specification pending\"],\"deliverables\":[\"paired summer time plot\",\"monthly coverage table\",\"temperature range/quantiles with valid N and window\",\"discrepancies from reported values\"],\"execution_status\":\"queued_in_team1_handoff_not_executed\"},{\"request_id\":\"GPU-EARTH-002-03\",\"priority\":3,\"source\":\"Optional MOD11C3.061 and MERRA-2 AER/SLV from verified handoff; reported inventory is not raw access\",\"period\":\"2023-2024; separate from station 2017-2018\",\"spatial_support\":\"Actual native containing/nearest cell identified from file coordinates; no station substitution\",\"variables\":[\"MODIS LST_Day_CMG\",\"MODIS LST_Night_CMG\",\"QC_Day\",\"QC_Night\",\"MERRA2 PS\",\"T2M\",\"U10M\",\"V10M\",\"DUEXTTAU\"],\"question\":\"Is any QA-qualified modern background available, and what actual footprints support it?\",\"checks\":[\"Report file hashes, units, scale, masks, native footprint and valid count\",\"Exclude SRTMGL30/GLDAS/ESA north-hemisphere permafrost if outside actual support\",\"No infilling polar night retrievals; no day/night difference without paired valid composites\",\"No difference score between 550 nm extinction and Mars 9.3 um absorption\",\"No fabricated local wind, pressure or dust result\"],\"execution_status\":\"optional_waiting_raw_data_handoff\"}]",
+    "team2_questions_json": "{\"earth_candidate_id\":\"EARTH-002\",\"mars_candidate_id\":\"I-02\",\"place\":\"Elephant Head monitoring station, north flank of Mount Dolence, Ellsworth Land, Antarctica\",\"aliases\":[\"Elephant Head\",\"Elephants Head Permafrost Site\",\"Mount Dolence\",\"Ellsworth Mountains\"],\"anchor_lat_deg\":-79.82021666666667,\"anchor_lon_east_deg\":-83.31433333333334,\"extent\":\"Published station point only; datum and survey error not stated in inspected Methods; no new plot/polygon assigned\",\"purpose\":\"Provisional blinded dry-overburden/ice-cemented-interface detection validation, followed by controlled segmented sampling with separately measured sample heating and ice-mass loss. New experiments not performed; existing time series alone cannot execute this protocol.\",\"known_related_sources\":[\"https://doi.org/10.1017/S0954102019000269\",\"https://doi.org/10.1017/S0954102025100448\",\"https://doi.org/10.1093/ismeco/ycad002\"],\"questions\":[\"Does a documented experiment at this station or a stated overlapping footprint already combine blind boundary detection with independent physical ground truth?\",\"Has segmented drilling/sampling with measured initial/final ice mass and sample temperature already been proposed or performed here? Separate it from station monitoring and microbial soil sampling.\",\"The 2025-online/2026-issue snow study already compares Elephant Head and University Valley. Does any proposed difference survive that precedent?\",\"Identify exact sampling footprint, dates, apparatus, metrics and same-use status; if insufficient, retain unknown. No all-time novelty claim.\"],\"handoff_status\":\"published_in_team1_files_ready_for_team2_acknowledgment_not_received\"}",
+    "team2_source_audit_commit": "01142ca0f42c23422f83972729070bd6a74e294e | Round2 also read bc9fe3c and 76ba95f (EH 108-page full-table transcription QA: 8922 rows, second time label 90 min later in all rows, 3 cm 2646 rows ending 2018-03-18 05:00, 2807 corrected-RH values above 100% at 49 cm; independent-truth availability; protocol draft v0.1). Run by Team 2; Team 1 did not recompute; not GPU-verified.",
+    "source_locators_json": "{\"EH1\":\"PDF p2 Methods/Fig1; p3 TableI and Discussion; p5 TableII; pp7-8 Appendix\",\"EH2\":\"PDF p1 column header/sample rows; first 3 pages inspected; total108pages\",\"EH3\":\"Environmental data, TableI, Results; publisher HTML passages\",\"EH4\":\"Publisher abstract inspected; no independent sampling-footprint audit\",\"M1\":\"purposes.isru_shallow_ice.picks[1].layers\",\"T2\":\"EARTH-UV-001 Phase2; Ice-purpose footprint follow-up\",\"data_availability_csv\":\"outputs/research/team1_data_availability.csv rows EH1, EH2\"}",
+    "literature_values_json": "{\"ice_table_cm\":49,\"dry_permafrost_top_cm\":13.5,\"source\":\"EH1; literature not new measurement\",\"station_elevation_m\":718,\"elevation_datum\":\"not_normalized_across_bodies\",\"dry_permafrost_top_method\":\"author interpolation of maximum summer temperatures; not direct interface measurement\"}",
+    "pending_main_decisions": "Instrument/method; depth range; tolerated error; heating/ice-loss limits; whether field/chamber experiment or archived-data study; Mars ground truth/model needs; no thresholds assumed.",
+    "prohibited_claims": "New site; first Mars analog; unstudied; confirmed I-02 ice; same thermal inertia; 3cm temperature is LST; current field readiness; measured ice-loss or pass.",
+    "handoff_acknowledged": "Team2 review received via main01142ca;GPU execution acknowledgment not received | Round2: Team 2 handoff to Team 1 (bc9fe3c, 76ba95f) read and answered in the report; GPU execution and Main acknowledgement not received",
+    "site_name": "Elephant Head monitoring station, north flank of Mount Dolence",
+    "latitude_deg": "-79.820216667",
+    "longitude_east_deg": "-83.314333333",
+    "anchor_description": "EH1 Methods/Fig.1: 79deg49.213minS,83deg18.860minW; signed north/east degrees; datum/accuracy unstated; station anchor only",
+    "intended_test": "Provisional blinded dry-overburden/ice-cemented-interface detection validation, followed by controlled segmented sampling with separately measured sample heating and ice-mass loss. New experiments not performed; existing time series alone cannot execute this protocol.",
+    "evidence_sources": "https://doi.org/10.1017/S0954102019000269;https://www.nasa.gov/wp-content/uploads/2019/09/mckay_etal_2019_dry_permafrost_ellsworth_land21.pdf;https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0954102019000269/resource/name/S0954102019000269sup001.pdf;https://doi.org/10.1017/S0954102025100448;https://doi.org/10.1093/ismeco/ycad002;https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/01142ca0f42c23422f83972729070bd6a74e294e/docs/research/team2_novelty_audit.md"
+  },
+  "source_profile": {
+    "source_id": "EH2-2019-PUBLISHED-SUPPLEMENT",
+    "earth_candidate_id": "EARTH-002",
+    "mars_candidate_id": "I-02",
+    "latitude_deg": -79.820216667,
+    "longitude_east_deg": -83.314333333,
+    "spatial_support": "historical Elephant Head station point only; no plot/radius/polygon",
+    "horizontal_datum": "not stated in inspected Methods; EPSG4326 not asserted",
+    "adapter": "elephant_head_pdf",
+    "path": "data/raw/earth/elephant_head/EH2_S0954102019000269sup001.pdf",
+    "url": "https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0954102019000269/resource/name/S0954102019000269sup001.pdf",
+    "dataset_doi": "10.1017/S0954102019000269",
+    "expected_sha256": "20fe70f574bc394f05f0c720809f80a9602ac73f6ede34d322ea816cf25590d9",
+    "expected_pages": 108,
+    "expected_records": 8922,
+    "period_start": "2017-12-01T00:00:00",
+    "period_end_exclusive": "2018-12-01T00:00:00",
+    "summer_start": "2017-12-01T00:00:00",
+    "summer_end_exclusive": "2018-03-01T00:00:00",
+    "source_level": "published temperature and raw/corrected RH table, not untouched logger bytes",
+    "team2_parser_commit": "bc9fe3c0f352632a7117dbdab24df21b7450738e",
+    "team2_parser_source": "docs/research/team2_novelty_audit.md section Re-run method and numeric source",
+    "team2_reference_means": {
+      "summer:T_air_C": -10.3409,
+      "summer:T_49cm_C": -8.6302,
+      "summer:T_3cm_C": -5.3553,
+      "summer:T_3cm_minus_49cm_C": 3.2749,
+      "paper_year:T_air_C": -20.294,
+      "paper_year:T_49cm_C": -19.237
+    },
+    "paper_table_II_means": {
+      "summer:T_air_C": -10.3,
+      "summer:T_49cm_C": -8.6,
+      "summer:T_3cm_C": -5.4,
+      "paper_year:T_air_C": -20.3,
+      "paper_year:T_49cm_C": -19.2
+    },
+    "method_source": {
+      "url": "https://www.nasa.gov/wp-content/uploads/2019/09/mckay_etal_2019_dry_permafrost_ellsworth_land21.pdf",
+      "path": "data/raw/earth/elephant_head/EH1_method.pdf",
+      "sha256": "1d64eb94184a5e4fd7e8e0985a23a8c9a6e35ad2626f268ad8a3a80ffc21b6db",
+      "read_scope": "Methods PDF p2; Table II PDF p5; no full protocol novelty audit"
+    },
+    "variable_dictionary": {
+      "T_air_C": {
+        "unit": "degC",
+        "height_above_surface_m": 0.82,
+        "quantity_definition": "air",
+        "scale_factor": 1,
+        "add_offset": 0,
+        "pdf_numeric_column_1based": 1
+      },
+      "RH_air_water_pct": {
+        "unit": "percent",
+        "height_above_surface_m": 0.82,
+        "quantity_definition": "raw liquid-water-reference RH",
+        "scale_factor": 1,
+        "add_offset": 0,
+        "pdf_numeric_column_1based": 2
+      },
+      "RH_air_ice_corrected_pct": {
+        "unit": "percent",
+        "height_above_surface_m": 0.82,
+        "quantity_definition": "author-corrected RH with respect to ice",
+        "scale_factor": 1,
+        "add_offset": 0,
+        "pdf_numeric_column_1based": 3
+      },
+      "T_49cm_C": {
+        "unit": "degC",
+        "height_above_surface_m": -0.49,
+        "quantity_definition": "installed published ice-table probe temperature",
+        "scale_factor": 1,
+        "add_offset": 0,
+        "pdf_numeric_column_1based": 4
+      },
+      "RH_49cm_water_pct": {
+        "unit": "percent",
+        "height_above_surface_m": -0.49,
+        "quantity_definition": "raw liquid-water-reference RH",
+        "scale_factor": 1,
+        "add_offset": 0,
+        "pdf_numeric_column_1based": 5
+      },
+      "RH_49cm_ice_corrected_pct": {
+        "unit": "percent",
+        "height_above_surface_m": -0.49,
+        "quantity_definition": "author-corrected RH with respect to ice",
+        "scale_factor": 1,
+        "add_offset": 0,
+        "pdf_numeric_column_1based": 6
+      },
+      "T_3cm_C": {
+        "unit": "degC",
+        "height_above_surface_m": -0.03,
+        "quantity_definition": "subsurface soil temperature, not radiometric surface temperature",
+        "scale_factor": 1,
+        "add_offset": 0,
+        "pdf_numeric_column_1based": 7
+      },
+      "RH_3cm_water_pct": {
+        "unit": "percent",
+        "height_above_surface_m": -0.03,
+        "quantity_definition": "raw liquid-water-reference RH",
+        "scale_factor": 1,
+        "add_offset": 0,
+        "pdf_numeric_column_1based": 8
+      },
+      "RH_3cm_ice_corrected_pct": {
+        "unit": "percent",
+        "height_above_surface_m": -0.03,
+        "quantity_definition": "author corrected field; retain printed RH_ice <0, -2 header and Methods Appendix definition; not independently recalibrated",
+        "scale_factor": 1,
+        "add_offset": 0,
+        "pdf_numeric_column_1based": 9
+      }
+    }
+  },
+  "source_sha256": "20fe70f574bc394f05f0c720809f80a9602ac73f6ede34d322ea816cf25590d9",
+  "qa": {
+    "pages": 108,
+    "records": 8922,
+    "raw_header": [
+      "Elephants Head Permafrost Site Chris.McKay@nasa.govfull data [3:8924], standard year = 1 Dec - 30 Nov [74:8833], summer = 1 Dec - 28 Feb = 90 days [74:2233]",
+      "#Time, GMT-07:00Local Time GMT-5:30 Temp,AIR RH,% RHiceTemp, ice 49 cm RH,% RHice Temp, 3 cm RH, % rawRH_ice <0, -2"
+    ],
+    "page_checks": [
+      {
+        "page": 1,
+        "parsed_rows": 81,
+        "first_row": 1,
+        "last_row": 81,
+        "cross_engine_sample_row_ids": [
+          1,
+          41,
+          81
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 2,
+        "parsed_rows": 83,
+        "first_row": 82,
+        "last_row": 164,
+        "cross_engine_sample_row_ids": [
+          82,
+          123,
+          164
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 3,
+        "parsed_rows": 83,
+        "first_row": 165,
+        "last_row": 247,
+        "cross_engine_sample_row_ids": [
+          165,
+          206,
+          247
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 4,
+        "parsed_rows": 83,
+        "first_row": 248,
+        "last_row": 330,
+        "cross_engine_sample_row_ids": [
+          248,
+          289,
+          330
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 5,
+        "parsed_rows": 83,
+        "first_row": 331,
+        "last_row": 413,
+        "cross_engine_sample_row_ids": [
+          331,
+          372,
+          413
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 6,
+        "parsed_rows": 83,
+        "first_row": 414,
+        "last_row": 496,
+        "cross_engine_sample_row_ids": [
+          414,
+          455,
+          496
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 7,
+        "parsed_rows": 83,
+        "first_row": 497,
+        "last_row": 579,
+        "cross_engine_sample_row_ids": [
+          497,
+          538,
+          579
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 8,
+        "parsed_rows": 83,
+        "first_row": 580,
+        "last_row": 662,
+        "cross_engine_sample_row_ids": [
+          580,
+          621,
+          662
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 9,
+        "parsed_rows": 83,
+        "first_row": 663,
+        "last_row": 745,
+        "cross_engine_sample_row_ids": [
+          663,
+          704,
+          745
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 10,
+        "parsed_rows": 83,
+        "first_row": 746,
+        "last_row": 828,
+        "cross_engine_sample_row_ids": [
+          746,
+          787,
+          828
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 11,
+        "parsed_rows": 83,
+        "first_row": 829,
+        "last_row": 911,
+        "cross_engine_sample_row_ids": [
+          829,
+          870,
+          911
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 12,
+        "parsed_rows": 83,
+        "first_row": 912,
+        "last_row": 994,
+        "cross_engine_sample_row_ids": [
+          912,
+          953,
+          994
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 13,
+        "parsed_rows": 83,
+        "first_row": 995,
+        "last_row": 1077,
+        "cross_engine_sample_row_ids": [
+          995,
+          1036,
+          1077
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 14,
+        "parsed_rows": 83,
+        "first_row": 1078,
+        "last_row": 1160,
+        "cross_engine_sample_row_ids": [
+          1078,
+          1119,
+          1160
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 15,
+        "parsed_rows": 83,
+        "first_row": 1161,
+        "last_row": 1243,
+        "cross_engine_sample_row_ids": [
+          1161,
+          1202,
+          1243
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 16,
+        "parsed_rows": 83,
+        "first_row": 1244,
+        "last_row": 1326,
+        "cross_engine_sample_row_ids": [
+          1244,
+          1285,
+          1326
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 17,
+        "parsed_rows": 83,
+        "first_row": 1327,
+        "last_row": 1409,
+        "cross_engine_sample_row_ids": [
+          1327,
+          1368,
+          1409
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 18,
+        "parsed_rows": 83,
+        "first_row": 1410,
+        "last_row": 1492,
+        "cross_engine_sample_row_ids": [
+          1410,
+          1451,
+          1492
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 19,
+        "parsed_rows": 83,
+        "first_row": 1493,
+        "last_row": 1575,
+        "cross_engine_sample_row_ids": [
+          1493,
+          1534,
+          1575
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 20,
+        "parsed_rows": 83,
+        "first_row": 1576,
+        "last_row": 1658,
+        "cross_engine_sample_row_ids": [
+          1576,
+          1617,
+          1658
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 21,
+        "parsed_rows": 83,
+        "first_row": 1659,
+        "last_row": 1741,
+        "cross_engine_sample_row_ids": [
+          1659,
+          1700,
+          1741
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 22,
+        "parsed_rows": 83,
+        "first_row": 1742,
+        "last_row": 1824,
+        "cross_engine_sample_row_ids": [
+          1742,
+          1783,
+          1824
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 23,
+        "parsed_rows": 83,
+        "first_row": 1825,
+        "last_row": 1907,
+        "cross_engine_sample_row_ids": [
+          1825,
+          1866,
+          1907
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 24,
+        "parsed_rows": 83,
+        "first_row": 1908,
+        "last_row": 1990,
+        "cross_engine_sample_row_ids": [
+          1908,
+          1949,
+          1990
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 25,
+        "parsed_rows": 83,
+        "first_row": 1991,
+        "last_row": 2073,
+        "cross_engine_sample_row_ids": [
+          1991,
+          2032,
+          2073
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 26,
+        "parsed_rows": 83,
+        "first_row": 2074,
+        "last_row": 2156,
+        "cross_engine_sample_row_ids": [
+          2074,
+          2115,
+          2156
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 27,
+        "parsed_rows": 83,
+        "first_row": 2157,
+        "last_row": 2239,
+        "cross_engine_sample_row_ids": [
+          2157,
+          2198,
+          2239
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 28,
+        "parsed_rows": 83,
+        "first_row": 2240,
+        "last_row": 2322,
+        "cross_engine_sample_row_ids": [
+          2240,
+          2281,
+          2322
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 29,
+        "parsed_rows": 83,
+        "first_row": 2323,
+        "last_row": 2405,
+        "cross_engine_sample_row_ids": [
+          2323,
+          2364,
+          2405
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 30,
+        "parsed_rows": 83,
+        "first_row": 2406,
+        "last_row": 2488,
+        "cross_engine_sample_row_ids": [
+          2406,
+          2447,
+          2488
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 31,
+        "parsed_rows": 83,
+        "first_row": 2489,
+        "last_row": 2571,
+        "cross_engine_sample_row_ids": [
+          2489,
+          2530,
+          2571
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 32,
+        "parsed_rows": 83,
+        "first_row": 2572,
+        "last_row": 2654,
+        "cross_engine_sample_row_ids": [
+          2572,
+          2613,
+          2654
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 33,
+        "parsed_rows": 83,
+        "first_row": 2655,
+        "last_row": 2737,
+        "cross_engine_sample_row_ids": [
+          2655,
+          2696,
+          2737
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 34,
+        "parsed_rows": 83,
+        "first_row": 2738,
+        "last_row": 2820,
+        "cross_engine_sample_row_ids": [
+          2738,
+          2779,
+          2820
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 35,
+        "parsed_rows": 83,
+        "first_row": 2821,
+        "last_row": 2903,
+        "cross_engine_sample_row_ids": [
+          2821,
+          2862,
+          2903
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 36,
+        "parsed_rows": 83,
+        "first_row": 2904,
+        "last_row": 2986,
+        "cross_engine_sample_row_ids": [
+          2904,
+          2945,
+          2986
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 37,
+        "parsed_rows": 83,
+        "first_row": 2987,
+        "last_row": 3069,
+        "cross_engine_sample_row_ids": [
+          2987,
+          3028,
+          3069
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 38,
+        "parsed_rows": 83,
+        "first_row": 3070,
+        "last_row": 3152,
+        "cross_engine_sample_row_ids": [
+          3070,
+          3111,
+          3152
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 39,
+        "parsed_rows": 83,
+        "first_row": 3153,
+        "last_row": 3235,
+        "cross_engine_sample_row_ids": [
+          3153,
+          3194,
+          3235
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 40,
+        "parsed_rows": 83,
+        "first_row": 3236,
+        "last_row": 3318,
+        "cross_engine_sample_row_ids": [
+          3236,
+          3277,
+          3318
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 41,
+        "parsed_rows": 83,
+        "first_row": 3319,
+        "last_row": 3401,
+        "cross_engine_sample_row_ids": [
+          3319,
+          3360,
+          3401
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 42,
+        "parsed_rows": 83,
+        "first_row": 3402,
+        "last_row": 3484,
+        "cross_engine_sample_row_ids": [
+          3402,
+          3443,
+          3484
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 43,
+        "parsed_rows": 83,
+        "first_row": 3485,
+        "last_row": 3567,
+        "cross_engine_sample_row_ids": [
+          3485,
+          3526,
+          3567
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 44,
+        "parsed_rows": 83,
+        "first_row": 3568,
+        "last_row": 3650,
+        "cross_engine_sample_row_ids": [
+          3568,
+          3609,
+          3650
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 45,
+        "parsed_rows": 83,
+        "first_row": 3651,
+        "last_row": 3733,
+        "cross_engine_sample_row_ids": [
+          3651,
+          3692,
+          3733
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 46,
+        "parsed_rows": 83,
+        "first_row": 3734,
+        "last_row": 3816,
+        "cross_engine_sample_row_ids": [
+          3734,
+          3775,
+          3816
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 47,
+        "parsed_rows": 83,
+        "first_row": 3817,
+        "last_row": 3899,
+        "cross_engine_sample_row_ids": [
+          3817,
+          3858,
+          3899
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 48,
+        "parsed_rows": 83,
+        "first_row": 3900,
+        "last_row": 3982,
+        "cross_engine_sample_row_ids": [
+          3900,
+          3941,
+          3982
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 49,
+        "parsed_rows": 83,
+        "first_row": 3983,
+        "last_row": 4065,
+        "cross_engine_sample_row_ids": [
+          3983,
+          4024,
+          4065
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 50,
+        "parsed_rows": 83,
+        "first_row": 4066,
+        "last_row": 4148,
+        "cross_engine_sample_row_ids": [
+          4066,
+          4107,
+          4148
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 51,
+        "parsed_rows": 83,
+        "first_row": 4149,
+        "last_row": 4231,
+        "cross_engine_sample_row_ids": [
+          4149,
+          4190,
+          4231
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 52,
+        "parsed_rows": 83,
+        "first_row": 4232,
+        "last_row": 4314,
+        "cross_engine_sample_row_ids": [
+          4232,
+          4273,
+          4314
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 53,
+        "parsed_rows": 83,
+        "first_row": 4315,
+        "last_row": 4397,
+        "cross_engine_sample_row_ids": [
+          4315,
+          4356,
+          4397
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 54,
+        "parsed_rows": 83,
+        "first_row": 4398,
+        "last_row": 4480,
+        "cross_engine_sample_row_ids": [
+          4398,
+          4439,
+          4480
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 55,
+        "parsed_rows": 83,
+        "first_row": 4481,
+        "last_row": 4563,
+        "cross_engine_sample_row_ids": [
+          4481,
+          4522,
+          4563
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 56,
+        "parsed_rows": 83,
+        "first_row": 4564,
+        "last_row": 4646,
+        "cross_engine_sample_row_ids": [
+          4564,
+          4605,
+          4646
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 57,
+        "parsed_rows": 83,
+        "first_row": 4647,
+        "last_row": 4729,
+        "cross_engine_sample_row_ids": [
+          4647,
+          4688,
+          4729
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 58,
+        "parsed_rows": 83,
+        "first_row": 4730,
+        "last_row": 4812,
+        "cross_engine_sample_row_ids": [
+          4730,
+          4771,
+          4812
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 59,
+        "parsed_rows": 83,
+        "first_row": 4813,
+        "last_row": 4895,
+        "cross_engine_sample_row_ids": [
+          4813,
+          4854,
+          4895
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 60,
+        "parsed_rows": 83,
+        "first_row": 4896,
+        "last_row": 4978,
+        "cross_engine_sample_row_ids": [
+          4896,
+          4937,
+          4978
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 61,
+        "parsed_rows": 83,
+        "first_row": 4979,
+        "last_row": 5061,
+        "cross_engine_sample_row_ids": [
+          4979,
+          5020,
+          5061
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 62,
+        "parsed_rows": 83,
+        "first_row": 5062,
+        "last_row": 5144,
+        "cross_engine_sample_row_ids": [
+          5062,
+          5103,
+          5144
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 63,
+        "parsed_rows": 83,
+        "first_row": 5145,
+        "last_row": 5227,
+        "cross_engine_sample_row_ids": [
+          5145,
+          5186,
+          5227
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 64,
+        "parsed_rows": 83,
+        "first_row": 5228,
+        "last_row": 5310,
+        "cross_engine_sample_row_ids": [
+          5228,
+          5269,
+          5310
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 65,
+        "parsed_rows": 83,
+        "first_row": 5311,
+        "last_row": 5393,
+        "cross_engine_sample_row_ids": [
+          5311,
+          5352,
+          5393
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 66,
+        "parsed_rows": 83,
+        "first_row": 5394,
+        "last_row": 5476,
+        "cross_engine_sample_row_ids": [
+          5394,
+          5435,
+          5476
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 67,
+        "parsed_rows": 83,
+        "first_row": 5477,
+        "last_row": 5559,
+        "cross_engine_sample_row_ids": [
+          5477,
+          5518,
+          5559
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 68,
+        "parsed_rows": 83,
+        "first_row": 5560,
+        "last_row": 5642,
+        "cross_engine_sample_row_ids": [
+          5560,
+          5601,
+          5642
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 69,
+        "parsed_rows": 83,
+        "first_row": 5643,
+        "last_row": 5725,
+        "cross_engine_sample_row_ids": [
+          5643,
+          5684,
+          5725
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 70,
+        "parsed_rows": 83,
+        "first_row": 5726,
+        "last_row": 5808,
+        "cross_engine_sample_row_ids": [
+          5726,
+          5767,
+          5808
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 71,
+        "parsed_rows": 83,
+        "first_row": 5809,
+        "last_row": 5891,
+        "cross_engine_sample_row_ids": [
+          5809,
+          5850,
+          5891
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 72,
+        "parsed_rows": 83,
+        "first_row": 5892,
+        "last_row": 5974,
+        "cross_engine_sample_row_ids": [
+          5892,
+          5933,
+          5974
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 73,
+        "parsed_rows": 83,
+        "first_row": 5975,
+        "last_row": 6057,
+        "cross_engine_sample_row_ids": [
+          5975,
+          6016,
+          6057
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 74,
+        "parsed_rows": 83,
+        "first_row": 6058,
+        "last_row": 6140,
+        "cross_engine_sample_row_ids": [
+          6058,
+          6099,
+          6140
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 75,
+        "parsed_rows": 83,
+        "first_row": 6141,
+        "last_row": 6223,
+        "cross_engine_sample_row_ids": [
+          6141,
+          6182,
+          6223
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 76,
+        "parsed_rows": 83,
+        "first_row": 6224,
+        "last_row": 6306,
+        "cross_engine_sample_row_ids": [
+          6224,
+          6265,
+          6306
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 77,
+        "parsed_rows": 83,
+        "first_row": 6307,
+        "last_row": 6389,
+        "cross_engine_sample_row_ids": [
+          6307,
+          6348,
+          6389
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 78,
+        "parsed_rows": 83,
+        "first_row": 6390,
+        "last_row": 6472,
+        "cross_engine_sample_row_ids": [
+          6390,
+          6431,
+          6472
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 79,
+        "parsed_rows": 83,
+        "first_row": 6473,
+        "last_row": 6555,
+        "cross_engine_sample_row_ids": [
+          6473,
+          6514,
+          6555
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 80,
+        "parsed_rows": 83,
+        "first_row": 6556,
+        "last_row": 6638,
+        "cross_engine_sample_row_ids": [
+          6556,
+          6597,
+          6638
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 81,
+        "parsed_rows": 83,
+        "first_row": 6639,
+        "last_row": 6721,
+        "cross_engine_sample_row_ids": [
+          6639,
+          6680,
+          6721
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 82,
+        "parsed_rows": 83,
+        "first_row": 6722,
+        "last_row": 6804,
+        "cross_engine_sample_row_ids": [
+          6722,
+          6763,
+          6804
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 83,
+        "parsed_rows": 83,
+        "first_row": 6805,
+        "last_row": 6887,
+        "cross_engine_sample_row_ids": [
+          6805,
+          6846,
+          6887
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 84,
+        "parsed_rows": 83,
+        "first_row": 6888,
+        "last_row": 6970,
+        "cross_engine_sample_row_ids": [
+          6888,
+          6929,
+          6970
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 85,
+        "parsed_rows": 83,
+        "first_row": 6971,
+        "last_row": 7053,
+        "cross_engine_sample_row_ids": [
+          6971,
+          7012,
+          7053
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 86,
+        "parsed_rows": 83,
+        "first_row": 7054,
+        "last_row": 7136,
+        "cross_engine_sample_row_ids": [
+          7054,
+          7095,
+          7136
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 87,
+        "parsed_rows": 83,
+        "first_row": 7137,
+        "last_row": 7219,
+        "cross_engine_sample_row_ids": [
+          7137,
+          7178,
+          7219
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 88,
+        "parsed_rows": 83,
+        "first_row": 7220,
+        "last_row": 7302,
+        "cross_engine_sample_row_ids": [
+          7220,
+          7261,
+          7302
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 89,
+        "parsed_rows": 83,
+        "first_row": 7303,
+        "last_row": 7385,
+        "cross_engine_sample_row_ids": [
+          7303,
+          7344,
+          7385
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 90,
+        "parsed_rows": 83,
+        "first_row": 7386,
+        "last_row": 7468,
+        "cross_engine_sample_row_ids": [
+          7386,
+          7427,
+          7468
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 91,
+        "parsed_rows": 83,
+        "first_row": 7469,
+        "last_row": 7551,
+        "cross_engine_sample_row_ids": [
+          7469,
+          7510,
+          7551
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 92,
+        "parsed_rows": 83,
+        "first_row": 7552,
+        "last_row": 7634,
+        "cross_engine_sample_row_ids": [
+          7552,
+          7593,
+          7634
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 93,
+        "parsed_rows": 83,
+        "first_row": 7635,
+        "last_row": 7717,
+        "cross_engine_sample_row_ids": [
+          7635,
+          7676,
+          7717
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 94,
+        "parsed_rows": 83,
+        "first_row": 7718,
+        "last_row": 7800,
+        "cross_engine_sample_row_ids": [
+          7718,
+          7759,
+          7800
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 95,
+        "parsed_rows": 83,
+        "first_row": 7801,
+        "last_row": 7883,
+        "cross_engine_sample_row_ids": [
+          7801,
+          7842,
+          7883
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 96,
+        "parsed_rows": 83,
+        "first_row": 7884,
+        "last_row": 7966,
+        "cross_engine_sample_row_ids": [
+          7884,
+          7925,
+          7966
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 97,
+        "parsed_rows": 83,
+        "first_row": 7967,
+        "last_row": 8049,
+        "cross_engine_sample_row_ids": [
+          7967,
+          8008,
+          8049
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 98,
+        "parsed_rows": 83,
+        "first_row": 8050,
+        "last_row": 8132,
+        "cross_engine_sample_row_ids": [
+          8050,
+          8091,
+          8132
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 99,
+        "parsed_rows": 83,
+        "first_row": 8133,
+        "last_row": 8215,
+        "cross_engine_sample_row_ids": [
+          8133,
+          8174,
+          8215
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 100,
+        "parsed_rows": 83,
+        "first_row": 8216,
+        "last_row": 8298,
+        "cross_engine_sample_row_ids": [
+          8216,
+          8257,
+          8298
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 101,
+        "parsed_rows": 83,
+        "first_row": 8299,
+        "last_row": 8381,
+        "cross_engine_sample_row_ids": [
+          8299,
+          8340,
+          8381
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 102,
+        "parsed_rows": 83,
+        "first_row": 8382,
+        "last_row": 8464,
+        "cross_engine_sample_row_ids": [
+          8382,
+          8423,
+          8464
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 103,
+        "parsed_rows": 83,
+        "first_row": 8465,
+        "last_row": 8547,
+        "cross_engine_sample_row_ids": [
+          8465,
+          8506,
+          8547
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 104,
+        "parsed_rows": 83,
+        "first_row": 8548,
+        "last_row": 8630,
+        "cross_engine_sample_row_ids": [
+          8548,
+          8589,
+          8630
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 105,
+        "parsed_rows": 83,
+        "first_row": 8631,
+        "last_row": 8713,
+        "cross_engine_sample_row_ids": [
+          8631,
+          8672,
+          8713
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 106,
+        "parsed_rows": 83,
+        "first_row": 8714,
+        "last_row": 8796,
+        "cross_engine_sample_row_ids": [
+          8714,
+          8755,
+          8796
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 107,
+        "parsed_rows": 83,
+        "first_row": 8797,
+        "last_row": 8879,
+        "cross_engine_sample_row_ids": [
+          8797,
+          8838,
+          8879
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      },
+      {
+        "page": 108,
+        "parsed_rows": 43,
+        "first_row": 8880,
+        "last_row": 8922,
+        "cross_engine_sample_row_ids": [
+          8880,
+          8901,
+          8922
+        ],
+        "sample_check": "both original times and all values agree",
+        "pypdf_parse_errors": [],
+        "pdfium_row_parse_errors": []
+      }
+    ],
+    "source": "Team2 bc9fe3c0 row regex/6-or-9 columns; no new inference method",
+    "prior_full_dual_engine_QA": "Team2 reports all 8922 rows; reused as attributed result",
+    "this_export_dual_engine_check": "First/middle/last of every one of 108 pages: both times and values",
+    "cross_engine_sample_n": 324,
+    "manual_visual_review": "Rendered pages 1,54,108 inspected: first/middle/last-page structure, header, negative signs, absent 3cm triad",
+    "first_time_1": "2017-11-28T00:00:00",
+    "last_time_1": "2018-12-04T17:00:00",
+    "time_1_label": "Time, GMT-07:00",
+    "time_2_label": "Local Time GMT-5:30",
+    "second_clock_minus_first_minutes": 90,
+    "time_status": "Printed offsets consistent; UTC/solar-time meaning unverified, no conversion",
+    "missing_code": "3cm triad omitted after final published observation; retained as missing",
+    "qa_bits": null,
+    "scale_factor": 1,
+    "add_offset": 0,
+    "calibration": "Published temperatures and raw/corrected RH retained; no recalibration or reapplication of Appendix correction",
+    "sensor_uncertainty": "EH1 Methods: temperature accuracy +/-0.21 degC for 0..50 degC, assumed by authors below zero; systematic offsets do not shrink with N",
+    "statistical_independence": "Hourly samples are autocorrelated; N is observed support, not independent replication",
+    "valid_3cm_records": 2646,
+    "last_valid_3cm_time_1": "2018-03-18T05:00:00",
+    "RH_49cm_corrected_above100_n": 2807,
+    "missing_3cm_records": 6276,
+    "missing_3cm_policy": "omitted temperature/raw RH/corrected RH are all blank; not zero or interpolated",
+    "fill_scale_offset": "Published finite values retained, scale=1 offset=0; no finite sentinel documented in EH2 header"
+  },
+  "candidate_csv_sha256": "07d3ccf7e26e0940a3c7753bfa07b8039184fe1151f772b8941b2b3557e123bd",
+  "profiles_sha256": "6375f851268bb10b4da12b4ee8116ee0772304570b1d26d7217e676596184ffd",
+  "processing_code_sha256": {
+    "download_inputs.py": "f4a5269bb282d5b0e71d03184bf47b04d4c31674c6963137fd4f086eb2c99c0e",
+    "eh_adapter.py": "dfb603a12117adbf45bb9de44e8ef0b21dce87dd0f92f71a764bed275eea13f8",
+    "inventory.py": "56be8a0a99eae9369e64e05cfd8baee328e4eb9dae00554431c6f6049b48d8f0",
+    "pipeline.py": "532e0391eb75c11fef261ff44464aeca0e7932a857aa6c9a4167588216450b19",
+    "test_eh_adapter.py": "9d2cf835dfd9f420e721c3fe5ce5cdfc5aa16b0dcd2f285e6ae82d067ea0618f",
+    "test_pipeline.py": "aba962436d766e607ebfd0f3401d7f6425af95bf01ec251ad63e05e34f7add1b"
+  },
+  "execution": {
+    "backend": "CPU",
+    "gpu_used": false,
+    "numeric_precision": "Python binary64 / float64",
+    "speedup": null,
+    "read_parse_page_QA_seconds": 6.470639707986265,
+    "table_calculation_seconds": 0.0354503330308944,
+    "figures_seconds": 0.4573282500496134,
+    "data_transfer_seconds": null,
+    "total_seconds": 7.105085208895616,
+    "timing_note": "Single local run, excluding source download and dependency setup; no measured GPU comparison"
+  },
+  "environment": {
+    "project_root": "/private/tmp/nasa-compute-20261114",
+    "cwd": "/private/tmp/nasa-compute-20261114",
+    "python_executable": "PROJECT_ROOT/.venv/bin/python",
+    "python": "3.12.15 (main, Sep 30 2026, 22:04:19) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "platform": "macOS-15.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "logical_cpu_count_host": 10,
+    "cgroup_limits": {},
+    "packages": {
+      "numpy": "2.5.4",
+      "xarray": "2026.9.0",
+      "netCDF4": "1.7.5.1.post1",
+      "rasterio": "1.5.2",
+      "matplotlib": "3.11.2",
+      "scipy": "1.18.1",
+      "pytest": "9.2.0",
+      "pypdf": "7.1.0",
+      "pypdfium2": "5.15.2",
+      "torch": null,
+      "cupy": null
+    },
+    "gpu": {
+      "device_paths": [],
+      "rocm_smi": null,
+      "amd_smi": null,
+      "computation_backend_used": "CPU",
+      "gpu_computation_performed": false
+    },
+    "git_branch": {
+      "returncode": 0,
+      "stdout": "compute/candidate-extraction-20261114",
+      "stderr": ""
+    },
+    "git_commit": {
+      "returncode": 0,
+      "stdout": "f6d4c181d9739fe5c74b1c573b59414d63d6ec8e",
+      "stderr": ""
+    },
+    "git_status": {
+      "returncode": 0,
+      "stdout": "?? outputs/compute/\n?? scripts/compute/",
+      "stderr": ""
+    },
+    "files": [],
+    "note": "Host CPU/memory figures are not an allocation guarantee; cgroup values govern when present."
+  },
+  "policy": {
+    "UTC_conversion": "none",
+    "RH_clipping": "none",
+    "interpolation": "none",
+    "annual_3cm": "not_computed",
+    "threshold_value": null,
+    "threshold_status": "not_defined",
+    "published_49cm_interface": "context for installed sensor, not new or independent held-out ice truth",
+    "purpose_version_alignment": "MR-v2 execution accepted; Team1 original provisional purpose-version strings preserved, not silently rewritten",
+    "LT_backup": "not_activated",
+    "novelty_and_scientific_interpretation": "Remain Main/Team1/Team2 responsibilities"
+  }
+}

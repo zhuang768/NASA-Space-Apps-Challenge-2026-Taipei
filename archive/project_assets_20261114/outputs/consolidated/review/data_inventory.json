@@ -1,0 +1,4613 @@
+{
+  "generated_utc": "2026-11-14T07:32:55.894968+00:00",
+  "scope": "Read-only inventory of scientific CSV/JSON under outputs/ and docs/. No secrets, source edits, moves, or scoring changes.",
+  "file_count": 56,
+  "csv_file_count": 24,
+  "json_file_count": 32,
+  "csv_total_rows_including_redundant_views": 25409,
+  "json_total_scalar_leaves_including_redundant_views": 19554,
+  "recommended_sheets": [
+    {
+      "sheet": "總覽與限制",
+      "rows": "short fixed summary",
+      "source": "docs/site_discovery_brief.md + existing result statuses",
+      "notes": "Earth↔Mars only; four themes; distinguish experimental descriptors from confidence; no novelty clearance."
+    },
+    {
+      "sheet": "地球視窗全量",
+      "rows": 5212,
+      "source": "outputs/analysis/earth_terrain_features.csv and outputs/analysis_scale10km/earth_terrain_features.csv",
+      "notes": "Add run_id, window_km=100, sample_spacing_km=4 or 10, slope_stencil_km=8 or20. Do not call the sensitivity run 10km windows."
+    },
+    {
+      "sheet": "地球排序明細",
+      "rows": 15636,
+      "source": "6 *_all_ranked.csv files",
+      "notes": "Add run_id and mars_target. Original terrain_distance lower-is-closer; not calibrated similarity %."
+    },
+    {
+      "sheet": "地球候選",
+      "rows": 72,
+      "source": "outputs/matching_handoff/matching_data.json candidates (36, primary context-enriched); outputs/analysis_scale10km/results.json (36)",
+      "notes": "Use primary handoff to avoid reimporting identical results.json/results_with_context/shortlist.csv. Preserve those redundant files in provenance/index. Composite ID run_id + candidate_id; coordinate changes across runs."
+    },
+    {
+      "sheet": "地球POWER氣候",
+      "rows": 156,
+      "source": "6 outputs/analysis/source_metadata/power_*.json; properties.parameter",
+      "notes": "26 time keys each (24 monthly+2 annual). Wide columns for 5 parameters. Mark 202313 and202413 annual; -999 fill missing, source unit preserved. These are 2m air temperatures, not MODIS LST."
+    },
+    {
+      "sheet": "火星參照區",
+      "rows": 3,
+      "source": "outputs/mars_profiles/profiles.json profiles",
+      "notes": "100km support. Flatten terrain, thermal inertia, shallow/deep ice, dust MY34/MY35 summary, temperature statuses; preserve unit and count fields."
+    },
+    {
+      "sheet": "火星發現候選",
+      "rows": 24,
+      "source": "outputs/mars_discovery/mars_site_discovery.json purposes.*.picks",
+      "notes": "Add purpose and original_order IDs I/D/F01..08. No new scoring. Only 15 reviewed; 4 reporting cards. All novelty unchecked; firm engineering purpose dropped."
+    },
+    {
+      "sheet": "火星新穎性查核",
+      "rows": 15,
+      "source": "docs/mars_discovery_novelty_checks.csv",
+      "notes": "Preserve same-purpose/site statuses, prior-art scope and citations. Do not equate coordinate non-hit to novelty."
+    },
+    {
+      "sheet": "冰候選原生QA",
+      "rows": 2,
+      "source": "outputs/research/ice_candidate_followup/native_audit.json candidates",
+      "notes": "Native coverage stats, neighboring interpolation weights, exact raw errors, nominal 2015-envelope scope; deep SWIM context shares inputs."
+    },
+    {
+      "sheet": "火星塵埃時間序列",
+      "rows": 4014,
+      "source": "6 outputs/mars_profiles/*dust*_series.csv",
+      "notes": "Append target and Mars year parsed from filename. Keep cdodtot/cdod610/cdodrel distinct; IR9.3μm absorption vs Earth visibleAOT different."
+    },
+    {
+      "sheet": "火星區域溫度背景",
+      "rows": 864,
+      "source": "outputs/mars_regional_temperature/context.json profiles.*.series",
+      "notes": "Add requested+selected coordinates and scoring_eligible=false.5deg grid, MY29–36,36Ls bins peryear. Nulls are unknown not0; 03/15 sample contrast not same-sol daily extreme."
+    },
+    {
+      "sheet": "漫遊車溫度",
+      "rows": 72,
+      "source": "outputs/mars_temperature/provisional_hourly.csv",
+      "notes": "Provisional unqualified. Separate qualified_windows/provisional windows metadata from summary.json; no global/region mapping."
+    },
+    {
+      "sheet": "研究證據",
+      "rows": "3 candidates + claims/source-specific pointsets",
+      "source": "outputs/research/three_candidate_evidence.json + oytag* + reference_terrain_check.json",
+      "notes": "gale-01 Oytag prior-analog evidence unresolved specific outcrop; do not merge global candidate IDs across runs. Supplement samples distinct from three literature points."
+    },
+    {
+      "sheet": "研究需求與主張",
+      "rows": 66,
+      "source": "research_requirements.csv(5),claim_ledger.csv(8),submission_gap_checklist...(53)",
+      "notes": "May keep separate tables within one sheet; source-specific column names differ. Could use separate distinct sheets if better readability."
+    },
+    {
+      "sheet": "來源與檔案索引",
+      "rows": "inventory + source metadata, manifest grains",
+      "source": "docs/earth_inventory.csv(222), repository_inventory.csv(123),sources metadata plus current local file paths",
+      "notes": "Large TIFF/NC/HDF grids stay original, referenced by path, bytes, units, resolution, period, sha256. Download manifests indicate discovered products, not necessarily downloaded or used."
+    }
+  ],
+  "join_and_interpretation_hazards": [
+    "analysis vs analysis_scale10km use same candidate_id strings for different locations; ID alone is unsafe.",
+    "Primary and sensitivity analyses both window_km=100; sample spacing and slope stencil differ.",
+    "results.json, results_with_context.json, shortlist.csv and matching_data.json overlap heavily; preserve provenance without counting as independent data.",
+    "Mars discovery 0.5degree cell summaries differ from 100km reference region profiles and Earth terrain windows.",
+    "Mars descriptor score high-is-close vs terrain_distance low-is-close; neither confidence nor percent similarity.",
+    "POWER annual YYYY13 time keys must not be treated as months or mixed into monthly averages.",
+    "Earth T2M air temperature, MODIS LST, Mars regional/model-corrected surface temperature and TES thermal inertia are different quantities.",
+    "SWIM ice consistency is not ice amount/probability and shallow/deep products share inputs.",
+    "MODIS precipitation/NDVI/AOD/LST manifests are acquisition metadata, not extracted scientific values.",
+    "Some research files preserve historical or provisional snapshot statuses; retain as-of/source rather than overwrite newer QA status.",
+    "No evidence establishes four new discovery points already paired to Earth analogs."
+  ],
+  "files": [
+    {
+      "path": "docs/earth_inventory.csv",
+      "bytes": 31439,
+      "role": "source_file_inventory_snapshot",
+      "kind": "csv",
+      "rows": 222,
+      "columns": [
+        "folder",
+        "file",
+        "bytes",
+        "sha256",
+        "read_status",
+        "reader"
+      ]
+    },
+    {
+      "path": "docs/mars_discovery_novelty_checks.csv",
+      "bytes": 12777,
+      "role": "research_requirements_and_scope",
+      "kind": "csv",
+      "rows": 15,
+      "columns": [
+        "candidate_id",
+        "purpose",
+        "original_rank",
+        "latitude_deg",
+        "longitude_east_signed_deg",
+        "longitude_east_0_360_deg",
+        "stored_descriptor_score",
+        "slope",
+        "relief",
+        "thermal_inertia",
+        "ice_shallow",
+        "dust_cdod",
+        "same_purpose_exact_site_status",
+        "regional_prior_art_status",
+        "novelty_cleared",
+        "editorial_recommendation",
+        "review_note",
+        "coordinate_query",
+        "coordinate_query_outcome",
+        "regional_query_scope",
+        "source_refs",
+        "source_urls",
+        "search_date_taipei",
+        "tian_utopia_center_distance_km",
+        "inside_tian_2000km_monitoring_circle",
+        "protonilus_ez_center_distance_km",
+        "insight_center_distance_km"
+      ]
+    },
+    {
+      "path": "docs/mars_discovery_search_scope.json",
+      "bytes": 6618,
+      "role": "research_requirements_and_scope",
+      "kind": "json",
+      "top_level_keys": [
+        "reviewed_on",
+        "source_commit",
+        "catalog",
+        "catalog_sha256",
+        "reviewed_ranks",
+        "purposes",
+        "exact_site_novelty_clearance_count",
+        "coordinate_search_engine",
+        "coordinate_domain_scope",
+        "coordinate_query_groups",
+        "coordinate_query_interpretation",
+        "regional_search_engine",
+        "regional_query_groups",
+        "supplementary_system1_queries",
+        "spatial_check_method",
+        "access_limits",
+        "protected_files_sha256",
+        "validation"
+      ],
+      "scalar_leaves": 102,
+      "arrays": [
+        {
+          "path": "$.reviewed_ranks",
+          "occurrences": 1,
+          "total_items": 5,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.purposes",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.coordinate_domain_scope",
+          "occurrences": 1,
+          "total_items": 8,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.coordinate_query_groups",
+          "occurrences": 1,
+          "total_items": 6,
+          "item_fields": [
+            "purpose",
+            "queries"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.coordinate_query_groups[*].queries",
+          "occurrences": 6,
+          "total_items": 15,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.regional_query_groups",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [
+            "id",
+            "queries"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.regional_query_groups[*].queries",
+          "occurrences": 4,
+          "total_items": 12,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.supplementary_system1_queries",
+          "occurrences": 1,
+          "total_items": 6,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.access_limits",
+          "occurrences": 1,
+          "total_items": 6,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "docs/repository_inventory.csv",
+      "bytes": 8775,
+      "role": "source_file_inventory_snapshot",
+      "kind": "csv",
+      "rows": 123,
+      "columns": [
+        "path",
+        "bytes",
+        "role",
+        "decision"
+      ]
+    },
+    {
+      "path": "docs/research_requirements.csv",
+      "bytes": 1294,
+      "role": "research_requirements_and_scope",
+      "kind": "csv",
+      "rows": 5,
+      "columns": [
+        "id",
+        "question",
+        "condition_type",
+        "required_conditions",
+        "decision_rule",
+        "status",
+        "evidence",
+        "limitation"
+      ]
+    },
+    {
+      "path": "docs/submission/claim_ledger.csv",
+      "bytes": 1433,
+      "role": "submission_claims_and_gaps",
+      "kind": "csv",
+      "rows": 8,
+      "columns": [
+        "id",
+        "english_claim",
+        "basis_type",
+        "evidence",
+        "boundary"
+      ]
+    },
+    {
+      "path": "docs/submission_gap_checklist_2026-11-14.csv",
+      "bytes": 10767,
+      "role": "submission_claims_and_gaps",
+      "kind": "csv",
+      "rows": 53,
+      "columns": [
+        "id",
+        "priority",
+        "category",
+        "item",
+        "current_status",
+        "evidence",
+        "completion_condition",
+        "suggested_owner"
+      ]
+    },
+    {
+      "path": "outputs/analysis/arcadia_all_ranked.csv",
+      "bytes": 248094,
+      "role": "earth_terrain_primary_100km_window_4km_samples",
+      "kind": "csv",
+      "rows": 2611,
+      "columns": [
+        "lat",
+        "lon",
+        "slope_median_deg",
+        "slope_p90_deg",
+        "relief_m",
+        "arcadia_terrain_distance",
+        "slope_emphasis_raw_rank",
+        "relief_emphasis_raw_rank"
+      ]
+    },
+    {
+      "path": "outputs/analysis/earth_terrain_features.csv",
+      "bytes": 331475,
+      "role": "earth_terrain_primary_100km_window_4km_samples",
+      "kind": "csv",
+      "rows": 2611,
+      "columns": [
+        "lat",
+        "lon",
+        "land_fraction",
+        "slope_median_deg",
+        "slope_p90_deg",
+        "relief_m",
+        "jezero_terrain_distance",
+        "gale_terrain_distance",
+        "arcadia_terrain_distance"
+      ]
+    },
+    {
+      "path": "outputs/analysis/gale_all_ranked.csv",
+      "bytes": 245907,
+      "role": "earth_terrain_primary_100km_window_4km_samples",
+      "kind": "csv",
+      "rows": 2611,
+      "columns": [
+        "lat",
+        "lon",
+        "slope_median_deg",
+        "slope_p90_deg",
+        "relief_m",
+        "gale_terrain_distance",
+        "slope_emphasis_raw_rank",
+        "relief_emphasis_raw_rank"
+      ]
+    },
+    {
+      "path": "outputs/analysis/jezero_all_ranked.csv",
+      "bytes": 247402,
+      "role": "earth_terrain_primary_100km_window_4km_samples",
+      "kind": "csv",
+      "rows": 2611,
+      "columns": [
+        "lat",
+        "lon",
+        "slope_median_deg",
+        "slope_p90_deg",
+        "relief_m",
+        "jezero_terrain_distance",
+        "slope_emphasis_raw_rank",
+        "relief_emphasis_raw_rank"
+      ]
+    },
+    {
+      "path": "outputs/analysis/results.json",
+      "bytes": 49306,
+      "role": "earth_terrain_primary_100km_window_4km_samples",
+      "kind": "json",
+      "top_level_keys": [
+        "analysis_type",
+        "generated_utc",
+        "base_commit",
+        "parameters",
+        "counts",
+        "targets",
+        "sources",
+        "candidates",
+        "limitations"
+      ],
+      "scalar_leaves": 1125,
+      "arrays": [
+        {
+          "path": "$.parameters.earth_search_latitude_bounds",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.parameters.excluded_boxes",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.parameters.excluded_boxes[*]",
+          "occurrences": 3,
+          "total_items": 15,
+          "item_fields": [],
+          "item_type": [
+            "int",
+            "str"
+          ]
+        },
+        {
+          "path": "$.parameters.feature_order",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.parameters.distance_tolerances",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.parameters.within_terrain_weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sources",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [
+            "bytes",
+            "crs",
+            "dataset",
+            "dataset_id",
+            "file",
+            "native_dimensions",
+            "period",
+            "recorded_utc",
+            "resolution",
+            "sha256",
+            "units",
+            "url",
+            "version",
+            "vertical_datum"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.sources[*].native_dimensions",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.candidates.jezero",
+          "occurrences": 1,
+          "total_items": 12,
+          "item_fields": [
+            "air_status",
+            "candidate_id",
+            "footprint",
+            "land_fraction",
+            "lat",
+            "logistics_status",
+            "lon",
+            "mars_target",
+            "prior_analog_literature_status",
+            "rank",
+            "relief_m",
+            "sensitivity_raw_ranks",
+            "slope_median_deg",
+            "slope_p90_deg",
+            "status",
+            "temperature_status",
+            "terrain_distance",
+            "water_ice_status"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.candidates.jezero[*].footprint",
+          "occurrences": 12,
+          "total_items": 60,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.candidates.jezero[*].footprint[*]",
+          "occurrences": 60,
+          "total_items": 120,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.candidates.gale",
+          "occurrences": 1,
+          "total_items": 12,
+          "item_fields": [
+            "air_status",
+            "candidate_id",
+            "footprint",
+            "land_fraction",
+            "lat",
+            "logistics_status",
+            "lon",
+            "mars_target",
+            "prior_analog_literature_status",
+            "rank",
+            "relief_m",
+            "sensitivity_raw_ranks",
+            "slope_median_deg",
+            "slope_p90_deg",
+            "status",
+            "temperature_status",
+            "terrain_distance",
+            "water_ice_status"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.candidates.gale[*].footprint",
+          "occurrences": 12,
+          "total_items": 60,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.candidates.gale[*].footprint[*]",
+          "occurrences": 60,
+          "total_items": 120,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.candidates.arcadia",
+          "occurrences": 1,
+          "total_items": 12,
+          "item_fields": [
+            "air_status",
+            "candidate_id",
+            "footprint",
+            "land_fraction",
+            "lat",
+            "logistics_status",
+            "lon",
+            "mars_target",
+            "prior_analog_literature_status",
+            "rank",
+            "relief_m",
+            "sensitivity_raw_ranks",
+            "slope_median_deg",
+            "slope_p90_deg",
+            "status",
+            "temperature_status",
+            "terrain_distance",
+            "water_ice_status"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.candidates.arcadia[*].footprint",
+          "occurrences": 12,
+          "total_items": 60,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.candidates.arcadia[*].footprint[*]",
+          "occurrences": 60,
+          "total_items": 120,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.limitations",
+          "occurrences": 1,
+          "total_items": 7,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/analysis/results_with_context.json",
+      "bytes": 70200,
+      "role": "earth_terrain_primary_100km_window_4km_samples",
+      "kind": "json",
+      "top_level_keys": [
+        "analysis_type",
+        "generated_utc",
+        "base_commit",
+        "parameters",
+        "counts",
+        "targets",
+        "sources",
+        "candidates",
+        "limitations"
+      ],
+      "scalar_leaves": 1479,
+      "arrays": [
+        {
+          "path": "$.parameters.earth_search_latitude_bounds",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.parameters.excluded_boxes",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.parameters.excluded_boxes[*]",
+          "occurrences": 3,
+          "total_items": 15,
+          "item_fields": [],
+          "item_type": [
+            "int",
+            "str"
+          ]
+        },
+        {
+          "path": "$.parameters.feature_order",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.parameters.distance_tolerances",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.parameters.within_terrain_weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sources",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [
+            "bytes",
+            "crs",
+            "dataset",
+            "dataset_id",
+            "file",
+            "native_dimensions",
+            "period",
+            "recorded_utc",
+            "resolution",
+            "sha256",
+            "units",
+            "url",
+            "version",
+            "vertical_datum"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.sources[*].native_dimensions",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.candidates.jezero",
+          "occurrences": 1,
+          "total_items": 12,
+          "item_fields": [
+            "air_status",
+            "candidate_id",
+            "earth_climate_context",
+            "footprint",
+            "land_fraction",
+            "lat",
+            "logistics_status",
+            "lon",
+            "mars_target",
+            "prior_analog_literature_status",
+            "rank",
+            "relief_m",
+            "sensitivity_raw_ranks",
+            "slope_median_deg",
+            "slope_p90_deg",
+            "status",
+            "temperature_status",
+            "terrain_distance",
+            "water_ice_status"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.candidates.jezero[*].footprint",
+          "occurrences": 12,
+          "total_items": 60,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.candidates.jezero[*].footprint[*]",
+          "occurrences": 60,
+          "total_items": 120,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.candidates.jezero[*].earth_climate_context.header.sources",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.candidates.jezero[*].earth_climate_context.geometry.coordinates",
+          "occurrences": 2,
+          "total_items": 6,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.candidates.gale",
+          "occurrences": 1,
+          "total_items": 12,
+          "item_fields": [
+            "air_status",
+            "candidate_id",
+            "earth_climate_context",
+            "footprint",
+            "land_fraction",
+            "lat",
+            "logistics_status",
+            "lon",
+            "mars_target",
+            "prior_analog_literature_status",
+            "rank",
+            "relief_m",
+            "sensitivity_raw_ranks",
+            "slope_median_deg",
+            "slope_p90_deg",
+            "status",
+            "temperature_status",
+            "terrain_distance",
+            "water_ice_status"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.candidates.gale[*].footprint",
+          "occurrences": 12,
+          "total_items": 60,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.candidates.gale[*].footprint[*]",
+          "occurrences": 60,
+          "total_items": 120,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.candidates.gale[*].earth_climate_context.header.sources",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.candidates.gale[*].earth_climate_context.geometry.coordinates",
+          "occurrences": 2,
+          "total_items": 6,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.candidates.arcadia",
+          "occurrences": 1,
+          "total_items": 12,
+          "item_fields": [
+            "air_status",
+            "candidate_id",
+            "earth_climate_context",
+            "footprint",
+            "land_fraction",
+            "lat",
+            "logistics_status",
+            "lon",
+            "mars_target",
+            "prior_analog_literature_status",
+            "rank",
+            "relief_m",
+            "sensitivity_raw_ranks",
+            "slope_median_deg",
+            "slope_p90_deg",
+            "status",
+            "temperature_status",
+            "terrain_distance",
+            "water_ice_status"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.candidates.arcadia[*].footprint",
+          "occurrences": 12,
+          "total_items": 60,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.candidates.arcadia[*].footprint[*]",
+          "occurrences": 60,
+          "total_items": 120,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.candidates.arcadia[*].earth_climate_context.header.sources",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.candidates.arcadia[*].earth_climate_context.geometry.coordinates",
+          "occurrences": 2,
+          "total_items": 6,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.limitations",
+          "occurrences": 1,
+          "total_items": 7,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/analysis/sensitivity.json",
+      "bytes": 2986,
+      "role": "earth_terrain_primary_100km_window_4km_samples",
+      "kind": "json",
+      "top_level_keys": [
+        "jezero",
+        "gale",
+        "arcadia"
+      ],
+      "scalar_leaves": 78,
+      "arrays": [
+        {
+          "path": "$.jezero.base_4km_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.jezero.base_4km_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.jezero.alternative_10km_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.jezero.alternative_10km_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.jezero.weight_variants.slope_emphasis.weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.jezero.weight_variants.slope_emphasis.separated_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.jezero.weight_variants.slope_emphasis.separated_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.jezero.weight_variants.relief_emphasis.weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.jezero.weight_variants.relief_emphasis.separated_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.jezero.weight_variants.relief_emphasis.separated_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.gale.base_4km_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.gale.base_4km_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.gale.alternative_10km_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.gale.alternative_10km_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.gale.weight_variants.slope_emphasis.weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.gale.weight_variants.slope_emphasis.separated_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.gale.weight_variants.slope_emphasis.separated_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.gale.weight_variants.relief_emphasis.weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.gale.weight_variants.relief_emphasis.separated_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.gale.weight_variants.relief_emphasis.separated_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.arcadia.base_4km_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.arcadia.base_4km_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.arcadia.alternative_10km_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.arcadia.alternative_10km_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.arcadia.weight_variants.slope_emphasis.weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.arcadia.weight_variants.slope_emphasis.separated_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.arcadia.weight_variants.slope_emphasis.separated_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.arcadia.weight_variants.relief_emphasis.weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.arcadia.weight_variants.relief_emphasis.separated_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.arcadia.weight_variants.relief_emphasis.separated_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/analysis/shortlist.csv",
+      "bytes": 8490,
+      "role": "earth_terrain_primary_100km_window_4km_samples",
+      "kind": "csv",
+      "rows": 36,
+      "columns": [
+        "lat",
+        "lon",
+        "land_fraction",
+        "slope_median_deg",
+        "slope_p90_deg",
+        "relief_m",
+        "candidate_id",
+        "rank",
+        "mars_target",
+        "terrain_distance",
+        "status",
+        "temperature_status",
+        "water_ice_status",
+        "air_status",
+        "logistics_status",
+        "prior_analog_literature_status",
+        "earth_T2M_C_2023_2024",
+        "earth_precip_mm_day_2023_2024",
+        "climate_role"
+      ]
+    },
+    {
+      "path": "outputs/analysis/source_metadata/aod_manifest.json",
+      "bytes": 10406,
+      "role": "earth_climate_sources_and_download_manifests",
+      "kind": "json",
+      "top_level_keys": [
+        "product",
+        "start",
+        "end",
+        "granules",
+        "status"
+      ],
+      "scalar_leaves": 127,
+      "arrays": [
+        {
+          "path": "$.granules",
+          "occurrences": 1,
+          "total_items": 24,
+          "item_fields": [
+            "concept_id",
+            "granule_id",
+            "temporal_extent",
+            "urls"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.granules[*].urls",
+          "occurrences": 24,
+          "total_items": 24,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/analysis/source_metadata/lst_manifest.json",
+      "bytes": 11891,
+      "role": "earth_climate_sources_and_download_manifests",
+      "kind": "json",
+      "top_level_keys": [
+        "product",
+        "start",
+        "end",
+        "granules",
+        "status"
+      ],
+      "scalar_leaves": 127,
+      "arrays": [
+        {
+          "path": "$.granules",
+          "occurrences": 1,
+          "total_items": 24,
+          "item_fields": [
+            "concept_id",
+            "granule_id",
+            "temporal_extent",
+            "urls"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.granules[*].urls",
+          "occurrences": 24,
+          "total_items": 24,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/analysis/source_metadata/ndvi_manifest.json",
+      "bytes": 11878,
+      "role": "earth_climate_sources_and_download_manifests",
+      "kind": "json",
+      "top_level_keys": [
+        "product",
+        "start",
+        "end",
+        "granules",
+        "status"
+      ],
+      "scalar_leaves": 127,
+      "arrays": [
+        {
+          "path": "$.granules",
+          "occurrences": 1,
+          "total_items": 24,
+          "item_fields": [
+            "concept_id",
+            "granule_id",
+            "temporal_extent",
+            "urls"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.granules[*].urls",
+          "occurrences": 24,
+          "total_items": 24,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+13.000_+37.000_2023_2024.json",
+      "bytes": 2701,
+      "role": "earth_climate_sources_and_download_manifests",
+      "kind": "json",
+      "top_level_keys": [
+        "type",
+        "geometry",
+        "properties",
+        "header",
+        "messages",
+        "parameters",
+        "times"
+      ],
+      "scalar_leaves": 156,
+      "arrays": [
+        {
+          "path": "$.geometry.coordinates",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.header.sources",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.messages",
+          "occurrences": 1,
+          "total_items": 0,
+          "item_fields": [],
+          "item_type": []
+        }
+      ]
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+29.000_-105.000_2023_2024.json",
+      "bytes": 2684,
+      "role": "earth_climate_sources_and_download_manifests",
+      "kind": "json",
+      "top_level_keys": [
+        "type",
+        "geometry",
+        "properties",
+        "header",
+        "messages",
+        "parameters",
+        "times"
+      ],
+      "scalar_leaves": 156,
+      "arrays": [
+        {
+          "path": "$.geometry.coordinates",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.header.sources",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.messages",
+          "occurrences": 1,
+          "total_items": 0,
+          "item_fields": [],
+          "item_type": []
+        }
+      ]
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+35.000_+57.000_2023_2024.json",
+      "bytes": 2675,
+      "role": "earth_climate_sources_and_download_manifests",
+      "kind": "json",
+      "top_level_keys": [
+        "type",
+        "geometry",
+        "properties",
+        "header",
+        "messages",
+        "parameters",
+        "times"
+      ],
+      "scalar_leaves": 156,
+      "arrays": [
+        {
+          "path": "$.geometry.coordinates",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.header.sources",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.messages",
+          "occurrences": 1,
+          "total_items": 0,
+          "item_fields": [],
+          "item_type": []
+        }
+      ]
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+35.000_+75.000_2023_2024.json",
+      "bytes": 2696,
+      "role": "earth_climate_sources_and_download_manifests",
+      "kind": "json",
+      "top_level_keys": [
+        "type",
+        "geometry",
+        "properties",
+        "header",
+        "messages",
+        "parameters",
+        "times"
+      ],
+      "scalar_leaves": 156,
+      "arrays": [
+        {
+          "path": "$.geometry.coordinates",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.header.sources",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.messages",
+          "occurrences": 1,
+          "total_items": 0,
+          "item_fields": [],
+          "item_type": []
+        }
+      ]
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+39.000_+75.000_2023_2024.json",
+      "bytes": 2684,
+      "role": "earth_climate_sources_and_download_manifests",
+      "kind": "json",
+      "top_level_keys": [
+        "type",
+        "geometry",
+        "properties",
+        "header",
+        "messages",
+        "parameters",
+        "times"
+      ],
+      "scalar_leaves": 156,
+      "arrays": [
+        {
+          "path": "$.geometry.coordinates",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.header.sources",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.messages",
+          "occurrences": 1,
+          "total_items": 0,
+          "item_fields": [],
+          "item_type": []
+        }
+      ]
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+57.000_+161.000_2023_2024.json",
+      "bytes": 2692,
+      "role": "earth_climate_sources_and_download_manifests",
+      "kind": "json",
+      "top_level_keys": [
+        "type",
+        "geometry",
+        "properties",
+        "header",
+        "messages",
+        "parameters",
+        "times"
+      ],
+      "scalar_leaves": 156,
+      "arrays": [
+        {
+          "path": "$.geometry.coordinates",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.header.sources",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.messages",
+          "occurrences": 1,
+          "total_items": 0,
+          "item_fields": [],
+          "item_type": []
+        }
+      ]
+    },
+    {
+      "path": "outputs/analysis/source_metadata/precipitation_manifest.json",
+      "bytes": 12363,
+      "role": "earth_climate_sources_and_download_manifests",
+      "kind": "json",
+      "top_level_keys": [
+        "product",
+        "start",
+        "end",
+        "granules",
+        "status"
+      ],
+      "scalar_leaves": 127,
+      "arrays": [
+        {
+          "path": "$.granules",
+          "occurrences": 1,
+          "total_items": 24,
+          "item_fields": [
+            "concept_id",
+            "granule_id",
+            "temporal_extent",
+            "urls"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.granules[*].urls",
+          "occurrences": 24,
+          "total_items": 24,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/analysis/source_metadata/public_sources.json",
+      "bytes": 1143,
+      "role": "earth_climate_sources_and_download_manifests",
+      "kind": "json",
+      "top_level_keys": null,
+      "scalar_leaves": 25,
+      "arrays": [
+        {
+          "path": "$",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [
+            "bytes",
+            "crs",
+            "dataset",
+            "file",
+            "native_dimensions",
+            "period",
+            "recorded_utc",
+            "resolution",
+            "sha256",
+            "units",
+            "url",
+            "version",
+            "vertical_datum"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$[*].native_dimensions",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/analysis_scale10km/arcadia_all_ranked.csv",
+      "bytes": 248219,
+      "role": "earth_terrain_sensitivity_100km_window_10km_samples",
+      "kind": "csv",
+      "rows": 2601,
+      "columns": [
+        "lat",
+        "lon",
+        "slope_median_deg",
+        "slope_p90_deg",
+        "relief_m",
+        "arcadia_terrain_distance",
+        "slope_emphasis_raw_rank",
+        "relief_emphasis_raw_rank"
+      ]
+    },
+    {
+      "path": "outputs/analysis_scale10km/earth_terrain_features.csv",
+      "bytes": 331203,
+      "role": "earth_terrain_sensitivity_100km_window_10km_samples",
+      "kind": "csv",
+      "rows": 2601,
+      "columns": [
+        "lat",
+        "lon",
+        "land_fraction",
+        "slope_median_deg",
+        "slope_p90_deg",
+        "relief_m",
+        "jezero_terrain_distance",
+        "gale_terrain_distance",
+        "arcadia_terrain_distance"
+      ]
+    },
+    {
+      "path": "outputs/analysis_scale10km/gale_all_ranked.csv",
+      "bytes": 245763,
+      "role": "earth_terrain_sensitivity_100km_window_10km_samples",
+      "kind": "csv",
+      "rows": 2601,
+      "columns": [
+        "lat",
+        "lon",
+        "slope_median_deg",
+        "slope_p90_deg",
+        "relief_m",
+        "gale_terrain_distance",
+        "slope_emphasis_raw_rank",
+        "relief_emphasis_raw_rank"
+      ]
+    },
+    {
+      "path": "outputs/analysis_scale10km/jezero_all_ranked.csv",
+      "bytes": 247470,
+      "role": "earth_terrain_sensitivity_100km_window_10km_samples",
+      "kind": "csv",
+      "rows": 2601,
+      "columns": [
+        "lat",
+        "lon",
+        "slope_median_deg",
+        "slope_p90_deg",
+        "relief_m",
+        "jezero_terrain_distance",
+        "slope_emphasis_raw_rank",
+        "relief_emphasis_raw_rank"
+      ]
+    },
+    {
+      "path": "outputs/analysis_scale10km/results.json",
+      "bytes": 49318,
+      "role": "earth_terrain_sensitivity_100km_window_10km_samples",
+      "kind": "json",
+      "top_level_keys": [
+        "analysis_type",
+        "generated_utc",
+        "base_commit",
+        "parameters",
+        "counts",
+        "targets",
+        "sources",
+        "candidates",
+        "limitations"
+      ],
+      "scalar_leaves": 1125,
+      "arrays": [
+        {
+          "path": "$.parameters.earth_search_latitude_bounds",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.parameters.excluded_boxes",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.parameters.excluded_boxes[*]",
+          "occurrences": 3,
+          "total_items": 15,
+          "item_fields": [],
+          "item_type": [
+            "int",
+            "str"
+          ]
+        },
+        {
+          "path": "$.parameters.feature_order",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.parameters.distance_tolerances",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.parameters.within_terrain_weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sources",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [
+            "bytes",
+            "crs",
+            "dataset",
+            "dataset_id",
+            "file",
+            "native_dimensions",
+            "period",
+            "recorded_utc",
+            "resolution",
+            "sha256",
+            "units",
+            "url",
+            "version",
+            "vertical_datum"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.sources[*].native_dimensions",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.candidates.jezero",
+          "occurrences": 1,
+          "total_items": 12,
+          "item_fields": [
+            "air_status",
+            "candidate_id",
+            "footprint",
+            "land_fraction",
+            "lat",
+            "logistics_status",
+            "lon",
+            "mars_target",
+            "prior_analog_literature_status",
+            "rank",
+            "relief_m",
+            "sensitivity_raw_ranks",
+            "slope_median_deg",
+            "slope_p90_deg",
+            "status",
+            "temperature_status",
+            "terrain_distance",
+            "water_ice_status"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.candidates.jezero[*].footprint",
+          "occurrences": 12,
+          "total_items": 60,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.candidates.jezero[*].footprint[*]",
+          "occurrences": 60,
+          "total_items": 120,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.candidates.gale",
+          "occurrences": 1,
+          "total_items": 12,
+          "item_fields": [
+            "air_status",
+            "candidate_id",
+            "footprint",
+            "land_fraction",
+            "lat",
+            "logistics_status",
+            "lon",
+            "mars_target",
+            "prior_analog_literature_status",
+            "rank",
+            "relief_m",
+            "sensitivity_raw_ranks",
+            "slope_median_deg",
+            "slope_p90_deg",
+            "status",
+            "temperature_status",
+            "terrain_distance",
+            "water_ice_status"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.candidates.gale[*].footprint",
+          "occurrences": 12,
+          "total_items": 60,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.candidates.gale[*].footprint[*]",
+          "occurrences": 60,
+          "total_items": 120,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.candidates.arcadia",
+          "occurrences": 1,
+          "total_items": 12,
+          "item_fields": [
+            "air_status",
+            "candidate_id",
+            "footprint",
+            "land_fraction",
+            "lat",
+            "logistics_status",
+            "lon",
+            "mars_target",
+            "prior_analog_literature_status",
+            "rank",
+            "relief_m",
+            "sensitivity_raw_ranks",
+            "slope_median_deg",
+            "slope_p90_deg",
+            "status",
+            "temperature_status",
+            "terrain_distance",
+            "water_ice_status"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.candidates.arcadia[*].footprint",
+          "occurrences": 12,
+          "total_items": 60,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.candidates.arcadia[*].footprint[*]",
+          "occurrences": 60,
+          "total_items": 120,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.limitations",
+          "occurrences": 1,
+          "total_items": 7,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/mars_discovery/mars_site_discovery.json",
+      "bytes": 18852,
+      "role": "within_mars_purpose_discovery_not_earth_matching",
+      "kind": "json",
+      "top_level_keys": [
+        "generated_for",
+        "stack",
+        "excluded_boxes",
+        "known_box_signatures",
+        "purposes",
+        "limitations"
+      ],
+      "scalar_leaves": 421,
+      "arrays": [
+        {
+          "path": "$.purposes.isru_shallow_ice.latitude_window",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.purposes.isru_shallow_ice.picks",
+          "occurrences": 1,
+          "total_items": 8,
+          "item_fields": [
+            "excluded_known_sites",
+            "lat",
+            "layers",
+            "lon",
+            "score"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.purposes.isru_shallow_ice.picks[*].excluded_known_sites",
+          "occurrences": 8,
+          "total_items": 32,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.purposes.dusty_flat_ops.latitude_window",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.purposes.dusty_flat_ops.picks",
+          "occurrences": 1,
+          "total_items": 8,
+          "item_fields": [
+            "excluded_known_sites",
+            "lat",
+            "layers",
+            "lon",
+            "score"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.purposes.dusty_flat_ops.picks[*].excluded_known_sites",
+          "occurrences": 8,
+          "total_items": 32,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.purposes.firm_rocky_surface.latitude_window",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.purposes.firm_rocky_surface.picks",
+          "occurrences": 1,
+          "total_items": 8,
+          "item_fields": [
+            "excluded_known_sites",
+            "lat",
+            "layers",
+            "lon",
+            "score"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.purposes.firm_rocky_surface.picks[*].excluded_known_sites",
+          "occurrences": 8,
+          "total_items": 32,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.limitations",
+          "occurrences": 1,
+          "total_items": 5,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/mars_discovery/reporting_cards.json",
+      "bytes": 5804,
+      "role": "within_mars_purpose_discovery_not_earth_matching",
+      "kind": "json",
+      "top_level_keys": [
+        "schema_version",
+        "source_commit_note",
+        "earth_analog_pairing",
+        "novelty_policy",
+        "firm_rocky_status",
+        "cards",
+        "source_index"
+      ],
+      "scalar_leaves": 94,
+      "arrays": [
+        {
+          "path": "$.cards",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [
+            "id",
+            "intended_use",
+            "lat",
+            "lon",
+            "map_figure",
+            "next_checks",
+            "novelty_status",
+            "prohibited_claims",
+            "purpose_key",
+            "role",
+            "sources",
+            "treatment",
+            "weaknesses"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.cards[*].prohibited_claims",
+          "occurrences": 4,
+          "total_items": 16,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.cards[*].sources",
+          "occurrences": 4,
+          "total_items": 13,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/mars_profiles/arcadia_dust_my34_series.csv",
+      "bytes": 34537,
+      "role": "known_mars_reference_profiles_100km_and_dust_series",
+      "kind": "csv",
+      "rows": 669,
+      "columns": [
+        "Time",
+        "SOY",
+        "Ls",
+        "cdodtot",
+        "cdod610",
+        "cdodrel"
+      ]
+    },
+    {
+      "path": "outputs/mars_profiles/arcadia_dust_my35_series.csv",
+      "bytes": 34635,
+      "role": "known_mars_reference_profiles_100km_and_dust_series",
+      "kind": "csv",
+      "rows": 669,
+      "columns": [
+        "Time",
+        "SOY",
+        "Ls",
+        "cdodtot",
+        "cdod610",
+        "cdodrel"
+      ]
+    },
+    {
+      "path": "outputs/mars_profiles/gale_dust_my34_series.csv",
+      "bytes": 34558,
+      "role": "known_mars_reference_profiles_100km_and_dust_series",
+      "kind": "csv",
+      "rows": 669,
+      "columns": [
+        "Time",
+        "SOY",
+        "Ls",
+        "cdodtot",
+        "cdod610",
+        "cdodrel"
+      ]
+    },
+    {
+      "path": "outputs/mars_profiles/gale_dust_my35_series.csv",
+      "bytes": 34552,
+      "role": "known_mars_reference_profiles_100km_and_dust_series",
+      "kind": "csv",
+      "rows": 669,
+      "columns": [
+        "Time",
+        "SOY",
+        "Ls",
+        "cdodtot",
+        "cdod610",
+        "cdodrel"
+      ]
+    },
+    {
+      "path": "outputs/mars_profiles/jezero_dust_my34_series.csv",
+      "bytes": 34464,
+      "role": "known_mars_reference_profiles_100km_and_dust_series",
+      "kind": "csv",
+      "rows": 669,
+      "columns": [
+        "Time",
+        "SOY",
+        "Ls",
+        "cdodtot",
+        "cdod610",
+        "cdodrel"
+      ]
+    },
+    {
+      "path": "outputs/mars_profiles/jezero_dust_my35_series.csv",
+      "bytes": 34546,
+      "role": "known_mars_reference_profiles_100km_and_dust_series",
+      "kind": "csv",
+      "rows": 669,
+      "columns": [
+        "Time",
+        "SOY",
+        "Ls",
+        "cdodtot",
+        "cdod610",
+        "cdodrel"
+      ]
+    },
+    {
+      "path": "outputs/mars_profiles/profiles.json",
+      "bytes": 36121,
+      "role": "known_mars_reference_profiles_100km_and_dust_series",
+      "kind": "json",
+      "top_level_keys": [
+        "rover_temperature_context",
+        "profiles",
+        "inventory",
+        "errors",
+        "analysis_type",
+        "schema_version",
+        "body",
+        "longitude_convention",
+        "missing_requirements",
+        "earth_team_handoff",
+        "sources",
+        "dust_data_license"
+      ],
+      "scalar_leaves": 715,
+      "arrays": [
+        {
+          "path": "$.rover_temperature_context.sources",
+          "occurrences": 1,
+          "total_items": 6,
+          "item_fields": [
+            "bytes",
+            "file",
+            "logical_identifier",
+            "product",
+            "quantity",
+            "recorded_utc",
+            "records",
+            "sha256",
+            "spatial_resolution",
+            "spatial_support",
+            "temporal_support",
+            "units",
+            "url",
+            "utc_start",
+            "utc_stop",
+            "version"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.rover_temperature_context.qualified_windows",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [
+            "day",
+            "ltst_sol",
+            "night",
+            "sampled_day_night_contrast_K"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.rover_temperature_context.provisional_unqualified_windows",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [
+            "day",
+            "ltst_sol",
+            "night",
+            "sampled_day_night_contrast_K"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.rover_temperature_context.limitations",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.profiles.jezero.dust.dust_my34.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.profiles.jezero.dust.dust_my35.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.profiles.gale.dust.dust_my34.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.profiles.gale.dust.dust_my35.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.profiles.arcadia.dust.dust_my34.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.profiles.arcadia.dust.dust_my35.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.inventory.terrain.shape",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.inventory.thermal_inertia.shape",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.inventory.thermal_inertia_infilled.shape",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.inventory.ice_shallow.shape",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.inventory.ice_deep.shape",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.inventory.dust_my34.native_grid",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.inventory.dust_my35.native_grid",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.missing_requirements",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.earth_team_handoff",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.sources",
+          "occurrences": 1,
+          "total_items": 10,
+          "item_fields": [
+            "body",
+            "bytes",
+            "citation",
+            "coordinate_system",
+            "creation_date",
+            "crs",
+            "dataset_id",
+            "file",
+            "interpretation",
+            "license",
+            "longitude_direction",
+            "map_projection",
+            "map_radius_m",
+            "map_resolution_px_per_degree",
+            "native_grid_degrees",
+            "native_pixel_size_m",
+            "native_shape",
+            "nodata",
+            "observation_end",
+            "observation_period",
+            "observation_start",
+            "period",
+            "product",
+            "recorded_utc",
+            "sha256",
+            "source_instruments",
+            "status",
+            "units",
+            "url",
+            "version",
+            "wavelength_micron"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.sources[*].native_pixel_size_m",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sources[*].native_shape",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.sources[*].native_grid_degrees",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/mars_regional_temperature/context.json",
+      "bytes": 176541,
+      "role": "mars_temperature_regional_context_only",
+      "kind": "json",
+      "top_level_keys": [
+        "schema_version",
+        "analysis_type",
+        "source",
+        "profiles",
+        "formal_surface_temperature_status",
+        "ranking_changed"
+      ],
+      "scalar_leaves": 4427,
+      "arrays": [
+        {
+          "path": "$.profiles.jezero.grid_spacing_deg",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.profiles.jezero.mars_years",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.profiles.jezero.limitations",
+          "occurrences": 1,
+          "total_items": 6,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.profiles.jezero.series",
+          "occurrences": 1,
+          "total_items": 288,
+          "item_fields": [
+            "Ls_coordinate_deg",
+            "day_15_K",
+            "mars_year",
+            "night_03_K",
+            "sampled_contrast_K"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.profiles.gale.grid_spacing_deg",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.profiles.gale.mars_years",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.profiles.gale.limitations",
+          "occurrences": 1,
+          "total_items": 6,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.profiles.gale.series",
+          "occurrences": 1,
+          "total_items": 288,
+          "item_fields": [
+            "Ls_coordinate_deg",
+            "day_15_K",
+            "mars_year",
+            "night_03_K",
+            "sampled_contrast_K"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.profiles.arcadia.grid_spacing_deg",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.profiles.arcadia.mars_years",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.profiles.arcadia.limitations",
+          "occurrences": 1,
+          "total_items": 6,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.profiles.arcadia.series",
+          "occurrences": 1,
+          "total_items": 288,
+          "item_fields": [
+            "Ls_coordinate_deg",
+            "day_15_K",
+            "mars_year",
+            "night_03_K",
+            "sampled_contrast_K"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/mars_temperature/provisional_hourly.csv",
+      "bytes": 2063,
+      "role": "rover_temperature_context_qualified_and_provisional",
+      "kind": "csv",
+      "rows": 72,
+      "columns": [
+        "ltst_sol",
+        "ltst_hour",
+        "temperature_K",
+        "reported_uncertainty_K",
+        "samples"
+      ]
+    },
+    {
+      "path": "outputs/mars_temperature/summary.json",
+      "bytes": 9125,
+      "role": "rover_temperature_context_qualified_and_provisional",
+      "kind": "json",
+      "top_level_keys": [
+        "status",
+        "quantity",
+        "units",
+        "scope",
+        "global_kinetic_surface_temperature_available",
+        "records",
+        "quality_supported_records",
+        "quality_flags",
+        "sources",
+        "method",
+        "window_basis",
+        "qualified_windows",
+        "provisional_unqualified_windows",
+        "provisional_warning",
+        "same_ground_patch_confirmed",
+        "limitations"
+      ],
+      "scalar_leaves": 176,
+      "arrays": [
+        {
+          "path": "$.sources",
+          "occurrences": 1,
+          "total_items": 6,
+          "item_fields": [
+            "bytes",
+            "file",
+            "logical_identifier",
+            "product",
+            "quantity",
+            "recorded_utc",
+            "records",
+            "sha256",
+            "spatial_resolution",
+            "spatial_support",
+            "temporal_support",
+            "units",
+            "url",
+            "utc_start",
+            "utc_stop",
+            "version"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.qualified_windows",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [
+            "day",
+            "ltst_sol",
+            "night",
+            "sampled_day_night_contrast_K"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.provisional_unqualified_windows",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [
+            "day",
+            "ltst_sol",
+            "night",
+            "sampled_day_night_contrast_K"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.limitations",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/matching_handoff/matching_data.json",
+      "bytes": 298807,
+      "role": "consolidated_matching_handoff_duplicate_of_scientific_inputs",
+      "kind": "json",
+      "top_level_keys": [
+        "schema_version",
+        "analysis_type",
+        "input_analysis_generated_utc",
+        "input_analysis_base_commit",
+        "inputs",
+        "parameters",
+        "counts",
+        "targets",
+        "candidates",
+        "mars_profiles",
+        "earth_sources",
+        "mars_sources",
+        "sensitivity",
+        "missing_requirements",
+        "footprints_path",
+        "captions",
+        "checks",
+        "limitations",
+        "dust_license_path",
+        "regional_temperature_context"
+      ],
+      "scalar_leaves": 6798,
+      "arrays": [
+        {
+          "path": "$.inputs",
+          "occurrences": 1,
+          "total_items": 5,
+          "item_fields": [
+            "path",
+            "sha256"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.parameters.earth_search_latitude_bounds",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.parameters.excluded_boxes",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.parameters.excluded_boxes[*]",
+          "occurrences": 3,
+          "total_items": 15,
+          "item_fields": [],
+          "item_type": [
+            "int",
+            "str"
+          ]
+        },
+        {
+          "path": "$.parameters.feature_order",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.parameters.distance_tolerances",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.parameters.within_terrain_weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.candidates",
+          "occurrences": 1,
+          "total_items": 36,
+          "item_fields": [
+            "air_status",
+            "candidate_id",
+            "earth_climate_context",
+            "footprint",
+            "has_power_context",
+            "land_fraction",
+            "lat",
+            "logistics_status",
+            "lon",
+            "mars_target",
+            "prior_analog_literature_status",
+            "rank",
+            "relief_m",
+            "sensitivity_raw_ranks",
+            "slope_median_deg",
+            "slope_p90_deg",
+            "status",
+            "temperature_status",
+            "terrain_distance",
+            "terrain_distance_components",
+            "themes",
+            "water_ice_status"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.candidates[*].footprint",
+          "occurrences": 36,
+          "total_items": 180,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.candidates[*].footprint[*]",
+          "occurrences": 180,
+          "total_items": 360,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.candidates[*].earth_climate_context.header.sources",
+          "occurrences": 6,
+          "total_items": 12,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.candidates[*].earth_climate_context.geometry.coordinates",
+          "occurrences": 6,
+          "total_items": 18,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.mars_profiles.jezero.dust.dust_my34.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.mars_profiles.jezero.dust.dust_my35.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.mars_profiles.gale.dust.dust_my34.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.mars_profiles.gale.dust.dust_my35.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.mars_profiles.arcadia.dust.dust_my34.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.mars_profiles.arcadia.dust.dust_my35.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.earth_sources",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [
+            "bytes",
+            "crs",
+            "dataset",
+            "dataset_id",
+            "file",
+            "native_dimensions",
+            "period",
+            "recorded_utc",
+            "resolution",
+            "sha256",
+            "units",
+            "url",
+            "version",
+            "vertical_datum"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.earth_sources[*].native_dimensions",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.mars_sources",
+          "occurrences": 1,
+          "total_items": 10,
+          "item_fields": [
+            "body",
+            "bytes",
+            "citation",
+            "coordinate_system",
+            "creation_date",
+            "crs",
+            "dataset_id",
+            "file",
+            "interpretation",
+            "license",
+            "longitude_direction",
+            "map_projection",
+            "map_radius_m",
+            "map_resolution_px_per_degree",
+            "native_grid_degrees",
+            "native_pixel_size_m",
+            "native_shape",
+            "nodata",
+            "observation_end",
+            "observation_period",
+            "observation_start",
+            "period",
+            "product",
+            "recorded_utc",
+            "sha256",
+            "source_instruments",
+            "status",
+            "units",
+            "url",
+            "version",
+            "wavelength_micron"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.mars_sources[*].native_pixel_size_m",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.mars_sources[*].native_shape",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.mars_sources[*].native_grid_degrees",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.sensitivity.jezero.base_4km_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.sensitivity.jezero.base_4km_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.jezero.alternative_10km_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.sensitivity.jezero.alternative_10km_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.jezero.weight_variants.slope_emphasis.weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.jezero.weight_variants.slope_emphasis.separated_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.sensitivity.jezero.weight_variants.slope_emphasis.separated_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.jezero.weight_variants.relief_emphasis.weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.jezero.weight_variants.relief_emphasis.separated_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.sensitivity.jezero.weight_variants.relief_emphasis.separated_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.gale.base_4km_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.sensitivity.gale.base_4km_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.gale.alternative_10km_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.sensitivity.gale.alternative_10km_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.gale.weight_variants.slope_emphasis.weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.gale.weight_variants.slope_emphasis.separated_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.sensitivity.gale.weight_variants.slope_emphasis.separated_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.gale.weight_variants.relief_emphasis.weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.gale.weight_variants.relief_emphasis.separated_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.sensitivity.gale.weight_variants.relief_emphasis.separated_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.arcadia.base_4km_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.sensitivity.arcadia.base_4km_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.arcadia.alternative_10km_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.sensitivity.arcadia.alternative_10km_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.arcadia.weight_variants.slope_emphasis.weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.arcadia.weight_variants.slope_emphasis.separated_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.sensitivity.arcadia.weight_variants.slope_emphasis.separated_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.arcadia.weight_variants.relief_emphasis.weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.sensitivity.arcadia.weight_variants.relief_emphasis.separated_top2",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.sensitivity.arcadia.weight_variants.relief_emphasis.separated_top2[*]",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.missing_requirements",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.limitations",
+          "occurrences": 1,
+          "total_items": 7,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.regional_temperature_context.profiles.jezero.grid_spacing_deg",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.regional_temperature_context.profiles.jezero.mars_years",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.regional_temperature_context.profiles.jezero.limitations",
+          "occurrences": 1,
+          "total_items": 6,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.regional_temperature_context.profiles.jezero.series",
+          "occurrences": 1,
+          "total_items": 288,
+          "item_fields": [
+            "Ls_coordinate_deg",
+            "day_15_K",
+            "mars_year",
+            "night_03_K",
+            "sampled_contrast_K"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.regional_temperature_context.profiles.gale.grid_spacing_deg",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.regional_temperature_context.profiles.gale.mars_years",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.regional_temperature_context.profiles.gale.limitations",
+          "occurrences": 1,
+          "total_items": 6,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.regional_temperature_context.profiles.gale.series",
+          "occurrences": 1,
+          "total_items": 288,
+          "item_fields": [
+            "Ls_coordinate_deg",
+            "day_15_K",
+            "mars_year",
+            "night_03_K",
+            "sampled_contrast_K"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.regional_temperature_context.profiles.arcadia.grid_spacing_deg",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.regional_temperature_context.profiles.arcadia.mars_years",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.regional_temperature_context.profiles.arcadia.limitations",
+          "occurrences": 1,
+          "total_items": 6,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.regional_temperature_context.profiles.arcadia.series",
+          "occurrences": 1,
+          "total_items": 288,
+          "item_fields": [
+            "Ls_coordinate_deg",
+            "day_15_K",
+            "mars_year",
+            "night_03_K",
+            "sampled_contrast_K"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/research/ice_candidate_followup/native_audit.json",
+      "bytes": 22177,
+      "role": "discovery_ice_candidate_native_qa",
+      "kind": "json",
+      "top_level_keys": [
+        "generated_utc",
+        "scope",
+        "candidates",
+        "raw_sources_verified_against_profiles_manifest",
+        "protected_inputs_sha256",
+        "protected_inputs_unchanged",
+        "dust_note",
+        "deep_ice_note",
+        "novelty_status"
+      ],
+      "scalar_leaves": 410,
+      "arrays": [
+        {
+          "path": "$.candidates",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [
+            "center_lat_lon",
+            "id",
+            "mola_native_cell",
+            "mola_native_cell_slopes",
+            "native_recomputed_minus_stored",
+            "nominal_2015_EZ_screen",
+            "nominal_cell_bounds",
+            "nominal_size_km_NS_EW_at_center",
+            "published_comparator_center_distances_km",
+            "stored_layers",
+            "stored_score_unchanged",
+            "swim_0_1m",
+            "swim_1_5m_context_only",
+            "tes_mask_zero_pixels_excluded",
+            "tes_native_non_infilled_cell",
+            "tes_native_unmasked_cell"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.candidates[*].center_lat_lon",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.candidates[*].nominal_size_km_NS_EW_at_center",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.candidates[*].mola_native_cell.shape",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.candidates[*].mola_native_cell_slopes.shape",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.candidates[*].tes_native_unmasked_cell.shape",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.candidates[*].tes_native_non_infilled_cell.shape",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.candidates[*].swim_0_1m.nominal_cell_native_stats.shape",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.candidates[*].swim_0_1m.contributing_blocks",
+          "occurrences": 2,
+          "total_items": 8,
+          "item_fields": [
+            "coarse_center",
+            "coarse_mean_float32",
+            "native_block_stats",
+            "weight"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.candidates[*].swim_0_1m.contributing_blocks[*].coarse_center",
+          "occurrences": 8,
+          "total_items": 16,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.candidates[*].swim_0_1m.contributing_blocks[*].native_block_stats.shape",
+          "occurrences": 8,
+          "total_items": 16,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.candidates[*].swim_1_5m_context_only.nominal_cell_native_stats.shape",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.candidates[*].swim_1_5m_context_only.contributing_blocks",
+          "occurrences": 2,
+          "total_items": 8,
+          "item_fields": [
+            "coarse_center",
+            "coarse_mean_float32",
+            "native_block_stats",
+            "weight"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.candidates[*].swim_1_5m_context_only.contributing_blocks[*].coarse_center",
+          "occurrences": 8,
+          "total_items": 16,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.candidates[*].swim_1_5m_context_only.contributing_blocks[*].native_block_stats.shape",
+          "occurrences": 8,
+          "total_items": 16,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.raw_sources_verified_against_profiles_manifest",
+          "occurrences": 1,
+          "total_items": 8,
+          "item_fields": [
+            "file",
+            "sha256",
+            "url"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/research/ice_candidate_followup/search_scope.json",
+      "bytes": 4075,
+      "role": "discovery_ice_candidate_native_qa",
+      "kind": "json",
+      "top_level_keys": [
+        "checked_utc",
+        "candidate_ids",
+        "novelty_status",
+        "engines",
+        "queries",
+        "query_note",
+        "checked_sources",
+        "not_completed",
+        "access_limits",
+        "decisions",
+        "handoff",
+        "desktop_status_sync"
+      ],
+      "scalar_leaves": 51,
+      "arrays": [
+        {
+          "path": "$.candidate_ids",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.engines",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.queries",
+          "occurrences": 1,
+          "total_items": 11,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.checked_sources",
+          "occurrences": 1,
+          "total_items": 9,
+          "item_fields": [
+            "scope",
+            "url"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.not_completed",
+          "occurrences": 1,
+          "total_items": 6,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.access_limits",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/research/oytag_literature_points.csv",
+      "bytes": 392,
+      "role": "earth_analog_evidence_and_source_audits",
+      "kind": "csv",
+      "rows": 3,
+      "columns": [
+        "sample_id",
+        "latitude_deg",
+        "longitude_deg",
+        "reported_rock_type",
+        "source_doi",
+        "source_locator",
+        "coordinate_datum"
+      ]
+    },
+    {
+      "path": "outputs/research/oytag_outcrop_source_audit.json",
+      "bytes": 3716,
+      "role": "earth_analog_evidence_and_source_audits",
+      "kind": "json",
+      "top_level_keys": [
+        "schema_version",
+        "review_date_taipei",
+        "sources",
+        "gypsum_position_status",
+        "same_outcrop_mineralogy_status",
+        "unretrieved",
+        "source_pdf_files_committed",
+        "supplement_search_update"
+      ],
+      "scalar_leaves": 58,
+      "arrays": [
+        {
+          "path": "$.sources",
+          "occurrences": 1,
+          "total_items": 6,
+          "item_fields": [
+            "access",
+            "bytes",
+            "doi",
+            "id",
+            "retrieved_date_taipei",
+            "scope",
+            "sha256",
+            "tls_certificate_validation",
+            "url"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.unretrieved",
+          "occurrences": 1,
+          "total_items": 1,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/research/oytag_overlap.json",
+      "bytes": 3356,
+      "role": "earth_analog_evidence_and_source_audits",
+      "kind": "json",
+      "top_level_keys": [
+        "schema_version",
+        "generated_utc",
+        "candidate_id",
+        "center",
+        "local_axes",
+        "sphere_radius_m",
+        "window_km",
+        "method",
+        "coordinate_caveat",
+        "evidence_scope",
+        "inputs",
+        "samples",
+        "claims",
+        "related_point_sets"
+      ],
+      "scalar_leaves": 64,
+      "arrays": [
+        {
+          "path": "$.inputs",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [
+            "path",
+            "sha256"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.samples",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [
+            "coordinate_datum",
+            "east_km",
+            "inside_local_100km_square",
+            "inside_stored_polygon",
+            "latitude_deg",
+            "longitude_deg",
+            "nearest_square_boundary_km",
+            "north_km",
+            "reported_rock_type",
+            "sample_id",
+            "source_doi",
+            "source_locator"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.claims",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [
+            "id",
+            "level",
+            "note",
+            "source",
+            "statement"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.related_point_sets",
+          "occurrences": 1,
+          "total_items": 1,
+          "item_fields": [
+            "id_field",
+            "path",
+            "role",
+            "sha256",
+            "shared_sample_ids"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.related_point_sets[*].shared_sample_ids",
+          "occurrences": 1,
+          "total_items": 0,
+          "item_fields": [],
+          "item_type": []
+        }
+      ]
+    },
+    {
+      "path": "outputs/research/oytag_supplement_access_log.json",
+      "bytes": 4568,
+      "role": "earth_analog_evidence_and_source_audits",
+      "kind": "json",
+      "top_level_keys": [
+        "review_date_taipei",
+        "candidate_url_note",
+        "attempts"
+      ],
+      "scalar_leaves": 93,
+      "arrays": [
+        {
+          "path": "$.attempts",
+          "occurrences": 1,
+          "total_items": 12,
+          "item_fields": [
+            "bytes",
+            "candidate_url",
+            "content_type",
+            "id",
+            "meaning",
+            "sha256",
+            "status",
+            "url"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/research/oytag_supplement_coordinates.csv",
+      "bytes": 1198,
+      "role": "earth_analog_evidence_and_source_audits",
+      "kind": "csv",
+      "rows": 10,
+      "columns": [
+        "parent_sample_id",
+        "latitude_deg",
+        "longitude_deg",
+        "sample_type",
+        "metadata_excel_row",
+        "source_sheet",
+        "inside_candidate_polygon",
+        "same_gypsum_outcrop_link",
+        "coordinate_datum"
+      ]
+    },
+    {
+      "path": "outputs/research/oytag_supplement_metadata.json",
+      "bytes": 868,
+      "role": "earth_analog_evidence_and_source_audits",
+      "kind": "json",
+      "top_level_keys": [
+        "source_doi",
+        "url",
+        "source_title",
+        "source_sha256",
+        "source_bytes",
+        "sheet",
+        "dimensions",
+        "coordinate_groups",
+        "candidate_input_sha256",
+        "data_type",
+        "not_proven",
+        "coordinates_csv",
+        "inside_count"
+      ],
+      "scalar_leaves": 17,
+      "arrays": [
+        {
+          "path": "$.dimensions",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.not_proven",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/research/oytag_transect_check.json",
+      "bytes": 5107,
+      "role": "earth_analog_evidence_and_source_audits",
+      "kind": "json",
+      "top_level_keys": [
+        "schema_version",
+        "generated_utc",
+        "candidate_id",
+        "source_doi",
+        "source_figures",
+        "source_url",
+        "source_pdf_sha256",
+        "source_transport",
+        "candidate_input_sha256",
+        "render_command",
+        "pixel_origin",
+        "gcp_columns",
+        "gcp",
+        "affine_coefficients",
+        "control_fit_residual_deg",
+        "sensitivity",
+        "all_8_endpoint_offset_scenarios_inside",
+        "claims",
+        "endpoints"
+      ],
+      "scalar_leaves": 115,
+      "arrays": [
+        {
+          "path": "$.gcp_columns",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.gcp",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.gcp[*]",
+          "occurrences": 4,
+          "total_items": 16,
+          "item_fields": [],
+          "item_type": [
+            "float",
+            "int"
+          ]
+        },
+        {
+          "path": "$.affine_coefficients",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.affine_coefficients[*]",
+          "occurrences": 3,
+          "total_items": 6,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.control_fit_residual_deg",
+          "occurrences": 1,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.control_fit_residual_deg[*]",
+          "occurrences": 4,
+          "total_items": 8,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.claims",
+          "occurrences": 1,
+          "total_items": 6,
+          "item_fields": [
+            "id",
+            "level",
+            "note",
+            "source",
+            "statement"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.endpoints",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [
+            "approx_lat_deg",
+            "approx_lon_deg",
+            "east_km",
+            "inside",
+            "label",
+            "north_km",
+            "pixel",
+            "pixel_offset_scenarios"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.endpoints[*].pixel",
+          "occurrences": 2,
+          "total_items": 4,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.endpoints[*].pixel_offset_scenarios",
+          "occurrences": 2,
+          "total_items": 8,
+          "item_fields": [
+            "east_km",
+            "inside",
+            "north_km"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/research/reference_terrain_check.json",
+      "bytes": 4112,
+      "role": "earth_analog_evidence_and_source_audits",
+      "kind": "json",
+      "top_level_keys": [
+        "analysis_type",
+        "raw_inputs",
+        "code_sha256",
+        "source_metadata",
+        "parameters",
+        "inputs",
+        "target_features_recomputed_match_stored",
+        "records",
+        "reference_source",
+        "limitations"
+      ],
+      "scalar_leaves": 71,
+      "arrays": [
+        {
+          "path": "$.raw_inputs",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [
+            "path",
+            "sha256"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.parameters.weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.parameters.tolerances",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.inputs",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [
+            "path",
+            "sha256"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.records",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [
+            "comparisons",
+            "eligible_by_land_rule",
+            "features",
+            "lat",
+            "lon",
+            "name",
+            "role",
+            "sampled_land_fraction"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.limitations",
+          "occurrences": 1,
+          "total_items": 5,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "outputs/research/submission_audit_snapshot_2026-11-14.json",
+      "bytes": 1601,
+      "role": "earth_analog_evidence_and_source_audits",
+      "kind": "json",
+      "top_level_keys": [
+        "review_date_taipei",
+        "source_commit",
+        "earth_inventory_reported_files",
+        "earth_inventory_reported_bytes",
+        "earth_inventory_hash",
+        "local_raw_earth_complete_batch_present",
+        "candidate_counts",
+        "candidates_with_power_context_each_target",
+        "mars_sources_type",
+        "mars_sources_records",
+        "research_evidence_in_web_builder",
+        "python_test_execution",
+        "ruff_execution",
+        "frontend_build_or_browser_test_this_turn",
+        "checklist_items",
+        "priority_counts",
+        "official_access",
+        "transport_note"
+      ],
+      "scalar_leaves": 30,
+      "arrays": []
+    },
+    {
+      "path": "outputs/research/three_candidate_evidence.json",
+      "bytes": 32452,
+      "role": "earth_analog_evidence_and_source_audits",
+      "kind": "json",
+      "top_level_keys": [
+        "schema_version",
+        "generated_utc",
+        "source_commit",
+        "inputs",
+        "field_notes",
+        "parameters",
+        "search_counts",
+        "mars_profiles",
+        "records"
+      ],
+      "scalar_leaves": 636,
+      "arrays": [
+        {
+          "path": "$.inputs",
+          "occurrences": 1,
+          "total_items": 6,
+          "item_fields": [
+            "path",
+            "sha256"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.parameters.earth_search_latitude_bounds",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.parameters.excluded_boxes",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.parameters.excluded_boxes[*]",
+          "occurrences": 3,
+          "total_items": 15,
+          "item_fields": [],
+          "item_type": [
+            "int",
+            "str"
+          ]
+        },
+        {
+          "path": "$.parameters.feature_order",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.parameters.distance_tolerances",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.parameters.within_terrain_weights",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.mars_profiles.arcadia.dust.dust_my34.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.mars_profiles.arcadia.dust.dust_my35.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.mars_profiles.gale.dust.dust_my34.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.mars_profiles.gale.dust.dust_my35.native_grid_degrees",
+          "occurrences": 1,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "int"
+          ]
+        },
+        {
+          "path": "$.records",
+          "occurrences": 1,
+          "total_items": 3,
+          "item_fields": [
+            "candidate",
+            "candidate_id",
+            "configurations_count",
+            "distance_check",
+            "interpretation",
+            "mars_target",
+            "prior_analog_literature",
+            "scale10km_rank",
+            "top2_count",
+            "top2_in_tested_configurations"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        },
+        {
+          "path": "$.records[*].candidate.footprint",
+          "occurrences": 3,
+          "total_items": 15,
+          "item_fields": [],
+          "item_type": [
+            "list"
+          ]
+        },
+        {
+          "path": "$.records[*].candidate.footprint[*]",
+          "occurrences": 15,
+          "total_items": 30,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.records[*].candidate.earth_climate_context.header.sources",
+          "occurrences": 3,
+          "total_items": 6,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.records[*].candidate.earth_climate_context.geometry.coordinates",
+          "occurrences": 3,
+          "total_items": 9,
+          "item_fields": [],
+          "item_type": [
+            "float"
+          ]
+        },
+        {
+          "path": "$.records[*].prior_analog_literature.evidence_files",
+          "occurrences": 3,
+          "total_items": 2,
+          "item_fields": [],
+          "item_type": [
+            "str"
+          ]
+        },
+        {
+          "path": "$.records[*].prior_analog_literature.claims",
+          "occurrences": 3,
+          "total_items": 8,
+          "item_fields": [
+            "id",
+            "level",
+            "note",
+            "source",
+            "statement"
+          ],
+          "item_type": [
+            "dict"
+          ]
+        }
+      ]
+    }
+  ]
+}

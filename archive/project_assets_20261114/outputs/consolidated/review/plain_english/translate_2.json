@@ -1,0 +1,1393 @@
+[
+  {
+    "id": "T0004",
+    "text": "數量",
+    "contexts": [
+      "總覽!B6"
+    ]
+  },
+  {
+    "id": "T0005",
+    "text": "計數單位",
+    "contexts": [
+      "總覽!C6"
+    ]
+  },
+  {
+    "id": "T0015",
+    "text": "地球候選",
+    "contexts": [
+      "總覽!A10",
+      "總覽!A25",
+      "匯入對照!C29",
+      "匯入對照!C30"
+    ]
+  },
+  {
+    "id": "T0018",
+    "text": "原始 MEDA",
+    "contexts": [
+      "總覽!A11"
+    ]
+  },
+  {
+    "id": "T0022",
+    "text": "個純量或空結構",
+    "contexts": [
+      "總覽!C12"
+    ]
+  },
+  {
+    "id": "T0024",
+    "text": "主題",
+    "contexts": [
+      "總覽!A15"
+    ]
+  },
+  {
+    "id": "T0027",
+    "text": "待完成事項",
+    "contexts": [
+      "總覽!D15"
+    ]
+  },
+  {
+    "id": "T0048",
+    "text": "火星用途候選：完整24點與查核狀態",
+    "contexts": [
+      "總覽!C23"
+    ]
+  },
+  {
+    "id": "T0062",
+    "text": "保留原始target與距離欄名；terrain_distance越小越近，不是信心或百分比。",
+    "contexts": [
+      "總覽!D29"
+    ]
+  },
+  {
+    "id": "T0066",
+    "text": "火星塵埃序列",
+    "contexts": [
+      "總覽!A31",
+      "總覽!C31",
+      "匯入對照!C20",
+      "匯入對照!C21",
+      "匯入對照!C22"
+    ]
+  },
+  {
+    "id": "T0067",
+    "text": "MY34/MY35、9.3μm吸收CDOD。cdodtot/cdod610/cdodrel保留各自意義。",
+    "contexts": [
+      "總覽!D31"
+    ]
+  },
+  {
+    "id": "T0070",
+    "text": "5°格網、MY29–36、每年36個Ls格；缺值保留null。03/15時取樣不是同一sol日極值；metadata incomplete、scoring_eligible=false。",
+    "contexts": [
+      "總覽!D32"
+    ]
+  },
+  {
+    "id": "T0075",
+    "text": "報告主張",
+    "contexts": [
+      "總覽!A35",
+      "總覽!C35",
+      "匯入對照!C9"
+    ]
+  },
+  {
+    "id": "T0078",
+    "text": "Oytag補充座標",
+    "contexts": [
+      "總覽!A38",
+      "總覽!C38",
+      "匯入對照!C28"
+    ]
+  },
+  {
+    "id": "T0079",
+    "text": "地球候選CSV",
+    "contexts": [
+      "總覽!A39",
+      "總覽!C39",
+      "匯入對照!C15"
+    ]
+  },
+  {
+    "id": "T0089",
+    "text": "非網站專案Markdown完整段落",
+    "contexts": [
+      "總覽!C43"
+    ]
+  },
+  {
+    "id": "T0090",
+    "text": "保留原始文件路徑、段落順序與行號；每片不超過600個UTF-16字元單位，依文件/paragraph/part重組。含歷史報告與限制，不代表所有舊狀態都是最新狀態。",
+    "contexts": [
+      "總覽!D43"
+    ]
+  },
+  {
+    "id": "T0093",
+    "text": "影像、網格及壓縮檔保留原檔；雜湊只列本輪實際讀取來源。網站、依賴與憑證排除。",
+    "contexts": [
+      "總覽!D44"
+    ]
+  },
+  {
+    "id": "T0097",
+    "text": "候選ID",
+    "contexts": [
+      "火星發現候選!A1",
+      "冰候選原生QA!A1",
+      "地球候選!L1",
+      "火星新穎性查核!A1",
+      "地球候選CSV!K1"
+    ]
+  },
+  {
+    "id": "T0099",
+    "text": "緯度（度）",
+    "contexts": [
+      "火星發現候選!E1",
+      "冰候選原生QA!B1",
+      "地球候選!F1",
+      "火星參照區!B1",
+      "地球視窗全量!E1"
+    ]
+  },
+  {
+    "id": "T0105",
+    "text": "未入保留卡片",
+    "contexts": [
+      "火星發現候選!P4",
+      "火星發現候選!P5",
+      "火星發現候選!P6",
+      "火星發現候選!P7",
+      "火星發現候選!P8"
+    ]
+  },
+  {
+    "id": "T0109",
+    "text": "採樣間距（km）",
+    "contexts": [
+      "地球候選!C1",
+      "地球視窗全量!C1",
+      "地球排序明細!C1",
+      "地球候選CSV!C1"
+    ]
+  },
+  {
+    "id": "T0115",
+    "text": "題目完整內文與只做火星的適題性",
+    "contexts": [
+      "提交缺口!D2"
+    ]
+  },
+  {
+    "id": "T0118",
+    "text": "取得官方完整題目／專家澄清，確認 Moon 與 Mars 資料要求；不憑題名推定必須兩者",
+    "contexts": [
+      "提交缺口!G2"
+    ]
+  },
+  {
+    "id": "T0119",
+    "text": "隊長",
+    "contexts": [
+      "提交缺口!H2",
+      "提交缺口!H3",
+      "提交缺口!H4",
+      "提交缺口!H9"
+    ]
+  },
+  {
+    "id": "T0120",
+    "text": "正式提交指南與台北場時間",
+    "contexts": [
+      "提交缺口!D3"
+    ]
+  },
+  {
+    "id": "T0130",
+    "text": "完成公開可讀英文簡報≤7頁或影片≤30秒，依正式指南複核",
+    "contexts": [
+      "提交缺口!G5"
+    ]
+  },
+  {
+    "id": "T0137",
+    "text": "完整 AI 使用與分工揭露",
+    "contexts": [
+      "提交缺口!D7"
+    ]
+  },
+  {
+    "id": "T0144",
+    "text": "私密視窗檢查 repo／簡報／demo；未部署可用合規展示影片，不能宣稱已部署",
+    "contexts": [
+      "提交缺口!G8"
+    ]
+  },
+  {
+    "id": "T0147",
+    "text": "尚未查核",
+    "contexts": [
+      "提交缺口!E9"
+    ]
+  },
+  {
+    "id": "T0163",
+    "text": "已知類比參照與基準方法",
+    "contexts": [
+      "提交缺口!D13"
+    ]
+  },
+  {
+    "id": "T0166",
+    "text": "選與任務相關且有覆蓋的已知場址，用相同規則作對照；不強迫它一定第一",
+    "contexts": [
+      "提交缺口!G13"
+    ]
+  },
+  {
+    "id": "T0167",
+    "text": "分析負責人",
+    "contexts": [
+      "提交缺口!H13",
+      "提交缺口!H31",
+      "提交缺口!H38",
+      "提交缺口!H39",
+      "提交缺口!H40"
+    ]
+  },
+  {
+    "id": "T0170",
+    "text": "石膏接觸點GPS＋層位＋樣品ID＋同樣品礦相；來不及則明列未知，不稱完整礦物匹配",
+    "contexts": [
+      "提交缺口!G14"
+    ]
+  },
+  {
+    "id": "T0179",
+    "text": "若主張冰鑽探／ISRU，需同場深度與冰證據；否則移除該用途主張",
+    "contexts": [
+      "提交缺口!G17"
+    ]
+  },
+  {
+    "id": "T0205",
+    "text": "POWER已用但GPM未用",
+    "contexts": [
+      "提交缺口!F24"
+    ]
+  },
+  {
+    "id": "T0211",
+    "text": "MOD13C2、MCD12C1僅清單",
+    "contexts": [
+      "提交缺口!F26"
+    ]
+  },
+  {
+    "id": "T0212",
+    "text": "QA、雪水雲／都市／植被篩選；不能用低NDVI證明無生命或把裸地當礦物",
+    "contexts": [
+      "提交缺口!G26"
+    ]
+  },
+  {
+    "id": "T0216",
+    "text": "MERRA-2純沙塵摘要",
+    "contexts": [
+      "提交缺口!D28"
+    ]
+  },
+  {
+    "id": "T0217",
+    "text": "DUEXTTAU僅清單",
+    "contexts": [
+      "提交缺口!F28"
+    ]
+  },
+  {
+    "id": "T0219",
+    "text": "VIIRS AOD QA與月份",
+    "contexts": [
+      "提交缺口!D29"
+    ]
+  },
+  {
+    "id": "T0226",
+    "text": "POWER中心粗網格不等於100km平均",
+    "contexts": [
+      "提交缺口!F31"
+    ]
+  },
+  {
+    "id": "T0228",
+    "text": "火星",
+    "contexts": [
+      "提交缺口!C32",
+      "提交缺口!C33",
+      "提交缺口!C34",
+      "提交缺口!C35",
+      "提交缺口!C36"
+    ]
+  },
+  {
+    "id": "T0229",
+    "text": "可比較的區域地表溫度",
+    "contexts": [
+      "提交缺口!D32"
+    ]
+  },
+  {
+    "id": "T0231",
+    "text": "不以TES TI或MEDA代替；可明列缺口，不必趕下載全球軌道產品",
+    "contexts": [
+      "提交缺口!G32"
+    ]
+  },
+  {
+    "id": "T0236",
+    "text": "維持provisional、rover-local及未知；未釐清旗標前不進正式分數",
+    "contexts": [
+      "提交缺口!G33"
+    ]
+  },
+  {
+    "id": "T0238",
+    "text": "Gale有論文，窗口非全域礦物圖",
+    "contexts": [
+      "提交缺口!F34"
+    ]
+  },
+  {
+    "id": "T0239",
+    "text": "對接具體鑽孔／單元／露頭，比例尺與檢出方法；不把論文當新衛星分析",
+    "contexts": [
+      "提交缺口!G34"
+    ]
+  },
+  {
+    "id": "T0245",
+    "text": "native profiles/units/來源已有",
+    "contexts": [
+      "提交缺口!F36"
+    ]
+  },
+  {
+    "id": "T0247",
+    "text": "火星與介面隊友",
+    "contexts": [
+      "提交缺口!H36"
+    ]
+  },
+  {
+    "id": "T0253",
+    "text": "權重與容許差的依據",
+    "contexts": [
+      "提交缺口!D38"
+    ]
+  },
+  {
+    "id": "T0260",
+    "text": "明示流程敏感度與固定集合差異；保留次數非機率",
+    "contexts": [
+      "提交缺口!G40"
+    ]
+  },
+  {
+    "id": "T0261",
+    "text": "leave-one-group-out與缺值情境",
+    "contexts": [
+      "提交缺口!D41"
+    ]
+  },
+  {
+    "id": "T0269",
+    "text": "介面交接",
+    "contexts": [
+      "提交缺口!C43",
+      "提交缺口!C44",
+      "提交缺口!C45",
+      "提交缺口!C46",
+      "提交缺口!C47"
+    ]
+  },
+  {
+    "id": "T0278",
+    "text": "adapter.ts:13,279,376,454；profiles.sources為list",
+    "contexts": [
+      "提交缺口!F45"
+    ]
+  },
+  {
+    "id": "T0280",
+    "text": "來源連結、名詞與地圖尺度",
+    "contexts": [
+      "提交缺口!D46"
+    ]
+  },
+  {
+    "id": "T0281",
+    "text": "待聯合驗證",
+    "contexts": [
+      "提交缺口!E46"
+    ]
+  },
+  {
+    "id": "T0284",
+    "text": "目前研究範圍與展示模式",
+    "contexts": [
+      "提交缺口!D47"
+    ]
+  },
+  {
+    "id": "T0293",
+    "text": "待整理",
+    "contexts": [
+      "提交缺口!E49"
+    ]
+  },
+  {
+    "id": "T0294",
+    "text": "已有NASA Analog Explorer與Treks",
+    "contexts": [
+      "提交缺口!F49"
+    ]
+  },
+  {
+    "id": "T0295",
+    "text": "說明資料整理／同尺度／證據鏈貢獻；地圖美觀不是研究創新證明",
+    "contexts": [
+      "提交缺口!G49"
+    ]
+  },
+  {
+    "id": "T0296",
+    "text": "展示與研究負責人",
+    "contexts": [
+      "提交缺口!H49"
+    ]
+  },
+  {
+    "id": "T0297",
+    "text": "有比例尺的Earth/Mars視覺",
+    "contexts": [
+      "提交缺口!D50"
+    ]
+  },
+  {
+    "id": "T0302",
+    "text": "不得說三個不同火星目標；未證under-studied則改project-proposed/unvalidated",
+    "contexts": [
+      "提交缺口!G51"
+    ]
+  },
+  {
+    "id": "T0306",
+    "text": "README前段仍稱互動網站未完成；已有web/",
+    "contexts": [
+      "提交缺口!F52"
+    ]
+  },
+  {
+    "id": "T0316",
+    "text": "AIR_TEMP 氣溫（K）",
+    "contexts": [
+      "MEDA原始紀錄!F1"
+    ]
+  },
+  {
+    "id": "T0324",
+    "text": "分片序號",
+    "contexts": [
+      "JSON原值!G1",
+      "報告內容!E1"
+    ]
+  },
+  {
+    "id": "T0330",
+    "text": "規則：開工前先讀本檔。開始／做完／換任務時，只更新自己那一欄，不要改對方的欄位。\n\n",
+    "contexts": [
+      "報告內容!G3"
+    ]
+  },
+  {
+    "id": "T0333",
+    "text": "## 先確認協作者權限\n\n",
+    "contexts": [
+      "報告內容!G7"
+    ]
+  },
+  {
+    "id": "T0338",
+    "text": "`data/raw/mars/` 與 `data/processed/` 已進 Git，clone／pull 可取得目前火星資料；地球原始資料仍不進 Git。下載腳本只用來補齊缺少的火星檔案，已有的檔案會跳過；來源與校驗紀錄見 `outputs/mars_profiles/profiles.json`。\n這個下載流程仍需要可連到各資料來源的網路；腳本出錯時請保留完整錯誤訊息。\n衍生資料由對應的處理腳本重建。\n\n",
+    "contexts": [
+      "報告內容!G16"
+    ]
+  },
+  {
+    "id": "T0340",
+    "text": "在最新的 `main` 上建立自己的分支，例如 `git switch -c teammate/terrain`。\n若本機已有未提交的修改，先保留好修改，再切換或同步分支。\n\n",
+    "contexts": [
+      "報告內容!G18"
+    ]
+  },
+  {
+    "id": "T0346",
+    "text": "本機檢查工具不連線 GitHub，也不能證明隊友有寫入權限。需要進一步診斷時，提供 GitHub 帳號、上傳方式與錯誤訊息；不要提供密碼或權杖。\n",
+    "contexts": [
+      "報告內容!G24"
+    ]
+  },
+  {
+    "id": "T0347",
+    "text": "# 地球端資料整理與下載規劃（對應火星端管線）\n\n",
+    "contexts": [
+      "報告內容!G47",
+      "報告內容!G268"
+    ]
+  },
+  {
+    "id": "T0352",
+    "text": "| 面向 | 火星端檔案 (`analog/`) | 資料產品 | 原始解析度 | 涵蓋範圍 | 單位／數值 |\n| --- | --- | --- | --- | --- | --- |\n| **1. 地形** | `analog/mars.py` + `terrain.py` | MGS MOLA (`megt90n000eb.img`) | 16 px/deg（~3.7 km） | 全球 | 公尺 → 轉成 `slope_deg`、`relief` |\n| **2. 溫度** | `analog/mars.py` | MGS TES 夜間熱慣量 (`global_ti_night_2007.img`) | 20 px/deg（~3.0 km） | 全球 | `J m⁻² K⁻¹ s⁻⁰·⁵`（5–5000） |\n| **3. 水／冰** | `analog/swim.py` | SWIM 2.0 地下水冰一致性 (`SWIM2_c0_1.tif`, `SWIM2_c1_5.tif`) | 20 px/deg | **±60° 緯度** | `-1`（無冰證據）到 `+1`（強冰證據） |\n| **4. 大氣與沙塵** | `analog/dust.py` | Montabone v2.5 沙塵柱光學厚度（MY35 平常年、MY34 全球沙塵暴年） | 3°（~177 km） ",
+    "contexts": [
+      "報告內容!G53",
+      "報告內容!G274"
+    ]
+  },
+  {
+    "id": "T0362",
+    "text": "> [!NOTE]\n> **數量與讀取狀態待核對**：表格數量合計為 `27 + 5×24 + 1 = 148`；先前隊友回報成功開啟 145 個，計數範圍尚未釐清。148 是依表格推算的預期數量，不是新增的驗證通過數。需提供實際檔名、容量、校驗碼、產品識別碼與讀取紀錄，才能確認完整性。\n> - `GPM_3IMERGM`（需 `group='Grid'`）、`GLDAS_NOAH025_M`、`M2TMNXAER` 與 ESA CCI Permafrost 可用 `xarray` 直接開啟，並帶有 lat/lon 座標。\n> - `MOD11C3` 與 `MOD13C2` 為 HDF4-EOS。隊友回報其環境可用 `netCDF4.Dataset(path)` 開啟；這需要底層 netCDF-C 編譯支援 HDF4 SD，不能保證其他 wheel 或電腦也可讀。應以同一原始檔測試實際環境；若不支援，再使用具 HDF4 支援的讀取器或經驗證的轉檔工具。\n> - MODIS CMG 檔案**沒有 lat/lon 變數**，需自行建立 0.05° 網格（3600×7200）：lat 由 89.975 遞減至 −89.975，lon 由 −179.975 遞增至 179.975（皆為格點中心）。\n> - 隊友回報 `SRTMGL30` zip 只有 `.DEM`、無 `.HDR`，其中 ",
+    "contexts": [
+      "報告內容!G64"
+    ]
+  },
+  {
+    "id": "T0366",
+    "text": "來源：[NASA SRTMGL30 官方目錄](https://cmr.earthdata.nasa.gov/search/collections.umm_json?short_name=SRTMGL30)、[ESA/CEDA 永凍土 v4.0](https://catalogue.ceda.ac.uk/uuid/93444bc1c4364a59869e004bf9bfd94a/)、[Unidata HDF4 編譯支援](https://docs.unidata.ucar.edu/nug/current/getting_and_building_netcdf.html)。\n\n",
+    "contexts": [
+      "報告內容!G68",
+      "報告內容!G289"
+    ]
+  },
+  {
+    "id": "T0370",
+    "text": "2. **用免登入工具先篩選與預覽候選類型**\n   - **[NASA Worldview](https://worldview.earthdata.nasa.gov/)**：完全免登入。先開啟以下圖層，視覺巡檢「高沙塵＋極度乾燥＋低植被」的非傳統區域（例如：中亞阿爾泰／柴達木盆地／吉爾吉斯高寒荒漠、伊朗盧特沙漠、澳洲內陸鹽沼、非洲納米比／提貝斯提高原、南美普納高原等，避開 Atacama / 冰島 / 夏威夷 / McMurdo）：\n     - *Corrected Reflectance (True Color)*\n     - *Aerosol Optical Depth (MODIS)*\n     - *Land Surface Temperature (Day/Night)*\n     - *Vegetation Index (NDVI)*\n   - **[NASA Mars Trek](https://trek.nasa.gov/mars/)**：完全免登入。預先熟悉要對照的火星目標區截圖（如 Jezero Crater、Arcadia Planitia、Gale Crater、Arsia Mons 天窗）。\n\n",
+    "contexts": [
+      "報告內容!G73",
+      "報告內容!G294"
+    ]
+  },
+  {
+    "id": "T0376",
+    "text": "沒有任何一個地球場址能百分之百複製火星。找出地球與火星在 **地形、溫度、水／冰、大氣與沙塵** 上的相似處之後，我們必須明確界定類比在哪裡失效——這決定了工程師在地球測試儀器與作業流程時，**哪些結果可以直接參考、哪些必須在實驗室或模擬器中額外驗證**。\n\n",
+    "contexts": [
+      "報告內容!G80",
+      "報告內容!G395"
+    ]
+  },
+  {
+    "id": "T0382",
+    "text": "- **火星現況**：火星缺乏像地球一樣的全球偶極磁場與厚重臭氧層，地表承受高劑量的**銀河宇宙射線（GCR）、太陽高能粒子（SEP）與強烈紫外線（UV）**（好奇號 RAD 儀器已實測確認）。\n- **為什麼重要**：\n  - **載人任務安全**：長期駐留必須有輻射防護（厚重遮蔽層或利用地下熔岩管），否則會對太空人健康造成嚴重風險。\n  - **生命與有機分子保存**：強 UV 與電離輻射會快速破壞地表有機物與潛在生物特徵（biosignatures），這也是為什麼探測車需要鑽探地表以下數公分至數公尺的原因。\n  - **電子元件與材料老化**：太陽能板、外露高分子材料與感測器壽命受影響。\n- **對類比的影響**：即使在地球高海拔乾燥高原（如安地斯山脈高處，UV 指數極高），大氣與地球磁場仍擋掉了絕大多數高能宇宙射線。因此，地球極端環境可用於**測試耐 UV 材料與生命偵測儀器的靈敏度下限**，但**無法作為輻射劑量與生物輻射耐受度的完整測試場**。\n\n",
+    "contexts": [
+      "報告內容!G89",
+      "報告內容!G404"
+    ]
+  },
+  {
+    "id": "T0392",
+    "text": "# 研究與提交文件\n\n",
+    "contexts": [
+      "報告內容!G154"
+    ]
+  },
+  {
+    "id": "T0403",
+    "text": "```bash\n.venv/bin/python scripts/download_mars.py      # 若尚未有檔：下載火星資料到 data/raw/mars（約 380 MB，免登入）\n.venv/bin/python scripts/build_mars_stack.py   # 產出 data/processed/mars_stack_0p5deg.nc\n.venv/bin/python scripts/score_mars_selftest.py\n.venv/bin/python scripts/profile_mars.py --strict  # 火星目標特徵、來源與逐 sol 沙塵序列\n.venv/bin/python scripts/quicklook_mars.py\n.venv/bin/python scripts/check_upload.py\n.venv/bin/ruff format . && .venv/bin/ruff check .\n.venv/bin/python -m pytest\n```\n\n",
+    "contexts": [
+      "報告內容!G167"
+    ]
+  },
+  {
+    "id": "T0413",
+    "text": "MODIS 地表溫度與 TES 熱慣量、地球乾濕條件與 SWIM 地下冰一致性均不是同一物理量；NDVI 不代表生命存在與否，永凍土面積比例也不是可開採冰量。這些面向先作分開的證據描述，尚未整合為四面向相似度分數。\n\n",
+    "contexts": [
+      "報告內容!G177"
+    ]
+  },
+  {
+    "id": "T0415",
+    "text": "沿子午線，火星與地球的 1 度分別約為 59 km 與 111 km；經度方向的距離還會隨緯度改變，因此地球 0.5 度不是火星 1 度的通用等價網格。現有分析以各天體半徑建立 100×100 km 視窗，採 4 km 點距並做 10 km 尺度敏感度比較。取樣與插值不代表新增真實解析度。\n\n",
+    "contexts": [
+      "報告內容!G179"
+    ]
+  },
+  {
+    "id": "T0425",
+    "text": "- 方法與執行：[docs/earth_pipeline.md](../../docs/earth_pipeline.md)\n- 原始資料下載與交接：[docs/data_handoff.md](../../docs/data_handoff.md)\n- 候選交接：[outputs/analysis/candidate_handoff.md](../../outputs/analysis/candidate_handoff.md)\n- 完整工作回報：[docs/work_report_2026-11-14.md](../../docs/work_report_2026-11-14.md)\n- 數值結果與來源：`outputs/analysis/results_with_context.json`\n- 權重及尺度敏感度：`outputs/analysis/sensitivity.json`\n\n",
+    "contexts": [
+      "報告內容!G189"
+    ]
+  },
+  {
+    "id": "T0427",
+    "text": "## 中文工作報告維護約定\n\n",
+    "contexts": [
+      "報告內容!G191"
+    ]
+  },
+  {
+    "id": "T0431",
+    "text": "- **已完成**：取得 Jezero／Perseverance MEDA calibrated TIRS 的 LMST sol 700、701、702，共 159,418 筆讀值與三份 PDS4 XML 標籤。加入下載、欄位／列數／單位核對、LTST 分組、品質篩選與來源校驗碼，並整合至火星報告的 `rover_temperature_context`。\n- **探索結果**：日夜摘要代表探測車局部的地面亮溫，不是全球或 100 km 區域的動力地表溫度。輪子視野、HGA、SkyCam 三項品質旗標在全部讀值中皆未知；依專案保守規則，合格筆數為 0，狀態為 `quality_incomplete`。探索摘要未納入正式相似度評分。\n- **前輪驗證**：57 項測試通過、8 個既有警告；Ruff 檢查通過；六個原始檔的本機與 Git 內容 SHA-256 均符合來源紀錄。這些是前輪執行結果，本次文件更新未重跑測試。\n- **待確認**：缺失品質旗標的意義、觀測足跡與姿態、同場日夜配對及季節代表性。\n- **尚未完成**：可與地球 LST 比較的全球／區域溫度資料、全年季節覆蓋、Gale REMS 接入與 Arcadia 溫度資料。局部亮溫尚未補齊既有區域 `surface_temperature` 的缺口。\n\n",
+    "contexts": [
+      "報告內容!G195"
+    ]
+  },
+  {
+    "id": "T0447",
+    "text": "本輪可交接的是 ETOPO 2022 地球地形、MOLA 火星地形、Natural Earth 陸地遮罩，以及 NASA POWER 氣候 JSON，約 480 MB 原始資料。資料包不含帳號、密碼、token、`.netrc` 或 `.env`。\n\n",
+    "contexts": [
+      "報告內容!G234"
+    ]
+  },
+  {
+    "id": "T0450",
+    "text": "資料包頂層為 `earth/` 與 `mars/`，解壓後對應管線使用的 `data/raw/earth/` 與 `data/raw/mars/`。若既有同名檔，請先比對 SHA-256，再決定是否解壓覆寫。來源與原始檔校驗碼在資料包的 `earth/public_sources.json` 及 repo `outputs/analysis/results.json`；資料包校驗碼另在 Release 的 `SHA256SUMS.txt`。\n\n",
+    "contexts": [
+      "報告內容!G237"
+    ]
+  },
+  {
+    "id": "T0452",
+    "text": "## GitHub 文件提到的另外一批資料\n\n",
+    "contexts": [
+      "報告內容!G239"
+    ]
+  },
+  {
+    "id": "T0458",
+    "text": "## 2. 地球端資料清單（222 個檔案、12.33 GB，已於隊友本機逐檔開啟）\n\n",
+    "contexts": [
+      "報告內容!G278"
+    ]
+  },
+  {
+    "id": "T0459",
+    "text": "隊友回報以下資料已下載至其 `data/raw/earth/`（不進 Git）；NASA 資料透過 `earthaccess`，永凍土來自 ESA CCI 歸檔。逐檔檔名、位元組數、SHA-256 與讀取結果見 [earth_inventory.csv](earth_inventory.csv)（2026-11-14 於隊友本機 `.venv` 測試，222/222 開啟成功）；原始檔本身尚未交接至 repo，其他電腦取得後可用 SHA-256 比對。資料交接方式見 [data_handoff.md](data_handoff.md)。\n\n",
+    "contexts": [
+      "報告內容!G279"
+    ]
+  },
+  {
+    "id": "T0461",
+    "text": "**`MOD11C3`** (v061, 2023–2024) | 24 個 `.hdf`（1.9 GB） | 0.05° 月平均（~5.6 km） | `LST_Day_CMG`／`LST_Night_CMG`，K；讀取 scale、fill 與 QA。月合成日夜值之差不是 TES 熱慣量；月合成值的年內最小／最大也不是瞬時極端溫度。HDF4 讀取依環境支援而定。 |\n| **2. 溫度（日照／反照率）** | `temperature/radiation/` | **`M2TMNXRAD`** (MERRA-2, 2023–2024) | 24 個 `.nc4`（1.45 GB） | 0.5° × 0.625°（`361×576`） | `xarray` 直接讀取 `SWGDN`（入射短波輻射）、`ALBEDO`（地表反照率）、`LWGNT`；注意 MERRA-2 為再分析資料，非衛星直接觀測。 |\n| **3. 水／冰（乾旱度）** | `water_ice/gpm/` | **`GPM_3IMERGM`** (v07, 2023–2024) | 24 個 `.HDF5`（444 MB） | 0.1° 月平均（`1800×3600`） | `xarray(..., group='Grid')` 讀取 `precipitation` |\n| **3. 水／冰（土壤濕度）** |",
+    "contexts": [
+      "報告內容!G281"
+    ]
+  },
+  {
+    "id": "T0469",
+    "text": "## 執行\n\n",
+    "contexts": [
+      "報告內容!G301",
+      "報告內容!G420",
+      "報告內容!G444"
+    ]
+  },
+  {
+    "id": "T0476",
+    "text": "## 物理尺度與搜尋範圍\n\n",
+    "contexts": [
+      "報告內容!G309"
+    ]
+  },
+  {
+    "id": "T0477",
+    "text": "1. 搜尋中心覆蓋 60°S 至 60°N、全球經度，每 2° 一個中心，排除海洋中心及團隊指定的 Atacama、Iceland、Hawaii 方框。極區與 McMurdo 已因緯度範圍排除。這是全球中低緯帶的稀疏搜尋，不是全球每一位置的完整搜尋；100 km 視窗之間存在未搜尋空隙。\n2. 每個視窗為局部球面方位等距座標中的 100×100 km 正方形。地球球半徑採 6,371,008.8 m，火星依 MOLA 標籤採 3,396,000 m；各自反算經緯度，不混用天體距離。地球 WGS84 以平均球半徑近似，在本輪區域尺度仍有橢球近似誤差。\n3. 在 x、y 各 -50 至 +50 km 每 4 km 取樣，共 26×26 點。對來源網格做雙線性取樣，跨經度邊界正確循環。這是共同物理取樣，不代表兩種感測器具有完全一致的點擴散函數或有效解析度。\n4. 用粗陸地多邊形檢查取樣點，至少 95% 在陸地；任何 DEM 缺值使該視窗不參與排名。陸地比例只是遮罩取樣比例。\n5. 原始海拔只在各自視窗內計算高差，不跨天體比較絕對海拔。來源垂直基準差異沒有被當成場址相似特徵。\n\n",
+    "contexts": [
+      "報告內容!G310"
+    ]
+  },
+  {
+    "id": "T0478",
+    "text": "## 配對定義\n\n",
+    "contexts": [
+      "報告內容!G311"
+    ]
+  },
+  {
+    "id": "T0484",
+    "text": "NASA POWER 查詢 T2M、T2M_MAX、T2M_MIN、PRECTOTCORR、WS10M。24 個月數值按各月天數加權，包含 2024 閏年。任一月份缺失或為填充值，該變數的摘要保留 unknown。T2M 是 2 m 氣溫，T2M_MAX/MIN 摘要不是整段期間的極端最高／最低溫；日降水摘要也不是直接相加的年降水量。\n\n",
+    "contexts": [
+      "報告內容!G318"
+    ]
+  },
+  {
+    "id": "T0490",
+    "text": "CMR 中 MOD11C3/MOD13C2 版本為 `061`、GPM_3IMERGM 為 `07`、MOD08_M3 為 `6.1`。搜尋區間相交可能包含前一個月，程式按 granule 起始日期排除這種邊界項目。清單保存 concept ID、granule ID、資料 URL、時間範圍；有找到清單不代表下載或品質檢查完成。\n\n",
+    "contexts": [
+      "報告內容!G324"
+    ]
+  },
+  {
+    "id": "T0491",
+    "text": "這次未取得 MODIS/GPM 受保護原始檔，未執行其解碼、QA 遮罩與尺度／偏移量轉換。下載功能已寫好但尚未用有效帳號驗證。SPL3SMP_E 為每日區域後續資料，版本尚待確認，未混入月資料下載批次。不要把 9 km 網格間距當成土壤濕度的實際有效解析度。\n\n",
+    "contexts": [
+      "報告內容!G325"
+    ]
+  },
+  {
+    "id": "T0492",
+    "text": "## 敏感度與下一步\n\n",
+    "contexts": [
+      "報告內容!G326"
+    ]
+  },
+  {
+    "id": "T0496",
+    "text": "查核：2026-11-14。這是有限的公開網頁檢索，不是系統性文獻回顧。沒有新增候選地層／礦物查證。\n\n",
+    "contexts": [
+      "報告內容!G330"
+    ]
+  },
+  {
+    "id": "T0498",
+    "text": "| 來源 | 已解決什麼 | 本版怎麼使用／不能借用什麼 |\n|---|---|---|\n| [NASA Planetary Analog Explorer](https://science.nasa.gov/solar-system/analog-explorer/) | 已知場址的跨天體影像比較、科學問題與來源說明 | 對照產品定位；不能宣稱跨星球比較或已知類比展示是我們首創 |\n| [NASA Solar System Treks](https://trek.nasa.gov/) | 行星觀測資料檢視、地表量測、3D探索 | 提供可供後續覆核的工具；不虛構它缺少某項功能 |\n| [NASA Earth Observatory：Curiosity與Death Valley](https://science.nasa.gov/earth/earth-observatory/mars-rover-curiosity-on-a-familiar-landscape-78860/) | 描述Gale與Death Valley的沉積地貌參照，同時強調年代與活動性差異 | 支持選Death Valley作已知區域參照；不是任選窗口的DEM ground truth |\n| [Salas et al., 2011，NTRS 20150005824](https://ntrs.nasa.gov",
+    "contexts": [
+      "報告內容!G332"
+    ]
+  },
+  {
+    "id": "T0499",
+    "text": "/citations/20150005824) | Mojave／Death Valley的任務類比用途與環境多樣性 | 本輪讀取NTRS紀錄／摘要，紀錄無可下載全文；不冒稱全文驗證 |\n| [Baldridge et al., 2004](https://doi.org/10.1029/2004JE002315) | 用地面礦物檢測核對Badwater遙測解釋，並測試空間尺度影響 | 已讀原始論文摘要與方法開頭；借用地面真值與尺度驗證原則，未重現其光譜分析 |\n\n",
+    "contexts": [
+      "報告內容!G333"
+    ]
+  },
+  {
+    "id": "T0503",
+    "text": "| 查詢 | 本輪觀察 | 處理 |\n|---|---|---|\n| `site.nasa.gov \"Death Valley\" \"analog\" Mars` | NASA／JPL／NTRS及其他結果 | 只用上列原始機構與論文；作參照選擇依據 |\n| `\"Oytag\" \"Mars\" analog`、`\"Wuyitake\" \"Mars\" analog` | 混合檢索未取得可確認的學術類比紀錄 | 僅作初步新穎性查核，非地質續查 |\n| `\"Oytag\" \"Mars\"`、`\"Oytagh\" \"Mars\"`、`\"Wuyitake\" \"Mars\"`、`\"Oytag\" \"planetary analog\"` | 批次回傳以旅遊宣傳的Mars-like用語及無關同名資料為主，未取得可確認的同行評審類比研究 | 排除旅遊宣傳作科學證據；不排除以其他地名存在研究 |\n\n",
+    "contexts": [
+      "報告內容!G337"
+    ]
+  },
+  {
+    "id": "T0513",
+    "text": "## 已實際接入\n\n",
+    "contexts": [
+      "報告內容!G416"
+    ]
+  },
+  {
+    "id": "T0514",
+    "text": "已同步主分支 `9f62d89` 上傳的 7 個火星資料產品及 3 個 PDS 標籤。逐一比對本次分析來源的 SHA-256 與 GitHub 對應 Git blob，10 個檔案均一致。沒有把文件清單當成原始檔。\n\n",
+    "contexts": [
+      "報告內容!G417"
+    ]
+  },
+  {
+    "id": "T0531",
+    "text": "| 項目 | 現況與需要補的內容 |\n|---|---|\n| 可比較的火星地表溫度 | 尚缺可與地球 LST 對齊的日夜表面溫度、季節與當地時刻；不能用 TES 熱慣量充當 K 或 °C |\n| 任務與門檻 | 尚未定義具體任務、材料／環境條件、權重及通過門檻；目前只有描述值與實驗性內部相似度 |\n| 地質、礦物與資源 | 尚缺目標區礦物／地質證據與資源可用性；SWIM／PFR 不能直接證明可採水冰 |\n| 細尺度地形與現場驗證 | 公里級資料不能判定石塊、輪胎落點、細部通行或基地安全 |\n| 跨行星沙塵比較 | Earth 550 nm extinction AOT 與 Mars 9.3 μm absorption CDOD 的轉換及環境假設尚待驗證；本輪不自動乘係數後宣稱等價 |\n\n",
+    "contexts": [
+      "報告內容!G436"
+    ]
+  },
+  {
+    "id": "T0533",
+    "text": "- 50 個 pytest 測試通過，包含新增的遮罩、部分涵蓋、日期變更線、原生粗網格、權重及缺值案例；ruff 與 pip check 通過。\n- 真實資料已跑完 stack、內部檢查與三個目標的 profile export。測試仍有缺值樣本及套件棄用提示，沒有把它們描述成數值驗證失敗或隱藏未知。\n- 沙塵衍生輸出依來源 CC BY-SA 3.0 附上引用及使用條款，見 `outputs/mars_profiles/LICENSE-data.md`。這不替其他來源或整個程式庫另行指定授權。\n- 本輪直接修改 main，無 C2C、無 PR、無部署或參賽提交。地球端工作仍交由隊友。\n",
+    "contexts": [
+      "報告內容!G438"
+    ]
+  },
+  {
+    "id": "T0535",
+    "text": "本輪先接入 Perseverance／MEDA 的 calibrated TIRS 產品，研究範圍是 Jezero 探測車附近、LMST sol 700–702 的短期觀測。下載只選這三個 sol，沒有下載完整任務資料。地球端工作仍交由隊友。\n\n",
+    "contexts": [
+      "報告內容!G440"
+    ]
+  },
+  {
+    "id": "T0539",
+    "text": "`profile_mars --strict` 只要求核心地形／熱慣量／冰／沙塵來源齊全，不能解讀為 MEDA 品質已通過。\n\n",
+    "contexts": [
+      "報告內容!G446"
+    ]
+  },
+  {
+    "id": "T0540",
+    "text": "前者從官方目錄發現實際檔名；若同一 sol 出現多個版本，停止下載，要求人工核對。既有檔案會重用。讀取時核對標籤欄位、單位、物理量與資料列數；來源網址、LID、版本、UTC 期間、位元組數、SHA-256 寫入 `outputs/mars_temperature/summary.json`。重現時應核對已提交的 SHA-256，以免重用的本機檔案曾遭修改。\n\n",
+    "contexts": [
+      "報告內容!G447"
+    ]
+  },
+  {
+    "id": "T0541",
+    "text": "`provisional_hourly.csv` 是包含品質未知／不通過讀值的探索摘要，不是已確認可用的科學結果。`summary.json` 分列 `qualified_windows` 與 `provisional_unqualified_windows`。Mars profile 匯出將完整內容放在 `rover_temperature_context`；原本的區域 `surface_temperature` 缺值狀態保留。沒有將局部資料外插到 Arcadia、Gale 或全球網格，沒有變更相似度權重。\n\n",
+    "contexts": [
+      "報告內容!G448"
+    ]
+  },
+  {
+    "id": "T0557",
+    "text": "# 七頁簡報製作規格\n\n",
+    "contexts": [
+      "報告內容!G464"
+    ]
+  },
+  {
+    "id": "T0569",
+    "text": "查核日期：2026-11-14。接續 [Matching → Reporting 交接](../../mars_discovery_handoff.md)，只查原本的兩個保留點，沒有重新排名。\n\n",
+    "contexts": [
+      "報告內容!G476"
+    ]
+  },
+  {
+    "id": "T0570",
+    "text": "## 給 Reporting 的結論\n\n",
+    "contexts": [
+      "報告內容!G477"
+    ]
+  },
+  {
+    "id": "T0571",
+    "text": "**兩點都暫時保留為「淺層冰資源探查的研究候選區」，新穎性仍未通過。** 原始資料可重現目前數值，沒有發現必須因資料缺失而換點的理由；這並不等於確認有冰、適合採冰，或適合載人基地。\n\n",
+    "contexts": [
+      "報告內容!G478"
+    ]
+  },
+  {
+    "id": "T0572",
+    "text": "這一對值得研究的問題是：**冰一致性與區域坡度接近，但表面熱慣量不同，應如何設計後續探查與地球類比實驗？** 這是待驗證的研究問題，不是已證明的設備效能差異。不要把熱慣量較高解讀成較熱、較冷、較硬或更容易開採。\n\n",
+    "contexts": [
+      "報告內容!G479"
+    ]
+  },
+  {
+    "id": "T0576",
+    "text": "以下存量資料來自 [原始 discovery JSON](../../../outputs/mars_discovery/mars_site_discovery.json)。新查核數值、插值來源與檔案雜湊記錄在 [native_audit.json](../../../outputs/research/ice_candidate_followup/native_audit.json)。\n\n",
+    "contexts": [
+      "報告內容!G483"
+    ]
+  },
+  {
+    "id": "T0579",
+    "text": "重算結果：兩點的五個 JSON 圖層與既存 stack 完全一致；由原始資料重算的坡度、單元高差、熱慣量及淺層冰值亦通過數值檢查。CDOD 本輪僅核對 JSON 與 stack，沒有重新處理原始塵埃檔。\n\n",
+    "contexts": [
+      "報告內容!G487"
+    ]
+  },
+  {
+    "id": "T0581",
+    "text": "![兩點的原生網格背景圖](../../../outputs/research/ice_candidate_followup/native_context.png)\n\n",
+    "contexts": [
+      "報告內容!G489"
+    ]
+  },
+  {
+    "id": "T0587",
+    "text": "## 還不能說的話\n\n",
+    "contexts": [
+      "報告內容!G495"
+    ]
+  },
+  {
+    "id": "T0595",
+    "text": ":10.3847/PSJ/ad9b24：檢視新版研究背景；未將新版數值混入現有 2021 產品。\n\n",
+    "contexts": [
+      "報告內容!G503"
+    ]
+  },
+  {
+    "id": "T0598",
+    "text": "# 三組火星—地球類比候選研究報告\n\n",
+    "contexts": [
+      "報告內容!G506"
+    ]
+  },
+  {
+    "id": "T0599",
+    "text": "日期：2026-11-14（Asia/Taipei）。研究範圍：既有開放資料的區域地形候選審查。本文由 AI 協助分析，不是 NASA 官方報告、認證或現場調查。\n\n",
+    "contexts": [
+      "報告內容!G507"
+    ]
+  },
+  {
+    "id": "T0614",
+    "text": "## 二、三組比較總表\n\n",
+    "contexts": [
+      "報告內容!G523"
+    ]
+  },
+  {
+    "id": "T0616",
+    "text": "| 組別 | 地球中心 | 火星中心 | 地球／火星坡度中位數 ° | 地球／火星坡度P90 ° | 地球／火星起伏 m | 地形 D |\n|---|---|---|---|---|---|---|\n| A | 39, 75 | Gale：−4.59, 137.44 | 3.998／3.912 | 8.862／10.440 | 4900.2／4887.0 | 0.2319 |\n| B | 29, −105 | Arcadia：40, −170 | 0.789／0.766 | 2.177／2.297 | 922.8／927.2 | 0.0252 |\n| C | 35, 57 | Arcadia：40, −170 | 0.746／0.766 | 2.141／2.297 | 947.6／927.2 | 0.0448 |\n\n",
+    "contexts": [
+      "報告內容!G525"
+    ]
+  },
+  {
+    "id": "T0624",
+    "text": "既有候選四角約為 38.549–39.448°N、74.418–75.582°E，實際輪廓略有曲度，不能只用經緯度包絡框判定。\n\n",
+    "contexts": [
+      "報告內容!G533"
+    ]
+  },
+  {
+    "id": "T0634",
+    "text": "| 比較問題 | 地球目前證據 | Gale 對照 | 成立程度與限制 |\n|---|---|---|---|\n| 宏觀地形 | 既有坡度與起伏統計接近 | 同尺度 Gale 窗口 | VERIFIED：三項統計；形態／成因仍不同 |\n| 細／粗粒沉積岩 | 窗口內有泥岩與砂岩文獻樣點（S1） | 泥岩與沉積岩研究（S2、S3） | 部分成立：可研究岩性辨識；不能直接等同湖相 |\n| 鈣硫酸鹽 | S5 圖示含石膏 A–B 剖面；約略採樣線落在候選內 | 硫酸鹽鑽樣／礦脈與多種水合相（S2、S4） | INFERRED：圖上定位支持窗口內；無石膏 GPS／同露頭 XRD |\n| 蒙皂石／黏土 | 本輪未取得窗口內特定黏土相的可靠鑑定 | Yellowknife Bay 蒙皂石（S2） | UNKNOWN：泥岩粒度不能代替黏土礦物鑑定 |\n| 赤鐵礦與磁鐵礦 | S5 全文有選定樣品的熱磁分析支持 | Gale 氧化鐵等礦物研究 | EXTERNAL：剖面級磁性解釋，不是石膏層 XRD 或同露頭共現 |\n| 母岩／供源 | 窗口岩性複雜，未完成來源與礦物比例分析 | 被研究 Gale 沉積物具有玄武質成分（S2、S3） | UNKNOWN：不能以地區存在火成岩推論同樣母岩 |\n| 湖泊與成岩過程 | S5 解釋部分泥岩為湖相，另有海相／河流相 | Gale 具河湖沉積及後期流體改造（",
+    "contexts": [
+      "報告內容!G544"
+    ]
+  },
+  {
+    "id": "T0641",
+    "text": "可用於展示的準確句子：**「本候選與 Gale 具有相近的區域地形統計，且窗口內已有沉積岩樣點；鈣硫酸鹽的對照具有研究動機，但湖相成因、黏土組合及同露頭共現尚未驗證。」**\n\n",
+    "contexts": [
+      "報告內容!G551"
+    ]
+  },
+  {
+    "id": "T0650",
+    "text": "這比剖面名稱的區域引用更具體，但仍不是可導航的露頭清單。\n\n",
+    "contexts": [
+      "報告內容!G560"
+    ]
+  },
+  {
+    "id": "T0656",
+    "text": "![Oytag 文獻點與約略採樣線的位置示意](../outputs/research/oytag_transect_schematic.png)\n\n",
+    "contexts": [
+      "報告內容!G566"
+    ]
+  },
+  {
+    "id": "T0661",
+    "text": "儕審查材料；展示元素能譜不能當作已取得粉末 XRD 圖譜，也沒有證實樣品來自上述石膏層，故不作同露頭礦物確認。\n\n",
+    "contexts": [
+      "報告內容!G571"
+    ]
+  },
+  {
+    "id": "T0667",
+    "text": "#### 已實際取得 Table DR1\n\n",
+    "contexts": [
+      "報告內容!G577"
+    ]
+  },
+  {
+    "id": "T0672",
+    "text": "**找到座標不等於找到目標樣品**：補表的分析對象是鋯石年代，不是石膏或黏土礦相；相同 PMR 母岩編號只能幫助追溯 S7 的薄片線索，不能把其初步石英／長石描述變成古近紀石膏層的礦物鑑定。Fig. DR1 的補充地圖本輪仍未取得；Table DR1 與 Fig. DR1 不可混稱已完成。\n\n",
+    "contexts": [
+      "報告內容!G582"
+    ]
+  },
+  {
+    "id": "T0680",
+    "text": "本輪 reader 安裝在臨時目錄，沒有更動專案核心依賴。實際解碼十組座標並核對唯一 ID、欄位範圍與多邊形歸屬；只是重現摘錄，不重跑排名。\n\n",
+    "contexts": [
+      "報告內容!G591"
+    ]
+  },
+  {
+    "id": "T0681",
+    "text": "下一步應直接取得 **Sun/Jiang A–B 石膏層的接觸點座標、層位高度、採樣 ID 和該 ID 的礦相報告**。若只取得 S1 更多鋯石數據，仍不能解決這個缺口。本次搜尋已帶來原始座標進展，但尚不能把「窗口內有圖示石膏剖面」升級成「同露頭已驗證 Gale 礦物組合」。\n\n",
+    "contexts": [
+      "報告內容!G592"
+    ]
+  },
+  {
+    "id": "T0682",
+    "text": "## 四、B：Arcadia 與地球 29°N、105°W\n\n",
+    "contexts": [
+      "報告內容!G593"
+    ]
+  },
+  {
+    "id": "T0683",
+    "text": "**區域定位**：墨西哥北部 Chihuahua 區域的候選窗口；具體地質單元與沙漠生態邊界仍待覆核，不把它改名為已知沙丘或試驗站。\n\n",
+    "contexts": [
+      "報告內容!G594"
+    ]
+  },
+  {
+    "id": "T0685",
+    "text": "**火星背景（EXTERNAL）**：[NASA Arcadia 冰資源研究介紹](https://www.nasa.gov/solar-system/nasas-treasure-map-for-water-ice-on-mars/?site=msl)說明該區的冰研究價值；[Arcadia 雷達與地貌原始研究](https://doi.org/10.1029/2018JE005663)提供區域研究背景。這些區域結論不能直接指定本專案 40°N、170°W 每個位置的冰深度。\n\n",
+    "contexts": [
+      "報告內容!G596"
+    ]
+  },
+  {
+    "id": "T0696",
+    "text": "## 六、為何本次沒有給 Jezero 一個強制配對\n\n",
+    "contexts": [
+      "報告內容!G607"
+    ]
+  },
+  {
+    "id": "T0698",
+    "text": "若需要三個不同火星目標，Jezero 必須另做具有古湖／三角洲地質證據的搜尋，不能把外部知名場址直接替換進既有排名。Qaidam 已有明確類比文獻，例如 [Xiao et al. 2017](https://doi.org/10.1002/2017JE005293)，可作方法基準而非宣稱新發現；本輪沒有對它新增計算或評分。\n\n",
+    "contexts": [
+      "報告內容!G609"
+    ]
+  },
+  {
+    "id": "T0703",
+    "text": "## 八、本輪交付與驗證\n\n",
+    "contexts": [
+      "報告內容!G614"
+    ]
+  },
+  {
+    "id": "T0704",
+    "text": "- 已完成：三組候選研究報告、原始候選足跡／來源／雜湊的 JSON 摘錄，以及三個地形距離的公式重算。\n- 探索／推論：區域地名、任務用途與查證優先順序。\n- 待確認：精確地質、礦物、文獻使用史、地球冰／溫度／沙塵及後勤。\n- 尚未完成：重新全球搜尋、四面向評分、現場驗證與三個不同火星目標的完整配對。\n\n",
+    "contexts": [
+      "報告內容!G615"
+    ]
+  },
+  {
+    "id": "T0707",
+    "text": "已補入窗口內三個文獻樣點、局部座標及多邊形雙重檢查、Gale 礦物證據矩陣、反證與來源可取得性。沒有修改既有候選排名、氣候或地形數值；未取得完整礦物圖、未執行新 XRD 或現場採樣。本輪新腳本只驗證座標歸屬，不能驗證礦物存在。\n\n",
+    "contexts": [
+      "報告內容!G618"
+    ]
+  },
+  {
+    "id": "T0717",
+    "text": "## 五項需求\n\n",
+    "contexts": [
+      "報告內容!G628"
+    ]
+  },
+  {
+    "id": "T0731",
+    "text": "## 與既有工具／研究的差異\n\n",
+    "contexts": [
+      "報告內容!G642"
+    ]
+  },
+  {
+    "id": "T0732",
+    "text": "[NASA Analog Explorer](https://science.nasa.gov/solar-system/analog-explorer/)已提供地球與其他世界的場址影像及科學脈絡對照；[Solar System Treks](https://trek.nasa.gov/)支援真實行星資料探索、量測與3D。不能宣稱我們首次做雙星球地圖、證據或類比場址探索。\n\n",
+    "contexts": [
+      "報告內容!G643"
+    ]
+  },
+  {
+    "id": "T0738",
+    "text": "[文獻與搜尋紀錄](literature_review.md)與[英文主張表](submission/claim_ledger.csv)提供展示引用。所有新增需求均為研究設計，未冒充官方工程規格。\n",
+    "contexts": [
+      "報告內容!G650"
+    ]
+  },
+  {
+    "id": "T0752",
+    "text": "確認後才加入原文LICENSE、必要NOTICE及套件metadata，載明授權範圍。論文、衛星圖像、第三方資料和套件不因根目錄LICENSE自動改成Apache-2.0。[官方條款](https://www.spaceappschallenge.org/legal/)要求的公開使用與第三方權利需一起核對。\n\n",
+    "contexts": [
+      "報告內容!G664"
+    ]
+  },
+  {
+    "id": "T0755",
+    "text": "繪的事實示意，明示非原始實測地圖 |\n| 前端與Python套件 | web/package-lock.json、requirements-lock.txt | release前產生實際依賴授權清單，保留必要notice；本輪未完成逐套件審查 |\n| 展示截圖／底圖／照片／字體 | 最終素材尚未凍結 | 每張記source URL、product/layer、view日期、credit、授權；人物與logo使用依條款核對 |\n\n",
+    "contexts": [
+      "報告內容!G667"
+    ]
+  },
+  {
+    "id": "T0760",
+    "text": "提交前須將英文中的待確認內容換成確認後清單。若沒有用某工具，刪除該工具，不為完整性保留。\n\n",
+    "contexts": [
+      "報告內容!G673"
+    ]
+  },
+  {
+    "id": "T0764",
+    "text": "# 提交準備與官方查核\n\n",
+    "contexts": [
+      "報告內容!G713"
+    ]
+  },
+  {
+    "id": "T0772",
+    "text": "給主辦／Navigator的提問草稿（未發送）：\n\n",
+    "contexts": [
+      "報告內容!G721"
+    ]
+  },
+  {
+    "id": "T0780",
+    "text": "# 最後未完成清單：本輪第1與第2項\n\n",
+    "contexts": [
+      "報告內容!G741"
+    ]
+  },
+  {
+    "id": "T0782",
+    "text": "## 已完成\n\n",
+    "contexts": [
+      "報告內容!G743"
+    ]
+  },
+  {
+    "id": "T0784",
+    "text": "## 提交前仍需完成\n\n",
+    "contexts": [
+      "報告內容!G745"
+    ]
+  },
+  {
+    "id": "T0797",
+    "text": "| 來源 | 本輪取得程度 | 可以依據的內容／仍缺事項 |\n|---|---|---|\n| [2026 年度頁](https://www.spaceappschallenge.org/2026/) | 官方可見全文已讀；一般 web reader 失敗後以 requests 取得 | 註冊、組隊、團隊最多六人；專案編輯／提交時段為 11/14 09:00 至 11/15 23:59 local time。團隊所屬場次與實際適用時區仍須在帳戶核對 |\n| [官方法律條款](https://www.spaceappschallenge.org/legal/) | 官方可見全文已讀 | 原創內容公開／開源、第三方使用權／授權與所有來源引用等要求；團隊仍需核對資格及適用條款 |\n| [官方 GitHub Navigator 答覆 #1973](https://github.com/nasa/spaceapps/discussions/1973) | 完整答覆已讀，頁面標示 Navigator answered | 七頁以內簡報或不超過30秒影片、公開連結、英文內容及 AI 工具列示；不能以此取代完整提交指南與台北場規定 |\n| [官方指南發布答覆 #1839](https://github.com/nasa/spaceapps/discussions/1839) | 已讀發布說明 | 1",
+    "contexts": [
+      "報告內容!G788"
+    ]
+  },
+  {
+    "id": "T0814",
+    "text": "**最有效交接方式（E01、E02、E12）**：隊友先輸出三個候選的小型 JSON／CSV，另附窗口 GeoJSON、原產品/version/period、units、native resolution、處理方法、QA、有效格/月數、missing reason、URL和hash。只有有必要時才交小型 NetCDF 子集；不必先搬完整12.33 GB。\n\n",
+    "contexts": [
+      "報告內容!G805"
+    ]
+  },
+  {
+    "id": "T0821",
+    "text": "## 六、給介面隊友的直接交接\n\n",
+    "contexts": [
+      "報告內容!G812"
+    ]
+  },
+  {
+    "id": "T0824",
+    "text": "有POWER | 這是已計分主題數，不是證據信賴度；其餘未知不得補0或隱藏 |\n| F06 | 隊友已寫本機建置／瀏覽器紀錄 | 研究整合後重測切換、定位、來源、空狀態、敏感度、Demo隔離、窄螢幕及鍵盤；本輪未替隊友重跑 |\n\n",
+    "contexts": [
+      "報告內容!G815"
+    ]
+  },
+  {
+    "id": "T0834",
+    "text": "1. 取得完整官方題目／指南，核對Mars-only、場次與截止。\n2. 做英文展示、引用、AI與分工；三地球候選不要說成三個不同火星目標。\n3. 團隊確認授權，建立明確提交版本與外部存取檢查。\n4. 最後完成官方SUBMIT與狀態確認。\n\n",
+    "contexts": [
+      "報告內容!G825"
+    ]
+  },
+  {
+    "id": "T0835",
+    "text": "估計工作量應在實際資料交接後評估；HDF4解碼、官方回覆及外部取樣不能假設一定在幾小時完成。建議沿用原團隊週日13:00科學凍結、18:00內部提交目標作緩衝，這是計畫建議，非新增官方規則。\n\n",
+    "contexts": [
+      "報告內容!G826"
+    ]
+  },
+  {
+    "id": "T0839",
+    "text": "已執行：盤點222列清單、讀取既有分析與前端adapter、核對sources陣列與研究bundle缺口；`pytest -q -p no:cacheprovider`為57 passed、8個既有警告；`ruff check . --no-cache`通過。\n\n",
+    "contexts": [
+      "報告內容!G830"
+    ]
+  },
+  {
+    "id": "T0841",
+    "text": "本報告由 OpenAI Codex 協助檔案審查、官方來源核對與中文整理；沒有改動介面或科學數值。所有待辦的具體完成條件與建議負責人，見53項CSV清單。\n",
+    "contexts": [
+      "報告內容!G832"
+    ]
+  },
+  {
+    "id": "T0842",
+    "text": "### 2026-11-14：Matching 火星用途候選文獻查核交接\n\n",
+    "contexts": [
+      "報告內容!G931"
+    ]
+  },
+  {
+    "id": "T0846",
+    "text": "# 2026-11-14 工作報告\n\n",
+    "contexts": [
+      "報告內容!G935"
+    ]
+  },
+  {
+    "id": "T0851",
+    "text": "## 候選交接\n\n",
+    "contexts": [
+      "報告內容!G940"
+    ]
+  },
+  {
+    "id": "T0852",
+    "text": "以下是各目標的空間分散地形前兩名。D 是本專案定義的地形差距，越低越接近；不能解讀為百分比、整體相似度或任務成功率。\n\n",
+    "contexts": [
+      "報告內容!G941"
+    ]
+  },
+  {
+    "id": "T0853",
+    "text": "| 火星目標 | 地球中心 lat, lon | D | POWER 平均 2 m 氣溫 °C | POWER 平均降水 mm/day |\n|---|---|---:|---:|---:|\n| Jezero 18.44°N, 77.45°E | 57°N, 161°E | 0.1341 | -2.47 | 2.513 |\n| Jezero | 13°N, 37°E | 0.1362 | 25.56 | 7.692 |\n| Gale 4.59°S, 137.44°E | 39°N, 75°E | 0.2319 | 0.72 | 0.300 |\n| Gale | 35°N, 75°E | 0.3459 | -1.91 | 2.108 |\n| Arcadia 設計目標 40°N, 170°W | 29°N, 105°W | 0.0252 | 21.38 | 0.346 |\n| Arcadia 設計目標 | 35°N, 57°E | 0.0448 | 19.31 | 0.289 |\n\n",
+    "contexts": [
+      "報告內容!G942"
+    ]
+  },
+  {
+    "id": "T0861",
+    "text": "- `pytest -q`：**27 passed**。含既有 8 個測試與本輪新增 19 個測試案例。\n- `ruff check .`：**All checks passed**。\n- `git diff --check`：通過。\n- `pip check`：No broken requirements found。\n- 以真實資料執行下載、兩種取樣尺度的排名、六筆氣候查詢、結果摘要及繪圖。已開啟候選地圖與 Jezero 地形圖檢查，並修正地圖註記與座標文字重疊。\n- 測試涵蓋天體半徑與物理距離、跨日期變更線、已知斜率人工解、缺值不能贏得排名、候選去重、空結果、地形平均及座標、閏年月權重、氣候缺月保留 unknown、CMR 時間邊界。\n\n",
+    "contexts": [
+      "報告內容!G950"
+    ]
+  },
+  {
+    "id": "T0865",
+    "text": "## 官方與未確認資訊\n\n",
+    "contexts": [
+      "報告內容!G954"
+    ]
+  },
+  {
+    "id": "T0868",
+    "text": "7 頁／30 秒與 11/15 23:59 截止為本次隊友交接資訊，本輪未從提交規範頁獨立核實，應依台北主辦方正式通知確認。AI 紀錄已在 README 補上本輪 Codex 使用情況。\n\n",
+    "contexts": [
+      "報告內容!G957"
+    ]
+  },
+  {
+    "id": "T0891",
+    "text": "## 建議接手工作\n\n",
+    "contexts": [
+      "報告內容!G980"
+    ]
+  },
+  {
+    "id": "T0896",
+    "text": "## MEDA 日夜亮溫\n\n",
+    "contexts": [
+      "報告內容!G1001"
+    ]
+  },
+  {
+    "id": "T0897",
+    "text": "狀態：quality_incomplete。詳見 profiles.json 的 rover_temperature_context 與 ../mars_temperature/summary.json。\nJezero 探測車局部亮溫不代表 100 km 區域或全球動力地表溫度；探索摘要不進相似度評分。\n\n",
+    "contexts": [
+      "報告內容!G1002"
+    ]
+  },
+  {
+    "id": "T0899",
+    "text": "## 仍缺的火星資料／定義\n\n",
+    "contexts": [
+      "報告內容!G1005"
+    ]
+  },
+  {
+    "id": "T0902",
+    "text": "- `prepare_workbook_data.py`：讀取專案現有科學資料，準備完整資料表與來源對照，不重新評分。\n- `build_project_workbook.mjs`：將準備好的資料寫成同一本 Excel，設定篩選、凍結標題、格式及總覽，輸出視覺檢查與驗證紀錄。\n\n",
+    "contexts": [
+      "報告內容!G1070"
+    ]
+  },
+  {
+    "id": "T0903",
+    "text": "成果放在 `outputs/consolidated/`。程式不移動大型原始資料、不改 `analog/` 的科學計算。\n\n",
+    "contexts": [
+      "報告內容!G1071"
+    ]
+  },
+  {
+    "id": "T0905",
+    "text": "專案相對路徑",
+    "contexts": [
+      "檔案索引!A1"
+    ]
+  },
+  {
+    "id": "T0907",
+    "text": "格式",
+    "contexts": [
+      "檔案索引!C1"
+    ]
+  },
+  {
+    "id": "T0908",
+    "text": "檔案大小 (bytes)",
+    "contexts": [
+      "檔案索引!D1"
+    ]
+  },
+  {
+    "id": "T0910",
+    "text": "Excel 收錄方式",
+    "contexts": [
+      "檔案索引!F1"
+    ]
+  },
+  {
+    "id": "T0915",
+    "text": "專案設定",
+    "contexts": [
+      "檔案索引!B2",
+      "檔案索引!B21",
+      "檔案索引!B78",
+      "檔案索引!B79",
+      "檔案索引!B80"
+    ]
+  },
+  {
+    "id": "T0916",
+    "text": "報告內容 All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+    "contexts": [
+      "檔案索引!F2",
+      "檔案索引!F21",
+      "檔案索引!F34",
+      "檔案索引!F42",
+      "檔案索引!F43"
+    ]
+  },
+  {
+    "id": "T0922",
+    "text": "JSON原值 Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+    "contexts": [
+      "檔案索引!F35",
+      "檔案索引!F55",
+      "檔案索引!F310",
+      "檔案索引!F314",
+      "檔案索引!F317"
+    ]
+  },
+  {
+    "id": "T0927",
+    "text": "研究需求 Complete CSV; original columns retained; source_row is physical start line",
+    "contexts": [
+      "檔案索引!F63"
+    ]
+  },
+  {
+    "id": "T0932",
+    "text": "地球排序明細 Complete CSV; original columns retained; source_row is physical start line",
+    "contexts": [
+      "檔案索引!F309",
+      "檔案索引!F312",
+      "檔案索引!F313",
+      "檔案索引!F315",
+      "檔案索引!F323"
+    ]
+  },
+  {
+    "id": "T0943",
+    "text": "Excel 工作表",
+    "contexts": [
+      "匯入對照!C1"
+    ]
+  },
+  {
+    "id": "T0944",
+    "text": "收錄方式",
+    "contexts": [
+      "匯入對照!D1"
+    ]
+  }
+]

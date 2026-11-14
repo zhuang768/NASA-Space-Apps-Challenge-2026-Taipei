@@ -1,0 +1,866 @@
+{
+  "generated_taipei": "2026-11-14T15:42:59.879915+08:00",
+  "coverage": [
+    {
+      "path": "data/raw/mars/temperature/meda_calibrated/WE__0700___________CAL_TIRS________________P01.CSV",
+      "rows": 47774,
+      "sheet": "MEDA原始紀錄",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "2afa4a3621f0434381cdfd03a5aa3a4b2a09e227fb89f000e6bc0d5a93392242"
+    },
+    {
+      "path": "data/raw/mars/temperature/meda_calibrated/WE__0701___________CAL_TIRS________________P01.CSV",
+      "rows": 62020,
+      "sheet": "MEDA原始紀錄",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "10ff7a49bbc80a2dffe9ee8bffa6241c03cc697eea776f74790dac108b925d2b"
+    },
+    {
+      "path": "data/raw/mars/temperature/meda_calibrated/WE__0702___________CAL_TIRS________________P01.CSV",
+      "rows": 49624,
+      "sheet": "MEDA原始紀錄",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "2811109af51d404063a36997bfe5469c88507d3a3cb32a05361a2ce76f34d2d9"
+    },
+    {
+      "path": "docs/earth_inventory.csv",
+      "rows": 222,
+      "sheet": "既有檔案清單",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "c952bb6a9e238f314715dd8a7374c2dd7704ca3b3b2057f890ccdb5792e440ea"
+    },
+    {
+      "path": "docs/mars_discovery_novelty_checks.csv",
+      "rows": 15,
+      "sheet": "火星新穎性查核",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "8e12c53889a6f2ac7a52c6d38905c9039289c4a0014f3dc9d55fbd4aa6c1b960"
+    },
+    {
+      "path": "docs/repository_inventory.csv",
+      "rows": 123,
+      "sheet": "既有檔案清單",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "34adce25ff629d44847a49f67b284b4ecd45b28f157436347c06c2cb356e39e7"
+    },
+    {
+      "path": "docs/research_requirements.csv",
+      "rows": 5,
+      "sheet": "研究需求",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "0269b1edf1591fd257cdf56223e27244ebbd648d9066c7eacaad24ec25fe7b99"
+    },
+    {
+      "path": "docs/submission/claim_ledger.csv",
+      "rows": 8,
+      "sheet": "報告主張",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "57c65fdbe69e0fee125b08e417f46ffc1ec45271a0a8ffd67b40de81d250a12a"
+    },
+    {
+      "path": "docs/submission_gap_checklist_2026-11-14.csv",
+      "rows": 53,
+      "sheet": "提交缺口",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "733c38c02e96f7317b3faca596efa661ca1c3f58eaa3ab33e4a432b1f7de3896"
+    },
+    {
+      "path": "outputs/analysis/arcadia_all_ranked.csv",
+      "rows": 2611,
+      "sheet": "地球排序明細",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "a3828106a7a1be498a9efae098608454134b98563ba06fc38dba16dc42b777f3"
+    },
+    {
+      "path": "outputs/analysis/earth_terrain_features.csv",
+      "rows": 2611,
+      "sheet": "地球視窗全量",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "8a0c2f4b60d8a00fe96a8aba64377c6bbcfd109a5ad687fb54dd12687504f175"
+    },
+    {
+      "path": "outputs/analysis/gale_all_ranked.csv",
+      "rows": 2611,
+      "sheet": "地球排序明細",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "dca75fd9ba9379b1d1d08186602474706dba05fc06fada3e046c5d261af5771c"
+    },
+    {
+      "path": "outputs/analysis/jezero_all_ranked.csv",
+      "rows": 2611,
+      "sheet": "地球排序明細",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "720202f08b01489c39d73453087ef2467d71246d08493ad4953906050e541426"
+    },
+    {
+      "path": "outputs/analysis/shortlist.csv",
+      "rows": 36,
+      "sheet": "地球候選CSV",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "fe35ad4d6298eb823b595b2d976f09b5fd3dbc4b27df5d5c509d66f05aa2974e"
+    },
+    {
+      "path": "outputs/analysis_scale10km/arcadia_all_ranked.csv",
+      "rows": 2601,
+      "sheet": "地球排序明細",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "0f36f166d4828a0a00fc4f2752b26aa37b249d485fe7d398f10dc265e509c76e"
+    },
+    {
+      "path": "outputs/analysis_scale10km/earth_terrain_features.csv",
+      "rows": 2601,
+      "sheet": "地球視窗全量",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "c1ff332c3824c3ffaf277c4d086f100267d555de4bc03c613c831bc717d9d397"
+    },
+    {
+      "path": "outputs/analysis_scale10km/gale_all_ranked.csv",
+      "rows": 2601,
+      "sheet": "地球排序明細",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "29542823709e36d5276d0113104b888412dfc0720c4865f032302b54beb56cbe"
+    },
+    {
+      "path": "outputs/analysis_scale10km/jezero_all_ranked.csv",
+      "rows": 2601,
+      "sheet": "地球排序明細",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "2fcc7b9c5fc98a797f286767565c4ae3f5fbe3e2e00e4295c69894f4e1f8b5ce"
+    },
+    {
+      "path": "outputs/mars_profiles/arcadia_dust_my34_series.csv",
+      "rows": 669,
+      "sheet": "火星塵埃序列",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "1613669144ae12c34ce2bd9cf010b92b6a7882289ff11dd0be0e3acf6ea18541"
+    },
+    {
+      "path": "outputs/mars_profiles/arcadia_dust_my35_series.csv",
+      "rows": 669,
+      "sheet": "火星塵埃序列",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "358ee890a1280cec9a87977553f8b3681bdfe5e72f943262829055a97dada6d7"
+    },
+    {
+      "path": "outputs/mars_profiles/gale_dust_my34_series.csv",
+      "rows": 669,
+      "sheet": "火星塵埃序列",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "624f8d90f0003e3fecdbfe98a4c9185f8ba58e2861dc677e0abd9e5606c43373"
+    },
+    {
+      "path": "outputs/mars_profiles/gale_dust_my35_series.csv",
+      "rows": 669,
+      "sheet": "火星塵埃序列",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "0f80b1ae3693d8f1c97a850883f49f06c9770a1bf07ac3742ba7744faa409661"
+    },
+    {
+      "path": "outputs/mars_profiles/jezero_dust_my34_series.csv",
+      "rows": 669,
+      "sheet": "火星塵埃序列",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "45e56101c5368bd8ab03a86085f3845b0d0bed8bdf95879101217a36ee3cb01f"
+    },
+    {
+      "path": "outputs/mars_profiles/jezero_dust_my35_series.csv",
+      "rows": 669,
+      "sheet": "火星塵埃序列",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "a869a422e9e7e57246c83ce2c428cb29fc1a5dc029c73afd7dc092e6ad9519b7"
+    },
+    {
+      "path": "outputs/mars_temperature/provisional_hourly.csv",
+      "rows": 72,
+      "sheet": "漫遊車暫定溫度",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "f8e1b8a5df217d54390b8f380ca5201410fbf67b5fd42d47d99ab56d0b96e243"
+    },
+    {
+      "path": "outputs/research/oytag_literature_points.csv",
+      "rows": 3,
+      "sheet": "Oytag文獻座標",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "626647eda739f25cc0789eb17ca417322a10e5986fcc17a1802f6a47525d98e7"
+    },
+    {
+      "path": "outputs/research/oytag_supplement_coordinates.csv",
+      "rows": 10,
+      "sheet": "Oytag補充座標",
+      "method": "Complete CSV; original columns retained; source_row is physical start line",
+      "sha256": "cf9cb6f52c75d5e23f348bcebe9f71232cfe487c8e834b3ccf36a6084d20d8f6"
+    },
+    {
+      "path": "outputs/matching_handoff/matching_data.json",
+      "rows": 36,
+      "sheet": "地球候選",
+      "method": "Primary 36 enriched + sensitivity 36; detailed source JSON separately archived",
+      "sha256": "490fe7a38d0cbf349a44036b5dbfb0d5176a833a34ba1b05cb8df3d8949ca638"
+    },
+    {
+      "path": "outputs/analysis_scale10km/results.json",
+      "rows": 36,
+      "sheet": "地球候選",
+      "method": "Primary 36 enriched + sensitivity 36; detailed source JSON separately archived",
+      "sha256": "0ae1eb750476c7a575e082aa5d279d7a3e7cbba42765c468797c4115b06fc466"
+    },
+    {
+      "path": "outputs/mars_discovery/mars_site_discovery.json",
+      "rows": 24,
+      "sheet": "火星發現候選",
+      "method": "All picks, original order; join existing review/card status only",
+      "sha256": "3c45d6af3c786394b856e36a726eada5cf00118e7a0cec39b24a88e8f992b7e9"
+    },
+    {
+      "path": "outputs/mars_discovery/reporting_cards.json",
+      "rows": 4,
+      "sheet": "火星發現候選",
+      "method": "Existing four reporting cards joined by stable I/D/F ID",
+      "sha256": "98c5e9589e1c6b2e2ba7a01103cd59af785178a4c8a3ac83770d6a258582c498"
+    },
+    {
+      "path": "outputs/mars_profiles/profiles.json",
+      "rows": 3,
+      "sheet": "火星參照區",
+      "method": "Three known reference-region profiles; flattened scalar summaries",
+      "sha256": "6eb62a026f789eaf4188c0a8308014592a31aefd07f9adf8acfa33f51d31b811"
+    },
+    {
+      "path": "outputs/research/ice_candidate_followup/native_audit.json",
+      "rows": 2,
+      "sheet": "冰候選原生QA",
+      "method": "Two original QA summaries; all interpolation details also archived",
+      "sha256": "5a914b5a5be79ce43b9d20fc5e1a396b7892646047eda56803d9275ff9cedb08"
+    },
+    {
+      "path": "outputs/mars_regional_temperature/context.json",
+      "rows": 864,
+      "sheet": "火星區域溫度背景",
+      "method": "All target/year/Ls bins; missing values preserved",
+      "sha256": "93bb9e9cc732a0fb337d1e38849bccf153613db42037b992b831a98558eed1f6"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+13.000_+37.000_2023_2024.json",
+      "rows": 26,
+      "sheet": "地球POWER氣候",
+      "method": "All 24 monthly + 2 annual periods; no averaging or fill deletion",
+      "sha256": "38078c2ce42d3e54f498806b3af6cec192f44692bfc1d025e393b936696408b0"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+29.000_-105.000_2023_2024.json",
+      "rows": 26,
+      "sheet": "地球POWER氣候",
+      "method": "All 24 monthly + 2 annual periods; no averaging or fill deletion",
+      "sha256": "54a3275a4f6f56d9510a4af5c7b6291b25822234e41992ee9f57003f9376dce2"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+35.000_+57.000_2023_2024.json",
+      "rows": 26,
+      "sheet": "地球POWER氣候",
+      "method": "All 24 monthly + 2 annual periods; no averaging or fill deletion",
+      "sha256": "62db2cd902277f707161efd5a4ea6ecde416a05153075c41669eb4591cb4fe21"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+35.000_+75.000_2023_2024.json",
+      "rows": 26,
+      "sheet": "地球POWER氣候",
+      "method": "All 24 monthly + 2 annual periods; no averaging or fill deletion",
+      "sha256": "7c263619f66d4dea1e9758fb715aeb82b72fd6c82c51a4e8dcd2bee31abf6397"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+39.000_+75.000_2023_2024.json",
+      "rows": 26,
+      "sheet": "地球POWER氣候",
+      "method": "All 24 monthly + 2 annual periods; no averaging or fill deletion",
+      "sha256": "1ee5654cb52f3f88fb9f23eada504ce0d7c5860d030bec9e690dbd4c93bf308c"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+57.000_+161.000_2023_2024.json",
+      "rows": 26,
+      "sheet": "地球POWER氣候",
+      "method": "All 24 monthly + 2 annual periods; no averaging or fill deletion",
+      "sha256": "db7f5bf90b7f36c48c09e99a98707661646196fb64ec75029740e33548fb0165"
+    },
+    {
+      "path": "data/raw/mars/temperature/mcs_corrected/record.json",
+      "rows": 78,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "12d984134bbce03b661343f2e986a9c449b94c20c7f0bbf3e098c556b3e30b69"
+    },
+    {
+      "path": "docs/mars_discovery_search_scope.json",
+      "rows": 102,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "fb6ba0242254ee3a12e583b1e3412363cb560d64895a32dd57e7af405eee97c9"
+    },
+    {
+      "path": "outputs/analysis/candidates.geojson",
+      "rows": 1081,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "c039eb4407c52a38f8bf9ec0c5d27614b2a1d5ffc6b89a893b9f39f19e666f80"
+    },
+    {
+      "path": "outputs/analysis/results.json",
+      "rows": 1125,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "40fe68f299654d5523adfaf076d5fc75c3937138fee4e1977d8f2649e7df8b36"
+    },
+    {
+      "path": "outputs/analysis/results_with_context.json",
+      "rows": 1479,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "b6ed9fd5547e14856abf9a8aeb4e5baaaf7e9783954a48b87d6fc5be136f27b3"
+    },
+    {
+      "path": "outputs/analysis/sensitivity.json",
+      "rows": 78,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "88c1805b0ec01047eaefce4f86c8869951dcf81255267b9f4ccce0cb7d6b77eb"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/aod_manifest.json",
+      "rows": 127,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "1eb156cacb8027a3aa59530a84b3ab3fec153e0b7f1a86ea79f354a057e13c2b"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/lst_manifest.json",
+      "rows": 127,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "1021ee0e459eb3ada7649a3d6ecb199be5e68878acbd927ba557ba313d154652"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/ndvi_manifest.json",
+      "rows": 127,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "777a5eb8e8c608275bc6d0ceb693129b9e38b0cd76cfc997e1aa2c2e49a0c1e5"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+13.000_+37.000_2023_2024.json",
+      "rows": 157,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "38078c2ce42d3e54f498806b3af6cec192f44692bfc1d025e393b936696408b0"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+29.000_-105.000_2023_2024.json",
+      "rows": 157,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "54a3275a4f6f56d9510a4af5c7b6291b25822234e41992ee9f57003f9376dce2"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+35.000_+57.000_2023_2024.json",
+      "rows": 157,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "62db2cd902277f707161efd5a4ea6ecde416a05153075c41669eb4591cb4fe21"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+35.000_+75.000_2023_2024.json",
+      "rows": 157,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "7c263619f66d4dea1e9758fb715aeb82b72fd6c82c51a4e8dcd2bee31abf6397"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+39.000_+75.000_2023_2024.json",
+      "rows": 157,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "1ee5654cb52f3f88fb9f23eada504ce0d7c5860d030bec9e690dbd4c93bf308c"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/power_+57.000_+161.000_2023_2024.json",
+      "rows": 157,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "db7f5bf90b7f36c48c09e99a98707661646196fb64ec75029740e33548fb0165"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/precipitation_manifest.json",
+      "rows": 127,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "6f1d9d5296b96945f685ba200317bcf1f4e0b4475835db3d1ef1eccd0c301f83"
+    },
+    {
+      "path": "outputs/analysis/source_metadata/public_sources.json",
+      "rows": 25,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "c4770b1cfda98e820da1ab6061d9dd00a726272f533d403e862fcc8462ac8140"
+    },
+    {
+      "path": "outputs/analysis_scale10km/candidates.geojson",
+      "rows": 1081,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "643e186cca3d53b8fcc03b9c2a72edeb4695f74e80dd67a299abe55488307066"
+    },
+    {
+      "path": "outputs/analysis_scale10km/results.json",
+      "rows": 1125,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "0ae1eb750476c7a575e082aa5d279d7a3e7cbba42765c468797c4115b06fc466"
+    },
+    {
+      "path": "outputs/mars_discovery/mars_site_discovery.json",
+      "rows": 421,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "3c45d6af3c786394b856e36a726eada5cf00118e7a0cec39b24a88e8f992b7e9"
+    },
+    {
+      "path": "outputs/mars_discovery/reporting_cards.json",
+      "rows": 94,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "98c5e9589e1c6b2e2ba7a01103cd59af785178a4c8a3ac83770d6a258582c498"
+    },
+    {
+      "path": "outputs/mars_profiles/profiles.json",
+      "rows": 716,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "6eb62a026f789eaf4188c0a8308014592a31aefd07f9adf8acfa33f51d31b811"
+    },
+    {
+      "path": "outputs/mars_regional_temperature/context.json",
+      "rows": 4433,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "93bb9e9cc732a0fb337d1e38849bccf153613db42037b992b831a98558eed1f6"
+    },
+    {
+      "path": "outputs/mars_temperature/summary.json",
+      "rows": 176,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "f6b7d441e616f564171fa47b351e45622634d5ded5f980d2dd4392deea2a29a9"
+    },
+    {
+      "path": "outputs/matching_handoff/matching_data.json",
+      "rows": 6804,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "490fe7a38d0cbf349a44036b5dbfb0d5176a833a34ba1b05cb8df3d8949ca638"
+    },
+    {
+      "path": "outputs/research/ice_candidate_followup/native_audit.json",
+      "rows": 410,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "5a914b5a5be79ce43b9d20fc5e1a396b7892646047eda56803d9275ff9cedb08"
+    },
+    {
+      "path": "outputs/research/ice_candidate_followup/search_scope.json",
+      "rows": 51,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "154bf79da35826472bc78ff007f28f0f92f79dd35b44caf6cd62a497c87d4906"
+    },
+    {
+      "path": "outputs/research/oytag_outcrop_source_audit.json",
+      "rows": 58,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "314a8d1b634512a01ed99640f57d9bc9868c40475e98f748e2da2d877d1f092c"
+    },
+    {
+      "path": "outputs/research/oytag_overlap.json",
+      "rows": 65,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "81f4a4ba55f2af645521f0340b4d58aea48f846a88491aefba6866830e4af3e0"
+    },
+    {
+      "path": "outputs/research/oytag_supplement_access_log.json",
+      "rows": 93,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "e77bb0d42b87bf39adb8e2c88798bbd3e7645b4d9aef656a905d5b9684140e04"
+    },
+    {
+      "path": "outputs/research/oytag_supplement_metadata.json",
+      "rows": 17,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "427d01fa40660bf2d1e837ddde9b740206694a971a9d45c34f9c63d733e05249"
+    },
+    {
+      "path": "outputs/research/oytag_transect_check.json",
+      "rows": 115,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "5c68fd0cc37711b63997aa02f53df89ecbfc477d6470ab7f143614fca68ce2f9"
+    },
+    {
+      "path": "outputs/research/reference_terrain_check.json",
+      "rows": 71,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "6fbbd41d2c3b65779dce5261e74933d0c5667d4152014ffd552369386006bc7d"
+    },
+    {
+      "path": "outputs/research/submission_audit_snapshot_2026-11-14.json",
+      "rows": 30,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "907b5e962bf9af492ccec921b0e881a8a79e0405b0bcfd0034cb86d9409a26f5"
+    },
+    {
+      "path": "outputs/research/three_candidate_evidence.json",
+      "rows": 640,
+      "sheet": "JSON原值",
+      "method": "Every scalar/null/empty-container leaf; RFC6901 pointer; long strings split",
+      "sha256": "d57250d192168cff09d929d4a84146948eca77a7cd40bd25c9033be38b4c7b35"
+    },
+    {
+      "path": "AI_STATUS.md",
+      "rows": 4,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "bec35341c1f3623bb782926b7f8aa2aa526d2c487fc044523fd2750f8efb9c95"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "rows": 19,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "2083fb3ae6f79d853ca76bd303c0778f95c7060652e245077e8f9fccf1167496"
+    },
+    {
+      "path": "NASA_SpaceApps_2026_Earth_Data/cross_reference.md",
+      "rows": 22,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "846dd30681c800ae354ecb75b30650873bdfa3ffa75020eba0d7d18fcea80e69"
+    },
+    {
+      "path": "NASA_SpaceApps_2026_Earth_Data/earth_data_plan.md",
+      "rows": 31,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "3245402c17db7c571df818e805b6fea88fe6ea030c57bef7d09af8c63847a4c5"
+    },
+    {
+      "path": "NASA_SpaceApps_2026_Earth_Data/mars_limits.md",
+      "rows": 21,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "763e6fc053658dd3c0a3abd8c344dd08b2b7e1d216c108af4b75e184c1d9e296"
+    },
+    {
+      "path": "README.md",
+      "rows": 48,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "1300e58cc1cab16970bfb14a60beeda1ccb64342eeda43552e379163646e6b08"
+    },
+    {
+      "path": "data/README.md",
+      "rows": 3,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "3decc63b3dd8d51f4eccd934824c80073a74b4fd08b468f5a0a875ebf3898536"
+    },
+    {
+      "path": "data/raw/mars/temperature/mcs_corrected/README.md",
+      "rows": 4,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "93db54d4caad7a258719485a7c71aaa522fd14e58c6b44ab6981fdd619c15533"
+    },
+    {
+      "path": "docs/README.md",
+      "rows": 5,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "d526d040a471cde4422ab1412104409482a2a90da55e6ad9ae42b4738a30076b"
+    },
+    {
+      "path": "docs/archive/README_before_cleanup_2026-11-14.md",
+      "rows": 45,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "991a0d438067221467538b893328c8a9f7daa59f60e13354c0730fdb9c0bd60f"
+    },
+    {
+      "path": "docs/cleanup_2026-11-14.md",
+      "rows": 5,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "0a73c3f656eb0e2fee5f40652fb8ec1c2c0173a4d1d6b3bcc537a118358a80cf"
+    },
+    {
+      "path": "docs/coordination/GPT_STATUS_PENDING.md",
+      "rows": 1,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "c73d3e89ed94398886a798b73a5f5b456556ca689fac980fbea0036ee7085841"
+    },
+    {
+      "path": "docs/cross_reference.md",
+      "rows": 22,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "8d634515708f78666ae60f6ad4e1c3994c8b5c1e4740e479c436d90453b23662"
+    },
+    {
+      "path": "docs/data_handoff.md",
+      "rows": 13,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "a21427af810300f7dc9ff0ad01fff9d638a6b182b5748f0b0322aaeb4789957e"
+    },
+    {
+      "path": "docs/deployment_check_2026-11-14.md",
+      "rows": 23,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "c5af16494b73e0ef4d5f1533f1798c546b530cb71b26e8cac2f1430d2892b2de"
+    },
+    {
+      "path": "docs/earth_data_plan.md",
+      "rows": 31,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "a7c7045afd4c181ca437f8a3a8b828377cbce1c0d983dbd071ad0094cc40299f"
+    },
+    {
+      "path": "docs/earth_pipeline.md",
+      "rows": 30,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "7f51df60dbcfc751fe2fc4ae03ce4c74d5e07aeb2495b9c63aeab22c7bbcb5eb"
+    },
+    {
+      "path": "docs/literature_review.md",
+      "rows": 16,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "c0585dfa5859ed4edbeb468074ebb0f99b484068497ff99c103e20da28840bca"
+    },
+    {
+      "path": "docs/mars_discovery_handoff.md",
+      "rows": 48,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "4f5f6b553e341a14dca557dadbdf3d857c7e78c76444e5649f00ab3609721fb9"
+    },
+    {
+      "path": "docs/mars_limits.md",
+      "rows": 21,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "763e6fc053658dd3c0a3abd8c344dd08b2b7e1d216c108af4b75e184c1d9e296"
+    },
+    {
+      "path": "docs/mars_pipeline.md",
+      "rows": 25,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "8adb3d513f62975b7a7c65f1adbcbb512035948b8d0dc516acce5336da2691e3"
+    },
+    {
+      "path": "docs/mars_temperature.md",
+      "rows": 25,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "5cc0a64fe00fcc95d79b33ea80cd68dd4a7f9bb6ea444458d87341eea0110ddf"
+    },
+    {
+      "path": "docs/presentation_outline.md",
+      "rows": 6,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "675986f2329d81dff426f0fad61ebd8524f40880ad892b2f61c15a6b8494e0ac"
+    },
+    {
+      "path": "docs/research/README.md",
+      "rows": 5,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "106a78593115e118a50dc3c75bcdb46d4527c903bce5afaa02037a01db3815db"
+    },
+    {
+      "path": "docs/research/ice_candidate_followup/README.md",
+      "rows": 31,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "dd0556061d4fb2a89b1f0bef89112ff597142016326071ac2305a55fc3cd3689"
+    },
+    {
+      "path": "docs/research_report_three_analogs_2026-11-14.md",
+      "rows": 117,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "b280dd229dab6efcca3ca5bc4658ca14ce6b4f2ac2fb7d5f73649e312afe2cb7"
+    },
+    {
+      "path": "docs/research_scope.md",
+      "rows": 28,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "3572af460fc05797a3405664f9e109aae90489a78921b4fff841f61c5ee28fa1"
+    },
+    {
+      "path": "docs/site_discovery_brief.md",
+      "rows": 9,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "0aaf9bef15278b7a41431b2e5f3fcab1ac5c35d99fffdcac0131bc3de5ec4318"
+    },
+    {
+      "path": "docs/submission/disclosures_and_rights.md",
+      "rows": 17,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "48c74c3776605286b0068b5eda968a23cc4db0aab0fe515692f533b9755f7328"
+    },
+    {
+      "path": "docs/submission/official_rules_digest.md",
+      "rows": 36,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "a339cf96aca530d10c69576c464beb42ab9f936a92edc1530eb14c020f1aa5ad"
+    },
+    {
+      "path": "docs/submission/preparation.md",
+      "rows": 28,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "9ed22e367aeb1c9c051e3aafede3349bba387a975656a7d2b10b072da6398199"
+    },
+    {
+      "path": "docs/submission/remaining_checklist.md",
+      "rows": 9,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "1943f254b86e1e07b295cb32451e6d705181351b1a067fa608b4e37ba1340ca7"
+    },
+    {
+      "path": "docs/submission/slides_en.md",
+      "rows": 30,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "9d4c6b90af083c97c83bd26eb4395200b34ee393fc4de5197b849d8ea6913509"
+    },
+    {
+      "path": "docs/submission_readiness_2026-11-14.md",
+      "rows": 53,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "fbb127833b08ec1e7f49124e3ad11bd71d05b67cad14fbb49c8ffbdd75ef0e6c"
+    },
+    {
+      "path": "docs/work_log.md",
+      "rows": 102,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "612454d0e5b3683befc5006caf1a6ba0f2db29d41cbca2fac813d75ce9cadc20"
+    },
+    {
+      "path": "docs/work_report_2026-11-14.md",
+      "rows": 35,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "bb1c569f6ea7f0466450205edfcfcef85438cddd2aa77393d0483c7fd39ab6f3"
+    },
+    {
+      "path": "outputs/README.md",
+      "rows": 3,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "88db8dcb69b3251bd47172ef14a3bdb6cdb6f6b70f0a11925b836e3b64d2d20e"
+    },
+    {
+      "path": "outputs/analysis/candidate_handoff.md",
+      "rows": 9,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "1d7d52583bb4754001120b80f18aeecaa88fefac934a917fb7579722a6d3ec16"
+    },
+    {
+      "path": "outputs/mars_discovery/README.md",
+      "rows": 12,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "2b1b20fd06fdc35741d0dc0f05fe582b8a07b69bab56016151f5c1305a0a160f"
+    },
+    {
+      "path": "outputs/mars_profiles/LICENSE-data.md",
+      "rows": 4,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "74b8dc5bb4605f76aaee013f3ba588a80ca795bddd59d357dcc15108aef0b70f"
+    },
+    {
+      "path": "outputs/mars_profiles/handoff.md",
+      "rows": 10,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "f3e9c3034024068911889564b72c4324a8ab743a752149076278a0621e119ae6"
+    },
+    {
+      "path": "outputs/mars_regional_temperature/README.md",
+      "rows": 25,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "030b66f0033fab48b441842b41b2e294aff9f6a3c1ba5371afb3d4e076eec91e"
+    },
+    {
+      "path": "outputs/matching_handoff/README.md",
+      "rows": 36,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "7b13e1dff73d1a82f05b315e4d6b1171eac89dd2bddf6c1f80e8e78de06b58e0"
+    },
+    {
+      "path": "scripts/reporting/README.md",
+      "rows": 4,
+      "sheet": "報告內容",
+      "method": "All Markdown paragraphs with physical source lines; long text split; website/dependencies excluded",
+      "sha256": "725b694ead4fc15bc79572f0a235807848f651611b0cc3cbe117641dabd295ad"
+    }
+  ],
+  "counts": {
+    "火星發現候選": 24,
+    "冰候選原生QA": 2,
+    "地球候選": 72,
+    "火星新穎性查核": 15,
+    "火星參照區": 3,
+    "地球視窗全量": 5212,
+    "地球排序明細": 15636,
+    "地球POWER氣候": 156,
+    "火星塵埃序列": 4014,
+    "火星區域溫度背景": 864,
+    "漫遊車暫定溫度": 72,
+    "研究需求": 5,
+    "報告主張": 8,
+    "提交缺口": 53,
+    "Oytag文獻座標": 3,
+    "Oytag補充座標": 10,
+    "地球候選CSV": 36,
+    "既有檔案清單": 345,
+    "MEDA原始紀錄": 159418,
+    "JSON原值": 21818,
+    "報告內容": 1071,
+    "tables": 21,
+    "rows_all_tables": 208837,
+    "source_files": 106,
+    "coverage_entries": 119,
+    "raw_rows": 159418
+  }
+}

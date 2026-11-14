@@ -1,0 +1,21 @@
+{
+  "version": "MR-20261114-v2",
+  "ids": 27,
+  "columns": 34,
+  "source_hashes_checked": 13,
+  "v1_questions_priorities_preserved": true,
+  "undefined_thresholds_empty": true,
+  "dependency_cycles": 0,
+  "GPU08_target": "I-02/EARTH-002",
+  "execution_counts": {
+    "this_round_required": 8,
+    "reuse_existing": 10,
+    "future_experiment": 5,
+    "after_main_analysis": 3,
+    "unavailable_limit": 1
+  },
+  "Team2_records": 8922,
+  "LT_truth": null,
+  "Excel_updated": false,
+  "Excel_sha256": "a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731"
+}

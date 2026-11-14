@@ -1,0 +1,27 @@
+{
+  "version": "MR-20261114-v1",
+  "updated_taipei": "2026-11-14T18:19:28.923023+08:00",
+  "remote_main_base": "cf72039a4bdfb94666c8df176de41eefd55f30ee",
+  "local_main_synced": false,
+  "planned_branch": "codex/mars-research-mainline-20261114",
+  "commit": "9e5c49ea7b4d7272972e7d409e6a298e6ef3da4a",
+  "integrated_into_main": false,
+  "excel_modified": false,
+  "direct_thread_dispatch": {
+    "status": "not_sent",
+    "reason": "Codex list_threads returned app tool request failed; target thread IDs unavailable",
+    "ready_to_forward_sections": "docs/research/main_project_synthesis.md#三方可直接使用的交接需求"
+  },
+  "research_status": "proposal_only_incomplete",
+  "requirements_count": 27,
+  "git_record_semantics": "Commit field is populated locally after remote creation; authoritative published revision is the GitHub branch head.",
+  "content_commit_before_latest_handoff": "15309549ed6142a79137f6ff846d4b232abe4586",
+  "latest_team1_state": "UV retained as known-use reference; EARTH-002 received for I02, Team2/GPU pending",
+  "phase": "Archived-data QA and descriptive study; controlled blind experiments remain proposals",
+  "branch": "codex/mars-research-mainline-20261114",
+  "pull_request": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/3",
+  "draft": true,
+  "published_files_verified": 6,
+  "review_base_main": "cf72039a4bdfb94666c8df176de41eefd55f30ee",
+  "published_delivery_record": "Pre-commit snapshot; this local record adds the resulting commit and PR after publication."
+}

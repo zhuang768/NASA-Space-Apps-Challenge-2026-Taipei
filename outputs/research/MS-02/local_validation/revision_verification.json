@@ -1,8 +1,8 @@
 {
   "check_date": "2026-11-15",
   "all_passed": true,
-  "checks_count": 231,
-  "hashed_files_verified": 211,
+  "checks_count": 232,
+  "hashed_files_verified": 212,
   "checks": [
     {
       "check": "fixed ROI and archived thermal pixel",
@@ -138,6 +138,10 @@
     },
     {
       "check": "hash outputs/research/MS-02/local_validation/crism_roi.npz",
+      "passed": true
+    },
+    {
+      "check": "hash outputs/research/MS-02/local_validation/ctx_product_metadata.csv",
       "passed": true
     },
     {

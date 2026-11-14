@@ -4,7 +4,7 @@
   "date_local": "2026-11-15",
   "timezone": "Asia/Taipei",
   "start_head": "c309675fbe713a8548a75abf29b54e64217768f9",
-  "preserved_remote_head": "ef5eb162b1df0919b8d6dd780782896188607b2c",
+  "preserved_remote_head": "79a36344fc4f815f4fcca6d0ddb446efe6ba4080",
   "user_known_old_head": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
   "branch": "research/ms-02-earth-analogs",
   "base": "handoff/verified-data-20261114",
@@ -118,7 +118,7 @@
     {
       "path": "outputs/research/MS-02/local_validation/build_revision_manifest.py",
       "bytes": 2739,
-      "sha256": "6601517fe3004414fb0a9d27cf7c1cdbb4b9fd7668355acff0e76382d76b48a0",
+      "sha256": "aad0ceff16c78f8564494d221b24a994a7f739d510ba6a31a11a63d6241d49f6",
       "storage": "git_deliverable",
       "role": "derived_or_method"
     },
@@ -161,6 +161,13 @@
       "path": "outputs/research/MS-02/local_validation/crism_roi.npz",
       "bytes": 171051,
       "sha256": "5623622ad64840dc4cac3877048549c50adb93d18c70025bc3f1f1841c0c1d27",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/ctx_product_metadata.csv",
+      "bytes": 1189,
+      "sha256": "b44713d5cfe73392997c7e5007f0fdfe7bfd0a42279f6cb0470660829380b90a",
       "storage": "git_deliverable",
       "role": "derived_or_method"
     },
@@ -1490,7 +1497,7 @@
     {
       "path": "outputs/research/MS-02/local_validation/verify_revision.py",
       "bytes": 4038,
-      "sha256": "07c0963b173d7bb0fdcbd0c6f694821a3e3bed9cab26e59abcd3cc1d9b29369f",
+      "sha256": "3c4c4ed2e6dc6b02198eaaa8ea1ff5aec0875bf916d0d6375095e712b855006d",
       "storage": "git_deliverable",
       "role": "derived_or_method"
     },
@@ -1524,8 +1531,8 @@
     },
     {
       "path": "docs/research/MS-02/local_validation/research_notes.md",
-      "bytes": 16089,
-      "sha256": "b43058bf1e03bf09ee8fc9a9d31d296ecdef69d299e0f518532d6de5aff93782",
+      "bytes": 16363,
+      "sha256": "14b89b13b3bf23432d984db02345296a3e424edbc216437257a2f86b7e02fcbd",
       "storage": "git_deliverable",
       "role": "derived_or_method"
     }

@@ -131,3 +131,5 @@
 - 該清單CRISM383筆含TRDR/MRDR4/DDR/VRDR等不同產品，不是383次獨立光譜觀測；其TRDR180與本輪REST177筆差異尚未調和，不能相加。
 - 該清單SHSIMU=0已被本輪取得的3個SHSIMU產品與對應browse反證；原清單保留並新增修正欄，不再引用「無clutter產品」。
 - 新清單另提示THEMIS等產品；本輪未逐一取得，並未將未下載誤記為無觀測。
+
+- 最後保留遠端 `79a36344fc4f815f4fcca6d0ddb446efe6ba4080` 的 `ctx_product_metadata.csv`（D01瀏覽器metadata）；本輪另有全部5景REST足跡與browse。合併保留雙方提交，沒有強推；原「足跡未核實」僅適用該遠端先前閱讀狀態。

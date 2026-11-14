@@ -34,7 +34,7 @@ def main():
    check('only local-only files may be absent',f['storage']=='local_only');continue
   check('hash '+f['path'],hashlib.sha256(p.read_bytes()).hexdigest()==f['sha256']);verified+=1
  # Compare against latest preserved remote snapshot, not base containing others' work.
- paths=subprocess.check_output(['git','diff','--name-only','ef5eb162b1df0919b8d6dd780782896188607b2c'],cwd=R,text=True).splitlines()
+ paths=subprocess.check_output(['git','diff','--name-only','79a36344fc4f815f4fcca6d0ddb446efe6ba4080'],cwd=R,text=True).splitlines()
  paths+=subprocess.check_output(['git','ls-files','--others','--exclude-standard'],cwd=R,text=True).splitlines()
  prefixes=('docs/research/MS-02/local_validation/','outputs/research/MS-02/local_validation/')
  check('all modified/untracked deliverables within allowed directories',all(x.startswith(prefixes) for x in paths))

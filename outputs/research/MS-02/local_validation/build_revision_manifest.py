@@ -9,7 +9,7 @@ for root in [P,R/'docs/research/MS-02/local_validation']:
   rel=str(f.relative_to(R));ignored=subprocess.run(['git','check-ignore','-q',rel],cwd=R).returncode==0
   rows.append(dict(path=rel,bytes=f.stat().st_size,sha256=hashlib.sha256(f.read_bytes()).hexdigest(),storage='local_only' if ignored else 'git_deliverable',role='downloaded_source' if 'sources' in f.parts else 'derived_or_method'))
 manifest=dict(schema_version=2,task='MS-02 fixed-ROI local validation; evidence only',date_local='2026-11-15',timezone='Asia/Taipei',
- start_head='c309675fbe713a8548a75abf29b54e64217768f9',preserved_remote_head='ef5eb162b1df0919b8d6dd780782896188607b2c',user_known_old_head='38b8fa0dea527b1cc47aeb02dc260e039da37122',
+ start_head='c309675fbe713a8548a75abf29b54e64217768f9',preserved_remote_head='79a36344fc4f815f4fcca6d0ddb446efe6ba4080',user_known_old_head='38b8fa0dea527b1cc47aeb02dc260e039da37122',
  branch='research/ms-02-earth-analogs',base='handoff/verified-data-20261114',base_sha='f7076c9fdc77e00244ed5d6863aad2bf78cfa28f',pr=6,
  fixed_roi=dict(south=52.5,north=53,west_east_positive=168,east_east_positive=168.5,coordinate_system='planetocentric; Mars sphere3396190m'),
  audit_reads={'PR9':'c206553fc681328d214cbbcd508d3c5b1391e200','PR10':'0260c511d9fce6be12d3460a69e474f333160cbf'},

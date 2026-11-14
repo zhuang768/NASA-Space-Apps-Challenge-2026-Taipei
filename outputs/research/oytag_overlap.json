@@ -1,9 +1,12 @@
 {
+  "schema_version": "1.0",
+  "generated_utc": "2026-11-14T05:16:49+00:00",
   "candidate_id": "gale-01",
   "center": {
-    "lat": 39,
-    "lon": 75
+    "lat": 39.0,
+    "lon": 75.0
   },
+  "local_axes": "east_km/north_km from the window centre (azimuthal equidistant)",
   "sphere_radius_m": 6371008.8,
   "window_km": 100,
   "method": "spherical azimuthal equidistant coordinates and independent stored-polygon containment",
@@ -22,8 +25,8 @@
   "samples": [
     {
       "sample_id": "PMR-03",
-      "latitude_deg": "38.9663",
-      "longitude_deg": "75.4494",
+      "latitude_deg": 38.9663,
+      "longitude_deg": 75.4494,
       "reported_rock_type": "mudstone",
       "source_doi": "10.1016/j.jseaes.2011.04.020",
       "source_locator": "Table 1 p143",
@@ -36,8 +39,8 @@
     },
     {
       "sample_id": "PMR-27",
-      "latitude_deg": "38.9521",
-      "longitude_deg": "75.5061",
+      "latitude_deg": 38.9521,
+      "longitude_deg": 75.5061,
       "reported_rock_type": "limestone",
       "source_doi": "10.1016/j.jseaes.2011.04.020",
       "source_locator": "Table 1 p143",
@@ -50,8 +53,8 @@
     },
     {
       "sample_id": "PMR-38",
-      "latitude_deg": "38.9861",
-      "longitude_deg": "75.5037",
+      "latitude_deg": 38.9861,
+      "longitude_deg": 75.5037,
       "reported_rock_type": "sandstone",
       "source_doi": "10.1016/j.jseaes.2011.04.020",
       "source_locator": "Table 1 p143",
@@ -61,6 +64,30 @@
       "inside_local_100km_square": true,
       "inside_stored_polygon": true,
       "nearest_square_boundary_km": 6.464533235481852
+    }
+  ],
+  "claims": [
+    {
+      "id": "samples_inside_window",
+      "statement": "All 3 published sample coordinates fall inside the 100x100 km window",
+      "level": "VERIFIED",
+      "note": "Recomputed here; table datum unstated, so approximate overlap only"
+    },
+    {
+      "id": "reported_lithology",
+      "statement": "Samples are mudstone, limestone and sandstone",
+      "level": "EXTERNAL",
+      "note": "Rock types as reported by the publication; not re-measured",
+      "source": "doi:10.1016/j.jseaes.2011.04.020 Table 1"
+    }
+  ],
+  "related_point_sets": [
+    {
+      "path": "outputs/research/oytag_supplement_coordinates.csv",
+      "sha256": "cf9cb6f52c75d5e23f348bcebe9f71232cfe487c8e834b3ccf36a6084d20d8f6",
+      "id_field": "parent_sample_id",
+      "role": "Table DR1 zircon U-Pb parent-rock coordinates; not lithology samples",
+      "shared_sample_ids": []
     }
   ]
 }

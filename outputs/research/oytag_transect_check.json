@@ -1,9 +1,16 @@
 {
+  "schema_version": "1.0",
+  "generated_utc": "2026-11-14T05:16:50+00:00",
+  "candidate_id": "gale-01",
   "source_doi": "10.1016/j.tecto.2012.11.031",
   "source_figures": "Fig.2 p28 and Fig.3 p29",
   "source_url": "https://www.igg.cas.cn/zhuantilanmu/solid_earth/solid_earth_research/201307/W020130705569854459276.pdf",
   "source_pdf_sha256": "a9a5fb373a03a15e3ff1c3556f65a587643769f117ea693ed3b9204c361e4d90",
-  "source_transport_note": "Official institute public PDF retrieved with certificate validation disabled after local SSL error; verify DOI and hash independently",
+  "source_transport": {
+    "tls_certificate_validation": false,
+    "independent_hash_check": "pending",
+    "note": "Official institute public PDF retrieved with certificate validation disabled after local SSL error; verify DOI and hash independently"
+  },
   "candidate_input_sha256": "b6ed9fd5547e14856abf9a8aeb4e5baaaf7e9783954a48b87d6fc5be136f27b3",
   "render_command": "pdftoppm -f 2 -l 2 -r 200 -x 100 -y 1100 -W 730 -H 1000 -png -singlefile INPUT.pdf OUTPUT",
   "pixel_origin": "top-left of rendered crop",
@@ -73,12 +80,45 @@
   ],
   "sensitivity": "Endpoint coordinates varied by +/-8 pixels independently; arbitrary diagnostic envelope, not confidence or true georeferencing accuracy",
   "all_8_endpoint_offset_scenarios_inside": true,
-  "classification": "INFERRED: approximate mapped transect inside candidate; gypsum layer assigned to this transect by paper Fig.3",
-  "not_established": [
-    "exact gypsum GPS",
-    "same-outcrop XRD",
-    "gypsum/clay/iron oxide co-occurrence",
-    "georeferenced geology polygons"
+  "claims": [
+    {
+      "id": "transect_inside_window",
+      "statement": "Mapped A-B transect lies inside the candidate window",
+      "level": "INFERRED",
+      "note": "Approximate digitization of a published figure; not survey GPS",
+      "source": "doi:10.1016/j.tecto.2012.11.031 Fig.2"
+    },
+    {
+      "id": "gypsum_on_transect",
+      "statement": "A gypsum-bearing layer occurs along this transect",
+      "level": "EXTERNAL",
+      "note": "Section-level assignment by the paper; no sample-level location",
+      "source": "doi:10.1016/j.tecto.2012.11.031 Fig.3"
+    },
+    {
+      "id": "gypsum_gps",
+      "statement": "Exact gypsum outcrop coordinates",
+      "level": "UNVERIFIED",
+      "note": "Not located in any retrieved source"
+    },
+    {
+      "id": "same_outcrop_xrd",
+      "statement": "XRD of the same gypsum outcrop",
+      "level": "UNVERIFIED",
+      "note": "No sample-ID/location/mineral chain located"
+    },
+    {
+      "id": "gypsum_clay_iron_oxide_cooccurrence",
+      "statement": "Gypsum, clay (smectite) and iron oxide co-occur at one outcrop",
+      "level": "UNVERIFIED",
+      "note": "Required for a Gale mineral-assemblage analog claim; not established"
+    },
+    {
+      "id": "geology_polygons",
+      "statement": "Georeferenced geology polygons",
+      "level": "UNVERIFIED",
+      "note": "None available"
+    }
   ],
   "endpoints": [
     {

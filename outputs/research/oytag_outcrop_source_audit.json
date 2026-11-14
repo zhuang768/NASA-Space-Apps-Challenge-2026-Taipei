@@ -1,4 +1,5 @@
 {
+  "schema_version": "1.0",
   "review_date_taipei": "2026-11-14",
   "sources": [
     {
@@ -59,8 +60,14 @@
       "scope": "Oytag moraine sample 9412-1 is not the mapped Paleogene gypsum bed"
     }
   ],
-  "gypsum_position_status": "INFERRED from mapped transect, not measured GPS",
-  "same_outcrop_mineralogy_status": "UNVERIFIED; no sample-ID/location/mineral-analysis chain located",
+  "gypsum_position_status": {
+    "level": "INFERRED",
+    "note": "from mapped transect, not measured GPS"
+  },
+  "same_outcrop_mineralogy_status": {
+    "level": "UNVERIFIED",
+    "note": "no sample-ID/location/mineral-analysis chain located"
+  },
   "unretrieved": [
     "Bershaw2012 FigDR1 supplement"
   ],

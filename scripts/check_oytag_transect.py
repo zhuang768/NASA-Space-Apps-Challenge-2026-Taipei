@@ -11,6 +11,7 @@ from shapely.geometry import Point, Polygon
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
+from analog import evidence_status as es
 from analog.provenance import write_json
 from analog.screening import EARTH_RADIUS_M
 
@@ -81,11 +82,18 @@ def main():
     write_json(
         root / "outputs/research/oytag_transect_check.json",
         {
+            "schema_version": es.SCHEMA_VERSION,
+            "generated_utc": es.generated_utc(),
+            "candidate_id": candidate["candidate_id"],
             "source_doi": "10.1016/j.tecto.2012.11.031",
             "source_figures": "Fig.2 p28 and Fig.3 p29",
             "source_url": "https://www.igg.cas.cn/zhuantilanmu/solid_earth/solid_earth_research/201307/W020130705569854459276.pdf",
             "source_pdf_sha256": "a9a5fb373a03a15e3ff1c3556f65a587643769f117ea693ed3b9204c361e4d90",
-            "source_transport_note": "Official institute public PDF retrieved with certificate validation disabled after local SSL error; verify DOI and hash independently",
+            "source_transport": {
+                "tls_certificate_validation": False,
+                "independent_hash_check": "pending",
+                "note": "Official institute public PDF retrieved with certificate validation disabled after local SSL error; verify DOI and hash independently",
+            },
             "candidate_input_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
             "render_command": "pdftoppm -f 2 -l 2 -r 200 -x 100 -y 1100 -W 730 -H 1000 -png -singlefile INPUT.pdf OUTPUT",
             "pixel_origin": "top-left of rendered crop",
@@ -95,12 +103,45 @@ def main():
             "control_fit_residual_deg": (matrix @ coefficients - gcp[:, 2:]).tolist(),
             "sensitivity": "Endpoint coordinates varied by +/-8 pixels independently; arbitrary diagnostic envelope, not confidence or true georeferencing accuracy",
             "all_8_endpoint_offset_scenarios_inside": all(stress_inside),
-            "classification": "INFERRED: approximate mapped transect inside candidate; gypsum layer assigned to this transect by paper Fig.3",
-            "not_established": [
-                "exact gypsum GPS",
-                "same-outcrop XRD",
-                "gypsum/clay/iron oxide co-occurrence",
-                "georeferenced geology polygons",
+            "claims": [
+                es.claim(
+                    "transect_inside_window",
+                    "Mapped A-B transect lies inside the candidate window",
+                    es.INFERRED,
+                    "Approximate digitization of a published figure; not survey GPS",
+                    source="doi:10.1016/j.tecto.2012.11.031 Fig.2",
+                ),
+                es.claim(
+                    "gypsum_on_transect",
+                    "A gypsum-bearing layer occurs along this transect",
+                    es.EXTERNAL,
+                    "Section-level assignment by the paper; no sample-level location",
+                    source="doi:10.1016/j.tecto.2012.11.031 Fig.3",
+                ),
+                es.claim(
+                    "gypsum_gps",
+                    "Exact gypsum outcrop coordinates",
+                    es.UNVERIFIED,
+                    "Not located in any retrieved source",
+                ),
+                es.claim(
+                    "same_outcrop_xrd",
+                    "XRD of the same gypsum outcrop",
+                    es.UNVERIFIED,
+                    "No sample-ID/location/mineral chain located",
+                ),
+                es.claim(
+                    "gypsum_clay_iron_oxide_cooccurrence",
+                    "Gypsum, clay (smectite) and iron oxide co-occur at one outcrop",
+                    es.UNVERIFIED,
+                    "Required for a Gale mineral-assemblage analog claim; not established",
+                ),
+                es.claim(
+                    "geology_polygons",
+                    "Georeferenced geology polygons",
+                    es.UNVERIFIED,
+                    "None available",
+                ),
             ],
             "endpoints": rows,
         },

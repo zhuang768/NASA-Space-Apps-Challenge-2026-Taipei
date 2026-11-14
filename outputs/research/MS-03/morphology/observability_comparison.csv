@@ -4,5 +4,5 @@ Equivalent-circle diameter,m,18.485 median;8.054–50.828 range,unknown,AD1 diam
 Planar area,m2,268.361 median,unknown,No reliable Mars boundary measurements
 Circularity4piA/P2,dimensionless,0.8066 median,unknown,Resolution-sensitive;not comparable from current Mars images
 Minimum rotated rectangle aspect L/W,dimensionless,1.2768 median,unknown,Definition differs from paper largest/smallest polygon diameters
-Available sampling,m/pixel,Existing HRSC-AX2009-derived vectors;source raster GSD not verified this round,CTX6.08–6.11 nominal;older browse60.9 approx;V17 full-size JPEG block artifacts;HiRISE RDR no catalogue match,Vector coordinate decimals do not imply raster accuracy
+Available sampling,m/pixel,Source vectors;paper section3.2 reports0.20m orthoimages;source raster QA not performed,CTX6.08–6.11 nominal;older browse60.9 approx;V17 full-size JPEG block artifacts;HiRISE RDR no catalogue match,Vector coordinate decimals do not imply raster accuracy
 Cause/ground ice,status,Known ice-wedge reference per source,unknown,"Morphology alone cannot establish contraction mechanism,ice wedges or ice depth"

@@ -380,5 +380,21 @@
       "mechanism or ice validation",
       "clock alignment"
     ]
+  },
+  "AD1_handoff_evidence_supplement": {
+    "date": "2026-11-15",
+    "basis_commit": "5154b9b2c58057b8719ed0d6297374ad03086da0",
+    "checks": [
+      "report and morphology README local links exist",
+      "all uv_w files unchanged",
+      "full actual index821-byte rows and source SHA",
+      "label/table205302vs205451 mismatch retained",
+      "204836valid bbox0ROIhits;615invalid unknown",
+      "13 original-paper rounded statistics match",
+      "4 prior-paper RED/COLOR products outsideROI"
+    ],
+    "scope": "Primary-source documentation and reproducible provenance checks;not Mars morphology detection or independent ground-truth validation",
+    "decision": "AD1 downgrade retained;Mars morphology unknown",
+    "external_notifications_sent": false
   }
 }

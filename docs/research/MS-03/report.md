@@ -4,7 +4,54 @@ Team zasa｜初版2026-11-14；最後核對2026-11-15｜PR #7研究交付
 
 **閱讀順序：** 前段最新MS-03／AD1處置及2026-11-15時標交接為目前有效限制；「2026-11-14初版紀錄」之後保留歷史內容，已被新版取代的取得狀態不可作為現況。所有驗證通過只限列明的結構與重現檢查，未確認感測器真實時刻或偏移原因。
 
-## 2026-11-15 MS-03／AD1形貌查核：證據不足，退出目前具體配對
+## 2026-11-15交接與補證據：AD1降級，MS-03格內形貌仍未知
+
+交接基準SHA `5154b9b2c58057b8719ed0d6297374ad03086da0`，接續既有形貌分析起始SHA `7b3c865e85ffeb4db81277ef34e9c3f4a318fc9f`。本節補讀原始論文及任務端索引，整理主要對話與GPU可直接引用的處置；原查核紀錄保留。範圍固定57.50–58.00°N、242.00–242.50°E，planetocentric／east-positive。
+
+### 給主要對話：處置與可直接使用的敘述
+
+> MS-03-E02（Adventdalen AD1）保留固定ID，降級為一般已知方法參照，退出目前有證據支持的具體配對。MS-03已有CTX目錄覆蓋，但已檢查影像不足以確認可與AD1量測比較的多邊形／裂隙網路。這是證據不足，不是確認地貌不存在，也尚無法判定兩地有相似或不同的形貌分布。
+
+降級原因有三個：①AD1中位等效直徑18.485m，在CTX名義6.09m像素僅約3.04像素，不能可靠描繪同尺度邊界；②現有CTX browse降採樣或壓縮、局部原生EDR有低對比及條帶，且未精定位／正射，未完成全格原生像素判讀；③本次ODE及新增任務端索引均未找到可直接支援格內判讀的有效HiRISE產品紀錄。後者仍有版本與無效邊界限制，不能稱完整歷史無覆蓋。
+
+| 可以說 | 不能說 |
+|---|---|
+| 三筆CTX的目錄角點聯集涵蓋名義格；實際可用細節與有效像素覆蓋未全面核實 | 全格已完成高解析度判讀、100%可辨識覆蓋，或格內不存在裂隙／多邊形 |
+| 已檢查D01原生局部，未辨識出可可靠追描的閉合網路；火星尺寸與形狀維持unknown | 已證明與AD1形貌相近／不同，或把SWIM正一致性、低坡度當成看見多邊形 |
+| AD1既有185polygon的重算與原刊多個統計量在刊載精度一致 | 這是新量測、獨立真值驗證，或首次AD1火星類比 |
+| 2011論文明確使用另一組Utopia Planitia HiRISE影像，該具名影像不涵蓋MS-03 | 已完整排除所有文獻對MS-03的研究，因此本組全球首創 |
+| 本輪增加固定MS-03範圍的覆蓋、資料品質、可辨識尺度與適用性查核 | 已完成Mars polygon偵測、地下冰鑑定、成因或資源評估 |
+
+**主要對話下一步：** 在總結、研究卡或展示中同步採「一般方法參照、非當前具體配對」，保留ID及降級理由；圖說須區分「目錄足跡」「局部實際像素」與「地球既有GIS」。本聊天室只提供交接，沒有修改其他對話文件或網站，也沒有發送外部通知。若後續取得能清楚辨識完整邊界且精定位的格內影像，再重新評估；即使形狀相近，成因與地下冰仍需同位材料／層序、立體或重訪影像及獨立地下結構證據，不能用外觀直接推導冰楔、冰深、含量或可採性。
+
+### 這輪新增的證據與讀取範圍
+
+| 新證據 | 實際查核結果 | 能支持與不能支持的內容 |
+|---|---|---|
+| [HiRISE任務端RDR累積索引](https://hirise-pds.lpl.arizona.edu/PDS/INDEX/RDRCUMINDEX.TAB)及[原標籤](https://hirise-pds.lpl.arizona.edu/PDS/INDEX/RDRCUMINDEX.LBL) | 實際下載168,675,271bytes、SHA256 `d58cf52657371f6a7e65ef4dc687fdd2f9c70e276f7755853e27971f17df4126`；表頭Last-Modified為2026-11-03。205,451列均為821bytes；204,836列有效bbox未與指定格相交；615列無效bbox另存未定。標籤宣告205,302列，與實表不一致，未自行修正 | 提供獨立於ODE查詢介面的任務產品清單補查；不是對無效列、未發布產品或完整歷史的排除。[結果JSON](../../../outputs/research/MS-03/morphology/evidence_followup/HiRISE_independent_index_check.json)、[無效列](../../../outputs/research/MS-03/morphology/evidence_followup/HiRISE_invalid_bbox_rows.csv)、[取得紀錄](../../../outputs/research/MS-03/morphology/evidence_followup/index_download_manifest.json) |
+| [Ulrich等2011作者公開稿](https://awi-test.eprints-hosting.org/24005/1/Ulr2011a.pdf)，[DOI](https://doi.org/10.1016/j.geomorph.2011.07.002) | 實得PDF4,448,816bytes／21頁（含封面）；重點讀印刷pp.199–201、203–204，§§2、3.1–3.3、表2–4。表3 AD1 N=185；表4與本組13項重算統計在原刊四捨五入精度一致 | 支持資料身份、定義與既有同用途先例；不是整篇全文審查、原始HRSC影像QA或新場址發現。[讀取／雜湊紀錄](../../../outputs/research/MS-03/morphology/evidence_followup/author_paper_reading.json)、[逐項核對表](../../../outputs/research/MS-03/morphology/evidence_followup/AD1_published_table_crosscheck.csv) |
+| 原論文§3.2與任務索引的具名影像對照 | 論文將火星製圖限制於`PSP_001938_2265`、`PSP_002439_2265`及1m DEM；任務索引RED／COLOR的bbox約45.858–46.184°N、92.002–92.211°E，均在MS-03之外 | 確認這篇論文的具名火星影像不等於本格；只限此論文／此影像清單。[索引原列](../../../outputs/research/MS-03/morphology/evidence_followup/published_Mars_image_index_rows.csv) |
+
+原論文§3.2另記載HRSC-AX orthoimages名義20cm/pixel；這輪仍未取得原raster，不能把文獻規格寫成影像品質已驗證。文中影像取得期間為2008年，2009是現地工作／資料目錄campaign脈絡，須分開記。原文p.200有疑似N/E互置的數字，不直接作合法座標或靜默修正；上述排除採具名產品的實際任務索引邊界。
+
+### 給GPU：固定輸入、禁用推論與後續啟用條件
+
+| 交接資產 | 可做的工作與界線 |
+|---|---|
+| [覆蓋／判讀圖PNG](../../../outputs/research/MS-03/morphology/MS03_AD1_coverage_interpretation.png)／[PDF](../../../outputs/research/MS-03/morphology/MS03_AD1_coverage_interpretation.pdf) | 圖A是目錄足跡；B是單一D01局部、顯示伸展且未正射；C是AD1 GIS。各面板尺度分開，不當作共同解析度的形貌匹配證據 |
+| [幾何／可辨識性表](../../../outputs/research/MS-03/morphology/observability_comparison.csv)、[AD1逐polygon表](../../../outputs/research/MS-03/morphology/AD1_recomputed_geometry.csv)、[摘要](../../../outputs/research/MS-03/morphology/AD1_geometry_summary.json) | 可重現AD1向量幾何與像素取樣比；MRR長寬不等於論文largest/smallest diameter，L/W也不是原論文W/L。Mars量保持unknown，不補零或用AD1數值代入 |
+| [影像清單](../../../outputs/research/MS-03/morphology/image_inventory.csv)、[取得清單](../../../outputs/research/MS-03/morphology/acquisition_manifest.json)、[D01裁切來源](../../../outputs/research/MS-03/morphology/native_crop_provenance.json) | 可核對產品、原始位元組、名義尺度與近似定位；JPEG原尺寸不等於原生有效細節，8bit DN非已校準反射率，不做跨日期光度比較 |
+| [新增任務索引查核](../../../outputs/research/MS-03/morphology/evidence_followup/HiRISE_independent_index_check.json)與[原刊統計核對](../../../outputs/research/MS-03/morphology/evidence_followup/AD1_published_table_crosscheck.csv) | 可重跑範圍檢查與刊載精度核對；完整索引只在本機暫存，依URL與SHA重取，不把「GitHub有摘要」寫成「GitHub有完整原始索引」 |
+| [方法與重跑說明](../../../outputs/research/MS-03/morphology/README.md) | 保留原檔、來源與起始SHA；本次沒有要求重跑全球排名或啟動新的大型處理 |
+
+**目前不能做：** 從現有CTX推算MS-03 polygon面積、圓度、尺度分布或類比得分；將格外HiRISE移用；把目錄足跡當有效像素mask；把未辨識到當不存在；從形狀、SWIM或坡度推導成因／冰量；跨天體使用地球CRS算距離。3像素僅是AD1中位尺寸除以CTX名義取樣，不是經校準的偵測閾值。
+
+**若後續資料補齊，啟用順序：** ①先核對格內足跡、有效像素、投影與品質，完成精定位／必要正射；②清楚定義可辨識閉合邊界與遮罩、邊界不確定度，在兩地共同可觀測尺度重新取樣並說明資訊損失；③建立可覆核的人工標註／辨識QA，才量測同一定義的幾何並比較選樣偏差；④保留形貌與成因／冰真值分離，取得獨立證據後另作解釋。若未達條件，維持降級，無須為湊配對而補值或另找地點。
+
+**時標與交接狀態：** Campbell偏移原因仍unknown，HOBO深度logger同步未獨立驗證，既有配時禁用維持。本輪形貌工作不依賴配時，也不解除限制。交接已寫入此報告與PR #7供讀取；未更動主要對話、GPU輸出、總Excel或網站，先不合併main。
+
+
+## 2026-11-15形貌查核初版（5154b9b；原論文取得狀態以上段補證據為準）
 
 起始SHA `7b3c865e85ffeb4db81277ef34e9c3f4a318fc9f`；只查57.50–58.00°N、242.00–242.50°E。**目前沒有足夠影像證據確認格內存在能與AD1量測比較的多邊形／裂隙網路。MS-03-E02降級為一般已知方法參照，退出本輪有證據支持的具體配對；不刪ID，也不宣稱格內不存在這些地貌。** 下方舊的「條件式形貌對照」由本節處置更新取代。
 

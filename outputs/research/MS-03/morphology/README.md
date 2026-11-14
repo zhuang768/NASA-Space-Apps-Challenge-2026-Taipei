@@ -4,6 +4,23 @@ Starting SHA: `7b3c865e85ffeb4db81277ef34e9c3f4a318fc9f` on `research/ms-03-eart
 
 **Decision: insufficient evidence; downgrade MS-03-E02 (AD1) to a general method reference, outside the currently supported specific MS-03 pair.** This is not evidence that polygons or fractures are absent. No Mars polygon boundaries or size/shape distributions were measured.
 
+## Evidence supplement and handoff — 2026-11-15
+
+The front of [the research report](../../../../docs/research/MS-03/report.md) now contains separate main-research/GPU handoffs. AD1 remains downgraded;no new Mars polygons were detected or measured. The following supplements supersede the earlier statements below that the2011paper had not yet been obtained or that its nominal HRSC-AX sampling was unverified:
+
+- Mission archive [RDR cumulative index](https://hirise-pds.lpl.arizona.edu/PDS/INDEX/RDRCUMINDEX.TAB):168675271bytes,actual205451rows;204836valid bounding rectangles give zero ROI intersections;615invalid rectangles retained as unknown. The downloaded label declares205302rows,so release consistency is unresolved. Source response last-modified2026-11-03. This independent interface strengthens the bounded catalogue check but does not exclude unlocated/unreleased observations or establish feature absence. [Result](evidence_followup/HiRISE_independent_index_check.json),[invalid rows](evidence_followup/HiRISE_invalid_bbox_rows.csv),[download record](evidence_followup/index_download_manifest.json).
+- [Ulrich et al2011 author copy](https://awi-test.eprints-hosting.org/24005/1/Ulr2011a.pdf) actually obtained and focused reading completed at printedpp199–201,203–204. Table3 AD1N185 and13rounded Table4statistics agree with our GIS recomputation. This checks provenance/reproduction,not independent ground truth. Section3.2 states20cm orthoimage sampling,2008image acquisition and1mMarsDEM;raw HRSC raster remains unacquired. Fieldwork2009 and catalogue campaign names are separate metadata contexts. [Reading/hash record](evidence_followup/author_paper_reading.json),[numeric crosscheck](evidence_followup/AD1_published_table_crosscheck.csv).
+- Paper§3.2 restricts Mars analysis toPSP_001938_2265 andPSP_002439_2265. [Actual mission-index rows](evidence_followup/published_Mars_image_index_rows.csv) place them around46N92E,outsideMS03. This only resolves that named paper's image scope;no global novelty claim. Apparent switchedN/E numbers in paperp200are not used as valid coordinates.
+
+Full168.7MBindex and copyrighted author PDF remain local,not inGit. Reproduce the supplement after downloading the stated index:
+
+```sh
+curl --fail --location https://hirise-pds.lpl.arizona.edu/PDS/INDEX/RDRCUMINDEX.TAB --output /tmp/ms03_HiRISE_RDRCUMINDEX.TAB
+/tmp/ms03geo/bin/python scripts/research/MS-03/supplement_ad1_evidence.py --index /tmp/ms03_HiRISE_RDRCUMINDEX.TAB
+```
+
+Use the recorded SHA when comparing releases;later downloads may change. Do not reconcile the label/table count difference silently. Published values are transcribed in the script with source locators and checked at printed precision. MRR L/W is still not the paperW/L from largest/smallest diameters. No numerical Earth geometry or image product from the earlier audit was changed by this supplement.
+
 ## Deliverables
 
 - [Coverage/interpretation figure](MS03_AD1_coverage_interpretation.png), [PDF](MS03_AD1_coverage_interpretation.pdf).

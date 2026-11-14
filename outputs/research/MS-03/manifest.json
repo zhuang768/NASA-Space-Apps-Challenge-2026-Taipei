@@ -207,8 +207,8 @@
   "outputs": [
     {
       "path": "docs/research/MS-03/report.md",
-      "bytes": 40100,
-      "sha256": "4bf6a994cdd3298b24e5ce9b9f8f6c858548db1fc87bb45bef80fcf21ae6cfb5"
+      "bytes": 48709,
+      "sha256": "a54f81d48343e51e8a505c4feb17b8862667071ca673d9c9507461361e1d1ccb"
     },
     {
       "path": "scripts/research/MS-03/acquire_morphology.py",
@@ -232,8 +232,13 @@
     },
     {
       "path": "scripts/research/MS-03/plot_morphology.py",
-      "bytes": 7406,
-      "sha256": "f0d117637c5cec219971c82ad4128050651937179ae3acc5486c83dcf63e640f"
+      "bytes": 7415,
+      "sha256": "2719b7594f280c1ab87494248125801f7eee987e27019e44abd068af763527ab"
+    },
+    {
+      "path": "scripts/research/MS-03/supplement_ad1_evidence.py",
+      "bytes": 4703,
+      "sha256": "b0810022428f5ad6818d703423e172f2eea28da08d1525759467aafdae31dfb5"
     },
     {
       "path": "scripts/research/MS-03/validate.py",
@@ -247,13 +252,13 @@
     },
     {
       "path": "outputs/research/MS-03/candidates.csv",
-      "bytes": 2911,
-      "sha256": "ffc9c3683a051bc7797eff2ad356c8aaf054c2d5a6c55127be0d84b1185fa563"
+      "bytes": 3050,
+      "sha256": "e007a7b86df39b4cb8eeeb164400e451c2722bb41a6c2280772852b59a394e8c"
     },
     {
       "path": "outputs/research/MS-03/evidence.csv",
-      "bytes": 17156,
-      "sha256": "6c50d947348c999894e66ee182f6615b4a28ca59bf85fc75074fd7221a942910"
+      "bytes": 18880,
+      "sha256": "e019b5e4216be6ed0bfe898d858fc8913a665fb5c7bddd0101641fce39647e38"
     },
     {
       "path": "outputs/research/MS-03/mars_reference.json",
@@ -316,6 +321,11 @@
       "sha256": "70603b5a65e4717fddd7d994cadd67084d58fc9cdd4dcca918c530d024e4e919"
     },
     {
+      "path": "outputs/research/MS-03/morphology/HiRISE_RDRCUMINDEX.LBL",
+      "bytes": 15726,
+      "sha256": "5401abbb16f8cd9ae0bd99f60cd0198f9cd10914d7e8e89ff4c3985d53bff0a8"
+    },
+    {
       "path": "outputs/research/MS-03/morphology/MS03_AD1_coverage_interpretation.pdf",
       "bytes": 80744,
       "sha256": "5e4812dd8860857cb65ae112e0df49aee74170e8c589cc83404fd89b32cd3897"
@@ -332,8 +342,8 @@
     },
     {
       "path": "outputs/research/MS-03/morphology/README.md",
-      "bytes": 7322,
-      "sha256": "26dd5f5cc8e362c3854701ba43b80098d6849676e523638b369136133b0d525a"
+      "bytes": 10219,
+      "sha256": "60a7831a443ed6202d3ac56bc01936c930f7bbd0f001b4cafe0db98dafc1db53"
     },
     {
       "path": "outputs/research/MS-03/morphology/V17_086802_2374_XN_57N118W_browse.jpg",
@@ -349,6 +359,36 @@
       "path": "outputs/research/MS-03/morphology/coverage_summary.json",
       "bytes": 490,
       "sha256": "0bc38e9f41b9e4d4e053e56631d96e6ac96f20086a4d36bb283348815753ddb3"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/AD1_published_table_crosscheck.csv",
+      "bytes": 1396,
+      "sha256": "143375143133e2ac62b71459e56306559d75ebcd8bc4597d95157c1c856d7b81"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/HiRISE_independent_index_check.json",
+      "bytes": 1045,
+      "sha256": "ead7547c0d5aafc3e83b26e72821a9a5a104eb6c1883fde6f8288f448f0636d9"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/HiRISE_invalid_bbox_rows.csv",
+      "bytes": 61911,
+      "sha256": "3144088fa1cd398c1e53d14c11c282ba35f84ee9c216df0bc8cb3528442a6f77"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/author_paper_reading.json",
+      "bytes": 1205,
+      "sha256": "ca0b8db71d4276e057636e497206e242f1037599b306de1facebc5cafe4c30f8"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_download_manifest.json",
+      "bytes": 565,
+      "sha256": "3b87140804a81ff8d1f14d0c5b9cd5f48305ba8eecc6f2ddef7f1591e1dd7697"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/published_Mars_image_index_rows.csv",
+      "bytes": 532,
+      "sha256": "a7cefc97fb33c6cbbf958e42481b4b70545e552483816c28cd32b6e250b75437"
     },
     {
       "path": "outputs/research/MS-03/morphology/hirise_page.html",
@@ -367,8 +407,8 @@
     },
     {
       "path": "outputs/research/MS-03/morphology/observability_comparison.csv",
-      "bytes": 1061,
-      "sha256": "aad7254c1101b36cd0942392bae2e421c4e2a1b104f3d8c2537e1ccdb53c13fb"
+      "bytes": 1070,
+      "sha256": "edd7b6f37f1cd9d83f55b4c9a0cc2d4a1138d8ab8ae4e88690be315d918189e5"
     },
     {
       "path": "outputs/research/MS-03/morphology/ode_CTX_EDR.json",
@@ -407,18 +447,18 @@
     },
     {
       "path": "outputs/research/MS-03/prior_work.csv",
-      "bytes": 4579,
-      "sha256": "48a085efb3a570e425ec5fa6037293b21b97a661ce557bd2cb9da6e6587a4a0d"
+      "bytes": 5504,
+      "sha256": "16bfdcb2f1dbb764f454be55b867b1f38f502780666513c783ce9d91345aeb77"
     },
     {
       "path": "outputs/research/MS-03/search_log.csv",
-      "bytes": 8224,
-      "sha256": "e236051092401bab7e5c205172f4a1a06067462710a05c6960d657844f4cd82c"
+      "bytes": 8768,
+      "sha256": "2f65500ab2a5486a2102470c237d6f126c9dbe0607157deb7ae9aec2aa28ecf8"
     },
     {
       "path": "outputs/research/MS-03/sources.json",
-      "bytes": 6391,
-      "sha256": "430e4c0fae18ecf579aab2153be506fb4f969e45b8c1b61b8d30f11b04b56f8f"
+      "bytes": 7186,
+      "sha256": "f83f092b053fdb056d4be3e2ba50670e80c81fdf01839d8c09ba011f1bc3bd8f"
     },
     {
       "path": "outputs/research/MS-03/uv_w/campbell_clock_audit.json",
@@ -462,8 +502,8 @@
     },
     {
       "path": "outputs/research/MS-03/validation.json",
-      "bytes": 16797,
-      "sha256": "7b644e8487e8438ff9ac9820b534bb01a7e9be84af1116282838fa81bd799ec9"
+      "bytes": 17565,
+      "sha256": "44782f432b594881d8e401578b24d480848dd2d9f2360ee8fbdaf9bbb7a3bd0b"
     }
   ],
   "followup_date_taipei": "2026-11-15",
@@ -520,5 +560,17 @@
     "result": "insufficient_evidence_not_absence",
     "directory": "outputs/research/MS-03/morphology",
     "clock_work": "unchanged"
+  },
+  "AD1_handoff_evidence_supplement": {
+    "date": "2026-11-15",
+    "basis_commit": "5154b9b2c58057b8719ed0d6297374ad03086da0",
+    "recipients": [
+      "main research conversation",
+      "GPU"
+    ],
+    "status": "prepared in report and PR7;not independently sent",
+    "raw_cumulative_index_tracked": false,
+    "author_pdf_tracked": false,
+    "decision": "downgrade retained;insufficient evidence"
   }
 }

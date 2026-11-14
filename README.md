@@ -94,3 +94,13 @@ docs/         方法、資料規格、競賽準備與歷史紀錄
 這支持局部沉積岩研究。石膏仍是剖面級文獻證據，精確露頭未核對；蒙皂石與氧化鐵配對未確認，海相／河流背景也不能直接等同 Gale 湖泊。未新增礦物分數或改動排名。下一步優先取得地層圖與同露頭礦物鑑定，而非宣稱完整 Gale 類比已成立。
 
 實際執行：`.venv/bin/python -m scripts.check_oytag_overlap`，三點均通過局部 ±50 km 與既有多邊形包含檢查。座標 datum 未註明，結果只供研究尺度歸屬。AI 協助文獻核對、座標計算與中文報告；未產生衛星影像或礦物量測。
+
+### 2026-11-14：TerraMatch Mission Lab 本機互動工作台建置
+
+已完成 `web/`（React 18 + TypeScript + Vite）第一版本機互動工作台（簡潔英文介面），藉由 `web/scripts/build_workbench_data.py`（`npm run build:data`）與 `web/src/data/adapter.ts` 串接 `outputs/analysis/results_with_context.json`、`outputs/analysis_scale10km/results.json`、`outputs/analysis/sensitivity.json`、`outputs/mars_profiles/profiles.json` 及 `outputs/mars_temperature/summary.json`，未修改 `analog/`、`scripts/`、`data/` 或既有 `outputs/` 結果，亦未重新排名或改動科學模型。
+
+- **已完成**：目標與任務列（`jezero`、`gale`、`arcadia` 切換並自動清除舊狀態、獨立隔離 Demo Mode）、雙側獨立座標地圖（Earth `R = 6,371.0 km`、`Δlat = 0.90° / 100 km` vs. Mars `R = 3,396.0 km`、`Δlat = 1.69° / 100 km`，明示無 Mars 底圖並可展開 `candidate_map.png` 與各目標 `*_terrain_comparison.png`）、12 筆候選清單與篩選器（含 `No qualifying candidates` 空狀態）、四大主題證據矩陣（共 8 項指標，獨立列出火星 `surface_temperature: missing` 缺口、置頂不可直接比較物理量護欄、缺值不補零）、可存取 `EvidenceDrawer`（含 DOI／PDS 網址與 SHA-256 校驗碼）及 4 組態真實敏感度面板（Top-2 頻率明標非機率或信賴度）。
+- **本機執行**：於 `web/` 執行 `npm install`、`npm run build:data`、`npm run build`，並以 `npm run dev` 或 `npx vite preview --port 4173 --host 127.0.0.1` 啟動。
+- **實際驗證**：`cd web && npm run build:data` 與 `npm run build`（`tsc -b && vite build`）通過；`.venv/bin/ruff check .` 通過；於 `http://127.0.0.1:4173/` 實機瀏覽器驗證桌面（1280×800）與窄螢幕（390×844）共 7 項互動流程、邊界座標與動態圖表載入全數通過（0 console errors、0 失敗網路請求）。
+- **限制與下一步**：目前科學篩選仍為 `terrain_only_screening`，Ranks #3–#12 尚未查取 NASA POWER 氣候背景，火星區域 `surface_temperature` 仍為 `missing`；後續若擴充多變量評分或新證據，可重新執行 `npm run build:data` 更新前端資料包。
+- **AI 使用**：Antigravity 協助建置與審查強化 `web/` 前端與資料轉接程式、執行建置與瀏覽器實機驗證並追加本節報告；未生成虛構科學數據或改動既有排名。

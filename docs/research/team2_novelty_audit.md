@@ -2,6 +2,74 @@
 
 Team zasa. Review date: **2026-11-14, Asia/Taipei**. Phase 1 repository baseline: `3e3ffff`; Phase 2 main baseline: `263269a`. Scope: literature and proposal checks for I-01, I-02, D-03 and D-04, followed by the supplied Earth candidate EARTH-UV-001. No new site selection, Earth pairing, environmental validation or ranking.
 
+## 2026-11-14：本輪查核結案摘要（終版）
+
+結案基準為最新main `4fba9f3`；統籌所列 `f54e107` 已在其歷史中。本節是目前有效的收尾狀態，下方所有「下一步」「未結案」及交接待辦保留為當時紀錄，**不再視為本輪自動續辦任務**。本輪只整理已閱讀、已記錄來源，沒有新增外部搜尋、資料計算或實驗。用途需求沿用暫定 `MR-20261114-v1`。
+
+### A．已確認的事情
+
+- **University Valley／EARTH-UV-001：** W站已有冰界面與熱環境觀測（U1）；山谷尺度已有Icebreaker鑽探、短段取樣與鑽頭溫控先例（U2；U3僅摘要）。既有鑽孔不等於W錨點或未定義的新測區。
+- **Elephant Head／EARTH-002：** 已有挖溝、熱濕監測（EHA1）、Site 3附近分層採土、冰芯與低溫保存（EHA2）。10cm分層採土不能改述為10cm受控分段鑽冰；保存設定不能改述為鑽進升溫量測。
+- **Linnaeus Terrace／EARTH-003：** 已有歷史多深度溫度與冰穩定性研究（LTA1／LTA2）；LTA2只取得摘要。25cm作者報告值、45cm後續轉述及相關指南的引用關係已追溯，差異成因未解。
+- 覆土／表層條件、熱響應與冰穩定性不是空白研究問題；UV／EH及LT背景比較已有先例（LTA3至LTA6）。受控熱輸入與T/RH量測也有先例（LTA9，作者會議摘要與期刊摘要）。
+- Team 2已完成EH出版表格轉錄QA及均溫重現（QA1；下方既有QA紀錄），屬資料一致性檢查。當前成果適合定位為**重現、來源與QA整合、後續驗證需求設計**，尚未證明新的科學分析差異。
+
+### B．仍未確認的事情
+
+25／45cm差異的成因、是否同剖面及引用是否錯誤仍未知；1998全文未取得。新試驗範圍、完整協定、獨立真值、儀器與結果量尚未定義，無法判定完整未來實驗的新穎性。Head未對應替代EZ的原始清單、邊界及提案對照仍缺；I-01／I-02未完成所有提案的排除。D-03／D-04維持對照背景，新地球用途未交接。
+
+### C．未知對目前成果的影響
+
+| 未知／缺件 | 阻止的結論 | 對當前描述性資料工作的影響 | 對後續實驗的影響 |
+|---|---|---|---|
+| LT25／45cm與23cm感測器的±0.03m深度限制 | 唯一冰深真值、精確層位、冰深變化或引用錯誤定論 | 可保留名義深度與衝突紀錄；不表示所有溫度資料都不可整理。可分析範圍由主要對話／GPU依QA決定 | 不能直接作模型唯一答案或獨立盲測真值 |
+| 新測區／完整協定未定 | 同範圍完整流程的新穎性通過 | 不阻止既有資料來源整理與受限重現 | 阻止判定具體新實驗是否重複及是否可執行 |
+| 獨立真值、材料控制及樣品溫度／初末冰量缺失 | 盲判準確度、因果、採樣升溫與冰損失結果 | 既有深度溫差只能作描述，不反演唯一冰深／TI | 相應實驗結果仍未產生 |
+| EH時標定義、RH校準與3cm冬季缺值 | 跨資料集精確時刻配準、未核實RH衍生量、3cm全年均值 | 只保留原印刷時標下已QA的有效窗口；不補值或默默裁切RH | 不是新實驗性能證據 |
+| Head替代EZ對照與火星局部冰證據缺失 | 完整同用途排除、I-01／I-02有冰或可採、火星設備性能 | 不阻止地球資料QA，但禁止把地球資料外推成火星實證 | 火星資源與性能驗證均未完成 |
+
+**結案決定：** 本輪有限範圍查核已完成；`novelty_cleared=False` 保留。以上缺件列為限制及可選後續工作，不要求本階段解完。只有統籌提出具體新主張或新證據，才另開有範圍的修訂。
+
+### 可直接用在報告的主張表
+
+判定：**1**＝現有證據支持；**2**＝加限制後可用；**3**＝未驗證，只能作研究提議；**4**＝應移除或改寫。以下定位與讀取範圍沿用下方原始查核，不新增閱讀聲明。
+
+| 擬使用的敘述 | 判定 | 支持來源及定位 | 適用範圍／必要限制或改寫 |
+|---|---|---|---|
+| 三地是我們新發現或首次研究的場址 | 4 | [U1](https://doi.org/10.1017/S0954102022000025) Introduction／Methods；[EHA1](https://www.nasa.gov/wp-content/uploads/2019/09/mckay_etal_2019_dry_permafrost_ellsworth_land21.pdf) Methods；[LTA1](https://nsidc.org/sites/default/files/20ggd6-userguide-v001.pdf) printed pp.2至5 | 改為「採用已有研究的三個南極場址作參照」，不擴張至新測區 |
+| UV／EH／LT比較由本專案首次提出 | 4 | [LTA6／EHA3](https://doi.org/10.1017/S0954102025100448) Environmental data、Table I、Results／Discussion | 既有跨站研究與LT文獻比較已有先例；改稱來源及QA整合 |
+| 覆土和表層條件會影響熱響應與冰穩定性，已有相關研究 | 2 | [LTA3](https://doi.org/10.1017/S0954102022000025) printed pp.145至151、Appendix pp.165至171；LTA6 Results | 原研究問題與模型範圍內可用；不改寫為本組新發現或受控因果結果 |
+| 我們已做盲判並以獨立真值驗證 | 4 | 既有「獨立真值與覆土材料」表；U1、EHA1的已知界面紀錄；MR-v1範圍 | 本組未執行；已有界面紀錄不等於獨立留出驗證。未來可作提議（3） |
+| UV已有鑽探、短段取樣與控溫先例 | 2 | [U2](https://www.lpi.usra.edu/meetings/lpsc2011/pdf/1901.pdf) p.1 field test；[U3](https://doi.org/10.1089/ast.2013.1038) 作者摘要 | 山谷／已報鑽孔尺度；不是確切W新試驗區，U3未讀全文 |
+| EH Site 3附近已有分層採土、鑽冰芯及低溫保存 | 1 | [EHA2](https://doi.org/10.1093/ismeco/ycad002) Methods pp.2至3、Fig.1；EHA1 Methods | 既有微生物取樣組成；不能改述為本組完成分段鑽進或新測區試驗 |
+| 本組已量測採樣升溫或冰質量損失 | 4 | EHA2 field sampling；QA1出版熱濕表及既有QA限制 | 未完成；監測溫度、保存設定及自然冰穩定性不是樣品升溫／初末冰量。相關量測只能作提議（3） |
+| LT25cm已證明正確，45cm是筆誤或冰層變深 | 4 | [LTA2](https://doi.org/10.1017/S0954102098000054) 作者摘要；LTA3 Introduction printed p.144；LTA1安裝紀錄 | 改為兩來源衝突未解；1998全文未取得，歷史值不代表現況 |
+| 地球資料證明I-01／I-02有地下冰或可採資源 | 4 | [N1](https://www.hou.usra.edu/meetings/lpsc2022/pdf/2443.pdf) Introduction／Motivation；既有地球—火星範圍限制 | 改為提供方法與證據需求參照；SWIM背景與地球剖面均非這兩格的獨立冰真值 |
+| 現有非同期場址資料已證因果、準確度或火星設備性能 | 4 | LTA3方法與Appendix；既有QA1與MR-v1限制 | 缺可識別控制、獨立真值與跨環境驗證；改為受限的描述性資料研究 |
+| 我們完成EH出版表格QA與原報均溫重現 | 2 | [QA1補充表](https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0954102019000269/resource/name/S0954102019000269sup001.pdf)；EHA1 Table II PDF p.5；本報「EH全表QA」／CSV `executed_evidence_qa_json` | 8,922筆出版資料轉錄、有效窗口與原報均溫一致；不是新量測、感測器校準或科學適用性全部通過 |
+| 完整未來聯合實驗具有新穎性 | 4 | U2／U3、EHA2、[LTA9](https://www.hou.usra.edu/meetings/lpsc2025/pdf/2056.pdf) Experiment／Model／Results；現有完整協定缺件 | 改為「未驗證的研究提議」（3）；已有組成先例，完整用途仍資料不足，不保證原創 |
+
+### 可採用的英文研究定位（EN-CLOSEOUT-20261114）
+
+This project assesses how published Antarctic dry-permafrost and ice-cemented-ground records can inform the interpretation of thermal responses and the evidence needed for follow-up studies of Mars candidates I-01 and I-02. University Valley, Elephant Head, and Linnaeus Terrace provide established observational and methodological references. Prior work includes subsurface temperature and humidity monitoring, ice-stability modelling, drilling, stratified sampling, and temperature-controlled handling at specified sites and scales.
+
+Our bounded review traced source attribution, compared research purposes and spatial scopes, recorded the unresolved 25 versus 45 cm Linnaeus ice-depth citation discrepancy, and checked published Elephant Head tables through transcription QA and reproduction of reported means. These activities support reproducibility, source and QA integration, and documentation of interpretation limits; the measurements remain attributable to their original investigators.
+
+The current records do not establish a distinct new scientific analysis, a controlled cross-site experiment, blind interface-detection accuracy, sampling-related temperature rise, or an ice-mass balance. Historical Earth observations do not establish ice at either Mars candidate or predict equipment performance there. Future experiments remain proposals whose spatial scope, inputs, independent reference observations, controls, and outcome measures require specification. Unresolved evidence is retained as a limitation, not a novelty clearance.
+
+### 機器可讀收尾狀態與使用規則
+
+CSV保留原49欄、全部7個ID、所有來源及原科學判定，新增4欄：
+
+- `audit_closeout_status`：`closed_bounded_review`，表示本輪指定範圍已結案，不表示文獻已完整排除或候選通過。
+- `audit_closeout_date_taipei`：本輪結案日期，`2026-11-14`。
+- `audit_closeout_scope`：收尾範圍識別碼 `TEAM2-CLOSEOUT-20261114`，不是研究需求版本。
+- `audit_closeout_summary_json`：每列的已知結果、未知限制、對結論的影響與停止規則；不取代舊查核／QA JSON。
+
+所有列的 `novelty_cleared` 維持原值False；`insufficient_data`等科學判定均不改。D-03／D-04只結束本輪背景查核，未開始的新地球用途不因收尾變成已完成。歷史「尚未取得」「未結案」保留證據脈絡，其續辦狀態以上述結案決定為準。本輪完成後等待統籌提供具體新主張或新證據。
+
+---
+
 ## 2026-11-14：作者所屬機構公開資料與歷史存檔續查
 
 基準main：`f6d4c18`。本輪延續尚未取得的Head替代EZ清單／邊界／提案對照，不重查P1至P11已完成的範圍或地貌來源。新增P12至P14；既有紀錄與候選分類保持不變。

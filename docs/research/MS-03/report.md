@@ -4,7 +4,51 @@ Team zasa｜初版2026-11-14；最後核對2026-11-15｜PR #7研究交付
 
 **閱讀順序：** 前段最新MS-03／AD1處置及2026-11-15時標交接為目前有效限制；「2026-11-14初版紀錄」之後保留歷史內容，已被新版取代的取得狀態不可作為現況。所有驗證通過只限列明的結構與重現檢查，未確認感測器真實時刻或偏移原因。
 
-## 2026-11-15交接與補證據：AD1降級，MS-03格內形貌仍未知
+## 2026-11-15續查：615筆格式警示與149列計數差的影響已釐清
+
+接續SHA `115576b51e1a7c89d2d9cd75ae667d4da4ad96c0`，使用原已取得的HiRISE累積索引固定SHA256 `d58cf52657371f6a7e65ef4dc687fdd2f9c70e276f7755853e27971f17df4126`。**這兩個異常未在實際取得的索引內隱藏MS-03相交紀錄；未發布／未列入產品或來源幾何錯誤仍不在可排除範圍。** AD1維持降級，MS-03格內形貌維持unknown，沒有新增影像判讀或地下冰證據。
+
+### 615筆的原因：本組檢核過嚴，不能稱為615筆缺失定位
+
+前輪將經度限定0–360°，把含負經度的615列標成invalid bbox。此次全列核對發現：615列的target均為MARS、緯度均為有效數值；其中500列兩個經度值皆負，115列原值跨零。**原先「無效邊界」是本組格式檢核未通過，不能直接當成來源產品無定位。** 這裡不替全部產品強制轉換經度。
+
+以緯度先做篩選，615列全部與57.50–58.00°N不相交，無須依賴經度換算即可排除本格。最近一列`ESP_019584_2365_RED`的索引緯度55.9312–56.0484°N，距本格南界仍約1.4516緯度度。已實得其原始PDS標籤，確認planetocentric、east-positive、緯度約55.931191646–56.048363042°N，且標籤本身確實使用負經度，支持其在本格外的判斷。
+
+另取跨零`TRA_000846_2475_RED`、極區`PSP_010545_2700_RED`及重複產品樣本`PSP_001460_1425_RED`的原標籤，均在本格緯度外。極區樣本的索引與現行標籤邊界有小差異，未強行調和，兩者仍遠離本格；不能把這4份抽核寫成615份標籤全部核實。
+
+來源與輸出：[四份原標籤及下載URL／雜湊](../../../outputs/research/MS-03/morphology/evidence_followup/index_anomalies/product_label_downloads.json)、[615列重新分類](../../../outputs/research/MS-03/morphology/evidence_followup/index_anomalies/negative_longitude_reclassification.csv)。舊的`HiRISE_invalid_bbox_rows.csv`保留為歷史警示清單，以本節重新分類為準，不再將其全部列為「位置仍未知」。
+
+### 筆數差：實表有149組重複產品ID，生成原因仍未知
+
+| 核對項目 | 實際結果 |
+|---|---|
+| 實表物理列數／每列大小 | 205,451列；每列821bytes，檔案168,675,271bytes |
+| 不重複PRODUCT_ID | 205,302個，恰等於標籤宣告ROWS／FILE_RECORDS |
+| 重複組 | 149個PRODUCT_ID各出現2次，形成149個額外列；不是把RED與COLOR誤算成重複 |
+| 每組不同欄位 | 54個欄位中只有`OBSERVATION_START_TIME`不同；`START_TIME`、圖檔路徑及空間欄位相同 |
+| 兩列指令起始時間差（第二減第一） | −2秒10組、−1秒88組、+1秒32組、+2秒4組、+3秒15組；未任選其中一個為真值 |
+
+例如`PSP_001460_1425_RED`位於原表391／392行，同一產品的指令起始時間為05:26:24與05:26:25。其原標籤`MRO:OBSERVATION_START_TIME`為05:26:24.519，但這一例不能解釋其他全部重複列，也不能把1–3秒差異統稱為已證實的取整規則或實際校時。
+
+**數量差已由149個額外重複列完整對應；標籤如何生成仍未確認。** 標籤宣告的physical ROWS仍不符合實表，不將「恰等於unique ID數」寫成已讀過官方生成程式或證實採distinct計數。帶`Cache-Control:no-cache`重取的標籤與前次逐位元相同；表格HEAD的大小、ETag及Last-Modified也與前次取得紀錄一致，單次重新請求沒有消除差異。
+
+本次搜尋官方[ERRATA](https://hirise-pds.lpl.arizona.edu/PDS/ERRATA.TXT)中的duplicate／index／start-time等字詞，閱讀2012 INDEX Table Updates等相關段落，未找到專門解釋這149組紀錄的文字；未取得上游索引生成程式，不宣稱已確定是發布、資料庫或快取bug。[重複組逐欄核對](../../../outputs/research/MS-03/morphology/evidence_followup/index_anomalies/duplicate_product_audit.csv)、[標籤重新取得紀錄](../../../outputs/research/MS-03/morphology/evidence_followup/index_anomalies/label_refresh.lbl.retrieval.json)、[表格HEAD核對](../../../outputs/research/MS-03/morphology/evidence_followup/index_anomalies/table_header_recheck.json)保留可追溯依據。
+
+### 是否可能因此漏掉MS-03格內影像？
+
+本組實際解析全部205,451列，**沒有依標籤的205,302截斷讀取，也沒有先去重而捨棄不同幾何。** 全表緯度欄皆有效；305列的緯度與本格相交，它們的經度原值均在0–360°，逐列範圍查核仍為0筆MS-03 bbox交集。[305列檢查表](../../../outputs/research/MS-03/morphology/evidence_followup/index_anomalies/latitude_eligible_rows.csv)包括原行號，可人工抽核。615個負經度警示列全部先由緯度排除；149組重複列的幾何完全相同，不會因保留哪一組而改變本次範圍結果。
+
+**可說：** 對這份固定索引，先前615筆格式警示與149個額外列已完成範圍影響核對，沒有發現因這兩項問題而漏列的MS-03相交產品。**不能說：** 所有HiRISE觀測都未拍過MS-03、所有原始幾何都經獨立驗證、表格發布原因已完全解決，或格內沒有多邊形。目錄無交集仍不是地貌不存在證明。
+
+### 給主要對話與GPU的更新
+
+- **主要對話：** 以上結果取代後方「615筆仍位置未知、筆數差尚無數量解釋」的舊狀態；保留AD1一般方法參照與既有形貌未知結論。現在不必僅因這615列而等待定位補件，但未發布／未列入觀測的完整性仍未知。
+- **GPU：** 先讀完整實表並驗證821bytes與SHA；先核對緯度，再處理經度慣例，不能以負值直接標成缺失定位，也不能依LABEL ROWS提前停止。本次不改原表、不選取或校正重複列時間、不生成新影像或重新配對。若未來需要去重，先核對同PRODUCT_ID的路徑、版本、幾何與時間差，保留兩個來源行號與差異旗標；不默認第一筆正確。
+
+[可重跑程式](../../../scripts/research/MS-03/audit_hirise_index_anomalies.py)與[完整判斷JSON](../../../outputs/research/MS-03/morphology/evidence_followup/index_anomalies/resolution_summary.json)已交付。此處HiRISE UTC欄位差異與地球Campbell／HOBO問題分開處理，既有配時限制維持，PR #7先不合併main。
+
+
+## 2026-11-15交接初版（115576b；索引異常狀態以上段續查為準）
 
 交接基準SHA `5154b9b2c58057b8719ed0d6297374ad03086da0`，接續既有形貌分析起始SHA `7b3c865e85ffeb4db81277ef34e9c3f4a318fc9f`。本節補讀原始論文及任務端索引，整理主要對話與GPU可直接引用的處置；原查核紀錄保留。範圍固定57.50–58.00°N、242.00–242.50°E，planetocentric／east-positive。
 

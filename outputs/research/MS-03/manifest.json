@@ -207,8 +207,8 @@
   "outputs": [
     {
       "path": "docs/research/MS-03/report.md",
-      "bytes": 48709,
-      "sha256": "a54f81d48343e51e8a505c4feb17b8862667071ca673d9c9507461361e1d1ccb"
+      "bytes": 55039,
+      "sha256": "cb98db4e1d436d68aa6d8a34eccaeeff70611072454404b9b3227d7a97337f2e"
     },
     {
       "path": "scripts/research/MS-03/acquire_morphology.py",
@@ -219,6 +219,11 @@
       "path": "scripts/research/MS-03/audit_campbell_clock.py",
       "bytes": 2774,
       "sha256": "c4405e186b81522508c1cff54aaf10edcc00c076480bd47d6cdb11e37d2fcd04"
+    },
+    {
+      "path": "scripts/research/MS-03/audit_hirise_index_anomalies.py",
+      "bytes": 6049,
+      "sha256": "e692739f2c3263a4d583acf27c5aa5265dd28f3f99e6445b73e9ff93b0d8529c"
     },
     {
       "path": "scripts/research/MS-03/inspect_uv_w.py",
@@ -237,8 +242,8 @@
     },
     {
       "path": "scripts/research/MS-03/supplement_ad1_evidence.py",
-      "bytes": 4703,
-      "sha256": "b0810022428f5ad6818d703423e172f2eea28da08d1525759467aafdae31dfb5"
+      "bytes": 4880,
+      "sha256": "b89fa44c565c887e74c20377515ca9d67ea42aca4cb85e2ad80b908d0353259e"
     },
     {
       "path": "scripts/research/MS-03/validate.py",
@@ -252,13 +257,13 @@
     },
     {
       "path": "outputs/research/MS-03/candidates.csv",
-      "bytes": 3050,
-      "sha256": "e007a7b86df39b4cb8eeeb164400e451c2722bb41a6c2280772852b59a394e8c"
+      "bytes": 3125,
+      "sha256": "5267d22fb93cf72527aa722987b486a238752d92e3fc14e389aa8b9a0373b391"
     },
     {
       "path": "outputs/research/MS-03/evidence.csv",
-      "bytes": 18880,
-      "sha256": "e019b5e4216be6ed0bfe898d858fc8913a665fb5c7bddd0101641fce39647e38"
+      "bytes": 20117,
+      "sha256": "90803b6f3fcc42dd2c86c1f1033c7633b61bbff9d5592543b81e451cc6b51445"
     },
     {
       "path": "outputs/research/MS-03/mars_reference.json",
@@ -342,8 +347,8 @@
     },
     {
       "path": "outputs/research/MS-03/morphology/README.md",
-      "bytes": 10219,
-      "sha256": "60a7831a443ed6202d3ac56bc01936c930f7bbd0f001b4cafe0db98dafc1db53"
+      "bytes": 12785,
+      "sha256": "13808ab16bd0aed5bcd21de862eb6bc6e0ec3af48a9d1a402d78682e045910f6"
     },
     {
       "path": "outputs/research/MS-03/morphology/V17_086802_2374_XN_57N118W_browse.jpg",
@@ -367,8 +372,8 @@
     },
     {
       "path": "outputs/research/MS-03/morphology/evidence_followup/HiRISE_independent_index_check.json",
-      "bytes": 1045,
-      "sha256": "ead7547c0d5aafc3e83b26e72821a9a5a104eb6c1883fde6f8288f448f0636d9"
+      "bytes": 1472,
+      "sha256": "2d7c463a35b1dccac7a5ad63522ae9ba91264f1d3b237e7711449fd37a67688d"
     },
     {
       "path": "outputs/research/MS-03/morphology/evidence_followup/HiRISE_invalid_bbox_rows.csv",
@@ -379,6 +384,76 @@
       "path": "outputs/research/MS-03/morphology/evidence_followup/author_paper_reading.json",
       "bytes": 1205,
       "sha256": "ca0b8db71d4276e057636e497206e242f1037599b306de1facebc5cafe4c30f8"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/ERRATA.TXT",
+      "bytes": 482461,
+      "sha256": "22d6848224f94ff7ab3dfc4f32850e2c51364d34a5486af970b21202d239ea67"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/ERRATA.TXT.retrieval.json",
+      "bytes": 284,
+      "sha256": "101216b1a086d6f5b57a31ac357a92bda41e26ea8f1ea539a66442d4639f9471"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/ESP_019584_2365_RED.LBL",
+      "bytes": 8144,
+      "sha256": "dee92225bd2ee94c2ce63eb3104c63878bd4b67680e8b8f7d27e97edc02b0fa9"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/PSP_001460_1425_RED.LBL",
+      "bytes": 8151,
+      "sha256": "93b043c80f46d0d8e0c75b60885e8d1e1f1c7bdb01bb5adcf1b2a15340eeffa8"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/PSP_010545_2700_RED.LBL",
+      "bytes": 7405,
+      "sha256": "869997315427ac1ce5a7a3f4dad8b22489fdfa2856f7297c0d1badfbbead2b83"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/TRA_000846_2475_RED.LBL",
+      "bytes": 7391,
+      "sha256": "6370e985c645f112dd231f501bd84ec74e70dc70bed022995ce76f4f4a3c4d41"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/duplicate_product_audit.csv",
+      "bytes": 27879,
+      "sha256": "7e427fe3962d05d0d98584a9477056344f1179849675243898c5bace083e0c3a"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/label_refresh.lbl",
+      "bytes": 15726,
+      "sha256": "5401abbb16f8cd9ae0bd99f60cd0198f9cd10914d7e8e89ff4c3985d53bff0a8"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/label_refresh.lbl.retrieval.json",
+      "bytes": 294,
+      "sha256": "4abb059f689fdadc91b016dee572593340fbcc5cbe3acba1e712702fbe7f3fb3"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/latitude_eligible_rows.csv",
+      "bytes": 19972,
+      "sha256": "96000aca746d62b5e5ff9363efbc93b59aad4c3a77aaed608be6b7d2e77eefe3"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/negative_longitude_reclassification.csv",
+      "bytes": 145693,
+      "sha256": "23eef584a02a8a181c0d76c36ebde1f3dbbf8d091d44e3cc7a52e35289e67106"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/product_label_downloads.json",
+      "bytes": 1167,
+      "sha256": "e4b0856a345966eef732eaf30f93a0bbe72fb0e00668a9c5e99ff59ac624948d"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/resolution_summary.json",
+      "bytes": 2783,
+      "sha256": "57c8d00c32b7692e3a9416188bfe55f885d4ffa903cc8827560636b747b5933b"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/table_header_recheck.json",
+      "bytes": 232,
+      "sha256": "2f90e7a66d1f4435c1be10c2ccecb2049ea6dbff46cea967908b5941b1155b30"
     },
     {
       "path": "outputs/research/MS-03/morphology/evidence_followup/index_download_manifest.json",
@@ -452,13 +527,13 @@
     },
     {
       "path": "outputs/research/MS-03/search_log.csv",
-      "bytes": 8768,
-      "sha256": "2f65500ab2a5486a2102470c237d6f126c9dbe0607157deb7ae9aec2aa28ecf8"
+      "bytes": 9868,
+      "sha256": "30473c563ccd876ead130b825be6d4c05bb37a7c228709e7c3c3b4dfafe9d637"
     },
     {
       "path": "outputs/research/MS-03/sources.json",
-      "bytes": 7186,
-      "sha256": "f83f092b053fdb056d4be3e2ba50670e80c81fdf01839d8c09ba011f1bc3bd8f"
+      "bytes": 8196,
+      "sha256": "b72bb1dc140df5c463ed5bdd576887ae3e93fac7d1ae6953cef2c7c4911b1b0a"
     },
     {
       "path": "outputs/research/MS-03/uv_w/campbell_clock_audit.json",
@@ -502,8 +577,8 @@
     },
     {
       "path": "outputs/research/MS-03/validation.json",
-      "bytes": 17565,
-      "sha256": "44782f432b594881d8e401578b24d480848dd2d9f2360ee8fbdaf9bbb7a3bd0b"
+      "bytes": 18643,
+      "sha256": "c065032094e842c8da9d72d7289cd0f765823adb8ca845f79223373b07ef3169"
     }
   ],
   "followup_date_taipei": "2026-11-15",
@@ -572,5 +647,14 @@
     "raw_cumulative_index_tracked": false,
     "author_pdf_tracked": false,
     "decision": "downgrade retained;insufficient evidence"
+  },
+  "HiRISE_index_anomaly_resolution": {
+    "date": "2026-11-15",
+    "basis_commit": "115576b51e1a7c89d2d9cd75ae667d4da4ad96c0",
+    "summary": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/resolution_summary.json",
+    "legacy_flags": "615negative-longitude rows latitude-excluded;not missing geolocation",
+    "count_difference": "149duplicate-product extra rows;upstream generation unknown",
+    "roi_result": "0bbox hits in all205451rows of fixed source",
+    "clock_alignment": false
   }
 }

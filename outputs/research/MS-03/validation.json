@@ -396,5 +396,30 @@
     "scope": "Primary-source documentation and reproducible provenance checks;not Mars morphology detection or independent ground-truth validation",
     "decision": "AD1 downgrade retained;Mars morphology unknown",
     "external_notifications_sent": false
+  },
+  "HiRISE_index_anomaly_resolution": {
+    "date": "2026-11-15",
+    "basis_commit": "115576b51e1a7c89d2d9cd75ae667d4da4ad96c0",
+    "commands_passed": [
+      "audit_hirise_index_anomalies.py --index /tmp/ms03_HiRISE_RDRCUMINDEX.TAB",
+      "validate_morphology.py",
+      "validate.py"
+    ],
+    "checks": [
+      "pinned full-index SHA and205451fixed-length records",
+      "all615negative-longitude flags latitude-excluded",
+      "149duplicate groups compared over54fields;geometry/path identical",
+      "all305latitude-eligible rows0ROIintersections",
+      "4source-label hashes and latitude exclusion",
+      "local report links and CSV/JSON",
+      "existing Earth geometry,image figure and alluv_w outputs unchanged"
+    ],
+    "not_confirmed": [
+      "producer duplicate generation logic",
+      "label count-generation implementation",
+      "unlisted/unreleased observation completeness",
+      "all source geometries independently validated"
+    ],
+    "decision": "no evidence these two anomalies hide anROI record in pinned index;AD1 downgrade retained"
   }
 }

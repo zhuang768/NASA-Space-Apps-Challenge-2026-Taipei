@@ -4,6 +4,21 @@ Starting SHA: `7b3c865e85ffeb4db81277ef34e9c3f4a318fc9f` on `research/ms-03-eart
 
 **Decision: insufficient evidence; downgrade MS-03-E02 (AD1) to a general method reference, outside the currently supported specific MS-03 pair.** This is not evidence that polygons or fractures are absent. No Mars polygon boundaries or size/shape distributions were measured.
 
+## Index anomalies resolved for this fixed table — 2026-11-15
+
+This section supersedes the earlier615-unlocated-row warning and unexplained numerical count difference. [Full resolution](evidence_followup/index_anomalies/resolution_summary.json) and [current research report](../../../../docs/research/MS-03/report.md) retain the bounded conclusion: these two issues do not hide anMS03bbox match in the downloaded table;unlisted/unreleased products and source-geometry errors are not excluded.
+
+- All615 legacy flags were negative-longitude values rejected by our strict0–360check,not missing latitude. All615areMARS and have valid latitude outside57.5–58N (closest gap1.4516degrees). Three negative-longitude source labels and one duplicate-product label were acquired as samples;not all615individual labels. No global longitude-normalization assumption is needed to exclude these rows by latitude.
+- Physical205451rows contain205302uniquePRODUCT_IDs;149IDs occur twice. Each duplicate pair differs only inOBSERVATION_START_TIME;all other53fields,includingimage path,START_TIME andgeometry,match. The label count equals unique IDs,explaining the numeric difference,but producer generation/counting logic is still unknown. PhysicalROWS declaration remains inconsistent;raw files were not edited.
+- All205451raw rows were screened without truncating atLABEL ROWS or discarding duplicates. All305latitude-eligible rows have0–360longitudes and zero ROIbbox intersections. [615-row classification](evidence_followup/index_anomalies/negative_longitude_reclassification.csv),[149duplicate groups](evidence_followup/index_anomalies/duplicate_product_audit.csv),[305latitude-eligible rows](evidence_followup/index_anomalies/latitude_eligible_rows.csv).
+- No-cache label refresh is byte-identical;tableHEAD size/ETag/last-modified match prior download metadata. OfficialERRATAkeyword search and relatedINDEXsection reading found no specific explanation for the149groups. Label examples demonstrate published negative longitude values;one polar current-label boundary differs slightly from its catalogue row but both lie far outsideROI. No silent reconciliation or timestamp selection.
+
+```sh
+/tmp/ms03geo/bin/python scripts/research/MS-03/audit_hirise_index_anomalies.py --index /tmp/ms03_HiRISE_RDRCUMINDEX.TAB
+```
+
+This preserves AD1downgrade and morphologyunknown. HiRISE seconds-level metadata differences do not change or resolve Campbell/HOBO timing policy. Source labels,ERRATA,refreshheaders and hashes are retained under`evidence_followup/index_anomalies/`.
+
 ## Evidence supplement and handoff — 2026-11-15
 
 The front of [the research report](../../../../docs/research/MS-03/report.md) now contains separate main-research/GPU handoffs. AD1 remains downgraded;no new Mars polygons were detected or measured. The following supplements supersede the earlier statements below that the2011paper had not yet been obtained or that its nominal HRSC-AX sampling was unverified:

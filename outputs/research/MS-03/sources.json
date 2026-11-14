@@ -111,13 +111,25 @@
   "MOR4": {
     "url": "https://hirise-pds.lpl.arizona.edu/PDS/INDEX/RDRCUMINDEX.TAB",
     "locator": "full actual205451rows;821bytes;MINIMUM/MAXIMUM_LATITUDE/LONGITUDE;RDRCUMINDEX.LBL schema",
-    "read_scope": "Actual168675271-byte table downloaded and all rows screened;615invalid bbox retained;label205302 count mismatch recorded;not a guarantee of all observations",
+    "read_scope": "Actual168675271-byte table downloaded and all rows screened;615invalid bbox retained;label205302 count mismatch recorded;not a guarantee of all observations;followup2026-11-15 all54fields in149duplicate pairs compared;615negative-lon flags excluded by valid latitude;all305latitude-eligible rows tested",
     "access_date_taipei": "2026-11-15"
   },
   "MOR5": {
     "url": "https://awi-test.eprints-hosting.org/24005/1/Ulr2011a.pdf",
     "locator": "printedpp199-201,203-204;sections2,3.1-3.3;Tables2-4;PDFpages4-6,8-9",
     "read_scope": "Actual author PDF4448816bytes21pages including cover;focused reading named sections/tables;13 rounded statistics checked;not full-paper review",
+    "access_date_taipei": "2026-11-15"
+  },
+  "MOR6": {
+    "url": "https://hirise-pds.lpl.arizona.edu/PDS/ERRATA.TXT",
+    "locator": "keyword search duplicate/index/start-time;2012 INDEX Table Updates section;not all product-list entries read",
+    "read_scope": "Actual482461bytes archived;no specific149duplicate-group explanation found in this bounded check",
+    "access_date_taipei": "2026-11-15"
+  },
+  "MOR7": {
+    "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/ESP/ORB_019500_019599/ESP_019584_2365/ESP_019584_2365_RED.LBL",
+    "locator": "PROJECTION_LATITUDE_TYPE;POSITIVE_LONGITUDE_DIRECTION;MINIMUM/MAXIMUM_LATITUDE;WESTERNMOST/EASTERNMOST_LONGITUDE",
+    "read_scope": "Actual full original label for closest negative-longitude row retrieved;planetocentric east-positive negative longitudes and outsideROI latitude confirmed;not all615labels",
     "access_date_taipei": "2026-11-15"
   }
 }

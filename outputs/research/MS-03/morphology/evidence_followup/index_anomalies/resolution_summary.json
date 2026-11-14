@@ -1,0 +1,80 @@
+{
+  "date_taipei": "2026-11-15",
+  "starting_commit": "115576b51e1a7c89d2d9cd75ae667d4da4ad96c0",
+  "source_index_sha256": "d58cf52657371f6a7e65ef4dc687fdd2f9c70e276f7755853e27971f17df4126",
+  "physical_rows": 205451,
+  "label_declared_rows": 205302,
+  "unique_product_ids": 205302,
+  "duplicated_product_groups": 149,
+  "extra_rows": 149,
+  "duplicate_changed_fields": {
+    "OBSERVATION_START_TIME": 149
+  },
+  "duplicate_observation_start_time_delta_counts": {
+    "-2.0": 10,
+    "-1.0": 88,
+    "1.0": 32,
+    "2.0": 4,
+    "3.0": 15
+  },
+  "legacy_flagged_rows": 615,
+  "negative_longitude_categories": {
+    "crosses_zero_raw": 115,
+    "both_negative_longitudes": 500
+  },
+  "flagged_target_counts": {
+    "MARS": 615
+  },
+  "flagged_latitude_intersections": 0,
+  "min_flagged_latitude_gap_deg": 1.4515999999999991,
+  "all_rows_latitudes_valid": true,
+  "latitude_eligible_rows": 305,
+  "all_raw_rows_roi_bbox_intersections": 0,
+  "source_label_samples": [
+    {
+      "file": "ESP_019584_2365_RED.LBL",
+      "values": {
+        "MINIMUM_LATITUDE": 55.931191645864,
+        "MAXIMUM_LATITUDE": 56.048363042273,
+        "WESTERNMOST_LONGITUDE": -1.0380652650321,
+        "EASTERNMOST_LONGITUDE": -0.82804470546063
+      },
+      "lat_excludes_MS03": true
+    },
+    {
+      "file": "PSP_001460_1425_RED.LBL",
+      "values": {
+        "MINIMUM_LATITUDE": -37.059958690853,
+        "MAXIMUM_LATITUDE": -36.924107360978,
+        "WESTERNMOST_LONGITUDE": 185.30570724713,
+        "EASTERNMOST_LONGITUDE": 185.42941705256
+      },
+      "lat_excludes_MS03": true
+    },
+    {
+      "file": "PSP_010545_2700_RED.LBL",
+      "values": {
+        "MINIMUM_LATITUDE": 89.728804580775,
+        "MAXIMUM_LATITUDE": 89.994549178968,
+        "WESTERNMOST_LONGITUDE": -180.0,
+        "EASTERNMOST_LONGITUDE": 354.19180566511
+      },
+      "lat_excludes_MS03": true
+    },
+    {
+      "file": "TRA_000846_2475_RED.LBL",
+      "values": {
+        "MINIMUM_LATITUDE": 67.035402217604,
+        "MAXIMUM_LATITUDE": 67.103340353737,
+        "WESTERNMOST_LONGITUDE": -0.13391615861468,
+        "EASTERNMOST_LONGITUDE": 0.15670928660563
+      },
+      "lat_excludes_MS03": true
+    }
+  ],
+  "upstream_duplicate_generation_reason": "unknown;count arithmetic and changed fields established,but no producer generation code/explanation acquired",
+  "label_count_interpretation": "physical ROWS mismatch remains;declared value equals unique IDs,which is not proof of producer counting implementation",
+  "decision": "These615flags and149extra rows do not hide a bbox match in the actual downloaded index. This does not exclude unreleased/noncatalogued images or erroneous source geometries. AD1 downgrade retained;Mars morphology unknown.",
+  "raw_index_modified": false,
+  "clock_alignment": false
+}

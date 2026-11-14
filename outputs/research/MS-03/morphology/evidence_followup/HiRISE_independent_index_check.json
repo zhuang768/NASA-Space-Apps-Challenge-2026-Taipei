@@ -22,5 +22,10 @@
     "Invalid bbox rows not assigned to no-overlap",
     "Label row count differs from actual table;schema821-byte lengths checked for every row but release consistency unresolved",
     "Bounding rectangles used as conservative footprint screening;zero eligible bbox hits does not prove absence of surface features"
-  ]
+  ],
+  "legacy_strict_flag_note": "invalid_bbox_rows is failure of first-pass0to360 test,not proof of missing source geolocation;superseded by index_anomalies/resolution_summary.json",
+  "superseded_findings": {
+    "615_rows": "all negative-longitude flags have valid latitude excluding MS03",
+    "149_extra_rows": "149duplicate product-ID pairs;only observation-command start time differs;producer generation cause unknown"
+  }
 }

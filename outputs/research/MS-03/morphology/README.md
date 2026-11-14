@@ -4,6 +4,18 @@ Starting SHA: `7b3c865e85ffeb4db81277ef34e9c3f4a318fc9f` on `research/ms-03-eart
 
 **Decision: insufficient evidence; downgrade MS-03-E02 (AD1) to a general method reference, outside the currently supported specific MS-03 pair.** This is not evidence that polygons or fractures are absent. No Mars polygon boundaries or size/shape distributions were measured.
 
+## Generator trace and149-label diagnostic — 2026-11-15
+
+[Current report](../../../../docs/research/MS-03/report.md) distinguishes public class identifiers from the executed2026build. [Version trace](evidence_followup/generator_followup/public_version_trace.json) records Index_Builder2.18(2016),IndexBuilder1.3(2017),HiVolume2.21(2017),PDS_Release1.9(2025),and Javadoc generation on2026-10-26. None is an execution log linking those versions to the2026-11-03archive. The actual generator implementation,SQL/config andbuild logs were not obtained. Official class docs and an unrelatedSQL-LIKE helper are not the generating query.
+
+All149duplicate-product public labels were acquired: [per-pair source comparison](evidence_followup/generator_followup/duplicate_label_time_comparison.csv),[diagnostic summary](evidence_followup/generator_followup/duplicate_label_time_summary.json),[source label ZIP](evidence_followup/generator_followup/duplicate_source_labels.zip).78pairs have both integer times withinfloor/ceil of the current label command-start time;71do not.29pairs differ bymore than1second,excluding the restricted hypothesis that all differences arise only from integer-second rounding of one instant. This does not establish the actual root cause,exclude rounding as one stage,or prove current labels equal the historical build inputs. No time was selected or corrected.
+
+```sh
+/tmp/ms03geo/bin/python scripts/research/MS-03/check_hirise_duplicate_label_times.py --cache-dir /tmp/ms03_duplicate_source_labels
+```
+
+The149label SHA/URL entries andZIP are the acquired source snapshot;later public versions may differ. Resolving the remaining cause requires the same-build executable revision/hash,actualSQL/config andsource snapshot,pluswrite/count logs. AD1downgrade,Marsmorphologyunknown andCampbell/HOBOrestrictions remain unchanged.
+
 ## Main/GPU handoff and further checks — 2026-11-15
 
 [Current handoff](../../../../docs/research/MS-03/report.md) explicitly supersedes “615 locations unknown.” [Machine-readable status](evidence_followup/index_handoff/handoff_status.json) separates resolved,documented-but-not-production-verified and unresolved items.

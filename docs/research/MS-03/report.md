@@ -4,6 +4,47 @@ Team zasa｜初版2026-11-14；最後核對2026-11-15｜PR #7研究交付
 
 **閱讀順序：** 前段最新MS-03／AD1處置及2026-11-15時標交接為目前有效限制；「2026-11-14初版紀錄」之後保留歷史內容，已被新版取代的取得狀態不可作為現況。所有驗證通過只限列明的結構與重現檢查，未確認感測器真實時刻或偏移原因。
 
+## 2026-11-15生成元件追查：公開版本可核實，2026實跑版／SQL與根因仍未知
+
+接續SHA `3321765dc0cd24316e7e12d30b4ade803fa67fcd`。這輪沿官方軟體子系統、HiVolume套件、生成元件及常數頁追查，並實得149個重複產品的原始PDS標籤。**新增可確認的公開版本線索與時間差診斷，但沒有取得2026那次建置的執行檔、SQL／設定或日誌；不能宣布149組重複列的生成原因已解決。** 615筆負經度警示已由緯度排除的結論不變，舊「615筆位置未知」仍屬已取代說法。
+
+### 公開版本與實際執行版必須分開
+
+[官方constant-values頁](https://pirlwww.lpl.arizona.edu/software/HiRISE/Java/constant-values.html)的ID欄實際讀到：
+
+| 元件 | 公開文件ID所載版本／時間 | 可確認與限制 |
+|---|---|---|
+| Index_Builder | 2.18／2016-04-07 23:07:15 | 是公開文件中的類別識別值，未與2026-11-03輸出建立執行鏈 |
+| IndexBuilder | 1.3／2017-02-16 21:17:07 | 同上，不能因文件近期產生就稱此版已實跑，也不能斷言它未被使用 |
+| HiVolume | 2.21／2017-02-16 21:20:27 | 文件說明GUI可更新／重建PDS索引，沒有給本次操作紀錄 |
+| PDS_Release | 1.9／2025-02-13 20:57:27 | 其他發布元件的ID，不能拿來當IndexBuilder版本 |
+
+頁面註解記載Javadoc 1.8.0_442於`Mon Oct 26 12:11:03 MST 2026`產生。這是**文件產生時間**，不是程式編譯／部署或索引建置時間。索引54欄中的`PRODUCT_VERSION_ID`描述影像產品版本，也不是索引生成器版本；該索引沒有SQL、生成器build hash等可直接接回實跑版本的欄位。
+
+[版本、文件SHA與實讀範圍](../../../outputs/research/MS-03/morphology/evidence_followup/generator_followup/public_version_trace.json)保留來源連結與限制。已沿[官方軟體子系統頁](https://pirlwww.lpl.arizona.edu/software/HiRISE/)、HiVolume package／class及IndexBuilder文件追查，未在本次已讀公開頁面取得生成方法實作、實際RDR查詢SQL或部署設定。`PDS_Release`文件出現的SQL LIKE跳脫輔助函式，並不等於RDR生成器的SELECT／JOIN／DISTINCT查詢。沒有登入HiCat後端或存取非公開設定，也沒有以其他同名資料庫專案補作來源。
+
+### 149份產品標籤：可排除單一取整解釋，仍無法選定真值
+
+全部149個重複PRODUCT_ID的現行公開`.LBL`已取得，未改原索引；逐一讀`MRO:OBSERVATION_START_TIME`與兩個索引`OBSERVATION_START_TIME`比較。這是**同一種指令起始時間欄位**的來源對照；沒有拿第一影像列的`START_TIME`冒充指令時間，也沒有把它當獨立時鐘真值。
+
+| 本輪實際檢查 | 結果 | 正確解讀 |
+|---|---:|---|
+| 標籤取得／可讀 | 149／149 | 都有可讀的MRO:OBSERVATION_START_TIME；網址、大小、SHA逐筆保存 |
+| 兩個索引時間都落在現行標籤時間的floor／ceil整秒值 | 78組 | 僅為與該取整規則相容，不能證實原程式做了取整或任選其中一筆 |
+| 兩值無法同時落在上述兩個整秒值 | 71組 | 相對現行標籤不相容，原因仍可能涉及不同來源版本或其他處理；未確認是哪一種 |
+| 兩索引值相差超過1秒 | 29組 | 若唯一差異只是把同一時刻作整秒floor／ceil／nearest，兩值最多差1秒。因此這29組排除該受限的「唯一原因」假說；不排除取整曾參與其他階段 |
+
+[149組逐筆比較CSV](../../../outputs/research/MS-03/morphology/evidence_followup/generator_followup/duplicate_label_time_comparison.csv)、[診斷摘要與假說界線](../../../outputs/research/MS-03/morphology/evidence_followup/generator_followup/duplicate_label_time_summary.json)、[原標籤ZIP](../../../outputs/research/MS-03/morphology/evidence_followup/generator_followup/duplicate_source_labels.zip)及[取得／比較程式](../../../scripts/research/MS-03/check_hirise_duplicate_label_times.py)可重現。現行產品標籤未必是當次索引生成使用的輸入版本，所以71組不相容不能直接命名為SQL join bug或資料庫多版本bug。
+
+### 本輪能下的結論與仍缺的決定性證據
+
+**已知：** 公開文件ID與文件產生時間可追溯；149份標籤實際取得；全部差異不能只用同一時刻的整秒取整單獨解釋。**仍未知：** 哪個IndexBuilder執行版產生2026輸出、實際查詢SQL／設定，以及149組資料如何在生成鏈中分叉。公開文件與輸出模式不能代替執行證據。
+
+若要把根因變成可確認，需要同一次建置可串起的三組材料：①執行jar／class或source revision及雜湊；②實際RDR累積索引查詢與設定、相關資料版本／快照；③寫出與計數日誌，可對照205,451物理列、205,302產品及149個差異組。由此逐步重現「查詢結果→寫表→計數→更新label」，才可判定重複發生在哪一步。這些材料本次未取得；不以未找到推定官方未保存，也未發送對外詢問。
+
+**交接：** 主要對話可引用「版本線索及受限假說已有核對，2026執行鏈與根因仍未知」；GPU保留149組時間欄與來源旗標，不以78組相容就選值、不覆寫原表、不把本輪推定轉成通用校時。AD1降級、MS-03形貌unknown、Campbell／HOBO配時禁用均維持。PR #7先不合併main。
+
+
 ## 2026-11-15正式交接：HiRISE索引已釐清事項、未知與新增證據
 
 交接基準SHA `c6f9b93aa9ff5a471a8f67fbdf40f0922e508b84`，來源仍固定為168,675,271bytes／SHA256 `d58cf52657371f6a7e65ef4dc687fdd2f9c70e276f7755853e27971f17df4126`的任務索引。**舊說法「615筆位置未知／615筆無定位」已被本交接取代。** 舊檔案與當時判斷保留供追溯，不作目前狀態。

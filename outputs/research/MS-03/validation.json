@@ -443,5 +443,23 @@
       "insideROI polygon morphology"
     ],
     "clock_alignment": false
+  },
+  "generator_followup": {
+    "date": "2026-11-15",
+    "basis_commit": "3321765dc0cd24316e7e12d30b4ade803fa67fcd",
+    "checks": [
+      "149source labels acquired and ZIP CRC/SHA checked",
+      "149individual sourceSHA/bytes and actualPRODUCT_ID match",
+      "78compatible/71not/29over1second independently recounted from saved source comparison",
+      "public version IDs are not marked as production execution",
+      "all local report/README links and JSON parsed",
+      "alluv_w,AD1geometry and existing science figures unchanged"
+    ],
+    "not_confirmed": [
+      "actual2026executedbinary/source revision",
+      "actualgeneratorSQL/config/build logs",
+      "causal origin of149duplicates"
+    ],
+    "timestamp_correction": false
   }
 }

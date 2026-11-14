@@ -43,5 +43,15 @@
     "clock_alignment_allowed": false,
     "main_merge": false
   },
-  "delivery": "prepared in report/PR7;not externally sent"
+  "delivery": "prepared in report/PR7;not externally sent",
+  "generator_followup": {
+    "date": "2026-11-15",
+    "version_trace": "../generator_followup/public_version_trace.json",
+    "149_label_diagnostic": "../generator_followup/duplicate_label_time_summary.json",
+    "public_IDs_known": true,
+    "actual2026execution_known": false,
+    "actualSQL_known": false,
+    "root_cause_known": false,
+    "restricted_rounding_only_hypothesis": "cannot explain29pairs;does not establish alternative cause"
+  }
 }

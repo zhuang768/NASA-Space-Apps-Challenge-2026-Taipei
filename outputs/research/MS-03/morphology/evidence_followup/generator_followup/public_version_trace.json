@@ -1,0 +1,97 @@
+{
+  "date_taipei": "2026-11-15",
+  "basis_commit": "3321765dc0cd24316e7e12d30b4ade803fa67fcd",
+  "versions": [
+    {
+      "class": "Index_Builder",
+      "published_ID": "HiRISE.HiCat.HiVolume.Index_Builder (2.18 2016/04/07 23:07:15)",
+      "source_anchor": "HiRISE.HiCat.HiVolume.Index_Builder.ID",
+      "production2026_execution_verified": false
+    },
+    {
+      "class": "IndexBuilder",
+      "published_ID": "HiRISE.HiCat.HiVolume.IndexBuilder (1.3 2017/02/16 21:17:07)",
+      "source_anchor": "HiRISE.HiCat.HiVolume.IndexBuilder.ID",
+      "production2026_execution_verified": false
+    },
+    {
+      "class": "PDS_Release",
+      "published_ID": "HiRISE.HiCat.HiVolume.PDS_Release 2025/02/13 20:57:27 1.9",
+      "source_anchor": "HiRISE.HiCat.HiVolume.PDS_Release.ID",
+      "production2026_execution_verified": false
+    },
+    {
+      "class": "HiVolume",
+      "published_ID": "HiRISE.HiCat.HiVolume.HiVolume (2.21 2017/02/16 21:20:27)",
+      "source_anchor": "HiRISE.HiCat.HiVolume.HiVolume.ID",
+      "production2026_execution_verified": false
+    }
+  ],
+  "documentation_generation": {
+    "javadoc_version": "1.8.0_442",
+    "timestamp_as_printed": "Mon Oct 26 12:11:03 MST 2026",
+    "meaning": "documentation generation only;not index build or runtime evidence"
+  },
+  "source_reads": [
+    {
+      "url": "https://pirlwww.lpl.arizona.edu/software/HiRISE/Java/constant-values.html",
+      "bytes": 1176869,
+      "sha256": "36e6b14909b5425536070d2a5d012fc956678701d2b4f18f02e10b42dfa5ff96",
+      "read_scope": "class ID constants and generated-by comment",
+      "original_html_tracked": false
+    },
+    {
+      "url": "https://pirlwww.lpl.arizona.edu/software/HiRISE/Java/overview-summary.html",
+      "bytes": 13283,
+      "sha256": "396865d4f7897e8a3f2874af02128a79b8083f2dd5af565b99cd929b19dc2ade",
+      "read_scope": "HiCat.HiVolume package description and generated-by comment",
+      "original_html_tracked": false
+    },
+    {
+      "url": "https://pirlwww.lpl.arizona.edu/software/HiRISE/",
+      "bytes": 8395,
+      "sha256": "29d3c13477c7d9f2b8d88809213b95885ecb30ac0ea517436f274fabdecd67d6",
+      "read_scope": "official subsystem links;no index-builder source download link found in page",
+      "original_html_tracked": false
+    },
+    {
+      "url": "https://pirlwww.lpl.arizona.edu/software/HiRISE/Java/HiRISE/HiCat/HiVolume/HiVolume.html",
+      "bytes": 39355,
+      "sha256": "c037b8681c880b64f49482f9fa43497c8d9941b73dc3ba1a23ca2086c2c4a41c",
+      "read_scope": "class and index rebuild/update descriptions;not implementation",
+      "original_html_tracked": false
+    },
+    {
+      "url": "https://pirlwww.lpl.arizona.edu/software/HiRISE/Java/HiRISE/HiCat/HiVolume/PDS_Release.html",
+      "bytes": 43021,
+      "sha256": "2ed55c5cf56119f96ea92a68f7be0d8529b178d3e99037e97b2a60c32755bdff",
+      "read_scope": "class and SQL-LIKE helper documentation;not generator SQL",
+      "original_html_tracked": false
+    },
+    {
+      "url": "https://pirlwww.lpl.arizona.edu/software/HiRISE/Java/HiRISE/HiCat/HiVolume/package-summary.html",
+      "bytes": 13035,
+      "sha256": "bda595167c40ea4994f513689c291a87ce7ee27b9a7d80444f99abc9ad565719",
+      "read_scope": "package/class links",
+      "original_html_tracked": false
+    }
+  ],
+  "actual_executed2026_build": "unknown",
+  "generator_method_source_obtained": false,
+  "actual_SQL_obtained": false,
+  "deployed_configuration_obtained": false,
+  "production_build_log_obtained": false,
+  "conclusion": "Public documentation snapshot and classID strings identified;cannot bind to2026-11-03 archive generation or establish join/distinct/rounding mechanism",
+  "needed_to_close": [
+    "executed generator jar/class/source revision and hash",
+    "actual RDR cumulative-index SQL/config and database snapshot provenance",
+    "write/count logs linking205451physical rows and205302uniqueproducts to the same build"
+  ],
+  "unrelated_SQL_warning": "PDS_Release SQL-LIKE escaping helper is not evidence of the RDR generator SELECT/JOIN/DISTINCT implementation",
+  "archive_label_provenance_limit": {
+    "index_schema_columns": 54,
+    "product_version_field": "PRODUCT_VERSION_ID describes the image product,not index-generator build",
+    "generator_version_or_SQL_columns": [],
+    "executable_version_recoverable_from_these_columns": false
+  }
+}

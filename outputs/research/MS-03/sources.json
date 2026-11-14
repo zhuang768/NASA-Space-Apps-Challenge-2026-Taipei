@@ -143,5 +143,17 @@
     "locator": "10exact label URLs and bbox fields in index_handoff/neighbour_label_check.json",
     "read_scope": "10actual source labels downloaded;5observations selected by stated nearby bbox rule;0ROIoverlap;not all product labels or independent geodetic truth",
     "access_date_taipei": "2026-11-15"
+  },
+  "MOR10": {
+    "url": "https://pirlwww.lpl.arizona.edu/software/HiRISE/Java/constant-values.html",
+    "locator": "HiRISE.HiCat.HiVolume.Index_Builder.ID;IndexBuilder.ID;HiVolume.ID;PDS_Release.ID;Generated-by HTML comment",
+    "read_scope": "Actual1176869-byte public HTML read at named constants/comment;4IDvalues and2026-10-26doc generation recorded;not executed build/source/SQL",
+    "access_date_taipei": "2026-11-15"
+  },
+  "MOR11": {
+    "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/",
+    "locator": "149exact label URLs and hashes in generator_followup/duplicate_label_time_comparison.csv;MRO:OBSERVATION_START_TIME",
+    "read_scope": "All149actual detached labels acquired and command-start fields compared;not first-line START_TIME substitution;no index correction",
+    "access_date_taipei": "2026-11-15"
   }
 }

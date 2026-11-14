@@ -207,8 +207,8 @@
   "outputs": [
     {
       "path": "docs/research/MS-03/report.md",
-      "bytes": 62120,
-      "sha256": "e5bf71fba2fc2c6ddd0996589961094b0338f5f2aa42a1a778ca4a04ac05b92c"
+      "bytes": 67488,
+      "sha256": "533063a5d0554dc5cf44abe51ee4711fc8d9bba92ea0349cb3d07d9f09fb9d07"
     },
     {
       "path": "scripts/research/MS-03/acquire_morphology.py",
@@ -224,6 +224,11 @@
       "path": "scripts/research/MS-03/audit_hirise_index_anomalies.py",
       "bytes": 6049,
       "sha256": "e692739f2c3263a4d583acf27c5aa5265dd28f3f99e6445b73e9ff93b0d8529c"
+    },
+    {
+      "path": "scripts/research/MS-03/check_hirise_duplicate_label_times.py",
+      "bytes": 4304,
+      "sha256": "b71cfba0537bf323be8bb9f2ecf6687a4ca4708cba059812ebaa2adec07e3187"
     },
     {
       "path": "scripts/research/MS-03/check_hirise_neighbour_labels.py",
@@ -267,8 +272,8 @@
     },
     {
       "path": "outputs/research/MS-03/evidence.csv",
-      "bytes": 20940,
-      "sha256": "97edcbe9a3cd6b4d1de1b6135e6246257f16ed6e406a2b7dacf0cbe3eddeb79a"
+      "bytes": 21879,
+      "sha256": "b174740840b49d3501528abbad294643892fdeee2400d17702f32e109f0436aa"
     },
     {
       "path": "outputs/research/MS-03/mars_reference.json",
@@ -352,8 +357,8 @@
     },
     {
       "path": "outputs/research/MS-03/morphology/README.md",
-      "bytes": 14182,
-      "sha256": "5149c3ad3610a2d0a69cdf0a6f1069e80b267f9a2c3b91fe98dbf2466042b0b1"
+      "bytes": 16029,
+      "sha256": "96826b0445f0a0b76e6cbd6f825c0f118fe60b8409b93123bac384432a479892"
     },
     {
       "path": "outputs/research/MS-03/morphology/V17_086802_2374_XN_57N118W_browse.jpg",
@@ -389,6 +394,26 @@
       "path": "outputs/research/MS-03/morphology/evidence_followup/author_paper_reading.json",
       "bytes": 1205,
       "sha256": "ca0b8db71d4276e057636e497206e242f1037599b306de1facebc5cafe4c30f8"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/generator_followup/duplicate_label_time_comparison.csv",
+      "bytes": 52557,
+      "sha256": "d991340b8e3997832ebf670f994883e47f4159c07317c4286def5d5db936fc9c"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/generator_followup/duplicate_label_time_summary.json",
+      "bytes": 918,
+      "sha256": "66c3d548915a546a65b02dba61351310297e305528dd8910d7c4721d2b52e52f"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/generator_followup/duplicate_source_labels.zip",
+      "bytes": 412652,
+      "sha256": "aaea677542b323640935f66450e9ebba825e2a534fc54fa272b50c9d6e23d34b"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/generator_followup/public_version_trace.json",
+      "bytes": 4346,
+      "sha256": "d2fcd64440e31217a94e899ac234ceb534fb478ebf0a5c62246ec1b71829ffe4"
     },
     {
       "path": "outputs/research/MS-03/morphology/evidence_followup/index_anomalies/ERRATA.TXT",
@@ -522,8 +547,8 @@
     },
     {
       "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/handoff_status.json",
-      "bytes": 1672,
-      "sha256": "26f93584ffd7497107781152a09b834fda5203d1fe05b8c1f16146b512d0dadc"
+      "bytes": 2123,
+      "sha256": "3927253edba71a3cf65cb6ccfb022272f190e2a69211b5ad4c783a4d92ed5497"
     },
     {
       "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/neighbour_label_check.json",
@@ -597,13 +622,13 @@
     },
     {
       "path": "outputs/research/MS-03/search_log.csv",
-      "bytes": 10462,
-      "sha256": "c70e9b3c56b8761ca2a213bef34ff04cee1df8a3f11e54dd2e6b42852e24bfe4"
+      "bytes": 11448,
+      "sha256": "d5d8f83641537c6cfc9e1589a0856bfc0a5211da9325c88872ba9eeed37bf3ee"
     },
     {
       "path": "outputs/research/MS-03/sources.json",
-      "bytes": 8978,
-      "sha256": "01b28659bae0eea87f70976df14161d19fe4cfdd12a6e50aa6cd51c1c4f5f418"
+      "bytes": 9811,
+      "sha256": "19feded5fbb7adfc7b10c7a4050322b626d7df955f04e2ed4ba917f2ede5bffa"
     },
     {
       "path": "outputs/research/MS-03/uv_w/campbell_clock_audit.json",
@@ -647,8 +672,8 @@
     },
     {
       "path": "outputs/research/MS-03/validation.json",
-      "bytes": 19479,
-      "sha256": "429a2f4388866ff4812162ad5d01acdd24af706f24d951f15ecfeb6e2d045739"
+      "bytes": 20230,
+      "sha256": "9b3a4c9fa6e1a3434a56f33316b8e15f55470080093604f18685df466f85bd94"
     }
   ],
   "followup_date_taipei": "2026-11-15",
@@ -736,5 +761,14 @@
     "extra_label_checks": 10,
     "generator_documentation": "read;not production implementation",
     "main_merge": false
+  },
+  "generator_followup": {
+    "basis_commit": "3321765dc0cd24316e7e12d30b4ade803fa67fcd",
+    "date": "2026-11-15",
+    "directory": "outputs/research/MS-03/morphology/evidence_followup/generator_followup",
+    "source_label_count": 149,
+    "causal_root": "unknown",
+    "actual2026build_and_SQL": "not obtained",
+    "new_scope": "public version trace and bounded time-field diagnostic;not morphology or clock correction"
   }
 }

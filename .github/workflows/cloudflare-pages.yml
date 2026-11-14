@@ -1,4 +1,4 @@
-name: Deploy TerraMatch Mission Lab to Cloudflare Pages
+name: Deploy TerraMatch Mission Lab to Cloudflare (team Worker)
 
 on:
   push:
@@ -46,7 +46,7 @@ jobs:
             errors.push('Replace CLOUDFLARE_API_TOKEN with the API token value only (no command, quotes, internal whitespace or invisible characters).');
           }
           if (!/^[a-f0-9]{32}$/i.test(account)) {
-            errors.push('Set CLOUDFLARE_ACCOUNT_ID to the 32-character account ID of the existing Pages project.');
+            errors.push('Set CLOUDFLARE_ACCOUNT_ID to the 32-character account ID of the team (zizi) Cloudflare account that owns the Worker.');
           }
           if (errors.length) {
             errors.forEach(message => console.error('::error::' + message));
@@ -72,19 +72,16 @@ jobs:
           fs.writeFileSync('web/dist/deployment.json', JSON.stringify({commit: process.env.GITHUB_SHA, run: process.env.GITHUB_RUN_ID}) + '\n');
           NODE
 
-      - name: Deploy to Cloudflare Pages
+      # Uploads web/dist as static assets of the Worker named in wrangler.jsonc.
+      - name: Deploy to Cloudflare Worker
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ env.CF_API_TOKEN_CLEAN }}
           accountId: ${{ env.CF_ACCOUNT_CLEAN }}
           wranglerVersion: "4.162.0"
-          command: >-
-            pages deploy web/dist
-            --project-name=terramatch-mission-lab
-            --branch=main
-            --commit-hash=${{ github.sha }}
+          command: deploy --message "${{ github.sha }}"
 
       - name: Verify public release matches this commit
         env:
-          SITE_URL: https://terramatch-mission-lab.pages.dev
+          SITE_URL: https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev
         run: python3 scripts/verify_public_release.py

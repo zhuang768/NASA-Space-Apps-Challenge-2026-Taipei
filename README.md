@@ -6,7 +6,7 @@ Search open terrain data for Earth candidate regions, compare them with Mars tar
 
 **[Live dashboard → nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev)** · [Methods](docs/README.md) · [Candidate results](outputs/analysis/candidate_handoff.md) · [Website handoff](outputs/matching_handoff/README.md) · [Mars data](outputs/mars_profiles/handoff.md) · [Data guide](data/README.md) · [Contributing](CONTRIBUTING.md)
 
-> Research pipeline and candidate-analysis prototype. Regional terrain results are available; validated four-theme scoring is unfinished. The public site serves the organized three-view layout (manual Cloudflare upload of `9d865d7`); automatic deploys from GitHub Actions still need the owner to fix the Cloudflare secrets, see the deployment report. This repository does not establish NASA endorsement or completed competition submission. Earth–Mars-only scope is a locked team decision.
+> Research pipeline and candidate-analysis prototype. Regional terrain results are available; validated four-theme scoring is unfinished. The official public dashboard is https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev (team Cloudflare account); automatic deploys from GitHub Actions need the team API token, see the deployment report. This repository does not establish NASA endorsement or completed competition submission. Earth–Mars-only scope is a locked team decision.
 
 ## Results
 
@@ -22,7 +22,7 @@ Candidates come from sparse regional terrain screening and require further envir
 | Rover day/night brightness temperature | Exploratory; incomplete quality support | [MEDA method](docs/mars_temperature.md), [quality summary](outputs/mars_temperature/summary.json) |
 | Multi-theme Earth raw data | Teammate inventory; complete batch not on this machine | [Inventory](docs/earth_inventory.csv), [handoff](docs/data_handoff.md) |
 | Four-theme scoring and field-site validation | Unfinished | [Quantity comparison](docs/cross_reference.md) |
-| Interactive workbench | Public site serves organized layout from `9d865d7` (manual upload); Actions auto-deploy still blocked by secrets | [Live dashboard](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev) (team Cloudflare), [mirror](https://terramatch-mission-lab.pages.dev), [deployment check](docs/deployment_check_2026-11-14.md) |
+| Interactive workbench | Official site on the team Cloudflare Worker; auto-deploy from `main` waits for the team API token | [Live dashboard](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev) (official, team Cloudflare), [deployment check](docs/deployment_check_2026-11-14.md) |
 | English presentation and official submission | Drafts available; completion unverified | [Submission preparation](docs/submission/preparation.md) |
 
 ## Run locally

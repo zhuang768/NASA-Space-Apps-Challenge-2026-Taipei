@@ -15,6 +15,6 @@ Build with `npm run build --prefix web`; the static output is `web/dist`. The da
 
 ## Deployment
 
-The repository includes a Cloudflare Pages workflow. Every push to `main` triggers its build/deploy path. A separately configured Cloudflare Git integration may also deploy main. A successful push or build alone does not establish that the public site is current; check the actual public page for the three-view navigation and latest asset bundle.
+The repository includes a Cloudflare workflow. Every push to `main` builds `web/dist` and deploys it to the team Worker `nasa-space-apps-challenge-2026-taipei` (config in the root `wrangler.jsonc`). Do not also enable Cloudflare's own Git build for this Worker, or two deploy paths will race. A successful push or build alone does not establish that the public site is current; check the actual public page for the three-view navigation and latest asset bundle.
 
-The previously checked URL is https://terramatch-mission-lab.pages.dev . Deployment credentials belong in service/repository settings, never source files. See the root README for verification history and outstanding configuration issues.
+The official URL is https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev . The older `terramatch-mission-lab.pages.dev` site is retired and no longer updated. Deployment credentials belong in service/repository settings, never source files. See the root README for verification history and outstanding configuration issues.

@@ -42,3 +42,12 @@ This was a one-off manual upload. Pushes to `main` will not update the site auto
 ## Subsequent public desktop and mobile verification
 
 The organized public release was independently checked after the manual upload. Desktop 1440×1000 and mobile 390×844 passed overview/navigation, target and candidate selection, evidence drawer/Escape closure, and Demo reset. The mobile document remained exactly 390 px wide with method details closed and open. No JavaScript page errors were observed. The Gale terrain-comparison image returned HTTP 200. The served JavaScript was `index-C1XZWWZv.js`. No new layout defect requiring a code change was found in these flows. Earlier failure/overflow findings above describe the previous release, not the current public layout. Automatic deployment credentials remain unresolved.
+
+## Official site moved to the team Cloudflare account
+
+The team chose the Worker `nasa-space-apps-challenge-2026-taipei` in the team (zizi) Cloudflare account as the single official site: https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev . Its first upload contained unbuilt source (`/src/main.tsx`) and rendered blank; it was redeployed from a local build of `main` and then showed the three-view layout with no console errors.
+
+- Root `wrangler.jsonc` names the Worker and serves `web/dist` as static assets.
+- The GitHub Actions workflow now runs `wrangler deploy` to that Worker and verifies `deployment.json` at the new URL.
+- Repository secret `CLOUDFLARE_ACCOUNT_ID` must hold the team account ID; `CLOUDFLARE_API_TOKEN` must be a team-account token with Workers Scripts edit permission. Until the token is replaced, the workflow stops at validation and the site only changes through manual deploys.
+- The older `terramatch-mission-lab.pages.dev` site (personal account) is retired and no longer updated.

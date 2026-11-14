@@ -1,13 +1,11 @@
 {
   // Cloudflare Worker (static assets) for the TerraMatch dashboard.
-  // Used by `npx wrangler deploy` and by Workers Builds when the repo is connected in Cloudflare.
-  // The GitHub Actions Pages deploy ignores this file (no pages_build_output_dir).
+  // Official site: https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev (team "zizi" Cloudflare account).
+  // GitHub Actions (.github/workflows/cloudflare-pages.yml) builds web/dist, stamps deployment.json and runs
+  // `wrangler deploy`. For a manual deploy, build first: `cd web && npm ci && npm run build && cd .. && npx wrangler deploy`.
   "$schema": "./web/node_modules/wrangler/config-schema.json",
   "name": "nasa-space-apps-challenge-2026-taipei",
   "compatibility_date": "2026-11-01",
-  "build": {
-    "command": "cd web && npm ci && npm run build"
-  },
   "assets": {
     "directory": "./web/dist",
     "not_found_handling": "single-page-application"

@@ -101,11 +101,44 @@ geom = {
 earth = {
     "E01_UniversityValley": {"lat": dms(77, 52, "S"), "lon": dms(160, 45, "E"), "src": "Marinova 2022 p.145 (valley); met station 77deg51.729'S 160deg42.606'E p.146"},
     "E03_Adventdalen_ADE": {"lat": 78.1722, "lon": 16.0613, "src": "Rotem 2023 (valley terrace site ADE)"},
-    "E04_Haughton_p6_DMS": {"lat": dms(75, 22, "N"), "lon": dms(89, 41, "W"), "src": "Andres 2020 sec.1.2.2 p.6"},
-    "E04_Haughton_fig1.8": {"lat": 75.37, "lon": -89.53, "src": "Andres 2020 Fig 1.8 p.20"},
+    "E04_Haughton_structure_center_p6": {"lat": dms(75, 22, "N"), "lon": dms(89, 41, "W"), "src": "Andres 2020 sec.1.2.2 p.6 (impact structure)"},
+    "E04_HRV_study_area_fig1.8": {"lat": 75.37, "lon": -89.53, "src": "Andres 2020 Fig 1.8 p.20 / p.1 (Haughton River Valley study area)"},
 }
-d = earth["E04_Haughton_p6_DMS"], earth["E04_Haughton_fig1.8"]
-earth["E04_coordinate_discrepancy_km"] = gc_km(d[0]["lat"], d[0]["lon"], d[1]["lat"], d[1]["lon"], EARTH_R_M)
+d1, d2 = earth["E04_Haughton_structure_center_p6"], earth["E04_HRV_study_area_fig1.8"]
+earth["E04_structure_center_to_HRV_study_area_km"] = gc_km(d1["lat"], d1["lon"], d2["lat"], d2["lon"], EARTH_R_M)
+
+
+def utm_inverse(E, N, lon0_deg):
+    """Inverse UTM (northern hemisphere), WGS84, Kruger series. This-study calculation."""
+    a_, f_, k0, E0 = 6378137.0, 1 / 298.257223563, 0.9996, 500000.0
+    n = f_ / (2 - f_)
+    A = a_ / (1 + n) * (1 + n**2 / 4 + n**4 / 64)
+    b = [n/2 - 2*n**2/3 + 37*n**3/96 - n**4/360, n**2/48 + n**3/15 - 437*n**4/1440,
+         17*n**3/480 - 37*n**4/840, 4397*n**4/161280]
+    dd = [2*n - 2*n**2/3 - 2*n**3, 7*n**2/3 - 8*n**3/5, 56*n**3/15]
+    xi, eta = N / (k0 * A), (E - E0) / (k0 * A)
+    xi_p = xi - sum(b[j] * math.sin(2*(j+1)*xi) * math.cosh(2*(j+1)*eta) for j in range(4))
+    eta_p = eta - sum(b[j] * math.cos(2*(j+1)*xi) * math.sinh(2*(j+1)*eta) for j in range(4))
+    chi = math.asin(math.sin(xi_p) / math.cosh(eta_p))
+    lat = chi + sum(dd[j] * math.sin(2*(j+1)*chi) for j in range(3))
+    lon = math.radians(lon0_deg) + math.atan2(math.sinh(eta_p), math.cos(xi_p))
+    return math.degrees(lat), math.degrees(lon)
+
+
+# Andres 2020 Table 3.1: LiDAR grids, UTM zone 16N (central meridian -87), "Lat"=northing, "Long"=easting
+HAUGHTON_GRIDS = {"16A": (428554, 8367099), "16C": (428529, 8367504), "16D": (428565, 8367644),
+                  "16K": (428257, 8365195), "16L": (428525, 8365174), "16N": (428803, 8366051),
+                  "16AD": (427651, 8369103), "StoneStripes": (425145, 8365883),
+                  "EastCampPolygons": (429239, 8366440)}
+conv = {k: dict(zip(("lat", "lon"), utm_inverse(E, N, -87))) for k, (E, N) in HAUGHTON_GRIDS.items()}
+lats = [v["lat"] for v in conv.values()]
+lons = [v["lon"] for v in conv.values()]
+earth["E04_LiDAR_grids_latlon_from_UTM16N_Table3.1"] = {
+    "grids": conv,
+    "lat_range": [min(lats), max(lats)], "lon_range": [min(lons), max(lons)],
+    "ns_extent_km": gc_km(min(lats), lons[0], max(lats), lons[0], EARTH_R_M),
+    "ew_extent_km_at_mean_lat": gc_km(sum(lats)/len(lats), min(lons), sum(lats)/len(lats), max(lons), EARTH_R_M),
+    "note": "grids agree with Fig 1.8 (75.37N, -89.53) to ~0.01-0.1 deg; the p.6 coordinate is the impact-structure centre, a different anchor"}
 # unit conversions used in the report (this-study calculation, Kelvin = Celsius + 273.15)
 earth["unit_conversions_K"] = {
     "UV_MAAT_-23.4C": -23.4 + 273.15, "UV_42cm_-24.1C": -24.1 + 273.15,
@@ -135,4 +168,4 @@ print("pool rows", pool_n, "| all pass:", result["all_consistency_checks_pass"])
 for c in checks:
     print(("OK  " if c["pass"] else "FAIL"), c["item"], c["abs_diff"])
 print(json.dumps(geom, indent=1))
-print(json.dumps({k: v for k, v in earth.items() if k.startswith("E04_coord") or k == "unit_conversions_K"}, indent=1))
+print(json.dumps({k: v for k, v in earth.items() if k.startswith("E04_structure") or k.startswith("E04_LiDAR") or k == "unit_conversions_K"}, indent=1))

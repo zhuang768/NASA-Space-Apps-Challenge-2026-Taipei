@@ -176,19 +176,70 @@
       "src": "Rotem 2023 (valley terrace site ADE)",
       "lat_abs_deg": 78.1722
     },
-    "E04_Haughton_p6_DMS": {
+    "E04_Haughton_structure_center_p6": {
       "lat": 75.36666666666666,
       "lon": -89.68333333333334,
-      "src": "Andres 2020 sec.1.2.2 p.6",
+      "src": "Andres 2020 sec.1.2.2 p.6 (impact structure)",
       "lat_abs_deg": 75.36666666666666
     },
-    "E04_Haughton_fig1.8": {
+    "E04_HRV_study_area_fig1.8": {
       "lat": 75.37,
       "lon": -89.53,
-      "src": "Andres 2020 Fig 1.8 p.20",
+      "src": "Andres 2020 Fig 1.8 p.20 / p.1 (Haughton River Valley study area)",
       "lat_abs_deg": 75.37
     },
-    "E04_coordinate_discrepancy_km": 4.322791258876751,
+    "E04_structure_center_to_HRV_study_area_km": 4.322791258876751,
+    "E04_LiDAR_grids_latlon_from_UTM16N_Table3.1": {
+      "grids": {
+        "16A": {
+          "lat": 75.37608648290647,
+          "lon": -89.53585002630436
+        },
+        "16C": {
+          "lat": 75.3797030979511,
+          "lon": -89.53735182862484
+        },
+        "16D": {
+          "lat": 75.38097042062354,
+          "lon": -89.5362881412168
+        },
+        "16K": {
+          "lat": 75.35892472037956,
+          "lon": -89.54347723998369
+        },
+        "16L": {
+          "lat": 75.35883963184597,
+          "lon": -89.53395611246928
+        },
+        "16N": {
+          "lat": 75.36679839679307,
+          "lon": -89.52543788803418
+        },
+        "16AD": {
+          "lat": 75.39368038259451,
+          "lon": -89.57094551946253
+        },
+        "StoneStripes": {
+          "lat": 75.36386077903315,
+          "lon": -89.6547489484874
+        },
+        "EastCampPolygons": {
+          "lat": 75.37044750900976,
+          "lon": -89.5105763416902
+        }
+      },
+      "lat_range": [
+        75.35883963184597,
+        75.39368038259451
+      ],
+      "lon_range": [
+        -89.6547489484874,
+        -89.5105763416902
+      ],
+      "ns_extent_km": 3.874114723724713,
+      "ew_extent_km_at_mean_lat": 4.04853047766084,
+      "note": "grids agree with Fig 1.8 (75.37N, -89.53) to ~0.01-0.1 deg; the p.6 coordinate is the impact-structure centre, a different anchor"
+    },
     "unit_conversions_K": {
       "UV_MAAT_-23.4C": 249.74999999999997,
       "UV_42cm_-24.1C": 249.04999999999998,

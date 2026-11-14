@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "pdf_pages": 8,
+  "pdf_text_and_coordinates_checked": true,
+  "pdf_rendered_and_visually_reviewed": true,
+  "visual_review_scope": "All 8 pages in contact sheet; full-size pages1,2,4,6,8; revised pages2,8 rerendered and reviewed",
+  "candidate_mapping": {
+    "MS-01": "A",
+    "MS-02": "D",
+    "MS-03": "C"
+  },
+  "final_selection_status_separate_from_native_review_status": true,
+  "MOLA_finite_grid_not_direct_observation_caveat": true,
+  "high_latitude_and_specific_mission_ineligibility_disclosed": true,
+  "bounded_novelty_not_global_clearance": true,
+  "report_artifact_hashes_match": true,
+  "native_numerical_validation": "PASS:13 checks; see numerical_validation.json",
+  "old_deliverable_preservation": "PASS:13 fixed main blobs plus workbook; see preservation_check.json",
+  "limitations": [
+    "No globally exhaustive prior-site exclusion",
+    "No QA-qualified local surface-temperature series",
+    "No local pressure/wind/ice truth/engineering mission acceptance"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "version": "MARS-RESELECT-20261114-v1",
+  "created_taipei": "2026-11-14T22:26:53.255591+08:00",
+  "status": "PASS_LOCAL_REPORT_NUMERIC_AND_VISUAL_QA",
+  "selected_review_ids": [
+    "A",
+    "D",
+    "C"
+  ],
+  "selected_ids": [
+    "MS-01",
+    "MS-02",
+    "MS-03"
+  ],
+  "files": [
+    {
+      "path": "outputs/research/mars_reselection_20261114/mars_three_candidates_report_zh.pdf",
+      "bytes": 469106,
+      "sha256": "b0b17d071ffb0fedc90bfac150b189c4c9b446d389135a9a0345c5cf0d869bb8"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/report.md",
+      "bytes": 16524,
+      "sha256": "1708e2d7af86118edf2a88c3e896464406d5bd617f9ab197f7c4d412f5969e4b"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/candidate_map.png",
+      "bytes": 348396,
+      "sha256": "883e8b5432ebaae2e7a53a7be8254feec4cb650e7e7841795675bbc18b5ff1f5"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/final_candidates.csv",
+      "bytes": 5897,
+      "sha256": "83a03d1f4273fa7c45c0d22b5c29a8b8cfc0544e481d5f2bbca2c85812534c4e"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/selected_targets.json",
+      "bytes": 3434,
+      "sha256": "388ca89110b2a8fbb4fc6fa403994ab54cd193fd23eefd8aa5987a75e3255ba5"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/all_data_usage.csv",
+      "bytes": 803,
+      "sha256": "384fd5358f45c0ba4965a829f51a5e28496efbb5c90435f57823ec747ef345bd"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/bounded_prior_site_audit.json",
+      "bytes": 9162,
+      "sha256": "c9091e3155c5c6300eccb071ac2062dcd1611bf04559577385c8c40e9cd3e7aa"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/report_validation.json",
+      "bytes": 1012,
+      "sha256": "9a069647d6caf0172e3c329921d7a079c4c1805f38c92e567fb2eab58faf37d7"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/preservation_check.json",
+      "bytes": 3714,
+      "sha256": "efc0ce3286f2adbc135f14d195e3e1a99016a4c7fb47b2e9b3d2f5ab538e6b12"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/known_ice_points_morgan2025.csv",
+      "bytes": 567,
+      "sha256": "00e32cfc0666ea56a6901dae365dc00d59d8fd60d7590f76d8a994483a0e41a6"
+    }
+  ],
+  "report_builder_sha256": "837a5b3c893ab57dd8fe15ef363471578902d3b6e156cd2d19c1e5ec82011835",
+  "publication_status": "local_only; no commit/push/merge/deployment/submission"
+}

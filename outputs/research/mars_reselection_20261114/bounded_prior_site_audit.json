@@ -1,0 +1,303 @@
+{
+  "version": "MARS-RESELECT-20261114-v1",
+  "date_taipei": "2026-11-14T22:22:25.601487+08:00",
+  "scope": "Named catalog/point-table and specified primary-source review; no global novelty guarantee",
+  "inherited_baseline_main": "e84da75d905ad43f260e74307752946862200dae",
+  "morgan_2025_table2": {
+    "doi": "10.3847/PSJ/ad9b24",
+    "url": "https://doi.org/10.3847/PSJ/ad9b24",
+    "reading_scope": "Complete specified table,26 rows,in primary-publication search index; not full article",
+    "points": [
+      {
+        "site": "Site 17",
+        "lat": 52.01,
+        "lonE": 214.7
+      },
+      {
+        "site": "Site 23",
+        "lat": 57.33,
+        "lonE": 234.2
+      },
+      {
+        "site": "Site 26",
+        "lat": 55.62,
+        "lonE": 241.24
+      },
+      {
+        "site": "Site 33",
+        "lat": 58.97,
+        "lonE": 58.58
+      },
+      {
+        "site": "Site 15",
+        "lat": 50.78,
+        "lonE": 208.76
+      },
+      {
+        "site": "Site 3",
+        "lat": 55.58,
+        "lonE": 150.6
+      },
+      {
+        "site": "Site 14",
+        "lat": 43.9,
+        "lonE": 204.35
+      },
+      {
+        "site": "Site 5",
+        "lat": 46.18,
+        "lonE": 188.5
+      },
+      {
+        "site": "Site 40",
+        "lat": -51.29,
+        "lonE": 101.06
+      },
+      {
+        "site": "Site 16",
+        "lat": 50.37,
+        "lonE": 219.71
+      },
+      {
+        "site": "Site 32",
+        "lat": 45.85,
+        "lonE": 147.2
+      },
+      {
+        "site": "Site 8",
+        "lat": 44.35,
+        "lonE": 152.92
+      },
+      {
+        "site": "Site 10",
+        "lat": 53.27,
+        "lonE": 46.26
+      },
+      {
+        "site": "Site 6",
+        "lat": 50.67,
+        "lonE": 278.4
+      },
+      {
+        "site": "Site 29",
+        "lat": -57.36,
+        "lonE": 125.17
+      },
+      {
+        "site": "Site 31",
+        "lat": 42.58,
+        "lonE": 189.02
+      },
+      {
+        "site": "Site 45",
+        "lat": 52.95,
+        "lonE": 50.87
+      },
+      {
+        "site": "Site 11",
+        "lat": 50.51,
+        "lonE": 265.2
+      },
+      {
+        "site": "Site 1",
+        "lat": 46.35,
+        "lonE": 176.89
+      },
+      {
+        "site": "Site 39",
+        "lat": -58.54,
+        "lonE": 207.23
+      },
+      {
+        "site": "Site 7",
+        "lat": 44.22,
+        "lonE": 164.2
+      },
+      {
+        "site": "Site 46",
+        "lat": 46.62,
+        "lonE": 171.88
+      },
+      {
+        "site": "Site 47",
+        "lat": 39.56,
+        "lonE": 202.42
+      },
+      {
+        "site": "Site 4",
+        "lat": 45.07,
+        "lonE": 164.7
+      },
+      {
+        "site": "Site 38",
+        "lat": 41.91,
+        "lonE": 36.42
+      },
+      {
+        "site": "Site 2",
+        "lat": 43.3,
+        "lonE": 164.21
+      }
+    ],
+    "checks": [
+      {
+        "review_id": "A",
+        "center_lat": 56.75,
+        "center_lonE": 72.75,
+        "point_hits_in_half_open_nominal_cell": [],
+        "nearest_point": {
+          "site": "Site 33",
+          "lat": 58.97,
+          "lonE": 58.58
+        },
+        "nearest_center_distance_km_context_only": 464.78915949139855,
+        "distance_is_not_footprint_intersection": true
+      },
+      {
+        "review_id": "B",
+        "center_lat": 55.25,
+        "center_lonE": 151.25,
+        "point_hits_in_half_open_nominal_cell": [],
+        "nearest_point": {
+          "site": "Site 3",
+          "lat": 55.58,
+          "lonE": 150.6
+        },
+        "nearest_center_distance_km_context_only": 29.341066422565824,
+        "distance_is_not_footprint_intersection": true
+      },
+      {
+        "review_id": "C",
+        "center_lat": 57.75,
+        "center_lonE": 242.25,
+        "point_hits_in_half_open_nominal_cell": [],
+        "nearest_point": {
+          "site": "Site 26",
+          "lat": 55.62,
+          "lonE": 241.24
+        },
+        "nearest_center_distance_km_context_only": 130.4628240025022,
+        "distance_is_not_footprint_intersection": true
+      },
+      {
+        "review_id": "D",
+        "center_lat": 52.75,
+        "center_lonE": 168.25,
+        "point_hits_in_half_open_nominal_cell": [],
+        "nearest_point": {
+          "site": "Site 46",
+          "lat": 46.62,
+          "lonE": 171.88
+        },
+        "nearest_center_distance_km_context_only": 388.9811922725505,
+        "distance_is_not_footprint_intersection": true
+      }
+    ]
+  },
+  "catalog_checks": [
+    {
+      "source_id": "N1",
+      "name": "NASA EMC EZMars",
+      "finding": "381 ROI與51 EZ已查快照北界分別47.403315/47.851044N，三格南界更北",
+      "limit": "沿用固定main的既有完整幾何查核；本輪未重取；非所有歷史提案"
+    },
+    {
+      "source_id": "N2",
+      "name": "SWIM4MIM RZ",
+      "finding": "提供者頁確認是具體優先區；已驗幾何快照北界51.217655N，三格在外",
+      "limit": "頁面本輪重讀；幾何北界是繼承快照，非本輪新下載；工程裁切變體未完整排除"
+    },
+    {
+      "source_id": "N3",
+      "name": "Mashal等2025 MCOA",
+      "finding": "原文方法與Figure8/TableA3表明23優先區限±50度，三格不在其範圍",
+      "limit": "是此研究已選優先區範圍；不把人類工程限制套成本輪要求"
+    },
+    {
+      "source_id": "N4",
+      "name": "Morgan等2025 Table2",
+      "finding": "原文索引完整26點，root逐格查無表內點；另算最近點中心距",
+      "limit": "是已知露冰點表而非研究足跡；未讀全文；完整表轉錄見附件"
+    },
+    {
+      "source_id": "N5",
+      "name": "Dundas等2014 Table1",
+      "finding": "查核讀取原文20點，未見點落A/D/C格",
+      "limit": "點表不是完整影像/研究範圍"
+    },
+    {
+      "source_id": "N6",
+      "name": "Dundas等2021",
+      "finding": "本文具體冰崖點/圖說與候選分離，包括Milankovic約54.5N213.5E及57N95.7E",
+      "limit": "S1-S4完整補表及ScienceBase原始全表未取得，不宣稱全目錄排除"
+    },
+    {
+      "source_id": "N7",
+      "name": "NASA SkyFall 2026 AP-105",
+      "finding": "具體設計參考場址43.3295N198.5228E，名義100x25km橢圓；與三格分離",
+      "limit": "不是SkyFall最終選址；五廣域評估區不等於每個點都被選定"
+    },
+    {
+      "source_id": "N8",
+      "name": "2015 Phlegra基地提案1002",
+      "finding": "原文具體39N172E與列明49N126E/49.5N160E/47N347E均不是三格",
+      "limit": "廣域Phlegra研究仍存在；原提案部分延伸ROI未完整幾何化"
+    },
+    {
+      "source_id": "N9",
+      "name": "2020 Phlegra候選6008",
+      "finding": "具體影像搜尋30-40N160-166E，圖例38.7N163.88E；與MS-02分離",
+      "limit": "Phlegra大區地質研究曾延伸30-52N；不能把大區當新研究區"
+    },
+    {
+      "source_id": "N10",
+      "name": "NASA ODE existing/proposed landing sites",
+      "finding": "已讀公開座標頁，未有列明中心落入三格",
+      "limit": "該頁不是所有現代任務/歷史提案的最新完整足跡庫；中心不代表完整橢圓"
+    },
+    {
+      "source_id": "N11",
+      "name": "NASA 2015 abstract1018",
+      "finding": "原文明示ROI40-50N160-190E及46.16N188.8E場址，三格不在ROI",
+      "limit": "僅限該明示ROI；不借用其冰深/資源值"
+    }
+  ],
+  "queries": {
+    "MS-01": [
+      "Mars \"56.75\" \"72.75\"",
+      "Mars Utopia \"56\" \"72\" ice landing site exploration",
+      "Mars \"56\" \"73\" \"landing site\" ice"
+    ],
+    "MS-02": [
+      "Mars \"52.75\" \"168.25\"",
+      "Mars \"52\" \"168\" \"ice\" \"landing\"",
+      "Mars Phlegra \"53\" \"168\" ice exploration",
+      "Mars \"Phlegra\" \"52\" \"landing\"",
+      "Mars \"Phlegra\" \"53\" \"exploration zone\""
+    ],
+    "MS-03": [
+      "Mars \"57.75\" \"242.25\"",
+      "Mars \"57.75\" \"-117.75\"",
+      "Mars Alba \"58\" \"242\" ice crater scarp",
+      "Mars \"58\" \"242\" \"landing site\" ice"
+    ]
+  },
+  "candidate_decisions": {
+    "A": "retain conditional research candidate MS-01",
+    "D": "retain conditional research candidate MS-02",
+    "C": "retain conditional research candidate MS-03",
+    "B": "hold out of final three because proximity to known exposure and unavailable study footprint; not a confirmed duplicate"
+  },
+  "limits": [
+    "No-hit exact-coordinate search is not proof of no previous research.",
+    "Broad satellite/geomorphic mapping is not a specific selected or developed site.",
+    "Shared map sources and varying spatial/temporal support do not create independent confirmations.",
+    "Unmatched older alternative EZs,full 2021 supporting tables and unpublished proposals remain outside complete exclusion."
+  ],
+  "publication_or_communication": "No external submission,contact,registration,commit,push or merge.",
+  "inherited_evidence": {
+    "path": "outputs/consolidated/research_main_20261114/sources/final_ab1da697/outputs/research/team2_novelty_audit.csv",
+    "sha256": "7cd2f437083b67bd941a3e5929008a7aa83872ccaede53594cea056e0218b511",
+    "use": "catalog bounds and prior scope records only; no new extraction claim"
+  }
+}

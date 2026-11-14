@@ -1,0 +1,6 @@
+{
+  "A": {"lat": 56.75, "lon": 72.75, "review_role": "primary_detailed_review_not_novelty_cleared"},
+  "B": {"lat": 55.25, "lon": 151.25, "review_role": "held_out_near_known_ice_exposure_no_duplicate_ruling"},
+  "C": {"lat": 57.75, "lon": -117.75, "review_role": "primary_detailed_review_not_novelty_cleared"},
+  "D": {"lat": 52.75, "lon": 168.25, "review_role": "primary_detailed_review_not_novelty_cleared"}
+}

@@ -1,0 +1,28 @@
+{
+  "scope": "File, provenance, geometry, finite support and numerical reproduction; not science validity, originality, ice truth or mission approval",
+  "checks": {
+    "final_script_hash_chain_matches": true,
+    "all_protected_input_hashes_match": true,
+    "global_candidate_coordinates_unique": true,
+    "native_fixed_IDs_and_coordinates_match": true,
+    "native_full_ice_data_support": true,
+    "TES_excludes_infilled_cells": true,
+    "dust_669_sols_per_candidate_year": true,
+    "dust_unique_candidate_year_time": true,
+    "MCS_288_bins_per_candidate": true,
+    "MCS_unique_candidate_MY_Ls": true,
+    "MCS_pair_contrast_exact_same_bin": true,
+    "native_summary_and_series_agree": true,
+    "all_front_points_bruteforce_nondominated": true
+  },
+  "status": "PASS",
+  "counts": {
+    "pool": 58238,
+    "front": 453,
+    "native_targets": 4,
+    "dust_rows": 5352,
+    "MCS_rows": 1152
+  },
+  "script_sha256": "f0b516a76f9cba816b65dcb6efd06d4e399d52d0fe81f092307943cdd285474d",
+  "protected_input_hashes_unchanged": true
+}

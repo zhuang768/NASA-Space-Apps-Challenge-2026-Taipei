@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "baseline_main": "e84da75d905ad43f260e74307752946862200dae",
+  "meaning": "Current local files match already-read fixed remote main blobs or accepted workbook hash; not a new EH parse or spreadsheet reconstruction",
+  "files": [
+    {
+      "path": "docs/research/final_research_summary_en.md",
+      "git_blob_sha1": "b7a04c760feebd98b976f898cae55eb4c505daeb",
+      "actual_git_blob_sha1": "b7a04c760feebd98b976f898cae55eb4c505daeb",
+      "match": true
+    },
+    {
+      "path": "docs/research/main_mars_research_cards.md",
+      "git_blob_sha1": "0a4f8a35aa04698c409730b76f53ebb5d56eddc2",
+      "actual_git_blob_sha1": "0a4f8a35aa04698c409730b76f53ebb5d56eddc2",
+      "match": true
+    },
+    {
+      "path": "docs/research/main_project_synthesis.md",
+      "git_blob_sha1": "256510b14877bf374469af8560fa5cedc78fa063",
+      "actual_git_blob_sha1": "256510b14877bf374469af8560fa5cedc78fa063",
+      "match": true
+    },
+    {
+      "path": "docs/research/main_research_requirements.csv",
+      "git_blob_sha1": "d7824b67d3daf5b4eb8416f281f41b4e21b894a7",
+      "actual_git_blob_sha1": "d7824b67d3daf5b4eb8416f281f41b4e21b894a7",
+      "match": true
+    },
+    {
+      "path": "outputs/research/elephant_head_final/README.md",
+      "git_blob_sha1": "21e01c63576d197f5f1e2693d0bb1e7a23338264",
+      "actual_git_blob_sha1": "21e01c63576d197f5f1e2693d0bb1e7a23338264",
+      "match": true
+    },
+    {
+      "path": "outputs/research/elephant_head_final/data_dictionary.csv",
+      "git_blob_sha1": "e884ea0481d69e2477134cb1040d1632368842ee",
+      "actual_git_blob_sha1": "e884ea0481d69e2477134cb1040d1632368842ee",
+      "match": true
+    },
+    {
+      "path": "outputs/research/elephant_head_final/elephant_head_2019_supplement.pdf",
+      "git_blob_sha1": "90601d38a5c20fc9a6dca776177cf0d412e32912",
+      "actual_git_blob_sha1": "90601d38a5c20fc9a6dca776177cf0d412e32912",
+      "match": true
+    },
+    {
+      "path": "outputs/research/elephant_head_final/elephant_head_records.csv",
+      "git_blob_sha1": "6128fd7026071cc74cd438276ba886cdbe6a6cfd",
+      "actual_git_blob_sha1": "6128fd7026071cc74cd438276ba886cdbe6a6cfd",
+      "match": true
+    },
+    {
+      "path": "outputs/research/elephant_head_final/manifest.json",
+      "git_blob_sha1": "e7beb00cd318dec5621778ef882b2f2d00cdfb5e",
+      "actual_git_blob_sha1": "e7beb00cd318dec5621778ef882b2f2d00cdfb5e",
+      "match": true
+    },
+    {
+      "path": "outputs/research/elephant_head_final/qa.json",
+      "git_blob_sha1": "d1b86a2af0008e73feda4d8c84be2f097a78ed1b",
+      "actual_git_blob_sha1": "d1b86a2af0008e73feda4d8c84be2f097a78ed1b",
+      "match": true
+    },
+    {
+      "path": "outputs/research/elephant_head_final/summer_temperature_difference.png",
+      "git_blob_sha1": "3756f41a99e830f18d84b0623a8e44788f77af9d",
+      "actual_git_blob_sha1": "3756f41a99e830f18d84b0623a8e44788f77af9d",
+      "match": true
+    },
+    {
+      "path": "outputs/research/elephant_head_final/summer_temperatures.png",
+      "git_blob_sha1": "cccc2339dc3223fb91f0eb84558e5ce07dc0494a",
+      "actual_git_blob_sha1": "cccc2339dc3223fb91f0eb84558e5ce07dc0494a",
+      "match": true
+    },
+    {
+      "path": "outputs/research/final_research_summary_en.pdf",
+      "git_blob_sha1": "d5ecda94c7f8fc54a3bc7f6a22f1d2f4c7f5cf13",
+      "actual_git_blob_sha1": "d5ecda94c7f8fc54a3bc7f6a22f1d2f4c7f5cf13",
+      "match": true
+    }
+  ],
+  "workbook": {
+    "path": "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
+    "expected_sha256": "157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175",
+    "actual_sha256": "157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175",
+    "match": true
+  }
+}

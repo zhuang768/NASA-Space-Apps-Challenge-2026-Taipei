@@ -1,0 +1,155 @@
+{
+  "version": "MARS-RESELECT-20261114-v1-exploratory",
+  "generated_utc": "2026-11-14T14:17:46.408847+00:00",
+  "status": "exploration_only_prior_site_audit_pending",
+  "scope": "Mars regional ice-investigation candidates; no landing or extractability approval",
+  "grid": {
+    "step_deg": 0.5,
+    "candidate_latitude_centres": [
+      -59.75,
+      59.75
+    ],
+    "longitude_centres": [
+      -179.75,
+      179.75
+    ],
+    "latitude_rationale": "native SWIM coverage, both hemispheres"
+  },
+  "counts": {
+    "examined_grid_cells": 172800,
+    "finite_core_cells": 172581,
+    "positive_both_cells": 59332,
+    "exploratory_pool": 58238,
+    "pareto_front": 453,
+    "exploratory_candidates": 22
+  },
+  "pool_rule": "All six objective descriptors and TI/elevation finite, both SWIM depth-zone consistency descriptors >0, not old eight ice-candidate cells and not inside old project boxes. Sign>0 is an exploration choice, not calibrated presence/quantity or a mission threshold.",
+  "objectives": {
+    "ice_shallow": "maximize",
+    "ice_deep": "maximize",
+    "slope": "minimize",
+    "relief": "minimize",
+    "dust_my34_p95": "minimize",
+    "dust_my35_p95": "minimize"
+  },
+  "weights": null,
+  "scalar_score": null,
+  "reference_population": "all exploratory-pool cells in this run, not all potential Mars landing sites",
+  "selection_for_review": "union of front extremes and geographically separated examples; 5-degree rectangular display-diversity exclusion, not fixed km or engineering buffer; deliberately includes >=51N candidates, without marking prior-site audit as passed",
+  "contexts_not_monotonic_objectives": [
+    "TES thermal inertia",
+    "MOLA absolute elevation",
+    "MCS adjusted temperature medians, contrast and populated-bin counts",
+    "dust seasonal profiles, maxima and reliability"
+  ],
+  "full_data_accounting": {
+    "terrain": "existing MOLA slope/relief plus newly extracted absolute elevation; regional means do not resolve hazards",
+    "thermal": "TI kept separate from temperature; no preferred TI assumed",
+    "water_ice": "both SWIM 2 depth ranges included; they share data and are not independent confirmations; cannot estimate ice content/depth",
+    "dust": "MY34 and MY35 mean/p95/max/four Ls seasons/provider reliability and 610Pa-normalized context; no local wind/deposition/pressure inferred",
+    "temperature": "MCS MY29–36 at native 5deg 03/15 LTST, model time-adjusted and QA/count/uncertainty absent; context only, no favourable ranking",
+    "MEDA": "159418 rover-local records at already-known Jezero, no quality-qualified rows in existing report; inventoried but not transplanted to candidates",
+    "unavailable": "local pressure/wind, material strength, mineralogy, independent ice truth, instrument-specific thresholds, local hazard and extraction readiness remain unknown"
+  },
+  "limits": [
+    "No novelty clearance: all candidates require bounded footprint and same-purpose literature audit.",
+    "The front depends on declared objectives and incomplete available products; non-dominated does not mean mission-optimal.",
+    "MOLA terrain variables and the two SWIM layers are correlated/shared-source evidence; variable count is not independent evidence count.",
+    "5deg MCS and 3deg reconstructed dust support are retained; interpolated 0.5deg columns do not increase native resolution.",
+    "Different product periods and footprints do not constitute one contemporaneous controlled experiment."
+  ],
+  "sources": [
+    {
+      "path": "data/processed/mars_stack_0p5deg.nc",
+      "url": null,
+      "bytes": 9341696,
+      "sha256": "a351dada81b4105825b8e3baa1d060a4f3ee25c09fef303409abdd36dbdcf7aa"
+    },
+    {
+      "path": "data/raw/mars/megt90n000eb.img",
+      "url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg016/megt90n000eb.img",
+      "bytes": 33177600,
+      "sha256": "d18d9b9ab8c5516d02e157dd2cde0f1d0d160c21940e953ba22391269a545e7b"
+    },
+    {
+      "path": "data/raw/mars/megt90n000eb.lbl",
+      "url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg016/megt90n000eb.lbl",
+      "bytes": 4813,
+      "sha256": "0f2bd919dddb86d83489a008d3007bd915507c892a0f22ce49ad5dd5d2fc7d8a"
+    },
+    {
+      "path": "data/raw/mars/global_ti_night_2007.img",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_night_2007.img",
+      "bytes": 51840000,
+      "sha256": "faee32838da40045ee7ebd21bed156cc649620312c01165b556d77a2128258f4"
+    },
+    {
+      "path": "data/raw/mars/global_ti_night_2007.lbl",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_night_2007.lbl",
+      "bytes": 2415,
+      "sha256": "c1c897d9bd5399292166f99d84a29a73e42432cedfb9dd9a81a1441b3004b72b"
+    },
+    {
+      "path": "data/raw/mars/global_ti_msk_night_2007.img",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_msk_night_2007.img",
+      "bytes": 25920000,
+      "sha256": "fca7ec6fab8b3e81226e1d14dbb3a22509ad111bda4e03bf2b64f050bd550d0b"
+    },
+    {
+      "path": "data/raw/mars/global_ti_msk_night_2007.lbl",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_msk_night_2007.lbl",
+      "bytes": 2485,
+      "sha256": "164838970c1405b2dc6cf367a74c60c0de96d18f05f5e924db6c00f77038ee8a"
+    },
+    {
+      "path": "data/raw/mars/SWIM2_c0_1.tif",
+      "url": "https://swim.psi.edu/output/SWIM2/Global/Composite/SWIM2_c0_1.tif",
+      "bytes": 70995819,
+      "sha256": "0dd22f8a07172112c68fb304af9966bcdd788bbedf6ea40187a30f70130fea37"
+    },
+    {
+      "path": "data/raw/mars/SWIM2_c1_5.tif",
+      "url": "https://swim.psi.edu/output/SWIM2/Global/Composite/SWIM2_c1_5.tif",
+      "bytes": 70995805,
+      "sha256": "2ade8ab6aa4aae1c51ec71f10139e9b9ffa0a31ef1948566d0929ab7e91713ed"
+    },
+    {
+      "path": "data/raw/mars/dustscenario_MY35_v2-5.nc",
+      "url": "https://www-mars.lmd.jussieu.fr/mars/dust_climatology/dataset_v2/dustscenario_MY35_v2-5.nc",
+      "bytes": 57832064,
+      "sha256": "95613d68e2d03904bfd93612f2fe70e84f8410b00ef33cafe59d77d50a41063a"
+    },
+    {
+      "path": "data/raw/mars/dustscenario_MY34_v2-5.nc",
+      "url": "https://www-mars.lmd.jussieu.fr/mars/dust_climatology/dataset_v2/dustscenario_MY34_v2-5.nc",
+      "bytes": 57814188,
+      "sha256": "032b9627247e9cc4397c9f007cc8f97a01acf689006b46ff3a51e5abed828797"
+    },
+    {
+      "path": "data/raw/mars/temperature/mcs_corrected/MCS_tsurf_corrected.nc",
+      "url": "https://zenodo.org/api/records/17947556/files/MCS_tsurf_corrected.nc/content",
+      "bytes": 14940903,
+      "sha256": "a75dbcd5e77fbc0d78591e62427843f0dadde10cd0e87e7767789025a2b7fecd"
+    },
+    {
+      "path": "data/raw/mars/temperature/mcs_corrected/record.json",
+      "url": "https://zenodo.org/api/records/17947556",
+      "bytes": 4938,
+      "sha256": "12d984134bbce03b661343f2e986a9c449b94c20c7f0bbf3e098c556b3e30b69"
+    },
+    {
+      "path": "outputs/mars_temperature/summary.json",
+      "url": null,
+      "bytes": 9125,
+      "sha256": "f6b7d441e616f564171fa47b351e45622634d5ded5f980d2dd4392deea2a29a9"
+    },
+    {
+      "path": "outputs/mars_discovery/mars_site_discovery.json",
+      "url": null,
+      "bytes": 18852,
+      "sha256": "3c45d6af3c786394b856e36a726eada5cf00118e7a0cec39b24a88e8f992b7e9"
+    }
+  ],
+  "script_sha256": "f0b516a76f9cba816b65dcb6efd06d4e399d52d0fe81f092307943cdd285474d",
+  "protected_inputs_hashes_unchanged": true
+}

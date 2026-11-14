@@ -84,3 +84,13 @@ Jezero 前兩名的降水背景不支持直接將其描述為乾旱類比，適�
 下一個最值得投入的工作是先決定一個明確的任務測試問題，再從上述乾燥候選查地質與既有研究；同時申請 Earthdata 帳號，補上真正同物理量的環境比較。只要氣候或地質證據不支持，就應排除或縮小類比主張。
 
 本輪已推送獨立分支 `codex/earth-analog-pipeline`，並建立[草稿 PR #1](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/1)供隊友審查。尚未合併主分支、部署或提交參賽作品。
+
+## 後續資料上傳與 GitHub 查驗
+
+依使用者指示，本次後續作業沒有使用 C2C。GitHub plugin 已實際成功讀取主分支完整 `analog/dust.py`。已整合隊友主分支 `d9d121b` 的最新文件，保留其地球資料規格。
+
+[資料 Release](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/releases/tag/terrain-inputs-2026-11-14)已發布，包含本輪實際取得的原始輸入包及 `SHA256SUMS.txt`。資料包 491,292,776 bytes，GitHub 回報附件狀態 uploaded；伺服器 SHA-256 與本機一致。另已解讀資料包並核對其中 ETOPO、Natural Earth、MOLA 影像與標籤共四個來源檔的 SHA-256。
+
+這個資料包不包含隊友文件另記載的約 7.6 GB MODIS/GPM/GLDAS/MERRA-2 等地球原始檔。檢查當時的分支、Release、Actions artifacts 與 Issue/PR 未找到那批檔案或交接連結；文件註明其位於不進 Git 的 `data/raw/earth/`。尚需隊友提供實際資料位置，不能把文件清單當成原始資料已可取得。
+
+下載、校驗與解壓指令見 [data_handoff.md](data_handoff.md)。分析程式與結果仍在 PR #1，未合併主分支、未部署、未提交參賽作品。

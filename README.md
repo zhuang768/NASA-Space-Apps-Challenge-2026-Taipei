@@ -71,6 +71,7 @@ python3.12 -m venv .venv
 本輪是 **terrain-only regional screening**，尚未完成四面向綜合相似度。
 
 - 方法與執行：[docs/earth_pipeline.md](docs/earth_pipeline.md)
+- 原始資料下載與交接：[docs/data_handoff.md](docs/data_handoff.md)
 - 候選交接：[outputs/analysis/candidate_handoff.md](outputs/analysis/candidate_handoff.md)
 - 完整工作回報：[docs/work_report_2026-11-14.md](docs/work_report_2026-11-14.md)
 - 數值結果與來源：`outputs/analysis/results_with_context.json`

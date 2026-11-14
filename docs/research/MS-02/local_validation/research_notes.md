@@ -131,3 +131,9 @@
 - `python3 outputs/research/MS-02/local_validation/build_tables.py` → `local_prior_work.csv`、`mars_ice_evidence.csv`、`analog_validation.csv`、`search_log.csv`
 - `python3 outputs/research/MS-02/local_validation/verify_local_validation.py` → `verification.json`
 - 距離使用 Mars 半徑 3,396 km（格尺寸、火星距離）與地球 6,371 km（地球站點距離）；格圖帶界為本次計算，非論文所給。
+
+## 5. 資料尺度過粗：整理與判定（表：`outputs/research/MS-02/local_validation/scale_gap_resolution.csv`，核對：`verify_scale_gap.py`，3 輪一致）
+
+- 地形、熱性質、水／冰、大氣／沙塵：已用現有最細資料列出格內數值與限制（SG-01–04）。
+- 當地材料、覆土、形貌：Excel（含 MEDA 原始紀錄，屬 Jezero 漫遊車）與 GitHub 皆無亞格（<3.7 km）資料，**無法由現有資料回答**（SG-05–07）；所需最小資料見表。
+- 因此「已回答」只限於格尺度描述；三項未知維持 unknown，不推論為無冰或無覆土。

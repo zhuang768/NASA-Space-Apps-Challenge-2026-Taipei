@@ -1,0 +1,67 @@
+{
+  "record_id": 10553882,
+  "concept_record_id": 10553881,
+  "version_doi": "10.5281/zenodo.10553882",
+  "license": {
+    "id": "cc-zero"
+  },
+  "metadata_sha256": "98b9641ead5bf1a9e9036ef7d9582a195d40b782d93c41e7884372b0ff37be07",
+  "files": [
+    {
+      "filename": "UniversityV_09_13_Campbell_data_all_calibrated.txt",
+      "bytes": 8535365,
+      "md5": "333b498382376f3bb034e68862bede70",
+      "sha256": "f87615db6b1135d73f6c9996999fe0b94e70af757a458e6f35e628481393ac85",
+      "url": "https://zenodo.org/api/records/10553882/files/UniversityV_09_13_Campbell_data_all_calibrated.txt/content",
+      "actually_downloaded": true,
+      "source_level": "author-calibrated export or deployment/QA note;not unprocessed logger bytes"
+    },
+    {
+      "filename": "UniversityV_09_13_Hobo_WeatherStation_data_good_only_calibrated.txt",
+      "bytes": 2522735,
+      "md5": "22932fdef50cac1b372b06100392c2fe",
+      "sha256": "b1362888547e3db1389551ce064b0d5428e2dc6ed0208bca2179b43544105446",
+      "url": "https://zenodo.org/api/records/10553882/files/UniversityV_09_13_Hobo_WeatherStation_data_good_only_calibrated.txt/content",
+      "actually_downloaded": true,
+      "source_level": "author-calibrated export or deployment/QA note;not unprocessed logger bytes"
+    },
+    {
+      "filename": "University Valley Campbell notes Dec 2010.pdf",
+      "bytes": 1524291,
+      "md5": "608feb1d54fa3c2de4265f1d3f96d8b5",
+      "sha256": "311f3dafcb98ee3d15ac49aecc4e1bb1e6419097f021ac596772efbc99d89986",
+      "url": "https://zenodo.org/api/records/10553882/files/University%20Valley%20Campbell%20notes%20Dec%202010.pdf/content",
+      "actually_downloaded": true,
+      "source_level": "author-calibrated export or deployment/QA note;not unprocessed logger bytes"
+    },
+    {
+      "filename": "University Valley weather station data check 2011-2013.docx",
+      "bytes": 1356365,
+      "md5": "1212e1db8ba61a5a84c54cd80ae4d9cc",
+      "sha256": "e239d2694d230eb16ef437763d4edd0930e6d056b1f90aa2def739749b8b069e",
+      "url": "https://zenodo.org/api/records/10553882/files/University%20Valley%20weather%20station%20data%20check%202011-2013.docx/content",
+      "actually_downloaded": true,
+      "source_level": "author-calibrated export or deployment/QA note;not unprocessed logger bytes"
+    },
+    {
+      "filename": "UnivValley_Dec2009Deployment_HoboInfo.docx",
+      "bytes": 16374,
+      "md5": "7a1d6353d30d724a0512ffb24db36401",
+      "sha256": "9aa5e4a2f04754293466e3f17854ea3c91109059d03023df655c464dfe9fcc0d",
+      "url": "https://zenodo.org/api/records/10553882/files/UnivValley_Dec2009Deployment_HoboInfo.docx/content",
+      "actually_downloaded": true,
+      "source_level": "author-calibrated export or deployment/QA note;not unprocessed logger bytes"
+    },
+    {
+      "filename": "UnivValley_HoboInfo_Dec2010_Update.docx",
+      "bytes": 14786,
+      "md5": "b8eb8ad431f094898dfc2d984e0f5c04",
+      "sha256": "c8b693f3fe406b65a3003419a5cfc1fd1d53e2abcbcfa9913ac1d0bae337d201",
+      "url": "https://zenodo.org/api/records/10553882/files/UnivValley_HoboInfo_Dec2010_Update.docx/content",
+      "actually_downloaded": true,
+      "source_level": "author-calibrated export or deployment/QA note;not unprocessed logger bytes"
+    }
+  ],
+  "raw_directory": "/tmp/uv_w_10553882",
+  "raw_files_tracked": false
+}

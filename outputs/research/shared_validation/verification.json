@@ -1,0 +1,106 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "CSV:control_evidence.csv",
+      "pass": true,
+      "data_rows": 12
+    },
+    {
+      "check": "CSV:dependency_edges.csv",
+      "pass": true,
+      "data_rows": 14
+    },
+    {
+      "check": "CSV:gap_status.csv",
+      "pass": true,
+      "data_rows": 4
+    },
+    {
+      "check": "CSV:lab_runs.csv",
+      "pass": true,
+      "data_rows": 13
+    },
+    {
+      "check": "CSV:method_constraints.csv",
+      "pass": true,
+      "data_rows": 3
+    },
+    {
+      "check": "CSV:missing_artifacts.csv",
+      "pass": true,
+      "data_rows": 11
+    },
+    {
+      "check": "CSV:model_lineage.csv",
+      "pass": true,
+      "data_rows": 10
+    },
+    {
+      "check": "CSV:native_model_cells.csv",
+      "pass": true,
+      "data_rows": 3
+    },
+    {
+      "check": "CSV:observation_explanations.csv",
+      "pass": true,
+      "data_rows": 6
+    },
+    {
+      "check": "CSV:prior_work.csv",
+      "pass": true,
+      "data_rows": 4
+    },
+    {
+      "check": "CSV:published_regression_evaluation.csv",
+      "pass": true,
+      "data_rows": 76
+    },
+    {
+      "check": "CSV:search_log.csv",
+      "pass": true,
+      "data_rows": 25
+    },
+    {
+      "check": "CSV:source_catalog.csv",
+      "pass": true,
+      "data_rows": 12
+    },
+    {
+      "check": "CSV:swim_published_equations.csv",
+      "pass": true,
+      "data_rows": 4
+    },
+    {
+      "check": "CSV:uv_coordinate_crosswalk.csv",
+      "pass": true,
+      "data_rows": 5
+    },
+    {
+      "check": "CSV:uv_time_eligibility.csv",
+      "pass": true,
+      "data_rows": 7
+    },
+    {
+      "check": "fixed_native_cells_missing_qa_not_filled",
+      "pass": true
+    },
+    {
+      "check": "no_old_window_recompute_or_new_fit_claim",
+      "pass": true
+    },
+    {
+      "check": "failed_downloads_not_mislabeled_data",
+      "pass": true
+    },
+    {
+      "check": "local_note_links",
+      "pass": true
+    },
+    {
+      "check": "manifest_payload_hashes",
+      "pass": true,
+      "files": 60
+    }
+  ]
+}

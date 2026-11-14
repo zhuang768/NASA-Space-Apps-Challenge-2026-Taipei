@@ -1,0 +1,1118 @@
+{
+  "audit_script": "outputs/integration/audit/scripts/audit_checks.py",
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39",
+    "numpy": "2.5.3"
+  },
+  "pinned_shas": {
+    "main": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+    "handoff": "f7076c9fdc77e00244ed5d6863aad2bf78cfa28f",
+    "ms01": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+    "ms02": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+    "ms03": "8fa07afac4a98096958880f6a5ece16f35abc4db"
+  },
+  "summary": {
+    "PASS": 25,
+    "FAIL": 0,
+    "INFO": 4,
+    "NOT_RUN": 0
+  },
+  "checks": [
+    {
+      "id": "A-head-main",
+      "description": "worktree main is at the pinned SHA",
+      "status": "PASS",
+      "detail": {
+        "expected": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+        "actual": "3cc8488577535e2fa4d146021fde51f8ff6cc667"
+      }
+    },
+    {
+      "id": "A-head-ms01",
+      "description": "worktree ms01 is at the pinned SHA",
+      "status": "PASS",
+      "detail": {
+        "expected": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+        "actual": "b4b6929e890018668ef4faa9a74128a4ce5aa8df"
+      }
+    },
+    {
+      "id": "A-head-ms02",
+      "description": "worktree ms02 is at the pinned SHA",
+      "status": "PASS",
+      "detail": {
+        "expected": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+        "actual": "38b8fa0dea527b1cc47aeb02dc260e039da37122"
+      }
+    },
+    {
+      "id": "A-head-ms03",
+      "description": "worktree ms03 is at the pinned SHA",
+      "status": "PASS",
+      "detail": {
+        "expected": "8fa07afac4a98096958880f6a5ece16f35abc4db",
+        "actual": "8fa07afac4a98096958880f6a5ece16f35abc4db"
+      }
+    },
+    {
+      "id": "B-mars-values",
+      "description": "numbers quoted in each report equal the shared native/final_candidates values (rounded to printed digits) and appear in the report",
+      "status": "PASS",
+      "detail": {
+        "n_checked": 35,
+        "n_bad": 0,
+        "bad": [],
+        "rows": [
+          {
+            "mars_point": "MS-01",
+            "quantity": "MOLA mean elevation m",
+            "main_value": -3700.9141272608003,
+            "printed_token": "-3700.914",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-01",
+            "quantity": "MOLA mean slope deg",
+            "main_value": 0.28720680331472204,
+            "printed_token": "0.287207",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-01",
+            "quantity": "MOLA relief m",
+            "main_value": 76.0,
+            "printed_token": "76",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-01",
+            "quantity": "TES TI mean (infill excluded)",
+            "main_value": 325.1557373608713,
+            "printed_token": "325.1557",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-01",
+            "quantity": "SWIM 0-1 m mean",
+            "main_value": 0.6392249220197742,
+            "printed_token": "0.639225",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-01",
+            "quantity": "SWIM 1-5 m mean",
+            "main_value": 0.647481749755862,
+            "printed_token": "0.647482",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-01",
+            "quantity": "CDOD MY34 mean",
+            "main_value": 0.11926438338687068,
+            "printed_token": "0.119264",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-01",
+            "quantity": "CDOD MY34 p95",
+            "main_value": 0.22245603501796724,
+            "printed_token": "0.222456",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-01",
+            "quantity": "CDOD MY35 mean",
+            "main_value": 0.10753491588259848,
+            "printed_token": "0.107535",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-01",
+            "quantity": "CDOD MY35 p95",
+            "main_value": 0.18014705479145052,
+            "printed_token": "0.180147",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-01",
+            "quantity": "MCS 15 LTST median K",
+            "main_value": 247.47932050390625,
+            "printed_token": "247.479",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-01",
+            "quantity": "MCS 03 LTST median K",
+            "main_value": 173.72867814892578,
+            "printed_token": "173.729",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-01",
+            "quantity": "MCS paired contrast median K",
+            "main_value": 63.53643660583495,
+            "printed_token": "63.536",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "MOLA mean elevation m",
+            "main_value": -3898.7188842757655,
+            "printed_token": "-3898.7",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "MOLA mean slope deg",
+            "main_value": 0.3018454787700082,
+            "printed_token": "0.302",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "MOLA relief m",
+            "main_value": 117.0,
+            "printed_token": "117",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "TES TI mean (infill excluded)",
+            "main_value": 217.26900902801015,
+            "printed_token": "217.27",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "SWIM 0-1 m mean",
+            "main_value": 0.6929869824270689,
+            "printed_token": "0.693",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "SWIM 1-5 m mean",
+            "main_value": 0.6224985573606443,
+            "printed_token": "0.622",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "CDOD MY34 p95",
+            "main_value": 0.2400146692991257,
+            "printed_token": "0.240",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "CDOD MY35 p95",
+            "main_value": 0.17312036752700807,
+            "printed_token": "0.173",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "MCS 03 LTST median K",
+            "main_value": 171.27207542254638,
+            "printed_token": "171.27",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "MCS 15 LTST median K",
+            "main_value": 246.30527977136228,
+            "printed_token": "246.31",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "MCS paired contrast median K",
+            "main_value": 66.83052292163086,
+            "printed_token": "66.83",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "MCS paired bins",
+            "main_value": 75.0,
+            "printed_token": "75",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-03",
+            "quantity": "MOLA mean slope deg",
+            "main_value": 0.16275322089887925,
+            "printed_token": "0.1627532209",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-03",
+            "quantity": "MOLA relief m",
+            "main_value": 76.0,
+            "printed_token": "76",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-03",
+            "quantity": "TES TI mean (infill excluded)",
+            "main_value": 152.80772587767,
+            "printed_token": "152.80772587767",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-03",
+            "quantity": "SWIM 0-1 m mean",
+            "main_value": 0.9109040236045108,
+            "printed_token": "0.9109040236",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-03",
+            "quantity": "SWIM 1-5 m mean",
+            "main_value": 0.5099723017827722,
+            "printed_token": "0.5099723018",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-03",
+            "quantity": "CDOD MY34 mean",
+            "main_value": 0.09821451820087897,
+            "printed_token": "0.0982145182",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-03",
+            "quantity": "CDOD MY35 mean",
+            "main_value": 0.08866037474875582,
+            "printed_token": "0.0886603747",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-03",
+            "quantity": "CDOD MY34 p95",
+            "main_value": 0.17336168885231018,
+            "printed_token": "0.1733616889",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-03",
+            "quantity": "CDOD MY35 p95",
+            "main_value": 0.1409617453813553,
+            "printed_token": "0.1409617454",
+            "rounds_to_token": true,
+            "token_in_report": true
+          },
+          {
+            "mars_point": "MS-03",
+            "quantity": "MCS paired contrast median K",
+            "main_value": 67.05473789904781,
+            "printed_token": "67.054737899",
+            "rounds_to_token": true,
+            "token_in_report": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "B-counts-and-grid-cells",
+      "description": "valid-cell counts, nearest dust/MCS grid cells and bin counts printed in the reports match main's final_candidates",
+      "status": "PASS",
+      "detail": {
+        "n_checked": 12,
+        "bad": [],
+        "rows": [
+          {
+            "mars_point": "MS-01",
+            "quantity": "TES valid / mask-zero cells",
+            "main_value": "73/27",
+            "printed_tokens": [
+              "73",
+              "27"
+            ],
+            "all_tokens_in_report": true
+          },
+          {
+            "mars_point": "MS-01",
+            "quantity": "dust native cell",
+            "main_value": "55.5N 72.0E",
+            "printed_tokens": [
+              "55.5N72E"
+            ],
+            "all_tokens_in_report": true
+          },
+          {
+            "mars_point": "MS-01",
+            "quantity": "MCS native bin",
+            "main_value": "55.0N 75.0E",
+            "printed_tokens": [
+              "55N75E"
+            ],
+            "all_tokens_in_report": true
+          },
+          {
+            "mars_point": "MS-01",
+            "quantity": "MCS valid day/night/paired bins",
+            "main_value": "161/145/69",
+            "printed_tokens": [
+              "161/288",
+              "145/288",
+              "69/288"
+            ],
+            "all_tokens_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "TES valid / mask-zero cells",
+            "main_value": "93/7",
+            "printed_tokens": [
+              "93/100",
+              "7 格"
+            ],
+            "all_tokens_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "dust native cell",
+            "main_value": "52.5N 168.0E",
+            "printed_tokens": [
+              "52.5°N,168.0°E"
+            ],
+            "all_tokens_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "MCS native bin",
+            "main_value": "55.0N 170.0E",
+            "printed_tokens": [
+              "55.0°N,170.0°E"
+            ],
+            "all_tokens_in_report": true
+          },
+          {
+            "mars_point": "MS-02",
+            "quantity": "MCS paired bins",
+            "main_value": "75",
+            "printed_tokens": [
+              "75/288"
+            ],
+            "all_tokens_in_report": true
+          },
+          {
+            "mars_point": "MS-03",
+            "quantity": "TES valid / mask-zero cells",
+            "main_value": "79/21",
+            "printed_tokens": [
+              "79/100",
+              "21個"
+            ],
+            "all_tokens_in_report": true
+          },
+          {
+            "mars_point": "MS-03",
+            "quantity": "dust native cell",
+            "main_value": "58.5N -117.0E",
+            "printed_tokens": [
+              "58.5°N",
+              "117°W"
+            ],
+            "all_tokens_in_report": true
+          },
+          {
+            "mars_point": "MS-03",
+            "quantity": "MCS native bin",
+            "main_value": "60.0N -120.0E",
+            "printed_tokens": [
+              "60°N",
+              "120°W"
+            ],
+            "all_tokens_in_report": true
+          },
+          {
+            "mars_point": "MS-03",
+            "quantity": "MCS valid day/night/paired bins",
+            "main_value": "171/148/60",
+            "printed_tokens": [
+              "171",
+              "148",
+              "60／288"
+            ],
+            "all_tokens_in_report": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "B-bin-distances",
+      "description": "MS-02 report distances to the MCS and dust grid centres (146.7 km, 17.3 km) recomputed",
+      "status": "PASS",
+      "detail": {
+        "MS-02 MCS 5deg bin centre to MS-02 centre (km)": 146.70074443798975,
+        "MS-02 dust 3deg cell centre to MS-02 centre (km)": 17.33422198491386
+      }
+    },
+    {
+      "id": "B-native-vs-final",
+      "description": "final_candidates.csv native-cell columns agree with candidate_native_evidence.json",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "id": "C-cell-size",
+      "description": "nominal cell NS/EW km recomputed from bounds (R=3396 km) equals native evidence",
+      "status": "PASS",
+      "detail": {
+        "MS-01": {
+          "center_from_bounds": [
+            56.75,
+            72.75
+          ],
+          "stated_center": [
+            56.75,
+            72.75
+          ],
+          "NS_km": 29.635690698863716,
+          "EW_km_at_center_lat": 16.24904856233326,
+          "native_nominal_size_km": [
+            29.635690698863716,
+            16.24904856233326
+          ],
+          "lon_east_0_360": 72.75,
+          "lon_east_signed": 72.75
+        },
+        "MS-02": {
+          "center_from_bounds": [
+            52.75,
+            168.25
+          ],
+          "stated_center": [
+            52.75,
+            168.25
+          ],
+          "NS_km": 29.635690698863716,
+          "EW_km_at_center_lat": 17.93830541152093,
+          "native_nominal_size_km": [
+            29.635690698863716,
+            17.93830541152093
+          ],
+          "lon_east_0_360": 168.25,
+          "lon_east_signed": 168.25
+        },
+        "MS-03": {
+          "center_from_bounds": [
+            57.75,
+            -117.75
+          ],
+          "stated_center": [
+            57.75,
+            -117.75
+          ],
+          "NS_km": 29.635690698863716,
+          "EW_km_at_center_lat": 15.814034746098955,
+          "native_nominal_size_km": [
+            29.635690698863716,
+            15.814034746098956
+          ],
+          "lon_east_0_360": 242.25,
+          "lon_east_signed": -117.75
+        }
+      }
+    },
+    {
+      "id": "C-report-sizes",
+      "description": "cell sizes printed in the three reports match the recomputation within rounding",
+      "status": "PASS",
+      "detail": [
+        {
+          "mars_point": "MS-01",
+          "NS_token": "29.64",
+          "EW_token": "16.25",
+          "NS_in_report": true,
+          "EW_in_report": true,
+          "NS_computed": 29.635690698863716,
+          "EW_computed": 16.24904856233326
+        },
+        {
+          "mars_point": "MS-02",
+          "NS_token": "29.6",
+          "EW_token": "17.9",
+          "NS_in_report": true,
+          "EW_in_report": true,
+          "NS_computed": 29.635690698863716,
+          "EW_computed": 17.93830541152093
+        },
+        {
+          "mars_point": "MS-03",
+          "NS_token": "29.64",
+          "EW_token": "15.81",
+          "NS_in_report": true,
+          "EW_in_report": true,
+          "NS_computed": 29.635690698863716,
+          "EW_computed": 15.814034746098955
+        }
+      ]
+    },
+    {
+      "id": "C-lon-convention",
+      "description": "MS-03 242.25 E = -117.75 (east-positive, planetocentric); MS-02 168.25 E and MS-01 72.75 E unchanged",
+      "status": "PASS",
+      "detail": {
+        "MS-01": 72.75,
+        "MS-02": 168.25,
+        "MS-03": -117.75
+      }
+    },
+    {
+      "id": "C-UV-anchor",
+      "description": "University Valley W-station anchor: MS-01 and MS-03 equal the published DMS; MS-02 uses a valley-level anchor",
+      "status": "PASS",
+      "detail": {
+        "coords": {
+          "dms_77deg51.729S_160deg42.606E": [
+            -77.86215,
+            160.7101
+          ],
+          "MS-01-E01": [
+            -77.86215,
+            160.7101
+          ],
+          "MS-03-E01": [
+            -77.86215,
+            160.7101
+          ],
+          "MS-02-E01_valley_anchor": [
+            -77.8667,
+            160.75
+          ]
+        },
+        "distance_from_DMS_station_km": {
+          "MS-01-E01": 0.0,
+          "MS-03-E01": 0.0,
+          "MS-02-E01_valley_anchor": 1.0610879356618061
+        },
+        "note": "MS-02-E01 anchor is the valley (77°52'S 160°45'E), not the W station; wording must not call it the station"
+      }
+    },
+    {
+      "id": "C-Adventdalen-anchors",
+      "description": "Adventdalen is not one place: ADE, CS-1 and AD1 are different anchors (distances recomputed)",
+      "status": "INFO",
+      "detail": {
+        "anchors": {
+          "MS-02 ADE borehole (Rotem 2023)": [
+            78.1722,
+            16.0613
+          ],
+          "MS-02 CS-1 loess core (Rasmussen 2023)": [
+            78.201,
+            15.84
+          ],
+          "MS-03 AD1 event start (A1 metadata)": [
+            78.184,
+            15.913
+          ],
+          "MS-03 AD1 GIS bbox centre (UTM33N inverse, this audit)": [
+            78.18610761447573,
+            15.92380114890368
+          ]
+        },
+        "separations_km": {
+          "MS-02 ADE borehole (Rotem 2023) <-> MS-02 CS-1 loess core (Rasmussen 2023)": 5.9694541980050495,
+          "MS-02 ADE borehole (Rotem 2023) <-> MS-03 AD1 event start (A1 metadata)": 3.6242046705099114,
+          "MS-02 ADE borehole (Rotem 2023) <-> MS-03 AD1 GIS bbox centre (UTM33N inverse, this audit)": 3.4930034750899943,
+          "MS-02 CS-1 loess core (Rasmussen 2023) <-> MS-03 AD1 event start (A1 metadata)": 2.5163751355926967,
+          "MS-02 CS-1 loess core (Rasmussen 2023) <-> MS-03 AD1 GIS bbox centre (UTM33N inverse, this audit)": 2.525315580094118,
+          "MS-03 AD1 event start (A1 metadata) <-> MS-03 AD1 GIS bbox centre (UTM33N inverse, this audit)": 0.339699925102198
+        },
+        "inside_PANGAEA_8site_bbox": {
+          "MS-02 ADE borehole (Rotem 2023)": false,
+          "MS-02 CS-1 loess core (Rasmussen 2023)": true,
+          "MS-03 AD1 event start (A1 metadata)": true,
+          "MS-03 AD1 GIS bbox centre (UTM33N inverse, this audit)": true
+        },
+        "AD1_GIS_bbox_sw_ne_latlon": [
+          [
+            78.18420510133377,
+            15.913664899199832
+          ],
+          [
+            78.18801012761767,
+            15.933937398607528
+          ]
+        ],
+        "note": "AD1 (Act-IWS) lies inside the PANGAEA bbox quoted in MS-02 footprint.csv; ADE lies ~1.1 km south of it"
+      }
+    },
+    {
+      "id": "D-adventdalen-downgrade",
+      "description": "MS-02 Adventdalen (E03) and MS-03 AD1 (E02) both downgraded to general method reference",
+      "status": "PASS",
+      "detail": {
+        "MS-02-E03": "降為一般方法參照 (CS-1 loess core retained only as a process analog of aeolian cover + syngenetic ice; the radar link is 證據不足)",
+        "MS-03-E02": "downgrade_general_method_reference_not_specific_MS03_pair"
+      }
+    },
+    {
+      "id": "D-dispositions",
+      "description": "candidate dispositions recorded in each PR",
+      "status": "INFO",
+      "detail": {
+        "MS-01": {
+          "MS-01-E01": "保留",
+          "MS-01-E02": "保留（原始序列待補）"
+        },
+        "MS-02": {
+          "MS-02-E01": "保留",
+          "MS-02-E02": "待補證據",
+          "MS-02-E03": "降為一般方法參照 (CS-1 loess core retained only as a process analog of aeolian cover + syngenetic ice; the radar link is 證據不足)",
+          "MS-02-E04": "待補證據"
+        },
+        "MS-03": {
+          "MS-03-E01": "retain_known_method_reference_pending_raw_series",
+          "MS-03-E02": "downgrade_general_method_reference_not_specific_MS03_pair"
+        }
+      }
+    },
+    {
+      "id": "E-manifest-MS-01",
+      "description": "MS-01: manifest SHA-256 values recomputed against files at the PR head",
+      "status": "PASS",
+      "detail": {
+        "checked": 74,
+        "match": 74,
+        "mismatch": [],
+        "not_in_repo": []
+      }
+    },
+    {
+      "id": "E-manifest-MS-02",
+      "description": "MS-02: manifest SHA-256 values recomputed against files at the PR head",
+      "status": "PASS",
+      "detail": {
+        "checked": 14,
+        "match": 14,
+        "mismatch": [],
+        "not_in_repo": []
+      }
+    },
+    {
+      "id": "E-manifest-MS-03",
+      "description": "MS-03: manifest SHA-256 values recomputed against files at the PR head",
+      "status": "PASS",
+      "detail": {
+        "checked": 100,
+        "match": 100,
+        "mismatch": [],
+        "not_in_repo": [
+          {
+            "manifest": "outputs/research/MS-03/manifest.json",
+            "path": "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx"
+          },
+          {
+            "manifest": "outputs/research/MS-03/manifest.json",
+            "path": "outputs/research/mars_reselection_20261114/screened_pool.csv.gz"
+          }
+        ]
+      }
+    },
+    {
+      "id": "F-paths-ms01",
+      "description": "ms01: diff vs main touches only its own directories (hand-off files reported separately)",
+      "status": "PASS",
+      "detail": {
+        "n_files": 51,
+        "outside_own_dirs": [],
+        "non_added_status": [],
+        "handoff_files_in_diff_vs_main": []
+      }
+    },
+    {
+      "id": "F-paths-ms02",
+      "description": "ms02: diff vs main touches only its own directories (hand-off files reported separately)",
+      "status": "PASS",
+      "detail": {
+        "n_files": 17,
+        "outside_own_dirs": [],
+        "non_added_status": [],
+        "handoff_files_in_diff_vs_main": [
+          "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
+          "outputs/research/mars_reselection_20261114/screened_pool.csv.gz"
+        ]
+      }
+    },
+    {
+      "id": "F-paths-ms03",
+      "description": "ms03: diff vs main touches only its own directories (hand-off files reported separately)",
+      "status": "PASS",
+      "detail": {
+        "n_files": 95,
+        "outside_own_dirs": [],
+        "non_added_status": [],
+        "handoff_files_in_diff_vs_main": []
+      }
+    },
+    {
+      "id": "F-overlap",
+      "description": "no file path is touched by more than one PR",
+      "status": "PASS",
+      "detail": {
+        "ms01&ms02": [],
+        "ms01&ms03": [],
+        "ms02&ms03": []
+      }
+    },
+    {
+      "id": "F-sizes",
+      "description": "added bytes per PR versus main (git blob sizes)",
+      "status": "INFO",
+      "detail": {
+        "ms01": 1643675,
+        "ms02": 31522344,
+        "ms03": 8148565
+      }
+    },
+    {
+      "id": "F-PR6-base",
+      "description": "PR #6 base is the hand-off branch; hand-off adds only the workbook and screened pool over main",
+      "status": "PASS",
+      "detail": {
+        "PR6_files_vs_handoff_base": 15,
+        "handoff_vs_main": [
+          "A\toutputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
+          "A\toutputs/research/mars_reselection_20261114/screened_pool.csv.gz"
+        ]
+      }
+    },
+    {
+      "id": "G-wording-scan",
+      "description": "heuristic scan of the three reports for the high-risk wording classes (candidates for manual review, not a verdict)",
+      "status": "INFO",
+      "detail": {
+        "MS-01": {
+          "SWIM-as-amount": {
+            "sentences_matching": 0,
+            "without_negation_marker": 0,
+            "unnegated_examples": []
+          },
+          "TI-as-temperature-or-hardness": {
+            "sentences_matching": 0,
+            "without_negation_marker": 0,
+            "unnegated_examples": []
+          },
+          "attenuation-as-unique-ice": {
+            "sentences_matching": 0,
+            "without_negation_marker": 0,
+            "unnegated_examples": []
+          },
+          "novelty-claim": {
+            "sentences_matching": 2,
+            "without_negation_marker": 1,
+            "unnegated_examples": [
+              "已找到直接同場址同用途研究；本次價值是把已知真值對照轉成 **MS-01 下一步該量什麼、哪些推論目前做不到**，不主張新場址、新機制或全球首次配對"
+            ]
+          },
+          "absence-claim": {
+            "sentences_matching": 1,
+            "without_negation_marker": 0,
+            "unnegated_examples": []
+          },
+          "similarity-percentage": {
+            "sentences_matching": 2,
+            "without_negation_marker": 0,
+            "unnegated_examples": []
+          }
+        },
+        "MS-02": {
+          "SWIM-as-amount": {
+            "sentences_matching": 1,
+            "without_negation_marker": 0,
+            "unnegated_examples": []
+          },
+          "TI-as-temperature-or-hardness": {
+            "sentences_matching": 1,
+            "without_negation_marker": 0,
+            "unnegated_examples": []
+          },
+          "attenuation-as-unique-ice": {
+            "sentences_matching": 0,
+            "without_negation_marker": 0,
+            "unnegated_examples": []
+          },
+          "novelty-claim": {
+            "sentences_matching": 0,
+            "without_negation_marker": 0,
+            "unnegated_examples": []
+          },
+          "absence-claim": {
+            "sentences_matching": 2,
+            "without_negation_marker": 1,
+            "unnegated_examples": [
+              "1. `docs/TEAM_START.md`、`scripts/restore_team_data.py` 不存在"
+            ]
+          },
+          "similarity-percentage": {
+            "sentences_matching": 1,
+            "without_negation_marker": 1,
+            "unnegated_examples": [
+              "- 本報告不計算任何「最像火星百分比」，也不為各面向設權重"
+            ]
+          }
+        },
+        "MS-03": {
+          "SWIM-as-amount": {
+            "sentences_matching": 3,
+            "without_negation_marker": 0,
+            "unnegated_examples": []
+          },
+          "TI-as-temperature-or-hardness": {
+            "sentences_matching": 1,
+            "without_negation_marker": 0,
+            "unnegated_examples": []
+          },
+          "attenuation-as-unique-ice": {
+            "sentences_matching": 0,
+            "without_negation_marker": 0,
+            "unnegated_examples": []
+          },
+          "novelty-claim": {
+            "sentences_matching": 8,
+            "without_negation_marker": 2,
+            "unnegated_examples": [
+              "- **缺件到齊後：** 先封存執行版、查詢設定、來源快照及日誌的版本／SHA；逐步比較查詢原結果、寫出的各列與label計數，定位差異首次出現的步驟",
+              "| AD1既有185polygon的重算與原刊多個統計量在刊載精度一致 | 這是新量測、獨立真值驗證，或首次AD1火星類比 |"
+            ]
+          },
+          "absence-claim": {
+            "sentences_matching": 11,
+            "without_negation_marker": 1,
+            "unnegated_examples": [
+              "MS-03-E02降級為一般已知方法參照，退出本輪有證據支持的具體配對；不刪ID，也不宣稱格內不存在這些地貌"
+            ]
+          },
+          "similarity-percentage": {
+            "sentences_matching": 2,
+            "without_negation_marker": 0,
+            "unnegated_examples": []
+          }
+        }
+      }
+    },
+    {
+      "id": "H-MS01-amplitudes",
+      "description": "MS-01 24 h harmonic amplitudes recomputed by an independent numpy OLS from the committed analysis-window records",
+      "status": "PASS",
+      "detail": {
+        "n_series": 18,
+        "max_abs_diff_K": 2.1316282072803006e-14,
+        "rows": [
+          {
+            "station": "S8",
+            "column": "Shal_surf_T",
+            "n": 264,
+            "amplitude_audit_K": 2.7883183350318306,
+            "amplitude_reported_K": 2.7883183350318332,
+            "abs_diff": 2.6645352591003757e-15
+          },
+          {
+            "station": "S8",
+            "column": "Shal_Ice8cm_T",
+            "n": 264,
+            "amplitude_audit_K": 1.257446597330907,
+            "amplitude_reported_K": 1.2574465973309075,
+            "abs_diff": 4.440892098500626e-16
+          },
+          {
+            "station": "S8",
+            "column": "Shal_InIce15cm_T",
+            "n": 264,
+            "amplitude_audit_K": 1.0204673719214477,
+            "amplitude_reported_K": 1.0204673719214479,
+            "abs_diff": 2.220446049250313e-16
+          },
+          {
+            "station": "M22",
+            "column": "Med_cm1_T",
+            "n": 264,
+            "amplitude_audit_K": 6.9957280160303,
+            "amplitude_reported_K": 6.9957280160303075,
+            "abs_diff": 7.105427357601002e-15
+          },
+          {
+            "station": "M22",
+            "column": "Med_cm12_T",
+            "n": 264,
+            "amplitude_audit_K": 3.0189193562498247,
+            "amplitude_reported_K": 3.0189193562498255,
+            "abs_diff": 8.881784197001252e-16
+          },
+          {
+            "station": "M22",
+            "column": "Med_Ice22cm_T",
+            "n": 264,
+            "amplitude_audit_K": 0.613815473528152,
+            "amplitude_reported_K": 0.6138154735281542,
+            "abs_diff": 2.220446049250313e-15
+          },
+          {
+            "station": "M22",
+            "column": "Med_InIce27cm_T",
+            "n": 264,
+            "amplitude_audit_K": 0.35926332126290433,
+            "amplitude_reported_K": 0.35926332126290517,
+            "abs_diff": 8.326672684688674e-16
+          },
+          {
+            "station": "D36",
+            "column": "Deep_surf_T",
+            "n": 264,
+            "amplitude_audit_K": 9.25078390975694,
+            "amplitude_reported_K": 9.250783909756944,
+            "abs_diff": 3.552713678800501e-15
+          },
+          {
+            "station": "D36",
+            "column": "Deep_cm10_T",
+            "n": 264,
+            "amplitude_audit_K": 2.984754435429459,
+            "amplitude_reported_K": 2.984754435429458,
+            "abs_diff": 8.881784197001252e-16
+          },
+          {
+            "station": "D36",
+            "column": "Deep_ice36cm_T",
+            "n": 264,
+            "amplitude_audit_K": 0.19088629092972875,
+            "amplitude_reported_K": 0.19088629092972903,
+            "abs_diff": 2.7755575615628914e-16
+          },
+          {
+            "station": "D36",
+            "column": "Deep_InIce42cm_T",
+            "n": 264,
+            "amplitude_audit_K": 0.15575761672361016,
+            "amplitude_reported_K": 0.15575761672361005,
+            "abs_diff": 1.1102230246251565e-16
+          },
+          {
+            "station": "W42_Campbell",
+            "column": "T107_surf",
+            "n": 528,
+            "amplitude_audit_K": 8.378290575532404,
+            "amplitude_reported_K": 8.378290575532425,
+            "abs_diff": 2.1316282072803006e-14
+          },
+          {
+            "station": "W42_Campbell",
+            "column": "T107_10cm",
+            "n": 528,
+            "amplitude_audit_K": 3.8851920361761616,
+            "amplitude_reported_K": 3.8851920361761607,
+            "abs_diff": 8.881784197001252e-16
+          },
+          {
+            "station": "W42_Campbell",
+            "column": "T107_ice42cm",
+            "n": 528,
+            "amplitude_audit_K": 0.21165201569692965,
+            "amplitude_reported_K": 0.21165201569693,
+            "abs_diff": 3.608224830031759e-16
+          },
+          {
+            "station": "W42_Campbell",
+            "column": "T107_InIce49cm",
+            "n": 528,
+            "amplitude_audit_K": 0.126931065463656,
+            "amplitude_reported_K": 0.12693106546365623,
+            "abs_diff": 2.220446049250313e-16
+          },
+          {
+            "station": "W42_HOBO",
+            "column": "Surf_T",
+            "n": 264,
+            "amplitude_audit_K": 7.610508861453882,
+            "amplitude_reported_K": 7.610508861453879,
+            "abs_diff": 2.6645352591003757e-15
+          },
+          {
+            "station": "W42_HOBO",
+            "column": "cm20_T",
+            "n": 264,
+            "amplitude_audit_K": 1.7092623290934157,
+            "amplitude_reported_K": 1.7092623290934152,
+            "abs_diff": 4.440892098500626e-16
+          },
+          {
+            "station": "W42_HOBO",
+            "column": "ice42cm_T",
+            "n": 264,
+            "amplitude_audit_K": 0.1781800400087225,
+            "amplitude_reported_K": 0.17818004000872284,
+            "abs_diff": 3.3306690738754696e-16
+          }
+        ]
+      }
+    },
+    {
+      "id": "I-MS02-screened-pool",
+      "description": "MS-02 cell found in the hand-off screened pool (present only on the hand-off branch); relief and MY34 p95 agree with main's final_candidates",
+      "status": "PASS",
+      "detail": {
+        "rows": 58238,
+        "found": true
+      }
+    },
+    {
+      "id": "J-MS03-149-label-diagnostic",
+      "description": "independent recompute of 78/71/29 from delivered CSV (labels not re-downloaded; only internal consistency of the CSV and its rule)",
+      "status": "PASS",
+      "detail": {
+        "rows": 149,
+        "compatible": 78,
+        "not_compatible": 71,
+        "over_1s": 29,
+        "distinct_observation_ids": 75,
+        "note": "does not re-verify the labels against the network; 29 is a subset of 71 only if checked below"
+      }
+    },
+    {
+      "id": "J-over1s-subset-of-incompatible",
+      "description": "every pair separated by >1 s is in the incompatible group (so 78/71/29 must not be summed)",
+      "status": "PASS",
+      "detail": {}
+    }
+  ],
+  "not_computed": "no weights, no composite score, no similarity percentage; scientific truth is not re-derived"
+}

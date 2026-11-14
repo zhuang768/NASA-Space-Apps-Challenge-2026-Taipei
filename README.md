@@ -50,7 +50,7 @@ python3.12 -m venv .venv
 4. **大氣與沙塵（Air）**：懸浮沙塵與沙塵暴（影響太陽能與設備）；子題包含**風力與風蝕地形**（沙丘、雅丹）及**大氣成分與氣壓**（0.6 kPa CO₂）。
 - **地球無法複製的限制**（0.38 g 重力、低氣壓、強輻射與高氯酸鹽土壤等）將於各場址分析中明確標註。
 
-地球端資料尚未加入程式管線，預計搭配 NASA Earthdata（NASADEM、MODIS LST/AOD/NDVI、EMIT、GPM、SMAP）、CSA RADARSAT、ESA Sentinel/CCI Permafrost 與 JAXA G-Portal（部分需 Earthdata Login）。
+地球端資料已透過 `earthaccess` 完成 2023–2024 兩年全球網格下載並分類至 `data/raw/earth/`（共 ~7.6 GB，見 `docs/earth_data_plan.md`）：`SRTMGL30`（地形）、`MOD11C3`（溫度）、`GPM_3IMERGM` + `GLDAS_NOAH025_M` + `MOD13C2`（水／冰與植被）、`M2TMNXAER`（MERRA-2 沙塵 AOT），待隊友 A 接入相似度計算管線。支援與子題佐證另搭配 ESA CCI Permafrost、Copernicus 與 NASA Worldview。
 
 ## 尺度對齊
 
@@ -62,4 +62,4 @@ python3.12 -m venv .venv
 提交時必須說明 AI 工具的用途，請在這裡持續記錄。
 
 - 2026-11-13：使用 Cursor（Claude）整理挑戰說明與資料來源、建立專案骨架、撰寫火星資料的下載與讀取程式及測試。
-- 2026-11-14：使用 Gemini 整理 2026 挑戰規範與評分重點、確定聚焦地球與火星類比（排除月球）、整併四大主題與子題，並撰寫「地球無法複製的火星條件」、7 頁簡報架構與地球端資料下載規劃（`docs/`）。
+- 2026-11-14：使用 Gemini 整理 2026 挑戰規範與評分重點、確定聚焦地球與火星類比（排除月球）、整併四大主題與子題，撰寫「地球無法複製的火星條件」、7 頁簡報架構與地球端資料下載規劃（`docs/`），並透過 `earthaccess` 下載分類 2023–2024 兩年地球端四大面向全球資料（`SRTMGL30`、`MOD11C3`、`GPM_3IMERGM`、`GLDAS_NOAH025_M`、`MOD13C2`、`M2TMNXAER`）。

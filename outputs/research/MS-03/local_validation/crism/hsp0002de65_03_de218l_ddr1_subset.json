@@ -1,0 +1,108 @@
+{
+  "source_file": "hsp0002de65_03_de218l_ddr1.img",
+  "source_sha256": "7edbdbd7446708c4726e43a8810cd3d308db47fefe54898f6ddc800c98cae144",
+  "method": "locally concatenate verbatim original band/row bytes after full original DDR acquisition; not a single original contiguous file or HTTP range",
+  "band_storage": "BAND_SEQUENTIAL",
+  "lines": 135,
+  "samples": 64,
+  "segments": [
+    {
+      "band_index_0based": 0,
+      "original_byte_start": 160768,
+      "original_byte_end_inclusive": 195327,
+      "bytes": 34560,
+      "sha256": "ea27bb082b6b1e1bf1350432272fafbe10ed38e98379f02570abba2f3535139c"
+    },
+    {
+      "band_index_0based": 1,
+      "original_byte_start": 851968,
+      "original_byte_end_inclusive": 886527,
+      "bytes": 34560,
+      "sha256": "c8ec21976ec90017a2d123384c69fe979ea13380a5a65fc0f5bedae4a646fdf3"
+    },
+    {
+      "band_index_0based": 2,
+      "original_byte_start": 1543168,
+      "original_byte_end_inclusive": 1577727,
+      "bytes": 34560,
+      "sha256": "94b46ebbbaa77b7e69a92e74da5bfa2aaf5544ad3731f88d11ee8faa03e91e18"
+    },
+    {
+      "band_index_0based": 3,
+      "original_byte_start": 2234368,
+      "original_byte_end_inclusive": 2268927,
+      "bytes": 34560,
+      "sha256": "be039c6898283484ecdd62651abf798391bea9ec5ee3e424712ebc30f3104c31"
+    },
+    {
+      "band_index_0based": 4,
+      "original_byte_start": 2925568,
+      "original_byte_end_inclusive": 2960127,
+      "bytes": 34560,
+      "sha256": "29f142ccaee0cf08a85b31f07988d08fa067f49f157733faac647243da896e71"
+    },
+    {
+      "band_index_0based": 5,
+      "original_byte_start": 3616768,
+      "original_byte_end_inclusive": 3651327,
+      "bytes": 34560,
+      "sha256": "de7497a08005e1f4b6d943e8519b7c5e15e50d19b6f45e72e5c493f1e14459a1"
+    },
+    {
+      "band_index_0based": 6,
+      "original_byte_start": 4307968,
+      "original_byte_end_inclusive": 4342527,
+      "bytes": 34560,
+      "sha256": "75fa414bea124df96df8dc56cfcdf9d80e1d540a5fad00f474f1c3a1e9f4eaec"
+    },
+    {
+      "band_index_0based": 7,
+      "original_byte_start": 4999168,
+      "original_byte_end_inclusive": 5033727,
+      "bytes": 34560,
+      "sha256": "6c8d1e33a3ca70a75f8d063e44f5b61ab4303e43ca2085217470c713d71d9cc4"
+    },
+    {
+      "band_index_0based": 8,
+      "original_byte_start": 5690368,
+      "original_byte_end_inclusive": 5724927,
+      "bytes": 34560,
+      "sha256": "1d5789bd74fb0a608d2eb325ecf5e46a92f35a8c27e0ac99a98ab1c16e62cd26"
+    },
+    {
+      "band_index_0based": 9,
+      "original_byte_start": 6381568,
+      "original_byte_end_inclusive": 6416127,
+      "bytes": 34560,
+      "sha256": "472254b29ed6ac812fb5bc146cda40ab1fa7ba25b71dccfec564fb18b1c5fa68"
+    },
+    {
+      "band_index_0based": 10,
+      "original_byte_start": 7072768,
+      "original_byte_end_inclusive": 7107327,
+      "bytes": 34560,
+      "sha256": "576f540e025ef80ac39a3ace420608c94d062d22431fbe33a1d679df95d6710f"
+    },
+    {
+      "band_index_0based": 11,
+      "original_byte_start": 7763968,
+      "original_byte_end_inclusive": 7798527,
+      "bytes": 34560,
+      "sha256": "576f540e025ef80ac39a3ace420608c94d062d22431fbe33a1d679df95d6710f"
+    },
+    {
+      "band_index_0based": 12,
+      "original_byte_start": 8455168,
+      "original_byte_end_inclusive": 8489727,
+      "bytes": 34560,
+      "sha256": "c37bf36e69bcfd047ff7380659e6344352e02256716d30335488d4b72a2926f8"
+    },
+    {
+      "band_index_0based": 13,
+      "original_byte_start": 9146368,
+      "original_byte_end_inclusive": 9180927,
+      "bytes": 34560,
+      "sha256": "576f540e025ef80ac39a3ace420608c94d062d22431fbe33a1d679df95d6710f"
+    }
+  ]
+}

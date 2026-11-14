@@ -1,0 +1,36 @@
+[
+  {
+    "id": "global_albedo_8ppd.lbl",
+    "url": "http://tes.asu.edu/mineral_map/global_albedo_8ppd.lbl",
+    "at": "2026-11-14T19:23:34.306Z",
+    "status": 200,
+    "bytes": 2334,
+    "content_range": null
+  },
+  {
+    "id": "albedo_dsmap.cat",
+    "url": "http://tes.asu.edu/mineral_map/dsmap.cat",
+    "at": "2026-11-14T19:23:34.307Z",
+    "status": 404,
+    "bytes": 345,
+    "content_range": null
+  },
+  {
+    "id": "dci_header.bin",
+    "url": "http://tes.asu.edu/~ruff/DCI/dci_lo_ice_dust_16ppd_shifted.pds",
+    "range": "bytes=0-16383",
+    "at": "2026-11-14T19:23:34.308Z",
+    "status": 206,
+    "bytes": 16384,
+    "content_range": "bytes 0-16383/66356224"
+  },
+  {
+    "id": "radar_first_rows.bin",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/rgram/s_0195xx/s_01958801_rgram.img",
+    "range": "bytes=0-208399",
+    "at": "2026-11-14T19:23:34.308Z",
+    "status": 206,
+    "bytes": 208400,
+    "content_range": "bytes 0-208399/75024000"
+  }
+]

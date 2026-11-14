@@ -1,0 +1,12 @@
+# Acquired originals remain locally; URL/hash/provenance and ROI derivatives are committed.
+__pycache__/
+extracted/
+sources/*.pdf
+sources/wendt2026.html
+sources/wisdom2025.html
+sources/piqueux/*.ascii
+sources/piqueux/Notes.txt
+sources/usgs_geology/
+sources/products/*.img
+sources/products/*.jpg
+sources/products/*.tif

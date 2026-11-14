@@ -1,0 +1,480 @@
+{
+  "version": "MS03-EARTH-ANALOG-20261115-v2",
+  "baseline_main_commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+  "supplemental_handoff_commit": "f7076c9fdc77e00244ed5d6863aad2bf78cfa28f",
+  "branch": "research/ms-03-earth-analogs",
+  "research_date_taipei": "2026-11-14",
+  "mars_id": "MS-03",
+  "mars_coordinates": {
+    "lat": 57.75,
+    "lon_east_0_360": 242.25,
+    "lon_east_signed": -117.75
+  },
+  "requirements": "User MS03 brief;atleast2Earthcandidate literature evidence/prior-use review",
+  "inputs": [
+    {
+      "path": "outputs/research/mars_reselection_20261114/report.md",
+      "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "bytes": 16524,
+      "sha256": "1708e2d7af86118edf2a88c3e896464406d5bd617f9ab197f7c4d412f5969e4b",
+      "access": "read_local_clone_after_fetch"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/selected_targets.json",
+      "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "bytes": 3434,
+      "sha256": "388ca89110b2a8fbb4fc6fa403994ab54cd193fd23eefd8aa5987a75e3255ba5",
+      "access": "read_local_clone_after_fetch"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/final_candidates.csv",
+      "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "bytes": 5897,
+      "sha256": "83a03d1f4273fa7c45c0d22b5c29a8b8cfc0544e481d5f2bbca2c85812534c4e",
+      "access": "read_local_clone_after_fetch"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/candidate_native_evidence.json",
+      "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "bytes": 38177,
+      "sha256": "3258b5c5bd7de7f15d96918bbce1c09afa6c5b7a329b8bc05cdb7c4fcd3f41c6",
+      "access": "read_local_clone_after_fetch"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/all_data_usage.csv",
+      "commit": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "bytes": 803,
+      "sha256": "384fd5358f45c0ba4965a829f51a5e28496efbb5c90435f57823ec747ef345bd",
+      "access": "read_local_clone_after_fetch"
+    }
+  ],
+  "shared_files": [
+    {
+      "path": "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
+      "remote_commit": "f7076c9fdc77e00244ed5d6863aad2bf78cfa28f",
+      "bytes": 23035176,
+      "sha256": "157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175",
+      "local_path": "/tmp/team_zasa_shared_input_check/NASA_Space_Apps_2026_All_Data.xlsx",
+      "actually_retrieved": true,
+      "tracked_in_main_baseline": false,
+      "validation": "XLSXZIPintegrity+workbookXML",
+      "scientific_content_validated": false,
+      "used_for_candidate_science": false
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/screened_pool.csv.gz",
+      "remote_commit": "f7076c9fdc77e00244ed5d6863aad2bf78cfa28f",
+      "bytes": 7702846,
+      "sha256": "7c5559e40fca9fa304b7799e4490bfb4ff0d55ea0a02819c53f432377462ff92",
+      "local_path": "/tmp/team_zasa_shared_input_check/screened_pool.csv.gz",
+      "actually_retrieved": true,
+      "tracked_in_main_baseline": false,
+      "validation": "gzipCRC+CSVparse58238rows54columns",
+      "scientific_content_validated": false,
+      "used_for_candidate_science": false
+    }
+  ],
+  "missing_at_baseline": [
+    "docs/TEAM_START.md",
+    "scripts/restore_team_data.py",
+    "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
+    "outputs/research/mars_reselection_20261114/screened_pool.csv.gz"
+  ],
+  "restore_script_execution": "Not run:absent at main and inspected handoff tree;Git blob retrieval used",
+  "sources": {
+    "M0": {
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/3cc8488577535e2fa4d146021fde51f8ff6cc667/outputs/research/mars_reselection_20261114/candidate_native_evidence.json",
+      "locator": "records[review_id=C]; units_periods_and_support; sources",
+      "read_scope": "Repository full JSON record C and shared metadata; final CSV cross-check; no raw Mars reprocessing",
+      "access_date_taipei": "2026-11-14"
+    },
+    "U1": {
+      "url": "https://doi.org/10.1017/S0954102022000025",
+      "locator": "Meteorological measurements; TableII; Thermal diffusivity; Appendix",
+      "read_scope": "Publisher HTML named full-text sections; no supplementary numeric file downloaded",
+      "access_date_taipei": "2026-11-14"
+    },
+    "U2": {
+      "url": "https://www.usgs.gov/publications/effects-snow-and-salt-ice-table-stability-university-valley-antarctica",
+      "locator": "Author abstract; DOI10.1017/S0954102017000402",
+      "read_scope": "USGS original abstract; PMC fulltext blocked by browser check; no fulltext claim",
+      "access_date_taipei": "2026-11-14"
+    },
+    "U3": {
+      "url": "https://www.lpi.usra.edu/meetings/lpsc2011/pdf/1901.pdf",
+      "locator": "pp1-2; exact drill coordinates p1",
+      "read_scope": "Both pages author conference abstract",
+      "access_date_taipei": "2026-11-14"
+    },
+    "A1": {
+      "url": "https://doi.pangaea.de/10.1594/PANGAEA.921087",
+      "locator": "Event Svalbard2009_Act-IWS; data table; license; supplement citation",
+      "read_scope": "Dataset HTML and actual downloaded TSV7554bytes; Acts-IWS ZIP57636bytes opened; no thermal time series",
+      "access_date_taipei": "2026-11-14"
+    },
+    "A2": {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/ppp.1985",
+      "locator": "Sections2,3,4.1; Fig1 and supporting-information listing",
+      "read_scope": "Publisher HTML named sections; sensor supplement not downloaded; exact plot linkage to AD1 not geometrically proved",
+      "access_date_taipei": "2026-11-14"
+    },
+    "A3": {
+      "url": "https://tc.copernicus.org/articles/15/283/2021/",
+      "locator": "Section2; Methods summary; Code and data availability",
+      "read_scope": "Publisher HTML named sections; raw seismic data not obtained; only available upon request",
+      "access_date_taipei": "2026-11-14"
+    },
+    "A4": {
+      "url": "https://meetingorganizer.copernicus.org/EPSC-DPS2025/EPSC-DPS2025-710.html",
+      "locator": "Svalbard field test location; Results/Fig3; References[5]",
+      "read_scope": "Full author conference abstract HTML; not journal article or registered conference presentation; exact profile geometry not obtained",
+      "access_date_taipei": "2026-11-14"
+    },
+    "A5": {
+      "url": "https://apgc.awi.de/dataset/mapped-poly-pattern-geomorph-hrsc-ax-2009-iws-svalbard",
+      "locator": "Additional Info; source DOI link",
+      "read_scope": "Metadata only; IWS broad bounding box is NOT substituted for Act-IWS; IWS ZIP503",
+      "access_date_taipei": "2026-11-14"
+    },
+    "A6": {
+      "url": "https://tc.copernicus.org/articles/20/1179/2026/index.html",
+      "locator": "2.1,2.2,Data availability",
+      "read_scope": "Named full-text sections; 2023 cores/InSAR valley context, not established as AD1 samples; linked Zenodo not downloaded",
+      "access_date_taipei": "2026-11-14"
+    },
+    "A7": {
+      "url": "https://doi.org/10.1016/j.geomorph.2011.07.002",
+      "locator": "Original abstract/publisher index; dataset supplement link",
+      "read_scope": "Indexed author abstract and PANGAEA original attribution; AWI author PDF returned Anubis access-denied; no full article claim",
+      "access_date_taipei": "2026-11-14"
+    },
+    "U4": {
+      "url": "https://zenodo.org/records/10553882",
+      "locator": "VersionDOI10.5281/zenodo.10553882;concept10553881;WCampbell/Hobo files and six selected original notes/exports",
+      "read_scope": "API metadata and six actual MD5-verified downloads;two full calibrated text exports parsed;DOCXbody and Campbell notesPDF10pages read;not unprocessed logger bytes",
+      "access_date_taipei": "2026-11-15",
+      "license": "CC0 per version metadata"
+    },
+    "U5": {
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/5B2E97EBA4C91035CAFCECC234A532A0/S0954102025100448a.pdf/summer-snow-determines-the-depth-to-ice-cemented-ground-under-dry-permafrost-in-antarctica.pdf",
+      "locator": "Environmental data printedp124",
+      "read_scope": "Original author article points W data to Zenodo10553881;used as identity bridge,not new model analysis",
+      "access_date_taipei": "2026-11-15"
+    },
+    "U6": {
+      "url": "https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0954102022000025/resource/name/S0954102022000025sup001.pdf",
+      "locator": "Publisher HTML Supplemental material and direct asset link",
+      "read_scope": "Asset direct download403;publisher describes Fig3 daily airT/RH/solar/wind averages;no downloaded supplement or multidepth series claimed",
+      "access_date_taipei": "2026-11-15"
+    },
+    "U7": {
+      "url": "https://nsidc.org/data/nsidc-0529/versions/1",
+      "locator": "Overview and access status",
+      "read_scope": "Official catalog:depth-to-ice survey,not W temperature series;not local raw archive retrieval",
+      "access_date_taipei": "2026-11-15"
+    }
+  },
+  "downloaded_earth_asset": {
+    "path": "outputs/research/MS-03/polygons_Act-IWS_source.zip",
+    "url": "https://download.pangaea.de/dataset/921087/files/polygons_Act-IWS.zip",
+    "sha256": "c75e7568c9fbfc67898f64e9c18681e5dc7e24a1ec272ceafa12c51377b8054e",
+    "bytes": 57636,
+    "license": "CC-BY4.0;Ulrich,Haertel,Hauber2020;PANGAEA921087",
+    "validation": "ZIPintegrity;185polygons;PRJ WGS84UTM33N;no terrain/ice statistics computed"
+  },
+  "gaps": [
+    "MS03 local ice depth/purity/material/morphology unknown",
+    "No QA-qualified candidate-centred MCS temperature;nearest60N120W missing data",
+    "AD1 thermal raw and exact crosswalk to later sensors/GPR not obtained",
+    "No dust-deposition/wind/pressure equivalence",
+    "No new-scientific-novelty or validated instrument performance established",
+    "W data now retrieved;Campbell clock history and author per-row intervention flags unresolved",
+    "No independent sensor recalibration or EarthMars common physical support established"
+  ],
+  "scope": "Independent literature and evidence pairing;no global reranking/new field or predictive test",
+  "new_calculations": [
+    "UV DMS decimal conversion",
+    "EarthGIS structural record count/bbox/CRS",
+    "shared-file CRC/parse/hash checks",
+    "Wexport structure/time/missingness QA",
+    "Earth-only2010HOBO20/42cm same-row descriptive statistics"
+  ],
+  "data_not_transferred": [
+    "I01I02 oldpairing",
+    "Jezero MEDA",
+    "airport climate as AD1 station value"
+  ],
+  "outputs": [
+    {
+      "path": "docs/research/MS-03/report.md",
+      "bytes": 32547,
+      "sha256": "d6a015874a360e4be4ebc005325f7eaf32527f95bebaf7785a295841d695e924"
+    },
+    {
+      "path": "scripts/research/MS-03/audit_campbell_clock.py",
+      "bytes": 2774,
+      "sha256": "c4405e186b81522508c1cff54aaf10edcc00c076480bd47d6cdb11e37d2fcd04"
+    },
+    {
+      "path": "scripts/research/MS-03/inspect_uv_w.py",
+      "bytes": 8662,
+      "sha256": "afdb38f4f8cce6c2724506bba784cefa76c38c5d301e916ddf660434fd9ecf39"
+    },
+    {
+      "path": "scripts/research/MS-03/validate.py",
+      "bytes": 4608,
+      "sha256": "03a67857e976f28a0f43366596fefc6be607914ace6b8d630cd45667d2fdca00"
+    },
+    {
+      "path": "outputs/research/MS-03/candidates.csv",
+      "bytes": 2850,
+      "sha256": "a0f410983e66dafc4cb3831dbbbb8f30afe5282798c1ba24b0312abd0247a602"
+    },
+    {
+      "path": "outputs/research/MS-03/evidence.csv",
+      "bytes": 14801,
+      "sha256": "20eef43aa62c08cfcdaaa317d2fcade6bf907eaa5a0b98e62a8cbfc74afa9f29"
+    },
+    {
+      "path": "outputs/research/MS-03/mars_reference.json",
+      "bytes": 13542,
+      "sha256": "014ca34cb9eca59fe1623b4e5cbe602097c6b4a42a8e41de52a9bb108f972348"
+    },
+    {
+      "path": "outputs/research/MS-03/polygons_Act-IWS_source.zip",
+      "bytes": 57636,
+      "sha256": "c75e7568c9fbfc67898f64e9c18681e5dc7e24a1ec272ceafa12c51377b8054e"
+    },
+    {
+      "path": "outputs/research/MS-03/prior_work.csv",
+      "bytes": 4344,
+      "sha256": "ee7bc2ecada4bef1b29ba994eb7907e28db87b578ea0b4993f806970e7c6d4de"
+    },
+    {
+      "path": "outputs/research/MS-03/search_log.csv",
+      "bytes": 7016,
+      "sha256": "1648f9984c0f3722388c1ed3e5bc9b41ee9c36a55f013e79f1896259cd9783ac"
+    },
+    {
+      "path": "outputs/research/MS-03/sources.json",
+      "bytes": 5241,
+      "sha256": "01b1256e0ed89c2745947f333f08be06ad468661b669d56e5bd5d6c7ef7fd2ec"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/campbell_clock_audit.json",
+      "bytes": 1224,
+      "sha256": "41da5b4508cc37e9b0c342ca37d1785a99b0dac49e5ff11829a482648792e376"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/campbell_clock_boundary.csv",
+      "bytes": 877,
+      "sha256": "20f3a653e654e9f79b445f9d1f83c53d67161f6578fe775366a0ae0937725f8d"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/clock_search_followup.json",
+      "bytes": 1247,
+      "sha256": "3366ad1aeeaeac4a397a17f6831ece521f409ae27d7931bed9ad27c8670e5447"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/download_manifest.json",
+      "bytes": 3332,
+      "sha256": "ebd5294c47f2d76bc6d7d7121874b96bff400987eae8c741b69fd16e95b78770"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/earth_only_2010_summary.csv",
+      "bytes": 886,
+      "sha256": "f469d76f1c73ccfc5411ab6cebb760300e6823435d1f41c54942d7b15011932e"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/hobo_W_temperatures.csv.gz",
+      "bytes": 446674,
+      "sha256": "9fff2d2d959e4cbecd66c05d9c7904cf021e8c2a048050a24198477cf52ee157"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/monthly_coverage.csv",
+      "bytes": 30420,
+      "sha256": "ae5957c9449503a5cd0fe7d58a2e18061d5a929139eabefa72499830dfeeea5a"
+    },
+    {
+      "path": "outputs/research/MS-03/uv_w/qa.json",
+      "bytes": 6621,
+      "sha256": "47d4ecd4ec26c1678b3ded7a11f45039e269e826311efa15ed6ad441eebb39ed"
+    },
+    {
+      "path": "outputs/research/MS-03/validation.json",
+      "bytes": 4902,
+      "sha256": "83e3af04629cb8a22aecdf7eaa949c0a46e6c94b8fbdfd89b6ba2d068f32aab3"
+    }
+  ],
+  "followup_date_taipei": "2026-11-15",
+  "uv_followup": {
+    "version_record": 10553882,
+    "version_doi": "10.5281/zenodo.10553882",
+    "download_manifest": "outputs/research/MS-03/uv_w/download_manifest.json",
+    "qa": "outputs/research/MS-03/uv_w/qa.json",
+    "data": "outputs/research/MS-03/uv_w/hobo_W_temperatures.csv.gz",
+    "summary": "outputs/research/MS-03/uv_w/earth_only_2010_summary.csv",
+    "scope": "Earth-only same-HOBO-depth descriptive analysis;no cross-planet numerical matching",
+    "raw_downloads_tracked": false,
+    "parser": "scripts/research/MS-03/inspect_uv_w.py",
+    "clock_status": "Campbell decimal day / printed timestamp discontinuity unresolved;HOBO no time conversion",
+    "main_integration": false
+  },
+  "campbell_clock_followup": {
+    "date": "2026-11-15",
+    "status": "boundary association confirmed;root cause unresolved",
+    "correction_applied": false,
+    "hobo_alignment": false,
+    "outputs": [
+      "uv_w/campbell_clock_audit.json",
+      "uv_w/campbell_clock_boundary.csv"
+    ]
+  },
+  "clock_public_source_followup": {
+    "date": "2026-11-15",
+    "record": "uv_w/clock_search_followup.json",
+    "root_cause": "unknown",
+    "no_new_clock_inputs": true
+  },
+  "clock_handoff": {
+    "date": "2026-11-15",
+    "recipients": [
+      "main research conversation",
+      "GPU"
+    ],
+    "location": "docs/research/MS-03/report.md",
+    "status": "prepared in PR7;not merged",
+    "clock_correction": false,
+    "hobo_alignment": false
+  },
+  "final_pr7_review": {
+    "date": "2026-11-15",
+    "clock_root_cause": "unknown",
+    "hobo_depth_synchronization": "not independently verified",
+    "clock_alignment_allowed": false
+  },
+  "MS03_AD1_morphology": {
+    "date": "2026-11-15",
+    "starting_sha": "7b3c865e85ffeb4db81277ef34e9c3f4a318fc9f",
+    "commands_passed": [
+      "morphology_geometry.py",
+      "plot_morphology.py",
+      "validate_morphology.py",
+      "validate.py",
+      "git diff --check"
+    ],
+    "checks": [
+      "185 source polygons;independent first-polygon shoelace/perimeter",
+      "source byte-range hashes;unaltered DN crop",
+      "successful3CTX and0HiRISE catalogue responses;errors not counted",
+      "outside HiRISE label bound",
+      "report relative links exist",
+      "all uv_w files byte-identical to starting SHA",
+      "figure opened and visually inspected"
+    ],
+    "scientific_result": "insufficient morphology evidence;AD1 downgraded to general method reference",
+    "not_done": [
+      "ROI-wide native-pixel mapping",
+      "precise camera geolocation or orthorectification",
+      "Mars polygon boundary/size/shape measurement",
+      "mechanism or ice validation",
+      "clock alignment"
+    ]
+  },
+  "AD1_handoff_evidence_supplement": {
+    "date": "2026-11-15",
+    "basis_commit": "5154b9b2c58057b8719ed0d6297374ad03086da0",
+    "checks": [
+      "report and morphology README local links exist",
+      "all uv_w files unchanged",
+      "full actual index821-byte rows and source SHA",
+      "label/table205302vs205451 mismatch retained",
+      "204836valid bbox0ROIhits;615invalid unknown",
+      "13 original-paper rounded statistics match",
+      "4 prior-paper RED/COLOR products outsideROI"
+    ],
+    "scope": "Primary-source documentation and reproducible provenance checks;not Mars morphology detection or independent ground-truth validation",
+    "decision": "AD1 downgrade retained;Mars morphology unknown",
+    "external_notifications_sent": false
+  },
+  "HiRISE_index_anomaly_resolution": {
+    "date": "2026-11-15",
+    "basis_commit": "115576b51e1a7c89d2d9cd75ae667d4da4ad96c0",
+    "commands_passed": [
+      "audit_hirise_index_anomalies.py --index /tmp/ms03_HiRISE_RDRCUMINDEX.TAB",
+      "validate_morphology.py",
+      "validate.py"
+    ],
+    "checks": [
+      "pinned full-index SHA and205451fixed-length records",
+      "all615negative-longitude flags latitude-excluded",
+      "149duplicate groups compared over54fields;geometry/path identical",
+      "all305latitude-eligible rows0ROIintersections",
+      "4source-label hashes and latitude exclusion",
+      "local report links and CSV/JSON",
+      "existing Earth geometry,image figure and alluv_w outputs unchanged"
+    ],
+    "not_confirmed": [
+      "producer duplicate generation logic",
+      "label count-generation implementation",
+      "unlisted/unreleased observation completeness",
+      "all source geometries independently validated"
+    ],
+    "decision": "no evidence these two anomalies hide anROI record in pinned index;AD1 downgrade retained"
+  },
+  "index_handoff_further_evidence": {
+    "date": "2026-11-15",
+    "basis_commit": "c6f9b93aa9ff5a471a8f67fbdf40f0922e508b84",
+    "checks": [
+      "10selected labels actual downloads allSHA/bytes match",
+      "5observations current source labels0ROIoverlap",
+      "main/GPU handoff links exist",
+      "JSON and source crossrefs parsed",
+      "existing morphology and handoff validation passed",
+      "alluv_w and Earth geometry/science figure files unchanged"
+    ],
+    "newly_known": [
+      "selected neighbouring source labels do not overlapROI",
+      "public Index_Builder component responsibility documented"
+    ],
+    "still_unknown": [
+      "executed2026build/SQL/duplicate-generation cause",
+      "all unreleased/unlisted observations",
+      "insideROI polygon morphology"
+    ],
+    "clock_alignment": false
+  },
+  "generator_followup": {
+    "date": "2026-11-15",
+    "basis_commit": "3321765dc0cd24316e7e12d30b4ade803fa67fcd",
+    "checks": [
+      "149source labels acquired and ZIP CRC/SHA checked",
+      "149individual sourceSHA/bytes and actualPRODUCT_ID match",
+      "78compatible/71not/29over1second independently recounted from saved source comparison",
+      "public version IDs are not marked as production execution",
+      "all local report/README links and JSON parsed",
+      "alluv_w,AD1geometry and existing science figures unchanged"
+    ],
+    "not_confirmed": [
+      "actual2026executedbinary/source revision",
+      "actualgeneratorSQL/config/build logs",
+      "causal origin of149duplicates"
+    ],
+    "timestamp_correction": false
+  },
+  "duplicate149_handoff": {
+    "date": "2026-11-15",
+    "basis_commit": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+    "checks": [
+      "149source label ZIP/individual SHA intact",
+      "149products correspond75observation IDs",
+      "78compatible71incompatible;29subsetof71",
+      "report relative links exist",
+      "all underlying MS03results and inputs byte-identical to basis",
+      "existingvalidate.py andvalidate_morphology.py passed"
+    ],
+    "scope": "Documentation handoff and provenance verification only;no causal inference or timestamp selection",
+    "root_cause": "unknown",
+    "main_merge": false
+  }
+}

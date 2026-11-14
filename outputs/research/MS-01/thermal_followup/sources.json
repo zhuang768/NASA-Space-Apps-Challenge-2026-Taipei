@@ -1,0 +1,50 @@
+{
+  "U1": {
+    "url": "https://doi.org/10.1017/S0954102022000025",
+    "title": "Marinova et al.2022",
+    "read_scope": "Publisher full Methods/Meteorological measurements, Thermal diffusivity, Results/Model validation, Discussion and Appendix Methods1–3/Eq12–20; original data analysis is separately reproduced",
+    "locator": "Publisher HTML: Methods/Meteorological measurements and Thermal diffusivity; Results/Model validation; Discussion; Appendix Methods1–3, Eq12–20 (no unverified PDF page numbers)",
+    "use": "Prior work, instrument specification, known station depths and published coordinate version; no new-method claim",
+    "accessed_date_taipei": "2026-11-15"
+  },
+  "UD": {
+    "url": "https://doi.org/10.5281/zenodo.10553882",
+    "title": "Marinova2024 fixed Zenodo v1",
+    "read_scope": "Provider record Files/MD5 and Rights; 6 assets actually downloaded and hashes checked; W Campbell existing bytes rechecked",
+    "locator": "Files exact names/MD5; Rights CC0-1.0; author TXT header/unit/data rows",
+    "use": "Original author-calibrated/filtered measurements, source bytes, row provenance",
+    "accessed_date_taipei": "2026-11-15"
+  },
+  "D09": {
+    "url": "https://zenodo.org/records/10553882/files/UnivValley_Dec2009Deployment_HoboInfo.docx?download=1",
+    "title": "University Valley December2009 HOBO deployment",
+    "read_scope": "Actual MD5-verified DOCX; full word/document.xml paragraphs read",
+    "locator": "S p26–40;M p43–63;D p66–80; paragraphs are XML w:p ordinals, not printed page numbers",
+    "use": "Logger serial/channel mapping, probe geometry and coordinate conflict",
+    "accessed_date_taipei": "2026-11-15"
+  },
+  "D10": {
+    "url": "https://zenodo.org/records/10553882/files/UnivValley_HoboInfo_Dec2010_Update.docx?download=1",
+    "title": "December2010 update (document body dated2011-01-11)",
+    "read_scope": "Actual MD5-verified DOCX; all body paragraphs read",
+    "locator": "word/document.xml p5–7",
+    "use": "Battery/redeployment failures; no exact failure date assumed; primary window before maintenance",
+    "accessed_date_taipei": "2026-11-15"
+  },
+  "B1": {
+    "url": "https://doi.org/10.1029/2017JF004535",
+    "title": "Liu et al.2018 Beacon Valley thermal regime",
+    "read_scope": "Publisher full §2–5;Table1/2;Fig2; original raw hourly data not acquired or reprocessed",
+    "locator": "§2 known massive-ice interface;§3.1–3.2 physical-property measurements and models",
+    "use": "Optional massive-ice/independent soil-property comparator; not a joint validation result",
+    "accessed_date_taipei": "2026-11-15"
+  },
+  "MS": {
+    "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/3cc8488577535e2fa4d146021fde51f8ff6cc667/outputs/research/mars_reselection_20261114/final_candidates.csv",
+    "title": "Pinned MS-01 native source context",
+    "read_scope": "MS-01 row and prior branch numerical_audit; no new Mars retrieval in this follow-up",
+    "locator": "MS-01 row TES_TI_mean;SWIM_0_1m_mean;SWIM_1_5m_mean",
+    "use": "Research motivation only, no cross-planet subtraction",
+    "accessed_date_taipei": "2026-11-15"
+  }
+}

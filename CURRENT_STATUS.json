@@ -24,5 +24,20 @@
   "verified_at_taipei": "2026-11-14T23:01:49.819281+08:00",
   "repository_visibility": "private, unchanged",
   "local_original_worktree_synced": false,
-  "original_local_uncommitted_work_preserved": true
+  "original_local_uncommitted_work_preserved": true,
+  "research_evidence_snapshot": {
+    "source_main_sha": "08d2740a23694a54bcc11cabf7120114d2e120fc",
+    "source_prs_merged": [
+      6,
+      7,
+      8
+    ],
+    "current_notes": "docs/integration/science/current_notes.md",
+    "comparison": "outputs/integration/science/comparison_current.csv",
+    "formal_report_author": "human",
+    "historic_reports_are_reference_only": true,
+    "local_ice_truth_verified": false,
+    "deployment_check": "failure; exact cause blocked by Cloudflare sign-in",
+    "pending_ms02_documentation_pr": 12
+  }
 }

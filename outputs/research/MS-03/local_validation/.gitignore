@@ -1,0 +1,13 @@
+__pycache__/
+sources/*.ascii
+sources/*.html
+sources/*.pdf
+sources/piqueux_Notes.txt
+sources/*zip_eocd.bin
+sources/*zip_cd.bin
+sources/usgs_geology_*_compressed.bin
+sources/usgs_geology_*_header.bin
+sources/USGS_Global_Geology.*
+sources/ctx_seams/
+sources/ctx_services_search.json
+sources/geology_roi_mirror.json

@@ -1,0 +1,3 @@
+candidate_id,name,disposition,verified_use,unverified_use,next_executable_requirement
+MS-01-E01,University Valley,保留；限定用途；站位配準待補證據,已知冰膠結剖面熱傳響應、資料品質與可識別性檢查,無冰排除/冰偵測特異性/MS-01冰深或含冰量,獨立材料物性與局地邊界約束後，用未參與設定的深度/時段檢驗；先解S/D位置對照
+MS-01-E02,Beacon Valley,保留可選文獻補充；原始序列比較證據不足,塊狀冰結構與土樣密度/比熱之材料約束對照,本輪新振幅/雙谷聯合驗證/作為UV結論必要條件,取得可驗證逐時資料及站位metadata後才進行同定義比較；本輪未執行

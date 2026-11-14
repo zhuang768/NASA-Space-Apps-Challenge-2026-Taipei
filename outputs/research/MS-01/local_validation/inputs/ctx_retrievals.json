@@ -1,0 +1,59 @@
+[
+  {
+    "id": "G23_027348_2388_XN_58N287W",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_1657/data/G23_027348_2388_XN_58N287W.IMG",
+    "status": 206,
+    "content_range": "bytes 0-16383/264049600",
+    "received_bytes": 16384,
+    "retained_bytes": 16384,
+    "kind": "attached label request"
+  },
+  {
+    "id": "F02_036407_2378_XN_57N287W",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_2096/data/F02_036407_2378_XN_57N287W.IMG",
+    "status": 206,
+    "content_range": "bytes 0-16383/263131712",
+    "received_bytes": 16384,
+    "retained_bytes": 16384,
+    "kind": "attached label request"
+  },
+  {
+    "id": "F02_036407_2378_XN_57N287W",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_2096/extras/browse/F02_036407_2378_XN_57N287W.IMG.jpeg",
+    "status": 200,
+    "received_bytes": 55210,
+    "kind": "provider browse,not map projected"
+  },
+  {
+    "id": "F23_044728_2356_XN_55N286W",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_2491/data/F23_044728_2356_XN_55N286W.IMG",
+    "status": 206,
+    "content_range": "bytes 0-16383/113904096",
+    "received_bytes": 16384,
+    "retained_bytes": 16384,
+    "kind": "attached label request"
+  },
+  {
+    "id": "F23_044728_2356_XN_55N286W",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_2491/extras/browse/F23_044728_2356_XN_55N286W.IMG.jpeg",
+    "status": 200,
+    "received_bytes": 1635484,
+    "kind": "provider browse,not map projected"
+  },
+  {
+    "id": "V17_086795_2355_XN_55N286W",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_5267/data/V17_086795_2355_XN_55N286W.IMG",
+    "status": 206,
+    "content_range": "bytes 0-16383/264049600",
+    "received_bytes": 16384,
+    "retained_bytes": 16384,
+    "kind": "attached label request"
+  },
+  {
+    "id": "V17_086795_2355_XN_55N286W",
+    "url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_5267/extras/browse/V17_086795_2355_XN_55N286W.IMG.jpeg",
+    "status": 200,
+    "received_bytes": 3520173,
+    "kind": "provider browse,not map projected"
+  }
+]

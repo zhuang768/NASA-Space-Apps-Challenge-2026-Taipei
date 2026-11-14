@@ -1,0 +1,69 @@
+PDS_VERSION_ID       = PDS3 
+RECORD_TYPE          = UNDEFINED
+            
+/* RDR Identification */
+            
+DATA_SET_ID                        = "MRO-M-SHARAD-4-RDR-V1.0"
+PRODUCT_ID                         = "R_1768301_001_SS19_700_A_B"
+SOURCE_PRODUCT_ID                  = "R_1768301_001_SS19_700_A"
+PRODUCT_TYPE                       = BROWSE
+INSTRUMENT_HOST_ID                 = MRO
+INSTRUMENT_ID                      = SHARAD
+INSTRUMENT_NAME                    = "SHALLOW RADAR"
+TARGET_NAME                        = MARS
+ORBIT_NUMBER                       = 17683
+MRO:START_SUB_SPACECRAFT_LONGITUDE = 249.544036  <DEG> 
+MRO:START_SUB_SPACECRAFT_LATITUDE  = 74.927799  <DEG> 
+MRO:STOP_SUB_SPACECRAFT_LONGITUDE  = 237.478500  <DEG> 
+MRO:STOP_SUB_SPACECRAFT_LATITUDE   = 29.505100  <DEG> 
+START_TIME                         = 2010-05-05T09:29:11.885
+STOP_TIME                          = 2010-05-05T09:43:35.909
+SPACECRAFT_CLOCK_START_COUNT       = "2/957518951.58040"
+SPACECRAFT_CLOCK_STOP_COUNT        = "2/957519815.59607"
+PRODUCT_CREATION_TIME              = 2010-11-18T18:41:01.878
+SOFTWARE_NAME                      = "RDR2SAN.PRO"
+SOFTWARE_VERSION_ID                = "1.7 "
+    
+/* These parameters describe the browse image as a PDS document. */
+    
+^JPEG_DOCUMENT                 = "R_1768301_001_SS19_700_A_B.JPG"
+OBJECT                         = JPEG_DOCUMENT
+ DOCUMENT_NAME                 = "R_1768301_001_SS19_700_A_B"
+ PUBLICATION_DATE              = 2010-11-18
+ DOCUMENT_TOPIC_TYPE           = "N/A"
+ INTERCHANGE_FORMAT            = BINARY
+ DOCUMENT_FORMAT               = "JPG"
+ DESCRIPTION                   = "
+            
+   A JPEG format browse image based on a SHARAD RDR data product.  The 
+following parameters are parsed from each RDR frame.
+
+ RDR Field                          Variable(s)
+ -----------------                  ------------------
+ RANGE_SHIFT                        sft 
+ ECHO_SAMPLES_REAL                  re 
+ ECHO_SAMPLES_IMAGINARY             im
+ SUB_SC_EAST_LONGITUDE              slon (orbit start)
+                                     elon (orbit end)
+ SUB_SC_PLANETOCENTRIC_LATITUDE     slat(orbit start)
+                                     elat (orbit end)
+ 
+ The real and imaginary parts of the signal are then joined
+  via a traditional log-scale transform:
+ 
+ sig = 10 * log10 (re^2 + im^2)
+ 
+ The sig is sorted numerically and the mean value for the lowest
+ 100 sig values is added to a running average noise value.
+ 
+ The mean noise is subtracted from each pixel value, transforming 
+ the 'sig' variable into 'san', or 'signal above noise.'
+ 
+ san = 10*log10(10.^(0.1*sig)-10^(0.1*noise));
+ 
+ The san values are scaled so the pixel brightness values
+ correspond linearly to an absolute range of 0 to 40 decibels.
+ Finally, the radargram is shifted to adjust for the RANGE_SHIFT
+ value."
+END_OBJECT                    = JPEG_DOCUMENT
+END

@@ -1,0 +1,181 @@
+{
+  "product_id": "R_1768301_001_SS19_700_A",
+  "source_url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-4-rdr-v1/MROSH_1001/data/rdr17xxx/rdr1768301/r_1768301_001_ss19_700_a.dat",
+  "label": "sources/SHARAD_R_1768301_001_SS19_700_A.LBL",
+  "format": "sources/SHARAD_RDR.FMT",
+  "row_bytes": 5822,
+  "records_total": 150892,
+  "binary_search_checks": [
+    {
+      "row_0based": 0,
+      "lon_east": 249.50155773979603,
+      "lat_planetocentric": 74.87368321537305,
+      "geometry_epoch": "2010-05-05T09:28:42.923",
+      "source_range": "bytes 0-5821/878493224",
+      "sha256": "ab375d4b189d35cfa24a7248cb2fbaac6f8adba7f64ccdadb394d3fa290d4a08"
+    },
+    {
+      "row_0based": 150891,
+      "lon_east": 237.48622423598823,
+      "lat_planetocentric": 29.560775089886327,
+      "geometry_epoch": "2010-05-05T09:43:04.850",
+      "source_range": "bytes 878487402-878493223/878493224",
+      "sha256": "9b2e7e059af9d76daeab6ade9b82587e61056fee1b5700b31c272b933782dfa4"
+    },
+    {
+      "row_0based": 75445,
+      "lon_east": 241.2005793704327,
+      "lat_planetocentric": 52.316226128219654,
+      "geometry_epoch": "2010-05-05T09:35:53.887",
+      "source_range": "bytes 439240790-439246611/878493224",
+      "sha256": "df0af1a85c9cebfb631e287e2decd1422a079b82bc43fed7bb1c59740d873275"
+    },
+    {
+      "row_0based": 37722,
+      "lon_east": 244.0353326275685,
+      "lat_planetocentric": 63.63416889731835,
+      "geometry_epoch": "2010-05-05T09:32:18.405",
+      "source_range": "bytes 219617484-219623305/878493224",
+      "sha256": "76cbe015bb4a63be424945af061bef88752e4adf38aed02332dbf1d32f2bf684"
+    },
+    {
+      "row_0based": 56583,
+      "lon_east": 242.46296155402538,
+      "lat_planetocentric": 57.98142049580728,
+      "geometry_epoch": "2010-05-05T09:34:06.143",
+      "source_range": "bytes 329426226-329432047/878493224",
+      "sha256": "9bccf17082b2eb7579d2e4da9b89a46146399f00689a2956bf48139161ec5d30"
+    },
+    {
+      "row_0based": 66014,
+      "lon_east": 241.8025131658714,
+      "lat_planetocentric": 55.150167524194075,
+      "geometry_epoch": "2010-05-05T09:35:00.015",
+      "source_range": "bytes 384333508-384339329/878493224",
+      "sha256": "41b01aa0771dca6065877b2bbac69430ab3a9f517e01f14f245b504b4f949286"
+    },
+    {
+      "row_0based": 61298,
+      "lon_east": 242.12451903749553,
+      "lat_planetocentric": 56.566295833182146,
+      "geometry_epoch": "2010-05-05T09:34:33.076",
+      "source_range": "bytes 356876956-356882777/878493224",
+      "sha256": "08cf9ea5e151ae04e761ad5c83d532cd55c6d1bbcef6557aa2c34f1035dd988e"
+    },
+    {
+      "row_0based": 58940,
+      "lon_east": 242.2915784268763,
+      "lat_planetocentric": 57.27409884391869,
+      "geometry_epoch": "2010-05-05T09:34:19.607",
+      "source_range": "bytes 343148680-343154501/878493224",
+      "sha256": "978526e193d9ab441862cc13f70003c312ff6cdf731aea3031aa9a51d3992b91"
+    },
+    {
+      "row_0based": 57761,
+      "lon_east": 242.37673895429765,
+      "lat_planetocentric": 57.62793248569068,
+      "geometry_epoch": "2010-05-05T09:34:12.872",
+      "source_range": "bytes 336284542-336290363/878493224",
+      "sha256": "2031a7d90e97778ff33a79d7d423e759a5ee8b2294ced9ac75d44fb605130ed4"
+    },
+    {
+      "row_0based": 57172,
+      "lon_east": 242.41970628184572,
+      "lat_planetocentric": 57.80468265748983,
+      "geometry_epoch": "2010-05-05T09:34:09.507",
+      "source_range": "bytes 332855384-332861205/878493224",
+      "sha256": "81872929d8492972391f6d8057d7c8eb002ee63822b412eaa78fc5bdc69714a4"
+    },
+    {
+      "row_0based": 57466,
+      "lon_east": 242.39822333798742,
+      "lat_planetocentric": 57.716458907266876,
+      "geometry_epoch": "2010-05-05T09:34:11.187",
+      "source_range": "bytes 334567052-334572873/878493224",
+      "sha256": "d91cfd93905cef38ed0428c0bbe96ed40e23d8e78103c45bfaa9c9e1a5d62def"
+    },
+    {
+      "row_0based": 57319,
+      "lon_east": 242.40895577556785,
+      "lat_planetocentric": 57.76057073847858,
+      "geometry_epoch": "2010-05-05T09:34:10.347",
+      "source_range": "bytes 333711218-333717039/878493224",
+      "sha256": "292975cc88bc11b141436c268e53702801a96670951dfbc713bd5d85fea9d53d"
+    },
+    {
+      "row_0based": 57392,
+      "lon_east": 242.40362399301696,
+      "lat_planetocentric": 57.73866561403264,
+      "geometry_epoch": "2010-05-05T09:34:10.764",
+      "source_range": "bytes 334136224-334142045/878493224",
+      "sha256": "549d53f63eca80a4e8ce86a0b3180ab3fa7a5b117578716a5d51c488ce94ea5e"
+    },
+    {
+      "row_0based": 57355,
+      "lon_east": 242.40632591698096,
+      "lat_planetocentric": 57.74976849543145,
+      "geometry_epoch": "2010-05-05T09:34:10.553",
+      "source_range": "bytes 333920810-333926631/878493224",
+      "sha256": "a035b0452401b8969ec80fde4c34e8e98fb0ee57404e8022c969b1268aca4ccb"
+    },
+    {
+      "row_0based": 57337,
+      "lon_east": 242.4076407123659,
+      "lat_planetocentric": 57.755169622327735,
+      "geometry_epoch": "2010-05-05T09:34:10.450",
+      "source_range": "bytes 333816014-333821835/878493224",
+      "sha256": "db13900301b164880dee3cd486a6d44ab153ccab1e7b6efe522b9ffa376b7d83"
+    },
+    {
+      "row_0based": 57346,
+      "lon_east": 242.4069832811005,
+      "lat_planetocentric": 57.752469060222566,
+      "geometry_epoch": "2010-05-05T09:34:10.501",
+      "source_range": "bytes 333868412-333874233/878493224",
+      "sha256": "25ee8de2f29e89ca9d80735584b63e540f384f94146ac8f3ee06cc503d15d2c9"
+    },
+    {
+      "row_0based": 57350,
+      "lon_east": 242.40669098078166,
+      "lat_planetocentric": 57.751268275141,
+      "geometry_epoch": "2010-05-05T09:34:10.524",
+      "source_range": "bytes 333891700-333897521/878493224",
+      "sha256": "3bcc5695f38d9f385a1da1259976ede9d8e243bb737c91e7983a786c3664bea4"
+    },
+    {
+      "row_0based": 57352,
+      "lon_east": 242.40654503084826,
+      "lat_planetocentric": 57.7506686839936,
+      "geometry_epoch": "2010-05-05T09:34:10.536",
+      "source_range": "bytes 333903344-333909165/878493224",
+      "sha256": "59ce5d1f404cd899d75e78e3991947bd563b57db14ff90fca2fa30cb86e21a95"
+    },
+    {
+      "row_0based": 57353,
+      "lon_east": 242.40647186196136,
+      "lat_planetocentric": 57.75036808677762,
+      "geometry_epoch": "2010-05-05T09:34:10.541",
+      "source_range": "bytes 333909166-333914987/878493224",
+      "sha256": "d36c9346aafa9230d5c548b51ccc94c92361cf53be0f2271b768b86db5d1c114"
+    },
+    {
+      "row_0based": 57354,
+      "lon_east": 242.40639888895458,
+      "lat_planetocentric": 57.750068291121075,
+      "geometry_epoch": "2010-05-05T09:34:10.547",
+      "source_range": "bytes 333914988-333920809/878493224",
+      "sha256": "a25dc9a0f286349db98821e4066e6894694bbbf3208b4f2be447634492e2810d"
+    }
+  ],
+  "sample_start_row": 57227,
+  "sample_stop_row": 57482,
+  "sample_record_count": 256,
+  "sample_inside_roi": 256,
+  "coordinate_method": "little-endian 8-byte PC_REAL: SUB_SC_EAST_LONGITUDE at5638; SUB_SC_PLANETOCENTRIC_LATITUDE at5646; one-based byte labels",
+  "coordinate_convention": "IAU2000 planetocentric, east-positive sub-spacecraft points; NOT radar beam footprint",
+  "limits": [
+    "Geometry only validated; processed echoes retained without reflector picking or detection.",
+    "No clutter simulation, dielectric inversion, waveform QA, depth or ice content inference.",
+    "Bisection checks observed descending coordinates; no assumption of complete other-track coverage."
+  ]
+}

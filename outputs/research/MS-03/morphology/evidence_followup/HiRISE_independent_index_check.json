@@ -1,0 +1,31 @@
+{
+  "review_date_taipei": "2026-11-15",
+  "source_url": "https://hirise-pds.lpl.arizona.edu/PDS/INDEX/RDRCUMINDEX.TAB",
+  "index_bytes": 168675271,
+  "index_sha256": "d58cf52657371f6a7e65ef4dc687fdd2f9c70e276f7755853e27971f17df4126",
+  "label_url": "https://hirise-pds.lpl.arizona.edu/PDS/INDEX/RDRCUMINDEX.LBL",
+  "label_sha256": "5401abbb16f8cd9ae0bd99f60cd0198f9cd10914d7e8e89ff4c3985d53bff0a8",
+  "label_declared_rows": 205302,
+  "actual_rows": 205451,
+  "valid_bbox_rows": 204836,
+  "invalid_bbox_rows": 615,
+  "roi": [
+    242,
+    57.5,
+    242.5,
+    58
+  ],
+  "valid_bbox_intersection_count": 0,
+  "hits": [],
+  "limits": [
+    "Only actually downloaded cumulative release;not all observations or future products",
+    "Invalid bbox rows not assigned to no-overlap",
+    "Label row count differs from actual table;schema821-byte lengths checked for every row but release consistency unresolved",
+    "Bounding rectangles used as conservative footprint screening;zero eligible bbox hits does not prove absence of surface features"
+  ],
+  "legacy_strict_flag_note": "invalid_bbox_rows is failure of first-pass0to360 test,not proof of missing source geolocation;superseded by index_anomalies/resolution_summary.json",
+  "superseded_findings": {
+    "615_rows": "all negative-longitude flags have valid latitude excluding MS03",
+    "149_extra_rows": "149duplicate product-ID pairs;only observation-command start time differs;producer generation cause unknown"
+  }
+}

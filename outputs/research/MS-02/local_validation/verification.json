@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "check": "tables non-empty",
+      "status": "PASS",
+      "detail": {
+        "local_prior_work.csv": 14,
+        "mars_ice_evidence.csv": 25,
+        "analog_validation.csv": 9,
+        "search_log.csv": 60
+      }
+    },
+    {
+      "check": "no empty cells (use 'n/a' or 'not obtained' for missing)",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "every LV-S reference resolves",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "search ids unique",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "cell size recompute (29.64 x 17.94 km)",
+      "status": "PASS",
+      "detail": [
+        17.938,
+        29.636
+      ]
+    },
+    {
+      "check": "nearest Morgan 2025 point 389.0 km",
+      "status": "PASS",
+      "detail": 388.959
+    },
+    {
+      "check": "Bramson box distance (point to 50N,180E)",
+      "status": "PASS",
+      "detail": "clamped-box distance vs corner; tolerance 25 km"
+    },
+    {
+      "check": "SWIM two-value share arithmetic",
+      "status": "PASS",
+      "detail": 0.245
+    },
+    {
+      "check": "evidence values equal main final_candidates (4-digit rounding)",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "no unnegated forbidden claim phrases (heuristic)",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "figure exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "changes only under local_validation dirs",
+      "status": "PASS",
+      "detail": []
+    }
+  ],
+  "summary": {
+    "PASS": 12,
+    "FAIL": 0
+  }
+}

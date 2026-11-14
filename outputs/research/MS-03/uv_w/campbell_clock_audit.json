@@ -1,0 +1,39 @@
+{
+  "version": "MS03-Campbell-clock-audit-v1",
+  "date": "2026-11-15",
+  "source_doi": "10.5281/zenodo.10553882",
+  "source_md5": "333b498382376f3bb034e68862bede70",
+  "rows": 55346,
+  "offset_definition": "24*(decimal_day - naive printed-time days since 2009-01-01);not a UTC offset",
+  "change_source_line_1based": 50811,
+  "last_before": [
+    "2012-10-28 06:00:00",
+    "1396.2083",
+    "33305"
+  ],
+  "first_after": [
+    "2012-10-28 10:30:00",
+    "1396.2292",
+    "NaN"
+  ],
+  "first_record_after_nan_block": [
+    "2012-10-28 14:30:00",
+    "1396.3958",
+    "33314"
+  ],
+  "nan_rows": 8,
+  "printed_boundary_step_minutes": 270,
+  "decimal_boundary_step_minutes": 30.095999999975902,
+  "regime_offsets_hours": [
+    -1,
+    -5
+  ],
+  "interpretation": "Four-hour field discrepancy begins at the eight-row NaN insertion documented by author QA; exact generating code and correct time basis remain unverified.",
+  "correction_applied": false,
+  "hobo_read_or_aligned": false,
+  "required_evidence": [
+    "University_Valley_Met_Station_Calibration_all.m and dependencies",
+    "unprocessed Campbell logger files around 2012-10-28",
+    "2012 clock/reset/download deployment log and export time-vector convention"
+  ]
+}

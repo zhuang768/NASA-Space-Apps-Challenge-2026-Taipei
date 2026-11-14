@@ -1,0 +1,176 @@
+{
+  "type": "FeatureCollection",
+  "name": "Mars planetocentric / east-positive degrees, NOT Earth CRS",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            242.00263066666668,
+            58.0
+          ],
+          [
+            242.0,
+            57.98940671140939
+          ]
+        ]
+      },
+      "properties": {
+        "product_id": "R_0796502_001_SS19_700_A",
+        "source": "ODE sampled sub-spacecraft track from Geom product; NOT radar beam footprint",
+        "date": "2008-04-08T03:18:30.885"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            242.46751966666667,
+            58.0
+          ],
+          [
+            242.4396,
+            57.8863
+          ],
+          [
+            242.3957,
+            57.7063
+          ],
+          [
+            242.3521,
+            57.5262
+          ],
+          [
+            242.3457901666667,
+            57.5
+          ]
+        ]
+      },
+      "properties": {
+        "product_id": "R_1768301_001_SS19_700_A",
+        "source": "ODE sampled sub-spacecraft track from Geom product; NOT radar beam footprint",
+        "date": "2010-05-05T09:29:11.885"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            242.23900125427593,
+            58.0
+          ],
+          [
+            242.2305,
+            57.9658
+          ],
+          [
+            242.128,
+            57.5498
+          ],
+          [
+            242.1158864864865,
+            57.5
+          ]
+        ]
+      },
+      "properties": {
+        "product_id": "R_4624502_001_SS19_700_A",
+        "source": "ODE sampled sub-spacecraft track from Geom product; NOT radar beam footprint",
+        "date": "2016-06-07T22:18:45.069"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            242.33260660440294,
+            58.0
+          ],
+          [
+            242.3014,
+            57.8734
+          ],
+          [
+            242.221,
+            57.5435
+          ],
+          [
+            242.21049499666444,
+            57.5
+          ]
+        ]
+      },
+      "properties": {
+        "product_id": "R_5476301_001_SS19_700_A",
+        "source": "ODE sampled sub-spacecraft track from Geom product; NOT radar beam footprint",
+        "date": "2018-04-02T16:36:55.425"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            242.496222281521,
+            58.0
+          ],
+          [
+            242.4688,
+            57.8895
+          ],
+          [
+            242.417,
+            57.6795
+          ],
+          [
+            242.37317208333332,
+            57.5
+          ]
+        ]
+      },
+      "properties": {
+        "product_id": "R_6059201_001_SS19_700_A",
+        "source": "ODE sampled sub-spacecraft track from Geom product; NOT radar beam footprint",
+        "date": "2019-06-30T20:18:38.363"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            242.47455637509265,
+            58.0
+          ],
+          [
+            242.4662,
+            57.9665
+          ],
+          [
+            242.3849,
+            57.6367
+          ],
+          [
+            242.351565485619,
+            57.5
+          ]
+        ]
+      },
+      "properties": {
+        "product_id": "R_5882501_001_SS19_700_A",
+        "source": "ODE sampled sub-spacecraft track from Geom product; NOT radar beam footprint",
+        "date": "2019-02-13T03:50:16.954"
+      }
+    }
+  ]
+}

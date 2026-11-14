@@ -1,0 +1,87 @@
+{
+  "dataset_url": "https://data.caltech.edu/records/ym7fc-x0r93",
+  "dataset_doi": "10.22002/D1.1316",
+  "paper_doi": "10.1029/2019GL083947",
+  "files": [
+    {
+      "filename": "d_m.ascii",
+      "bytes": 2434482,
+      "md5": "080dd616a822fa74f20f4c923a1d79f1",
+      "sha256": "1101d38a45c88f7531fcfa0e7af163d94e8fb337d53e0b7f766f81762ae5b1ff",
+      "url": "https://data.caltech.edu/api/records/ym7fc-x0r93/files/d_m.ascii/content"
+    },
+    {
+      "filename": "TI_SI.ascii",
+      "bytes": 2484261,
+      "md5": "267810eb52f6c053dd2adefe4dc2010a",
+      "sha256": "20e842167fcb4daa811cc83ba69a666d47a73338274d8a65f85e69b5b7e4d2fb",
+      "url": "https://data.caltech.edu/api/records/ym7fc-x0r93/files/TI_SI.ascii/content"
+    },
+    {
+      "filename": "Lat.ascii",
+      "bytes": 2660,
+      "md5": "9b70d4b2f0297594ce7e02494cf8564b",
+      "sha256": "e85e1881c73691ae5dd58f7e1e5dbb805e900776c72a8b82b6efed14b545f0e3",
+      "url": "https://data.caltech.edu/api/records/ym7fc-x0r93/files/Lat.ascii/content"
+    },
+    {
+      "filename": "Lon.ascii",
+      "bytes": 4820,
+      "md5": "c60b8ff5f8b0bc603c92967862ad7431",
+      "sha256": "d0ad069f1f456b3291cc57f7116e75696ffdcaff69b40c38189e9807c23de86a",
+      "url": "https://data.caltech.edu/api/records/ym7fc-x0r93/files/Lon.ascii/content"
+    },
+    {
+      "filename": "Notes.txt",
+      "bytes": 1926,
+      "md5": "931c03a665d02755470be11becf7841b",
+      "sha256": "472a30fe9ce97f8e476eeceb5d42ac5e4ddb9cd55fb33f48a2741302cf3c75ca",
+      "url": "https://data.caltech.edu/api/records/ym7fc-x0r93/files/Notes.txt/content"
+    }
+  ],
+  "shape_rows_columns": [
+    360,
+    720
+  ],
+  "lat_order": "89.75to−89.75 descending",
+  "lon_order": ".25to359.75 ascending",
+  "output_ppd": 2,
+  "fill": -32768,
+  "roi_cell": {
+    "row0": 66,
+    "column0": 145,
+    "latitude_n": 56.75,
+    "longitude_e": 72.75,
+    "depth_model_m": 0.426995635,
+    "upper_dry_TI": 241.1007996,
+    "depth_valid": true,
+    "is_roi_cell": true,
+    "data_kind": "Existing author two-layer thermal-model inference;this run indexes/extracts,no new retrieval",
+    "source_url": "https://data.caltech.edu/records/ym7fc-x0r93",
+    "source_doi": "10.22002/D1.1316",
+    "source_version": "1.0;published2019-11-27",
+    "period": "MCS multi-year seasonal analysis in2019paper;exact input years/counts for this cell not supplied",
+    "spatial_support": "0.5degree output cell;not in-situ point;native observations/coadds have other support",
+    "depth_definition": "Model depth to assumed frozenH2O lower layer,not independently detected interface",
+    "uncertainty": "No cell-specific error/QA or confidence interval supplied;do not attach global best-case estimate as localCI",
+    "TI_unit": "J m^-2 K^-1 s^-1/2 perpaper;Notes prints J m^2,retained as source metadata issue"
+  },
+  "cell_bounds": {
+    "south": 56.5,
+    "north": 57,
+    "west": 72.5,
+    "east": 73
+  },
+  "metadata_limits": [
+    "Paperdescribes3ppd;downloadedv1filesandcoordinates2ppd;not silently treated as same raster",
+    "720x360 source dimensions interpreted as widthxheight and checked against360rows720columns",
+    "NotesTIunitprintspositive m^2;paperphysicalunitnegative exponent;no numericconversion performed"
+  ],
+  "interpretation_limits": [
+    "Conditional existing thermalmodel value,not local ice existence/depth/abundance truth",
+    "Lowerlayer ice assumption,possible competentrock/boulders/materialalternatives and errorlimits remain",
+    "No evidence here of massive vs pore ice or ice fraction",
+    "Do not use0.427m coincidence withUV0.42m as validation",
+    "Thermal inputs overlap other ice evidence;dependency must be explicit"
+  ]
+}

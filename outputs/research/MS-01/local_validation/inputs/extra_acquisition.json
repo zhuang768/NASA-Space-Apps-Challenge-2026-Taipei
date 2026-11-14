@@ -1,0 +1,26 @@
+[
+  {
+    "key": "earth_lpsc",
+    "url": "https://www.lpi.usra.edu/meetings/lpsc2013/pdf/2864.pdf",
+    "file": "/tmp/ms01_lv_earth/root_mellon2013.pdf",
+    "status": 403,
+    "bytes": 5575,
+    "type": "text/html; charset=UTF-8"
+  },
+  {
+    "key": "earth_tecp",
+    "url": "https://ntrs.nasa.gov/api/citations/20090033138/downloads/20090033138.pdf?attachment=true",
+    "file": "/tmp/ms01_lv_earth/root_tecp2009.pdf",
+    "status": 200,
+    "bytes": 6879971,
+    "type": "application/pdf"
+  },
+  {
+    "key": "usgs_page",
+    "url": "https://pubs.usgs.gov/sim/3292/",
+    "file": "/tmp/ms01_lv_optical/usgs_sim3292.html",
+    "status": 200,
+    "bytes": 11996,
+    "type": "text/html"
+  }
+]

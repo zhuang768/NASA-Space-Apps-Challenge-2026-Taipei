@@ -1,0 +1,67 @@
+{
+  "source_doi": "10.1594/PANGAEA.921087",
+  "source_sha256": "c75e7568c9fbfc67898f64e9c18681e5dc7e24a1ec272ceafa12c51377b8054e",
+  "source_crs": "EPSG:32633;WGS84 UTM33N metres",
+  "n": 185,
+  "invalid": 0,
+  "method": "Planar vector area/perimeter;equivalent diameter sqrt(4A/pi);minimum rotated rectangle edge lengths;4piA/P\u00b2. No raster boundary re-digitization;not identical to paper largest/smallest diameters.",
+  "edge_status": "All185 published polygons retained;original edge/truncation selection not re-audited;not a random regional sample",
+  "metrics": {
+    "area_m2": {
+      "n": 185,
+      "min": 50.945115125861406,
+      "p25": 190.91960709940605,
+      "median": 268.3605718672786,
+      "p75": 383.57139551111857,
+      "max": 2029.028657147007
+    },
+    "perimeter_m": {
+      "n": 185,
+      "min": 30.38168257930151,
+      "p25": 55.44783439154001,
+      "median": 65.00322827771915,
+      "p75": 79.24871765333694,
+      "max": 177.08488695947406
+    },
+    "equivalent_circle_diameter_m": {
+      "n": 185,
+      "min": 8.053901861168425,
+      "p25": 15.591228098654188,
+      "median": 18.48478542881041,
+      "p75": 22.099282092276383,
+      "max": 50.827546898118676
+    },
+    "mrr_length_m": {
+      "n": 185,
+      "min": 10.217915586484853,
+      "p25": 17.671414740429338,
+      "median": 21.433245000525744,
+      "p75": 26.331554364249403,
+      "max": 61.87659803742897
+    },
+    "mrr_width_m": {
+      "n": 185,
+      "min": 5.990648211421317,
+      "p25": 13.927756832776566,
+      "median": 16.595711456389598,
+      "p75": 20.11984589816311,
+      "max": 50.177783080964375
+    },
+    "mrr_aspect_length_width": {
+      "n": 185,
+      "min": 1.0018195591021375,
+      "p25": 1.1439602711669103,
+      "median": 1.2768337582507263,
+      "p75": 1.479550102398209,
+      "max": 2.621745178280052
+    },
+    "circularity_4piA_over_P2": {
+      "n": 185,
+      "min": 0.5822660746149273,
+      "p25": 0.7609344878068898,
+      "median": 0.8066001368914908,
+      "p75": 0.8391615646020321,
+      "max": 0.9090961039357962
+    }
+  }
+}

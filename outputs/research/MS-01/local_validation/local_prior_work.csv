@@ -1,0 +1,7 @@
+id,source,classification,locator,footprint,gap
+LP01,https://doi.org/10.1029/2019GL083947,格內同用途（全球模型輸出，非局部真值）,§2;Caltech DOI10.22002/D1.1316 row0=66 col0=145,0.5degree cell exactly fixedROI,獨立材料與冰真值；本次僅擷取既有模型
+LP02,https://doi.org/10.1029/2018JE005665,附近／大區域（研究條帶不等於本格）,§3.1,300km strip30–80N centred90E;87–93E at30N,不能將條帶形貌移入72.5–73E
+LP03,https://doi.org/10.1029/2008JE003264,附近／大區域,primary abstract,80–105E40–55N;outsideROI,非本格證據
+LP04,https://doi.org/10.1016/j.epsl.2015.04.033,附近／大區域,Introduction,38–45N85–93E;outsideROI,非本格證據
+LP05,https://pubs.usgs.gov/sim/3292/,格內不同用途,official globalmap download page,global;formalunitnotextracted,GIS809MB未下載；地質單元未知
+LP06,https://doi.org/10.5066/P9Y8FR1R,位置不明（未核足跡）,release entry HTTP403,not acquired,暴露冰清單未裁切；不得推無冰

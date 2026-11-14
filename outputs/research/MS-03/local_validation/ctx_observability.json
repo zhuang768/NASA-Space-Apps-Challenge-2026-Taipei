@@ -1,0 +1,178 @@
+{
+  "samples": [
+    {
+      "sample_id": "C",
+      "image_file": "sources/CTX_sample_C.png",
+      "bytes": 46198,
+      "sha256": "97f6cc62ac401bec72696efc6d24b2e729e6dc691d95c5bd96e5e0e1d04bc3b8",
+      "bounds_mars_east180_lat": {
+        "north": 57.75107598132101,
+        "south": 57.72761921621492,
+        "east": -117.7294921875,
+        "west": -117.7734375
+      },
+      "width_px": 256,
+      "height_px": 256,
+      "opaque_pixels": 65536,
+      "total_pixels": 65536,
+      "luminance_min": 56,
+      "luminance_max": 156,
+      "display_spacing_approx_m": [
+        5.43122154292896,
+        5.431221314604399
+      ],
+      "source_product_ids": [
+        "D01_027566_2370_XN_57N117W"
+      ],
+      "source_dates": [
+        "2012-06-13T11:22:48.171"
+      ],
+      "native_ctX_nominal_m": [
+        6.089997
+      ],
+      "pixel_validity_limit": "Opaque/nonempty display pixels only, not sensor quality, frost/cloud QA or validated crack-detection resolution. Geolocation uncertainty not given."
+    },
+    {
+      "sample_id": "NW",
+      "image_file": "sources/CTX_sample_NW.png",
+      "bytes": 47908,
+      "sha256": "cf38732b4e40322fc0372b4259099543af6476f4dd649ccf4fd708ea586916c4",
+      "bounds_mars_east180_lat": {
+        "north": 57.89149735271031,
+        "south": 57.8681317633288,
+        "east": -117.861328125,
+        "west": -117.9052734375
+      },
+      "width_px": 256,
+      "height_px": 256,
+      "opaque_pixels": 65536,
+      "total_pixels": 65536,
+      "luminance_min": 86,
+      "luminance_max": 173,
+      "display_spacing_approx_m": [
+        5.410110552114336,
+        5.410110324386457
+      ],
+      "source_product_ids": [
+        "D01_027566_2370_XN_57N117W",
+        "G01_018718_2370_XN_57N118W"
+      ],
+      "source_dates": [
+        "2010-07-25T00:47:00.535",
+        "2012-06-13T11:22:48.171"
+      ],
+      "native_ctX_nominal_m": [
+        6.08,
+        6.089997
+      ],
+      "pixel_validity_limit": "Opaque/nonempty display pixels only, not sensor quality, frost/cloud QA or validated crack-detection resolution. Geolocation uncertainty not given."
+    },
+    {
+      "sample_id": "NE",
+      "image_file": "sources/CTX_sample_NE.png",
+      "bytes": 45724,
+      "sha256": "c8d99158615f42727e611acd463b1826da9fea34d4fb668f13f981e0335c4a94",
+      "bounds_mars_east180_lat": {
+        "north": 57.89149735271031,
+        "south": 57.8681317633288,
+        "east": -117.59765625,
+        "west": -117.6416015625
+      },
+      "width_px": 256,
+      "height_px": 256,
+      "opaque_pixels": 65536,
+      "total_pixels": 65536,
+      "luminance_min": 109,
+      "luminance_max": 194,
+      "display_spacing_approx_m": [
+        5.410110552114336,
+        5.410110324386457
+      ],
+      "source_product_ids": [
+        "D01_027566_2370_XN_57N117W"
+      ],
+      "source_dates": [
+        "2012-06-13T11:22:48.171"
+      ],
+      "native_ctX_nominal_m": [
+        6.089997
+      ],
+      "pixel_validity_limit": "Opaque/nonempty display pixels only, not sensor quality, frost/cloud QA or validated crack-detection resolution. Geolocation uncertainty not given."
+    },
+    {
+      "sample_id": "SW",
+      "image_file": "sources/CTX_sample_SW.png",
+      "bytes": 50848,
+      "sha256": "379dd580f186a6464c94d42c09c66b727129588913125dd1a0ad760f1233a572",
+      "bounds_mars_east180_lat": {
+        "north": 57.63363992885697,
+        "south": 57.61010702068388,
+        "east": -117.861328125,
+        "west": -117.9052734375
+      },
+      "width_px": 256,
+      "height_px": 256,
+      "opaque_pixels": 65536,
+      "total_pixels": 65536,
+      "luminance_min": 66,
+      "luminance_max": 192,
+      "display_spacing_approx_m": [
+        5.448851845237005,
+        5.448851616421733
+      ],
+      "source_product_ids": [
+        "G01_018718_2370_XN_57N118W"
+      ],
+      "source_dates": [
+        "2010-07-25T00:47:00.535"
+      ],
+      "native_ctX_nominal_m": [
+        6.08
+      ],
+      "pixel_validity_limit": "Opaque/nonempty display pixels only, not sensor quality, frost/cloud QA or validated crack-detection resolution. Geolocation uncertainty not given."
+    },
+    {
+      "sample_id": "SE",
+      "image_file": "sources/CTX_sample_SE.png",
+      "bytes": 45887,
+      "sha256": "f2fdc6c935eafcc04c9552457530f9078eea0fc466162eb96c7c4061adb45e4e",
+      "bounds_mars_east180_lat": {
+        "north": 57.63363992885697,
+        "south": 57.61010702068388,
+        "east": -117.59765625,
+        "west": -117.6416015625
+      },
+      "width_px": 256,
+      "height_px": 256,
+      "opaque_pixels": 65536,
+      "total_pixels": 65536,
+      "luminance_min": 92,
+      "luminance_max": 180,
+      "display_spacing_approx_m": [
+        5.448851845237005,
+        5.448851616421733
+      ],
+      "source_product_ids": [
+        "D01_027566_2370_XN_57N117W"
+      ],
+      "source_dates": [
+        "2012-06-13T11:22:48.171"
+      ],
+      "native_ctX_nominal_m": [
+        6.089997
+      ],
+      "pixel_validity_limit": "Opaque/nonempty display pixels only, not sensor quality, frost/cloud QA or validated crack-detection resolution. Geolocation uncertainty not given."
+    }
+  ],
+  "invalid_seam_geometries": 0,
+  "seam_products_in_roi": [
+    "D01_027566_2370_XN_57N117W",
+    "G01_018718_2370_XN_57N118W"
+  ],
+  "source_prj": "PROJCS[\"Mars_2015_Ocentric_Equirectangular_clon_0\",GEOGCS[\"GCS_Mars_2015_Ocentric\",DATUM[\"D_Mars_2015\",SPHEROID[\"Mars_2015\",3396190,169.894447223612]],PRIMEM[\"Reference Meridian\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]\n",
+  "projection_method": "Mars ocentric eqc x=R*lon_rad, y=R*lat_rad, R3396190; no Earth CRS",
+  "morphology": "unknown; no reliable closed boundaries digitized",
+  "morphology_is_absent": false,
+  "geometric_comparison_with_ad1_enabled": false,
+  "coverage_limit": "Five deterministic local display patches only; not whole-cell quality coverage."
+}

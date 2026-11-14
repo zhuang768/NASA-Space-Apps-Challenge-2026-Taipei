@@ -1,0 +1,14 @@
+[
+  {
+    "name": "mellon_mckay_2013_2864.pdf",
+    "url": "https://www.lpi.usra.edu/meetings/lpsc2013/pdf/2864.pdf",
+    "status": "failed",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "name": "zent_tecp_ntrs_20090033138.pdf",
+    "url": "https://ntrs.nasa.gov/api/citations/20090033138/downloads/20090033138.pdf?attachment=true",
+    "status": "failed",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  }
+]

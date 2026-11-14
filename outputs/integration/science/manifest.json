@@ -246,8 +246,8 @@
   "files": [
     {
       "path": "docs/integration/science/synthesis.md",
-      "bytes": 43840,
-      "sha256": "9bf91041b250edb1a2af56e80ffdf74ee28b29c8381ec9891c45bd6b27c1c9d7"
+      "bytes": 44219,
+      "sha256": "1392adeceb386b1a9aa22237a42599dc1048333800a40529cb5bf0986b2d2fab"
     },
     {
       "path": "outputs/integration/science/build.py",
@@ -282,5 +282,10 @@
   ],
   "hash_scope": "All own deliverables including verification.json;only this manifest and __pycache__ excluded.",
   "preservation": "Remote branch created from pinned main via GitHub API;shared dirty checkout not switched/reset;only science paths published.",
-  "stop": "Deliver this synthesis and PR;do not expand research or wait for other integration streams."
+  "stop": "Deliver this synthesis and PR;do not expand research or wait for other integration streams.",
+  "record_status": "historical_snapshot_with_current_overlay",
+  "current_snapshot": "outputs/integration/science/current_snapshot.json",
+  "current_notes": "docs/integration/science/current_notes.md",
+  "current_manifest": "outputs/integration/science/manifest_current.json",
+  "historical_checks_not_rerun": true
 }

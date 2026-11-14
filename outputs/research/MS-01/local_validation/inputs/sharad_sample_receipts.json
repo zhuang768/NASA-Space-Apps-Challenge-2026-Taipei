@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-4-rdr-v1/MROSH_1001/data/rdr19xxx/rdr1958801/r_1958801_001_ss04_700_a.lbl",
+    "file": "/tmp/ms01_lv_optical/r_1958801_001_ss04_700_a.lbl",
+    "status": 200,
+    "bytes": 5378
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-4-rdr-v1/MROSH_1001/browse/rdr19xxx/rdr1958801/r_1958801_001_ss04_700_a_b.jpg",
+    "file": "/tmp/ms01_lv_optical/r_1958801_001_ss04_700_a_b.jpg",
+    "status": 200,
+    "bytes": 682078
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-4-rdr-v1/MROSH_1001/label/rdr.fmt",
+    "file": "/tmp/ms01_lv_optical/rdr.fmt",
+    "status": 200,
+    "bytes": 62657
+  }
+]

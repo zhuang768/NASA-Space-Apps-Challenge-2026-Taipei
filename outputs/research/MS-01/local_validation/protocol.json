@@ -1,0 +1,45 @@
+{
+  "task": "MS01 local_validation evidence only",
+  "start_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+  "branch": "research/ms-01-earth-analogs",
+  "pr": 8,
+  "review_date_taipei": "2026-11-15",
+  "fixed_roi": {
+    "south": 56.5,
+    "north": 57,
+    "west": 72.5,
+    "east": 73,
+    "center": [
+      72.75,
+      56.75
+    ],
+    "coordinate_system": "Mars planetocentric, east-positive0–360"
+  },
+  "sources": [
+    {
+      "pr": 8,
+      "head": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "base": "main",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/8"
+    },
+    {
+      "pr": 9,
+      "head": "c206553fc681328d214cbbcd508d3c5b1391e200",
+      "base": "main",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/9"
+    },
+    {
+      "pr": 10,
+      "head": "0260c511d9fce6be12d3460a69e474f333160cbf",
+      "base": "main",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/10"
+    }
+  ],
+  "rules": [
+    "Research notes only;no reportbody/abstract/conclusionparagraphs/PPT/script.",
+    "Newdata/modelestimates remain separate fromindependent ice truth.",
+    "Cataloguebbox/corners nominalintersection not validpixels or ice detection.",
+    "No rerun UV shortwindow asnewwork;no Earth-to-Marsdepthtransfer.",
+    "Source failure/absence/cataloguezero/non-detection/noice are distinct."
+  ]
+}

@@ -2,6 +2,9 @@
 
 NASA Space Apps 2026 · Team zasa
 
+> **本輪正式報告由人類撰寫。** 下方既有報告／PDF是歷史參考；最新研究資料與限制見[目前採用紀錄](docs/integration/science/current_notes.md)及[三點新版比較表](outputs/integration/science/comparison_current.csv)。模型冰深不等於實測，三點冰真值仍未知。
+
+
 Three regional targets for follow-up investigation of shallow subsurface ice. The team selected **MS-01, MS-02 and MS-03** on 14 November 2026 after a new inventory of available Mars data, unweighted trade-off screening, native-grid checks and a bounded prior-site review.
 
 **These are conditional research targets.** A non-hit in the inspected catalogs does not establish that a place has never been studied or proposed. Ice presence, depth, quantity, extractability and landing safety remain unverified.
@@ -18,8 +21,8 @@ Three regional targets for follow-up investigation of shallow subsurface ice. Th
 
 ## Read the results
 
-- [English research report](docs/REPORT.md)
-- [中文報告 PDF](outputs/research/mars_reselection_20261114/mars_three_candidates_report_zh.pdf) · [中文文字版](outputs/research/mars_reselection_20261114/report.md)
+- [Historical English reference report](docs/REPORT.md)
+- [歷史中文報告 PDF（非本輪正式稿）](outputs/research/mars_reselection_20261114/mars_three_candidates_report_zh.pdf) · [歷史中文文字版](outputs/research/mars_reselection_20261114/report.md)
 - [Three-target data table](outputs/research/mars_reselection_20261114/final_candidates.csv) · [Target footprints](outputs/research/mars_reselection_20261114/selected_targets.json)
 - [Every data product and its role](outputs/research/mars_reselection_20261114/all_data_usage.csv)
 - [Bounded prior-site checks and search scope](outputs/research/mars_reselection_20261114/bounded_prior_site_audit.json)
@@ -42,7 +45,7 @@ The clean package was tested from checksum-verified public source files. Its reb
 
 This main branch contains the selected three-target research release, its evidence and the minimum code needed to reproduce it. Large downloaded source grids are obtained from their providers and verified using the input manifest.
 
-The earlier research delivery, Earth-analog work, exploratory rankings, website and deployment history are retained in the [pre-cleanup archive](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/tree/archive/pre-msr-cleanup-20261114). The original Earth-analog discovery objective remains separate from this Mars-target update.
+The current Earth-analog evidence is merged under docs/research/MS-01 through MS-03 and their outputs. Earlier exploratory rankings, website and deployment history remain in the [pre-cleanup archive](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/tree/archive/pre-msr-cleanup-20261114). The original Earth-analog discovery objective remains separate from this Mars-target update.
 
 The PDFs and original report manifests are frozen as-produced records. Their statements about the earlier local-only delivery describe the time they were generated. The current GitHub release state is recorded in [CURRENT_STATUS.json](CURRENT_STATUS.json).
 

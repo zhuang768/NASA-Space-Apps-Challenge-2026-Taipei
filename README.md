@@ -6,7 +6,7 @@
 
 [研究方法](docs/README.md) · [候選結果](outputs/analysis/candidate_handoff.md) · [火星資料](outputs/mars_profiles/handoff.md) · [資料導覽](data/README.md) · [協作方式](CONTRIBUTING.md)
 
-> 目前是研究管線與候選分析原型。區域地形搜尋已產生結果，四面向綜合評分與互動網站尚未完成；本 repo 不代表 NASA 認證或已完成競賽提交。
+> 目前是研究管線與候選分析原型。區域地形搜尋已產生結果，四面向綜合評分尚未完成；`web/` 已有隊友建立的本機互動原型，公開部署尚未核實；本 repo 不代表 NASA 認證或已完成競賽提交。
 
 ## 先看結果
 
@@ -21,7 +21,8 @@
 | 日夜地面亮溫 | 探索用途，品質不完整 | [MEDA 說明](docs/mars_temperature.md)、[品質紀錄](outputs/mars_temperature/summary.json) |
 | 地球多面向原始資料 | 隊友提供清單，原始檔未全數在本機 | [逐檔清單](docs/earth_inventory.csv)、[交接](docs/data_handoff.md) |
 | 四面向整合／場址驗證 | 尚未完成 | [物理量對照](docs/cross_reference.md) |
-| 互動工作台／正式簡報／提交 | 尚未完成 | [簡報草稿](docs/presentation_outline.md) |
+| 互動工作台 | 已有本機原型，公開部署未核實 | [web/](web/)；本輪未重跑前端驗收 |
+| 正式英文展示與提交 | 尚未核實完成 | [簡報草稿](docs/presentation_outline.md) |
 
 ## 本機執行
 
@@ -120,3 +121,11 @@ docs/         方法、資料規格、競賽準備與歷史紀錄
 補表是鋯石定年資料，不是石膏層 GPS 或 XRD；新座標只能補強樣品追溯，不能證實同一露頭礦物共現。另找到 Oytag `9412-1` 礦物表，但材料是冰磧物，已排除為同露頭證據。石膏層的原始座標、唯一 ID 及同樣品礦相仍缺，Fig. DR1 地圖也尚未取得。
 
 已執行補表解碼、十組唯一 ID／座標範圍／多邊形核對及文件連結檢查；原始受版權保護 Excel／PDF 未散布，選用 reader 僅安裝於臨時目錄。本輪未重新排名、未重跑整套測試。OpenAI Codex 協助補充資料查找、摘錄與中文更新。
+
+### 2026-11-14：提交前研究與資料總盤點
+
+已完成[整體準備報告](docs/submission_readiness_2026-11-14.md)、[53項缺口清單](docs/submission_gap_checklist_2026-11-14.csv)與[查核快照](outputs/research/submission_audit_snapshot_2026-11-14.json)。分為8項P0提交準備、31項P1品質優先、14項依主張需要才補的P2；不代表每一項都是官方強制。
+
+核對隊友清單為222檔、12.33GB，但完整原始批次未在本機；現有排名仍為terrain-only，三目標各12候選，只有各前2有POWER。建議先完成Gale／Oytag主案例及明確未知，不強行合成四面向分數。新增研究尚未進入前端bundle，介面部分local驗證文字與sources映射問題已列給隊友，沒有修改`web/`。
+
+已讀官方年度頁／條款及GitHub Navigator提交答覆；完整題目、正式指南與台北場細節仍未核實，不把搜尋摘要當完整規則。實際重跑Python測試57項通過（8個既有警告）、Ruff通過；未重跑前端、部署或官方提交。程式授權、英文展示、公開連結與Submitted狀態仍需團隊完成。OpenAI Codex協助本輪盤點與中文報告。

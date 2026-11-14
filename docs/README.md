@@ -2,6 +2,9 @@
 
 | 用途 | 文件 |
 |---|---|
+| 提交前研究與資料總盤點 | [submission_readiness_2026-11-14.md](submission_readiness_2026-11-14.md) |
+| 53項缺口與責任交接 | [submission_gap_checklist_2026-11-14.csv](submission_gap_checklist_2026-11-14.csv) |
+| 三組候選與Oytag證據 | [research_report_three_analogs_2026-11-14.md](research_report_three_analogs_2026-11-14.md) |
 | 地球方法與執行 | [earth_pipeline.md](earth_pipeline.md) |
 | 火星方法與執行 | [mars_pipeline.md](mars_pipeline.md) |
 | MEDA 溫度與品質缺口 | [mars_temperature.md](mars_temperature.md) |

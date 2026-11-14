@@ -2,6 +2,66 @@
 
 Team zasa. Review date: **2026-11-14, Asia/Taipei**. Phase 1 repository baseline: `3e3ffff`; Phase 2 main baseline: `263269a`. Scope: literature and proposal checks for I-01, I-02, D-03 and D-04, followed by the supplied Earth candidate EARTH-UV-001. No new site selection, Earth pairing, environmental validation or ranking.
 
+## 2026-11-14：I-01／I-02新增原始提案幾何查核
+
+本輪接續main `76ba95f`，只補未完的Mars提案範圍。讀回選點brief、Mars handoff與既有novelty記錄；指定名稱 `ice_candidate_followup_2026-11-14.md` 仍未見於checkout，先前Excel轉存與讀取界線沿用歷史紀錄，不冒稱取得原稿。不另選地球場址、不撤銷已交付三個Earth查核，D-03／D-04維持參考。
+
+**新增結論：已取得Mars Trek發布的NASA EMC探索區／ROI實際幾何，兩個候選格均不與該目錄的ROI或EZ邊界多邊形相交。整體是否有其他同範圍、同用途提案，仍為 `insufficient_data`。** 此節更新舊P5「未取得任何完整圖層」的存取狀態，但沒有證明本圖層與LAR-19183-1軟體的每筆內部資料完全相同。
+
+### P6來源、用途與範圍
+
+P6：[NASA EMC EZMars公開MapServer](https://trek.nasa.gov/mars/trekarcgis/rest/services/EZMars/MapServer?f=pjson)。由[Mars Trek API頁](https://trek.nasa.gov/tiles/apidoc/trekAPI.html?body=mars)的[公開設定](https://trek.nasa.gov/tiles/apidoc/config/config.json)發現目錄端點，再依[圖層服務回覆](https://trek.nasa.gov/mars/TrekServices/ws/index/getLayerServices?uuid=c572ab6d-3165-4120-88c1-28cb6d0b27b3)取得，非猜測非官方圖層。產品 `EZMars`，標題 `Exploration Zones (NASA EMC)`，UUID `c572ab6d-3165-4120-88c1-28cb6d0b27b3`；目錄建立時間2020-06-25，提案背景為2015 workshop，不把建立日當觀測日。
+
+產品說明是擬議人類探索的100km EZ、科學／資源ROI及著陸／居住點分布。它是**提案資料的GIS表示**，不是新的冰觀測或正式選定任務點。ROI欄有提案編號與science／ISRU分類；未逐筆核實全部381個ROI的冰用途，不把每個ROI都稱冰探查提案。全部目錄多邊形既然與候選格分離，其中具有冰用途的子集也不會重疊。
+
+| 子層 | 實際取得數量／幾何類型 | 空間核對 |
+|---|---|---|
+| 0 EZ | 51，點 | 點不當作探索區邊界 |
+| 1 Hab_Zone | 51，點 | 不替點補無來源範圍 |
+| 2 Landing_Zone | 51，點 | 不當作著陸橢圓 |
+| 3 ROI | 381，多邊形 | 下載全部頂點最北47.403315192°N |
+| 4 EZ_Buffer | 51，多邊形 | 下載全部頂點最北47.851043917°N |
+
+以各層 `returnIdsOnly=true&where=1%3D1` 取得FID全集，按100筆分批取所有欄位與geometry，核對回傳數等於ID數、沒有 `exceededTransferLimit`。未只取伺服器預設第一頁。資料CRS為Mars地理座標 `wkid=104905`；產品WKT為Mars2000球面、半徑3396190m、degree。名義格沿用planetocentric／east-positive：I-01 **54–54.5°N,1–1.5°E**；I-02 **53.5–54°N,42–42.5°E**。沒有用Earth投影或Earth距離。
+
+### 每個候選的判定
+
+| 候選 | P6的381 ROI及51 EZ邊界 | 同範圍同用途整體狀態 |
+|---|---|---|
+| I-01 | **已確認受查範圍不重疊**。完整格envelope查詢無相交ID；最北頂點也遠低於54°N | `insufficient_data`：未證明目錄涵蓋所有替代與後續冰提案 |
+| I-02 | **已確認受查範圍不重疊**。相同查詢及緯度界線檢查，格南界53.5°N | 同上，不能稱已排除所有提案或新穎性通過 |
+
+沒有中心距離代替範圍。四個ArcGIS查詢使用 `esriGeometryEnvelope`、`inSR=104905`、`esriSpatialRelIntersects`、`returnIdsOnly=true`，均回 `objectIds:null` 且無error；再以完整下載頂點／圖層extent的緯度界線獨立核對。未計面積、距離或冰量，也未重算P1–P3。
+
+### P7：分清兩個同名Deuteronilus提案
+
+P6 EZ層FID26對應abstract1033（Head），FID37對應1044（Plaut）；不是因為地名相同就視作同一提案。
+
+- 1033：六個ROI `1033.01–1033.06`，最北39.976811595°N；目錄EZ邊界最北40.804715840°N。既有Head主要提案目的沿用N2，不重做已完成部分。
+- P7：[Plaut2015原始abstract1044](https://www.hou.usra.edu/meetings/explorationzone2015/pdf/1044.pdf)，兩頁全文／圖說已讀。明確提出冰資源ISRU用途，文字範圍39–43°N、20–24°E；P6另有其五個ROI `1044.01–1044.05`（最北41.783184782°N）及EZ邊界（最北42.693737587°N）。原文與實際目錄幾何均與兩候選分離。不將該提案的冰純度／覆土估計外推至I-02。
+- 這補上P6內1044的來源與用途。ASU舊 `Deuteronilus Mensae 2` 的中心與1044相符，但ASU原圖層沒有提案ID，不宣稱其兩系統一對一映射已完全驗證。
+
+Head Figure2其餘替代EZ仍未取得逐項名稱／邊界／原提案對照；P6不能自動代表圖中所有標記。[P6提供的Head簡報舊連結](https://www.nasa.gov/sites/default/files/atoms/files/1033-head_humans_to_mars_presentation_10-28-15final.pdf)本次404，未冒稱讀到。P5完整軟體內部資料與P6來源交叉核對、其他後續提案仍待補。
+
+### 可重現來源與快照
+
+取得日2026-11-14（Asia/Taipei）。以下為 `json.dumps` 正規化存檔的SHA-256，含metadata、objectIds與features；不是原HTTP逐位元檔案hash：
+
+- P6 layer3：`a6d62e4fa0206bc4a11d1cec436c90f2e8706dc38dfb43cbe29df008c1794354`。
+- P6 layer4：`859f9f36c5bece046cc5a6b4576575efec45a3806fecf2fd850e96e04fbe2a98`。
+
+重取方式：`MapServer/3`與`/4`的`query`先取ID，再以`objectIds=<每批ID>&outFields=*&returnGeometry=true&f=json`取全量。對每個格使用同端點，`geometry=west,south,east,north`、其餘參數如上。本次四個實際queryURL與結果寫入CSV兩候選的 `ice_scope_checks_json` 新增紀錄，無須依賴本機暫存。未把原始圖層或其他人的檔案加入Git。
+
+### 查詢與結論界線
+
+新查詢：`NASA MarsGIS exploration zones shapefile download Deuteronilus Head 2015 alternatives`；`site:nasa.gov Head Deuteronilus exploration zone 2015 presentation`；`"MarsGIS" "arcgis" exploration`。再沿官方API與回傳連結取得P6/P7。Mars Trek動態目錄是線索，產品全球bbox未被當成ROI邊界；不是NASA的同名第三方prototype或商業MarsGIS測試服務。未找到的完整替代清單只記「本次未取得」。
+
+**可以說：** 兩格與本次取得的NASA EMC目錄中381個ROI、51個EZ邊界均不相交；受查具名冰資源提案1033／1044在其表示範圍內也分離。已有製圖／科學研究與同用途區域先例仍保留。
+
+**不能說：** 全部歷史或未來提案均排除、從未研究、首次冰探查點、已確認冰／可採資源，或目錄不收錄就證明不存在。兩格整體新穎性仍未放行。
+
+---
+
 ## 2026-11-14：主要對話、GPU與隊友1的直接交接
 
 交接基準：main `bc9fe3c`；研究需求沿用暫定 `MR-20261114-v1`。以下三份可分別閱讀／轉貼。**文件發布不代表已傳送到其他對話、取得收件確認或完成對方工作。**先前查核與QA紀錄完整保留於下方。

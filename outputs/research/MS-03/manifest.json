@@ -207,8 +207,8 @@
   "outputs": [
     {
       "path": "docs/research/MS-03/report.md",
-      "bytes": 55039,
-      "sha256": "cb98db4e1d436d68aa6d8a34eccaeeff70611072454404b9b3227d7a97337f2e"
+      "bytes": 62120,
+      "sha256": "e5bf71fba2fc2c6ddd0996589961094b0338f5f2aa42a1a778ca4a04ac05b92c"
     },
     {
       "path": "scripts/research/MS-03/acquire_morphology.py",
@@ -224,6 +224,11 @@
       "path": "scripts/research/MS-03/audit_hirise_index_anomalies.py",
       "bytes": 6049,
       "sha256": "e692739f2c3263a4d583acf27c5aa5265dd28f3f99e6445b73e9ff93b0d8529c"
+    },
+    {
+      "path": "scripts/research/MS-03/check_hirise_neighbour_labels.py",
+      "bytes": 3725,
+      "sha256": "e6b6d4e994f441e03428ae7b73f1a8ec4c7c54b8bc7f34e9d34b6ac7ad8046b7"
     },
     {
       "path": "scripts/research/MS-03/inspect_uv_w.py",
@@ -262,8 +267,8 @@
     },
     {
       "path": "outputs/research/MS-03/evidence.csv",
-      "bytes": 20117,
-      "sha256": "90803b6f3fcc42dd2c86c1f1033c7633b61bbff9d5592543b81e451cc6b51445"
+      "bytes": 20940,
+      "sha256": "97edcbe9a3cd6b4d1de1b6135e6246257f16ed6e406a2b7dacf0cbe3eddeb79a"
     },
     {
       "path": "outputs/research/MS-03/mars_reference.json",
@@ -347,8 +352,8 @@
     },
     {
       "path": "outputs/research/MS-03/morphology/README.md",
-      "bytes": 12785,
-      "sha256": "13808ab16bd0aed5bcd21de862eb6bc6e0ec3af48a9d1a402d78682e045910f6"
+      "bytes": 14182,
+      "sha256": "5149c3ad3610a2d0a69cdf0a6f1069e80b267f9a2c3b91fe98dbf2466042b0b1"
     },
     {
       "path": "outputs/research/MS-03/morphology/V17_086802_2374_XN_57N118W_browse.jpg",
@@ -461,6 +466,71 @@
       "sha256": "3b87140804a81ff8d1f14d0c5b9cd5f48305ba8eecc6f2ddef7f1591e1dd7697"
     },
     {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_019562_2385_COLOR.LBL",
+      "bytes": 7981,
+      "sha256": "5341386c433824546beb6d1417bd792959ae06e2155ca350f51c40e8764bc28e"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_019562_2385_RED.LBL",
+      "bytes": 8148,
+      "sha256": "dbe1bc882be79d55005331012940877a50312521aa63418328577dc02d149d89"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_027368_2380_COLOR.LBL",
+      "bytes": 8004,
+      "sha256": "db14c1ee0bb27d6582ac1a0193fcbcc9601e5366bccf80a7783df0bbe7f9aa40"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_027368_2380_RED.LBL",
+      "bytes": 8065,
+      "sha256": "4665f1bab0e418e0a3134f9fd84f914ae7fb46f677f6f8e3542c933ce4232daf"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_034858_2375_COLOR.LBL",
+      "bytes": 8036,
+      "sha256": "d36cc10dbfc5bed8eb3ba9a215620fc5205e4251ffb78291a418c9affe4c2306"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_034858_2375_RED.LBL",
+      "bytes": 8106,
+      "sha256": "8c7f2e5474bd0cbf507eccf41e4db5a504cf085438767e72c3db1252e5a097d2"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_036559_2375_COLOR.LBL",
+      "bytes": 7982,
+      "sha256": "b033521fe50675da2ab73375bf67d7dd7a5edb4de2a51ecc30cc86933d601890"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/ESP_036559_2375_RED.LBL",
+      "bytes": 8111,
+      "sha256": "dffaf7ad41bcc0ced3ed67bc940a19d3449b995c9fa5e04bbf6e67ddda3945d5"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/PSP_006864_2380_COLOR.LBL",
+      "bytes": 7776,
+      "sha256": "50590d17cf2368bffa767663f8f69a33d2ccc0da7da9cd061f366564215a3a10"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/PSP_006864_2380_RED.LBL",
+      "bytes": 8157,
+      "sha256": "0ec93f75138dc57e84c80e33809ec3f352b848defb3657e45a5d976a972273f4"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/generator_documentation_reading.json",
+      "bytes": 1692,
+      "sha256": "bf2f920d20b17e1b05c8f792f51e38e3b48eb345aabc55db70f2e8c9fc387b68"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/handoff_status.json",
+      "bytes": 1672,
+      "sha256": "26f93584ffd7497107781152a09b834fda5203d1fe05b8c1f16146b512d0dadc"
+    },
+    {
+      "path": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/neighbour_label_check.json",
+      "bytes": 8353,
+      "sha256": "50f148cb84b3bb4e1132386926d59ee25f037c0fb9ec283ed50dbca6cb30f8b8"
+    },
+    {
       "path": "outputs/research/MS-03/morphology/evidence_followup/published_Mars_image_index_rows.csv",
       "bytes": 532,
       "sha256": "a7cefc97fb33c6cbbf958e42481b4b70545e552483816c28cd32b6e250b75437"
@@ -527,13 +597,13 @@
     },
     {
       "path": "outputs/research/MS-03/search_log.csv",
-      "bytes": 9868,
-      "sha256": "30473c563ccd876ead130b825be6d4c05bb37a7c228709e7c3c3b4dfafe9d637"
+      "bytes": 10462,
+      "sha256": "c70e9b3c56b8761ca2a213bef34ff04cee1df8a3f11e54dd2e6b42852e24bfe4"
     },
     {
       "path": "outputs/research/MS-03/sources.json",
-      "bytes": 8196,
-      "sha256": "b72bb1dc140df5c463ed5bdd576887ae3e93fac7d1ae6953cef2c7c4911b1b0a"
+      "bytes": 8978,
+      "sha256": "01b28659bae0eea87f70976df14161d19fe4cfdd12a6e50aa6cd51c1c4f5f418"
     },
     {
       "path": "outputs/research/MS-03/uv_w/campbell_clock_audit.json",
@@ -577,8 +647,8 @@
     },
     {
       "path": "outputs/research/MS-03/validation.json",
-      "bytes": 18643,
-      "sha256": "c065032094e842c8da9d72d7289cd0f765823adb8ca845f79223373b07ef3169"
+      "bytes": 19479,
+      "sha256": "429a2f4388866ff4812162ad5d01acdd24af706f24d951f15ecfeb6e2d045739"
     }
   ],
   "followup_date_taipei": "2026-11-15",
@@ -656,5 +726,15 @@
     "count_difference": "149duplicate-product extra rows;upstream generation unknown",
     "roi_result": "0bbox hits in all205451rows of fixed source",
     "clock_alignment": false
+  },
+  "index_handoff_further_evidence": {
+    "date": "2026-11-15",
+    "basis_commit": "c6f9b93aa9ff5a471a8f67fbdf40f0922e508b84",
+    "status_ledger": "outputs/research/MS-03/morphology/evidence_followup/index_handoff/handoff_status.json",
+    "delivery": "prepared for main/GPU in report and PR7;not externally notified",
+    "resolved_old_claim": "615locationsunknown is superseded",
+    "extra_label_checks": 10,
+    "generator_documentation": "read;not production implementation",
+    "main_merge": false
   }
 }

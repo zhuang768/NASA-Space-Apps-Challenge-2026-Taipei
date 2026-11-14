@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-15",
+  "basis_commit": "c6f9b93aa9ff5a471a8f67fbdf40f0922e508b84",
+  "supersedes_statement": "615rows have unknown location",
+  "resolved": [
+    {
+      "issue": "legacy615flags",
+      "finding": "negative longitude format flags;valid latitude excludesMS03",
+      "evidence": "../index_anomalies/negative_longitude_reclassification.csv"
+    },
+    {
+      "issue": "numeric row discrepancy",
+      "finding": "149duplicatePRODUCT_IDgroups explain149extra rows;53otherfields identical",
+      "evidence": "../index_anomalies/duplicate_product_audit.csv"
+    },
+    {
+      "issue": "nearby current source label overlap",
+      "finding": "10selected products/5observations downloaded;0overlap",
+      "evidence": "neighbour_label_check.json"
+    }
+  ],
+  "documented_but_not_production_verified": {
+    "issue": "generator component responsibility",
+    "evidence": "generator_documentation_reading.json"
+  },
+  "unresolved": [
+    {
+      "issue": "upstream duplicate and label-count generation mechanism",
+      "needed": "executed2026revision,SQL/config,build log and source record provenance"
+    },
+    {
+      "issue": "unlisted or unreleased observation completeness",
+      "needed": "release/inventory evidence;cannot infer from currentRDR catalogue"
+    },
+    {
+      "issue": "MS03 polygon morphology and ice",
+      "needed": "adequate insideROI registered imagery;independent subsurface/material constraints"
+    }
+  ],
+  "policy": {
+    "AD1_specific_pair": "downgraded",
+    "Mars_morphology": "unknown",
+    "clock_alignment_allowed": false,
+    "main_merge": false
+  },
+  "delivery": "prepared in report/PR7;not externally sent"
+}

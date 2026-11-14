@@ -4,6 +4,20 @@ Starting SHA: `7b3c865e85ffeb4db81277ef34e9c3f4a318fc9f` on `research/ms-03-eart
 
 **Decision: insufficient evidence; downgrade MS-03-E02 (AD1) to a general method reference, outside the currently supported specific MS-03 pair.** This is not evidence that polygons or fractures are absent. No Mars polygon boundaries or size/shape distributions were measured.
 
+## Main/GPU handoff and further checks — 2026-11-15
+
+[Current handoff](../../../../docs/research/MS-03/report.md) explicitly supersedes “615 locations unknown.” [Machine-readable status](evidence_followup/index_handoff/handoff_status.json) separates resolved,documented-but-not-production-verified and unresolved items.
+
+Further checks: all10selected current source labels (5observations) acquired and non-overlapping withMS03;selection is the fixed latitude band plus237–247.5E longitude screening,an analyst5degree buffer rather than a guaranteed geolocation-error bound. [Exact selection,URLs,hashes and bounds](evidence_followup/index_handoff/neighbour_label_check.json). This is not all-product or unreleased-image verification.
+
+OfficialIndex_Builder/IndexBuilderclass docs now identify index-writing and label-update responsibilities. The method implementation,executed2026revision,SQL/config andlogs were not obtained. [Reading record](evidence_followup/index_handoff/generator_documentation_reading.json). Do not label the149groups as a proven database-join,rounding or distinct-count bug.
+
+```sh
+/tmp/ms03geo/bin/python scripts/research/MS-03/check_hirise_neighbour_labels.py --index /tmp/ms03_HiRISE_RDRCUMINDEX.TAB
+```
+
+AD1downgrade,inside-ROI morphologyunknown and Campbell/HOBO restrictions remain unchanged. No notifications sent,no source index overwritten,no main merge.
+
 ## Index anomalies resolved for this fixed table — 2026-11-15
 
 This section supersedes the earlier615-unlocated-row warning and unexplained numerical count difference. [Full resolution](evidence_followup/index_anomalies/resolution_summary.json) and [current research report](../../../../docs/research/MS-03/report.md) retain the bounded conclusion: these two issues do not hide anMS03bbox match in the downloaded table;unlisted/unreleased products and source-geometry errors are not excluded.

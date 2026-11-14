@@ -1,0 +1,255 @@
+{
+  "date": "2026-11-15",
+  "basis_commit": "c6f9b93aa9ff5a471a8f67fbdf40f0922e508b84",
+  "source_index_sha256": "d58cf52657371f6a7e65ef4dc687fdd2f9c70e276f7755853e27971f17df4126",
+  "original_roi": [
+    242,
+    57.5,
+    242.5,
+    58
+  ],
+  "selection_rule": "Index latitude overlaps57.5..58N and non-wrapping longitude bbox overlaps237..247.5E;5degree analyst buffer solely for bounded label crosscheck",
+  "selected_products": 10,
+  "observations": 5,
+  "downloaded": 10,
+  "overlap_true": 0,
+  "unavailable": 0,
+  "records": [
+    {
+      "source_line_1based": 8524,
+      "product_id": "PSP_006864_2380_RED",
+      "path": "RDR/PSP/ORB_006800_006899/PSP_006864_2380/PSP_006864_2380_RED.JP2",
+      "index_bbox": [
+        241.518,
+        57.2431,
+        241.838,
+        57.7753
+      ],
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/PSP/ORB_006800_006899/PSP_006864_2380/PSP_006864_2380_RED.LBL",
+      "status": 200,
+      "bytes": 8157,
+      "sha256": "0ec93f75138dc57e84c80e33809ec3f352b848defb3657e45a5d976a972273f4",
+      "source_label_bbox": [
+        241.51818024375,
+        57.243063928588,
+        241.83751839088,
+        57.775298752268
+      ],
+      "source_label_roi_overlap": false,
+      "source_label_file": "PSP_006864_2380_RED.LBL"
+    },
+    {
+      "source_line_1based": 8525,
+      "product_id": "PSP_006864_2380_COLOR",
+      "path": "RDR/PSP/ORB_006800_006899/PSP_006864_2380/PSP_006864_2380_COLOR.JP2",
+      "index_bbox": [
+        241.518,
+        57.2431,
+        241.838,
+        57.7753
+      ],
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/PSP/ORB_006800_006899/PSP_006864_2380/PSP_006864_2380_COLOR.LBL",
+      "status": 200,
+      "bytes": 7776,
+      "sha256": "50590d17cf2368bffa767663f8f69a33d2ccc0da7da9cd061f366564215a3a10",
+      "source_label_bbox": [
+        241.59602007351,
+        57.248326545688,
+        241.74171713939,
+        57.768398761219
+      ],
+      "source_label_roi_overlap": false,
+      "source_label_file": "PSP_006864_2380_COLOR.LBL"
+    },
+    {
+      "source_line_1based": 33263,
+      "product_id": "ESP_019562_2385_RED",
+      "path": "RDR/ESP/ORB_019500_019599/ESP_019562_2385/ESP_019562_2385_RED.JP2",
+      "index_bbox": [
+        239.607,
+        57.8929,
+        239.844,
+        58.0862
+      ],
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/ESP/ORB_019500_019599/ESP_019562_2385/ESP_019562_2385_RED.LBL",
+      "status": 200,
+      "bytes": 8148,
+      "sha256": "dbe1bc882be79d55005331012940877a50312521aa63418328577dc02d149d89",
+      "source_label_bbox": [
+        239.60728292956,
+        57.892868762331,
+        239.84417438555,
+        58.086214146027
+      ],
+      "source_label_roi_overlap": false,
+      "source_label_file": "ESP_019562_2385_RED.LBL"
+    },
+    {
+      "source_line_1based": 33264,
+      "product_id": "ESP_019562_2385_COLOR",
+      "path": "RDR/ESP/ORB_019500_019599/ESP_019562_2385/ESP_019562_2385_COLOR.JP2",
+      "index_bbox": [
+        239.607,
+        57.8929,
+        239.844,
+        58.0862
+      ],
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/ESP/ORB_019500_019599/ESP_019562_2385/ESP_019562_2385_COLOR.LBL",
+      "status": 200,
+      "bytes": 7981,
+      "sha256": "5341386c433824546beb6d1417bd792959ae06e2155ca350f51c40e8764bc28e",
+      "source_label_bbox": [
+        239.68563683615,
+        57.897697509627,
+        239.76616415379,
+        58.081123142699
+      ],
+      "source_label_roi_overlap": false,
+      "source_label_file": "ESP_019562_2385_COLOR.LBL"
+    },
+    {
+      "source_line_1based": 48222,
+      "product_id": "ESP_027368_2380_RED",
+      "path": "RDR/ESP/ORB_027300_027399/ESP_027368_2380/ESP_027368_2380_RED.JP2",
+      "index_bbox": [
+        246.673,
+        57.4325,
+        246.916,
+        57.7043
+      ],
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/ESP/ORB_027300_027399/ESP_027368_2380/ESP_027368_2380_RED.LBL",
+      "status": 200,
+      "bytes": 8065,
+      "sha256": "4665f1bab0e418e0a3134f9fd84f914ae7fb46f677f6f8e3542c933ce4232daf",
+      "source_label_bbox": [
+        246.67274865563,
+        57.43253757037,
+        246.91600795354,
+        57.704327263145
+      ],
+      "source_label_roi_overlap": false,
+      "source_label_file": "ESP_027368_2380_RED.LBL"
+    },
+    {
+      "source_line_1based": 48223,
+      "product_id": "ESP_027368_2380_COLOR",
+      "path": "RDR/ESP/ORB_027300_027399/ESP_027368_2380/ESP_027368_2380_COLOR.JP2",
+      "index_bbox": [
+        246.673,
+        57.4325,
+        246.916,
+        57.7043
+      ],
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/ESP/ORB_027300_027399/ESP_027368_2380/ESP_027368_2380_COLOR.LBL",
+      "status": 200,
+      "bytes": 8004,
+      "sha256": "db14c1ee0bb27d6582ac1a0193fcbcc9601e5366bccf80a7783df0bbe7f9aa40",
+      "source_label_bbox": [
+        246.73115312916,
+        57.436879061318,
+        246.83906765429,
+        57.698297839782
+      ],
+      "source_label_roi_overlap": false,
+      "source_label_file": "ESP_027368_2380_COLOR.LBL"
+    },
+    {
+      "source_line_1based": 62758,
+      "product_id": "ESP_034858_2375_RED",
+      "path": "RDR/ESP/ORB_034800_034899/ESP_034858_2375/ESP_034858_2375_RED.JP2",
+      "index_bbox": [
+        240.107,
+        57.8373,
+        240.332,
+        58.0556
+      ],
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/ESP/ORB_034800_034899/ESP_034858_2375/ESP_034858_2375_RED.LBL",
+      "status": 200,
+      "bytes": 8106,
+      "sha256": "8c7f2e5474bd0cbf507eccf41e4db5a504cf085438767e72c3db1252e5a097d2",
+      "source_label_bbox": [
+        240.10729107218,
+        57.837312343953,
+        240.33218299598,
+        58.055602353183
+      ],
+      "source_label_roi_overlap": false,
+      "source_label_file": "ESP_034858_2375_RED.LBL"
+    },
+    {
+      "source_line_1based": 62759,
+      "product_id": "ESP_034858_2375_COLOR",
+      "path": "RDR/ESP/ORB_034800_034899/ESP_034858_2375/ESP_034858_2375_COLOR.JP2",
+      "index_bbox": [
+        240.107,
+        57.8373,
+        240.332,
+        58.0556
+      ],
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/ESP/ORB_034800_034899/ESP_034858_2375/ESP_034858_2375_COLOR.LBL",
+      "status": 200,
+      "bytes": 8036,
+      "sha256": "d36cc10dbfc5bed8eb3ba9a215620fc5205e4251ffb78291a418c9affe4c2306",
+      "source_label_bbox": [
+        240.16578925789,
+        57.841214783235,
+        240.25477863426,
+        58.050148237645
+      ],
+      "source_label_roi_overlap": false,
+      "source_label_file": "ESP_034858_2375_COLOR.LBL"
+    },
+    {
+      "source_line_1based": 67665,
+      "product_id": "ESP_036559_2375_RED",
+      "path": "RDR/ESP/ORB_036500_036599/ESP_036559_2375/ESP_036559_2375_RED.JP2",
+      "index_bbox": [
+        240.157,
+        57.4775,
+        240.411,
+        57.7306
+      ],
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/ESP/ORB_036500_036599/ESP_036559_2375/ESP_036559_2375_RED.LBL",
+      "status": 200,
+      "bytes": 8111,
+      "sha256": "dffaf7ad41bcc0ced3ed67bc940a19d3449b995c9fa5e04bbf6e67ddda3945d5",
+      "source_label_bbox": [
+        240.15711936185,
+        57.477454559504,
+        240.41051893508,
+        57.7306443099
+      ],
+      "source_label_roi_overlap": false,
+      "source_label_file": "ESP_036559_2375_RED.LBL"
+    },
+    {
+      "source_line_1based": 67666,
+      "product_id": "ESP_036559_2375_COLOR",
+      "path": "RDR/ESP/ORB_036500_036599/ESP_036559_2375/ESP_036559_2375_COLOR.JP2",
+      "index_bbox": [
+        240.157,
+        57.4775,
+        240.411,
+        57.7306
+      ],
+      "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/ESP/ORB_036500_036599/ESP_036559_2375/ESP_036559_2375_COLOR.LBL",
+      "status": 200,
+      "bytes": 7982,
+      "sha256": "b033521fe50675da2ab73375bf67d7dd7a5edb4de2a51ecc30cc86933d601890",
+      "source_label_bbox": [
+        240.21812563746,
+        57.48261292847,
+        240.33032480342,
+        57.723519392513
+      ],
+      "source_label_roi_overlap": false,
+      "source_label_file": "ESP_036559_2375_COLOR.LBL"
+    }
+  ],
+  "limits": [
+    "Not all205302unique product labels",
+    "Not a search of unlisted or unreleased observations",
+    "Source labels are metadata,not independent geodetic ground truth",
+    "5degree margin is a design sampling rule,not guaranteed maximum geolocation error"
+  ]
+}

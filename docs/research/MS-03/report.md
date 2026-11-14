@@ -4,6 +4,42 @@ Team zasa｜初版2026-11-14；最後核對2026-11-15｜PR #7研究交付
 
 **閱讀順序：** 前段最新MS-03／AD1處置及2026-11-15時標交接為目前有效限制；「2026-11-14初版紀錄」之後保留歷史內容，已被新版取代的取得狀態不可作為現況。所有驗證通過只限列明的結構與重現檢查，未確認感測器真實時刻或偏移原因。
 
+## 2026-11-15正式交接：HiRISE索引已釐清事項、未知與新增證據
+
+交接基準SHA `c6f9b93aa9ff5a471a8f67fbdf40f0922e508b84`，來源仍固定為168,675,271bytes／SHA256 `d58cf52657371f6a7e65ef4dc687fdd2f9c70e276f7755853e27971f17df4126`的任務索引。**舊說法「615筆位置未知／615筆無定位」已被本交接取代。** 舊檔案與當時判斷保留供追溯，不作目前狀態。
+
+### 已釐清與仍未知
+
+| 問題 | 目前狀態 | 證據與界線 |
+|---|---|---|
+| 615筆為何被標invalid？ | **已釐清：本組0–360°格式檢核將負經度標為警示** | 615筆均有有效緯度且不在57.50–58.00°N；來源標籤抽核也確有負經度。不是615筆缺失定位。[逐列重新分類](../../../outputs/research/MS-03/morphology/evidence_followup/index_anomalies/negative_longitude_reclassification.csv) |
+| 205,451與205,302的數量差？ | **數量已釐清：149組重複產品各多1列** | 205,302個unique PRODUCT_ID；每組僅OBSERVATION_START_TIME不同，其他53欄相同，包括圖檔路徑及幾何。[149組核對](../../../outputs/research/MS-03/morphology/evidence_followup/index_anomalies/duplicate_product_audit.csv) |
+| 這兩項問題是否藏了格內紀錄？ | **固定索引內影響已核對，沒有發現漏列** | 讀完205,451列，未依label count截斷；305列緯度相交紀錄的經度查核均不相交。無須把615筆負值強制轉換，也未選擇重複時間真值。[305列](../../../outputs/research/MS-03/morphology/evidence_followup/index_anomalies/latitude_eligible_rows.csv)、[整體判斷](../../../outputs/research/MS-03/morphology/evidence_followup/index_anomalies/resolution_summary.json) |
+| 現行鄰近產品標籤是否改變判斷？ | **本輪新核對：所選10產品／5次觀測均不相交** | 在上述緯度相交列中，另選與237–247.5°E相交的產品作鄰近抽核，10份原標籤全取得、均不進入指定格。[下載、雜湊、標籤邊界](../../../outputs/research/MS-03/morphology/evidence_followup/index_handoff/neighbour_label_check.json)。5°緩衝是本輪設計取樣，不是保證涵蓋最大定位誤差；未核對所有產品標籤 |
+| 哪個官方元件負責建立索引？ | **本輪新取得公開元件文件；實際2026執行版未知** | 官方[Index_Builder](https://pirlwww.lpl.arizona.edu/software/HiRISE/Java/HiRISE/HiCat/HiVolume/Index_Builder.html)說明建立PDS索引表並更新標籤記錄數；[IndexBuilder](https://pirlwww.lpl.arizona.edu/software/HiRISE/Java/HiRISE/HiCat/HiVolume/IndexBuilder.html)也列RDR寫出介面。這是文件，不是取得方法實作、部署紀錄或SQL。[實讀範圍](../../../outputs/research/MS-03/morphology/evidence_followup/index_handoff/generator_documentation_reading.json) |
+| 為何生成149組重複列、標籤如何計數？ | **仍未知：只確認輸出對應，未確認生成機制** | 尚缺實際執行版、SQL／設定與生成日誌。不能以unique數恰好等於label宣告，就稱已證實distinct計數、資料庫join bug或取整bug。原始physical ROWS不一致仍未被修復 |
+| 是否所有HiRISE都沒拍到本格？是否沒有多邊形？ | **仍未知，不能由目錄結果推出** | 未發布、未列入或來源幾何錯誤仍不能完整排除；未取得足以量測的格內HiRISE影像。現有CTX局部與取樣尺度不足以確認AD1式網路，不能作整格不存在判斷 |
+
+### 給主要對話：可直接引用與下一步
+
+> 針對固定版本HiRISE累積索引，先前615筆警示已釐清為負經度格式檢核問題，全部可用緯度排除MS-03。149個額外列來自重複產品ID，空間欄位相同，未在本次完整列讀取中造成MS-03相交產品漏列；另核對10份鄰近產品原標籤也均不相交。這些是索引適用性與資料追溯結果，不是「所有觀測皆無覆蓋」或「格內沒有多邊形」的證明。AD1仍為一般方法參照，退出目前具體配對，MS-03形貌保持unknown。
+
+主要對話應將總結中的「615筆仍待定位」改為「已由緯度排除；其餘未知是上游生成與目錄完整性」。目前不必為這615列等待定位補件。若要追上游根因，需要索引發布方提供該次建置的程式revision、實際SQL／設定、重複產品來源資料版本與記錄數計算日誌；本聊天室沒有發信或取得回覆。若要恢復具體類比配對，需要可清楚辨識完整邊界且精定位的格內影像，而不是更多格外照片或調整名義格。
+
+不得把文件寫成已確認全球首次、已證明所有HiRISE無覆蓋、已修正官方索引、已完成幾何獨立真值驗證，或已看到多邊形／地下冰。新取得的元件文件只縮小了應查證的位置，沒有解決其執行機制。
+
+### 給GPU：可用輸入、操作界線與後續條件
+
+1. 先核對固定來源SHA與每列821bytes，讀完整實表，不以LABEL ROWS截斷。原表未修改，大表仍只在本機暫存，GitHub交付的是查核結果、來源與程式。
+2. 將舊`HiRISE_invalid_bbox_rows.csv`視為歷史strict-format警示，讀[重新分類表](../../../outputs/research/MS-03/morphology/evidence_followup/index_anomalies/negative_longitude_reclassification.csv)取代「位置未知」。先用有效緯度排除；負經度不能自動當NaN。涉及跨零、極區或其他格時，需另核對慣例，不把本格排除規則當通用投影修復。
+3. 若未來需要去重，同PRODUCT_ID的幾何、路徑、版本及時間差必須先比較；保留來源行號與差異旗標。本輪沒有去重覆寫原表，也沒有任選指令時間或產生校正檔。
+4. 可重跑[索引異常核對程式](../../../scripts/research/MS-03/audit_hirise_index_anomalies.py)及[鄰近標籤查核程式](../../../scripts/research/MS-03/check_hirise_neighbour_labels.py)。後者只檢查已定義的10產品，不是全局檢索或有效像素驗證。來源變動時先保留新舊版本，不將原SHA成果靜默更新成最新結果。
+5. 形貌分析入口仍是[覆蓋／判讀圖](../../../outputs/research/MS-03/morphology/MS03_AD1_coverage_interpretation.png)、[可辨識性比較表](../../../outputs/research/MS-03/morphology/observability_comparison.csv)及[方法說明](../../../outputs/research/MS-03/morphology/README.md)。沒有格內可可靠追描的網路，就不產生Mars面積／圓度／相似度分數，不把AD1值或零值填入unknown。
+6. 即使未來形貌相近，成因與冰判讀仍需同位材料／層序、重訪／立體地形與獨立地下結構證據。此處HiRISE指令時間差與地球Campbell／HOBO分開；既有配時禁用維持。
+
+**交接狀態：** 已備妥供主要對話與GPU從PR #7讀取，未對外發送訊息，未改其他人的檔案。這輪已把「鄰近現行標籤是否仍在格外」及「公開生成元件的職責」補成有來源的結果；執行版／SQL根因、未列入觀測完整性及格內地貌仍待真正資料。不能用交接完成代替科學未知已解決。先不合併main。
+
+
 ## 2026-11-15續查：615筆格式警示與149列計數差的影響已釐清
 
 接續SHA `115576b51e1a7c89d2d9cd75ae667d4da4ad96c0`，使用原已取得的HiRISE累積索引固定SHA256 `d58cf52657371f6a7e65ef4dc687fdd2f9c70e276f7755853e27971f17df4126`。**這兩個異常未在實際取得的索引內隱藏MS-03相交紀錄；未發布／未列入產品或來源幾何錯誤仍不在可排除範圍。** AD1維持降級，MS-03格內形貌維持unknown，沒有新增影像判讀或地下冰證據。

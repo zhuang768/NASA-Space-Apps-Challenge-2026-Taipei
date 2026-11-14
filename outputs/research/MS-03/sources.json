@@ -131,5 +131,17 @@
     "locator": "PROJECTION_LATITUDE_TYPE;POSITIVE_LONGITUDE_DIRECTION;MINIMUM/MAXIMUM_LATITUDE;WESTERNMOST/EASTERNMOST_LONGITUDE",
     "read_scope": "Actual full original label for closest negative-longitude row retrieved;planetocentric east-positive negative longitudes and outsideROI latitude confirmed;not all615labels",
     "access_date_taipei": "2026-11-15"
+  },
+  "MOR8": {
+    "url": "https://pirlwww.lpl.arizona.edu/software/HiRISE/Java/HiRISE/HiCat/HiVolume/Index_Builder.html",
+    "locator": "class description;Write_RDR_Index(java.util.Date);constructors;paired IndexBuilder docs",
+    "read_scope": "Actual public Javadoc class/method descriptions read;not source implementation or verified2026productionbuild",
+    "access_date_taipei": "2026-11-15"
+  },
+  "MOR9": {
+    "url": "https://hirise-pds.lpl.arizona.edu/PDS/RDR/",
+    "locator": "10exact label URLs and bbox fields in index_handoff/neighbour_label_check.json",
+    "read_scope": "10actual source labels downloaded;5observations selected by stated nearby bbox rule;0ROIoverlap;not all product labels or independent geodetic truth",
+    "access_date_taipei": "2026-11-15"
   }
 }

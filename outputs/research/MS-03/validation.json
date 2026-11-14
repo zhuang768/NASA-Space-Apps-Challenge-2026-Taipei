@@ -421,5 +421,27 @@
       "all source geometries independently validated"
     ],
     "decision": "no evidence these two anomalies hide anROI record in pinned index;AD1 downgrade retained"
+  },
+  "index_handoff_further_evidence": {
+    "date": "2026-11-15",
+    "basis_commit": "c6f9b93aa9ff5a471a8f67fbdf40f0922e508b84",
+    "checks": [
+      "10selected labels actual downloads allSHA/bytes match",
+      "5observations current source labels0ROIoverlap",
+      "main/GPU handoff links exist",
+      "JSON and source crossrefs parsed",
+      "existing morphology and handoff validation passed",
+      "alluv_w and Earth geometry/science figure files unchanged"
+    ],
+    "newly_known": [
+      "selected neighbouring source labels do not overlapROI",
+      "public Index_Builder component responsibility documented"
+    ],
+    "still_unknown": [
+      "executed2026build/SQL/duplicate-generation cause",
+      "all unreleased/unlisted observations",
+      "insideROI polygon morphology"
+    ],
+    "clock_alignment": false
   }
 }

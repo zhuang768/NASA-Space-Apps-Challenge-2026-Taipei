@@ -104,3 +104,11 @@ docs/         方法、資料規格、競賽準備與歷史紀錄
 - **實際驗證**：`cd web && npm run build:data` 與 `npm run build`（`tsc -b && vite build`）通過；`.venv/bin/ruff check .` 通過；於 `http://127.0.0.1:4173/` 實機瀏覽器驗證桌面（1280×800）與窄螢幕（390×844）共 7 項互動流程、邊界座標與動態圖表載入全數通過（0 console errors、0 失敗網路請求）。
 - **限制與下一步**：目前科學篩選仍為 `terrain_only_screening`，Ranks #3–#12 尚未查取 NASA POWER 氣候背景，火星區域 `surface_temperature` 仍為 `missing`；後續若擴充多變量評分或新證據，可重新執行 `npm run build:data` 更新前端資料包。
 - **AI 使用**：Antigravity 協助建置與審查強化 `web/` 前端與資料轉接程式、執行建置與瀏覽器實機驗證並追加本節報告；未生成虛構科學數據或改動既有排名。
+
+### 2026-11-14：Oytag 石膏層定位與同露頭鑑定續查
+
+已補入[研究報告 §3.7](docs/research_report_three_analogs_2026-11-14.md)：讀取 Sun/Jiang（2013）Fig.2 經緯網定位圖、Fig.3 含石膏剖面，近似讀取 A–B 路線；兩端與八種 ±8 pixel 診斷情境均在候選窗口內。這支持含石膏剖面位於範圍內的圖上推論，尚無石膏 GPS，不是精密地質套疊。
+
+[空間計算](outputs/research/oytag_transect_check.json)、[原創示意圖](outputs/research/oytag_transect_schematic.png)及[來源查證清單](outputs/research/oytag_outcrop_source_audit.json)已保存。熱磁分析、石灰岩 Ca/Sr、附近薄片都不能替代同一石膏露頭的 XRD；2012 與 2013 研究亦不能因同名剖面就串成同一樣品。未找到完整「石膏層座標—樣品 ID—礦物鑑定」鏈，蒙皂石共現仍未知。
+
+已執行 `.venv/bin/python -m scripts.check_oytag_overlap` 與 `.venv/bin/python -m scripts.check_oytag_transect` 核對空間結果，並檢查圖表與文件連結。本輪未重跑科學排名或整套測試。下一步需原始接觸點／樣品 GPS 與同樣品礦相資料。OpenAI Codex 協助 PDF 圖件閱讀、近似座標診斷及中文紀錄；原文 PDF 未重新散布。

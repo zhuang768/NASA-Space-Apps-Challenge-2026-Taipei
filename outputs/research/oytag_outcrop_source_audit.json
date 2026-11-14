@@ -1,0 +1,50 @@
+{
+  "review_date_taipei": "2026-11-14",
+  "sources": [
+    {
+      "id": "bershaw2012",
+      "doi": "10.1016/j.jseaes.2011.04.020",
+      "url": "https://web.pdx.edu/~bershaw/reference/Bershaw2012PamirCenozoicProvenanceIsotopesTarimJAES.pdf",
+      "bytes": 4104116,
+      "sha256": "12ffe1653126b92ca3ca4f9dfbb56261224ef26115b623e590afa165d5a5be4c",
+      "retrieved_date_taipei": "2026-11-14",
+      "access": "full text read locally; copyrighted source not redistributed",
+      "scope": "Main text read; DR1 supplement not retrieved; published point coordinates do not identify the 2013 gypsum bed",
+      "tls_certificate_validation": true
+    },
+    {
+      "id": "sun2013",
+      "doi": "10.1016/j.tecto.2012.11.031",
+      "url": "https://www.igg.cas.cn/zhuantilanmu/solid_earth/solid_earth_research/201307/W020130705569854459276.pdf",
+      "bytes": 3508083,
+      "sha256": "a9a5fb373a03a15e3ff1c3556f65a587643769f117ea693ed3b9204c361e4d90",
+      "retrieved_date_taipei": "2026-11-14",
+      "access": "full text read locally; copyrighted source not redistributed",
+      "scope": "Fig2 map and Fig3 gypsum-bearing transect visually inspected; methods do not establish same-gypsum-outcrop XRD",
+      "tls_certificate_validation": false
+    },
+    {
+      "id": "blayney2016",
+      "doi": "10.1002/2016TC004222",
+      "url": "https://eprints.lancs.ac.uk/id/eprint/82403/1/Blayney_et_al_2016_Tectonics.pdf",
+      "bytes": 3209001,
+      "sha256": "38b06d0869802884a7af116e1a86db91da3366a496afa756a5e2e5478dc35234",
+      "retrieved_date_taipei": "2026-11-14",
+      "access": "full text read locally; copyrighted source not redistributed",
+      "scope": "Section3.1 distinguishes the parallel Oytag River and Gez River sections",
+      "tls_certificate_validation": true
+    },
+    {
+      "id": "bershaw_course2010",
+      "url": "https://www.hajim.rochester.edu/optics/sites/cml/opt307/spr10/john/index.html",
+      "access": "HTML read",
+      "scope": "Non-peer-reviewed teaching project; microscopy and X-ray spectra not linked to the same gypsum outcrop"
+    }
+  ],
+  "gypsum_position_status": "INFERRED from mapped transect, not measured GPS",
+  "same_outcrop_mineralogy_status": "UNVERIFIED; no sample-ID/location/mineral-analysis chain located",
+  "unretrieved": [
+    "Bershaw2012 FigDR1 supplement"
+  ],
+  "source_pdf_files_committed": false
+}

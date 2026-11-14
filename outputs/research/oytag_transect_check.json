@@ -1,0 +1,153 @@
+{
+  "source_doi": "10.1016/j.tecto.2012.11.031",
+  "source_figures": "Fig.2 p28 and Fig.3 p29",
+  "source_url": "https://www.igg.cas.cn/zhuantilanmu/solid_earth/solid_earth_research/201307/W020130705569854459276.pdf",
+  "source_pdf_sha256": "a9a5fb373a03a15e3ff1c3556f65a587643769f117ea693ed3b9204c361e4d90",
+  "source_transport_note": "Official institute public PDF retrieved with certificate validation disabled after local SSL error; verify DOI and hash independently",
+  "candidate_input_sha256": "b6ed9fd5547e14856abf9a8aeb4e5baaaf7e9783954a48b87d6fc5be136f27b3",
+  "render_command": "pdftoppm -f 2 -l 2 -r 200 -x 100 -y 1100 -W 730 -H 1000 -png -singlefile INPUT.pdf OUTPUT",
+  "pixel_origin": "top-left of rendered crop",
+  "gcp_columns": [
+    "x_px",
+    "y_px",
+    "longitude_deg",
+    "latitude_deg"
+  ],
+  "gcp": [
+    [
+      90,
+      689,
+      75.33333333333333,
+      39
+    ],
+    [
+      82,
+      333,
+      75.33333333333333,
+      39.333333333333336
+    ],
+    [
+      357,
+      689,
+      75.66666666666667,
+      39
+    ],
+    [
+      352,
+      333,
+      75.66666666666667,
+      39.333333333333336
+    ]
+  ],
+  "affine_coefficients": [
+    [
+      0.0012414261836893323,
+      -3.636407803013836e-17
+    ],
+    [
+      -2.2666489308877097e-05,
+      -0.0009363295880149991
+    ],
+    [
+      75.23815845907927,
+      39.645131086142335
+    ]
+  ],
+  "control_fit_residual_deg": [
+    [
+      0.0009362711441696092,
+      0.0
+    ],
+    [
+      -0.0009258681313895067,
+      0.0
+    ],
+    [
+      -0.0009362711441269767,
+      -1.4210854715202004e-14
+    ],
+    [
+      0.0009258681313895067,
+      -7.105427357601002e-15
+    ]
+  ],
+  "sensitivity": "Endpoint coordinates varied by +/-8 pixels independently; arbitrary diagnostic envelope, not confidence or true georeferencing accuracy",
+  "all_8_endpoint_offset_scenarios_inside": true,
+  "classification": "INFERRED: approximate mapped transect inside candidate; gypsum layer assigned to this transect by paper Fig.3",
+  "not_established": [
+    "exact gypsum GPS",
+    "same-outcrop XRD",
+    "gypsum/clay/iron oxide co-occurrence",
+    "georeferenced geology polygons"
+  ],
+  "endpoints": [
+    {
+      "label": "A",
+      "pixel": [
+        224,
+        731
+      ],
+      "approx_lon_deg": 75.4996687205409,
+      "approx_lat_deg": 38.960674157303366,
+      "east_km": 43.202551937815116,
+      "north_km": -4.254320471092828,
+      "inside": true,
+      "pixel_offset_scenarios": [
+        {
+          "east_km": 42.35506536015215,
+          "north_km": -3.4259846890688532,
+          "inside": true
+        },
+        {
+          "east_km": 42.332664631726466,
+          "north_km": -5.091985390974126,
+          "inside": true
+        },
+        {
+          "east_km": 44.07225328805055,
+          "north_km": -3.416558957024495,
+          "inside": true
+        },
+        {
+          "east_km": 44.050215827659734,
+          "north_km": -5.082565519644119,
+          "inside": true
+        }
+      ]
+    },
+    {
+      "label": "B",
+      "pixel": [
+        262,
+        686
+      ],
+      "approx_lon_deg": 75.54786290754,
+      "approx_lat_deg": 39.00280898876404,
+      "east_km": 47.341302377468004,
+      "north_km": 0.45478946460573955,
+      "inside": true,
+      "pixel_offset_scenarios": [
+        {
+          "east_km": 46.49387629341551,
+          "north_km": 1.2826793464796908,
+          "inside": true
+        },
+        {
+          "east_km": 46.472381601096565,
+          "north_km": -0.3833354189100107,
+          "inside": true
+        },
+        {
+          "east_km": 48.210036986664555,
+          "north_km": 1.293010864121508,
+          "inside": true
+        },
+        {
+          "east_km": 48.188905786612615,
+          "north_km": -0.37300966296160654,
+          "inside": true
+        }
+      ]
+    }
+  ]
+}

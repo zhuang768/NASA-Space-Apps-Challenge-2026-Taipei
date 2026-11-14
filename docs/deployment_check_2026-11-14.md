@@ -31,3 +31,9 @@ In repository Settings → Secrets and variables → Actions, replace `CLOUDFLAR
 After the owner updates the secrets, rerun the workflow, confirm successful upload, and load the public URL again. Verify the three-view layout, candidate/target selection, evidence drawer, Demo reset, figure requests and mobile width with method details open and closed. These public organized-layout checks remain pending.
 
 No new candidate research, scientific values or rankings changed in this deployment task. Successful build and HTTP 200 are not reported as successful deployment of the latest version.
+
+## Manual upload of the organized layout
+
+Later on 2026-11-14 the current `main` (`9d865d7`) was rebuilt locally (`build_workbench_data.py`, `npm ci`, `npm run build`) and uploaded with Wrangler direct upload to the `terramatch-mission-lab` Pages project, production branch `main`. The public URL then served `/assets/index-C1XZWWZv.js` and showed the “Overview & map”, “Evidence & sources” and “Sensitivity & gaps” views, with no console errors on desktop load. Public mobile-width checks were not repeated.
+
+This was a one-off manual upload. Pushes to `main` will not update the site automatically until the owner replaces `CLOUDFLARE_API_TOKEN` and adds `CLOUDFLARE_ACCOUNT_ID` as described above.

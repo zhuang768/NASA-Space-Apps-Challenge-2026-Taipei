@@ -1,0 +1,11 @@
+parent_sample_id,latitude_deg,longitude_deg,sample_type,metadata_excel_row,source_sheet,inside_candidate_polygon,same_gypsum_outcrop_link,coordinate_datum
+PMR-01,38.9937,75.5434,Detrital,9,ZirconData,True,not established,not stated in metadata row
+PMR-08,38.7479700844,75.1852855167,Igneous,111,ZirconData,True,not established,not stated in metadata row
+PMR-13,39.0180988344,74.6352359167,Detrital,154,ZirconData,True,not established,not stated in metadata row
+PMR-20,38.7379670011,75.03337085,Detrital,256,ZirconData,True,not established,not stated in metadata row
+PMR-23,38.8927250011,75.4943015,Igneous,358,ZirconData,True,not established,not stated in metadata row
+PMR-25,38.9715486678,75.4681143333,Detrital,389,ZirconData,True,not established,not stated in metadata row
+PMR-26,38.9744483844,75.4757970333,Detrital,491,ZirconData,True,not established,not stated in metadata row
+PMR-33,38.9836788844,75.5167732167,Detrital,594,ZirconData,True,not established,not stated in metadata row
+PMR-40,38.9865878344,75.499688,Detrital,696,ZirconData,True,not established,not stated in metadata row
+PMR-46,38.9896780511,75.53994155,Detrital,805,ZirconData,True,not established,not stated in metadata row

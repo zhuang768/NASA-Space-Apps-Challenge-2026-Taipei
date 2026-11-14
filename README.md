@@ -112,3 +112,11 @@ docs/         方法、資料規格、競賽準備與歷史紀錄
 [空間計算](outputs/research/oytag_transect_check.json)、[原創示意圖](outputs/research/oytag_transect_schematic.png)及[來源查證清單](outputs/research/oytag_outcrop_source_audit.json)已保存。熱磁分析、石灰岩 Ca/Sr、附近薄片都不能替代同一石膏露頭的 XRD；2012 與 2013 研究亦不能因同名剖面就串成同一樣品。未找到完整「石膏層座標—樣品 ID—礦物鑑定」鏈，蒙皂石共現仍未知。
 
 已執行 `.venv/bin/python -m scripts.check_oytag_overlap` 與 `.venv/bin/python -m scripts.check_oytag_transect` 核對空間結果，並檢查圖表與文件連結。本輪未重跑科學排名或整套測試。下一步需原始接觸點／樣品 GPS 與同樣品礦相資料。OpenAI Codex 協助 PDF 圖件閱讀、近似座標診斷及中文紀錄；原文 PDF 未重新散布。
+
+### 2026-11-14：Oytag 原始補充表與礦物線索續查
+
+已取得 Bershaw（2012）原始 `mmc1.xls`／Table DR1，解析十組 PMR 母岩座標與樣品 ID，均位於候選多邊形內；[座標摘錄](outputs/research/oytag_supplement_coordinates.csv)、[來源雜湊](outputs/research/oytag_supplement_metadata.json)與[存取紀錄](outputs/research/oytag_supplement_access_log.json)已保存，詳見[研究報告 §3.8](docs/research_report_three_analogs_2026-11-14.md)。
+
+補表是鋯石定年資料，不是石膏層 GPS 或 XRD；新座標只能補強樣品追溯，不能證實同一露頭礦物共現。另找到 Oytag `9412-1` 礦物表，但材料是冰磧物，已排除為同露頭證據。石膏層的原始座標、唯一 ID 及同樣品礦相仍缺，Fig. DR1 地圖也尚未取得。
+
+已執行補表解碼、十組唯一 ID／座標範圍／多邊形核對及文件連結檢查；原始受版權保護 Excel／PDF 未散布，選用 reader 僅安裝於臨時目錄。本輪未重新排名、未重跑整套測試。OpenAI Codex 協助補充資料查找、摘錄與中文更新。

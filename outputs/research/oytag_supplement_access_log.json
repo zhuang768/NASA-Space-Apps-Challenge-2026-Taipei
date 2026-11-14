@@ -1,0 +1,121 @@
+{
+  "review_date_taipei": "2026-11-14",
+  "candidate_url_note": "URLs marked candidate_url were bounded filename trials, not a publisher-declared file list. HTTP404 does not establish absence of supplementary data.",
+  "attempts": [
+    {
+      "id": "bershaw_article",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1367912011001878",
+      "candidate_url": false,
+      "status": 403,
+      "bytes": 832979,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "cd464f768608fff717b40489d39f36ddcdb9349109c474045d9adf7918f579ae",
+      "meaning": "Access failure; not evidence that data do not exist"
+    },
+    {
+      "id": "bershaw_xml",
+      "url": "https://api.elsevier.com/content/article/PII:S1367912011001878?httpAccept=text/xml",
+      "candidate_url": false,
+      "status": 200,
+      "bytes": 1943,
+      "content_type": "text/xml;charset=UTF-8",
+      "sha256": "a363bbfa030b12035589439f699d8c145c91e17def91a71f4e3678a939080677",
+      "meaning": "HTTP 200 but metadata only, not article or supplement"
+    },
+    {
+      "id": "bershaw_mmc1_pdf_candidate",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S1367912011001878-mmc1.pdf",
+      "candidate_url": true,
+      "status": 404,
+      "bytes": 189,
+      "content_type": "text/xml",
+      "sha256": "83cf0fd7cf2740129f2ddedb484cf2f65c2f831820454bbd6fa35dad094a4d8d",
+      "meaning": "Access failure; not evidence that data do not exist"
+    },
+    {
+      "id": "sun_mmc1_pdf_candidate",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S0040195112007585-mmc1.pdf",
+      "candidate_url": true,
+      "status": 404,
+      "bytes": 189,
+      "content_type": "text/xml",
+      "sha256": "83cf0fd7cf2740129f2ddedb484cf2f65c2f831820454bbd6fa35dad094a4d8d",
+      "meaning": "Access failure; not evidence that data do not exist"
+    },
+    {
+      "id": "sun2016_article",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2015TC003974",
+      "candidate_url": false,
+      "status": 403,
+      "bytes": 5589,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "e4451315423d2cc765b6dff161dabd1fbcc0612d32da138cd76c4b51ca595b53",
+      "meaning": "Access failure; not evidence that data do not exist"
+    },
+    {
+      "id": "jstage2000",
+      "url": "https://www.jstage.jst.go.jp/article/geochemj1966/34/6/34_6_407/_pdf",
+      "candidate_url": false,
+      "status": 200,
+      "bytes": 1577816,
+      "content_type": "application/pdf;charset=UTF-8",
+      "sha256": "b6791eecc14e1e22e9f6b52a7709a1a551be013304700b4ba01a7c70f957b4f4",
+      "meaning": "Retrieved; scope assessed separately"
+    },
+    {
+      "id": "author_reference_listing",
+      "url": "https://web.pdx.edu/~bershaw/reference/",
+      "candidate_url": false,
+      "status": 200,
+      "bytes": 5251,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "7240cb89268db1ac90e8f1d729e436db27bc0f32a865c359527adde5353cb994",
+      "meaning": "Retrieved; scope assessed separately"
+    },
+    {
+      "id": "bershaw_mmc1_doc",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S1367912011001878-mmc1.doc",
+      "candidate_url": true,
+      "status": 404,
+      "bytes": 189,
+      "content_type": "text/xml",
+      "meaning": "Access failure; not evidence that data do not exist"
+    },
+    {
+      "id": "bershaw_mmc1_xls",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S1367912011001878-mmc1.xls",
+      "candidate_url": true,
+      "status": 200,
+      "bytes": 327680,
+      "content_type": "application/excel",
+      "meaning": "Decoded and verified as Table DR1 ZirconData"
+    },
+    {
+      "id": "bershaw_mmc1_zip",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S1367912011001878-mmc1.zip",
+      "candidate_url": true,
+      "status": 404,
+      "bytes": 189,
+      "content_type": "text/xml",
+      "meaning": "Access failure; not evidence that data do not exist"
+    },
+    {
+      "id": "bershaw_mmc2_pdf",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S1367912011001878-mmc2.pdf",
+      "candidate_url": true,
+      "status": 404,
+      "bytes": 189,
+      "content_type": "text/xml",
+      "meaning": "Access failure; not evidence that data do not exist"
+    },
+    {
+      "id": "sun_mmc1_xls",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S0040195112007585-mmc1.xls",
+      "candidate_url": true,
+      "status": 404,
+      "bytes": 189,
+      "content_type": "text/xml",
+      "meaning": "Access failure; not evidence that data do not exist"
+    }
+  ]
+}

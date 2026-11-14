@@ -9,7 +9,7 @@
       "sha256": "12ffe1653126b92ca3ca4f9dfbb56261224ef26115b623e590afa165d5a5be4c",
       "retrieved_date_taipei": "2026-11-14",
       "access": "full text read locally; copyrighted source not redistributed",
-      "scope": "Main text read; DR1 supplement not retrieved; published point coordinates do not identify the 2013 gypsum bed",
+      "scope": "Main text and supplementary Table DR1 ZirconData read; Fig DR1 map not retrieved; no gypsum sample link",
       "tls_certificate_validation": true
     },
     {
@@ -39,6 +39,24 @@
       "url": "https://www.hajim.rochester.edu/optics/sites/cml/opt307/spr10/john/index.html",
       "access": "HTML read",
       "scope": "Non-peer-reviewed teaching project; microscopy and X-ray spectra not linked to the same gypsum outcrop"
+    },
+    {
+      "id": "bershaw2012_tableDR1",
+      "doi": "10.1016/j.jseaes.2011.04.020",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S1367912011001878-mmc1.xls",
+      "sha256": "e3f6528c7a58a87cfe0478c25e26a5ad46d5419a035b99385688ff559f1fb0cd",
+      "bytes": 327680,
+      "access": "verified Excel downloaded and decoded",
+      "scope": "10 parent-rock coordinate groups for zircon analyses, not gypsum mineralogy",
+      "retrieved_date_taipei": "2026-11-14"
+    },
+    {
+      "id": "chang2000",
+      "doi": "10.2343/geochemj.34.407",
+      "url": "https://www.jstage.jst.go.jp/article/geochemj1966/34/6/34_6_407/_pdf",
+      "sha256": "b6791eecc14e1e22e9f6b52a7709a1a551be013304700b4ba01a7c70f957b4f4",
+      "access": "full PDF read; Table 2 visually inspected",
+      "scope": "Oytag moraine sample 9412-1 is not the mapped Paleogene gypsum bed"
     }
   ],
   "gypsum_position_status": "INFERRED from mapped transect, not measured GPS",
@@ -46,5 +64,12 @@
   "unretrieved": [
     "Bershaw2012 FigDR1 supplement"
   ],
-  "source_pdf_files_committed": false
+  "source_pdf_files_committed": false,
+  "supplement_search_update": {
+    "status": "Table DR1 retrieved; gypsum-specific coordinate/sample/mineral chain still unverified",
+    "http_200_metadata_is_full_text": false,
+    "gps_instrument_confirmed": false,
+    "raw_workbook_committed": false,
+    "optional_reader": "xlrd 2.0.1 installed only under temporary directory; project environment/dependencies unchanged"
+  }
 }

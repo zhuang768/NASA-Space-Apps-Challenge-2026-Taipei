@@ -2,6 +2,121 @@
 
 Team zasa. Review date: **2026-11-14, Asia/Taipei**. Phase 1 repository baseline: `3e3ffff`; Phase 2 main baseline: `263269a`. Scope: literature and proposal checks for I-01, I-02, D-03 and D-04, followed by the supplied Earth candidate EARTH-UV-001. No new site selection, Earth pairing, environmental validation or ranking.
 
+## 2026-11-14：五項延伸工作、EH全表QA與驗證協定草案
+
+本輪依使用者「全部都做」指示，把前述五項工作推進到目前證據允許的程度。沒有改GPU程式或輸出；數值複核由本輪執行，不能歸為GPU隊友已交付。只更新Team2兩檔，歷史「尚未解析全表」保留為當時紀錄，以下為新狀態。
+
+### 1. 1998全文與25／45cm：外部證據仍缺
+
+再查 `"S0954102098000054" "pdf" McKay Mellon Friedmann`、`"Linnaeus Terrace" "45 cm" corrigendum correction Marinova`、`"Soil temperatures and stability" "McKay" author manuscript full text`，並篩查NASA相關原稿線索。仍只取得摘要／引用，未取得合法可核實的1998全文或勘誤。無新的成因證據，不重複把25cm來源較早改寫成「已證明45cm錯誤」。**此項未結案**；所需外部證據是原文pp.31–38、作者稿或明確更正。沒有冒用機構存取、繞過存取限制或向他人發訊息。
+
+### 2. Elephant Head：108頁原始表完整抽取與雙引擎複核
+
+來源QA1：[EH2019原始補充PDF](https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0954102019000269/resource/name/S0954102019000269sup001.pdf)，SHA-256 `20fe70f574bc394f05f0c720809f80a9602ac73f6ede34d322ea816cf25590d9`。先用pypdf抽取整份108頁，僅接受「列號＋兩個日期時間＋6或9個數值」的完整列；第二次用PDFium抽取，**逐一比對全部8922筆的列號、第一時間與數值完全相同**。沒有插補、濕度裁切或時區轉換。這是出版資料轉錄／一致性QA，不是重新校準原感測器或獨立現地驗證。
+
+| 實際執行的檢查 | 結果與適用範圍 |
+|---|---|
+| 列數與列號 | 8922筆；1–8922完整，無重複或缺號；符合資料列格式的紀錄無解析失敗 |
+| 第一印刷時標 | 2017-11-28 00:00 至2018-12-04 17:00，逐時連續；無重複時間 |
+| 第二印刷時標 | 全部比第一時標晚90分鐘；與標頭所列兩個GMT偏移一致，但其UTC／當地太陽時意義仍未獨立核實 |
+| 3cm通道 | 2646筆，最後為2018-03-18 05:00；之後缺失保持缺失，未產生3cm全年均值 |
+| 年窗口 | 依第一印刷時標2017-12-01含至2018-12-01不含，8760筆；不是已轉UTC的窗口 |
+| 夏季共同有效窗口 | 同時標2017-12-01含至2018-03-01不含，2160筆；各深度同一列配對 |
+| 修正RH異常提醒 | 49cm的corrected RH有2807筆大於100%；保留原作者數值及校準脈絡，不默默裁成100%，不將其當未經校準的水活性 |
+
+描述性結果（°C，從已發表表格重算，**不是新量測**）：
+
+| 窗口與量 | 本輪均值 | EHA1 Table II PDF p.5所列 | 核對 |
+|---|---:|---:|---|
+| 年air | −20.2940 | −20.3 | 四捨五入至0.1°C一致 |
+| 年49cm | −19.2370 | −19.2 | 一致 |
+| 夏air | −10.3409 | −10.3 | 一致 |
+| 夏49cm | −8.6302 | −8.6 | 一致 |
+| 夏3cm | −5.3553 | −5.4 | 一致 |
+| 夏3cm減49cm配對均差 | +3.2749，N=2160 | 未將其當新效應驗證 | 僅描述兩已知深度，不能唯一反演冰深或TI |
+
+**可用性結論：** 可支援原印刷時標下的共同期間深度溫差描述與原表重現。UTC／太陽時對齊、RH衍生水汽／棲地指標、新界面偵測、因果效應與火星性能不因本次QA而通過。序列自相關未建模，8760筆不是8760個獨立樣本；不提供虛構信賴區間。跨引擎相同能排查轉錄差異，不能排除原作者檔案中的錯誤。
+
+### 3. 新增實質方法先例：受控加熱不是空白領域
+
+LTA9：Mellon et al.2025 [Humidity Enhancement in Dry Permafrost](https://doi.org/10.1089/ast.2024.0148)，出版者摘要已讀；並實讀作者[LPSC2056兩頁摘要](https://www.hou.usra.edu/meetings/lpsc2025/pdf/2056.pdf)，Experiment／Model／Results。原研究已做受控熱脈衝、不同土壤材料、T/RH陣列與數值模擬，結果量是濕度／水活性；不能把「控制材料與加熱、量溫濕度」稱為我們的新方法。該實驗不是LT新鑽孔，也不是盲判冰界面或採樣冰量收支的直接先例。期刊全文的所有細節與補充未完整查讀，不能認證完整協定沒有重複。
+
+| 擬議差異 | 證據判斷 | 現有資料能否執行 |
+|---|---|---|
+| QA後重現EH均溫與深度熱差 | 本輪已執行，屬重現與資料整合 | 可以，範圍如上 |
+| 25／45cm衝突與層位不確定性帳 | 可查證的資料追溯成果；未解決成因 | 可以記錄，不可選成唯一真值 |
+| 覆土／濕度影響熱響應或冰穩定性 | LTA3／LTA5／LTA6已有實質研究 | 可重現脈絡，不能主張新機制 |
+| 控制土樣與熱輸入，測T/RH | LTA9已有方法先例 | 新實驗未執行，不能宣稱原創 |
+| 加入獨立真值是否降低特定方法的冰界面誤差 | 尚缺演算法、輸入、可用真值及試驗控制 | 現有EH兩深度表不足；仍是研究提案 |
+| 控溫是否減少採樣冰損失 | UV控溫與EH取樣組成已有；本組缺冰質量收支 | 不能由熱濕表回答，需新實驗 |
+
+因此不保證新穎性。可交付貢獻是可重現的QA、來源／量測限制及有缺件清單的驗證設計；新的科學分析差異尚未完成。
+
+### 4. 獨立真值與覆土材料：可用性核對
+
+| 項目 | 已知與可用範圍 | 還缺什麼 |
+|---|---|---|
+| LT25／45cm | 歷史來源衝突；GGD6安裝紀錄支持局部結構 | 1998全文、同剖面／年代核對；不是現代獨立真值 |
+| UV W42cm | 已公開的歷史界面與站點觀測 | 不能把公開42cm拿來擬合後再報盲測；新測區、同期獨立真值未知 |
+| EH49cm | 原感測器安裝界面；既有Site3取樣先例已確認 | 不同年45cm或監測站49cm不可互換；未知新試驗區與獨立留出資料 |
+| 覆土材料 | 已有定性岩性／砂質與文獻模型參數 | 三站同位置同時期粒徑、密度、孔隙率、含冰量與校準熱性質尚不完整；模型採用值不是新測值 |
+| 正負控制 | 已知有冰剖面可作參照 | 無冰樣本及偵測限、標籤獨立性未建立，不能報誤判率 |
+
+這些資料足以定義缺口，不足以完成新盲判或因果實驗。沒有以地名、低溫或SWIM補成真值；也沒有將三個非同期場址當成已控制其他因素的實驗組。
+
+### 5. 驗證協定草案 v0.1（未執行、未由主線定案）
+
+本草案供MR-20261114-v1審查，不替團隊選購儀器、設定合格線或啟動出隊。當前可交付的是資料研究；以下為後續實驗的可檢查規格。
+
+1. **問題與結果量先固定：** 分開「已知剖面熱響應描述」與「界面深度預測」。後者先定可用輸入、演算法及版本；不得以歷史界面答案選參數後回稱盲測。
+2. **量測系統：** 候選方案為可校準、多深度接觸式溫度探針＋獨立物理剖面／取芯確認；它不等於TES。若主線選GPR等方法，須另列介電參數、頻率、解析度及偵測限。深度間距、設備範圍與樣本數依目標誤差和儀器規格訂定，本輪留空。
+3. **範圍與材料紀錄：** 每試驗單元保留座標／datum／誤差、剖面圖、採樣深度與日期；覆土厚度、粒徑、密度、孔隙與含水／冰量逐項記來源。無法控制的材料、日照、溫濕度及接觸差異必須列為混雜因素。
+4. **獨立真值與盲判：** 同位、相容時間的物理界面紀錄由獨立標記者保存；模型先固定再揭露。校準／開發和留出單元分開；時間相鄰樣本不可當獨立隨機樣本擴大N。缺真正留出資料則只報重現，不報新準確度。
+5. **覆土控制：** 在可行實驗單元中先固定冰幾何、邊界熱輸入及儀器接觸，再按預先規劃改變覆土條件；測量差異而非假定相等。需要無冰正確標籤對照才能報誤判率；隨機化、重複與樣本數待功效／儀器要求評估，不能編造通過門檻。
+6. **報告方式：** 深度偏差／絕對誤差、失敗與缺值、量測不確定度及有效支撐分開；不報無模型的95%信心。若無法辨識覆土與冰因素，結果就是不可辨識，不能轉成地下無冰。
+7. **冰損失附屬模組：** 先有初始／回收冰質量、樣品溫度時間序列、處理時間、容器／空白及校核方法，才做質量收支；總回收質量、鑽頭溫度、保存設定不能替代。缺任一必要觀測則不啟用結果模組。
+8. **火星轉移：** Earth可先驗證測量流程；低壓CO₂、重力、輻射與熱邊界差異須另建模型／環境驗證。沒有這些證據就不報I-01／I-02冰量、能耗或性能。
+
+**可完成與外部依賴：** 已完成來源續查、EH全表轉錄QA／均溫重現、更新文獻差異矩陣、真值／材料可用性表及協定草案。尚未取得1998全文、未核實UTC定義、未取得新獨立真值／材料控制，也未做實驗；這些缺件不會因使用者要求持續工作而變成已完成。需要合法全文存取或新外部資料／量測，以及主線對協定作實際選擇。沒有替其他隊友回填完成狀態。
+
+### 重跑方式與數值來源
+
+以下程式以Python `pypdf`讀原始補充PDF；`p`改為實際下載路徑，結果輸出在記憶體。以相同hash重取原檔即可重跑。程式中的斷言只驗證結構與兩時標差，不等於感測器科學校準。跨引擎複核另外用`pypdfium2`逐列對比全部數值，已執行通過；不以均值相符代替完整轉錄比對。
+
+```python
+import logging,re,json,hashlib
+from datetime import datetime,timedelta
+from statistics import mean
+from collections import Counter
+logging.getLogger('pypdf').setLevel(logging.ERROR)
+from pypdf import PdfReader
+p='/tmp/team1_earth_002/elephant2019sup.pdf';r=PdfReader(p);rows=[];bad=[]
+pat=re.compile(r'^(\d+)\s+(\d+/\d+/\d+ \d+:\d+)\s+(\d+/\d+/\d+ \d+:\d+)\s+(.+)$')
+for page,obj in enumerate(r.pages,1):
+ for line in obj.extract_text().splitlines():
+  m=pat.match(line.strip())
+  if not m:continue
+  n,t1,t2,rest=m.groups();vals=rest.split()
+  try:
+   assert len(vals) in [6,9];v=list(map(float,vals));a=datetime.strptime(t1,'%m/%d/%y %H:%M');b=datetime.strptime(t2,'%m/%d/%y %H:%M')
+  except Exception:bad.append([page,line]);continue
+  rows.append(dict(n=int(n),page=page,t=a,t2=b,v=v))
+assert not bad
+assert [x['n'] for x in rows]==list(range(1,8923))
+assert len({x['t'] for x in rows})==len(rows)
+assert all(b['t']-a['t']==timedelta(hours=1) for a,b in zip(rows,rows[1:]))
+assert all(x['t2']-x['t']==timedelta(minutes=90) for x in rows)
+annual=[x for x in rows if datetime(2017,12,1)<=x['t']<datetime(2018,12,1)]
+summer=[x for x in rows if datetime(2017,12,1)<=x['t']<datetime(2018,3,1) and len(x['v'])==9]
+result=dict(source_sha256=hashlib.sha256(open(p,'rb').read()).hexdigest(),parser='pypdf + anchored rowregex;6or9numericvalues; no imputation/clipping',pages=len(r.pages),records=len(rows),bad_records=bad,first=str(rows[0]['t']),last=str(rows[-1]['t']),row_ids_contiguous=True,hourly_first_timestamp_contiguous=True,second_timestamp_offset_minutes=90,timezone_status='printedoffsetconsistent_butUTCmeaning_unverified',records_with_3cm=sum(len(x['v'])==9 for x in rows),last_3cm=str([x for x in rows if len(x['v'])==9][-1]['t']),annual_n=len(annual),summer_paired_n=len(summer),annual_air_mean_C=mean(x['v'][0] for x in annual),annual_ice49_mean_C=mean(x['v'][3] for x in annual),summer_air_mean_C=mean(x['v'][0] for x in summer),summer_ice49_mean_C=mean(x['v'][3] for x in summer),summer_soil3_mean_C=mean(x['v'][6] for x in summer),summer_soil3_minus_ice49_mean_C=mean(x['v'][6]-x['v'][3] for x in summer),RH_ice49_corrected_above100_n=sum(x['v'][5]>100 for x in rows),limits=['NoUTC/solartimeconversion','Noannual3cmmean','Noice-depth/TIinversion','Noindependenttruthvalidation','Noice-massbalance','Digitizedpublisherdata;not sensorrecalibration'])
+
+print(json.dumps(result, indent=2))
+```
+
+本輪QA完整結果另存在CSV的 `executed_evidence_qa_json`（EARTH-002列），包含來源hash、窗口、有效數、均值與限制。其餘既有資料不改；不把原作者表格當我們的新觀測。新增來源LTA9與QA1只在本節定義；保留之前所有查核紀錄。
+
+---
+
 ## 2026-11-14：1998全文／作者公開稿續查
 
 本次接續 main `cf00e25`，只補取全文路徑，不重做其他候選或統計。**仍未取得可核實的1998全文，25／45cm原因維持 insufficient_data；不下引用錯誤定論。**

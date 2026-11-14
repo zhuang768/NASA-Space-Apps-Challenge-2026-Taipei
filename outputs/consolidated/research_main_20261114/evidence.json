@@ -372,5 +372,29 @@
     "Only existing source values compared; no raw data rerun or reranking.",
     "Native pixel counts are product-grid sample counts, not independent observations.",
     "No null in an archived QA row does not fill missing scientific quantities."
+  ],
+  "latest_team1_main": "cf72039a4bdfb94666c8df176de41eefd55f30ee",
+  "earth_pairings": [
+    {
+      "earth_candidate_id": "EARTH-UV-001",
+      "mars_candidate_id": "I-01",
+      "role": "known_use_reference",
+      "pair_status": "incomplete_v1_protocol_and_QA",
+      "new_plot": null
+    },
+    {
+      "earth_candidate_id": "EARTH-002",
+      "mars_candidate_id": "I-02",
+      "role": "conditional_method_reference",
+      "anchor_lat_lon": [
+        -79.820216667,
+        -83.314333333
+      ],
+      "new_plot": null,
+      "Team1_literature_interface_cm": 49,
+      "new_measurement": false,
+      "gpu_QA": "pending",
+      "team2_audit": "pending"
+    }
   ]
 }

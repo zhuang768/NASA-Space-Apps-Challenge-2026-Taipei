@@ -1,7 +1,7 @@
 {
   "version": "MR-20261114-v1",
   "updated_taipei": "2026-11-14T18:11:04.746040+08:00",
-  "remote_main_base": "5901362d6347c71e0d41b84ebbb35685ca7b3911",
+  "remote_main_base": "cf72039a4bdfb94666c8df176de41eefd55f30ee",
   "local_main_synced": false,
   "planned_branch": "codex/mars-research-mainline-20261114",
   "commit": null,
@@ -13,6 +13,9 @@
     "ready_to_forward_sections": "docs/research/main_project_synthesis.md#三方可直接使用的交接需求"
   },
   "research_status": "proposal_only_incomplete",
-  "requirements_count": 24,
-  "git_record_semantics": "Commit field is populated locally after remote creation; authoritative published revision is the GitHub branch head."
+  "requirements_count": 27,
+  "git_record_semantics": "Commit field is populated locally after remote creation; authoritative published revision is the GitHub branch head.",
+  "content_commit_before_latest_handoff": "15309549ed6142a79137f6ff846d4b232abe4586",
+  "latest_team1_state": "UV retained as known-use reference; EARTH-002 received for I02, Team2/GPU pending",
+  "phase": "Archived-data QA and descriptive study; controlled blind experiments remain proposals"
 }

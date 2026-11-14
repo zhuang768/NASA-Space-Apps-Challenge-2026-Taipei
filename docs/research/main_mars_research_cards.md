@@ -4,12 +4,12 @@
 
 ## 來源與版本
 
-本輪以遠端 main `5901362d6347c71e0d41b84ebbb35685ca7b3911` 為核對基準。本機 HEAD 仍為 `9a6a02f1806cadbb3698478fe379b12d91e25f69`，`git fetch origin main` 因 `.git/FETCH_HEAD` 寫入權限失敗；不能稱本機 main 已同步。其他人未提交的修改與刪除均保留。
+本輪開始核對 main `5901362d6347c71e0d41b84ebbb35685ca7b3911`；交付前讀到新增Team1成果的 main `cf72039a4bdfb94666c8df176de41eefd55f30ee`，以下已納入該版本。本機 HEAD 仍為 `9a6a02f1806cadbb3698478fe379b12d91e25f69`，`git fetch origin main` 因 `.git/FETCH_HEAD` 寫入權限失敗；不能稱本機 main 已同步。其他人未提交的修改與刪除均保留。
 
-- 原則、原始火星交接、15點初查 CSV、discovery JSON、reporting cards：本機原文已讀，Git blob 與上述遠端 main 逐檔一致。
+- 原則、原始火星交接、15點初查 CSV、discovery JSON、reporting cards：本機原文已讀，Git blob 與開始及更新後遠端 main 逐檔一致。
 - 原生 QA：本機 `outputs/research/ice_candidate_followup/native_audit.json` 與 `docs/research/ice_candidate_followup/README.md` 原文已讀，為本機未提交成果，不冒稱存在遠端 main。JSON SHA-256 `5a914b5a5be79ce43b9d20fc5e1a396b7892646047eda56803d9275ff9cedb08`；README `dd0556061d4fb2a89b1f0bef89112ff597142016326071ac2305a55fc3cd3689`。
 - Excel：`outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx`，SHA-256 `a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731`；檔案修改時間 2026-11-14 16:36，Overview!A4 的資料快照為 15:42:59 +08:00。只讀取，沒有重建；內含已退休地球排名是歷史快照，不能重列為目前候選。
-- 隊友1：已讀 [報告](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/5efa19766342a5a9ab24fcbbe3dbf02ed05805a6/docs/research/team1_earth_analog_matching.md) 與同提交的候選 CSV，分支 `team1/earth-analog-first-case-2026-11-14`、提交 `5efa19766342a5a9ab24fcbbe3dbf02ed05805a6`；尚未在本輪基準 main 整合。
+- 隊友1：先讀分支`5efa197…`第一組歷史交付；交付前已改以 main `cf72039a4bdfb94666c8df176de41eefd55f30ee` 的 [新版報告](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/cf72039a4bdfb94666c8df176de41eefd55f30ee/docs/research/team1_earth_analog_matching.md) 及兩列候選CSV為準，版本`TEAM1-ICE-REDO-v1`。UV已由Team1接受為已知用途對照；新增`EARTH-002→I-02`。這兩份Team1文件已進main，本輪主線文件尚不可因此稱已進main。
 - 隊友2：已讀 main `5901362…` 的 [查核報告](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/5901362d6347c71e0d41b84ebbb35685ca7b3911/docs/research/team2_novelty_audit.md) 與 CSV（I-01/I-02 資料列2–3；EARTH-UV-001 資料列6）。後續足跡查核的整體結論仍是 `insufficient_data`，不是新穎性放行。
 
 逐檔來源、快取與雜湊見 [來源紀錄](../../outputs/consolidated/research_main_20261114/source_manifest.json)；數值與 QA 摘錄見 [證據紀錄](../../outputs/consolidated/research_main_20261114/evidence.json)。遠端來源存於該目錄的 `sources/`，沒有覆寫隊友原始路徑。本輪引用隊友的文獻查核，未自行宣稱重讀全部原始論文或重新執行 GIS 交集。
@@ -101,7 +101,7 @@
 
 ### 9–10. 限制與還需補證據
 
-與I-01相同的冰、材料、溫度、局部風險與不確定度缺口仍在。I-02不是Protonilus EZ，不能借用其冰觀測或資源估計。精確同地同用途整體查核仍`insufficient_data`。地球配對、場址範圍、原始現地真值：**待隊友1交付**；不要自動把EARTH-UV-001複製成I-02配對。GPU需交付候選實際涵蓋範圍內的原始來源清單與QA，資料不足時將用途縮為觀測需求設計。
+與I-01相同的冰、材料、溫度、局部風險與不確定度缺口仍在。I-02不是Protonilus EZ，不能借用其冰觀測或資源估計。精確同地同用途整體查核仍`insufficient_data`。地球候選已收到`EARTH-002→I-02`：Elephant Head監測站錨點−79.820216667°、−83.314333333°（北東為正），不是新試驗區；該配對屬Team1暫定研究對應，沒有證明比I-01更相似。Team1引用EH1的歷史49 cm冰膠結界面及EH2逐時表；新試驗區、獨立留出真值、完整序列QA與具體用途查核仍待交付。不能把3 cm地下溫度當LST，或用兩深度溫度唯一反演冰深。不要自動複用UV或外推到整個Elephant Head地區。GPU需交付來源與QA，資料不足就限於觀測需求設計。
 
 ### 11. 目前不能宣稱
 
@@ -116,7 +116,7 @@
 | 原生SWIM | 名義單元平均0.355796／0.351971，高低順序與插值值相反 | 不能據微小差異選採冰優勝點 | 保留既有方法，提示支持範圍與重採樣影響；`Report Text!G488` |
 | TES | 平均244.709671／160.666672，差約84.043 J m⁻² K⁻¹ s⁻½ | 未有測量誤差／獨立樣本檢定，機理未知 | 支持提出熱背景差異問題，不證明覆土因果或冰差異 |
 | 地形與位置 | 高差76／88 m；平均高程−4621.656／−3642.344 m（各自相對火星參考等位面，`Ice Candidate QA!P2:P3`）；經度相差41° | 材料、季節、當地氣象未控制 | 兩區不是自然形成的完全控制實驗，高程不得跨天體直接比 |
-| 地球進度 | I-01已有UV方法參照；I-02未交付 | UV熱物性等效、完整protocol及新差異未確認 | 一組待修訂參照，不是兩組完成配對 |
+| 地球進度 | I-01為UV已知用途對照；I-02收到EARTH-002暫定方法參照 | 兩地熱物性等效、完整protocol及新差異未確認；EARTH-002等GPU與Team2查核 | 兩份候選交付已收到，不等於兩組驗證完成 |
 
 **建議：共同保留作探索性比較，實際觀測與QA分點處理。** 暫不分出採冰優劣，也不足以做覆土造成差異的因果結論。若無獨立冰真值或可辨識的控制條件，本輪成果就限於「資料支持的研究問題＋驗證需求」。
 
@@ -127,5 +127,7 @@
 白話：先在知道冰在哪裡的地方，看看不同覆土會不會讓探測判錯，再整理火星兩個候選還需要哪些資料。這不是用地球結果直接證明火星有冰，也不是把地面熱探針當成軌道TES的等效儀器。
 
 2026-11-14，版本由對話中的廣義「熱慣量差異／鑽採與冰損失」收斂為`MR-20261114-v1`：隊友2已證實University Valley有分段鑽採與溫控組件先例，故主線改為可檢查的判讀歧義、獨立真值與控制設計。冰損失僅保留為具備初末冰量、處理時間與溫度紀錄時的附屬模組；未取得資料就不報結果。這項收斂是研究設計決定，不是已確認的新穎貢獻。
+
+現階段先採**檔案資料研究與驗證設計**：優先恢復並QA已發表站點時序，描述共同有效時段的熱響應；不安排實地採樣，不從兩個深度反演冰深或TI。真正的盲測、覆土控制與冰損失均屬後續提案，須取得獨立真值與儀器規格後另定協定。新增EARTH-002沒有改變主線假設，只更新交付狀態與GPU資料需求。
 
 需求、可觀察結果、門檻與三方交接見 [需求CSV](main_research_requirements.csv) 及 [整合與交接](main_project_synthesis.md)。

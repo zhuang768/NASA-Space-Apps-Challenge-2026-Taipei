@@ -207,8 +207,8 @@
   "outputs": [
     {
       "path": "docs/research/MS-03/report.md",
-      "bytes": 31299,
-      "sha256": "9a0c8b6be1749cfdf8028c623fe3ee328c6f7f3ec9d58179b91b2204678f9495"
+      "bytes": 33490,
+      "sha256": "f5311384aa159ab3b593f74ceebb24b8bf8482a4fb071177385ffb0026d6d48e"
     },
     {
       "path": "scripts/research/MS-03/audit_campbell_clock.py",
@@ -217,8 +217,8 @@
     },
     {
       "path": "scripts/research/MS-03/inspect_uv_w.py",
-      "bytes": 8503,
-      "sha256": "ac287fe9be19d54526416734cde176855f77b4242942084fcce60bff3f73908b"
+      "bytes": 8662,
+      "sha256": "afdb38f4f8cce6c2724506bba784cefa76c38c5d301e916ddf660434fd9ecf39"
     },
     {
       "path": "scripts/research/MS-03/validate.py",
@@ -297,13 +297,13 @@
     },
     {
       "path": "outputs/research/MS-03/uv_w/qa.json",
-      "bytes": 6462,
-      "sha256": "bc8c58c1f0d8913d49268a5d6e503b68304839acc886221df7f0c0e1acda4ad5"
+      "bytes": 6621,
+      "sha256": "47d4ecd4ec26c1678b3ded7a11f45039e269e826311efa15ed6ad441eebb39ed"
     },
     {
       "path": "outputs/research/MS-03/validation.json",
-      "bytes": 2545,
-      "sha256": "ed6043c9ae047960fd36d7cf52d389e6e19cf1fe6c1a7d2289c69f46c70bef83"
+      "bytes": 15769,
+      "sha256": "f4d75b5e5af59ace86b97ed69f6a8580d34bb81acc2e558216766a1da931c15a"
     }
   ],
   "followup_date_taipei": "2026-11-15",

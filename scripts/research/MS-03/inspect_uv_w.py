@@ -80,7 +80,7 @@ def run(raw):
    author_processing='Campbell QA note reports removed surface spikes,insertedNaNs and one interpolated42cm point;not unaltered logger bytes. Per-row intervention flags/time of interpolated Campbell point not supplied;do not assume it identifies any HOBO point.',
    clock_policy='Keep clocks separate. The270min timestamp discontinuity coincides with the4h offset shift and is not classified as a physical observation gap. Campbell decimal-day offset changes from about-1h to-5h relative to printed timestamp;HOBO consistent within decimal rounding. Do not cross-join clocks or convert to UTC/solar time without correction history.',
    RH_policy='Export retains author RH basis/calibration;no RH-derived water activity or new corrections in this analysis.',
-   comparative_scope='Same-W same-HOBO-depth description only. No same-time/same-quantity EarthMars comparison against coarse MCS or TES.',
+   comparative_scope='Same-row description in author-merged W HOBO export only;separate depth logger synchronization not independently verified. No physical simultaneity,phase,diffusivity or EarthMars same-time claim. gaps/step_minutes describe printed timestamps,not confirmed physical downtime.',
    excluded=['subhourly extrema from daily means','repeated seven days as genuine independent observations','automatic outlier thresholds','cross-instrument time matching','thermal inertia/ice-depth inversion','ice quantity or equipment performance'],
    preliminary=True)
  (OUT/'qa.json').write_text(json.dumps(qa,indent=2)+'\n')

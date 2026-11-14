@@ -1,0 +1,1031 @@
+{
+  "source_commit": "5be7bf4e0f1206e35ad069983004fa1f8b7fd2c5",
+  "inputs": [
+    {
+      "path": "outputs/analysis/results_with_context.json",
+      "sha256": "b6ed9fd5547e14856abf9a8aeb4e5baaaf7e9783954a48b87d6fc5be136f27b3"
+    },
+    {
+      "path": "outputs/analysis/sensitivity.json",
+      "sha256": "88c1805b0ec01047eaefce4f86c8869951dcf81255267b9f4ccce0cb7d6b77eb"
+    },
+    {
+      "path": "outputs/analysis_scale10km/results.json",
+      "sha256": "0ae1eb750476c7a575e082aa5d279d7a3e7cbba42765c468797c4115b06fc466"
+    },
+    {
+      "path": "outputs/mars_profiles/profiles.json",
+      "sha256": "6eb62a026f789eaf4188c0a8308014592a31aefd07f9adf8acfa33f51d31b811"
+    }
+  ],
+  "parameters": {
+    "earth_search_latitude_bounds": [
+      -60,
+      60
+    ],
+    "earth_centre_step_deg": 2.0,
+    "window_km": 100.0,
+    "sample_spacing_km": 4.0,
+    "slope_stencil_km": 8.0,
+    "earth_spherical_radius_m": 6371008.8,
+    "mars_spherical_radius_m": 3396000.0,
+    "minimum_sampled_land_fraction": 0.95,
+    "shortlist_separation_km": 300,
+    "excluded_boxes": [
+      [
+        -81,
+        -65,
+        -31,
+        -17,
+        "Atacama search exclusion"
+      ],
+      [
+        -26,
+        -12,
+        62,
+        68,
+        "Iceland"
+      ],
+      [
+        -161,
+        -154,
+        18,
+        23,
+        "Hawaii"
+      ]
+    ],
+    "feature_order": [
+      "slope_median_deg",
+      "slope_p90_deg",
+      "relief_m"
+    ],
+    "distance_tolerances": [
+      1.0,
+      2.0,
+      500.0
+    ],
+    "within_terrain_weights": [
+      0.25,
+      0.25,
+      0.5
+    ]
+  },
+  "search_counts": {
+    "land_centres_before_window_filter": 2897,
+    "water_window_exclusions": 286,
+    "valid_windows": 2611
+  },
+  "records": [
+    {
+      "candidate": {
+        "lat": 39.0,
+        "lon": 75.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 3.9981062412261963,
+        "slope_p90_deg": 8.861562728881836,
+        "relief_m": 4900.23828125,
+        "candidate_id": "gale-01",
+        "rank": 1,
+        "mars_target": "gale",
+        "terrain_distance": 0.23191244459152222,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 1,
+          "relief_emphasis": 1
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            74.42504524016738,
+            38.5489245744636
+          ],
+          [
+            75.57495475983262,
+            38.5489245744636
+          ],
+          [
+            75.582309236176,
+            39.44821754415848
+          ],
+          [
+            74.417690763824,
+            39.44821754415848
+          ],
+          [
+            74.42504524016738,
+            38.5489245744636
+          ]
+        ],
+        "earth_climate_context": {
+          "status": "context_only_not_ranked",
+          "summary": {
+            "T2M": {
+              "value": 0.7204787961696307,
+              "valid_months": 24,
+              "expected_months": 24,
+              "unit": "C",
+              "meaning": "day-weighted mean of monthly reported values"
+            },
+            "T2M_MAX": {
+              "value": 12.498549931600548,
+              "valid_months": 24,
+              "expected_months": 24,
+              "unit": "C",
+              "meaning": "day-weighted mean of monthly reported values"
+            },
+            "T2M_MIN": {
+              "value": -9.370738714090287,
+              "valid_months": 24,
+              "expected_months": 24,
+              "unit": "C",
+              "meaning": "day-weighted mean of monthly reported values"
+            },
+            "PRECTOTCORR": {
+              "value": 0.29958960328317374,
+              "valid_months": 24,
+              "expected_months": 24,
+              "unit": "mm/day",
+              "meaning": "day-weighted mean of monthly reported values"
+            },
+            "WS10M": {
+              "value": 2.364897400820794,
+              "valid_months": 24,
+              "expected_months": 24,
+              "unit": "m/s",
+              "meaning": "day-weighted mean of monthly reported values"
+            }
+          },
+          "header": {
+            "title": "NASA/POWER Source Native Resolution Monthly and Annual",
+            "api": {
+              "version": "v2.10.0",
+              "name": "POWER Monthly and Annual API"
+            },
+            "sources": [
+              "MERRA2",
+              "POWER"
+            ],
+            "fill_value": -999.0,
+            "time_standard": "LST",
+            "start": "20230101",
+            "end": "20241231"
+          },
+          "parameters": {
+            "PRECTOTCORR": {
+              "units": "mm/day",
+              "longname": "Precipitation Corrected"
+            },
+            "T2M": {
+              "units": "C",
+              "longname": "Temperature at 2 Meters"
+            },
+            "T2M_MAX": {
+              "units": "C",
+              "longname": "Temperature at 2 Meters Maximum"
+            },
+            "T2M_MIN": {
+              "units": "C",
+              "longname": "Temperature at 2 Meters Minimum"
+            },
+            "WS10M": {
+              "units": "m/s",
+              "longname": "Wind Speed at 10 Meters"
+            }
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              75.0,
+              39.0,
+              3538.47
+            ]
+          },
+          "source": {
+            "file": "power_+39.000_+75.000_2023_2024.json",
+            "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CWS10M&community=AG&longitude=75.0&latitude=39.0&start=2023&end=2024&format=JSON",
+            "bytes": 2684,
+            "sha256": "1ee5654cb52f3f88fb9f23eada504ce0d7c5860d030bec9e690dbd4c93bf308c",
+            "recorded_utc": "2026-11-14T01:31:39.567147+00:00",
+            "dataset": "NASA POWER monthly API",
+            "period": "2023-01 to 2024-12",
+            "resolution": "0.5 degree latitude x 0.625 degree longitude meteorology grid",
+            "resolution_source": "https://power.larc.nasa.gov/docs/services/",
+            "crs": "geographic longitude/latitude"
+          }
+        }
+      },
+      "mars_profile": {
+        "lat": -4.59,
+        "lon": 137.44,
+        "label": "Gale regional terrain",
+        "coordinate_source": "https://doi.org/10.1002/2013JE004576",
+        "body": "Mars",
+        "window_km": 100.0,
+        "terrain": {
+          "status": "available",
+          "slope_median_deg": 3.912266731262207,
+          "slope_p90_deg": 10.439507484436035,
+          "relief_m": 4887.02880859375,
+          "sample_spacing_km": 4.0,
+          "slope_stencil_km": 8.0,
+          "radius_m": 3396000.0
+        },
+        "thermal_inertia": {
+          "native_cells_in_window": 1156,
+          "valid_native_cells": 1130,
+          "valid_fraction": 0.9775086505190311,
+          "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+          "status": "available",
+          "mean": 275.76331989382663,
+          "median": 268.0,
+          "min": 93.0,
+          "max": 511.0,
+          "units": "J m-2 K-1 s-0.5",
+          "infilled_pixels_excluded": true,
+          "is_temperature": false,
+          "is_hardness_measurement": false,
+          "with_infilled_pixels": {
+            "native_cells_in_window": 1156,
+            "valid_native_cells": 1156,
+            "valid_fraction": 1.0,
+            "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+            "status": "available",
+            "mean": 276.43040075706375,
+            "median": 269.5,
+            "min": 93.0,
+            "max": 511.0
+          }
+        },
+        "ice": {
+          "0_1m": {
+            "native_cells_in_window": 1123,
+            "valid_native_cells": 1123,
+            "valid_fraction": 1.0,
+            "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+            "status": "available",
+            "mean": 0.0812912580753809,
+            "median": 0.08030303567647934,
+            "min": -0.013939392752945423,
+            "max": 0.21000000834465027,
+            "units": "1",
+            "quantity": "SWIM ice consistency",
+            "is_ice_amount": false,
+            "is_probability": false,
+            "source_crs": "ESRI:103885"
+          },
+          "1_5m": {
+            "native_cells_in_window": 1123,
+            "valid_native_cells": 1123,
+            "valid_fraction": 1.0,
+            "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+            "status": "available",
+            "mean": -0.034740979861757025,
+            "median": 0.0,
+            "min": -0.5,
+            "max": 0.5,
+            "units": "1",
+            "quantity": "SWIM ice consistency",
+            "is_ice_amount": false,
+            "is_probability": false,
+            "source_crs": "ESRI:103885"
+          }
+        },
+        "dust": {
+          "dust_my34": {
+            "status": "available",
+            "mean_cdodtot": 0.29711678287819004,
+            "p95_cdodtot": 1.248078274726868,
+            "max_cdodtot": 2.570432186126709,
+            "peak_sol_of_year": 412.0,
+            "peak_Ls_deg": 203.7306365966797,
+            "valid_reconstructed_sols": 669,
+            "expected_reconstructed_sols": 669,
+            "units": "1",
+            "wavelength_micron": 9.3,
+            "optical_quantity": "absorption, local total column",
+            "native_cell_lat": -4.5,
+            "native_cell_lon": 138.0,
+            "native_grid_degrees": [
+              3,
+              3
+            ],
+            "reconstructed": true,
+            "reliability_interpretation": "cdodrel is provider reliability, not a calibrated probability",
+            "seasons_by_Ls": {
+              "0_90": {
+                "valid_sols": 193,
+                "mean_cdodtot": 0.10987354672171291
+              },
+              "90_180": {
+                "valid_sols": 179,
+                "mean_cdodtot": 0.09693286093420156
+              },
+              "180_270": {
+                "valid_sols": 143,
+                "mean_cdodtot": 0.8291908395248693
+              },
+              "270_360": {
+                "valid_sols": 154,
+                "mean_cdodtot": 0.2703913056424686
+              }
+            },
+            "reliability_mean": 0.6452287491216075
+          },
+          "dust_my35": {
+            "status": "available",
+            "mean_cdodtot": 0.17004218651886657,
+            "p95_cdodtot": 0.3627366244792939,
+            "max_cdodtot": 0.5622824430465698,
+            "peak_sol_of_year": 462.0,
+            "peak_Ls_deg": 235.08444213867188,
+            "valid_reconstructed_sols": 669,
+            "expected_reconstructed_sols": 669,
+            "units": "1",
+            "wavelength_micron": 9.3,
+            "optical_quantity": "absorption, local total column",
+            "native_cell_lat": -4.5,
+            "native_cell_lon": 138.0,
+            "native_grid_degrees": [
+              3,
+              3
+            ],
+            "reconstructed": true,
+            "reliability_interpretation": "cdodrel is provider reliability, not a calibrated probability",
+            "seasons_by_Ls": {
+              "0_90": {
+                "valid_sols": 193,
+                "mean_cdodtot": 0.1121492307112007
+              },
+              "90_180": {
+                "valid_sols": 178,
+                "mean_cdodtot": 0.0983756755091501
+              },
+              "180_270": {
+                "valid_sols": 143,
+                "mean_cdodtot": 0.279290799390186
+              },
+              "270_360": {
+                "valid_sols": 155,
+                "mean_cdodtot": 0.2236384948415141
+              }
+            },
+            "reliability_mean": 0.7302747176367071
+          }
+        },
+        "surface_temperature": {
+          "status": "missing",
+          "reason": "TES thermal inertia is not temperature"
+        }
+      },
+      "recalculated_distance": 0.23191244459152222,
+      "top2_in_tested_configurations": {
+        "base_4km": true,
+        "alternative_10km": true,
+        "slope_emphasis": true,
+        "relief_emphasis": true
+      },
+      "top2_count": 4,
+      "configurations_count": 4,
+      "coarse_shortlist_rank": 2,
+      "interpretation": "existing terrain shortlist; not calibrated confidence or a new ranking"
+    },
+    {
+      "candidate": {
+        "lat": 29.0,
+        "lon": -105.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.7886563539505005,
+        "slope_p90_deg": 2.1769065856933594,
+        "relief_m": 922.8070068359375,
+        "candidate_id": "arcadia-01",
+        "rank": 1,
+        "mars_target": "arcadia",
+        "terrain_distance": 0.025221117854118347,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 1,
+          "relief_emphasis": 1
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            -105.51190124189004,
+            28.549370573998463
+          ],
+          [
+            -104.48809875810997,
+            28.549370573998463
+          ],
+          [
+            -104.48362556287543,
+            29.448673195758072
+          ],
+          [
+            -105.51637443712458,
+            29.448673195758072
+          ],
+          [
+            -105.51190124189004,
+            28.549370573998463
+          ]
+        ],
+        "earth_climate_context": {
+          "status": "context_only_not_ranked",
+          "summary": {
+            "T2M": {
+              "value": 21.382298221614224,
+              "valid_months": 24,
+              "expected_months": 24,
+              "unit": "C",
+              "meaning": "day-weighted mean of monthly reported values"
+            },
+            "T2M_MAX": {
+              "value": 35.18233926128591,
+              "valid_months": 24,
+              "expected_months": 24,
+              "unit": "C",
+              "meaning": "day-weighted mean of monthly reported values"
+            },
+            "T2M_MIN": {
+              "value": 8.098043775649796,
+              "valid_months": 24,
+              "expected_months": 24,
+              "unit": "C",
+              "meaning": "day-weighted mean of monthly reported values"
+            },
+            "PRECTOTCORR": {
+              "value": 0.3456087551299589,
+              "valid_months": 24,
+              "expected_months": 24,
+              "unit": "mm/day",
+              "meaning": "day-weighted mean of monthly reported values"
+            },
+            "WS10M": {
+              "value": 3.5229138166894667,
+              "valid_months": 24,
+              "expected_months": 24,
+              "unit": "m/s",
+              "meaning": "day-weighted mean of monthly reported values"
+            }
+          },
+          "header": {
+            "title": "NASA/POWER Source Native Resolution Monthly and Annual",
+            "api": {
+              "version": "v2.10.0",
+              "name": "POWER Monthly and Annual API"
+            },
+            "sources": [
+              "MERRA2",
+              "POWER"
+            ],
+            "fill_value": -999.0,
+            "time_standard": "LST",
+            "start": "20230101",
+            "end": "20241231"
+          },
+          "parameters": {
+            "PRECTOTCORR": {
+              "units": "mm/day",
+              "longname": "Precipitation Corrected"
+            },
+            "T2M": {
+              "units": "C",
+              "longname": "Temperature at 2 Meters"
+            },
+            "T2M_MAX": {
+              "units": "C",
+              "longname": "Temperature at 2 Meters Maximum"
+            },
+            "T2M_MIN": {
+              "units": "C",
+              "longname": "Temperature at 2 Meters Minimum"
+            },
+            "WS10M": {
+              "units": "m/s",
+              "longname": "Wind Speed at 10 Meters"
+            }
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -105.0,
+              29.0,
+              1247.55
+            ]
+          },
+          "source": {
+            "file": "power_+29.000_-105.000_2023_2024.json",
+            "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CWS10M&community=AG&longitude=-105.0&latitude=29.0&start=2023&end=2024&format=JSON",
+            "bytes": 2684,
+            "sha256": "54a3275a4f6f56d9510a4af5c7b6291b25822234e41992ee9f57003f9376dce2",
+            "recorded_utc": "2026-11-14T01:31:39.567591+00:00",
+            "dataset": "NASA POWER monthly API",
+            "period": "2023-01 to 2024-12",
+            "resolution": "0.5 degree latitude x 0.625 degree longitude meteorology grid",
+            "resolution_source": "https://power.larc.nasa.gov/docs/services/",
+            "crs": "geographic longitude/latitude"
+          }
+        }
+      },
+      "mars_profile": {
+        "lat": 40.0,
+        "lon": -170.0,
+        "label": "Arcadia design target (not a selected landing site)",
+        "coordinate_source": "project design assumption",
+        "body": "Mars",
+        "window_km": 100.0,
+        "terrain": {
+          "status": "available",
+          "slope_median_deg": 0.7656119465827942,
+          "slope_p90_deg": 2.2971580028533936,
+          "relief_m": 927.235595703125,
+          "sample_spacing_km": 4.0,
+          "slope_stencil_km": 8.0,
+          "radius_m": 3396000.0
+        },
+        "thermal_inertia": {
+          "native_cells_in_window": 1496,
+          "valid_native_cells": 1412,
+          "valid_fraction": 0.9438502673796791,
+          "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+          "status": "available",
+          "mean": 138.72331209114742,
+          "median": 135.5,
+          "min": 74.0,
+          "max": 247.0,
+          "units": "J m-2 K-1 s-0.5",
+          "infilled_pixels_excluded": true,
+          "is_temperature": false,
+          "is_hardness_measurement": false,
+          "with_infilled_pixels": {
+            "native_cells_in_window": 1496,
+            "valid_native_cells": 1496,
+            "valid_fraction": 1.0,
+            "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+            "status": "available",
+            "mean": 138.49922142305675,
+            "median": 135.0,
+            "min": 74.0,
+            "max": 247.0
+          }
+        },
+        "ice": {
+          "0_1m": {
+            "native_cells_in_window": 1499,
+            "valid_native_cells": 1499,
+            "valid_fraction": 1.0,
+            "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+            "status": "available",
+            "mean": 0.1144841234494878,
+            "median": 0.0981818288564682,
+            "min": -0.07181818038225174,
+            "max": 0.3406045436859131,
+            "units": "1",
+            "quantity": "SWIM ice consistency",
+            "is_ice_amount": false,
+            "is_probability": false,
+            "source_crs": "ESRI:103885"
+          },
+          "1_5m": {
+            "native_cells_in_window": 1499,
+            "valid_native_cells": 1499,
+            "valid_fraction": 1.0,
+            "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+            "status": "available",
+            "mean": 0.5404835121500825,
+            "median": 0.5,
+            "min": -0.3499999940395355,
+            "max": 1.0,
+            "units": "1",
+            "quantity": "SWIM ice consistency",
+            "is_ice_amount": false,
+            "is_probability": false,
+            "source_crs": "ESRI:103885"
+          }
+        },
+        "dust": {
+          "dust_my34": {
+            "status": "available",
+            "mean_cdodtot": 0.21942003992329084,
+            "p95_cdodtot": 0.6417047500610351,
+            "max_cdodtot": 0.9173557758331299,
+            "peak_sol_of_year": 604.0,
+            "peak_Ls_deg": 324.6576232910156,
+            "valid_reconstructed_sols": 669,
+            "expected_reconstructed_sols": 669,
+            "units": "1",
+            "wavelength_micron": 9.3,
+            "optical_quantity": "absorption, local total column",
+            "native_cell_lat": 40.5,
+            "native_cell_lon": -171.0,
+            "native_grid_degrees": [
+              3,
+              3
+            ],
+            "reconstructed": true,
+            "reliability_interpretation": "cdodrel is provider reliability, not a calibrated probability",
+            "seasons_by_Ls": {
+              "0_90": {
+                "valid_sols": 193,
+                "mean_cdodtot": 0.14349435601827396
+              },
+              "90_180": {
+                "valid_sols": 179,
+                "mean_cdodtot": 0.10852525254201623
+              },
+              "180_270": {
+                "valid_sols": 143,
+                "mean_cdodtot": 0.44891085814345966
+              },
+              "270_360": {
+                "valid_sols": 154,
+                "mean_cdodtot": 0.23037222777674723
+              }
+            },
+            "reliability_mean": 0.8726308399697233
+          },
+          "dust_my35": {
+            "status": "available",
+            "mean_cdodtot": 0.16044503235451665,
+            "p95_cdodtot": 0.3201657593250276,
+            "max_cdodtot": 0.5092847347259521,
+            "peak_sol_of_year": 600.0,
+            "peak_Ls_deg": 322.0048522949219,
+            "valid_reconstructed_sols": 669,
+            "expected_reconstructed_sols": 669,
+            "units": "1",
+            "wavelength_micron": 9.3,
+            "optical_quantity": "absorption, local total column",
+            "native_cell_lat": 40.5,
+            "native_cell_lon": -171.0,
+            "native_grid_degrees": [
+              3,
+              3
+            ],
+            "reconstructed": true,
+            "reliability_interpretation": "cdodrel is provider reliability, not a calibrated probability",
+            "seasons_by_Ls": {
+              "0_90": {
+                "valid_sols": 193,
+                "mean_cdodtot": 0.14682887814977627
+              },
+              "90_180": {
+                "valid_sols": 178,
+                "mean_cdodtot": 0.11052303644043676
+              },
+              "180_270": {
+                "valid_sols": 143,
+                "mean_cdodtot": 0.20616209731026963
+              },
+              "270_360": {
+                "valid_sols": 155,
+                "mean_cdodtot": 0.1925514371645066
+              }
+            },
+            "reliability_mean": 0.8877441347625402
+          }
+        },
+        "surface_temperature": {
+          "status": "missing",
+          "reason": "TES thermal inertia is not temperature"
+        }
+      },
+      "recalculated_distance": 0.025221117854118347,
+      "top2_in_tested_configurations": {
+        "base_4km": true,
+        "alternative_10km": false,
+        "slope_emphasis": true,
+        "relief_emphasis": true
+      },
+      "top2_count": 3,
+      "configurations_count": 4,
+      "coarse_shortlist_rank": null,
+      "interpretation": "existing terrain shortlist; not calibrated confidence or a new ranking"
+    },
+    {
+      "candidate": {
+        "lat": 35.0,
+        "lon": 57.0,
+        "land_fraction": 1.0,
+        "slope_median_deg": 0.7457852959632874,
+        "slope_p90_deg": 2.141444206237793,
+        "relief_m": 947.64892578125,
+        "candidate_id": "arcadia-02",
+        "rank": 2,
+        "mars_target": "arcadia",
+        "terrain_distance": 0.04483421730995178,
+        "sensitivity_raw_ranks": {
+          "slope_emphasis": 2,
+          "relief_emphasis": 5
+        },
+        "status": "project-proposed, unvalidated regional terrain candidate",
+        "temperature_status": "unknown",
+        "water_ice_status": "unknown",
+        "air_status": "unknown",
+        "logistics_status": "unknown",
+        "prior_analog_literature_status": "not_checked",
+        "footprint": [
+          [
+            56.45406055366067,
+            34.549115650671276
+          ],
+          [
+            57.54593944633933,
+            34.549115650671276
+          ],
+          [
+            57.5519726419127,
+            35.448413203061556
+          ],
+          [
+            56.4480273580873,
+            35.448413203061556
+          ],
+          [
+            56.45406055366067,
+            34.549115650671276
+          ]
+        ],
+        "earth_climate_context": {
+          "status": "context_only_not_ranked",
+          "summary": {
+            "T2M": {
+              "value": 19.30655266757866,
+              "valid_months": 24,
+              "expected_months": 24,
+              "unit": "C",
+              "meaning": "day-weighted mean of monthly reported values"
+            },
+            "T2M_MAX": {
+              "value": 32.702599179206565,
+              "valid_months": 24,
+              "expected_months": 24,
+              "unit": "C",
+              "meaning": "day-weighted mean of monthly reported values"
+            },
+            "T2M_MIN": {
+              "value": 6.419398084815321,
+              "valid_months": 24,
+              "expected_months": 24,
+              "unit": "C",
+              "meaning": "day-weighted mean of monthly reported values"
+            },
+            "PRECTOTCORR": {
+              "value": 0.28924760601915184,
+              "valid_months": 24,
+              "expected_months": 24,
+              "unit": "mm/day",
+              "meaning": "day-weighted mean of monthly reported values"
+            },
+            "WS10M": {
+              "value": 4.564870041039672,
+              "valid_months": 24,
+              "expected_months": 24,
+              "unit": "m/s",
+              "meaning": "day-weighted mean of monthly reported values"
+            }
+          },
+          "header": {
+            "title": "NASA/POWER Source Native Resolution Monthly and Annual",
+            "api": {
+              "version": "v2.10.0",
+              "name": "POWER Monthly and Annual API"
+            },
+            "sources": [
+              "MERRA2",
+              "POWER"
+            ],
+            "fill_value": -999.0,
+            "time_standard": "LST",
+            "start": "20230101",
+            "end": "20241231"
+          },
+          "parameters": {
+            "PRECTOTCORR": {
+              "units": "mm/day",
+              "longname": "Precipitation Corrected"
+            },
+            "T2M": {
+              "units": "C",
+              "longname": "Temperature at 2 Meters"
+            },
+            "T2M_MAX": {
+              "units": "C",
+              "longname": "Temperature at 2 Meters Maximum"
+            },
+            "T2M_MIN": {
+              "units": "C",
+              "longname": "Temperature at 2 Meters Minimum"
+            },
+            "WS10M": {
+              "units": "m/s",
+              "longname": "Wind Speed at 10 Meters"
+            }
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              57.0,
+              35.0,
+              893.41
+            ]
+          },
+          "source": {
+            "file": "power_+35.000_+57.000_2023_2024.json",
+            "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CWS10M&community=AG&longitude=57.0&latitude=35.0&start=2023&end=2024&format=JSON",
+            "bytes": 2675,
+            "sha256": "62db2cd902277f707161efd5a4ea6ecde416a05153075c41669eb4591cb4fe21",
+            "recorded_utc": "2026-11-14T01:31:39.567864+00:00",
+            "dataset": "NASA POWER monthly API",
+            "period": "2023-01 to 2024-12",
+            "resolution": "0.5 degree latitude x 0.625 degree longitude meteorology grid",
+            "resolution_source": "https://power.larc.nasa.gov/docs/services/",
+            "crs": "geographic longitude/latitude"
+          }
+        }
+      },
+      "mars_profile": {
+        "lat": 40.0,
+        "lon": -170.0,
+        "label": "Arcadia design target (not a selected landing site)",
+        "coordinate_source": "project design assumption",
+        "body": "Mars",
+        "window_km": 100.0,
+        "terrain": {
+          "status": "available",
+          "slope_median_deg": 0.7656119465827942,
+          "slope_p90_deg": 2.2971580028533936,
+          "relief_m": 927.235595703125,
+          "sample_spacing_km": 4.0,
+          "slope_stencil_km": 8.0,
+          "radius_m": 3396000.0
+        },
+        "thermal_inertia": {
+          "native_cells_in_window": 1496,
+          "valid_native_cells": 1412,
+          "valid_fraction": 0.9438502673796791,
+          "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+          "status": "available",
+          "mean": 138.72331209114742,
+          "median": 135.5,
+          "min": 74.0,
+          "max": 247.0,
+          "units": "J m-2 K-1 s-0.5",
+          "infilled_pixels_excluded": true,
+          "is_temperature": false,
+          "is_hardness_measurement": false,
+          "with_infilled_pixels": {
+            "native_cells_in_window": 1496,
+            "valid_native_cells": 1496,
+            "valid_fraction": 1.0,
+            "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+            "status": "available",
+            "mean": 138.49922142305675,
+            "median": 135.0,
+            "min": 74.0,
+            "max": 247.0
+          }
+        },
+        "ice": {
+          "0_1m": {
+            "native_cells_in_window": 1499,
+            "valid_native_cells": 1499,
+            "valid_fraction": 1.0,
+            "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+            "status": "available",
+            "mean": 0.1144841234494878,
+            "median": 0.0981818288564682,
+            "min": -0.07181818038225174,
+            "max": 0.3406045436859131,
+            "units": "1",
+            "quantity": "SWIM ice consistency",
+            "is_ice_amount": false,
+            "is_probability": false,
+            "source_crs": "ESRI:103885"
+          },
+          "1_5m": {
+            "native_cells_in_window": 1499,
+            "valid_native_cells": 1499,
+            "valid_fraction": 1.0,
+            "aggregation": "native-cell cosine-latitude weighted mean; no interpolation",
+            "status": "available",
+            "mean": 0.5404835121500825,
+            "median": 0.5,
+            "min": -0.3499999940395355,
+            "max": 1.0,
+            "units": "1",
+            "quantity": "SWIM ice consistency",
+            "is_ice_amount": false,
+            "is_probability": false,
+            "source_crs": "ESRI:103885"
+          }
+        },
+        "dust": {
+          "dust_my34": {
+            "status": "available",
+            "mean_cdodtot": 0.21942003992329084,
+            "p95_cdodtot": 0.6417047500610351,
+            "max_cdodtot": 0.9173557758331299,
+            "peak_sol_of_year": 604.0,
+            "peak_Ls_deg": 324.6576232910156,
+            "valid_reconstructed_sols": 669,
+            "expected_reconstructed_sols": 669,
+            "units": "1",
+            "wavelength_micron": 9.3,
+            "optical_quantity": "absorption, local total column",
+            "native_cell_lat": 40.5,
+            "native_cell_lon": -171.0,
+            "native_grid_degrees": [
+              3,
+              3
+            ],
+            "reconstructed": true,
+            "reliability_interpretation": "cdodrel is provider reliability, not a calibrated probability",
+            "seasons_by_Ls": {
+              "0_90": {
+                "valid_sols": 193,
+                "mean_cdodtot": 0.14349435601827396
+              },
+              "90_180": {
+                "valid_sols": 179,
+                "mean_cdodtot": 0.10852525254201623
+              },
+              "180_270": {
+                "valid_sols": 143,
+                "mean_cdodtot": 0.44891085814345966
+              },
+              "270_360": {
+                "valid_sols": 154,
+                "mean_cdodtot": 0.23037222777674723
+              }
+            },
+            "reliability_mean": 0.8726308399697233
+          },
+          "dust_my35": {
+            "status": "available",
+            "mean_cdodtot": 0.16044503235451665,
+            "p95_cdodtot": 0.3201657593250276,
+            "max_cdodtot": 0.5092847347259521,
+            "peak_sol_of_year": 600.0,
+            "peak_Ls_deg": 322.0048522949219,
+            "valid_reconstructed_sols": 669,
+            "expected_reconstructed_sols": 669,
+            "units": "1",
+            "wavelength_micron": 9.3,
+            "optical_quantity": "absorption, local total column",
+            "native_cell_lat": 40.5,
+            "native_cell_lon": -171.0,
+            "native_grid_degrees": [
+              3,
+              3
+            ],
+            "reconstructed": true,
+            "reliability_interpretation": "cdodrel is provider reliability, not a calibrated probability",
+            "seasons_by_Ls": {
+              "0_90": {
+                "valid_sols": 193,
+                "mean_cdodtot": 0.14682887814977627
+              },
+              "90_180": {
+                "valid_sols": 178,
+                "mean_cdodtot": 0.11052303644043676
+              },
+              "180_270": {
+                "valid_sols": 143,
+                "mean_cdodtot": 0.20616209731026963
+              },
+              "270_360": {
+                "valid_sols": 155,
+                "mean_cdodtot": 0.1925514371645066
+              }
+            },
+            "reliability_mean": 0.8877441347625402
+          }
+        },
+        "surface_temperature": {
+          "status": "missing",
+          "reason": "TES thermal inertia is not temperature"
+        }
+      },
+      "recalculated_distance": 0.04483421730995178,
+      "top2_in_tested_configurations": {
+        "base_4km": true,
+        "alternative_10km": false,
+        "slope_emphasis": true,
+        "relief_emphasis": false
+      },
+      "top2_count": 2,
+      "configurations_count": 4,
+      "coarse_shortlist_rank": null,
+      "interpretation": "existing terrain shortlist; not calibrated confidence or a new ranking"
+    }
+  ]
+}

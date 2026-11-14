@@ -1,0 +1,122 @@
+[
+  {
+    "sample": "C",
+    "anchor_lon": 168.25,
+    "anchor_lat": 52.75,
+    "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX1/MapServer/tile/12/847/7924",
+    "bounds": {
+      "west": 168.22265625,
+      "east": 168.2666015625,
+      "north": 52.7783203125,
+      "south": 52.734375
+    },
+    "sha256": "14989ae868914051f63a4d39ddce31ff794c049863296dbcb128c5a5b297ff58",
+    "size": [
+      512,
+      512
+    ],
+    "min": 88,
+    "max": 174,
+    "std": 7.839008420673555,
+    "deg_per_pixel": 8.58306884765625e-05,
+    "nominal_m_N_S": 5.087588097665367,
+    "nominal_m_E_W": 3.0794864891554323,
+    "caveat": "Georeferenced Esri beta01 uncontrolled Murray rendering, lossy JPEG source; no proven absolute registration, no whole-ROI morphology or ice claim"
+  },
+  {
+    "sample": "NW",
+    "anchor_lon": 168.125,
+    "anchor_lat": 52.875,
+    "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX1/MapServer/tile/12/844/7921",
+    "bounds": {
+      "west": 168.0908203125,
+      "east": 168.134765625,
+      "north": 52.91015625,
+      "south": 52.8662109375
+    },
+    "sha256": "054a5cde42852b1cff4e5906d9a13d0886b516d2b8a9757e14e93d74b4888f33",
+    "size": [
+      512,
+      512
+    ],
+    "min": 89,
+    "max": 207,
+    "std": 13.072964423609761,
+    "deg_per_pixel": 8.58306884765625e-05,
+    "nominal_m_N_S": 5.087588097665367,
+    "nominal_m_E_W": 3.070644026558199,
+    "caveat": "Georeferenced Esri beta01 uncontrolled Murray rendering, lossy JPEG source; no proven absolute registration, no whole-ROI morphology or ice claim"
+  },
+  {
+    "sample": "NE",
+    "anchor_lon": 168.375,
+    "anchor_lat": 52.875,
+    "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX1/MapServer/tile/12/844/7927",
+    "bounds": {
+      "west": 168.3544921875,
+      "east": 168.3984375,
+      "north": 52.91015625,
+      "south": 52.8662109375
+    },
+    "sha256": "2431e006c944d5537724c47c281ecc59fd00428e94643e0a4bd40deea2e50ac0",
+    "size": [
+      512,
+      512
+    ],
+    "min": 71,
+    "max": 155,
+    "std": 9.43289799395117,
+    "deg_per_pixel": 8.58306884765625e-05,
+    "nominal_m_N_S": 5.087588097665367,
+    "nominal_m_E_W": 3.070644026558199,
+    "caveat": "Georeferenced Esri beta01 uncontrolled Murray rendering, lossy JPEG source; no proven absolute registration, no whole-ROI morphology or ice claim"
+  },
+  {
+    "sample": "SW",
+    "anchor_lon": 168.125,
+    "anchor_lat": 52.625,
+    "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX1/MapServer/tile/12/850/7921",
+    "bounds": {
+      "west": 168.0908203125,
+      "east": 168.134765625,
+      "north": 52.646484375,
+      "south": 52.6025390625
+    },
+    "sha256": "5e9698c6412b2aaad7159a74b14b42c17075dcd0753768c9207bfee2020eb0db",
+    "size": [
+      512,
+      512
+    ],
+    "min": 74,
+    "max": 221,
+    "std": 17.931355968505503,
+    "deg_per_pixel": 8.58306884765625e-05,
+    "nominal_m_N_S": 5.087588097665367,
+    "nominal_m_E_W": 3.0883142944892823,
+    "caveat": "Georeferenced Esri beta01 uncontrolled Murray rendering, lossy JPEG source; no proven absolute registration, no whole-ROI morphology or ice claim"
+  },
+  {
+    "sample": "SE",
+    "anchor_lon": 168.375,
+    "anchor_lat": 52.625,
+    "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX1/MapServer/tile/12/850/7927",
+    "bounds": {
+      "west": 168.3544921875,
+      "east": 168.3984375,
+      "north": 52.646484375,
+      "south": 52.6025390625
+    },
+    "sha256": "b9b108a008694d7d1c5195604b7c007c719b3e4faebb33b36ab913af7453ed56",
+    "size": [
+      512,
+      512
+    ],
+    "min": 97,
+    "max": 175,
+    "std": 7.99144106052987,
+    "deg_per_pixel": 8.58306884765625e-05,
+    "nominal_m_N_S": 5.087588097665367,
+    "nominal_m_E_W": 3.0883142944892823,
+    "caveat": "Georeferenced Esri beta01 uncontrolled Murray rendering, lossy JPEG source; no proven absolute registration, no whole-ROI morphology or ice claim"
+  }
+]

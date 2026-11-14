@@ -1,0 +1,81 @@
+PDS_VERSION_ID                 = PDS3
+
+RECORD_TYPE                    = FIXED_LENGTH
+RECORD_BYTES                   = 20
+FILE_RECORDS                   = 72
+LABEL_REVISION_NOTE            = "2003-11-19, S. Slavney (GEO);
+                                  2005-09-25, S. Murchie (JHU/APL);
+                                  2007-03-09, E. Malaret (ACT Corp.);
+                                  2007-09-14, C. Hash (ACT Corp);
+                                  2022-04-28  G. Romeo, F. Seelos, K. Hancock,
+                                              R. Poffenbarger (JHU/APL);"
+
+^TABLE                         = "T1746_MRRWV_55N170_0327_4.TAB"
+
+
+DATA_SET_ID                    = "MRO-M-CRISM-5-RDR-MULTISPECTRAL-V1.0"
+PRODUCT_ID                     = "T1746_MRRWV_55N170_0327_4"
+                               /*( TNNNN_MRRss_yydxxx_rrrr_v                  )*/
+                               /*( NNNN = tile number                         )*/
+                               /*( ss = subtype of image product              )*/
+                               /*( yy = latitude of upper left corner         )*/
+                               /*( d = N or S for north or south latitude     )*/
+                               /*( xxx = east longitude of upper left corner  )*/
+                               /*( rrrr = resolution in pixels/degree         )*/
+                               /*( v = version number                         )*/
+INSTRUMENT_HOST_NAME          = "MARS RECONNAISSANCE ORBITER"
+SPACECRAFT_ID                 = MRO
+INSTRUMENT_NAME               = "COMPACT RECONNAISSANCE IMAGING
+                                 SPECTROMETER FOR MARS"
+INSTRUMENT_ID                 = CRISM
+TARGET_NAME                   = MARS
+PRODUCT_TYPE                  = MAP_PROJECTED_MULTISPECTRAL_RDR
+PRODUCT_CREATION_TIME         = 2023-07-18T18:02:57
+START_TIME                    = "N/A"
+STOP_TIME                     = "N/A"
+SPACECRAFT_CLOCK_START_COUNT  = "N/A"
+SPACECRAFT_CLOCK_STOP_COUNT   = "N/A"
+
+PRODUCT_VERSION_ID            = "1"
+PRODUCER_INSTITUTION_NAME     = "JOHNS HOPKINS UNIVERSITY
+                                  APPLIED PHYSICS LABORATORY"
+SOFTWARE_NAME                 = "crism_mapping_execute_flow"
+SOFTWARE_VERSION_ID           = "1.03.94"
+
+/*    A listfile including detector row numbers and wavelengths in the */
+/*        I/F and Lambert albedo images.            */
+
+OBJECT                        = TABLE
+  NAME                        = "CRISM MRDR WAVELENGTH TABLE"
+  INTERCHANGE_FORMAT          = "ASCII"
+  ROWS                        = 72
+  COLUMNS         = 3
+  ROW_BYTES       = 20
+  DESCRIPTION     = "CRISM MRDR wavelength table "
+  OBJECT          = COLUMN
+    COLUMN_NUMBER = 1
+    NAME          = SPECT_ID
+    DATA_TYPE     = ASCII_INTEGER
+    START_BYTE    = 1
+    BYTES         = 1
+    DESCRIPTION   = "Spectrometer identifier; 0 = IR; 1 = VNIR"
+  END_OBJECT      = COLUMN
+  OBJECT          = COLUMN
+    COLUMN_NUMBER = 2
+    NAME          = ROWNUM
+    DATA_TYPE     = ASCII_INTEGER
+    START_BYTE    = 3
+    BYTES         = 4
+    DESCRIPTION   = "detector row number (0-479)"
+  END_OBJECT      = COLUMN
+  OBJECT          = COLUMN
+    COLUMN_NUMBER = 3
+    NAME          = SAMPL_WAV
+    DATA_TYPE     = ASCII_REAL
+    START_BYTE    = 8
+    BYTES         = 11
+    DESCRIPTION   = "Standard sampling center wavelength in nm"
+    UNIT          = "NM"
+  END_OBJECT      = COLUMN
+END_OBJECT        = TABLE
+END

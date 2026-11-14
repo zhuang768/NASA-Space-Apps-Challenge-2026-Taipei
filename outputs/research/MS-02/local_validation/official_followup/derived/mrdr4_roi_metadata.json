@@ -1,0 +1,19 @@
+{
+  "product": "t1746_mrral_55n170_0327_4",
+  "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc07/t1746_mrral_55n170_0327_4.img",
+  "rows_0based": [
+    1472,
+    1634
+  ],
+  "columns_0based": [
+    251,
+    343
+  ],
+  "shape": [
+    72,
+    163,
+    93
+  ],
+  "valid_fraction": 0.6438767582147752,
+  "caveat": "PDS delivered Lambert albedo; numeric coverage is not mineral identification or validated water ice"
+}

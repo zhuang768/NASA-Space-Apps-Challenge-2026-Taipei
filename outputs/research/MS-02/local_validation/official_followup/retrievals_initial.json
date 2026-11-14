@@ -1,0 +1,76 @@
+[
+  {
+    "file": "ctx_tile.html",
+    "url": "https://murray-lab.caltech.edu/CTX/V01/TilePages/E168_N52.html",
+    "utc": "2026-11-14T19:58:00.216303+00:00",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "file": "swim2.html",
+    "url": "https://swim.psi.edu/SWIM2Products.php",
+    "utc": "2026-11-14T19:58:00.216818+00:00",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "crism_sis.htm",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-2-edr-v1/mrocr_0001/document/crism_dpsis.htm",
+    "utc": "2026-11-14T19:58:00.217226+00:00",
+    "status": 200,
+    "bytes": 3234023,
+    "sha256": "75bc4b07f1849b997bc268916d4a5c78c184955f5ac2bbd6acb4b9a2ee041d95"
+  },
+  {
+    "file": "competition.html",
+    "url": "https://www.spaceappschallenge.org/2026/challenges/permanent-moon-base-locations-and-mars/?tab=resources",
+    "utc": "2026-11-14T19:58:00.217733+00:00",
+    "error": "HTTP Error 503: Service Unavailable"
+  },
+  {
+    "file": "brighi_thesis.json",
+    "url": "https://api.archives-ouvertes.fr/search/?q=authFullName_t:%22Emile%20Brighi%22&fl=title_s,fileMain_s,uri_s,docType_s&rows=100&wt=json",
+    "utc": "2026-11-14T19:58:00.218325+00:00",
+    "status": 200,
+    "bytes": 4804,
+    "sha256": "6baf75f4c9e8c42f089aac8535f16461b3056ecd70ee67b1393f15f5659e5651"
+  },
+  {
+    "file": "ns_grs.html",
+    "url": "https://pds-geosciences.wustl.edu/missions/odyssey/grs.html",
+    "utc": "2026-11-14T19:58:00.219171+00:00",
+    "status": 200,
+    "bytes": 29231,
+    "sha256": "81a37882aa2622195c8d7f88ccb010acf5ef1e9daa5a1c1489de6720ebd69210"
+  },
+  {
+    "file": "CRISM_TRDR.json",
+    "url": "https://oderest.rsl.wustl.edu/live2/?target=mars&ihid=MRO&iid=CRISM&pt=TRDR&query=PRODUCT&results=FMPC&output=JSON&westernlon=168&easternlon=168.5&minlat=52.5&maxlat=53&limit=1000",
+    "utc": "2026-11-14T19:58:00.220840+00:00",
+    "status": 200,
+    "bytes": 1769861,
+    "sha256": "e0daacceeaf5a365551a4b32cd40091173a46a565c530496edcd9e0bd5bdb0d3"
+  },
+  {
+    "file": "CRISM_MRDR4.json",
+    "url": "https://oderest.rsl.wustl.edu/live2/?target=mars&ihid=MRO&iid=CRISM&pt=MRDR4&query=PRODUCT&results=FMPC&output=JSON&westernlon=168&easternlon=168.5&minlat=52.5&maxlat=53&limit=1000",
+    "utc": "2026-11-14T19:58:00.222107+00:00",
+    "status": 200,
+    "bytes": 2804219,
+    "sha256": "7c6be6a8b0596200328d4b43d3c94d3b7213bb20f5fbc77f0a508009048050aa"
+  },
+  {
+    "file": "CRISM_VRDR.json",
+    "url": "https://oderest.rsl.wustl.edu/live2/?target=mars&ihid=MRO&iid=CRISM&pt=VRDR&query=PRODUCT&results=FMPC&output=JSON&westernlon=168&easternlon=168.5&minlat=52.5&maxlat=53&limit=1000",
+    "utc": "2026-11-14T19:58:05.584963+00:00",
+    "status": 200,
+    "bytes": 72789,
+    "sha256": "d60162ecdebe258db1cc3430a7f6e6a4e3b8f9262152d8d4c91cc5dd25b781b1"
+  },
+  {
+    "file": "THEMIS_IRPBT2.json",
+    "url": "https://oderest.rsl.wustl.edu/live2/?target=mars&ihid=ODY&iid=THEMIS&pt=IRPBT2&query=PRODUCT&results=FMPC&output=JSON&westernlon=168&easternlon=168.5&minlat=52.5&maxlat=53&limit=1000",
+    "utc": "2026-11-14T19:58:05.727629+00:00",
+    "status": 200,
+    "bytes": 49498,
+    "sha256": "c00361a1dc415fddfac292a43bd9677d717ea284da111352105ce2311023c9fe"
+  }
+]

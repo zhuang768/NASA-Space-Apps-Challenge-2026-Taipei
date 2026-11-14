@@ -1,0 +1,267 @@
+[
+  {
+    "file": "t1746_mrral_55n170_0327_4.hdr",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc07/t1746_mrral_55n170_0327_4.hdr",
+    "range": null,
+    "utc": "2026-11-14T19:59:17.750618+00:00",
+    "status": 200,
+    "content_range": null,
+    "bytes": 2183,
+    "sha256": "8ddd287264b77592a5893c4b3565520c2cc428a68ef626387b37990b2420c2aa"
+  },
+  {
+    "file": "t1746_mrral_55n170_0327_4.lbl",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc07/t1746_mrral_55n170_0327_4.lbl",
+    "range": null,
+    "utc": "2026-11-14T19:59:17.751726+00:00",
+    "status": 200,
+    "content_range": null,
+    "bytes": 5829,
+    "sha256": "602bae4fc6a6b71d5f527d67990420f361b5da583712abb2ad667b0afc6b06e9"
+  },
+  {
+    "file": "t1746_mrrde_55n170_0327_4.hdr",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc07/t1746_mrrde_55n170_0327_4.hdr",
+    "range": null,
+    "utc": "2026-11-14T19:59:17.752222+00:00",
+    "status": 200,
+    "content_range": null,
+    "bytes": 1758,
+    "sha256": "6d5869c23cd6718ce0b199afb32e5859abdc47b2730b4d2e8df9ef375cec9bdb"
+  },
+  {
+    "file": "t1746_mrrde_55n170_0327_4.lbl",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc07/t1746_mrrde_55n170_0327_4.lbl",
+    "range": null,
+    "utc": "2026-11-14T19:59:17.752674+00:00",
+    "status": 200,
+    "content_range": null,
+    "bytes": 6282,
+    "sha256": "c6307b6c6436c234a8f3d085bb2c9cf7ff81f0bf0947f9d98f0a86cf0d81a3b9"
+  },
+  {
+    "file": "t1746_mrrsu_55n170_0327_4.hdr",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc07/t1746_mrrsu_55n170_0327_4.hdr",
+    "range": null,
+    "utc": "2026-11-14T19:59:17.753184+00:00",
+    "status": 200,
+    "content_range": null,
+    "bytes": 1751,
+    "sha256": "6a7b9435aa85869ebda40114a5ef53adb54629155481a48e3eb3363d6612cf4f"
+  },
+  {
+    "file": "t1746_mrrsu_55n170_0327_4.lbl",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc07/t1746_mrrsu_55n170_0327_4.lbl",
+    "range": null,
+    "utc": "2026-11-14T19:59:17.753954+00:00",
+    "status": 200,
+    "content_range": null,
+    "bytes": 6739,
+    "sha256": "19568be1804c78b81cf7ba1fdbfd4211bf2f9f62d8c8301c4ecd566b0130edda"
+  },
+  {
+    "file": "t1746_mrrwv_55n170_0327_4.lbl",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc07/t1746_mrrwv_55n170_0327_4.lbl",
+    "range": null,
+    "utc": "2026-11-14T19:59:17.754622+00:00",
+    "status": 200,
+    "content_range": null,
+    "bytes": 3518,
+    "sha256": "460bd5b00a34330f1f613a4a0311e319bcc459301f5cf38f0ff9b94313116f84"
+  },
+  {
+    "file": "t1746_vrral_55n170_0654_1.hdr",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-vnirhyperspectral-v1/mrocr_7001/vrdr/mc07/t1746_vrral_55n170_0654_1.hdr",
+    "range": null,
+    "utc": "2026-11-14T19:59:17.756188+00:00",
+    "status": 200,
+    "content_range": null,
+    "bytes": 3287,
+    "sha256": "a58fe4c6bb69e562b150cc6a2c68a883b061bdb05dc362bc19450d80effb5f3f"
+  },
+  {
+    "file": "t1746_vrral_55n170_0654_1.lbl",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-vnirhyperspectral-v1/mrocr_7001/vrdr/mc07/t1746_vrral_55n170_0654_1.lbl",
+    "range": null,
+    "utc": "2026-11-14T19:59:45.765027+00:00",
+    "status": 200,
+    "content_range": null,
+    "bytes": 7415,
+    "sha256": "53f7fcffa869ff5901b3f8c9daea25e0e3e104fd8facb23a67a77c9f551f3890"
+  },
+  {
+    "file": "t1746_vrrde_55n170_0654_1.hdr",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-vnirhyperspectral-v1/mrocr_7001/vrdr/mc07/t1746_vrrde_55n170_0654_1.hdr",
+    "range": null,
+    "utc": "2026-11-14T19:59:45.765922+00:00",
+    "status": 200,
+    "content_range": null,
+    "bytes": 1645,
+    "sha256": "f6d48ef32e2def9f88b57e701a0920a3274b5248895b031d2d32df042ac1b46f"
+  },
+  {
+    "file": "t1746_vrrde_55n170_0654_1.lbl",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-vnirhyperspectral-v1/mrocr_7001/vrdr/mc07/t1746_vrrde_55n170_0654_1.lbl",
+    "range": null,
+    "utc": "2026-11-14T19:59:45.766638+00:00",
+    "status": 200,
+    "content_range": null,
+    "bytes": 6581,
+    "sha256": "a772ba88160eca95cc9ac4101bdaaf8fd45fb89fa1863cb6be5c684456302cd7"
+  },
+  {
+    "file": "t1746_vrrsu_55n170_0654_1.hdr",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-vnirhyperspectral-v1/mrocr_7001/vrdr/mc07/t1746_vrrsu_55n170_0654_1.hdr",
+    "range": null,
+    "utc": "2026-11-14T19:59:45.776591+00:00",
+    "status": 200,
+    "content_range": null,
+    "bytes": 1307,
+    "sha256": "faeae3a51dba1d2b34b748c3e6c0e3cf11381d818d3f556415ecfe4dd5ff4afe"
+  },
+  {
+    "file": "t1746_vrrsu_55n170_0654_1.lbl",
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-vnirhyperspectral-v1/mrocr_7001/vrdr/mc07/t1746_vrrsu_55n170_0654_1.lbl",
+    "range": null,
+    "utc": "2026-11-14T19:59:45.776894+00:00",
+    "status": 200,
+    "content_range": null,
+    "bytes": 6140,
+    "sha256": "4a0951f478abfb508b768f2e689482471d21e65801a8c6874f3e9c76197bd26d"
+  },
+  {
+    "file": "i63952017pbt.img.header",
+    "url": "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0058/i639xxpbt/I63952017PBT.IMG",
+    "range": "bytes=0-65535",
+    "utc": "2026-11-14T19:59:45.777479+00:00",
+    "status": 206,
+    "content_range": "bytes 0-65535/75019680",
+    "bytes": 65536,
+    "sha256": "c07536b0ae1f455d2c6d4eac2ba300e31d0c20c693001de2077baf98f0dff48a"
+  },
+  {
+    "file": "i53637009pbt.img.header",
+    "url": "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0049/i536xxpbt/I53637009PBT.IMG",
+    "range": "bytes=0-65535",
+    "utc": "2026-11-14T19:59:45.785102+00:00",
+    "status": 206,
+    "content_range": "bytes 0-65535/31364736",
+    "bytes": 65536,
+    "sha256": "03ec0e091b7b671dffda919c233651eae60c789e1aea69d2db81dfafafc28e7e"
+  },
+  {
+    "file": "i54074011pbt.img.header",
+    "url": "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0049/i540xxpbt/I54074011PBT.IMG",
+    "range": "bytes=0-65535",
+    "utc": "2026-11-14T19:59:45.824498+00:00",
+    "status": 206,
+    "content_range": "bytes 0-65535/16767576",
+    "bytes": 65536,
+    "sha256": "ca58d118de2362a9677f0ba85a9373958ff43221e02ad949e5323451c6d38fed"
+  },
+  {
+    "file": "i54561019pbt.img.header",
+    "url": "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0050/i545xxpbt/I54561019PBT.IMG",
+    "range": "bytes=0-65535",
+    "utc": "2026-11-14T19:59:52.010525+00:00",
+    "status": 206,
+    "content_range": "bytes 0-65535/12283700",
+    "bytes": 65536,
+    "sha256": "0d8d8978cd2a9f066083fd89f309313f869ff490cf3f1469e8bfa9f69eb5a934"
+  },
+  {
+    "file": "i54586015pbt.img.header",
+    "url": "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0050/i545xxpbt/I54586015PBT.IMG",
+    "range": "bytes=0-65535",
+    "utc": "2026-11-14T19:59:52.019226+00:00",
+    "status": 206,
+    "content_range": "bytes 0-65535/38556336",
+    "bytes": 65536,
+    "sha256": "d3239dffd79eee94f98de24e01c2bb9ce5c65365527d176c36b0afaa5afc9ddf"
+  },
+  {
+    "file": "i54717011pbt.img.header",
+    "url": "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0050/i547xxpbt/I54717011PBT.IMG",
+    "range": "bytes=0-65535",
+    "utc": "2026-11-14T19:59:52.243982+00:00",
+    "status": 206,
+    "content_range": "bytes 0-65535/37621272",
+    "bytes": 65536,
+    "sha256": "a786b96a8d09710758da1b688620f88234cd32c8a153017e62731da710279a38"
+  },
+  {
+    "file": "i55485010pbt.img.header",
+    "url": "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0050/i554xxpbt/I55485010PBT.IMG",
+    "range": "bytes=0-65535",
+    "utc": "2026-11-14T19:59:52.844437+00:00",
+    "status": 206,
+    "content_range": "bytes 0-65535/38919948",
+    "bytes": 65536,
+    "sha256": "5d09bc5bec5d4c2c3fbf3ecf107fbda1bd076c31a70b34f5f88b6a423684e02d"
+  },
+  {
+    "file": "i72751028pbt.img.header",
+    "url": "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0066/i727xxpbt/I72751028PBT.IMG",
+    "range": "bytes=0-65535",
+    "utc": "2026-11-14T19:59:52.856664+00:00",
+    "status": 206,
+    "content_range": "bytes 0-65535/22582240",
+    "bytes": 65536,
+    "sha256": "25f0966b5f0e6d1d6a6312238a38e0e5f74f1bb55ddd591e9a814259d0f3993b"
+  },
+  {
+    "file": "i74229033pbt.img.header",
+    "url": "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0068/i742xxpbt/I74229033PBT.IMG",
+    "range": "bytes=0-65535",
+    "utc": "2026-11-14T19:59:52.857002+00:00",
+    "status": 206,
+    "content_range": "bytes 0-65535/4278840",
+    "bytes": 65536,
+    "sha256": "c7ca74851e26935d2863cb7b9d9e8dce65abf7f4053512a6614ee898e44a008c"
+  },
+  {
+    "file": "ctx_tile_retry.html",
+    "url": "https://murray-lab.caltech.edu/CTX/V01/TilePages/E168_N52.html",
+    "range": null,
+    "utc": "2026-11-14T19:59:52.888421+00:00",
+    "error": "HTTP Error 503: Service Unavailable"
+  },
+  {
+    "file": "ctx_index.html",
+    "url": "https://murray-lab.caltech.edu/CTX/",
+    "range": null,
+    "utc": "2026-11-14T19:59:52.933834+00:00",
+    "error": "HTTP Error 503: Service Unavailable"
+  },
+  {
+    "file": "swim2_http.html",
+    "url": "http://swim.psi.edu/SWIM2Products.php",
+    "range": null,
+    "utc": "2026-11-14T19:59:57.118122+00:00",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "grs_special.html",
+    "url": "https://pds-geosciences.wustl.edu/missions/odyssey/grsspecial.html",
+    "range": null,
+    "utc": "2026-11-14T19:59:57.171710+00:00",
+    "status": 200,
+    "content_range": null,
+    "bytes": 29908,
+    "sha256": "48827f30dbcc0f2618f36d7aaac333ad8f9745c976144d055cbcef9f8fa0c12a"
+  },
+  {
+    "file": "brighi_thesis.pdf",
+    "url": "https://theses.hal.science/tel-04953869/document",
+    "range": null,
+    "utc": "2026-11-14T19:59:57.261581+00:00",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "pathare_paper.pdf",
+    "url": "https://www.psi.edu/wp-content/uploads/Pathare-2018-Driven-by-excess-Climatic-implications-of-new-global-mapping-of-near-surface-water-equivalent-hydrogen-on-Mars.pdf",
+    "range": null,
+    "utc": "2026-11-14T19:59:57.321742+00:00",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

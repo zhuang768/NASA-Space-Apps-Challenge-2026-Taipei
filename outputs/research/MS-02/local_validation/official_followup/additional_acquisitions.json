@@ -1,0 +1,91 @@
+[
+  {
+    "url": "https://data.gtn-p.org/api/data/?alt_data=1505&combined=false",
+    "file": "gtnp1505_api.json",
+    "retrieval_date_utc": "2026-11-14",
+    "bytes": 47231,
+    "sha256": "5e6f411041d011ac8d32e4855eaaba581ce5328eddeb7be615f38b6d828a18f3",
+    "content_validated": true,
+    "qualification": "GTN-P download is ZIP; source paper kept locally and cited by URL, not rehosted"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11187359",
+    "file": "zenodo_groundice.json",
+    "retrieval_date_utc": "2026-11-14",
+    "bytes": 3845,
+    "sha256": "838bfd77cb87f0e5220dab7ed41547183074e92a22bddb6d817a97a0238e2aee",
+    "content_validated": true,
+    "qualification": "GTN-P download is ZIP; source paper kept locally and cited by URL, not rehosted"
+  },
+  {
+    "url": "https://zenodo.org/api/records/11187360/files/Adventdalen_data.xlsx/content",
+    "file": "Adventdalen_data.xlsx",
+    "retrieval_date_utc": "2026-11-14",
+    "bytes": 51908,
+    "sha256": "a9876f8280461c7b675e3a231ac4cd1d9d466a24d492598b59b17f03fdb1df49",
+    "content_validated": true,
+    "qualification": "GTN-P download is ZIP; source paper kept locally and cited by URL, not rehosted"
+  },
+  {
+    "url": "https://meetingorganizer.copernicus.org/EPSC2026/EPSC2026-988.html",
+    "file": "wisdom2026.html",
+    "retrieval_date_utc": "2026-11-14",
+    "bytes": 166728,
+    "sha256": "62f32141b00f755a75ecea789968528dbcca764ee598b303c0b7b636357b44c4",
+    "content_validated": true,
+    "qualification": "GTN-P download is ZIP; source paper kept locally and cited by URL, not rehosted"
+  },
+  {
+    "url": "https://tc.copernicus.org/articles/20/1179/2026/index.html",
+    "file": "active2026.html",
+    "retrieval_date_utc": "2026-11-14",
+    "bytes": 316541,
+    "sha256": "a0697a7715506b1251813cb23fce4f46898fcc2f5375bc3f25dde731d875aa69",
+    "content_validated": true,
+    "qualification": "GTN-P download is ZIP; source paper kept locally and cited by URL, not rehosted"
+  },
+  {
+    "url": "https://arxiv.org/pdf/1705.05556",
+    "file": "pathare_arxiv.pdf",
+    "retrieval_date_utc": "2026-11-14",
+    "bytes": 7073049,
+    "sha256": "6912050ff15579713d45c77f44425ceb80f849b8946dfa841cc269fbf573c9b9",
+    "content_validated": true,
+    "qualification": "GTN-P download is ZIP; source paper kept locally and cited by URL, not rehosted"
+  },
+  {
+    "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX1/MapServer/tile/12/847/7924",
+    "file": "ctx_C_L12.png",
+    "retrieval_date_utc": "2026-11-14",
+    "sha256": "14989ae868914051f63a4d39ddce31ff794c049863296dbcb128c5a5b297ff58",
+    "content_validated": true
+  },
+  {
+    "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX1/MapServer/tile/12/844/7921",
+    "file": "ctx_NW_L12.png",
+    "retrieval_date_utc": "2026-11-14",
+    "sha256": "054a5cde42852b1cff4e5906d9a13d0886b516d2b8a9757e14e93d74b4888f33",
+    "content_validated": true
+  },
+  {
+    "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX1/MapServer/tile/12/844/7927",
+    "file": "ctx_NE_L12.png",
+    "retrieval_date_utc": "2026-11-14",
+    "sha256": "2431e006c944d5537724c47c281ecc59fd00428e94643e0a4bd40deea2e50ac0",
+    "content_validated": true
+  },
+  {
+    "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX1/MapServer/tile/12/850/7921",
+    "file": "ctx_SW_L12.png",
+    "retrieval_date_utc": "2026-11-14",
+    "sha256": "5e9698c6412b2aaad7159a74b14b42c17075dcd0753768c9207bfee2020eb0db",
+    "content_validated": true
+  },
+  {
+    "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX1/MapServer/tile/12/850/7927",
+    "file": "ctx_SE_L12.png",
+    "retrieval_date_utc": "2026-11-14",
+    "sha256": "b9b108a008694d7d1c5195604b7c007c719b3e4faebb33b36ab913af7453ed56",
+    "content_validated": true
+  }
+]

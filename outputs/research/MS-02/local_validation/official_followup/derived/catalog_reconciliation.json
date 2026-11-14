@@ -1,0 +1,7 @@
+{
+  "rest_entries": 177,
+  "unique_product_ids": 177,
+  "legacy_browser_claim": 180,
+  "legacy_180_id_manifest_available": false,
+  "operational_decision": "Use explicit 177-ID REST inventory for this release; do not add three invented observations. Historical browser difference remains unexplained."
+}

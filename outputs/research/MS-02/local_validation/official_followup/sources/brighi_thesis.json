@@ -1,0 +1,87 @@
+{
+  "response":{
+    "numFound":17,
+    "start":0,
+    "maxScore":13.354442,
+    "numFoundExact":true,
+    "docs":[{
+      "title_s":["Mise en œuvre des outils d'interprétation des données WISDOM, le radar du Rover de la mission ExoMars, sur des analogues martiens et sur Mars","Implementation of the interpretation tools for the data acquired by the radar WISDOM of the ExoMars mission Rover, on Martian analogues and on Mars"],
+      "uri_s":"https://theses.hal.science/tel-04953869v1",
+      "docType_s":"THESE",
+      "fileMain_s":"https://theses.hal.science/tel-04953869/document"
+    },{
+      "title_s":["PyBWE: Open-Source Python tools for Super-Resolution applied to Planetary Radar Soundings"],
+      "uri_s":"https://insu.hal.science/insu-04684553v1",
+      "docType_s":"COMM",
+      "fileMain_s":"https://insu.hal.science/insu-04684553/document"
+    },{
+      "title_s":["Retrieval of the ground dielectric permittivity by planetary GPR accommodated on a rover: Application to the estimation of the reflectors' depth by the WISDOM/ExoMars radar"],
+      "uri_s":"https://insu.hal.science/insu-03860894v1",
+      "docType_s":"ART",
+      "fileMain_s":"https://insu.hal.science/insu-03860894/document"
+    },{
+      "title_s":["Investigating the use of Circular Polarization Ratio for water ice detection by polarimetric Ground Penetrating Radars operating from the surface"],
+      "uri_s":"https://hal.science/hal-05281598v1",
+      "docType_s":"COMM",
+      "fileMain_s":"https://hal.science/hal-05281598/document"
+    },{
+      "title_s":["Identifying heterogeneity sizes in the subsurface with WISDOM, the GPR of the ExoMars mission"],
+      "uri_s":"https://insu.hal.science/insu-03752781v1",
+      "docType_s":"COMM",
+      "fileMain_s":"https://insu.hal.science/insu-03752781/document"
+    },{
+      "title_s":["Towards subsurface mapping of polarimetric products from Full-Polarimetric Ground Penetrating Radar in situ measurements"],
+      "uri_s":"https://hal.science/hal-05732742v1",
+      "docType_s":"COMM"
+    },{
+      "title_s":["WISDOM GPR calibration and data processing methods applied to field test data"],
+      "uri_s":"https://hal.science/hal-05059196v1",
+      "docType_s":"COMM"
+    },{
+      "title_s":["Spectral analysis of radargrams of the Martian subsurface to constrain scatterer sizes-Application to RoSPR/Zhurong and RIMFAX/Perseverance GPR data"],
+      "uri_s":"https://hal.science/hal-04687279v1",
+      "docType_s":"COMM",
+      "fileMain_s":"https://hal.science/hal-04687279/document"
+    },{
+      "title_s":["Waveform Analysis of Super-Resolved WISDOM/ExoMars GPR Data Acquired in Svalbard, a Terrestrial Analogue of Mars"],
+      "uri_s":"https://hal.science/hal-05844237v1",
+      "docType_s":"ART",
+      "fileMain_s":"https://hal.science/hal-05844237/document"
+    },{
+      "title_s":["Advanced Interpretation Tools for WISDOM, the ExoMars GPR : Validation on Experimental Data Acquired in Svalbard, a Martian Analogue"],
+      "uri_s":"https://hal.science/hal-05299914v1",
+      "docType_s":"COMM"
+    },{
+      "title_s":["Characterizing heterogeneities in the subsurface with an ultra-wideband GPR: Application to WISDOM, the GPR of the Rosalind Franklin ExoMars mission"],
+      "uri_s":"https://insu.hal.science/insu-04819338v2",
+      "docType_s":"ART",
+      "fileMain_s":"https://insu.hal.science/insu-04819338/document"
+    },{
+      "title_s":["Analysis of the Martian subsurface from the observation of the Rover Subsurface Penetrating Radar (RoSPR) onboard Tianwen"],
+      "uri_s":"https://insu.hal.science/insu-04688317v1",
+      "docType_s":"COMM",
+      "fileMain_s":"https://insu.hal.science/insu-04688317/document"
+    },{
+      "title_s":["The WISDOM GPR on board the ESA’s ExoMars Rosalind Franklin Rover – Focus on tools developed for a quantitative data interpretation"],
+      "uri_s":"https://insu.hal.science/insu-04691498v1",
+      "docType_s":"COMM",
+      "fileMain_s":"https://insu.hal.science/insu-04691498/document"
+    },{
+      "title_s":["ExoMars – WISDOM Field-Test Data Processed with Automatic Pipeline"],
+      "uri_s":"https://insu.hal.science/insu-04015250v1",
+      "docType_s":"COMM"
+    },{
+      "title_s":["Performance validation of WISDOM, the GPR of the ExoMars 2028 mission, on a Martian analogue dataset acquired in Svalbard"],
+      "uri_s":"https://hal.science/hal-05281589v1",
+      "docType_s":"COMM"
+    },{
+      "title_s":["Full-Polarimetric capabilities evaluation of the ExoMars 2028 GPR on a 3D dataset acquired in Svalbard"],
+      "uri_s":"https://hal.science/hal-05733078v1",
+      "docType_s":"COMM"
+    },{
+      "title_s":["GPR field-tests on Svalbard – WISDOM on ExoMars"],
+      "uri_s":"https://insu.hal.science/insu-03914738v1",
+      "docType_s":"POSTER"
+    }]
+  }
+}

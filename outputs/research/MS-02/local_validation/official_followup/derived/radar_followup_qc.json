@@ -1,0 +1,38 @@
+[
+  {
+    "track": "00464501",
+    "ncols": 64,
+    "numeric_clutter_url": "https://pds-geosciences.wustl.edu/mro/urn-nasa-pds-mro_sharad_simulations/data/s_0046xx/s_00464501/s_00464501_sim.img",
+    "range_start": 148435200,
+    "range_end": 222652799,
+    "download_sha256": "d3928d44e97babb9cdc1ad9aef4b9423a95f8aa6f99fb2fa243dd465d652c6e3",
+    "median_surface_peak_offset_samples": 2.0,
+    "median_peak_noise_dB": 21.851479530334473,
+    "accepted_ice_reflectors": 0,
+    "caveat": "zero accepted is not evidence of no ice; clutter matching, sidelobes and dielectric assumptions limit classification"
+  },
+  {
+    "track": "01983502",
+    "ncols": 65,
+    "numeric_clutter_url": "https://pds-geosciences.wustl.edu/mro/urn-nasa-pds-mro_sharad_simulations/data/s_0198xx/s_01983502/s_01983502_sim.img",
+    "range_start": 168710400,
+    "range_end": 253065599,
+    "download_sha256": "d838dade3fa51d2c6fb5a51e3f5ef562dedea1bec9f855657924772798312f26",
+    "median_surface_peak_offset_samples": 5.0,
+    "median_peak_noise_dB": 23.838119506835938,
+    "accepted_ice_reflectors": 0,
+    "caveat": "zero accepted is not evidence of no ice; clutter matching, sidelobes and dielectric assumptions limit classification"
+  },
+  {
+    "track": "02004601",
+    "ncols": 65,
+    "numeric_clutter_url": "https://pds-geosciences.wustl.edu/mro/urn-nasa-pds-mro_sharad_simulations/data/s_0200xx/s_02004601/s_02004601_sim.img",
+    "range_start": 168796800,
+    "range_end": 253195199,
+    "download_sha256": "bfc8cdddec815bd73b5f45b7fe83dcc9ede414679bcae62899595bbb9cbddcbf",
+    "median_surface_peak_offset_samples": 5.0,
+    "median_peak_noise_dB": 21.60089111328125,
+    "accepted_ice_reflectors": 0,
+    "caveat": "zero accepted is not evidence of no ice; clutter matching, sidelobes and dielectric assumptions limit classification"
+  }
+]

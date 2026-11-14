@@ -1,0 +1,122 @@
+PDS_VERSION_ID                 = PDS3
+
+RECORD_TYPE                    = UNDEFINED
+LABEL_REVISION_NOTE            = "2003-11-19, S. Slavney (GEO);
+                                  2005-09-25, S. Murchie (JHU/APL);
+                                  2007-03-09, E. Malaret (ACT Corp.);
+                                  2007-09-14, C. Hash (ACT Corp);
+                                  2022-04-28  G. Romeo, F. Seelos, K. Hancock,
+                                              R. Poffenbarger (JHU/APL);"
+
+^ENVI_HEADER                   = "T1746_VRRSU_55N170_0654_1.HDR"
+
+^IMAGE                         = "T1746_VRRSU_55N170_0654_1.IMG"
+
+
+/*VNIR Hyperspectral Reduced Data Record (VRDR) Product Identification */
+
+DATA_SET_ID                    = "MRO-M-CRISM-5-RDR-VNIRHYPERSPECTRAL-V1.0"
+PRODUCT_ID                     = "T1746_VRRSU_55N170_0654_1"
+                               /*( TNNNN_VRRss_yydxxx_rrrr_v                     )*/
+                               /*( NNNN = tile number                            )*/
+                               /*( ss = subtype of image product                 )*/
+                               /*( yy = latitude of tile center                  )*/
+                               /*( d = N or S for north or south latitude        )*/
+                               /*( xxx = east longitude of tile center (rounded) )*/
+                               /*( rrrr = resolution in pixels/degree            )*/
+                               /*( v = version number                            )*/
+
+INSTRUMENT_HOST_NAME           = "MARS RECONNAISSANCE ORBITER"
+SPACECRAFT_ID                  = MRO
+INSTRUMENT_NAME                = "COMPACT RECONNAISSANCE IMAGING
+                                  SPECTROMETER FOR MARS"
+INSTRUMENT_ID                  = CRISM
+TARGET_NAME                    = MARS
+PRODUCT_TYPE                   = MAP_PROJECTED_VNIR_HYPERSPECTRAL_RDR
+PRODUCT_CREATION_TIME          = 2025-10-09T13:09:21
+START_TIME                     = "N/A"
+STOP_TIME                      = "N/A"
+SPACECRAFT_CLOCK_START_COUNT   = "N/A"
+SPACECRAFT_CLOCK_STOP_COUNT    = "N/A"
+PRODUCT_VERSION_ID             = "1"
+PRODUCER_INSTITUTION_NAME      = "JOHNS HOPKINS UNIVERSITY
+                                   APPLIED PHYSICS LABORATORY"
+SOFTWARE_NAME                  = "crism_mapping_execute_flow"
+SOFTWARE_VERSION_ID            = "1.05.41"
+MRO:WAVELENGTH_FILE_NAME       = "T1746_VRRWV_55N170_0654_1.TAB"
+
+/* This Map Projected VNIR Hyperspectral RDR label describes one data file:          */
+/*   1. A multiple-band image file of calibrated RDR data in radiance,               */
+/*    reflectance, or quantities derived therein, or related ancillary information.  */
+/* This RDR represents one latitude-longitude bin in a global map.                   */
+/* See the Map Projection Object below for bin coordinates and resolution.           */
+/* See the CRISM Data Products SIS for more detailed description.                    */
+
+/* Description of MAP PROJECTED VNIR HYPERSPECTRAL RDR REFLECTANCE IMAGE file */
+
+/* MRO:FRAME_SET_CORR_FLAG          = "ON"   */
+/* MRO:PHOTOMETRIC_CORR_FLAG        = "ON"   */
+/* MRO:ATMOSPHERIC_CORR_FLAG        = "ON"   */
+/* MRO:RATIO_SHIFT_CORR_FLAG        = "ON"   */
+/* MRO:EMPIRICAL_GEOM_NORM_FLAG     = "OFF"   */
+/* MRO:EMPIRICAL_SMILE_CORR_FLAG    = "ON"   */
+/* MRO:SENSOR_SPACE_TRANSFORM_FLAG  = "OFF"   */
+
+/* ENVI header description                                           */
+/* The ENVI header is a separate ASCII file that includes basic      */
+/* image data file characteristics and allows the image data to be   */
+/* loaded directly into the ENVI image processing software available */
+/* bands list.                                                       */
+
+OBJECT                    = ENVI_HEADER 
+  HEADER_TYPE             = "ENVI" 
+  INTERCHANGE_FORMAT      = "ASCII" 
+  BYTES                   = 1307
+  DESCRIPTION             = "This text file can be used by ENVI image 
+      processing software to read in the image."
+END_OBJECT                = ENVI_HEADER
+
+
+OBJECT              = IMAGE
+  LINES             = 3271
+  LINE_SAMPLES      = 2502
+  SAMPLE_TYPE       = PC_REAL
+  SAMPLE_BITS       = 32
+  BANDS             = 14
+  BAND_STORAGE_TYPE = BAND_SEQUENTIAL
+  BAND_NAME            = ( "R770", "RBR", "BD530_2", "SH600_2", "SH770", "BD640_2",
+                           "BD860_2", "BD920_2", "RPEAK1", "BDI1000VIS", "R440", "IRR1",
+                           "R530", "R600")
+  MISSING_CONSTANT  = 65535
+END_OBJECT = IMAGE
+
+/* Map projection information about this RDR is in the IMAGE_MAP_PROJECTION */
+/* object below.                                                            */
+
+OBJECT                         = IMAGE_MAP_PROJECTION
+  ^DATA_SET_MAP_PROJECTION     = "VRR_MAP.CAT"
+  MAP_PROJECTION_TYPE          = "EQUIRECTANGULAR"
+  A_AXIS_RADIUS                =  3382.737500000000 <KILOMETER>
+  B_AXIS_RADIUS                =  3382.737500000000 <KILOMETER>
+  C_AXIS_RADIUS                =  3382.737500000000 <KILOMETER>
+  POSITIVE_LONGITUDE_DIRECTION = EAST
+  CENTER_LATITUDE              =  55.0000000 <DEGREE>
+  CENTER_LONGITUDE             = 170.0000000 <DEGREE>
+  LINE_FIRST_PIXEL             =    1        <PIXEL>
+  LINE_LAST_PIXEL              = 3271        <PIXEL>
+  SAMPLE_FIRST_PIXEL           =    1        <PIXEL>
+  SAMPLE_LAST_PIXEL            = 2502        <PIXEL>
+  MAP_PROJECTION_ROTATION      =   0.0000000 <DEGREE>
+  MAP_RESOLUTION               = 653.9999806 
+  MAP_SCALE                    =   0.0902751 
+  MINIMUM_LATITUDE             =  52.5000000 <DEGREE>
+  MAXIMUM_LATITUDE             =  57.5000000 <DEGREE>
+  WESTERNMOST_LONGITUDE        = 166.6666667 <DEGREE>
+  EASTERNMOST_LONGITUDE        = 173.3333333 <DEGREE>
+  LINE_PROJECTION_OFFSET       = 37604.6968577 <PIXEL>
+  SAMPLE_PROJECTION_OFFSET     = 1250.1215701 <PIXEL>
+  COORDINATE_SYSTEM_TYPE       = "BODY-FIXED ROTATING"
+  COORDINATE_SYSTEM_NAME       = "PLANETOCENTRIC"
+END_OBJECT                     = IMAGE_MAP_PROJECTION
+
+END

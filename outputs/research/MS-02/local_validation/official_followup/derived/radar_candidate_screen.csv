@@ -1,0 +1,257 @@
+track,column_1based,relative_delay_samples,relative_delay_us,peak_noise_dB,numerical_clutter_peak_within_3_samples,classification,accepted_ice_reflector
+00464501,3343,36,1.3499999999999999,6.53902006149292,True,unvalidated peak; clutter-compatible,False
+00464501,3343,52,1.95,6.135348320007324,True,unvalidated peak; clutter-compatible,False
+00464501,3344,35,1.3125,9.589797019958496,True,unvalidated peak; clutter-compatible,False
+00464501,3344,54,2.025,7.041640758514404,True,unvalidated peak; clutter-compatible,False
+00464501,3344,67,2.5124999999999997,6.969008445739746,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3345,37,1.3875,13.328174591064453,True,unvalidated peak; clutter-compatible,False
+00464501,3345,65,2.4375,6.172337532043457,True,unvalidated peak; clutter-compatible,False
+00464501,3346,66,2.475,7.485142230987549,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3347,40,1.5,8.309019088745117,True,unvalidated peak; clutter-compatible,False
+00464501,3347,55,2.0625,11.26451587677002,True,unvalidated peak; clutter-compatible,False
+00464501,3347,71,2.6625,7.5643157958984375,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3347,78,2.925,6.690807342529297,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3348,41,1.5374999999999999,9.436351776123047,True,unvalidated peak; clutter-compatible,False
+00464501,3348,47,1.7625,10.039327621459961,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3348,56,2.1,9.900150299072266,True,unvalidated peak; clutter-compatible,False
+00464501,3348,111,4.1625,6.574397087097168,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3349,41,1.5374999999999999,13.540460586547852,True,unvalidated peak; clutter-compatible,False
+00464501,3349,60,2.25,6.429676532745361,True,unvalidated peak; clutter-compatible,False
+00464501,3350,37,1.3875,11.355573654174805,True,unvalidated peak; clutter-compatible,False
+00464501,3350,43,1.6125,6.999507427215576,True,unvalidated peak; clutter-compatible,False
+00464501,3350,58,2.175,10.737150192260742,True,unvalidated peak; clutter-compatible,False
+00464501,3351,36,1.3499999999999999,9.756640434265137,True,unvalidated peak; clutter-compatible,False
+00464501,3351,57,2.1374999999999997,10.778693199157715,True,unvalidated peak; clutter-compatible,False
+00464501,3351,70,2.625,9.683249473571777,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3351,168,6.3,9.257417678833008,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3352,37,1.3875,9.299317359924316,True,unvalidated peak; clutter-compatible,False
+00464501,3352,54,2.025,8.628462791442871,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3352,71,2.6625,6.762923240661621,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3352,124,4.6499999999999995,6.3610453605651855,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3352,168,6.3,8.024235725402832,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3353,44,1.65,9.020524978637695,True,unvalidated peak; clutter-compatible,False
+00464501,3353,58,2.175,7.797245979309082,True,unvalidated peak; clutter-compatible,False
+00464501,3354,46,1.7249999999999999,6.663450241088867,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3354,79,2.9625,7.976691246032715,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3355,44,1.65,7.370713233947754,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3355,108,4.05,6.757493495941162,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3357,82,3.0749999999999997,8.915775299072266,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3361,129,4.8374999999999995,6.248843193054199,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3362,68,2.55,9.908604621887207,True,unvalidated peak; clutter-compatible,False
+00464501,3362,92,3.4499999999999997,8.599103927612305,True,unvalidated peak; clutter-compatible,False
+00464501,3363,91,3.4125,8.174331665039062,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3364,92,3.4499999999999997,13.81070327758789,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3365,92,3.4499999999999997,9.720046997070312,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3367,37,1.3875,6.5951080322265625,True,unvalidated peak; clutter-compatible,False
+00464501,3367,48,1.7999999999999998,6.024263381958008,True,unvalidated peak; clutter-compatible,False
+00464501,3370,109,4.0874999999999995,6.101888656616211,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3374,34,1.275,7.433333396911621,True,unvalidated peak; clutter-compatible,False
+00464501,3376,37,1.3875,6.837050437927246,True,unvalidated peak; clutter-compatible,False
+00464501,3376,61,2.2875,6.502222061157227,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3377,51,1.9124999999999999,7.497902870178223,True,unvalidated peak; clutter-compatible,False
+00464501,3377,71,2.6625,6.459536552429199,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3378,55,2.0625,10.448387145996094,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3378,63,2.3625,7.557750701904297,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3379,58,2.175,8.109025955200195,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3379,78,2.925,7.803313255310059,True,unvalidated peak; clutter-compatible,False
+00464501,3380,78,2.925,7.176800727844238,True,unvalidated peak; clutter-compatible,False
+00464501,3380,84,3.15,7.1351318359375,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3381,48,1.7999999999999998,8.19821548461914,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3381,53,1.9874999999999998,6.230563163757324,True,unvalidated peak; clutter-compatible,False
+00464501,3381,79,2.9625,9.933116912841797,True,unvalidated peak; clutter-compatible,False
+00464501,3382,33,1.2375,14.268243789672852,True,unvalidated peak; clutter-compatible,False
+00464501,3383,35,1.3125,14.975248336791992,True,unvalidated peak; clutter-compatible,False
+00464501,3384,38,1.425,6.805418968200684,True,unvalidated peak; clutter-compatible,False
+00464501,3384,51,1.9124999999999999,6.1632795333862305,True,unvalidated peak; clutter-compatible,False
+00464501,3385,45,1.6875,6.951171875,True,unvalidated peak; clutter-compatible,False
+00464501,3386,52,1.95,8.451617240905762,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3387,33,1.2375,7.45979118347168,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3387,50,1.875,9.082357406616211,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3388,109,4.0874999999999995,6.202850818634033,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3389,36,1.3499999999999999,6.625894546508789,True,unvalidated peak; clutter-compatible,False
+00464501,3390,32,1.2,7.3037285804748535,True,unvalidated peak; clutter-compatible,False
+00464501,3390,47,1.7625,6.300661087036133,True,unvalidated peak; clutter-compatible,False
+00464501,3390,123,4.6125,7.541471004486084,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3391,43,1.6125,8.337920188903809,True,unvalidated peak; clutter-compatible,False
+00464501,3394,42,1.575,6.592041969299316,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3395,40,1.5,7.442731857299805,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3396,107,4.0125,6.104422569274902,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3397,37,1.3875,7.796869277954102,True,unvalidated peak; clutter-compatible,False
+00464501,3399,54,2.025,6.9082231521606445,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3399,81,3.0375,6.15034294128418,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3400,48,1.7999999999999998,6.389031887054443,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3402,42,1.575,6.334310531616211,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3403,42,1.575,8.979390144348145,True,unvalidated peak; clutter-compatible,False
+00464501,3403,74,2.775,6.906770706176758,True,unvalidated peak; clutter-compatible,False
+00464501,3404,77,2.8874999999999997,6.79520320892334,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3405,43,1.6125,6.628914833068848,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+00464501,3405,66,2.475,6.000927925109863,True,unvalidated peak; clutter-compatible,False
+00464501,3406,36,1.3499999999999999,10.750301361083984,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2869,34,1.275,7.803739547729492,True,unvalidated peak; clutter-compatible,False
+01983502,2869,47,1.7625,7.776866436004639,True,unvalidated peak; clutter-compatible,False
+01983502,2871,34,1.275,6.0999908447265625,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2872,38,1.425,10.031732559204102,True,unvalidated peak; clutter-compatible,False
+01983502,2872,66,2.475,7.360208511352539,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2872,87,3.2624999999999997,7.029874801635742,True,unvalidated peak; clutter-compatible,False
+01983502,2873,40,1.5,9.85372257232666,True,unvalidated peak; clutter-compatible,False
+01983502,2873,55,2.0625,6.611942291259766,True,unvalidated peak; clutter-compatible,False
+01983502,2873,155,5.8125,6.225693702697754,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2875,59,2.2125,7.363099575042725,True,unvalidated peak; clutter-compatible,False
+01983502,2878,36,1.3499999999999999,8.31175422668457,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2881,36,1.3499999999999999,8.664887428283691,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2882,38,1.425,6.280374050140381,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2882,113,4.2375,7.028189659118652,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2883,38,1.425,6.317931175231934,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2887,36,1.3499999999999999,6.283778667449951,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2888,77,2.8874999999999997,7.640594959259033,True,unvalidated peak; clutter-compatible,False
+01983502,2889,74,2.775,7.179193019866943,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2890,140,5.25,6.3256425857543945,True,unvalidated peak; clutter-compatible,False
+01983502,2891,49,1.8375,9.620960235595703,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2891,66,2.475,6.904210090637207,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2892,35,1.3125,7.380365371704102,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2893,39,1.4625,7.087867259979248,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2897,37,1.3875,6.751509189605713,True,unvalidated peak; clutter-compatible,False
+01983502,2897,45,1.6875,6.495658874511719,True,unvalidated peak; clutter-compatible,False
+01983502,2898,41,1.5374999999999999,6.036876678466797,True,unvalidated peak; clutter-compatible,False
+01983502,2898,54,2.025,7.765796661376953,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2899,57,2.1374999999999997,10.764814376831055,True,unvalidated peak; clutter-compatible,False
+01983502,2901,39,1.4625,8.585994720458984,True,unvalidated peak; clutter-compatible,False
+01983502,2902,39,1.4625,8.588386535644531,True,unvalidated peak; clutter-compatible,False
+01983502,2905,32,1.2,9.272455215454102,True,unvalidated peak; clutter-compatible,False
+01983502,2905,43,1.6125,10.075902938842773,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2905,185,6.9375,6.437540054321289,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2906,46,1.7249999999999999,10.02794361114502,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2907,42,1.575,9.15587043762207,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2907,164,6.1499999999999995,6.496649742126465,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2908,45,1.6875,9.180437088012695,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2908,55,2.0625,6.50018310546875,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2908,168,6.3,6.602170467376709,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2909,35,1.3125,6.421003341674805,True,unvalidated peak; clutter-compatible,False
+01983502,2909,43,1.6125,9.696150779724121,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2911,49,1.8375,8.011672019958496,True,unvalidated peak; clutter-compatible,False
+01983502,2911,92,3.4499999999999997,7.116534233093262,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2912,38,1.425,6.802471160888672,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2913,38,1.425,8.802156448364258,True,unvalidated peak; clutter-compatible,False
+01983502,2913,44,1.65,6.849930286407471,True,unvalidated peak; clutter-compatible,False
+01983502,2914,54,2.025,10.332294464111328,True,unvalidated peak; clutter-compatible,False
+01983502,2914,66,2.475,7.078418731689453,True,unvalidated peak; clutter-compatible,False
+01983502,2915,52,1.95,7.075775146484375,True,unvalidated peak; clutter-compatible,False
+01983502,2916,33,1.2375,7.57514762878418,True,unvalidated peak; clutter-compatible,False
+01983502,2916,57,2.1374999999999997,11.766557693481445,True,unvalidated peak; clutter-compatible,False
+01983502,2917,45,1.6875,7.1044769287109375,True,unvalidated peak; clutter-compatible,False
+01983502,2917,58,2.175,9.049509048461914,True,unvalidated peak; clutter-compatible,False
+01983502,2918,45,1.6875,8.891279220581055,True,unvalidated peak; clutter-compatible,False
+01983502,2918,57,2.1374999999999997,10.423439979553223,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2919,32,1.2,11.275750160217285,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2919,44,1.65,8.039607048034668,True,unvalidated peak; clutter-compatible,False
+01983502,2919,57,2.1374999999999997,6.670246124267578,True,unvalidated peak; clutter-compatible,False
+01983502,2919,74,2.775,6.579623699188232,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2920,42,1.575,6.618409633636475,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2922,35,1.3125,7.598111629486084,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2923,44,1.65,6.169728755950928,True,unvalidated peak; clutter-compatible,False
+01983502,2923,52,1.95,6.703485488891602,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2924,38,1.425,8.535637855529785,True,unvalidated peak; clutter-compatible,False
+01983502,2925,37,1.3875,7.826352119445801,True,unvalidated peak; clutter-compatible,False
+01983502,2925,72,2.6999999999999997,6.191039085388184,True,unvalidated peak; clutter-compatible,False
+01983502,2926,42,1.575,6.760265827178955,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2926,52,1.95,6.7859930992126465,True,unvalidated peak; clutter-compatible,False
+01983502,2927,40,1.5,11.321441650390625,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2928,43,1.6125,8.452678680419922,True,unvalidated peak; clutter-compatible,False
+01983502,2928,58,2.175,8.026957511901855,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2928,159,5.9624999999999995,6.5590691566467285,True,unvalidated peak; clutter-compatible,False
+01983502,2929,33,1.2375,9.519468307495117,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2929,43,1.6125,8.070756912231445,True,unvalidated peak; clutter-compatible,False
+01983502,2929,59,2.2125,11.05542278289795,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2930,35,1.3125,10.335321426391602,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2932,67,2.5124999999999997,10.014748573303223,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2933,43,1.6125,6.381283283233643,True,unvalidated peak; clutter-compatible,False
+01983502,2933,68,2.55,8.1234769821167,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+01983502,2933,141,5.2875,6.006134033203125,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2871,61,2.2875,8.152724266052246,True,unvalidated peak; clutter-compatible,False
+02004601,2871,158,5.925,6.039065837860107,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2873,45,1.6875,7.556475639343262,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2873,70,2.625,6.660409450531006,True,unvalidated peak; clutter-compatible,False
+02004601,2874,45,1.6875,8.889686584472656,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2876,50,1.875,6.936202049255371,True,unvalidated peak; clutter-compatible,False
+02004601,2876,60,2.25,6.721395492553711,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2876,65,2.4375,6.934959411621094,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2876,70,2.625,7.111731052398682,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2877,39,1.4625,11.702527046203613,True,unvalidated peak; clutter-compatible,False
+02004601,2877,53,1.9874999999999998,11.600301742553711,True,unvalidated peak; clutter-compatible,False
+02004601,2877,64,2.4,7.216771125793457,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2877,142,5.325,6.199772357940674,True,unvalidated peak; clutter-compatible,False
+02004601,2878,33,1.2375,11.311351776123047,True,unvalidated peak; clutter-compatible,False
+02004601,2878,53,1.9874999999999998,6.310983180999756,True,unvalidated peak; clutter-compatible,False
+02004601,2878,69,2.5875,6.757458686828613,True,unvalidated peak; clutter-compatible,False
+02004601,2878,134,5.0249999999999995,6.300807952880859,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2879,32,1.2,10.754270553588867,True,unvalidated peak; clutter-compatible,False
+02004601,2879,43,1.6125,8.116641998291016,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2879,53,1.9874999999999998,8.001147270202637,True,unvalidated peak; clutter-compatible,False
+02004601,2879,76,2.85,7.643808364868164,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2879,177,6.6375,6.6184892654418945,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2880,33,1.2375,11.029756546020508,True,unvalidated peak; clutter-compatible,False
+02004601,2880,48,1.7999999999999998,6.7386064529418945,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2880,53,1.9874999999999998,6.19138765335083,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2880,75,2.8125,9.552535057067871,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2880,177,6.6375,12.247745513916016,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2881,46,1.7249999999999999,6.48382568359375,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2881,75,2.8125,8.931912422180176,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2881,131,4.9125,6.336169242858887,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2881,177,6.6375,6.098187446594238,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2882,42,1.575,6.926312446594238,True,unvalidated peak; clutter-compatible,False
+02004601,2883,45,1.6875,6.827920913696289,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2887,36,1.3499999999999999,13.36968994140625,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2891,97,3.6374999999999997,8.576985359191895,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2892,84,3.15,9.198013305664062,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2893,89,3.3375,12.23263931274414,True,unvalidated peak; clutter-compatible,False
+02004601,2894,92,3.4499999999999997,8.178667068481445,True,unvalidated peak; clutter-compatible,False
+02004601,2896,109,4.0874999999999995,6.501018524169922,True,unvalidated peak; clutter-compatible,False
+02004601,2899,48,1.7999999999999998,6.164066314697266,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2902,42,1.575,6.4650373458862305,True,unvalidated peak; clutter-compatible,False
+02004601,2905,48,1.7999999999999998,7.036513805389404,True,unvalidated peak; clutter-compatible,False
+02004601,2905,64,2.4,6.315621852874756,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2906,41,1.5374999999999999,8.99677848815918,True,unvalidated peak; clutter-compatible,False
+02004601,2906,65,2.4375,7.26866340637207,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2906,151,5.6625,6.225985527038574,True,unvalidated peak; clutter-compatible,False
+02004601,2907,42,1.575,6.322755336761475,True,unvalidated peak; clutter-compatible,False
+02004601,2907,61,2.2875,9.383302688598633,True,unvalidated peak; clutter-compatible,False
+02004601,2907,70,2.625,7.820001125335693,True,unvalidated peak; clutter-compatible,False
+02004601,2908,33,1.2375,6.354782581329346,True,unvalidated peak; clutter-compatible,False
+02004601,2908,45,1.6875,7.5340423583984375,True,unvalidated peak; clutter-compatible,False
+02004601,2908,62,2.3249999999999997,10.292991638183594,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2908,86,3.225,7.235743522644043,True,unvalidated peak; clutter-compatible,False
+02004601,2908,142,5.325,6.315109729766846,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2909,39,1.4625,9.024139404296875,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2909,69,2.5875,6.353946685791016,True,unvalidated peak; clutter-compatible,False
+02004601,2909,90,3.375,6.507085800170898,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2911,67,2.5124999999999997,6.7435078620910645,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2912,48,1.7999999999999998,6.87883186340332,True,unvalidated peak; clutter-compatible,False
+02004601,2914,32,1.2,6.08577823638916,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2915,47,1.7625,6.74940299987793,True,unvalidated peak; clutter-compatible,False
+02004601,2915,77,2.8874999999999997,6.2271809577941895,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2917,34,1.275,6.076576232910156,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2918,44,1.65,6.10749626159668,True,unvalidated peak; clutter-compatible,False
+02004601,2919,43,1.6125,6.420931816101074,True,unvalidated peak; clutter-compatible,False
+02004601,2919,95,3.5625,6.66179084777832,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2920,38,1.425,11.28941535949707,True,unvalidated peak; clutter-compatible,False
+02004601,2921,82,3.0749999999999997,6.231937408447266,True,unvalidated peak; clutter-compatible,False
+02004601,2922,60,2.25,6.546693325042725,True,unvalidated peak; clutter-compatible,False
+02004601,2922,147,5.5125,6.343135833740234,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2922,153,5.7375,7.502498149871826,True,unvalidated peak; clutter-compatible,False
+02004601,2924,55,2.0625,6.106357097625732,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2925,41,1.5374999999999999,7.574226379394531,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2925,56,2.1,6.059048175811768,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2925,79,2.9625,6.173264980316162,True,unvalidated peak; clutter-compatible,False
+02004601,2926,35,1.3125,12.33188533782959,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2926,104,3.9,6.129741191864014,True,unvalidated peak; clutter-compatible,False
+02004601,2927,36,1.3499999999999999,6.596503734588623,True,unvalidated peak; clutter-compatible,False
+02004601,2928,35,1.3125,6.746369361877441,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2928,58,2.175,6.916642665863037,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2932,44,1.65,7.216761589050293,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2932,67,2.5124999999999997,7.310079574584961,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2932,78,2.925,6.310585975646973,True,unvalidated peak; clutter-compatible,False
+02004601,2932,99,3.7125,6.359099388122559,True,unvalidated peak; clutter-compatible,False
+02004601,2933,41,1.5374999999999999,7.4261980056762695,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2933,67,2.5124999999999997,6.5784382820129395,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False
+02004601,2935,40,1.5,7.697298526763916,True,unvalidated peak; clutter-compatible,False
+02004601,2935,143,5.3625,6.021027565002441,False,unvalidated peak; sidelobes and cross-track agreement unresolved,False

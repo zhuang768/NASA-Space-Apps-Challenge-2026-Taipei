@@ -55,6 +55,33 @@ web/          Reporting teammate's interactive prototype
 
 See the [data guide](data/README.md), [output guide](outputs/README.md) and [file inventory](docs/repository_inventory.csv).
 
+## Public site (Cloudflare)
+
+| Item | Value |
+|---|---|
+| Official URL | [nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev) |
+| Cloudflare account | Team account "zizi" (`Ziz81503@gmail.com's Account`) |
+| Account ID | `5a215a2a3ffc384e958ae5bcb53687d0` (not a secret) |
+| Service | Workers & Pages → Worker `nasa-space-apps-challenge-2026-taipei` (static assets only) |
+| Config | Root [`wrangler.jsonc`](wrangler.jsonc): Worker name, assets from `web/dist`, single-page-app fallback |
+| Auto-deploy | [`.github/workflows/cloudflare-pages.yml`](.github/workflows/cloudflare-pages.yml): every push to `main` builds `web/dist`, stamps `deployment.json`, runs `wrangler deploy`, then checks the live URL serves that commit |
+| Retired | `terramatch-mission-lab.pages.dev` (personal account) is no longer updated; do not share it |
+
+**Repository secrets** (Settings → Secrets and variables → Actions; values are pasted in GitHub only, never committed):
+
+- `CLOUDFLARE_ACCOUNT_ID` = the team account ID above.
+- `CLOUDFLARE_API_TOKEN` = a token created in the team account (My Profile → API Tokens → Create Token → *Edit Cloudflare Workers* template, scoped to the team account). Paste the token value only, with no quotes, spaces or command text.
+
+Until both secrets are set, the workflow stops at "Validate deployment configuration" and the site changes only through a manual deploy. Use either GitHub Actions or Cloudflare's own Git build for this Worker, not both.
+
+**Manual deploy** (needs Workers access to the team account):
+
+```bash
+python3 web/scripts/build_workbench_data.py
+(cd web && npm ci && npm run build)
+CLOUDFLARE_ACCOUNT_ID=5a215a2a3ffc384e958ae5bcb53687d0 npx wrangler deploy
+```
+
 ## Scientific boundaries
 
 - Define comparison windows in kilometers using the appropriate planetary radius. Equal angular grids do not imply equal physical support; interpolation creates no new detail.
@@ -216,3 +243,8 @@ Added a release stamp containing the commit/run identifiers to the built site an
 Owner action is still needed: replace the malformed CLOUDFLARE_API_TOKEN with a Pages-edit token scoped to the existing project's account and configure CLOUDFLARE_ACCOUNT_ID. End-to-end automatic publication is pending those settings and a successful real workflow run; workflow edits alone are not reported as completed automatic deployment. OpenAI Codex assisted CI changes, verification tests and English documentation.
 
 Validation correction: the first targeted test invocation failed during import and linting; corrected standalone-script loading and context-manager formatting, then reran successfully (3 passed; Ruff passed). The earlier stated test outcome applies to this corrected run.
+
+### 2026-11-14: Official site moved to the team Cloudflare Worker
+
+The team chose the Worker `nasa-space-apps-challenge-2026-taipei` in the team (zizi) Cloudflare account as the only official site (https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev). Its first upload held unbuilt source and rendered blank; it was redeployed from a local build of `main` and checked in the browser (three-view layout, no console errors). Added root `wrangler.jsonc`, retargeted the GitHub Actions workflow from the personal Pages project to `wrangler deploy` with release verification at the new URL, and retired the `pages.dev` link. Pending: set `CLOUDFLARE_ACCOUNT_ID` to the team account ID and replace `CLOUDFLARE_API_TOKEN` with a team-account Workers token. Claude Code assisted.
+

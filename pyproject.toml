@@ -15,6 +15,9 @@ dependencies = [
     "requests",
     "earthaccess",
     "netcdf4",
+    "scipy",
+    "shapely",
+    "pyshp",
 ]
 
 [project.optional-dependencies]

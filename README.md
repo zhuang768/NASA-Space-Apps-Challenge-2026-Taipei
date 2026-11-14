@@ -63,3 +63,18 @@ python3.12 -m venv .venv
 
 - 2026-11-13：使用 Cursor（Claude）整理挑戰說明與資料來源、建立專案骨架、撰寫火星資料的下載與讀取程式及測試。
 - 2026-11-14：使用 Gemini 整理 2026 挑戰規範與評分重點、確定聚焦地球與火星類比（排除月球）、整併四大主題與子題，並撰寫「地球無法複製的火星條件」、7 頁簡報架構與地球端資料下載規劃（`docs/`）。
+
+## 地球管線與第一輪實際結果（2026-11-14）
+
+已加入免登入 ETOPO 地形篩選、NASA POWER 候選氣候背景、Earthdata 月資料清單與下載入口。
+本輪是 **terrain-only regional screening**，尚未完成四面向綜合相似度。
+
+- 方法與執行：[docs/earth_pipeline.md](docs/earth_pipeline.md)
+- 候選交接：[outputs/analysis/candidate_handoff.md](outputs/analysis/candidate_handoff.md)
+- 完整工作回報：[docs/work_report_2026-11-14.md](docs/work_report_2026-11-14.md)
+- 數值結果與來源：`outputs/analysis/results_with_context.json`
+- 權重及尺度敏感度：`outputs/analysis/sensitivity.json`
+
+AI 使用紀錄補充：2026-11-14，OpenAI Codex 協助本輪地球資料程式、方法說明、測試及工作報告。
+已嘗試 Codex with ChatGPT 規劃審查，但工作區讀取服務失敗，未取得其獨立程式審查。
+所有候選數值來自下載資料與公開 API，未以 AI 生成地形或補造缺值。

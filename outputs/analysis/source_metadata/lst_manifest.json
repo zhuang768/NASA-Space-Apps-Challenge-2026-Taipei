@@ -1,0 +1,325 @@
+{
+  "product": {
+    "short_name": "MOD11C3",
+    "version": "061",
+    "native_resolution": "0.05 degree",
+    "role": "Earth day/night LST context; not equal to TES thermal inertia"
+  },
+  "start": "2023-01-01",
+  "end": "2024-12-31",
+  "granules": [
+    {
+      "concept_id": "G2602460624-LPCLOUD",
+      "granule_id": "MOD11C3.A2023001.061.2023033164320",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2023001.061.2023033164320/MOD11C3.A2023001.061.2023033164320.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-01-01T00:00:00.000Z",
+          "EndingDateTime": "2023-01-31T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2623614414-LPCLOUD",
+      "granule_id": "MOD11C3.A2023032.061.2023060110104",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2023032.061.2023060110104/MOD11C3.A2023032.061.2023060110104.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-02-01T00:00:00.000Z",
+          "EndingDateTime": "2023-02-28T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2647044567-LPCLOUD",
+      "granule_id": "MOD11C3.A2023060.061.2023093150817",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2023060.061.2023093150817/MOD11C3.A2023060.061.2023093150817.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-03-01T00:00:00.000Z",
+          "EndingDateTime": "2023-03-31T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2675258829-LPCLOUD",
+      "granule_id": "MOD11C3.A2023091.061.2023121144153",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2023091.061.2023121144153/MOD11C3.A2023091.061.2023121144153.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-04-01T00:00:00.000Z",
+          "EndingDateTime": "2023-04-30T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2704231363-LPCLOUD",
+      "granule_id": "MOD11C3.A2023121.061.2023153212208",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2023121.061.2023153212208/MOD11C3.A2023121.061.2023153212208.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-05-01T00:00:00.000Z",
+          "EndingDateTime": "2023-05-31T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2731257107-LPCLOUD",
+      "granule_id": "MOD11C3.A2023152.061.2023193054115",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2023152.061.2023193054115/MOD11C3.A2023152.061.2023193054115.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-06-01T00:00:00.000Z",
+          "EndingDateTime": "2023-06-30T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2746066581-LPCLOUD",
+      "granule_id": "MOD11C3.A2023182.061.2023215224507",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2023182.061.2023215224507/MOD11C3.A2023182.061.2023215224507.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-07-01T00:00:00.000Z",
+          "EndingDateTime": "2023-07-31T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2762873552-LPCLOUD",
+      "granule_id": "MOD11C3.A2023213.061.2023250152840",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2023213.061.2023250152840/MOD11C3.A2023213.061.2023250152840.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-08-01T00:00:00.000Z",
+          "EndingDateTime": "2023-08-31T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2776487173-LPCLOUD",
+      "granule_id": "MOD11C3.A2023244.061.2023274102304",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2023244.061.2023274102304/MOD11C3.A2023244.061.2023274102304.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-09-01T00:00:00.000Z",
+          "EndingDateTime": "2023-09-30T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2793704249-LPCLOUD",
+      "granule_id": "MOD11C3.A2023274.061.2023305093855",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2023274.061.2023305093855/MOD11C3.A2023274.061.2023305093855.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-10-01T00:00:00.000Z",
+          "EndingDateTime": "2023-10-31T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2810757182-LPCLOUD",
+      "granule_id": "MOD11C3.A2023305.061.2023336214247",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2023305.061.2023336214247/MOD11C3.A2023305.061.2023336214247.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-11-01T00:00:00.000Z",
+          "EndingDateTime": "2023-11-30T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2831209521-LPCLOUD",
+      "granule_id": "MOD11C3.A2023335.061.2024006162849",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2023335.061.2024006162849/MOD11C3.A2023335.061.2024006162849.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2023-12-01T00:00:00.000Z",
+          "EndingDateTime": "2023-12-31T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2854178815-LPCLOUD",
+      "granule_id": "MOD11C3.A2024001.061.2024034041307",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2024001.061.2024034041307/MOD11C3.A2024001.061.2024034041307.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-01-01T00:00:00.000Z",
+          "EndingDateTime": "2024-01-31T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2887401416-LPCLOUD",
+      "granule_id": "MOD11C3.A2024032.061.2024066085830",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2024032.061.2024066085830/MOD11C3.A2024032.061.2024066085830.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-02-01T00:00:00.000Z",
+          "EndingDateTime": "2024-02-29T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2918705274-LPCLOUD",
+      "granule_id": "MOD11C3.A2024061.061.2024094071904",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2024061.061.2024094071904/MOD11C3.A2024061.061.2024094071904.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-03-01T00:00:00.000Z",
+          "EndingDateTime": "2024-03-31T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G2970533777-LPCLOUD",
+      "granule_id": "MOD11C3.A2024092.061.2024124224158",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2024092.061.2024124224158/MOD11C3.A2024092.061.2024124224158.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-04-01T00:00:00.000Z",
+          "EndingDateTime": "2024-04-30T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3082166449-LPCLOUD",
+      "granule_id": "MOD11C3.A2024122.061.2024162162404",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2024122.061.2024162162404/MOD11C3.A2024122.061.2024162162404.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-05-01T00:00:00.000Z",
+          "EndingDateTime": "2024-05-31T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3146739221-LPCLOUD",
+      "granule_id": "MOD11C3.A2024153.061.2024187024328",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2024153.061.2024187024328/MOD11C3.A2024153.061.2024187024328.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-06-01T00:00:00.000Z",
+          "EndingDateTime": "2024-06-30T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3195628440-LPCLOUD",
+      "granule_id": "MOD11C3.A2024183.061.2024226150454",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2024183.061.2024226150454/MOD11C3.A2024183.061.2024226150454.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-07-01T00:00:00.000Z",
+          "EndingDateTime": "2024-07-31T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3247021997-LPCLOUD",
+      "granule_id": "MOD11C3.A2024214.061.2024267190123",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2024214.061.2024267190123/MOD11C3.A2024214.061.2024267190123.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-08-01T00:00:00.000Z",
+          "EndingDateTime": "2024-08-31T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3254239348-LPCLOUD",
+      "granule_id": "MOD11C3.A2024245.061.2024275162200",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2024245.061.2024275162200/MOD11C3.A2024245.061.2024275162200.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-09-01T00:00:00.000Z",
+          "EndingDateTime": "2024-09-30T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3285425077-LPCLOUD",
+      "granule_id": "MOD11C3.A2024275.061.2024310164017",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2024275.061.2024310164017/MOD11C3.A2024275.061.2024310164017.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-10-01T00:00:00.000Z",
+          "EndingDateTime": "2024-10-31T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3314007036-LPCLOUD",
+      "granule_id": "MOD11C3.A2024306.061.2024337182831",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2024306.061.2024337182831/MOD11C3.A2024306.061.2024337182831.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-11-01T00:00:00.000Z",
+          "EndingDateTime": "2024-11-30T23:59:59.000Z"
+        }
+      }
+    },
+    {
+      "concept_id": "G3358486651-LPCLOUD",
+      "granule_id": "MOD11C3.A2024336.061.2025003202020",
+      "urls": [
+        "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD11C3.061/MOD11C3.A2024336.061.2025003202020/MOD11C3.A2024336.061.2025003202020.hdf"
+      ],
+      "temporal_extent": {
+        "RangeDateTime": {
+          "BeginningDateTime": "2024-12-01T00:00:00.000Z",
+          "EndingDateTime": "2024-12-31T23:59:59.000Z"
+        }
+      }
+    }
+  ],
+  "status": "discovered_not_downloaded"
+}

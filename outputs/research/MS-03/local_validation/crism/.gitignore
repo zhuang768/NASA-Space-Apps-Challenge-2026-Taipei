@@ -1,0 +1,4 @@
+__pycache__/
+sources/*.html
+sources/*.htm
+sources/*_ddr1.img

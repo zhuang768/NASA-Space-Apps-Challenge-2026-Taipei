@@ -1,3 +1,5 @@
+> **歷史驗收快照，非目前狀態。** 本檔舊SHA、49列主張與PASS數只對原版本有效。2026-11-15最新狀態請讀[current_notes.md](current_notes.md)、[目前主張台帳](../../../outputs/integration/audit/claim_ledger_current.csv)及current_snapshot.json；MS-02完整16項修正另列。
+
 # 最終輪證據與主張驗收報告
 
 Team zasa｜NASA Space Apps 2026｜驗收日期 2026-11-15（Asia/Taipei）｜本報告只核對，不開新研究、不新增網站、不修改他人檔案。

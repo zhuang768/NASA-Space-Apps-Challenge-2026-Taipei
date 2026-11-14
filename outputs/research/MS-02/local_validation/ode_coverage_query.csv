@@ -1,0 +1,17 @@
+﻿dataset,product_type,count_in_box,notes,this_round_scope
+MRO CTX,EDR / non-PDS RDR,5,5 listed with IDs and dates (ME-14),preserved remote browser inventory; not independently re-run; no ice interpretation
+MRO HiRISE,Raw + Derived,0,none listed,preserved remote browser inventory; not independently re-run; no ice interpretation
+MRO SHARAD,EDR,3,3 observations,preserved remote browser inventory; not independently re-run; no ice interpretation
+MRO SHARAD,USRDRV2 radargram,3,same 3 observations,preserved remote browser inventory; not independently re-run; no ice interpretation
+MRO SHARAD,USGEOMV2,3,geometry; not opened,preserved remote browser inventory; not independently re-run; no ice interpretation
+MRO SHARAD,3D / clutter simulation,0,no clutter simulation available in ODE for this box,superseded for SHSIMU: 3 actual products+browse acquired; 3D separate and unassessed
+MRO CRISM,TRDR,180,not opened,mixedproduct inventory; REST TRDR177 vs browser180 unresolved; do not count383 as independent spectra
+MRO CRISM,MRDR4,136,not opened,mixedproduct inventory; REST TRDR177 vs browser180 unresolved; do not count383 as independent spectra
+MRO CRISM,DDR,61,not opened,mixedproduct inventory; REST TRDR177 vs browser180 unresolved; do not count383 as independent spectra
+MRO CRISM,VRDR,6,hyperspectral map products; not opened,mixedproduct inventory; REST TRDR177 vs browser180 unresolved; do not count383 as independent spectra
+MRO MCS,all,0,,preserved remote browser inventory; not independently re-run; no ice interpretation
+MRO RSS,all,28,radio science; not relevant to surface,preserved remote browser inventory; not independently re-run; no ice interpretation
+Mars Odyssey,all (incl. THEMIS),278,not opened,preserved remote browser inventory; not independently re-run; no ice interpretation
+Mars Express,all,350,not opened,preserved remote browser inventory; not independently re-run; no ice interpretation
+Mars Global Surveyor,all,14703,not opened; includes MOLA/MOC/TES-type products,preserved remote browser inventory; not independently re-run; no ice interpretation
+Viking,all,85,not opened,preserved remote browser inventory; not independently re-run; no ice interpretation

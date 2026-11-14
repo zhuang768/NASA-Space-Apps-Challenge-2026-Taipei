@@ -1,0 +1,36 @@
+{
+  "CTX_EDR": {
+    "catalog_records": 5,
+    "science_records": 5,
+    "intersecting_science_records": 5,
+    "union_roi_fraction": 1.0
+  },
+  "SHARAD_USRDRV2": {
+    "catalog_records": 3,
+    "science_records": 3,
+    "intersecting_science_records": 3,
+    "union_roi_fraction": null
+  },
+  "CRISM_TRDR": {
+    "catalog_records": 177,
+    "science_records": 59,
+    "intersecting_science_records": 59,
+    "union_roi_fraction": 1.0
+  },
+  "HIRISE_RDR4": {
+    "catalog_records": 0,
+    "science_records": 0,
+    "intersecting_science_records": 0,
+    "union_roi_fraction": 0.0
+  },
+  "HIRISE_EDR": {
+    "status": "query unsupported; not zero coverage",
+    "catalog_records": null
+  },
+  "CRISM_MTRDR": {
+    "catalog_records": 0,
+    "science_records": 0,
+    "intersecting_science_records": 0,
+    "union_roi_fraction": 0.0
+  }
+}

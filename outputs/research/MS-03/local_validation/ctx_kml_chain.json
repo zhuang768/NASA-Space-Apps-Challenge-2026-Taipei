@@ -1,0 +1,226 @@
+[
+  {
+    "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/doc.kml",
+    "source_file": "ctx_centre_level_00.kml",
+    "overlays": [],
+    "next": [
+      "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/1/0/1.kml"
+    ]
+  },
+  {
+    "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/1/0/1.kml",
+    "source_file": "ctx_centre_level_01.kml",
+    "overlays": [
+      {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/1/0/1.png",
+        "bounds": {
+          "north": 85.0511287798066,
+          "south": 0.0,
+          "east": 0.0,
+          "west": -180.0
+        }
+      }
+    ],
+    "next": [
+      "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/2/0/2.kml"
+    ]
+  },
+  {
+    "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/2/0/2.kml",
+    "source_file": "ctx_centre_level_02.kml",
+    "overlays": [
+      {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/2/0/2.png",
+        "bounds": {
+          "north": 66.51326044311185,
+          "south": 0.0,
+          "east": -90.0,
+          "west": -180.0
+        }
+      }
+    ],
+    "next": [
+      "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/3/1/5.kml"
+    ]
+  },
+  {
+    "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/3/1/5.kml",
+    "source_file": "ctx_centre_level_03.kml",
+    "overlays": [
+      {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/3/1/5.png",
+        "bounds": {
+          "north": 66.51326044311185,
+          "south": 40.97989806962016,
+          "east": -90.0,
+          "west": -135.0
+        }
+      }
+    ],
+    "next": [
+      "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/4/2/11.kml"
+    ]
+  },
+  {
+    "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/4/2/11.kml",
+    "source_file": "ctx_centre_level_04.kml",
+    "overlays": [
+      {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/4/2/11.png",
+        "bounds": {
+          "north": 66.51326044311185,
+          "south": 55.7765730186677,
+          "east": -112.5,
+          "west": -135.0
+        }
+      }
+    ],
+    "next": [
+      "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/5/5/22.kml"
+    ]
+  },
+  {
+    "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/5/5/22.kml",
+    "source_file": "ctx_centre_level_05.kml",
+    "overlays": [
+      {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/5/5/22.png",
+        "bounds": {
+          "north": 61.60639637138628,
+          "south": 55.7765730186677,
+          "east": -112.5,
+          "west": -123.75
+        }
+      }
+    ],
+    "next": [
+      "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/6/11/44.kml"
+    ]
+  },
+  {
+    "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/6/11/44.kml",
+    "source_file": "ctx_centre_level_06.kml",
+    "overlays": [
+      {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/6/11/44.png",
+        "bounds": {
+          "north": 58.81374171570782,
+          "south": 55.7765730186677,
+          "east": -112.5,
+          "west": -118.125
+        }
+      }
+    ],
+    "next": [
+      "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/7/22/89.kml"
+    ]
+  },
+  {
+    "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/7/22/89.kml",
+    "source_file": "ctx_centre_level_07.kml",
+    "overlays": [
+      {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/7/22/89.png",
+        "bounds": {
+          "north": 58.81374171570782,
+          "south": 57.32652122521706,
+          "east": -115.3125,
+          "west": -118.125
+        }
+      }
+    ],
+    "next": [
+      "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/8/44/178.kml"
+    ]
+  },
+  {
+    "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/8/44/178.kml",
+    "source_file": "ctx_centre_level_08.kml",
+    "overlays": [
+      {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/8/44/178.png",
+        "bounds": {
+          "north": 58.07787626787517,
+          "south": 57.32652122521706,
+          "east": -116.71874999999999,
+          "west": -118.125
+        }
+      }
+    ],
+    "next": [
+      "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/9/88/357.kml"
+    ]
+  },
+  {
+    "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/9/88/357.kml",
+    "source_file": "ctx_centre_level_09.kml",
+    "overlays": [
+      {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/9/88/357.png",
+        "bounds": {
+          "north": 58.07787626787517,
+          "south": 57.70414723434193,
+          "east": -117.421875,
+          "west": -118.125
+        }
+      }
+    ],
+    "next": [
+      "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/10/177/714.kml"
+    ]
+  },
+  {
+    "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/10/177/714.kml",
+    "source_file": "ctx_centre_level_10.kml",
+    "overlays": [
+      {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/10/177/714.png",
+        "bounds": {
+          "north": 57.89149735271031,
+          "south": 57.70414723434193,
+          "east": -117.421875,
+          "west": -117.7734375
+        }
+      }
+    ],
+    "next": [
+      "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/11/354/1428.kml"
+    ]
+  },
+  {
+    "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/11/354/1428.kml",
+    "source_file": "ctx_centre_level_11.kml",
+    "overlays": [
+      {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/11/354/1428.png",
+        "bounds": {
+          "north": 57.79794388498275,
+          "south": 57.70414723434193,
+          "east": -117.59765625,
+          "west": -117.7734375
+        }
+      }
+    ],
+    "next": [
+      "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/12/708/2856.kml"
+    ]
+  },
+  {
+    "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/12/708/2856.kml",
+    "source_file": "ctx_centre_level_12.kml",
+    "overlays": [
+      {
+        "url": "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/12/708/2856.png",
+        "bounds": {
+          "north": 57.75107598132101,
+          "south": 57.70414723434193,
+          "east": -117.685546875,
+          "west": -117.7734375
+        }
+      }
+    ],
+    "next": [
+      "https://murray-lab.caltech.edu/CTX/V01/kml/MurrayLab_GlobalCTXMosaic_V01/E-120_E-104_N56_N68/13/1416/5713.kml"
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+step,url,status,result
+root supplied source retrieval,https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2102/trdr/2008/2008_191/tod0000b701/tod0000b701_02_if204l_trr3.img,200,"file acquired by root; child checked exact local bytes, label layout and SHA256"
+root supplied source retrieval,https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2102/trdr/2008/2008_191/tod0000b701/tod0000b701_02_if204l_trr3.lbl,200,"file acquired by root; child checked exact local bytes, label layout and SHA256"
+root supplied source retrieval,https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2102/trdr/2008/2008_191/tod0000b701/tod0000b701_02_if204l_trr3.xml,200,"file acquired by root; child checked exact local bytes, label layout and SHA256"
+child initial MSP label/DDR fetch via node_repl,MSP0002DE3B label/XML and ODE DDR match query (not selected TOD),execution aborted; no output/files obtained,No usable response status or bytes; stopped further network per parent instruction; no zero-coverage inference

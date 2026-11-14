@@ -1,0 +1,89 @@
+{
+  "cell_centre": [
+    52.75,
+    168.25
+  ],
+  "cell_size_km": [
+    17.938,
+    29.636
+  ],
+  "distance_cell_centre_to_study_extent_km": {
+    "Bramson2015_CTX_search": 463.6,
+    "Viola2015_region": 421.1,
+    "Ramsdale2019_strip": 628.7,
+    "Sejourne2019_strip": 2534.5,
+    "Pathare_Arcadia_box": 563.9
+  },
+  "strip_half_width_deg_at_52.75N": 4.181,
+  "inside_Arcadia_Planitia_bbox_wikipedia_secondary": true,
+  "km_to_west_edge_of_that_bbox_along_parallel": 84.3,
+  "inside_MC7_Cebrenia_quadrangle": true,
+  "km_to_MC7_east_edge_180E_along_parallel": 421.6,
+  "morgan2025_nearest_3_km": [
+    [
+      389.0,
+      "Site 46"
+    ],
+    [
+      475.6,
+      "Site 4"
+    ],
+    [
+      503.6,
+      "Site 1"
+    ]
+  ],
+  "cell_area_km2": 531.6,
+  "MONS_550km_FWHM_circle_area_km2": 237583,
+  "cell_fraction_of_MONS_FWHM_circle": 0.00224,
+  "Piqueux2019_pixel_deg": 0.5,
+  "SWIM_1_5m": {
+    "min": 0.5,
+    "median": 0.5,
+    "max": 1.0,
+    "mean": 0.6224985573606443,
+    "share_at_max_if_only_two_values_0.5_and_1.0": 0.245,
+    "cells_at_1.0_if_only_two_values_of_100": 24.5,
+    "assumption": "only two distinct values (0.5, 1.0); NOT verified, per-cell grid not available locally"
+  },
+  "SWIM_0_1m": {
+    "min": 0.6649999618530273,
+    "median": 0.6649999618530273,
+    "max": 0.7844818234443665,
+    "mean": 0.6929869824270689,
+    "note": "median == min -> at least half of the 100 cells share the minimum value"
+  },
+  "native_cell_spacing_deg_inferred": 0.05,
+  "TES_TI": {
+    "mean": 217.26900902801015,
+    "median": 213.0,
+    "min": 177.0,
+    "max": 276.0,
+    "std": 18.246,
+    "valid": 93,
+    "native": 100,
+    "mask_zero_excluded": 7
+  },
+  "MOLA": {
+    "mean_m": -3898.719,
+    "min_m": -3956.0,
+    "max_m": -3839.0,
+    "relief_m": 117.0,
+    "slope_mean_deg": 0.3018,
+    "slope_max_deg": 0.9253,
+    "cells": 64
+  },
+  "CDOD": {
+    "MY34_mean": 0.125384,
+    "MY34_p95": 0.240015,
+    "MY35_mean": 0.110066,
+    "MY35_p95": 0.17312,
+    "native_cell": [
+      52.5,
+      168.0
+    ],
+    "note": "3 deg grid, 9.3 um absorption column; not convertible to ground cover accumulation"
+  },
+  "UV_valley_anchor_to_W_station_km": 1.061,
+  "CS1_to_ADE_km": 5.969
+}

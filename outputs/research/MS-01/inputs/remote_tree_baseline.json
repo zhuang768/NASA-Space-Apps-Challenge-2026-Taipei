@@ -1,0 +1,505 @@
+{
+  "baseline_sha": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+  "checked_date": "2026-11-14",
+  "api": "GitHub Git Trees API; recursive=true",
+  "sha": "bd190ecb1fae3259c235d309b010ebea91412251",
+  "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/trees/bd190ecb1fae3259c235d309b010ebea91412251",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec3a6c7ca299a024220e8827a63a1244e1ae1b8b",
+      "size": 148,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/ec3a6c7ca299a024220e8827a63a1244e1ae1b8b"
+    },
+    {
+      "path": "CURRENT_STATUS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6395aa733d2459e0df149b1cb6d589144fed549",
+      "size": 1637,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/c6395aa733d2459e0df149b1cb6d589144fed549"
+    },
+    {
+      "path": "DATA_LICENSES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b660efcacb760d8c5d49e4fc8bb4d390d1b81a75",
+      "size": 1776,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/b660efcacb760d8c5d49e4fc8bb4d390d1b81a75"
+    },
+    {
+      "path": "PUBLICATION.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdc153bd7d05ed210f4fa959e5a28847ae92f417",
+      "size": 1611,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/fdc153bd7d05ed210f4fa959e5a28847ae92f417"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fd931ec82f5502d8479464f88f32a50dae3f574",
+      "size": 5008,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/5fd931ec82f5502d8479464f88f32a50dae3f574"
+    },
+    {
+      "path": "analog",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "096c446b8a447fab43279ed47bb61923ef07f01f",
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/trees/096c446b8a447fab43279ed47bb61923ef07f01f"
+    },
+    {
+      "path": "analog/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d9380a6d4367a235d0be386db174c0e96f14486",
+      "size": 75,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/2d9380a6d4367a235d0be386db174c0e96f14486"
+    },
+    {
+      "path": "analog/dust.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7630d2c63ee4e13adabf0820ae2027e31817bd5d",
+      "size": 3781,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/7630d2c63ee4e13adabf0820ae2027e31817bd5d"
+    },
+    {
+      "path": "analog/mars.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a46768f81b923d105af6c9d1affc5c477bb77310",
+      "size": 2780,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/a46768f81b923d105af6c9d1affc5c477bb77310"
+    },
+    {
+      "path": "analog/mars_profiles.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abbc7c573218fc448b3149cf0b9540cfa78de3c2",
+      "size": 1946,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/abbc7c573218fc448b3149cf0b9540cfa78de3c2"
+    },
+    {
+      "path": "analog/pds.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b11f6a7b620b59c1b6deb89c37b059935572353",
+      "size": 3146,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/1b11f6a7b620b59c1b6deb89c37b059935572353"
+    },
+    {
+      "path": "analog/regional_temperature.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ca713e5449d52ce8151436318c2f778a70659d4",
+      "size": 4156,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/4ca713e5449d52ce8151436318c2f778a70659d4"
+    },
+    {
+      "path": "analog/stack.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eae4113f643b51a391d66df7ebe85b4929a71543",
+      "size": 4546,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/eae4113f643b51a391d66df7ebe85b4929a71543"
+    },
+    {
+      "path": "analog/swim.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c86703fcd02ee5e2166cc4cc414caa26003d365a",
+      "size": 3214,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/c86703fcd02ee5e2166cc4cc414caa26003d365a"
+    },
+    {
+      "path": "analog/terrain.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7402ed815c9e170de5fd01ca29956f134e70fdcb",
+      "size": 1543,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/7402ed815c9e170de5fd01ca29956f134e70fdcb"
+    },
+    {
+      "path": "config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "17ef6317d1e4f46639f6da9af9a446d10cec7d8a",
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/trees/17ef6317d1e4f46639f6da9af9a446d10cec7d8a"
+    },
+    {
+      "path": "config/raw_inputs_manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d370f0667f7060eb876c5f7ba10d4c77467b6dec",
+      "size": 4349,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/d370f0667f7060eb876c5f7ba10d4c77467b6dec"
+    },
+    {
+      "path": "config/reselection_exclusions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6adc0a24eab6dab06ba11a3f1ae349e47ff6a7da",
+      "size": 1554,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/6adc0a24eab6dab06ba11a3f1ae349e47ff6a7da"
+    },
+    {
+      "path": "config/source_context.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "002f7efd976f37bd7d10dae594ab335456c76dbf",
+      "size": 8806,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/002f7efd976f37bd7d10dae594ab335456c76dbf"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "075d5a55d2c518f420811f9375c271039cbde02b",
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/trees/075d5a55d2c518f420811f9375c271039cbde02b"
+    },
+    {
+      "path": "docs/ARCHIVE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d004a24eb356dcbfdc7b81df73e7c7c63f869d9",
+      "size": 1111,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/8d004a24eb356dcbfdc7b81df73e7c7c63f869d9"
+    },
+    {
+      "path": "docs/REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "776a7e71fe8f39a09d4051c431501e988f0e2571",
+      "size": 7660,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/776a7e71fe8f39a09d4051c431501e988f0e2571"
+    },
+    {
+      "path": "docs/REPRODUCE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd362bbb343be4227d893c0d1e3d392375ced7ca",
+      "size": 3799,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/fd362bbb343be4227d893c0d1e3d392375ced7ca"
+    },
+    {
+      "path": "outputs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "afa855cf58ea86ccbb82997a01e83c960ddf6d50",
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/trees/afa855cf58ea86ccbb82997a01e83c960ddf6d50"
+    },
+    {
+      "path": "outputs/research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef60cd13b427db2838cc8de526fb9685249984b5",
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/trees/ef60cd13b427db2838cc8de526fb9685249984b5"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1d00973095f68ecbf59d05c4f55b22c9785ef58",
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/trees/d1d00973095f68ecbf59d05c4f55b22c9785ef58"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/COMPUTATION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01d6d97088e06a17e53525a3aa618be9602783cf",
+      "size": 9609,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/01d6d97088e06a17e53525a3aa618be9602783cf"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43b4d0397e3ab27b8cb003ad7e70caa87699dff5",
+      "size": 1987,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/43b4d0397e3ab27b8cb003ad7e70caa87699dff5"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/all_data_usage.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18542b97e34899f3cfd5f0c3d5c8141cbf559d9a",
+      "size": 803,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/18542b97e34899f3cfd5f0c3d5c8141cbf559d9a"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/bounded_prior_site_audit.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd7deeb0efb248025b8d454a29562b0dd3f36d7d",
+      "size": 9162,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/fd7deeb0efb248025b8d454a29562b0dd3f36d7d"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/candidate_dust_series.csv.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a0e0fcb535795d9ad94991e915b40eed81da917",
+      "size": 129644,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/8a0e0fcb535795d9ad94991e915b40eed81da917"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/candidate_map.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd5a928f8c713d7d03f4ce67d81ea7406bc89920",
+      "size": 348396,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/dd5a928f8c713d7d03f4ce67d81ea7406bc89920"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/candidate_mcs_bins.csv.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70d4128de4d13a4a2f7e554b9e7759be1b5dd41a",
+      "size": 17830,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/70d4128de4d13a4a2f7e554b9e7759be1b5dd41a"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/candidate_metrics.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1010bcb47839b07e32588afcc3a7aedf33a2e6d",
+      "size": 6825,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/b1010bcb47839b07e32588afcc3a7aedf33a2e6d"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/candidate_native_evidence.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "faf4421c57da38852972efe36623c603c29eda4c",
+      "size": 38177,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/faf4421c57da38852972efe36623c603c29eda4c"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/cleanup_rebuild_validation.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1c03065d051ffcd6dce592501199c61ff356503",
+      "size": 4942,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/c1c03065d051ffcd6dce592501199c61ff356503"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/exploratory_candidates.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f99b5a448491399cbbbf604ad5f587d65bbdf90",
+      "size": 18828,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/8f99b5a448491399cbbbf604ad5f587d65bbdf90"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/final_candidates.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2371ade1c27087efaa165acb98b7541266eaa606",
+      "size": 5897,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/2371ade1c27087efaa165acb98b7541266eaa606"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/fixed_targets.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2598c77271c81364533480b257bd061f509db74",
+      "size": 412,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/e2598c77271c81364533480b257bd061f509db74"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/known_ice_points_morgan2025.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c1b1b1c672873d5ed0f54b07357dcf7fe5ec975",
+      "size": 567,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/7c1b1b1c672873d5ed0f54b07357dcf7fe5ec975"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/mars_three_candidates_report_zh.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1282e722255761a25879e0e554b80ef824489d84",
+      "size": 469106,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/1282e722255761a25879e0e554b80ef824489d84"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/method.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cbfcb7034e654c7fefa7cf3f1336086d2e3c47a",
+      "size": 7543,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/8cbfcb7034e654c7fefa7cf3f1336086d2e3c47a"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/numerical_validation.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfc94bbd223b7f2b96b5c71b23efe4852721696d",
+      "size": 1095,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/cfc94bbd223b7f2b96b5c71b23efe4852721696d"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/pareto_front.csv.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0112f8255684b55f5499850aee66d75a8dbb314",
+      "size": 75902,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/a0112f8255684b55f5499850aee66d75a8dbb314"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/preservation_check.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec76799cf29a8632ed85dcf5982adffd8138d132",
+      "size": 3714,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/ec76799cf29a8632ed85dcf5982adffd8138d132"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff21a1256666d25a45a59a245f962e967768bb7f",
+      "size": 16524,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/ff21a1256666d25a45a59a245f962e967768bb7f"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/report_manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a93665cf496a5ec99256e9ca44f9ea55ac21b2e0",
+      "size": 2479,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/a93665cf496a5ec99256e9ca44f9ea55ac21b2e0"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/report_validation.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92adc64c2bd9db1296aae982869b1926dcc892b0",
+      "size": 1012,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/92adc64c2bd9db1296aae982869b1926dcc892b0"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/selected_targets.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a93c2ef45ef78922ec4ab88498ce92ef6aafabf5",
+      "size": 3434,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/a93c2ef45ef78922ec4ab88498ce92ef6aafabf5"
+    },
+    {
+      "path": "release_manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a39b4bf38e44465137f4687af8bd55654b6e0ad9",
+      "size": 9270,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/a39b4bf38e44465137f4687af8bd55654b6e0ad9"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "222a399ead761dd414ba3d0591989d90c2773a22",
+      "size": 220,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/222a399ead761dd414ba3d0591989d90c2773a22"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "95057c18dd3e1da7e39d7f8218594cfcb134f2b3",
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/trees/95057c18dd3e1da7e39d7f8218594cfcb134f2b3"
+    },
+    {
+      "path": "scripts/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "scripts/build_mars_stack.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "777c94163dde92bdb720c53e21946cae93e2cc8b",
+      "size": 1310,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/777c94163dde92bdb720c53e21946cae93e2cc8b"
+    },
+    {
+      "path": "scripts/download_mars.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2455d8329f6e0378e70d2298a4b551fea378acf",
+      "size": 3054,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/c2455d8329f6e0378e70d2298a4b551fea378acf"
+    },
+    {
+      "path": "scripts/rebuild.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eeed2514ded79b51a4d35d5ca7f403a738702f32",
+      "size": 1539,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/eeed2514ded79b51a4d35d5ca7f403a738702f32"
+    },
+    {
+      "path": "scripts/reporting",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b0f0e304169e5abda4aa5015c007486992cecdeb",
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/trees/b0f0e304169e5abda4aa5015c007486992cecdeb"
+    },
+    {
+      "path": "scripts/reporting/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "scripts/reporting/build_mars_reselection_report.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0aadb73b80454df058a390b1163f5bc45e9e467",
+      "size": 33651,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/c0aadb73b80454df058a390b1163f5bc45e9e467"
+    },
+    {
+      "path": "scripts/research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "48f611b70c2327934cd20a0e08aa60d7fb1ac459",
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/trees/48f611b70c2327934cd20a0e08aa60d7fb1ac459"
+    },
+    {
+      "path": "scripts/research/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "scripts/research/mars_reselection_20261114.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90507e7254077b7f81a9a4722423a6aabaea8611",
+      "size": 30764,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/90507e7254077b7f81a9a4722423a6aabaea8611"
+    },
+    {
+      "path": "scripts/verify_release.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c40d3df0b409caa20d023ba2b04ef7e553ecbaf",
+      "size": 2186,
+      "url": "https://api.github.com/repos/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/git/blobs/1c40d3df0b409caa20d023ba2b04ef7e553ecbaf"
+    }
+  ],
+  "truncated": false
+}

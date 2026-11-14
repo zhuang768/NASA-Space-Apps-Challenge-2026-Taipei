@@ -1,0 +1,673 @@
+{
+  "scope": "MS-01 native inputs re-read; no global rescreen, no new observations",
+  "status": "PASS",
+  "latitude": 56.75,
+  "longitude_east": 72.75,
+  "reference_native_evidence": "outputs/research/MS-01/inputs/candidate_native_evidence.baseline.json",
+  "reference_csv": "outputs/research/MS-01/inputs/final_candidates.baseline.csv",
+  "all_baseline_files_match": false,
+  "required_raw_files_match": true,
+  "bounds": {
+    "south": 56.5,
+    "north": 57,
+    "west": 72.5,
+    "east": 73
+  },
+  "aggregation": "cos(latitude) weighted native grid-centre means; [south,north),[west,east); no interpolation",
+  "source_hashes": [
+    {
+      "path": "data/raw/mars/megt90n000eb.img",
+      "source_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg016/megt90n000eb.img",
+      "required_for_this_native_recompute": true,
+      "bytes": 33177600,
+      "sha256": "d18d9b9ab8c5516d02e157dd2cde0f1d0d160c21940e953ba22391269a545e7b",
+      "expected_sha256": "d18d9b9ab8c5516d02e157dd2cde0f1d0d160c21940e953ba22391269a545e7b",
+      "matches": true
+    },
+    {
+      "path": "data/raw/mars/megt90n000eb.lbl",
+      "source_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg016/megt90n000eb.lbl",
+      "required_for_this_native_recompute": true,
+      "bytes": 4813,
+      "sha256": "0f2bd919dddb86d83489a008d3007bd915507c892a0f22ce49ad5dd5d2fc7d8a",
+      "expected_sha256": "0f2bd919dddb86d83489a008d3007bd915507c892a0f22ce49ad5dd5d2fc7d8a",
+      "matches": true
+    },
+    {
+      "path": "data/raw/mars/global_ti_night_2007.img",
+      "source_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_night_2007.img",
+      "required_for_this_native_recompute": true,
+      "bytes": 51840000,
+      "sha256": "faee32838da40045ee7ebd21bed156cc649620312c01165b556d77a2128258f4",
+      "expected_sha256": "faee32838da40045ee7ebd21bed156cc649620312c01165b556d77a2128258f4",
+      "matches": true
+    },
+    {
+      "path": "data/raw/mars/global_ti_night_2007.lbl",
+      "source_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_night_2007.lbl",
+      "required_for_this_native_recompute": true,
+      "bytes": 2415,
+      "sha256": "c1c897d9bd5399292166f99d84a29a73e42432cedfb9dd9a81a1441b3004b72b",
+      "expected_sha256": "c1c897d9bd5399292166f99d84a29a73e42432cedfb9dd9a81a1441b3004b72b",
+      "matches": true
+    },
+    {
+      "path": "data/raw/mars/global_ti_msk_night_2007.img",
+      "source_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_msk_night_2007.img",
+      "required_for_this_native_recompute": true,
+      "bytes": 25920000,
+      "sha256": "fca7ec6fab8b3e81226e1d14dbb3a22509ad111bda4e03bf2b64f050bd550d0b",
+      "expected_sha256": "fca7ec6fab8b3e81226e1d14dbb3a22509ad111bda4e03bf2b64f050bd550d0b",
+      "matches": true
+    },
+    {
+      "path": "data/raw/mars/global_ti_msk_night_2007.lbl",
+      "source_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_msk_night_2007.lbl",
+      "required_for_this_native_recompute": true,
+      "bytes": 2485,
+      "sha256": "164838970c1405b2dc6cf367a74c60c0de96d18f05f5e924db6c00f77038ee8a",
+      "expected_sha256": "164838970c1405b2dc6cf367a74c60c0de96d18f05f5e924db6c00f77038ee8a",
+      "matches": true
+    },
+    {
+      "path": "data/raw/mars/SWIM2_c0_1.tif",
+      "source_url": "https://swim.psi.edu/output/SWIM2/Global/Composite/SWIM2_c0_1.tif",
+      "required_for_this_native_recompute": true,
+      "bytes": 70995819,
+      "sha256": "0dd22f8a07172112c68fb304af9966bcdd788bbedf6ea40187a30f70130fea37",
+      "expected_sha256": "0dd22f8a07172112c68fb304af9966bcdd788bbedf6ea40187a30f70130fea37",
+      "matches": true
+    },
+    {
+      "path": "data/raw/mars/SWIM2_c1_5.tif",
+      "source_url": "https://swim.psi.edu/output/SWIM2/Global/Composite/SWIM2_c1_5.tif",
+      "required_for_this_native_recompute": true,
+      "bytes": 70995805,
+      "sha256": "2ade8ab6aa4aae1c51ec71f10139e9b9ffa0a31ef1948566d0929ab7e91713ed",
+      "expected_sha256": "2ade8ab6aa4aae1c51ec71f10139e9b9ffa0a31ef1948566d0929ab7e91713ed",
+      "matches": true
+    },
+    {
+      "path": "data/raw/mars/dustscenario_MY35_v2-5.nc",
+      "source_url": "https://www-mars.lmd.jussieu.fr/mars/dust_climatology/dataset_v2/dustscenario_MY35_v2-5.nc",
+      "required_for_this_native_recompute": true,
+      "bytes": 57832064,
+      "sha256": "95613d68e2d03904bfd93612f2fe70e84f8410b00ef33cafe59d77d50a41063a",
+      "expected_sha256": "95613d68e2d03904bfd93612f2fe70e84f8410b00ef33cafe59d77d50a41063a",
+      "matches": true
+    },
+    {
+      "path": "data/raw/mars/dustscenario_MY34_v2-5.nc",
+      "source_url": "https://www-mars.lmd.jussieu.fr/mars/dust_climatology/dataset_v2/dustscenario_MY34_v2-5.nc",
+      "required_for_this_native_recompute": true,
+      "bytes": 57814188,
+      "sha256": "032b9627247e9cc4397c9f007cc8f97a01acf689006b46ff3a51e5abed828797",
+      "expected_sha256": "032b9627247e9cc4397c9f007cc8f97a01acf689006b46ff3a51e5abed828797",
+      "matches": true
+    },
+    {
+      "path": "data/raw/mars/temperature/mcs_corrected/MCS_tsurf_corrected.nc",
+      "source_url": "https://zenodo.org/api/records/17947556/files/MCS_tsurf_corrected.nc/content",
+      "required_for_this_native_recompute": true,
+      "bytes": 14940903,
+      "sha256": "a75dbcd5e77fbc0d78591e62427843f0dadde10cd0e87e7767789025a2b7fecd",
+      "expected_sha256": "a75dbcd5e77fbc0d78591e62427843f0dadde10cd0e87e7767789025a2b7fecd",
+      "matches": true
+    },
+    {
+      "path": "data/processed/mars_stack_0p5deg.nc",
+      "source_url": null,
+      "required_for_this_native_recompute": false,
+      "bytes": 9341696,
+      "sha256": "a351dada81b4105825b8e3baa1d060a4f3ee25c09fef303409abdd36dbdcf7aa",
+      "expected_sha256": "6575c84778146fa28e46b702f312d831ab1a9598b7fba6fb8cc46481a202ac36",
+      "matches": false
+    },
+    {
+      "path": "config/raw_inputs_manifest.json",
+      "source_url": null,
+      "required_for_this_native_recompute": false,
+      "bytes": null,
+      "sha256": null,
+      "expected_sha256": "fef7c389371c06a659cd8225f1fe4a2879d7f2b24591d5e4a21708b9acdb2e8f",
+      "matches": false
+    },
+    {
+      "path": "config/reselection_exclusions.json",
+      "source_url": null,
+      "required_for_this_native_recompute": false,
+      "bytes": null,
+      "sha256": null,
+      "expected_sha256": "db5d24aa4930aa0fc77d7f1ac00d0b7eeee2674952ee7e198b3f63c2b5c0eb62",
+      "matches": false
+    },
+    {
+      "path": "config/source_context.json",
+      "source_url": null,
+      "required_for_this_native_recompute": false,
+      "bytes": null,
+      "sha256": null,
+      "expected_sha256": "f1b024620d7759766fa784f4158e9045b177ba5c1a21a5ae663117b7ba8a1fce",
+      "matches": false
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/fixed_targets.json",
+      "source_url": null,
+      "required_for_this_native_recompute": false,
+      "bytes": 412,
+      "sha256": "e819f6825da591bd09d816aebec93d21981b81b8562bad384414be58dbd796cc",
+      "expected_sha256": "e819f6825da591bd09d816aebec93d21981b81b8562bad384414be58dbd796cc",
+      "matches": true
+    }
+  ],
+  "comparisons": [
+    {
+      "quantity": "mola_elevation_m_areoid.native_cells",
+      "recomputed": 64,
+      "reference_json": 64,
+      "reference_csv": 64.0,
+      "matches": true
+    },
+    {
+      "quantity": "mola_elevation_m_areoid.valid_cells",
+      "recomputed": 64,
+      "reference_json": 64,
+      "reference_csv": 64.0,
+      "matches": true
+    },
+    {
+      "quantity": "mola_elevation_m_areoid.mean",
+      "recomputed": -3700.9141272608003,
+      "reference_json": -3700.9141272608003,
+      "reference_csv": -3700.9141272608003,
+      "matches": true
+    },
+    {
+      "quantity": "mola_elevation_m_areoid.median",
+      "recomputed": -3702.0,
+      "reference_json": -3702.0,
+      "reference_csv": -3702.0,
+      "matches": true
+    },
+    {
+      "quantity": "mola_elevation_m_areoid.min",
+      "recomputed": -3737.0,
+      "reference_json": -3737.0,
+      "reference_csv": -3737.0,
+      "matches": true
+    },
+    {
+      "quantity": "mola_elevation_m_areoid.max",
+      "recomputed": -3661.0,
+      "reference_json": -3661.0,
+      "reference_csv": -3661.0,
+      "matches": true
+    },
+    {
+      "quantity": "mola_slope_deg_3p7km_baseline.native_cells",
+      "recomputed": 64,
+      "reference_json": 64,
+      "reference_csv": 64.0,
+      "matches": true
+    },
+    {
+      "quantity": "mola_slope_deg_3p7km_baseline.valid_cells",
+      "recomputed": 64,
+      "reference_json": 64,
+      "reference_csv": 64.0,
+      "matches": true
+    },
+    {
+      "quantity": "mola_slope_deg_3p7km_baseline.mean",
+      "recomputed": 0.28720680331472204,
+      "reference_json": 0.28720680331472204,
+      "reference_csv": 0.28720680331472204,
+      "matches": true
+    },
+    {
+      "quantity": "mola_slope_deg_3p7km_baseline.median",
+      "recomputed": 0.2614278649424268,
+      "reference_json": 0.2614278649424268,
+      "reference_csv": 0.2614278649424268,
+      "matches": true
+    },
+    {
+      "quantity": "mola_slope_deg_3p7km_baseline.min",
+      "recomputed": 0.023200043608461274,
+      "reference_json": 0.023200043608461274,
+      "reference_csv": 0.023200043608461274,
+      "matches": true
+    },
+    {
+      "quantity": "mola_slope_deg_3p7km_baseline.max",
+      "recomputed": 0.6797747156589072,
+      "reference_json": 0.6797747156589072,
+      "reference_csv": 0.6797747156589072,
+      "matches": true
+    },
+    {
+      "quantity": "tes_TI_native_excluding_infill.native_cells",
+      "recomputed": 100,
+      "reference_json": 100,
+      "reference_csv": 100.0,
+      "matches": true
+    },
+    {
+      "quantity": "tes_TI_native_excluding_infill.valid_cells",
+      "recomputed": 73,
+      "reference_json": 73,
+      "reference_csv": 73.0,
+      "matches": true
+    },
+    {
+      "quantity": "tes_TI_native_excluding_infill.mean",
+      "recomputed": 325.1557373608713,
+      "reference_json": 325.1557373608713,
+      "reference_csv": 325.1557373608713,
+      "matches": true
+    },
+    {
+      "quantity": "tes_TI_native_excluding_infill.median",
+      "recomputed": 324.0,
+      "reference_json": 324.0,
+      "reference_csv": 324.0,
+      "matches": true
+    },
+    {
+      "quantity": "tes_TI_native_excluding_infill.min",
+      "recomputed": 287.0,
+      "reference_json": 287.0,
+      "reference_csv": 287.0,
+      "matches": true
+    },
+    {
+      "quantity": "tes_TI_native_excluding_infill.max",
+      "recomputed": 373.0,
+      "reference_json": 373.0,
+      "reference_csv": 373.0,
+      "matches": true
+    },
+    {
+      "quantity": "swim_0_1m_native.native_cells",
+      "recomputed": 100,
+      "reference_json": 100,
+      "reference_csv": 100.0,
+      "matches": true
+    },
+    {
+      "quantity": "swim_0_1m_native.valid_cells",
+      "recomputed": 100,
+      "reference_json": 100,
+      "reference_csv": 100.0,
+      "matches": true
+    },
+    {
+      "quantity": "swim_0_1m_native.mean",
+      "recomputed": 0.6392249220197742,
+      "reference_json": 0.6392249220197742,
+      "reference_csv": 0.6392249220197742,
+      "matches": true
+    },
+    {
+      "quantity": "swim_0_1m_native.median",
+      "recomputed": 0.610122799873352,
+      "reference_json": 0.610122799873352,
+      "reference_csv": 0.610122799873352,
+      "matches": true
+    },
+    {
+      "quantity": "swim_0_1m_native.min",
+      "recomputed": 0.5192136764526367,
+      "reference_json": 0.5192136764526367,
+      "reference_csv": 0.5192136764526367,
+      "matches": true
+    },
+    {
+      "quantity": "swim_0_1m_native.max",
+      "recomputed": 0.7010318636894226,
+      "reference_json": 0.7010318636894226,
+      "reference_csv": 0.7010318636894226,
+      "matches": true
+    },
+    {
+      "quantity": "swim_1_5m_native.native_cells",
+      "recomputed": 100,
+      "reference_json": 100,
+      "reference_csv": 100.0,
+      "matches": true
+    },
+    {
+      "quantity": "swim_1_5m_native.valid_cells",
+      "recomputed": 100,
+      "reference_json": 100,
+      "reference_csv": 100.0,
+      "matches": true
+    },
+    {
+      "quantity": "swim_1_5m_native.mean",
+      "recomputed": 0.647481749755862,
+      "reference_json": 0.647481749755862,
+      "reference_csv": 0.647481749755862,
+      "matches": true
+    },
+    {
+      "quantity": "swim_1_5m_native.median",
+      "recomputed": 0.5,
+      "reference_json": 0.5,
+      "reference_csv": 0.5,
+      "matches": true
+    },
+    {
+      "quantity": "swim_1_5m_native.min",
+      "recomputed": 0.0,
+      "reference_json": 0.0,
+      "reference_csv": 0.0,
+      "matches": true
+    },
+    {
+      "quantity": "swim_1_5m_native.max",
+      "recomputed": 1.0,
+      "reference_json": 1.0,
+      "reference_csv": 1.0,
+      "matches": true
+    },
+    {
+      "quantity": "mola_relief_m",
+      "recomputed": 76.0,
+      "matches": true
+    },
+    {
+      "quantity": "tes_mask_zero_cells",
+      "recomputed": 27,
+      "matches": true
+    },
+    {
+      "quantity": "dust_my34.mean_cdodtot",
+      "recomputed": 0.11926438338687068,
+      "reference_json": 0.11926438338687068,
+      "reference_csv": 0.11926438338687068,
+      "matches": true
+    },
+    {
+      "quantity": "dust_my34.p95_cdodtot",
+      "recomputed": 0.22245603501796724,
+      "reference_json": 0.22245603501796724,
+      "reference_csv": 0.22245603501796724,
+      "matches": true
+    },
+    {
+      "quantity": "dust_my34.max_cdodtot",
+      "recomputed": 0.3651103675365448,
+      "reference_json": 0.3651103675365448,
+      "reference_csv": 0.3651103675365448,
+      "matches": true
+    },
+    {
+      "quantity": "dust_my34.valid_reconstructed_sols",
+      "recomputed": 669,
+      "reference_json": 669,
+      "reference_csv": 669.0,
+      "matches": true
+    },
+    {
+      "quantity": "dust_my34.reliability_mean",
+      "recomputed": 0.8838469048875686,
+      "reference_json": 0.8838469048875686,
+      "reference_csv": 0.8838469048875686,
+      "matches": true
+    },
+    {
+      "quantity": "dust_my35.mean_cdodtot",
+      "recomputed": 0.10753491588259848,
+      "reference_json": 0.10753491588259848,
+      "reference_csv": 0.10753491588259848,
+      "matches": true
+    },
+    {
+      "quantity": "dust_my35.p95_cdodtot",
+      "recomputed": 0.18014705479145052,
+      "reference_json": 0.18014705479145052,
+      "reference_csv": 0.18014705479145052,
+      "matches": true
+    },
+    {
+      "quantity": "dust_my35.max_cdodtot",
+      "recomputed": 0.3422275483608246,
+      "reference_json": 0.3422275483608246,
+      "reference_csv": 0.3422275483608246,
+      "matches": true
+    },
+    {
+      "quantity": "dust_my35.valid_reconstructed_sols",
+      "recomputed": 669,
+      "reference_json": 669,
+      "reference_csv": 669.0,
+      "matches": true
+    },
+    {
+      "quantity": "dust_my35.reliability_mean",
+      "recomputed": 0.8880888281559909,
+      "reference_json": 0.8880888281559909,
+      "reference_csv": 0.8880888281559909,
+      "matches": true
+    },
+    {
+      "quantity": "MCS.valid_day_bins",
+      "recomputed": 161,
+      "reference_csv": 161.0,
+      "matches": true
+    },
+    {
+      "quantity": "MCS.valid_night_bins",
+      "recomputed": 145,
+      "reference_csv": 145.0,
+      "matches": true
+    },
+    {
+      "quantity": "MCS.paired_bins",
+      "recomputed": 69,
+      "reference_csv": 69.0,
+      "matches": true
+    },
+    {
+      "quantity": "MCS.paired_contrast_median_K",
+      "recomputed": 63.53643660583495,
+      "reference_csv": 63.53643660583495,
+      "matches": true
+    },
+    {
+      "quantity": "MCS.populated_day_median_K",
+      "recomputed": 247.47932050390625,
+      "reference_csv": 247.47932050390625,
+      "matches": true
+    },
+    {
+      "quantity": "MCS.populated_night_median_K",
+      "recomputed": 173.72867814892578,
+      "reference_csv": 173.72867814892578,
+      "matches": true
+    }
+  ],
+  "native": {
+    "mola_elevation_m_areoid": {
+      "native_cells": 64,
+      "valid_cells": 64,
+      "mean": -3700.9141272608003,
+      "median": -3702.0,
+      "min": -3737.0,
+      "max": -3661.0,
+      "positive_cells": 0
+    },
+    "mola_slope_deg_3p7km_baseline": {
+      "native_cells": 64,
+      "valid_cells": 64,
+      "mean": 0.28720680331472204,
+      "median": 0.2614278649424268,
+      "min": 0.023200043608461274,
+      "max": 0.6797747156589072,
+      "positive_cells": 64
+    },
+    "tes_TI_native_excluding_infill": {
+      "native_cells": 100,
+      "valid_cells": 73,
+      "mean": 325.1557373608713,
+      "median": 324.0,
+      "min": 287.0,
+      "max": 373.0,
+      "positive_cells": 73
+    },
+    "swim_0_1m_native": {
+      "native_cells": 100,
+      "valid_cells": 100,
+      "mean": 0.6392249220197742,
+      "median": 0.610122799873352,
+      "min": 0.5192136764526367,
+      "max": 0.7010318636894226,
+      "positive_cells": 100
+    },
+    "swim_1_5m_native": {
+      "native_cells": 100,
+      "valid_cells": 100,
+      "mean": 0.647481749755862,
+      "median": 0.5,
+      "min": 0.0,
+      "max": 1.0,
+      "positive_cells": 99
+    }
+  },
+  "relief_m": 76.0,
+  "TES_mask_zero_cells": 27,
+  "dust": {
+    "dust_my34": {
+      "status": "available",
+      "mean_cdodtot": 0.11926438338687068,
+      "p95_cdodtot": 0.22245603501796724,
+      "max_cdodtot": 0.3651103675365448,
+      "peak_sol_of_year": 391.0,
+      "peak_Ls_deg": 190.96958923339844,
+      "valid_reconstructed_sols": 669,
+      "expected_reconstructed_sols": 669,
+      "units": "1",
+      "wavelength_micron": 9.3,
+      "optical_quantity": "absorption, local total column",
+      "native_cell_lat": 55.5,
+      "native_cell_lon": 72.0,
+      "native_grid_degrees": [
+        3,
+        3
+      ],
+      "reconstructed": true,
+      "reliability_interpretation": "cdodrel is provider reliability, not a calibrated probability",
+      "seasons_by_Ls": {
+        "0_90": {
+          "valid_sols": 193,
+          "mean_cdodtot": 0.1236280125271471
+        },
+        "90_180": {
+          "valid_sols": 179,
+          "mean_cdodtot": 0.1004500107100889
+        },
+        "180_270": {
+          "valid_sols": 143,
+          "mean_cdodtot": 0.16616784752561495
+        },
+        "270_360": {
+          "valid_sols": 154,
+          "mean_cdodtot": 0.09211111658966387
+        }
+      },
+      "reliability_mean": 0.8838469048875686
+    },
+    "dust_my35": {
+      "status": "available",
+      "mean_cdodtot": 0.10753491588259848,
+      "p95_cdodtot": 0.18014705479145052,
+      "max_cdodtot": 0.3422275483608246,
+      "peak_sol_of_year": 79.0,
+      "peak_Ls_deg": 37.788665771484375,
+      "valid_reconstructed_sols": 669,
+      "expected_reconstructed_sols": 669,
+      "units": "1",
+      "wavelength_micron": 9.3,
+      "optical_quantity": "absorption, local total column",
+      "native_cell_lat": 55.5,
+      "native_cell_lon": 72.0,
+      "native_grid_degrees": [
+        3,
+        3
+      ],
+      "reconstructed": true,
+      "reliability_interpretation": "cdodrel is provider reliability, not a calibrated probability",
+      "seasons_by_Ls": {
+        "0_90": {
+          "valid_sols": 193,
+          "mean_cdodtot": 0.1343943438458937
+        },
+        "90_180": {
+          "valid_sols": 178,
+          "mean_cdodtot": 0.0920370551391264
+        },
+        "180_270": {
+          "valid_sols": 143,
+          "mean_cdodtot": 0.10212408495949699
+        },
+        "270_360": {
+          "valid_sols": 155,
+          "mean_cdodtot": 0.09688006709179571
+        }
+      },
+      "reliability_mean": 0.8880888281559909
+    }
+  },
+  "MCS": {
+    "status": "context_only_metadata_incomplete",
+    "scoring_eligible": false,
+    "quantity": "MCS-derived surface temperature corrected with model-based local-time adjustment",
+    "units": "K",
+    "unit_basis": "publication and author plotting code; NetCDF units attribute absent",
+    "requested_center": {
+      "lat": 56.75,
+      "lon": 72.75
+    },
+    "selected_grid_coordinate": {
+      "lat": 55.0,
+      "lon": 75.0
+    },
+    "grid_spacing_deg": [
+      5,
+      5
+    ],
+    "season_coordinate_spacing_deg": 10,
+    "extraction": "nearest coordinate; no interpolation or 100 km mean",
+    "mars_years": [
+      29,
+      36
+    ],
+    "expected_year_season_pairs": 288,
+    "valid_night_bins": 145,
+    "valid_day_bins": 161,
+    "paired_bins": 69,
+    "paired_contrast_median_K": 63.53643660583495,
+    "sample_count_per_bin": null,
+    "uncertainty": null,
+    "quality_flags": null,
+    "coordinate_datum": "not encoded in the distributed NetCDF; requires confirmation",
+    "limitations": [
+      "Grid spacing exceeds the 100 km terrain window",
+      "Grid-coordinate center/edge semantics and observation footprints unconfirmed",
+      "No per-bin count, uncertainty or QA flags distributed",
+      "Same MY/Ls coordinate is not a same-sol observation pair",
+      "No daily extremes, Earth comparison or ranking implied",
+      "Event seasons retained; no undocumented storm removal"
+    ],
+    "populated_day_median_K": 247.47932050390625,
+    "populated_night_median_K": 173.72867814892578
+  },
+  "limitations": [
+    "Product reprocessing, not independent ground truth or uncertainty validation.",
+    "MOLA grid contains interpolation; finite grid cells are not all direct laser samples.",
+    "SWIM is consistency, not ice fraction/probability; both depths share evidence.",
+    "MCS 5-degree corrected bins and 3-degree dust reconstruction are regional context.",
+    "A matching local input hash does not establish current remote availability."
+  ]
+}

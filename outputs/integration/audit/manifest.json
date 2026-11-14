@@ -57,13 +57,13 @@
   "files": [
     {
       "path": "docs/integration/audit/audit_report.md",
-      "sha256": "9ed353ab2546bc114e038d3c69c076fdeb254dc70ec06533119eb872fc5dc9e9",
-      "bytes": 12513
+      "sha256": "91280505a60b9affedc32840d667b26edf8e15083dfc2a93343313961a506a6d",
+      "bytes": 12827
     },
     {
       "path": "docs/integration/audit/merge_readiness.md",
-      "sha256": "73e05565fa013b8c7a7ee148d6dddfd2ca0e6f161c084301dfcb3924335fc8aa",
-      "bytes": 3939
+      "sha256": "cab79b13b55cb996668a36809025422a303e57b049176195131f389228a0c4b2",
+      "bytes": 1535
     },
     {
       "path": "outputs/integration/audit/checks.json",
@@ -115,5 +115,10 @@
       "sha256": "7178fba5bb94eae11c38936c257af3eb6ee1b4a8717df4bde262a8fe43a4a4ac",
       "bytes": 2358
     }
-  ]
+  ],
+  "record_status": "historical_snapshot_with_current_overlay",
+  "current_snapshot": "outputs/integration/audit/current_snapshot.json",
+  "current_notes": "docs/integration/audit/current_notes.md",
+  "current_manifest": "outputs/integration/audit/manifest_current.json",
+  "historical_checks_not_rerun": true
 }

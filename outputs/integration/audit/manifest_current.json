@@ -1,0 +1,117 @@
+{
+  "schema": "ZASA-INTEGRATION-CURRENT-MANIFEST-v1",
+  "date_Taipei": "2026-11-15",
+  "source_main_sha": "08d2740a23694a54bcc11cabf7120114d2e120fc",
+  "research_prs": [
+    {
+      "pr": 6,
+      "head": "f0f14bbc962f7f2a31aa5181b886fdd092da5740",
+      "merged": true,
+      "merge_commit": "f7d2aff11d61f5dea7821f2e8361600f5cb9ee45"
+    },
+    {
+      "pr": 7,
+      "head": "44c2e03b8617c7bb536ad712b85f4716dd190d7c",
+      "merged": true,
+      "merge_commit": "201e04c505d713aca732ab0a1f9b958448c3aedd"
+    },
+    {
+      "pr": 8,
+      "head": "23b3071962382df4a0efeb4220c2a6256baaf92d",
+      "merged": true,
+      "merge_commit": "08d2740a23694a54bcc11cabf7120114d2e120fc"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "docs/research/MS-01/local_validation/research_notes.md",
+      "blob_sha": "27588991a57568c7d9adfaab55b5351149f8f78a",
+      "source_ref": "08d2740a23694a54bcc11cabf7120114d2e120fc",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/08d2740a23694a54bcc11cabf7120114d2e120fc/docs/research/MS-01/local_validation/research_notes.md",
+      "sha256": "2d597089fc8025698893986134d5e408f1c455f98b054cb2a5e1ee8ebd68f0ab"
+    },
+    {
+      "path": "docs/research/MS-01/local_validation/constraints_followup_notes.md",
+      "blob_sha": "46ac68e1219221949b72d7f09aa43ae5967efa00",
+      "source_ref": "08d2740a23694a54bcc11cabf7120114d2e120fc",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/08d2740a23694a54bcc11cabf7120114d2e120fc/docs/research/MS-01/local_validation/constraints_followup_notes.md",
+      "sha256": "2963b1ace7953875ba32cd32c7e21d5daabee03e967958ffcb35736eae2029b0"
+    },
+    {
+      "path": "docs/research/MS-02/local_validation/research_notes.md",
+      "blob_sha": "cace8f6379978b33391bcb5f88d7933e751b2e5d",
+      "source_ref": "08d2740a23694a54bcc11cabf7120114d2e120fc",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/08d2740a23694a54bcc11cabf7120114d2e120fc/docs/research/MS-02/local_validation/research_notes.md",
+      "sha256": "14b89b13b3bf23432d984db02345296a3e424edbc216437257a2f86b7e02fcbd"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/claim_corrections.csv",
+      "blob_sha": "2784da9af7bced2dc5e8d9f1996192824314acf4",
+      "source_ref": "08d2740a23694a54bcc11cabf7120114d2e120fc",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/08d2740a23694a54bcc11cabf7120114d2e120fc/outputs/research/MS-02/local_validation/claim_corrections.csv",
+      "sha256": "651ac0efe311a664de66299cf8bbed54de510bfd75a85bb03d884b981b48cf1b"
+    },
+    {
+      "path": "docs/research/MS-03/local_validation/research_notes.md",
+      "blob_sha": "06746f3750708d41818c8c33d11696c432b85e48",
+      "source_ref": "08d2740a23694a54bcc11cabf7120114d2e120fc",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/08d2740a23694a54bcc11cabf7120114d2e120fc/docs/research/MS-03/local_validation/research_notes.md",
+      "sha256": "b7629a24e5c6445fd67cdad2fa1a841b790dd72a8632347bdc50bb3805b92385"
+    }
+  ],
+  "data_policy": "Reference notes and table/status reconciliation only; formal report written by human; old report bodies/old numeric products retained as historical; source local_only status unchanged",
+  "validation_scope": "Source Git-blob identity, path presence, fixed case/status transcription and current-document structure only. No original instrument-array reruns, no physics truth or deployment success validation.",
+  "files": [
+    {
+      "path": "docs/integration/audit/audit_report.md",
+      "bytes": 12827,
+      "sha256": "91280505a60b9affedc32840d667b26edf8e15083dfc2a93343313961a506a6d"
+    },
+    {
+      "path": "docs/integration/audit/current_notes.md",
+      "bytes": 3895,
+      "sha256": "0eedb445990d45ddf5a5cef38bf8fd3453dacf7cb5f280bf3ba2e7a62936a4ea"
+    },
+    {
+      "path": "docs/integration/audit/merge_readiness.md",
+      "bytes": 1535,
+      "sha256": "cab79b13b55cb996668a36809025422a303e57b049176195131f389228a0c4b2"
+    },
+    {
+      "path": "docs/integration/audit/merge_readiness_historical.md",
+      "bytes": 3939,
+      "sha256": "73e05565fa013b8c7a7ee148d6dddfd2ca0e6f161c084301dfcb3924335fc8aa"
+    },
+    {
+      "path": "outputs/integration/audit/claim_ledger_current.csv",
+      "bytes": 18992,
+      "sha256": "c787e1540e3d71e59abb707578c4b7c1ee18870b15a11abe39bfc3813102a0e1"
+    },
+    {
+      "path": "outputs/integration/audit/current_snapshot.json",
+      "bytes": 6705,
+      "sha256": "8b47d3f54c99a1c4ebb148698430ea9b8749ca363f20d12b454d313f6aa48f7f"
+    },
+    {
+      "path": "outputs/integration/audit/deployment_status.json",
+      "bytes": 1173,
+      "sha256": "7259ccbf763495ceb987269c8871ede14a147bfde774ed7bf1b6a3e3ff588c18"
+    },
+    {
+      "path": "outputs/integration/audit/manifest.json",
+      "bytes": 4661,
+      "sha256": "282571efd50f2460f4d982de3763b094ee808d9b4059ec456f6ef4740f3a1e46"
+    },
+    {
+      "path": "outputs/integration/audit/ms02_claim_corrections.csv",
+      "bytes": 3013,
+      "sha256": "651ac0efe311a664de66299cf8bbed54de510bfd75a85bb03d884b981b48cf1b"
+    },
+    {
+      "path": "outputs/integration/audit/validation_current.json",
+      "bytes": 2942,
+      "sha256": "c75fab7a1c14a04eeb4709af79c8152fb28496257956f23f9bdde30dc9831236"
+    }
+  ],
+  "self_hash_excluded": true
+}

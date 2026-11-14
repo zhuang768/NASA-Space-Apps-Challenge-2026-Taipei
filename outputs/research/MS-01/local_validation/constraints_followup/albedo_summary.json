@@ -1,0 +1,14 @@
+{
+  "n": 16,
+  "min": 0.13443130254745483,
+  "max": 0.1476861983537674,
+  "mean": 0.14418129809200764,
+  "input_sha256": "7e864ca1d67c883bef399d26ccf5ef2fe39cc2a0ff17887c0e6a8b08f0237e6e",
+  "source": "http://tes.asu.edu/products/",
+  "geometry": "90Nedge,-180Eedge;8ppd;pixelcentres;matchesLBLonebasedoffset720.5/1440.5",
+  "limits": [
+    "Not contemporaryforcing forTHEMIS2015/2018",
+    "No cellQA/uncertainty provided in downloadedLBL",
+    "Not independent proof ofice;noalbedo-to-temperatureconversion"
+  ]
+}

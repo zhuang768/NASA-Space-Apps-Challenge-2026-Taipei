@@ -1,0 +1,24 @@
+[
+  {
+    "pt": "RDR",
+    "url": "https://oderest.rsl.wustl.edu/live2/?easternlon=73&ihid=MRO&iid=SHARAD&limit=1000&maxlat=57&minlat=56.5&output=JSON&pt=RDR&query=PRODUCT&results=FMPC&target=mars&westernlon=72.5",
+    "status": 200,
+    "bytes": 187052,
+    "count": "6",
+    "query_status": "Success"
+  },
+  {
+    "pt": "USRDR",
+    "url": "https://oderest.rsl.wustl.edu/live2/?easternlon=73&ihid=MRO&iid=SHARAD&limit=1000&maxlat=57&minlat=56.5&output=JSON&pt=USRDR&query=PRODUCT&results=FMPC&target=mars&westernlon=72.5",
+    "status": 200,
+    "bytes": 521,
+    "query_status": "ERROR"
+  },
+  {
+    "pt": "USGEOM",
+    "url": "https://oderest.rsl.wustl.edu/live2/?easternlon=73&ihid=MRO&iid=SHARAD&limit=1000&maxlat=57&minlat=56.5&output=JSON&pt=USGEOM&query=PRODUCT&results=FMPC&target=mars&westernlon=72.5",
+    "status": 200,
+    "bytes": 522,
+    "query_status": "ERROR"
+  }
+]

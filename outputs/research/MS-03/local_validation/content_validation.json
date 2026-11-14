@@ -1,0 +1,15 @@
+{
+  "courville_journal_response": {
+    "file": "sources/courville_2026_article.html",
+    "http_status": 200,
+    "title": "Radware Bot Manager Captcha",
+    "usable_as_article": false,
+    "full_journal_article_read": false,
+    "alternative_read": "LPSC2026 abstract1792 pp1–2 via web PDF and author university abstract; not journal full text"
+  },
+  "notes": [
+    "No CAPTCHA bypass or credential access attempted.",
+    "Failed ScienceBase/table access is not an empty inventory.",
+    "Source publication grid and deposited grid differ; retain both conventions."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "date_taipei": "2026-11-15",
+  "basis_commit": "3321765dc0cd24316e7e12d30b4ade803fa67fcd",
+  "duplicate_products_requested": 149,
+  "labels_read": 149,
+  "unavailable": 0,
+  "pairs_both_floor_or_ceil_of_current_label": 78,
+  "pairs_not_both_floor_or_ceil": 71,
+  "pairs_over_one_second": 29,
+  "no_timestamp_changed": true,
+  "causal_interpretation": "Pairwise compatibility with current label rounding is a diagnostic only;does not identify executed2026code,SQL or source of duplicated rows. Do not assume current product-label version equals index-generation input version.",
+  "hypothesis_rule": "If both values come only from floor/ceil/nearest rounding of one instant to integer seconds,their separation cannot exceed1second. >1second rejects that restricted sole-cause hypothesis;does not rule out rounding as one stage.",
+  "zip_sha256": "aaea677542b323640935f66450e9ebba825e2a534fc54fa272b50c9d6e23d34b"
+}

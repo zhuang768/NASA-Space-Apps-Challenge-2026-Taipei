@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "checks": [
+    "candidate coordinates/scopes",
+    "all four evidence dimensions",
+    "source metadata and URLs",
+    "8 bounded prior-work records",
+    "search log integrity",
+    "48 native numerical checks",
+    "UV 528-sample values",
+    "baseline Git blobs",
+    "local parts vs remote absence",
+    "all delivery SHA-256 hashes",
+    "report figure path"
+  ],
+  "counts": {
+    "candidates": 2,
+    "evidence": 33,
+    "prior_work": 8,
+    "searches": 26,
+    "hashed_files": 49
+  },
+  "limits": "Validation of deliverable consistency, not ground-truth science, global novelty or full clean-checkout data availability."
+}

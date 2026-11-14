@@ -1,0 +1,66 @@
+{
+  "source_file": "data/raw/earth/university_valley/UniversityV_09_10_Campbell_data_good_only_calibrated.txt",
+  "source_md5": "ae2133eac5c92c695c5f6ef93bcbbd25",
+  "source_sha256": "c46d93e3dd07c6c91d700a814214716f00caa0d5cc3a520f8969ce0af63ecafd",
+  "source_doi": "10.5281/zenodo.10553882",
+  "source_version": "v1, 2024-01-23",
+  "source_columns": [
+    "T107_surf",
+    "T107_10cm",
+    "T107_ice42cm",
+    "T107_InIce49cm"
+  ],
+  "data_kind": "this-study calculation from published processed in-situ measurements",
+  "start_inclusive": "2010-11-07T00:00:00",
+  "end_exclusive": "2010-11-18T00:00:00",
+  "timestamp_timezone": "not established from file; no absolute local-time phase interpretation",
+  "common_valid_samples": 528,
+  "expected_half_hour_samples": 528,
+  "spatial_support": "University Valley weather-station soil column, -77.86215,160.7101; no area average",
+  "model": "T=intercept+linear_time+bsin*sin(2*pi*t/24h)+bcos*cos(2*pi*t/24h)",
+  "method": "Ordinary least squares; amplitude=sqrt(bsin^2+bcos^2), not peak-to-peak",
+  "limits": [
+    "descriptive fit only; residuals include weather/other frequencies",
+    "uncertainty not estimated; no significance claim",
+    "cannot infer MS-01 ice depth or thermal inertia",
+    "surface sensors may have wind exposure and radiative bias"
+  ],
+  "values": [
+    {
+      "column": "T107_surf",
+      "depth_m": 0,
+      "min_C": -22.6,
+      "max_C": 5.0,
+      "diurnal_amplitude_K": 8.378290575532425,
+      "linear_trend_K_per_h": -0.01024884027263122,
+      "residual_rmse_K": 4.241676297292115
+    },
+    {
+      "column": "T107_10cm",
+      "depth_m": 0.1,
+      "min_C": -21.6,
+      "max_C": -5.5,
+      "diurnal_amplitude_K": 3.8851920361761607,
+      "linear_trend_K_per_h": 0.001330780504118301,
+      "residual_rmse_K": 2.527467177439526
+    },
+    {
+      "column": "T107_ice42cm",
+      "depth_m": 0.42,
+      "min_C": -23.8,
+      "max_C": -18.6,
+      "diurnal_amplitude_K": 0.21165201569693,
+      "linear_trend_K_per_h": 0.017609186156712496,
+      "residual_rmse_K": 0.7415609794771034
+    },
+    {
+      "column": "T107_InIce49cm",
+      "depth_m": 0.49,
+      "min_C": -24.0,
+      "max_C": -19.2,
+      "diurnal_amplitude_K": 0.12693106546365623,
+      "linear_trend_K_per_h": 0.01814054749342543,
+      "residual_rmse_K": 0.615039534755849
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "observed_date": "2026-11-14",
+  "baseline_sha": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+  "baseline_tree": "bd190ecb1fae3259c235d309b010ebea91412251",
+  "remote_method": "GitHub REST branches/main, contents GETs, complete nontruncated recursive Git tree",
+  "http_results": {
+    "docs/TEAM_START.md": 404,
+    "outputs/handoff/": 404
+  },
+  "entries": [
+    {
+      "path": "docs/TEAM_START.md",
+      "present_in_remote_baseline": false,
+      "local_exists": true,
+      "local_bytes": 4804,
+      "local_sha256": "ad5682bcf94d07abe8e58d2bc489b5007df425a143b07583e179a5bd2aad4fee"
+    },
+    {
+      "path": "scripts/restore_team_data.py",
+      "present_in_remote_baseline": false,
+      "local_exists": true,
+      "local_bytes": 3077,
+      "local_sha256": "11fa0d132418bcc3cfe1e67938407f5bddc4239565cefb708dd849eb06429490"
+    },
+    {
+      "path": "outputs/handoff/bundle_manifest.json",
+      "present_in_remote_baseline": false,
+      "local_exists": true,
+      "local_bytes": 33467,
+      "local_sha256": "45432bc81e6367288f8dd069e6584e966c6675f881a6437b87eaf24a5c0b9e99"
+    },
+    {
+      "path": "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
+      "present_in_remote_baseline": false,
+      "local_exists": true,
+      "local_bytes": 23035176,
+      "local_sha256": "157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/screened_pool.csv.gz",
+      "present_in_remote_baseline": false,
+      "local_exists": true,
+      "local_bytes": 7702846,
+      "local_sha256": "7c5559e40fca9fa304b7799e4490bfb4ff0d55ea0a02819c53f432377462ff92"
+    },
+    {
+      "path": "outputs/handoff/parts/NASA_Space_Apps_2026_All_Data.xlsx.part001",
+      "present_in_remote_baseline": false,
+      "local_exists": true,
+      "local_bytes": 8000000,
+      "local_sha256": "be4d8eef4c7f81fc40cdfd1e2bfee9761954c434935699c3e65d2c0365e5e07e"
+    },
+    {
+      "path": "outputs/handoff/parts/NASA_Space_Apps_2026_All_Data.xlsx.part002",
+      "present_in_remote_baseline": false,
+      "local_exists": true,
+      "local_bytes": 8000000,
+      "local_sha256": "520de0cc4c4b7b4cbda0c752c2b8fe596200c06a5511ce407de127fc4a6612b3"
+    },
+    {
+      "path": "outputs/handoff/parts/NASA_Space_Apps_2026_All_Data.xlsx.part003",
+      "present_in_remote_baseline": false,
+      "local_exists": true,
+      "local_bytes": 7035176,
+      "local_sha256": "a9e2d73afaa575a2b723910e31eefeeef9d0bca7eced7e3dd3179af711ab7fb9"
+    },
+    {
+      "path": "outputs/handoff/legacy_snapshot.zip",
+      "present_in_remote_baseline": false,
+      "local_exists": true,
+      "local_bytes": 9964572,
+      "local_sha256": "70fbd8ad9b27d560ba6154318e9730ba28f2e17240596d036f9a3f723eeaf549"
+    },
+    {
+      "path": "outputs/handoff/parts/legacy_snapshot.zip.part001",
+      "present_in_remote_baseline": false,
+      "local_exists": true,
+      "local_bytes": 8000000,
+      "local_sha256": "d24ce30e0db857cc79767d797502f67d61ded6595afb9d75601ab88e9df21cd7"
+    },
+    {
+      "path": "outputs/handoff/parts/legacy_snapshot.zip.part002",
+      "present_in_remote_baseline": false,
+      "local_exists": true,
+      "local_bytes": 1964572,
+      "local_sha256": "602e7cec05781d2154546333be2cf17620744303c1ab6f407830dae9e066e189"
+    }
+  ],
+  "local_bundle_and_part_checks": [
+    {
+      "path": "outputs/handoff/parts/NASA_Space_Apps_2026_All_Data.xlsx.part001",
+      "expected_bytes": 8000000,
+      "expected_sha256": "be4d8eef4c7f81fc40cdfd1e2bfee9761954c434935699c3e65d2c0365e5e07e",
+      "match": true
+    },
+    {
+      "path": "outputs/handoff/parts/NASA_Space_Apps_2026_All_Data.xlsx.part002",
+      "expected_bytes": 8000000,
+      "expected_sha256": "520de0cc4c4b7b4cbda0c752c2b8fe596200c06a5511ce407de127fc4a6612b3",
+      "match": true
+    },
+    {
+      "path": "outputs/handoff/parts/NASA_Space_Apps_2026_All_Data.xlsx.part003",
+      "expected_bytes": 7035176,
+      "expected_sha256": "a9e2d73afaa575a2b723910e31eefeeef9d0bca7eced7e3dd3179af711ab7fb9",
+      "match": true
+    },
+    {
+      "path": "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
+      "expected_bytes": 23035176,
+      "expected_sha256": "157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175",
+      "match": true
+    },
+    {
+      "path": "outputs/handoff/parts/legacy_snapshot.zip.part001",
+      "expected_bytes": 8000000,
+      "expected_sha256": "d24ce30e0db857cc79767d797502f67d61ded6595afb9d75601ab88e9df21cd7",
+      "match": true
+    },
+    {
+      "path": "outputs/handoff/parts/legacy_snapshot.zip.part002",
+      "expected_bytes": 1964572,
+      "expected_sha256": "602e7cec05781d2154546333be2cf17620744303c1ab6f407830dae9e066e189",
+      "match": true
+    },
+    {
+      "path": "outputs/handoff/legacy_snapshot.zip",
+      "expected_bytes": 9964572,
+      "expected_sha256": "70fbd8ad9b27d560ba6154318e9730ba28f2e17240596d036f9a3f723eeaf549",
+      "match": true
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/screened_pool.csv.gz",
+      "expected_bytes": 7702846,
+      "expected_sha256": "7c5559e40fca9fa304b7799e4490bfb4ff0d55ea0a02819c53f432377462ff92",
+      "match": true
+    }
+  ],
+  "restore_command": "python3 scripts/restore_team_data.py",
+  "restore_exit_code": 0,
+  "restore_stdout": [
+    "Already verified: outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
+    "Already verified: outputs/handoff/legacy_snapshot.zip",
+    "Verified screened pool and 186 historical supplement files.",
+    "Use current MS-01/MS-02/MS-03 JSON/CSV as authority; workbook and legacy files are historical context."
+  ],
+  "conclusion": "Local bytes verified; these handoff paths were absent from the remote baseline. No fresh remote bundle download occurred."
+}

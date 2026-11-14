@@ -1,0 +1,14 @@
+{
+  "url": "https://hirise-pds.lpl.arizona.edu/PDS/INDEX/RDRCUMINDEX.TAB",
+  "bytes": 168675271,
+  "sha256": "d58cf52657371f6a7e65ef4dc687fdd2f9c70e276f7755853e27971f17df4126",
+  "headers": {
+    "Last-Modified": "Tue, 03 Nov 2026 23:43:03 GMT",
+    "Content-Length": "168675271",
+    "ETag": "\"6aea7187-a0dc7c7\""
+  },
+  "local_raw_path": "/tmp/ms03_HiRISE_RDRCUMINDEX.TAB",
+  "tracked_raw": false,
+  "label_source": "https://hirise-pds.lpl.arizona.edu/PDS/INDEX/RDRCUMINDEX.LBL",
+  "label_count_mismatch": "label205302 vs actual205451;not silently reconciled"
+}

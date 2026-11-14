@@ -1,0 +1,37 @@
+{
+  "product_id": "D01_027566_2370_XN_57N117W",
+  "row_start_0based": 36000,
+  "row_end_0based_inclusive": 37023,
+  "sample_start_0based": 600,
+  "sample_end_0based_inclusive": 1623,
+  "raw_type": "uncalibrated8bit SQROOT EDR DN",
+  "linear_stretch_percentiles": [
+    1,
+    99
+  ],
+  "stretch_DN_bounds": [
+    88.0,
+    104.0
+  ],
+  "interpolation": "none;nearest display",
+  "approximate_corner_locator_lonlat": [
+    [
+      242.22627406287953,
+      57.66405861163416
+    ],
+    [
+      242.42326535422077,
+      57.67828765089861
+    ],
+    [
+      242.39893886824427,
+      57.77906712636309
+    ],
+    [
+      242.20135292946804,
+      57.76484205141486
+    ]
+  ],
+  "locator_limit": "Bilinear from catalogue/index corner ordering;not SPICE camera-model geolocation or orthorectification;no precise Mars measurements or ROI-wide absence claim",
+  "visual_read": "In inspected patch,tonal mottling,small crater-like features and striping;no reliably traceable closed fracture network. Non-detection does not establish absence;AD1 median diameter about3CTXpixels."
+}

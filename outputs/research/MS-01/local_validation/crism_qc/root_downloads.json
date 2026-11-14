@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2102/trdr/2008/2008_191/tod0000b701/tod0000b701_02_if204l_trr3.img",
+    "path": "/tmp/ms01_lv_crism/tod0000b701_02_if204l_trr3.img",
+    "status": 200,
+    "bytes": 1346560,
+    "type": "application/octet-stream"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2102/trdr/2008/2008_191/tod0000b701/tod0000b701_02_if204l_trr3.lbl",
+    "path": "/tmp/ms01_lv_crism/tod0000b701_02_if204l_trr3.lbl",
+    "status": 200,
+    "bytes": 9507,
+    "type": "text/plain"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2102/trdr/2008/2008_191/tod0000b701/tod0000b701_02_if204l_trr3.xml",
+    "path": "/tmp/ms01_lv_crism/tod0000b701_02_if204l_trr3.xml",
+    "status": 200,
+    "bytes": 27573,
+    "type": "application/xml"
+  }
+]

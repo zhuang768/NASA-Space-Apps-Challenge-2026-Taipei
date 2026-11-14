@@ -1,0 +1,9 @@
+id,observation,possible_explanation,alternatives_not_excluded,MS01_implication,source_locator
+OBS-01,S8/M22/D36/W42_Campbell同logger各層24h半振幅往下變小；界面/上層比0.450970/0.087741/0.020635/0.025262,傳導、覆土厚度與下層熱物性共同控制熱波,均質無冰導熱也會衰減；沒有相同材料同forcing的無冰控制，不能量出冰偵測specificity,保留已知界面熱傳驗證用途；不能單憑衰減確認MS-01有冰,amplitudes.csv;comparison.json;UD;U1
+OBS-02,D36比值0.020635，W42_Campbell0.025262；留一日範圍有重疊，並非按深度嚴格排序,不同forcing、材料、耦合、覆土或界面結構可改變響應,站間陰影/日照/風/材料不一致；M上層為1cm；不能把跨站差異僅歸因冰深,不建立地球比值→MS-01冰深換算曲線,comparison.json results;station_metadata.csv;D09;U1
+OBS-03,上層半振幅S8=2.788318K、D36=9.250784K；兩者已知界面條件不同,淺冰可帶走熱、乾覆土可隔熱（既有模型解釋）,表面probe暴露/放置、局地日照及材料本身也能改變溫度；觀測不是受控因果實驗,對MS-01需局部材料與表面能量邊界；無法由單次地表訊號選唯一機制,UD primary rows;U1 Methods/Discussion
+OBS-04,D36界面擬合0.190886K但殘差RMSE0.701931K；W Campbell0.211652K、RMSE0.741561K,24h分量很小，較慢天氣/季節變化留在殘差,感測器系統offset/耦合、其他頻率與時間非平穩性；大量N不能自動移除系統誤差,不把小振幅當作冰界面已被盲判或儀器性能已驗證,amplitudes.csv;U1 sensor accuracy and Appendix
+OBS-05,W HOBO各層為獨立U23；decimal day較印刷日期約+1h；Campbell另有不同時間支撐,合併匯出或處理時間定義可能不同,缺原始時鐘/逐列處理歷史，不能判哪欄正確；禁止自動校時與跨儀器逐時join,保留各自窗口描述；跨logger絕對phase和對時驗證仍未知,comparison.json qa;D09;U1
+OBS-06,S/D的2009部署座標與2022論文具名座標對調，M一致,命名/文稿/版本對應可能不同,無勘誤或原始GPS crosswalk，不能決定哪版筆誤，也不能假定熱曲線來自某個已確定坡向,本輪按export深度與serial比較；暫不做逐站陰影/坡向空間歸因,station_metadata.csv;D09 word/document.xml w:p ordinals6/15/26/66 (not page numbers);U1 Methods
+OBS-07,"均質導熱方程中κ=k/(ρCp)，相同κ可給相同Dirichlet邊界下T(z,t)，而I=√(kρCp)不唯一",不同材料參數組合可產生相同溫度傳遞,這是方程辨識限制，不是已證實某種無冰材料在MS-01造成現有訊號,獨立k、ρCp、材料/含濕與冰真值才可增加可識別性；不從T曲線推TES冰量,U1 Appendix Eq12/13;本輪符號推導
+OBS-08,Beacon有乾覆土下塊狀冰與土樣密度/量熱比熱；k主要為模型推估,提供與UV冰膠結層不同結構、且有材料約束的補充案例,未取得Beacon原始逐時資料；兩地forcing不同，無雙場址聯合驗證,保留可選補充對照；不是完成本輪UV判斷的必要輸入,B1 §2–3;existing MS01 evidence

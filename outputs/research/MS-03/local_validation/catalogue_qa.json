@@ -1,0 +1,37 @@
+{
+  "catalogues": [
+    {
+      "instrument": "CRISM",
+      "response_file": "sources/ode_CRISM_TRDR_expanded.json",
+      "returned_records": 168,
+      "count_field": 168,
+      "valid_geometry_intersections": 168,
+      "unique_observation_identifiers": 44,
+      "limit": 1000,
+      "complete_catalogue_claim": false
+    },
+    {
+      "instrument": "THEMIS",
+      "response_file": "sources/ode_THEMIS_IRBTR_local.json",
+      "returned_records": 35,
+      "count_field": 35,
+      "valid_geometry_intersections": 35,
+      "unique_observation_identifiers": 35,
+      "limit": 50,
+      "complete_catalogue_claim": false
+    },
+    {
+      "instrument": "SHARAD",
+      "response_file": "sources/ode_SHARAD_RDR_expanded.json",
+      "returned_records": 6,
+      "count_field": 6,
+      "valid_geometry_intersections": 6,
+      "unique_observation_identifiers": 6,
+      "limit": 100,
+      "complete_catalogue_claim": false
+    }
+  ],
+  "CRISM_if_products": 56,
+  "CRISM_l_if_products": 12,
+  "invalid_usrdr_query_note": "USRDR was an invalid IIPT, not zero coverage; valid RDR request subsequently returned six actual intersecting lines."
+}

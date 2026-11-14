@@ -1,0 +1,12 @@
+{
+  "existing_files_checked": 132,
+  "existing_files_unchanged": true,
+  "received_and_sim_columns_bytes_match": true,
+  "payload_MD5_verified": 6,
+  "albedo_cells": 16,
+  "thermal_scenes": 6,
+  "thermal_pairs": 15,
+  "figure_visually_reviewed": true,
+  "scientific_truth_validation": false,
+  "remaining": "pixelorigin,atmosphere/emissivity,simregistration,materialk/rho/Cp,iceexistence/depth/abundance"
+}

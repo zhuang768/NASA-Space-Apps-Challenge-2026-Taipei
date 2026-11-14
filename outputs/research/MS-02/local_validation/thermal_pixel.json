@@ -1,0 +1,25 @@
+{
+  "source_doi": "10.22002/D1.1316",
+  "array_shape": [
+    360,
+    720
+  ],
+  "row_zero_based": 74,
+  "column_zero_based": 336,
+  "latitude": 52.75,
+  "longitude": 168.25,
+  "depth_m": 0.4499824941,
+  "dry_regolith_TI": 188.2415009,
+  "pixel_bounds": [
+    168,
+    52.5,
+    168.5,
+    53
+  ],
+  "grid_spacing_deg": 0.5,
+  "area_km2": 531.6653738505373,
+  "evidence_type": "published model estimate; not an in-situ depth or ice fraction",
+  "missing_value": -32768,
+  "uncertainty": "Paper says ~20% best-case discretization floor; no local residual or confidence interval in archive; no ±20% local confidence claim",
+  "resolution_discrepancy": "Downloaded archive is 2 ppd; paper text says observations binned at 3 ppd. Export spacing verified; cause of difference undocumented."
+}

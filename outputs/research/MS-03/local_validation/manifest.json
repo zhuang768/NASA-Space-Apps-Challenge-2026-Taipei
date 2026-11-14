@@ -62,8 +62,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/README.md",
-      "bytes": 5576,
-      "sha256": "75ba42e21510b82697286da93fe4343320068adc07c072400f918eb747fef9b5"
+      "bytes": 6028,
+      "sha256": "45679963143bb93693e26294c58855a295e588f0f8d4b85cedfa504924f33954"
     },
     {
       "path": "outputs/research/MS-03/local_validation/acquire.py",
@@ -1011,6 +1011,171 @@
       "sha256": "e4474dbf3ddd0b872d64c236ee2b152ba7243dc8a0454a318cc67f8c9f258925"
     },
     {
+      "path": "outputs/research/MS-03/local_validation/production_history/.gitignore",
+      "bytes": 76,
+      "sha256": "dd9f80d440ea78b825a15ba599a1c7e6c24bad52c26525709b76c6585a35336f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/F-PH01_documented_processing.png",
+      "bytes": 179670,
+      "sha256": "3be1e05c0ab347bf9df992c438606ba232a67191306330e23a09556585eaf0f5"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/README.md",
+      "bytes": 4988,
+      "sha256": "33c1de7c7067c4ed079e3bda477bc44e06e2084e3a645342112d4cbd7857ec64"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/acquire.py",
+      "bytes": 2671,
+      "sha256": "2dd60f9ca8aaec3b1cedef23a0f7c54fddd401c9a09a8d33a9182595df8fc0d3"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/availability.csv",
+      "bytes": 1755,
+      "sha256": "b495d0ac2eadad934160d2777127f4819b691b35d3afdeb12e7c87ebb6642f73"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/build_records.py",
+      "bytes": 8213,
+      "sha256": "7cef53caa4683403db7446c703122709a3ebc1eba6e936fc706a54b84e3b39d9"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/history_sections.json",
+      "bytes": 1487,
+      "sha256": "db37797098d7146945092c0ab7fb91bbfd05cdfd33c80c09262255ef3cdb90ff"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/inspect_history.py",
+      "bytes": 4836,
+      "sha256": "ac877b07f7268a105bef77f9ad8fc9e15e478df71b35b048415c2b29df7b191d"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/manifest.json",
+      "bytes": 12575,
+      "sha256": "ded555ae9883d320e8e64e4b245d920ca8ae7e44ad47c4a5cecec100b14e82c4"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/plot_workflow.py",
+      "bytes": 2160,
+      "sha256": "709f96c30c354b61eb682a91a0fea0dfe75b76fbfb0cf30c6f3562131ee002c4"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/preserved_inputs.json",
+      "bytes": 4898,
+      "sha256": "12afc12d6dd144fa0936dd35538f90a3796870aef89325e99ae6ff75ccae65cc"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/processing_stages.csv",
+      "bytes": 994,
+      "sha256": "24d92139e99fab3af3aa1687673884c729b113c97e3d982854b4d410663acced"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/product_metadata.json",
+      "bytes": 1495,
+      "sha256": "09f4a4780668fa79d3968ab273cf37f192a6c0f5e3eac1ca33e50bc54bcfe7fa"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/request_plan.json",
+      "bytes": 4626,
+      "sha256": "712bfafaaa278c112d0cad9912ecabb261fca50c3ed5e7b53dd49ac30237da0f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/results.json",
+      "bytes": 947,
+      "sha256": "728edafee658573cd819e219deeae5018daf1a93c341fc20a58027213098e2b1"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/retrievals.json",
+      "bytes": 12300,
+      "sha256": "36f0cf08e43cb20a881c9738aa837ef1c1d2316cbfffa1cd3e35a81a8b0b4367"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/search_log.csv",
+      "bytes": 9833,
+      "sha256": "b26bf8915b183e581eee431618309081f5343cddeb829532fe7da63b20338182"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/source_audit.csv",
+      "bytes": 2341,
+      "sha256": "b82557ba273f28b982269d3193042d7902ede45838b3c95af3898bfe05528b49"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/T1811_AL_PDS4.xml",
+      "bytes": 11770,
+      "sha256": "73b6ad77d19a1db64a94eb81fc09a438842ca7100d8750f5736b9000124fca94"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/T1811_SU_PDS4.xml",
+      "bytes": 64464,
+      "sha256": "ae52789304a930fd3ccb16bfc20b12c2d00ad40e75cacdf4ff703e411d1d4bf2"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/github_JCAT_releases.json",
+      "bytes": 3600,
+      "sha256": "6c8adf717189c60071533aa78d968f35aff41dbf44ec58d69c3f8e2fef1f3577"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/github_author_phillips_repositories.json",
+      "bytes": 18049,
+      "sha256": "dc5183c3935a745e5f5ae579673989b769f1c767102c53feb8eb7f0826eb07ce"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/github_author_repositories.json",
+      "bytes": 55,
+      "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/github_exact_flow_code_search.json",
+      "bytes": 55,
+      "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/github_flow_repositories.json",
+      "bytes": 55,
+      "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/readme_mrocr_3201.txt",
+      "bytes": 8553,
+      "sha256": "382114abfa220049e52d465f7d894bb3e960c39afe6ca21005c8e11c8d1bafca"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/volume_aareadme.txt",
+      "bytes": 8553,
+      "sha256": "382114abfa220049e52d465f7d894bb3e960c39afe6ca21005c8e11c8d1bafca"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/sources/wayback_dpsis_2022_2023.json",
+      "bytes": 375,
+      "sha256": "6e5409d9d12ae87db267f340cfaae20c0bc7f87380077fa55dcfcef3a2d68439"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/update_manifests.py",
+      "bytes": 2482,
+      "sha256": "9eae98832a49356f029717084a961c48a86b0e2ea6f9249249c1ad85fb8877dd"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/validate.py",
+      "bytes": 3970,
+      "sha256": "e5801d2015d030811d52c0346885b29c4962f34863eee09609ea793a95df6e31"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/validation.json",
+      "bytes": 4085,
+      "sha256": "2612ae4c3a99be759799fb048b2f1c48b20488742542d45b4b7a771cc6ee3932"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/validation_retained_only.json",
+      "bytes": 3959,
+      "sha256": "79446e2435be8363f28ea72511b6b463cfe412053ac5cd59490b5a8e479be39f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/production_history/version_history.csv",
+      "bytes": 747,
+      "sha256": "7879079a5ab7e6677f785b265f18c40cccd8e9ad12fd58457829acf25b0e221f"
+    },
+    {
       "path": "outputs/research/MS-03/local_validation/remote_geology.py",
       "bytes": 2375,
       "sha256": "e647ba5a58ca8e991c69a7d8f88ee8e20f9123e72cf357b4d485ca6992d2d37f"
@@ -1022,8 +1187,8 @@
     },
     {
       "path": "outputs/research/MS-03/local_validation/search_log.csv",
-      "bytes": 114758,
-      "sha256": "27267bc7987aae5295c3a26fa287dcf28dce8f5d5a934dcb7480ff8e8a1184d2"
+      "bytes": 124500,
+      "sha256": "14ce00231e4b397f87308b8b7c0a8660c625ba75e3f6929a8e162e482dfb8412"
     },
     {
       "path": "outputs/research/MS-03/local_validation/sharad_local_geometry.csv",
@@ -1467,8 +1632,8 @@
     },
     {
       "path": "docs/research/MS-03/local_validation/research_notes.md",
-      "bytes": 30343,
-      "sha256": "66fc19ce02bb58a6f002996ab77277ee9088cae2e759dcea94b994e9934ff0e8"
+      "bytes": 33899,
+      "sha256": "9d2633ef840db74a9a36bee6b12cc37bbfb95f86d1443733e1bd0b34c872a9b7"
     }
   ],
   "source_preservation_note": "Original acquired PDS labels, KML and XML retain provider whitespace/CRLF; git diff whitespace warnings for source bytes are intentionally not normalized. Authored Python/Markdown passed whitespace check.",
@@ -1491,6 +1656,12 @@
       "date_taipei": "2026-11-15",
       "package": "bd1500_audit/manifest.json",
       "change": "verified disclosed equation, byte points, band metadata and roundoff exclusions; exact production cause unknown; no scientific value changes"
+    },
+    {
+      "starting_sha": "826780f0b270eebe9b6f2f64b8ba1ac5ddcc8177",
+      "date_taipei": "2026-11-15",
+      "package": "production_history/manifest.json",
+      "change": "dated historical documentation confirms second summary optimization; exact build/config/prepost/coefficient records not obtained; no numerical changes"
     }
   ],
   "original_tables_followup": {

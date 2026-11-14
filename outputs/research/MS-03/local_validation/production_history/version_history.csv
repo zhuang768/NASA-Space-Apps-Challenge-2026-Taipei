@@ -1,0 +1,5 @@
+﻿version,locator,documented_properties,comparison_status,limits
+MRDRv1,SIS P3 section13,TRR1; older summary definitions; interstrip residuals retained,not_a_controlled_before_pair,Different inputs/formulas; no local v1 arrays obtained; guessed3001 URLs returned404
+MRDRv3,SIS P3 section13,TRR3; MRRIF/MRRDE; no MRRAL/MRRSU,not_a_controlled_before_pair,No SU counterpart in documented v3 product set; guessed3101 URLs returned404
+MRDRv4 T1811,PDS4 actual AL/SU labels,TRR3; actual producer1.03.94;2023-07-18,final_products_only,Delivered AL/SU do not supply missing intermediate summary stage
+JCATv1.0/v1.1,public releases API,2024-09-11/2024-10-31,different_tool,Public viewer releases postdate T1811; not historical production-flow builds

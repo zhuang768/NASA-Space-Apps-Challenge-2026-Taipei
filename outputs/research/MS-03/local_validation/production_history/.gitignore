@@ -1,0 +1,5 @@
+__pycache__/
+sources/*.htm
+sources/*.html
+sources/*.pdf
+sources/mrdr_ds.cat

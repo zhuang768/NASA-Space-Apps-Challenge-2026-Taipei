@@ -1,0 +1,6 @@
+﻿stage_id,stage,source_locator,output_or_support,status,limits,source_ids
+PH-ST01,reflectance optimization,P3 section6,MRRAL,confirmed_documented,weighted interstrip adjustment before summary evaluation,PH-S01;PH-S02
+PH-ST02,spectral summary evaluation,P3 section7,surface summaries from MRRAL,confirmed_documented,mapping nearest detector row; same nominal formula does not replay later stages,PH-S01;PH-S02
+PH-ST03,summary-product optimization,P3 section8,surface products1-51 including BD1500_2,confirmed_documented,second optimization; actual T1811 per-product transformations unknown,PH-S01;PH-S02
+PH-ST04,projection and assembly,P3 sections10-11,MRRAL/MRRSU/MRRDE tile,confirmed_documented,traceability template controls source consistency; no new local intermediate arrays obtained,PH-S01;PH-S02
+PH-ST05,numerical replay of actual tile,T1811 execution logs/coefficients,unknown,unknown,no executable/build/configuration or paired pre/post data; no corrected values,PH-S03;PH-S04

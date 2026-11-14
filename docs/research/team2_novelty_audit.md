@@ -2,6 +2,20 @@
 
 Team zasa. Review date: **2026-11-14, Asia/Taipei**. Phase 1 repository baseline: `3e3ffff`; Phase 2 main baseline: `263269a`. Scope: literature and proposal checks for I-01, I-02, D-03 and D-04, followed by the supplied Earth candidate EARTH-UV-001. No new site selection, Earth pairing, environmental validation or ranking.
 
+## 2026-11-14：1998全文／作者公開稿續查
+
+本次接續 main `cf00e25`，只補取全文路徑，不重做其他候選或統計。**仍未取得可核實的1998全文，25／45cm原因維持 insufficient_data；不下引用錯誤定論。**
+
+- 新查 LTA7：[OpenAlex DOI紀錄](https://api.openalex.org/works/https://doi.org/10.1017/S0954102098000054)。實際讀取JSON：`is_oa=false`、`oa_status=closed`、`oa_url=null`、`any_repository_has_fulltext=false`；列出出版者及PubMed位置，均無PDF URL。這只是該索引的存取紀錄，不能證明所有作者稿都不存在。
+- 新查 LTA8：[共同作者Friedmann的FSU官方頁](https://www.bio.fsu.edu/faculty-friedmann.php)，Selected Publications的1998條目。可確認書目；該條目沒有全文連結，沒有深度資料，不用來解決矛盾。此為頁面條目核對，不是FSU整個典藏的完整排除。
+- 新搜尋未取得能證明25／45差異成因的原稿或勘誤。保留LTA2作者摘要25cm、LTA3後續轉述45cm與LTA6表格25cm；未把索引的非開放狀態當成科學結論。
+
+搜尋日期2026-11-14（Asia/Taipei），實際查詢：`"McKay" "1998" "Soil temperatures and stability" pdf -site:researchgate.net -site:academia.edu`；`"S0954102098000054" manuscript fulltext`；`"Linnaeus" "45" "25" "erratum"`。無關天文Linnaeus勘誤未採用。已知出版者全文限制與NASA無下載狀態沿用上一輪紀錄，沒有把重複失敗算成新證據。
+
+下一個可結案的證據是合法取得1998期刊pp.31–38、作者稿／原始剖面圖，或明確勘誤／作者書面說明；取得後逐項確認站點、年代、深度定義及45cm來源。在此之前，不能正式把45cm刪改成25cm，也不能推論冰層變化。本輪未向作者或圖書館發訊息，未改Team1資料。
+
+---
+
 ## 2026-11-14：EARTH-003 接收、25／45 cm 來源鏈與 MR-v1 比較
 
 本輪基準 main `409a2e77dbeb741486901f840da3643180bed2ac`，開始時工作區乾淨；保留 `01142ca` 的 Elephant Head 組成先例與所有火星範圍排除。只補本節與 CSV 的 EARTH-003，不重搜 EH 或重算 GIS。

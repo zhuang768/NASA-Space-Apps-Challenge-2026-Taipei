@@ -8,6 +8,7 @@ __pycache__/
 # Earth raw downloads are multi-GB; keep them out of git.
 # Mars raw + processed grids are tracked (each file < 100 MB).
 data/**
+!data/README.md
 !data/raw/
 !data/raw/mars/
 !data/raw/mars/**

@@ -1,0 +1,32 @@
+[
+  {
+    "product_id": "hsp0002de65_03_if218l_trr3",
+    "ddr_id": "hsp0002de65_03_de218l_ddr1",
+    "lines": 2700,
+    "samples": 64,
+    "bands": 154,
+    "roi_pixel_centres": 1350,
+    "start_line_0based": 628,
+    "stop_line_0based": 762,
+    "row_bytes": 39424,
+    "byte_start": 24758272,
+    "byte_end": 30080511,
+    "rownum_byte_start": 106444800,
+    "wavelength_file_label": "CDR490947778566_WA0300020L_3.IMG"
+  },
+  {
+    "product_id": "msp00018fda_01_if214l_trr3",
+    "ddr_id": "msp00018fda_01_de214l_ddr1",
+    "lines": 2700,
+    "samples": 64,
+    "bands": 55,
+    "roi_pixel_centres": 9056,
+    "start_line_0based": 2434,
+    "stop_line_0based": 2582,
+    "row_bytes": 14080,
+    "byte_start": 34270720,
+    "byte_end": 36368639,
+    "rownum_byte_start": 38016000,
+    "wavelength_file_label": "CDR490947778566_WA0300010L_3.IMG"
+  }
+]

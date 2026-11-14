@@ -1,0 +1,43 @@
+{
+  "status": "existing-result reproduction, not new observation",
+  "products": [
+    {
+      "product": "SWIM2_c0_1.tif",
+      "source_url": "https://swim.psi.edu/output/SWIM2/Global/Composite/SWIM2_c0_1.tif",
+      "sha256": "0dd22f8a07172112c68fb304af9966bcdd788bbedf6ea40187a30f70130fea37",
+      "radius_m": 3396190,
+      "source_crs_wkt": "PROJCS[\"Mars2000_equicylindrical_clon0\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere_IAU_IAG\",3396190,0],AUTHORITY[\"ESRI\",\"106971\"]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "source_grid_m": [
+        2964.119,
+        2964.119
+      ],
+      "selected_cells": 100,
+      "valid_cells": 100,
+      "weighted_mean": 0.9109040236045106,
+      "min": 0.8181818127632141,
+      "max": 0.9545454382896423,
+      "source_resolution_note": "~0.05 deg output, not independent instrument footprint",
+      "interpretation": "consistency, not probability, fraction or ice-layer depth",
+      "new_result": false
+    },
+    {
+      "product": "SWIM2_c1_5.tif",
+      "source_url": "https://swim.psi.edu/output/SWIM2/Global/Composite/SWIM2_c1_5.tif",
+      "sha256": "2ade8ab6aa4aae1c51ec71f10139e9b9ffa0a31ef1948566d0929ab7e91713ed",
+      "radius_m": 3396190,
+      "source_crs_wkt": "PROJCS[\"Mars2000_equicylindrical_clon0\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere_IAU_IAG\",3396190,0],AUTHORITY[\"ESRI\",\"106971\"]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "source_grid_m": [
+        2964.119,
+        2964.119
+      ],
+      "selected_cells": 100,
+      "valid_cells": 100,
+      "weighted_mean": 0.5099723017827722,
+      "min": 0.0,
+      "max": 0.75,
+      "source_resolution_note": "~0.05 deg output, not independent instrument footprint",
+      "interpretation": "consistency, not probability, fraction or ice-layer depth",
+      "new_result": false
+    }
+  ]
+}

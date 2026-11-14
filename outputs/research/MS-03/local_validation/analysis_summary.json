@@ -1,0 +1,27 @@
+{
+  "roi": [
+    242,
+    57.5,
+    242.5,
+    58
+  ],
+  "starting_sha": "8fa07afac4a98096958880f6a5ece16f35abc4db",
+  "geology": "AHv; original USGS polygon covers nominal ROI",
+  "piqueux_depth_model_m": 0.103161566,
+  "actual_depth_m": null,
+  "actual_ice_fraction": null,
+  "independent_local_ice_confirmation": false,
+  "morphology": "unknown",
+  "ad1_disposition": "general_method_reference_not_specific_pair",
+  "uv_disposition": "known_interface_method_and_quality_reference_only",
+  "campbell_hobo_alignment_performed": false,
+  "new_physical_measurements": false,
+  "new_model_fit": false,
+  "new_data_extractions": [
+    "one deposited thermal-model cell",
+    "original geology ROI membership",
+    "five georeferenced mosaic display samples",
+    "three other-instrument catalogue spatial checks",
+    "one SHARAD RDR256-row geometry sample"
+  ]
+}

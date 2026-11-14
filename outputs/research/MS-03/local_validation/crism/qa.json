@@ -1,0 +1,108 @@
+{
+  "starting_sha": "778af696c654a191fe2a720f24d9f30ebd7d247b",
+  "roi": {
+    "latitude": [
+      57.5,
+      58.0
+    ],
+    "longitude_east": [
+      242,
+      242.5
+    ]
+  },
+  "nodata": 65535,
+  "numeric_valid_definition": "finite I/F !=65535 AND finite positive non-sentinel WA wavelength; positive signal screened separately; neither is final scientific validity",
+  "products": [
+    {
+      "product_id": "hsp0002de65_03_if218l_trr3",
+      "ddr_id": "hsp0002de65_03_de218l_ddr1",
+      "UTC_start": "2014-02-10T17:28:23.764",
+      "UTC_stop": "2014-02-10T17:31:23.693",
+      "solar_longitude_deg": 88.051829,
+      "lines_in_subset": 135,
+      "roi_pixel_centres": 1350,
+      "positive_triplet_pixels": 966,
+      "all_1300_2200_numeric_pixels": 966,
+      "all_1300_2200_positive_pixels": 966,
+      "calibration_non_scene_triplet_pixels": 384,
+      "median_adjacent_cross_track_centre_spacing_m": 187.79766854153317,
+      "native_support_note": "10x spatial binning; actual DDR adjacent centre spacing, not validated PSF or crack resolution",
+      "correction_flags": {
+        "ATMO_CORRECTION_FLAG": "OFF",
+        "THERMAL_CORRECTION_MODE": "OFF",
+        "PHOTOCLIN_CORRECTION_FLAG": "OFF",
+        "SPECTRAL_RESAMPLING_FLAG": "OFF"
+      },
+      "detector_temperature_C": -148.22,
+      "wavelength_detector_rows_match": true,
+      "nearest_1525_nm": 1514.16650390625,
+      "ice_presence": "unknown",
+      "ice_depth_m": "unknown",
+      "ice_content": "unknown",
+      "surface_vs_cloud_or_seasonal_frost": "unknown",
+      "full_cell_quality_coverage": "not established",
+      "quality_status": "numeric/calibration/geometry checks completed; atmospheric, cloud/frost and instrument residual validation incomplete",
+      "geolocation_limit": "DDR IR geometry is representative near2300nm; wavelength-dependent keystone and absolute error not corrected, no guaranteed ice-band pixel-footprint coverage",
+      "roi_incidence_areoid_minmax_deg": [
+        45.63062286376953,
+        45.86737060546875
+      ],
+      "roi_emission_areoid_minmax_deg": [
+        0.6994543075561523,
+        1.3988773822784424
+      ],
+      "roi_LST_minmax_h": [
+        15.019721984863281,
+        15.026944160461426
+      ]
+    },
+    {
+      "product_id": "msp00018fda_01_if214l_trr3",
+      "ddr_id": "msp00018fda_01_de214l_ddr1",
+      "UTC_start": "2010-05-25T09:48:43.578",
+      "UTC_stop": "2010-05-25T09:51:43.515",
+      "solar_longitude_deg": 95.410373,
+      "lines_in_subset": 149,
+      "roi_pixel_centres": 9056,
+      "positive_triplet_pixels": 8516,
+      "all_1300_2200_numeric_pixels": 8516,
+      "all_1300_2200_positive_pixels": 8516,
+      "calibration_non_scene_triplet_pixels": 540,
+      "median_adjacent_cross_track_centre_spacing_m": 187.4360573827827,
+      "native_support_note": "10x spatial binning; actual DDR adjacent centre spacing, not validated PSF or crack resolution",
+      "correction_flags": {
+        "ATMO_CORRECTION_FLAG": "OFF",
+        "THERMAL_CORRECTION_MODE": "OFF",
+        "PHOTOCLIN_CORRECTION_FLAG": "OFF",
+        "SPECTRAL_RESAMPLING_FLAG": "OFF"
+      },
+      "detector_temperature_C": -148.08,
+      "wavelength_detector_rows_match": true,
+      "nearest_1525_nm": 1508.404296875,
+      "ice_presence": "unknown",
+      "ice_depth_m": "unknown",
+      "ice_content": "unknown",
+      "surface_vs_cloud_or_seasonal_frost": "unknown",
+      "full_cell_quality_coverage": "not established",
+      "quality_status": "numeric/calibration/geometry checks completed; atmospheric, cloud/frost and instrument residual validation incomplete",
+      "geolocation_limit": "DDR IR geometry is representative near2300nm; wavelength-dependent keystone and absolute error not corrected, no guaranteed ice-band pixel-footprint coverage",
+      "roi_incidence_areoid_minmax_deg": [
+        45.68771743774414,
+        46.09836959838867
+      ],
+      "roi_emission_areoid_minmax_deg": [
+        0.0012435335665941238,
+        1.377176284790039
+      ],
+      "roi_LST_minmax_h": [
+        15.016666412353516,
+        15.045833587646484
+      ]
+    }
+  ],
+  "scope": "two deliberately selected lower-incidence northern summer mapping strips, not all12L-detector products",
+  "no_ice_index_calculated": "No standard index implemented: the hyperspectral 5/11/5 kernel was not applied as if these sparse mapping channels were contiguous. A documented mapping-mode version, corrections and detection validation would require separate work; no detection threshold is set.",
+  "no_absence_claim": true,
+  "no_polygon_tracing": true,
+  "no_clocks_aligned": true
+}

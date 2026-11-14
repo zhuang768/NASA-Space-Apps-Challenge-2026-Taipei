@@ -1,0 +1,14 @@
+metric,statistic,recomputed,published_table4_AD1,printed_decimals,agreement_at_printed_precision,source_locator
+area_m2,min,50.945115125861406,50.9,1,True,Ulrich et al2011 printed p204 Table4;PDFpage9
+area_m2,max,2029.028657147007,2029.0,1,True,Ulrich et al2011 printed p204 Table4;PDFpage9
+area_m2,mean,340.0663619401536,340.1,1,True,Ulrich et al2011 printed p204 Table4;PDFpage9
+area_m2,median,268.3605718672786,268.4,1,True,Ulrich et al2011 printed p204 Table4;PDFpage9
+perimeter_m,min,30.38168257930151,30.4,1,True,Ulrich et al2011 printed p204 Table4;PDFpage9
+perimeter_m,max,177.08488695947406,177.1,1,True,Ulrich et al2011 printed p204 Table4;PDFpage9
+perimeter_m,mean,69.77196411256664,69.8,1,True,Ulrich et al2011 printed p204 Table4;PDFpage9
+perimeter_m,median,65.00322827771915,65.0,1,True,Ulrich et al2011 printed p204 Table4;PDFpage9
+equivalent_circle_diameter_m,min,8.053901861168425,8.1,1,True,Ulrich et al2011 printed p204 Table4;PDFpage9
+equivalent_circle_diameter_m,max,50.827546898118676,50.8,1,True,Ulrich et al2011 printed p204 Table4;PDFpage9
+equivalent_circle_diameter_m,mean,19.73700275889301,19.7,1,True,Ulrich et al2011 printed p204 Table4;PDFpage9
+equivalent_circle_diameter_m,median,18.48478542881041,18.5,1,True,Ulrich et al2011 printed p204 Table4;PDFpage9
+circularity_4piA_over_P2,median,0.8066001368914908,0.81,2,True,Ulrich et al2011 printed p204 Table4;PDFpage9

@@ -1,0 +1,287 @@
+{
+  "starting_sha": "778af696c654a191fe2a720f24d9f30ebd7d247b",
+  "branch": "research/ms-03-earth-analogs",
+  "pr": 7,
+  "date_taipei": "2026-11-15",
+  "roi": {
+    "latitude": [
+      57.5,
+      58.0
+    ],
+    "longitude_east": [
+      242,
+      242.5
+    ]
+  },
+  "sources": "Original NASA/MRO CRISM PDS labels, matching DDR1 and label-specified WA CDR3; see retrievals.json URLs/ranges/hashes",
+  "source_selection": "two lower-incidence northern-summer L-detector mapping strips, not all12candidate products or allseasons",
+  "acquisition_status_counts": {
+    "acquired": 20,
+    "not_acquired": 10
+  },
+  "local_only": [
+    {
+      "file": "sources/crism_dpsis.htm",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2110/document/crism_dpsis.htm",
+      "bytes": 3234023,
+      "sha256": "75bc4b07f1849b997bc268916d4a5c78c184955f5ac2bbd6acb4b9a2ee041d95"
+    },
+    {
+      "file": "sources/hsp0002de65_03_de218l_ddr1.img",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-6-ddr-v1/mrocr_1006/ddr/2014/2014_041/hsp0002de65/hsp0002de65_03_de218l_ddr1.img",
+      "bytes": 9676800,
+      "sha256": "7edbdbd7446708c4726e43a8810cd3d308db47fefe54898f6ddc800c98cae144"
+    },
+    {
+      "file": "sources/msp00018fda_01_de214l_ddr1.img",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-6-ddr-v1/mrocr_1002/ddr/2010/2010_145/msp00018fda/msp00018fda_01_de214l_ddr1.img",
+      "bytes": 9676800,
+      "sha256": "c31326ef44654bfc460224bc065b9a47c78d7f8e91dc2cfad1714b2bd8cff8eb"
+    },
+    {
+      "file": "sources/official_crism_page.html",
+      "url": "https://pds-geosciences.wustl.edu/missions/mro/crism.htm",
+      "bytes": 58477,
+      "sha256": "df7a7e7bf3c9c9c1897401c1c27d5f2a85784a4529031db11f595f0fa55cf966"
+    }
+  ],
+  "science_status": {
+    "ice_presence": "unknown",
+    "ice_depth": "unknown",
+    "ice_content": "unknown",
+    "surface_vs_cloud_or_frost": "unknown",
+    "whole_cell_science_quality_coverage": "unknown"
+  },
+  "data_kind": "published radiometrically calibrated I/F observations plus locally computed basic QA; not corrected surface reflectance or a validated ice detection",
+  "no_earth_time_alignment": true,
+  "no_new_mars_polygon": true,
+  "no_main_merge": true,
+  "tests": {
+    "with_local_raw": "validation.json:72 checks passed",
+    "retained_only": "validation_retained_only.json:68 checks passed",
+    "pixel_records_independently_decoded": 10406,
+    "visual_review": "final PNG opened; axes/source/dates/units and non-detection caveats checked"
+  },
+  "files": [
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/.gitignore",
+      "bytes": 61,
+      "sha256": "9a2de60dde91aa84d2dee43c49cf6364885b91c39a3ee9279c3bb0ae83475826"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/F-CRISM01_pixel_QA_spectra.png",
+      "bytes": 402917,
+      "sha256": "1afe480f82a3d20dade4ca85d49a030b5de8f09eae7365aa64b8da74621a5d2b"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/README.md",
+      "bytes": 6278,
+      "sha256": "801a8e0d0eda8a86fe5cf29281ea7baea9adb0f21d78fd114ec463871606de7b"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/acquire_crism.py",
+      "bytes": 1826,
+      "sha256": "2494b55440938bb07f10bc75e4423b15dc386ee584bf60fabd26ddd7f63705bb"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/acquire_pixels.py",
+      "bytes": 1625,
+      "sha256": "ce4f5be66390f02d3f5802026d9cc68e2b19b42b36340939a2bf2354fdae689c"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/acquire_support.py",
+      "bytes": 865,
+      "sha256": "9aff6a7925b9fc5c474e6fcfe261a5fe59471ea41e199b6d1965d9e25d4d10e7"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/analyze_crism.py",
+      "bytes": 8994,
+      "sha256": "cef2bc88180a859cef992eafe30b464daf840e5db53f3b0f0609b1dc1a8de573"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/anchor_channels.csv",
+      "bytes": 2784,
+      "sha256": "ed72875443b265e8d6774cc421f9009666a87c23c76444a9ab49efe0f477c4b2"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/candidate_products.json",
+      "bytes": 67443,
+      "sha256": "4e1efbfaa1ec1ad680fee24b87bec8a31be48a3e55322fe29d5c25b95870401d"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/channel_qa.csv",
+      "bytes": 52565,
+      "sha256": "cd82cd5071a68ab03e87d6bc62f253d0bbb862411a6ff8c28fcf8e57df99469e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/extraction_plan.json",
+      "bytes": 853,
+      "sha256": "03666695c5bbeb8cf0f9a4c255bde8bda2a3e6ff6c14222c1861b83b6856244a"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/fetch_planned.py",
+      "bytes": 897,
+      "sha256": "6386e6a2c2dcdf6d22aa6b42047af34d31e6a05ebc46b1e53ae76cc7fdb2a44e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/fetch_wavelengths.py",
+      "bytes": 435,
+      "sha256": "9b5c731581052b141d8e3d48c63a84f872f76cf61f5a0097c61d793596758721"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/hsp0002de65_03_de218l_ddr1_subset.json",
+      "bytes": 3636,
+      "sha256": "34747c488ca9012f7aeb2eb5463908504deeead7afff4abbe18ef964cf7b2a5e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/literature_search_log.csv",
+      "bytes": 2348,
+      "sha256": "6b7a3b24305bad48131a9316aab169bde262e747eeb849e61a59e14713c690dc"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/msp00018fda_01_de214l_ddr1_subset.json",
+      "bytes": 3638,
+      "sha256": "f5e4aec0f97904904b4754fab7bbe3e47ac538e2f35655df68ed8af51e942a78"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/plot_crism.py",
+      "bytes": 3264,
+      "sha256": "308186d557e63d474831de598a8abc9d371688e89c2df44b9bb7ee4bf9563b76"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/previous_catalogue_status.json",
+      "bytes": 6243,
+      "sha256": "2d7c709b0f091a6da3ddc9866183497ae6beff233cc7c1213c2cef453abe4ed5"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/qa.json",
+      "bytes": 4609,
+      "sha256": "a96fb3add1ceba66d9b33ad99cddf7c1451a33dc4464b145eeb39aa2015ab2f6"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/refresh_crism_evidence.py",
+      "bytes": 3889,
+      "sha256": "c75cc14fda63f0b37ffc79393c92f3cbfd652b514bacf446767d071c6bd9217e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/retrievals.json",
+      "bytes": 15611,
+      "sha256": "562f861cca3049de16a19e1698bb5260fd66877c3915b567190b1e4aff2facf1"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/roi_pixels.csv.gz",
+      "bytes": 879951,
+      "sha256": "d8d5f48426ed3b5a96f2b1a7f1e7b945178a039ab1d2c673849d2ae63430751f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/cdr490947778566_wa0300010l_3.img",
+      "bytes": 14336,
+      "sha256": "aefc99982550ac7fc38acb6902fdad4366f9eb35ea2cbd733867e958507e56af"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/cdr490947778566_wa0300010l_3.lbl",
+      "bytes": 6316,
+      "sha256": "291af22ff0c446149b253869abcc70ba444820aa570520454d7ee352fab883fe"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/cdr490947778566_wa0300020l_3.img",
+      "bytes": 39936,
+      "sha256": "8520a9a8b2b6d36365a727936ac303329c3c3d45028b31807eb8e6439a8bf73b"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/cdr490947778566_wa0300020l_3.lbl",
+      "bytes": 6316,
+      "sha256": "5536d292711f6a98d26aca96038a7d6b55051a140d7ba82e1b0f82db35a0edfe"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/hsp0002de65_03_de218l_ddr1.lbl",
+      "bytes": 4610,
+      "sha256": "c937ffe16a67e337b5b8ff4c0172011febed424854d970c6c399e555fd5a414d"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/hsp0002de65_03_de218l_ddr1_ode.json",
+      "bytes": 11611,
+      "sha256": "7ed4c6dbe67035cb73a99fb7ce35aa364167e3e5d6378169f2d1de9b36748ac6"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/hsp0002de65_03_de218l_ddr1_roi_bsq.bin",
+      "bytes": 483840,
+      "sha256": "cec6f1aa3396972405a41c1d6b2686a1f7995559c1c35e7c02fbfb8e8a6176c6"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/hsp0002de65_03_if218l_trr3.lbl",
+      "bytes": 9483,
+      "sha256": "1546337cc47a9a9da9faf9e9f3f0ebb2a538c8ff94562f980597cc7cfcf4a442"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/hsp0002de65_03_if218l_trr3_WA_ode.json",
+      "bytes": 2474,
+      "sha256": "501e2a67e5919dfb8f3257812b8c0ae527f2ac3c9d369462bbd8c6051baa478c"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/hsp0002de65_03_if218l_trr3_roi_rows.bin",
+      "bytes": 5322240,
+      "sha256": "0f4b67b9f3add98aba015d3791cddae911eaa864807abe28822a3377ea6fa9bc"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/hsp0002de65_03_if218l_trr3_rownum.bin",
+      "bytes": 308,
+      "sha256": "b093968f6b07d0d7fb281e368197afb09caae202fedf6d0532c64113b3fd06e5"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/msp00018fda_01_de214l_ddr1.lbl",
+      "bytes": 4637,
+      "sha256": "21ce52e42f0d9a1d30f4ef4b24ce494949a9309132d1f42e7462c9dd477ae0ca"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/msp00018fda_01_de214l_ddr1_ode.json",
+      "bytes": 10431,
+      "sha256": "6801c8abb1b988c9b74e066f5d2ff8cbfb2d27abd491ada43afe3e43bb3a69d1"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/msp00018fda_01_de214l_ddr1_roi_bsq.bin",
+      "bytes": 534016,
+      "sha256": "553cd2e3c7fffa6e9be0a3f36b9f798d8fdfcdbd57d92043803b9afc2d4f8fea"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/msp00018fda_01_if214l_trr3.lbl",
+      "bytes": 9479,
+      "sha256": "a567f46a9bacb023a995097142b75298acef3209449bf3f0ca5392d60aae091b"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/msp00018fda_01_if214l_trr3_WA_ode.json",
+      "bytes": 2474,
+      "sha256": "e0c22e19a8975abed403becb26eafeac1bb9bbbafdfdbd342b5e3c8409ed8b33"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/msp00018fda_01_if214l_trr3_roi_rows.bin",
+      "bytes": 2097920,
+      "sha256": "6cc17f9cd7356515ddb7b39f558891562a6622a898aef250cecb90c382be387e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/sources/msp00018fda_01_if214l_trr3_rownum.bin",
+      "bytes": 110,
+      "sha256": "ae97450de9655bbb6b0a93fe3fe2854396712da625bea4cdb4e2a36945771af6"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/update_manifests.py",
+      "bytes": 2957,
+      "sha256": "409735b0eef2be66601f260f233cb4fa80e65f1ccf4f3b429b74a2286a062a0c"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/validate_crism.py",
+      "bytes": 5208,
+      "sha256": "e99821b4f5a59b9e7d348a5a81982e9bf8741d571b7e47c391106b9ab379a784"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/validation.json",
+      "bytes": 4796,
+      "sha256": "a753f9c24df6c92feea2d142ea6cfeaf4057908d2ce167f944cdcaed63032155"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/crism/validation_retained_only.json",
+      "bytes": 4749,
+      "sha256": "ceb20bbc1b8eed35a9a46a248a8633d4dbd109811daca4a795e084497ab904f6"
+    }
+  ]
+}

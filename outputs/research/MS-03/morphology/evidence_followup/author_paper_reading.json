@@ -1,0 +1,20 @@
+{
+  "url": "https://awi-test.eprints-hosting.org/24005/1/Ulr2011a.pdf",
+  "doi": "10.1016/j.geomorph.2011.07.002",
+  "bytes": 4448816,
+  "sha256": "1aef294ead5be11e1a8f38ecf9954d58bca2e45bb2171ff9b79e0e3a77025372",
+  "pdf_pages": 21,
+  "cover_pages": 1,
+  "read_scope": "PDF extracted;focused reading printedpp199-201,203-204;sections2,3.1-3.3;Tables2-4;not a full-paper scientific review",
+  "actual_source_file_received": true,
+  "tracked_pdf": false,
+  "copyright_note": "Author personal copy;kept locally;no full-paper redistribution or copied figures",
+  "findings": [
+    "AD1 N185 inTable3 p203",
+    "Table4p204 rounded size/area/perimeter/circularity checks match",
+    "Section3.2p200 reports20cm orthoimages;source raster not acquired",
+    "Section3.2p201 restricts Mars geomorphometry toPSP_001938_2265 andPSP_002439_2265;not current MS03 images",
+    "Section3.3p201 required clearly identifiable enclosing cracks/troughs;MRR lengths are not published largest/smallest diameters"
+  ],
+  "coordinate_warning": "Printedp200 text contains apparent N/E swapped values92.12N46.07E;not used as valid coordinates;no silent correction. Prior-use scope based on explicit image IDs and study text."
+}

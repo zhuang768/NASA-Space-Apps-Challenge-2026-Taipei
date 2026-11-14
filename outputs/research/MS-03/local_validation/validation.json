@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "checks": [
+    "local_prior_work.csv rectangular",
+    "local_prior_work.csv unique IDs",
+    "local_prior_work.csv count",
+    "mars_ice_evidence.csv rectangular",
+    "mars_ice_evidence.csv unique IDs",
+    "mars_ice_evidence.csv count",
+    "analog_validation.csv rectangular",
+    "analog_validation.csv unique IDs",
+    "analog_validation.csv count",
+    "search_log.csv rectangular",
+    "search_log.csv unique IDs",
+    "search_log.csv count",
+    "piqueux_native_cell.csv rectangular",
+    "native cell and conditional unknown",
+    "all provider checksums verified",
+    "sharad_local_geometry.csv rectangular",
+    "256 original records",
+    "all raw coordinates/times decode and inside fixed cell",
+    "five actual CTX samples",
+    "CTX sample hashes and full bounds",
+    "NW retains mixed acquisition dates",
+    "six distinct SHARAD tracks",
+    "analog_validation.csv rectangular",
+    "no invented Mars geometry comparison",
+    "all available acquired bytes match recorded SHA256 (103)",
+    "all top-level JSON parse"
+  ],
+  "visual_review": [
+    "F-LV01_CTX_samples.png: actually opened, axes/source/date annotations checked",
+    "F-LV02_observation_support.png: actually opened, geometry-only caveat checked"
+  ],
+  "not_tested": [
+    "spectral ice detection",
+    "radar echo interpretation",
+    "Earth logger alignment",
+    "independent ice truth"
+  ]
+}

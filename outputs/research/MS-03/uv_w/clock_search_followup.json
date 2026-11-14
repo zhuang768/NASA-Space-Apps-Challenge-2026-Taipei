@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-15",
+  "previous_commit": "ab31a3d",
+  "api_checks": [
+    {
+      "url": "https://zenodo.org/api/records/10553882/versions",
+      "status": "retrieved",
+      "response_sha256": "42200b18afb237a62078b07a4aa3f887035c75b9d8204d81ba56a2343329fd67",
+      "record_ids": [
+        10553882
+      ]
+    },
+    {
+      "url": "https://zenodo.org/api/records/10553882/versions/latest",
+      "status": "retrieved",
+      "response_sha256": "98b9641ead5bf1a9e9036ef7d9582a195d40b782d93c41e7884372b0ff37be07",
+      "record_ids": [
+        10553882
+      ]
+    }
+  ],
+  "additional_source": {
+    "url": "https://zenodo.org/records/10553882/files/2010%20activities%20summaries.pdf",
+    "bytes": 1108938,
+    "md5": "d2184a3cb5941a62c9ff5079289ca766",
+    "sha256": "c859467821beefd4e9ac8a65360a07254b4ac20f6af503d88b05f9839229effe",
+    "read_scope": "14-page text extraction;focused reading pp5,8-9;not a2012 log"
+  },
+  "search_ids": [
+    "MS03-Q23",
+    "MS03-Q24",
+    "MS03-Q25",
+    "MS03-Q26",
+    "MS03-Q27",
+    "MS03-Q28"
+  ],
+  "root_cause": "unknown",
+  "new_author_code_obtained": false,
+  "raw_W_logger_obtained": false,
+  "2012_clock_log_obtained": false,
+  "timestamp_correction": false,
+  "hobo_alignment": false
+}

@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-15",
+  "records": [
+    {
+      "url": "https://pirlwww.lpl.arizona.edu/software/HiRISE/Java/HiRISE/HiCat/HiVolume/Index_Builder.html",
+      "actual_html_bytes": 27511,
+      "sha256": "b39db84baf5232a4ca7fe7f0c5f22fcb6f442033b625bc65296833d25dc77274",
+      "read_scope": "Class description and Write_RDR_Index/writeRDRIndex method documentation;not method implementation",
+      "supports": "Published docs identify index construction and label update responsibilities;database-backed construction",
+      "not_obtained": [
+        "executed2026build revision",
+        "SQL query/configuration",
+        "record counting implementation",
+        "root-cause explanation for149duplicate groups"
+      ]
+    },
+    {
+      "url": "https://pirlwww.lpl.arizona.edu/software/HiRISE/Java/HiRISE/HiCat/HiVolume/IndexBuilder.html",
+      "actual_html_bytes": 22426,
+      "sha256": "43024720873110ad14f3d822281d80f2fa9b5f997dd4245d0ee1e1315da17d3c",
+      "read_scope": "Class description and Write_RDR_Index/writeRDRIndex method documentation;not method implementation",
+      "supports": "Published docs identify index construction and label update responsibilities;database-backed construction",
+      "not_obtained": [
+        "executed2026build revision",
+        "SQL query/configuration",
+        "record counting implementation",
+        "root-cause explanation for149duplicate groups"
+      ]
+    }
+  ],
+  "conclusion": "Public component responsibilities now documented;cannot identify actual2026production implementation or establish distinct count/join/rounding cause",
+  "archive_policy": "HTML kept locally;only citation,hash,read scope and summary committed"
+}

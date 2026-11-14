@@ -31,15 +31,19 @@
 
 | 面向 | 資料夾 (`data/raw/earth/`) | 資料集（Shortname） | 檔案數與容量 | 原始解析度／網格 | 關鍵變數與讀取備註 |
 | --- | --- | --- | --- | --- | --- |
-| **1. 地形** | `terrain/` | **`SRTMGL30`** (v003) | 27 個 `.dem.zip`（266 MB） | 30 arc-sec（~900 m） | `*.DEM`（16-bit signed big-endian 整數高程，需重採樣至 ~3–4 km 算 `slope_deg`/`relief`） |
-| **2. 溫度** | `temperature/` | **`MOD11C3`** (v061, 2023–2024) | 24 個 `.hdf`（1.9 GB） | 0.05° 月平均（~5.6 km） | MODIS Terra LST 日夜地表溫度（HDF4 格式，Python 讀取需 `pyhdf`） |
+| **1. 地形** | `terrain/` | **`SRTMGL30`** (v003) | 27 個 `.dem.zip`（266 MB） | 30 arc-sec（~900 m） | `*.DEM`（16-bit signed big-endian 整數高程，每塊 4800×6000，zip 內**無 `.HDR`**，需依檔名左上角座標自行定位，例如 `w020n40` = 20°W、40°N；涵蓋 60°S–90°N；需重採樣至 ~3–4 km 算 `slope_deg`/`relief`） |
+| **2. 溫度** | `temperature/` | **`MOD11C3`** (v061, 2023–2024) | 24 個 `.hdf`（1.9 GB） | 0.05° 月平均（~5.6 km） | MODIS Terra LST 日夜地表溫度 `LST_Day_CMG`／`LST_Night_CMG`（HDF4 格式，用 `netCDF4.Dataset` 讀取；檔內無 lat/lon 變數） |
 | **3. 水／冰（乾旱度）** | `water_ice/gpm/` | **`GPM_3IMERGM`** (v07, 2023–2024) | 24 個 `.HDF5`（444 MB） | 0.1° 月平均（`1800×3600`） | `xarray(..., group='Grid')` 讀取 `precipitation` |
-| **3. 水／冰（土壤濕度）** | `water_ice/gldas/` | **`GLDAS_NOAH025_M`** (v2.1, 2023–2024) | 24 個 `.nc4`（584 MB） | 0.25° 月平均（`600×1440`） | `xarray` 直接讀取 `SoilMoi0_10cm_inst`（取代高達 467 GB 的每日 `SPL3SMP_E`） |
-| **3. 水／冰（植被扣分）** | `water_ice/ndvi/` | **`MOD13C2`** (v061, 2023–2024) | 24 個 `.hdf`（2.6 GB） | 0.05° 月平均（~5.6 km） | MODIS Terra NDVI（HDF4 格式，Python 讀取需 `pyhdf`） |
-| **4. 大氣與沙塵** | `air/` | **`M2TMNXAER`** (MERRA-2, 2023–2024) | 24 個 `.nc4`（1.9 GB） | 0.5° × 0.625°（`361×576`） | `xarray` 直接讀取 `DUEXTTAU`（純沙塵消光 AOT，比 9 GB 的 `MOD08_M3` 更精準且輕量） |
+| **3. 水／冰（土壤濕度）** | `water_ice/gldas/` | **`GLDAS_NOAH025_M`** (v2.1, 2023–2024) | 24 個 `.nc4`（584 MB） | 0.25° 月平均（`600×1440`） | `xarray` 直接讀取 `SoilMoi0_10cm_inst`（取代原規劃的每日 9 km 衛星觀測 `SPL3SMP_E`；注意 GLDAS 為陸面模式輸出，非衛星直接觀測，涵蓋 60°S–90°N） |
+| **3. 水／冰（植被扣分）** | `water_ice/ndvi/` | **`MOD13C2`** (v061, 2023–2024) | 24 個 `.hdf`（2.6 GB） | 0.05° 月平均（~5.6 km） | MODIS Terra NDVI `CMG 0.05 Deg Monthly NDVI`（HDF4 格式，用 `netCDF4.Dataset` 讀取；檔內無 lat/lon 變數） |
+| **4. 大氣與沙塵** | `air/` | **`M2TMNXAER`** (MERRA-2, 2023–2024) | 24 個 `.nc4`（1.9 GB） | 0.5° × 0.625°（`361×576`） | `xarray` 直接讀取 `DUEXTTAU`（純沙塵消光 AOT，取代原規劃的 `MOD08_M3` 總 AOD；注意 MERRA-2 為再分析資料，非衛星直接觀測） |
 
 > [!NOTE]
-> **格式讀取備註**：`GPM_3IMERGM`、`GLDAS_NOAH025_M` 與 `M2TMNXAER` 皆已實測可用 `xarray` 直接開啟；`MOD11C3` 與 `MOD13C2` 為 NASA HDF4 格式（內建 `rasterio` wheel 未包含 HDF4 驅動），程式端載入時需安裝 `pyhdf`（或透過 HDF4 工具轉換）。
+> **格式讀取備註**（144 個檔案已全部實測可開啟）：
+> - `GPM_3IMERGM`（需 `group='Grid'`）、`GLDAS_NOAH025_M` 與 `M2TMNXAER` 可用 `xarray` 直接開啟，並帶有 lat/lon 座標。
+> - `MOD11C3` 與 `MOD13C2` 為 NASA HDF4-EOS 格式：`xarray` 與內建 `rasterio` wheel（無 HDF4 驅動）都無法開啟，但專案 `.venv` 內的 `netCDF4.Dataset(path)` 可直接讀取，**不需另裝 `pyhdf`**。
+> - MODIS CMG 檔案**沒有 lat/lon 變數**，需自行建立 0.05° 網格（3600×7200）：lat 由 89.975 遞減至 −89.975，lon 由 −179.975 遞增至 179.975（皆為格點中心）。
+> - `SRTMGL30` 的 27 個 zip 只含 `.DEM`、沒有 `.HDR`，需依檔名定位；其中一塊檔名為大寫 `W020N40`，其餘為小寫，以檔名比對時請忽略大小寫。
 
 ---
 
@@ -49,7 +53,7 @@
 
 1. **準備 Earthdata Login 帳號（供 `earthaccess` 使用）**
    - 前往 [urs.earthdata.nasa.gov](https://urs.earthdata.nasa.gov/) 註冊帳號（免費，約 2 分鐘）。
-   - 註冊後在帳號設定中勾選授權 `NASA GESDISC DATA ARCHIVE` 與 `LP DAAC` 應用程式（下載 GPM、MODIS、NASADEM 必備）。
+   - 註冊後在帳號設定中勾選授權 `NASA GESDISC DATA ARCHIVE` 與 `LP DAAC` 應用程式（下載 GPM、GLDAS、MODIS、SRTMGL30 必備）。
    - 本機設定 `~/.netrc` 或執行 `earthaccess.login()` 即可無縫讓隊友的 Python 管線下載。
 
 2. **用免登入工具先篩選與預覽候選類型**

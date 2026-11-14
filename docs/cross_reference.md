@@ -30,10 +30,11 @@ This table cross-references every **Earth dataset collected** (NASA + partner sp
    - `GLDAS_NOAH025_M` (`xr.open_dataset(path)`)
    - `M2TMNXAER` (`xr.open_dataset(path)`)
    - `ESA CCI Permafrost` (`xr.open_dataset(path)`)
-2. **Requires `pyhdf` (or HDF4 conversion):**
-   - `MOD11C3` (`.hdf`) and `MOD13C2` (`.hdf`) use NASA HDF4-EOS; `rasterio`'s default pip wheel lacks HDF4 support.
+2. **Readable via `netCDF4.Dataset(path)` in `.venv` (no `pyhdf` needed):**
+   - `MOD11C3` (`.hdf`) and `MOD13C2` (`.hdf`) are NASA HDF4-EOS files (`xarray` and `rasterio`'s bundled wheel cannot open them, but `netCDF4.Dataset` reads them directly).
+   - MODIS CMG files have **no `lat`/`lon` variables**; build the 0.05° cell-center grid (`3600×7200`): `lat` from `89.975` down to `-89.975`, `lon` from `-179.975` up to `179.975`.
 3. **Binary tile format:**
-   - `SRTMGL30` (27 `.dem.zip` files) contains raw 16-bit signed big-endian `.DEM` tiles (standard SRTM30 grid).
+   - `SRTMGL30` (27 `.dem.zip` files, `60°S–90°N`) contains raw 16-bit signed big-endian `.DEM` tiles (`4800×6000` each, no `.HDR`; locate by filename top-left corner, case-insensitive since `W020N40` is uppercase).
 4. **Coverage & Limits:**
    - Mars `SWIM 2.0` only covers **±60° latitude**; global scoring outside ±60° cannot use SWIM directly.
    - All 5 non-replicable Mars conditions (`0.38 g`, `~0.6 kPa CO₂`, radiation, perchlorates, MY34 global dust storms) are documented separately in `docs/mars_limits.md`.

@@ -53,6 +53,13 @@
   ],
   "files": [
     {
+      "path": "docs/research/MS-02/local_validation/research_notes.md",
+      "bytes": 16363,
+      "sha256": "14b89b13b3bf23432d984db02345296a3e424edbc216437257a2f86b7e02fcbd",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
       "path": "outputs/research/MS-02/local_validation/.gitignore",
       "bytes": 318,
       "sha256": "e3545c31106b8fe0e40417793f11eb63ee05a776af3bb5059f7f1bf08bc7d32e",
@@ -75,8 +82,8 @@
     },
     {
       "path": "outputs/research/MS-02/local_validation/analog_validation.csv",
-      "bytes": 7078,
-      "sha256": "7ca5a68fda86bad0835c40a17a6496cd98a2bfb1dc133a792d8fc402c84c0924",
+      "bytes": 7074,
+      "sha256": "957a17fcc37668474f47623e08516b7ef6859d4989ec521c2dc2651bd4c9ffb2",
       "storage": "git_deliverable",
       "role": "derived_or_method"
     },
@@ -172,6 +179,20 @@
       "role": "derived_or_method"
     },
     {
+      "path": "outputs/research/MS-02/local_validation/ctx_registration_attempt.md",
+      "bytes": 1300,
+      "sha256": "b7863aa66e94b785d902f0f1ad3b090e17e107c4651afeae93eac7b5ee5ba226",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/ctx_registration_attempt.py",
+      "bytes": 2797,
+      "sha256": "16729338c34d0c57de35e35aed897ff9f54b0951c9946934fd651db26516fa1e",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
       "path": "outputs/research/MS-02/local_validation/derive_metrics.py",
       "bytes": 8595,
       "sha256": "e0e40d016323826aa3fffa70d14f538e11ca502db106dd1c3b79a1ab43544d71",
@@ -193,16 +214,16 @@
       "role": "derived_or_method"
     },
     {
-      "path": "outputs/research/MS-02/local_validation/extracted/marinova2022.txt",
-      "bytes": 121508,
-      "sha256": "f8a2017c780221bdc12ce7dc5257ad8f9cfab9168826fbf363719c044a9802c0",
+      "path": "outputs/research/MS-02/local_validation/extracted/marinova_p162.png",
+      "bytes": 165267,
+      "sha256": "acb1dc7acc3a1d5c24a7dc7a2b85a1671526b5ffb2fda5ee824a6f3286fcdc76",
       "storage": "local_only",
       "role": "derived_or_method"
     },
     {
-      "path": "outputs/research/MS-02/local_validation/extracted/marinova_p162.png",
-      "bytes": 165267,
-      "sha256": "acb1dc7acc3a1d5c24a7dc7a2b85a1671526b5ffb2fda5ee824a6f3286fcdc76",
+      "path": "outputs/research/MS-02/local_validation/extracted/marinova2022.txt",
+      "bytes": 121508,
+      "sha256": "f8a2017c780221bdc12ce7dc5257ad8f9cfab9168826fbf363719c044a9802c0",
       "storage": "local_only",
       "role": "derived_or_method"
     },
@@ -340,13 +361,6 @@
       "role": "derived_or_method"
     },
     {
-      "path": "outputs/research/MS-02/local_validation/radar_roi/s_00464501.npz",
-      "bytes": 815601,
-      "sha256": "4d08b6b9083e19a9cac7fde6415d99291fbd720df444388eff91c8d227c92608",
-      "storage": "git_deliverable",
-      "role": "derived_or_method"
-    },
-    {
       "path": "outputs/research/MS-02/local_validation/radar_roi/s_00464501_clutter_roi.png",
       "bytes": 21900,
       "sha256": "3a5e252afcda8cb054c1895912ccb2505d2bcebb712cd035eb57dca95dd19b8a",
@@ -361,9 +375,9 @@
       "role": "derived_or_method"
     },
     {
-      "path": "outputs/research/MS-02/local_validation/radar_roi/s_01983502.npz",
-      "bytes": 827610,
-      "sha256": "198ba059c4b3c379bfeb7f492ad381461c192edc74a12c7791b60c1aedf2d90c",
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_00464501.npz",
+      "bytes": 815601,
+      "sha256": "4d08b6b9083e19a9cac7fde6415d99291fbd720df444388eff91c8d227c92608",
       "storage": "git_deliverable",
       "role": "derived_or_method"
     },
@@ -382,9 +396,9 @@
       "role": "derived_or_method"
     },
     {
-      "path": "outputs/research/MS-02/local_validation/radar_roi/s_02004601.npz",
-      "bytes": 827405,
-      "sha256": "7a3332adfadaecbe1b7273881157b99ed8162396d2b19315f0cdb3b137fb2132",
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_01983502.npz",
+      "bytes": 827610,
+      "sha256": "198ba059c4b3c379bfeb7f492ad381461c192edc74a12c7791b60c1aedf2d90c",
       "storage": "git_deliverable",
       "role": "derived_or_method"
     },
@@ -403,6 +417,27 @@
       "role": "derived_or_method"
     },
     {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_02004601.npz",
+      "bytes": 827405,
+      "sha256": "7a3332adfadaecbe1b7273881157b99ed8162396d2b19315f0cdb3b137fb2132",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/repair_notes.md",
+      "bytes": 1346,
+      "sha256": "a4181eae70cea47a8cfc61023ad4f948c4f4fecc50654dff07eff3fc54778cb4",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/repair_verification.json",
+      "bytes": 2867,
+      "sha256": "d331e466468f26014ede794195d71f185e4c9b44a8372d9ece470bbf49a59169",
+      "storage": "git_deliverable",
+      "role": "derived_or_method"
+    },
+    {
       "path": "outputs/research/MS-02/local_validation/revise_evidence.py",
       "bytes": 16563,
       "sha256": "45cc5a06fe925624f1a7338be99a9ed248bb4ab2e48f4eff5f11088aebb82e11",
@@ -411,8 +446,8 @@
     },
     {
       "path": "outputs/research/MS-02/local_validation/scale_gap_resolution.csv",
-      "bytes": 2932,
-      "sha256": "a5e4484f6a7c4f89f407d2fd357b41520ab6375f8fefe0cb99da055dad6c7112",
+      "bytes": 2969,
+      "sha256": "95284ab6e4420e4b15399714a3a4a4baa11798df2905f1d8f2ac07776cfee651",
       "storage": "git_deliverable",
       "role": "derived_or_method"
     },
@@ -536,13 +571,6 @@
       "role": "downloaded_source"
     },
     {
-      "path": "outputs/research/MS-02/local_validation/sources/ode_crism.json",
-      "bytes": 469,
-      "sha256": "5a5118942ee1529e30a95d8e08240c24d62661f2c3386f93b356343e2feccaf6",
-      "storage": "git_deliverable",
-      "role": "downloaded_source"
-    },
-    {
       "path": "outputs/research/MS-02/local_validation/sources/ode_crism_TRDR.json",
       "bytes": 528715,
       "sha256": "11b6a177624b96e83483724042fb1744e9bfb9fbf83c350873468d1fdcfeb3ba",
@@ -550,9 +578,9 @@
       "role": "downloaded_source"
     },
     {
-      "path": "outputs/research/MS-02/local_validation/sources/ode_ctx.json",
-      "bytes": 459,
-      "sha256": "84c22d752b7ae1e7f0733fad45492ba507c64c10ac5dbf258b0d647ca5ce206e",
+      "path": "outputs/research/MS-02/local_validation/sources/ode_crism.json",
+      "bytes": 469,
+      "sha256": "5a5118942ee1529e30a95d8e08240c24d62661f2c3386f93b356343e2feccaf6",
       "storage": "git_deliverable",
       "role": "downloaded_source"
     },
@@ -564,16 +592,16 @@
       "role": "downloaded_source"
     },
     {
-      "path": "outputs/research/MS-02/local_validation/sources/ode_datasets.json",
-      "bytes": 385612,
-      "sha256": "3358ce926dbc34cc733f92bc66dce4b53bb231e799732a4f718161ef1fb61fc2",
+      "path": "outputs/research/MS-02/local_validation/sources/ode_ctx.json",
+      "bytes": 459,
+      "sha256": "84c22d752b7ae1e7f0733fad45492ba507c64c10ac5dbf258b0d647ca5ce206e",
       "storage": "git_deliverable",
       "role": "downloaded_source"
     },
     {
-      "path": "outputs/research/MS-02/local_validation/sources/ode_hirise.json",
-      "bytes": 470,
-      "sha256": "be08cb7fd4808f6e6941d662c301dc114e2cab56a361b5dfa88c74164961f4f1",
+      "path": "outputs/research/MS-02/local_validation/sources/ode_datasets.json",
+      "bytes": 385612,
+      "sha256": "3358ce926dbc34cc733f92bc66dce4b53bb231e799732a4f718161ef1fb61fc2",
       "storage": "git_deliverable",
       "role": "downloaded_source"
     },
@@ -585,9 +613,9 @@
       "role": "downloaded_source"
     },
     {
-      "path": "outputs/research/MS-02/local_validation/sources/ode_sharad.json",
+      "path": "outputs/research/MS-02/local_validation/sources/ode_hirise.json",
       "bytes": 470,
-      "sha256": "981bb5acdd7d4a388b6c016b54d28b7cedd51a5889238c4f6416d6e6c3dd4529",
+      "sha256": "be08cb7fd4808f6e6941d662c301dc114e2cab56a361b5dfa88c74164961f4f1",
       "storage": "git_deliverable",
       "role": "downloaded_source"
     },
@@ -599,9 +627,23 @@
       "role": "downloaded_source"
     },
     {
+      "path": "outputs/research/MS-02/local_validation/sources/ode_sharad.json",
+      "bytes": 470,
+      "sha256": "981bb5acdd7d4a388b6c016b54d28b7cedd51a5889238c4f6416d6e6c3dd4529",
+      "storage": "git_deliverable",
+      "role": "downloaded_source"
+    },
+    {
       "path": "outputs/research/MS-02/local_validation/sources/pathare2018.pdf",
       "bytes": 1908797,
       "sha256": "a57be3a6612b55126e47539d638d22ce0ff9cbf5c512bafd147d6a6abe4aabb6",
+      "storage": "local_only",
+      "role": "downloaded_source"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/sources/piqueux/d_m.ascii",
+      "bytes": 2434482,
+      "sha256": "1101d38a45c88f7531fcfa0e7af163d94e8fb337d53e0b7f766f81762ae5b1ff",
       "storage": "local_only",
       "role": "downloaded_source"
     },
@@ -630,13 +672,6 @@
       "path": "outputs/research/MS-02/local_validation/sources/piqueux/TI_SI.ascii",
       "bytes": 2484261,
       "sha256": "20e842167fcb4daa811cc83ba69a666d47a73338274d8a65f85e69b5b7e4d2fb",
-      "storage": "local_only",
-      "role": "downloaded_source"
-    },
-    {
-      "path": "outputs/research/MS-02/local_validation/sources/piqueux/d_m.ascii",
-      "bytes": 2434482,
-      "sha256": "1101d38a45c88f7531fcfa0e7af163d94e8fb337d53e0b7f766f81762ae5b1ff",
       "storage": "local_only",
       "role": "downloaded_source"
     },
@@ -1528,13 +1563,13 @@
       "sha256": "d9c35dfd3c13da30ca66dd57481e41ba68abb5eeddfda08666b0f33c4f2990b4",
       "storage": "git_deliverable",
       "role": "derived_or_method"
-    },
-    {
-      "path": "docs/research/MS-02/local_validation/research_notes.md",
-      "bytes": 16363,
-      "sha256": "14b89b13b3bf23432d984db02345296a3e424edbc216437257a2f86b7e02fcbd",
-      "storage": "git_deliverable",
-      "role": "derived_or_method"
     }
-  ]
+  ],
+  "documentation_repair": {
+    "base_sha": "08d2740a23694a54bcc11cabf7120114d2e120fc",
+    "date_local": "2026-11-15",
+    "scope": "Document consistency and provenance only; original scientific arrays not reprocessed",
+    "verification": "outputs/research/MS-02/local_validation/repair_verification.json",
+    "historical_verification_not_rerun": true
+  }
 }

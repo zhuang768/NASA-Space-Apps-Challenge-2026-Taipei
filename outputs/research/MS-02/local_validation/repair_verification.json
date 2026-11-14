@@ -1,0 +1,81 @@
+{
+  "check_date_Taipei": "2026-11-15",
+  "base_sha": "08d2740a23694a54bcc11cabf7120114d2e120fc",
+  "scope": "Base Git-blob checks; CSV consistency; CTX documentation and comment-only AST comparison; historical manifest membership. No image reprocessing or full scientific reanalysis.",
+  "all_passed": true,
+  "checks_count": 13,
+  "checks": [
+    {
+      "check": "read matches base Git blob analog_validation.csv",
+      "passed": true
+    },
+    {
+      "check": "read matches base Git blob scale_gap_resolution.csv",
+      "passed": true
+    },
+    {
+      "check": "read matches base Git blob ctx_registration_attempt.md",
+      "passed": true
+    },
+    {
+      "check": "read matches base Git blob ctx_registration_attempt.py",
+      "passed": true
+    },
+    {
+      "check": "read matches base Git blob revision_verification.json",
+      "passed": true
+    },
+    {
+      "check": "CSV row count and columns preserved analog_validation.csv",
+      "passed": true
+    },
+    {
+      "check": "CSV row count and columns preserved scale_gap_resolution.csv",
+      "passed": true
+    },
+    {
+      "check": "CS1 old contradiction removed",
+      "passed": true
+    },
+    {
+      "check": "geology old contradiction removed",
+      "passed": true
+    },
+    {
+      "check": "CTX functional AST unchanged",
+      "passed": true
+    },
+    {
+      "check": "method note withdraws unsupported results",
+      "passed": true
+    },
+    {
+      "check": "historical verification scoped",
+      "passed": true
+    },
+    {
+      "check": "all historical git_deliverable paths present",
+      "passed": true
+    }
+  ],
+  "historical_manifest_git_paths_checked": 181,
+  "file_hashes": {
+    "outputs/research/MS-02/local_validation/analog_validation.csv": "957a17fcc37668474f47623e08516b7ef6859d4989ec521c2dc2651bd4c9ffb2",
+    "outputs/research/MS-02/local_validation/scale_gap_resolution.csv": "95284ab6e4420e4b15399714a3a4a4baa11798df2905f1d8f2ac07776cfee651",
+    "outputs/research/MS-02/local_validation/ctx_registration_attempt.py": "16729338c34d0c57de35e35aed897ff9f54b0951c9946934fd651db26516fa1e",
+    "outputs/research/MS-02/local_validation/ctx_registration_attempt.md": "b7863aa66e94b785d902f0f1ad3b090e17e107c4651afeae93eac7b5ee5ba226",
+    "outputs/research/MS-02/local_validation/revision_verification.json": "c40ad0972c91ee4eac4a38e779a65e2ee4c8845190c0429000ebd40044074f78"
+  },
+  "historical_verification": {
+    "checks_count": 232,
+    "hashed_files_verified": 181,
+    "rerun": false
+  },
+  "scientific_gaps_retained": [
+    "independent local ice existence/depth/abundance",
+    "calibrated spectral interpretation",
+    "validated CTX geometry and morphology",
+    "Beacon raw sequence and same-profile mapping"
+  ],
+  "limits": "Git blob identity and document checks do not verify physical truth. Local-only source arrays were not acquired."
+}

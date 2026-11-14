@@ -131,3 +131,10 @@ AI assistance (OpenAI Codex, Antigravity, Claude) is disclosed per entry in the 
 After the owner updated the configuration, [workflow run 43569162001](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/actions/runs/43569162001) completed successfully: configuration validation, data build, web build, Worker upload and public release verification all passed. The public deployment stamp reported commit `bc25d3ae4d89b2b1c62eef1f42268f3d78988f59` and this run ID. The previous credential-format blocker is resolved for this tested run.
 
 The official site remains https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/ . Every main push is configured to trigger this same workflow; this report update is also being used to exercise the push trigger separately from manual dispatch. No science, ranking or website code was changed. OpenAI Codex assisted verification and English reporting.
+
+
+### 2026-11-14: Full-height Earth candidate sidebar
+
+Removed the desktop candidate-list height cap and nested scrolling so all candidates continue down the page. The candidate sidebar stretches with the right analysis column; the final right panel fills the shared row height. Removed desktop sticky positioning for this sidebar. Mobile retains its bounded, scrollable candidate list. No values, rankings or filters changed.
+
+Validated in Chromium at 1440 px: both Overview and Evidence views have matching left/right column bottoms, all 12 cards fit without internal list scrolling, and the sidebar is static. At 390 px the document has no horizontal overflow and the list remains at most 260 px tall. TypeScript/Vite build passed; a desktop screenshot was reviewed. OpenAI Codex assisted layout changes and validation.

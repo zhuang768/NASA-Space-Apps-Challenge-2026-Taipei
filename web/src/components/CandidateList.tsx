@@ -34,7 +34,7 @@ export function CandidateList({
   }, [candidates, filter]);
 
   return (
-    <aside className="panel" aria-label="Earth candidate shortlist">
+    <aside className="panel candidate-shortlist" aria-label="Earth candidate shortlist">
       <div className="panel-header" style={{ marginBottom: 8 }}>
         <div>
           <h2 className="panel-title">Earth candidates</h2>
@@ -95,7 +95,7 @@ export function CandidateList({
           </p>
         </div>
       ) : (
-        <div style={{ display: "flex", flexDirection: "column", gap: 8, maxHeight: 560, overflowY: "auto", paddingRight: 2 }}>
+        <div className="candidate-card-list">
           {filtered.map((c) => {
             const isSel = selectedCandidate?.candidate_id === c.candidate_id;
             return (

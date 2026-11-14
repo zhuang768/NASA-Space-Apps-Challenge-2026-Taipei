@@ -1,0 +1,389 @@
+{
+  "input_path": "/tmp/ms01_lv_optical/ode_SHARAD_RDR.json",
+  "input_sha256": "700bc301526f17d7ac53313c9bec24e007cdb00fd759581dc2357253132368ee",
+  "method": "Liang-Barsky segment clip in lon/lat,then Mars spherical R3396km length;no buffer/beam assumption",
+  "ROI": [
+    72.5,
+    56.5,
+    73.0,
+    57.0
+  ],
+  "rows": [
+    {
+      "product_id": "R_1958801_001_SS04_700_A",
+      "dataset": "MRO-M-SHARAD-4-RDR-V1.0",
+      "UTC_start": "2010-09-30T20:06:12.741",
+      "UTC_stop": "2010-09-30T20:19:00.749",
+      "query_bbox_match": true,
+      "nominal_line_intersection": true,
+      "nominal_clipped_length_km": 29.87931275271719,
+      "intersection_bounds": [
+        72.55619566546264,
+        56.5,
+        72.67336787103947,
+        57.0
+      ],
+      "clip_segments": [
+        [
+          [
+            72.67336787103947,
+            57.0
+          ],
+          [
+            72.6562,
+            56.9275
+          ]
+        ],
+        [
+          [
+            72.6562,
+            56.9275
+          ],
+          [
+            72.5858,
+            56.6276
+          ]
+        ],
+        [
+          [
+            72.5858,
+            56.6276
+          ],
+          [
+            72.55619566546264,
+            56.5
+          ]
+        ]
+      ],
+      "footprint_source": "Lat/Lon points from Geom Product",
+      "ODE_notes": {
+        "ODE_note": [
+          "NOTE: Label keyword Orbit number value used for start orbit number value",
+          "NOTE: Label keyword Orbit number value used for stop orbit number value",
+          "NOTE: Observation time set to mid-point between start time and stop time",
+          "NOTE: Ground track generated from every row of the GEOM table"
+        ]
+      },
+      "source_product_url": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=R_1958801_001_SS04_700_A&product_idGeo=16376209",
+      "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-4-rdr-v1/MROSH_1001/data/rdr19xxx/rdr1958801/r_1958801_001_ss04_700_a.lbl",
+      "data_url": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=R_1958801_001_SS04_700_A&product_idGeo=16376209",
+      "limit": "ODE nominal groundtrack only;not beam/valid echoes;no ice identification",
+      "data_acquisition": "Root successfully fetched catalogue;this subagent independently clipped supplied WKT;no originalDAT read"
+    },
+    {
+      "product_id": "R_3509503_001_SS19_700_A",
+      "dataset": "MRO-M-SHARAD-4-RDR-V1.0",
+      "UTC_start": "2014-01-21T04:00:46.603",
+      "UTC_stop": "2014-01-21T04:15:05.766",
+      "query_bbox_match": true,
+      "nominal_line_intersection": true,
+      "nominal_clipped_length_km": 29.8841650082246,
+      "intersection_bounds": [
+        72.84443284701959,
+        56.5,
+        72.96277082936129,
+        57.0
+      ],
+      "clip_segments": [
+        [
+          [
+            72.84443284701959,
+            56.5
+          ],
+          [
+            72.8456,
+            56.505
+          ]
+        ],
+        [
+          [
+            72.8456,
+            56.505
+          ],
+          [
+            72.895,
+            56.7149
+          ]
+        ],
+        [
+          [
+            72.895,
+            56.7149
+          ],
+          [
+            72.9234,
+            56.8348
+          ]
+        ],
+        [
+          [
+            72.9234,
+            56.8348
+          ],
+          [
+            72.96277082936129,
+            57.0
+          ]
+        ]
+      ],
+      "footprint_source": "Lat/Lon points from Geom Product",
+      "ODE_notes": {
+        "ODE_note": [
+          "NOTE: Label keyword Orbit number value used for start orbit number value",
+          "NOTE: Label keyword Orbit number value used for stop orbit number value",
+          "NOTE: Observation time set to mid-point between start time and stop time",
+          "NOTE: Ground track generated from every row of the GEOM table"
+        ]
+      },
+      "source_product_url": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=R_3509503_001_SS19_700_A&product_idGeo=27942384",
+      "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-4-rdr-v1/MROSH_1004/data/rdr35xxx/rdr3509503/r_3509503_001_ss19_700_a.lbl",
+      "data_url": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=R_3509503_001_SS19_700_A&product_idGeo=27942384",
+      "limit": "ODE nominal groundtrack only;not beam/valid echoes;no ice identification",
+      "data_acquisition": "Root successfully fetched catalogue;this subagent independently clipped supplied WKT;no originalDAT read"
+    },
+    {
+      "product_id": "R_3587301_001_SS19_700_A",
+      "dataset": "MRO-M-SHARAD-4-RDR-V1.0",
+      "UTC_start": "2014-03-22T18:55:40.706",
+      "UTC_stop": "2014-03-22T19:06:47.870",
+      "query_bbox_match": true,
+      "nominal_line_intersection": true,
+      "nominal_clipped_length_km": 28.288133706310077,
+      "intersection_bounds": [
+        72.88808161734056,
+        56.5,
+        73.0,
+        56.97330060120239
+      ],
+      "clip_segments": [
+        [
+          [
+            72.88808161734056,
+            56.5
+          ],
+          [
+            72.912,
+            56.6021
+          ]
+        ],
+        [
+          [
+            72.912,
+            56.6021
+          ],
+          [
+            72.9545,
+            56.782
+          ]
+        ],
+        [
+          [
+            72.9545,
+            56.782
+          ],
+          [
+            73.0,
+            56.97330060120239
+          ]
+        ]
+      ],
+      "footprint_source": "Lat/Lon points from Geom Product",
+      "ODE_notes": {
+        "ODE_note": [
+          "NOTE: Label keyword Orbit number value used for start orbit number value",
+          "NOTE: Label keyword Orbit number value used for stop orbit number value",
+          "NOTE: Observation time set to mid-point between start time and stop time",
+          "NOTE: Ground track generated from every row of the GEOM table"
+        ]
+      },
+      "source_product_url": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=R_3587301_001_SS19_700_A&product_idGeo=27942837",
+      "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-4-rdr-v1/MROSH_1004/data/rdr35xxx/rdr3587301/r_3587301_001_ss19_700_a.lbl",
+      "data_url": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=R_3587301_001_SS19_700_A&product_idGeo=27942837",
+      "limit": "ODE nominal groundtrack only;not beam/valid echoes;no ice identification",
+      "data_acquisition": "Root successfully fetched catalogue;this subagent independently clipped supplied WKT;no originalDAT read"
+    },
+    {
+      "product_id": "R_3608401_001_SS19_700_A",
+      "dataset": "MRO-M-SHARAD-4-RDR-V1.0",
+      "UTC_start": "2014-04-08T05:32:36.534",
+      "UTC_stop": "2014-04-08T05:44:14.315",
+      "query_bbox_match": true,
+      "nominal_line_intersection": true,
+      "nominal_clipped_length_km": 29.884186830084158,
+      "intersection_bounds": [
+        72.82855390885513,
+        56.5,
+        72.94689725722758,
+        57.0
+      ],
+      "clip_segments": [
+        [
+          [
+            72.82855390885513,
+            56.5
+          ],
+          [
+            72.8482,
+            56.5839
+          ]
+        ],
+        [
+          [
+            72.8482,
+            56.5839
+          ],
+          [
+            72.912,
+            56.8538
+          ]
+        ],
+        [
+          [
+            72.912,
+            56.8538
+          ],
+          [
+            72.94689725722758,
+            57.0
+          ]
+        ]
+      ],
+      "footprint_source": "Lat/Lon points from Geom Product",
+      "ODE_notes": {
+        "ODE_note": [
+          "NOTE: Label keyword Orbit number value used for start orbit number value",
+          "NOTE: Label keyword Orbit number value used for stop orbit number value",
+          "NOTE: Observation time set to mid-point between start time and stop time",
+          "NOTE: Ground track generated from every row of the GEOM table"
+        ]
+      },
+      "source_product_url": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=R_3608401_001_SS19_700_A&product_idGeo=27943030",
+      "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-4-rdr-v1/MROSH_1004/data/rdr36xxx/rdr3608401/r_3608401_001_ss19_700_a.lbl",
+      "data_url": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=R_3608401_001_SS19_700_A&product_idGeo=27943030",
+      "limit": "ODE nominal groundtrack only;not beam/valid echoes;no ice identification",
+      "data_acquisition": "Root successfully fetched catalogue;this subagent independently clipped supplied WKT;no originalDAT read"
+    },
+    {
+      "product_id": "R_3833901_001_SS19_700_A",
+      "dataset": "MRO-M-SHARAD-4-RDR-V1.0",
+      "UTC_start": "2014-09-30T22:25:51.930",
+      "UTC_stop": "2014-09-30T22:37:26.644",
+      "query_bbox_match": true,
+      "nominal_line_intersection": true,
+      "nominal_clipped_length_km": 29.88444588994198,
+      "intersection_bounds": [
+        72.79136290909092,
+        56.5,
+        72.909768,
+        57.0
+      ],
+      "clip_segments": [
+        [
+          [
+            72.79136290909092,
+            56.5
+          ],
+          [
+            72.7994,
+            56.5344
+          ]
+        ],
+        [
+          [
+            72.7994,
+            56.5344
+          ],
+          [
+            72.8703,
+            56.8344
+          ]
+        ],
+        [
+          [
+            72.8703,
+            56.8344
+          ],
+          [
+            72.909768,
+            57.0
+          ]
+        ]
+      ],
+      "footprint_source": "Lat/Lon points from Geom Product",
+      "ODE_notes": {
+        "ODE_note": [
+          "NOTE: Label keyword Orbit number value used for start orbit number value",
+          "NOTE: Label keyword Orbit number value used for stop orbit number value",
+          "NOTE: Observation time set to mid-point between start time and stop time",
+          "NOTE: Ground track generated from every row of the GEOM table"
+        ]
+      },
+      "source_product_url": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=R_3833901_001_SS19_700_A&product_idGeo=27944655",
+      "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-4-rdr-v1/MROSH_1004/data/rdr38xxx/rdr3833901/r_3833901_001_ss19_700_a.lbl",
+      "data_url": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=R_3833901_001_SS19_700_A&product_idGeo=27944655",
+      "limit": "ODE nominal groundtrack only;not beam/valid echoes;no ice identification",
+      "data_acquisition": "Root successfully fetched catalogue;this subagent independently clipped supplied WKT;no originalDAT read"
+    },
+    {
+      "product_id": "R_4670601_001_SS19_700_A",
+      "dataset": "MRO-M-SHARAD-4-RDR-V1.0",
+      "UTC_start": "2016-07-13T20:02:33.967",
+      "UTC_stop": "2016-07-13T20:13:10.879",
+      "query_bbox_match": true,
+      "nominal_line_intersection": true,
+      "nominal_clipped_length_km": 29.886076830491522,
+      "intersection_bounds": [
+        72.85184677777777,
+        56.5,
+        72.9706411764706,
+        57.0
+      ],
+      "clip_segments": [
+        [
+          [
+            72.85184677777777,
+            57.0
+          ],
+          [
+            72.8847,
+            56.8629
+          ]
+        ],
+        [
+          [
+            72.8847,
+            56.8629
+          ],
+          [
+            72.9629,
+            56.5329
+          ]
+        ],
+        [
+          [
+            72.9629,
+            56.5329
+          ],
+          [
+            72.9706411764706,
+            56.5
+          ]
+        ]
+      ],
+      "footprint_source": "Lat/Lon points from Geom Product",
+      "ODE_notes": {
+        "ODE_note": [
+          "NOTE: Label keyword Orbit number value used for start orbit number value",
+          "NOTE: Label keyword Orbit number value used for stop orbit number value",
+          "NOTE: Observation time set to mid-point between start time and stop time",
+          "NOTE: Ground track generated from every row of the GEOM table"
+        ]
+      },
+      "source_product_url": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=R_4670601_001_SS19_700_A&product_idGeo=28203236",
+      "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-4-rdr-v1/MROSH_1004/data/rdr46xxx/rdr4670601/r_4670601_001_ss19_700_a.lbl",
+      "data_url": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=R_4670601_001_SS19_700_A&product_idGeo=28203236",
+      "limit": "ODE nominal groundtrack only;not beam/valid echoes;no ice identification",
+      "data_acquisition": "Root successfully fetched catalogue;this subagent independently clipped supplied WKT;no originalDAT read"
+    }
+  ]
+}

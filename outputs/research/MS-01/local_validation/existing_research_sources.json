@@ -1,0 +1,59 @@
+{
+  "sources": [
+    {
+      "path": "docs/research/MS-01/report.md",
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/docs/research/MS-01/report.md",
+      "bytes": 18898,
+      "sha256": "2e0af390f9148b7b9d17c6c70fbeb496dd09a8cb3437aa7a52c06bc9c361b669"
+    },
+    {
+      "path": "docs/research/MS-01/thermal_followup.md",
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/docs/research/MS-01/thermal_followup.md",
+      "bytes": 18263,
+      "sha256": "7e3444758fae54713008f3afa38f96c1d783041fdcc1effd299017a457d84975"
+    },
+    {
+      "path": "outputs/research/MS-01/candidates.csv",
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/outputs/research/MS-01/candidates.csv",
+      "bytes": 1936,
+      "sha256": "49da79bb01586eb4398bbe395b28e81c9f64c488c1547155c4c011b9bcd26efb"
+    },
+    {
+      "path": "outputs/research/MS-01/evidence.csv",
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/outputs/research/MS-01/evidence.csv",
+      "bytes": 17582,
+      "sha256": "dc0db453e30c028309d8264d1af03799b1d7698bef65f43a158c81f8206cd9f7"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/interpretation_table.csv",
+      "commit_sha": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/b4b6929e890018668ef4faa9a74128a4ce5aa8df/outputs/research/MS-01/thermal_followup/interpretation_table.csv",
+      "bytes": 3105,
+      "sha256": "d2fe62fe283d6d5c9f2ef9883446e6c073b79408295bd496c743112783c43459"
+    }
+  ],
+  "other_fixed_prs": [
+    {
+      "pr": 8,
+      "head": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "base": "main",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/8"
+    },
+    {
+      "pr": 9,
+      "head": "c206553fc681328d214cbbcd508d3c5b1391e200",
+      "base": "main",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/9"
+    },
+    {
+      "pr": 10,
+      "head": "0260c511d9fce6be12d3460a69e474f333160cbf",
+      "base": "main",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/10"
+    }
+  ]
+}

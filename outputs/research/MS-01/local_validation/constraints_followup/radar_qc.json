@@ -1,0 +1,38 @@
+{
+  "shape": [
+    1400,
+    64
+  ],
+  "row0_support": [
+    1600,
+    2999
+  ],
+  "column1_support": [
+    1664,
+    1727
+  ],
+  "period_utc": "2010-09-30T20:09:47.039–20:09:56.350",
+  "coordinates_source": "../sharad_actual_geometry_rows.csv",
+  "radar_max_row_range": [
+    2453,
+    2474
+  ],
+  "clutter_max_row_range": [
+    2449,
+    2473
+  ],
+  "peak_row_difference_median": 3.0,
+  "data_kind": "PDSderivedreceivedpower versus independenttopographiccluttersimulation;thisrunQC",
+  "radar_full_sha_unknown": true,
+  "window_sha256": {
+    "radar_window.bin": "a5986d7288aea1eef67ecc6122a32198b644a3a9a2e7dbe091d86a4e11f48a71",
+    "sim_window.bin": "83dbda837149592b887e72e1fba17850a64d68cd393b077a7bdc547bd39b008c"
+  },
+  "limits": [
+    "Full files not acquired;exactHTTPContent-Range preserved",
+    "Different arbitrary power scales;do notsubtractsimulationfromreceivedpower",
+    "Ionosphericregistration,offnadirsurface,sidelobes,noise and dielectriclayers remain alternatives",
+    "No identifieduniqueicehorizon/noicefractioninversion",
+    "SHARAD5–8mtypicalgeologicverticalresolutioncannotdirectlyresolve0.427mcover;not a noice test"
+  ]
+}

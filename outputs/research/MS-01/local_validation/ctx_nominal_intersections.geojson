@@ -1,0 +1,253 @@
+{
+  "type": "FeatureCollection",
+  "roi": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          73.0,
+          56.5
+        ],
+        [
+          73.0,
+          57.0
+        ],
+        [
+          72.5,
+          57.0
+        ],
+        [
+          72.5,
+          56.5
+        ],
+        [
+          73.0,
+          56.5
+        ]
+      ]
+    ]
+  },
+  "coordinate_definition": "Marsplanetocentric east-positive;nominal catalogue polygon clipping",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "dataset": "CTX_EDR",
+        "product_id": "G23_027348_2388_XN_58N287W",
+        "observation_group": "G23_027348_2388_XN_58N287W",
+        "observation_start_utc": "2012-05-27T11:45:11.942",
+        "observation_stop_utc": "2012-05-27T11:46:49.953",
+        "solar_longitude_deg": "116.3",
+        "local_solar_time_hours": "unknown",
+        "incidence_deg": "48.44",
+        "map_scale_m_per_pixel": "6.09",
+        "centre_latitude": "58.567",
+        "centre_longitude": "72.928",
+        "centre_inside_roi": false,
+        "geometry_type": "Polygon",
+        "polygon_status": "positive_area_intersection",
+        "nominal_intersection_km2": 89.46310566613015,
+        "nominal_line_intersection_km": null,
+        "footprint_source": "PDS Archive Index Table",
+        "product_url": "http://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=G23_027348_2388_XN_58N287W&product_idGeo=20809657",
+        "label_url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_1657/data/G23_027348_2388_XN_58N287W.IMG",
+        "radiance_factor_cube": false,
+        "source_file": "ode_CTX_EDR.json.gz",
+        "source_sha256": "0c3530b2e9cf6bdd158004f54a871577a8eaef8000db43d92ac6935c5d5b2332",
+        "support_limit": "Nominal catalogue geometry only;not valid-pixel QA,ice detection,independent observation count or complete archive guarantee"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.83347411444142,
+              57.0
+            ],
+            [
+              73.0,
+              57.0
+            ],
+            [
+              73.0,
+              56.5
+            ],
+            [
+              72.98041845075905,
+              56.5
+            ],
+            [
+              72.83347411444142,
+              57.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dataset": "CTX_EDR",
+        "product_id": "F02_036407_2378_XN_57N287W",
+        "observation_group": "F02_036407_2378_XN_57N287W",
+        "observation_start_utc": "2014-05-03T09:14:16.386",
+        "observation_stop_utc": "2014-05-03T09:16:02.085",
+        "solar_longitude_deg": "125.16",
+        "local_solar_time_hours": "unknown",
+        "incidence_deg": "51.2",
+        "map_scale_m_per_pixel": "6.07",
+        "centre_latitude": "57.541",
+        "centre_longitude": "72.29",
+        "centre_inside_roi": false,
+        "geometry_type": "Polygon",
+        "polygon_status": "positive_area_intersection",
+        "nominal_intersection_km2": 364.4279737144263,
+        "nominal_line_intersection_km": null,
+        "footprint_source": "PDS Archive Index Table",
+        "product_url": "http://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=F02_036407_2378_XN_57N287W&product_idGeo=24033554",
+        "label_url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_2096/data/F02_036407_2378_XN_57N287W.IMG",
+        "radiance_factor_cube": false,
+        "source_file": "ode_CTX_EDR.json.gz",
+        "source_sha256": "0c3530b2e9cf6bdd158004f54a871577a8eaef8000db43d92ac6935c5d5b2332",
+        "support_limit": "Nominal catalogue geometry only;not valid-pixel QA,ice detection,independent observation count or complete archive guarantee"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.93594087959625,
+              56.5
+            ],
+            [
+              72.5,
+              56.5
+            ],
+            [
+              72.5,
+              57.0
+            ],
+            [
+              72.82058399423215,
+              57.0
+            ],
+            [
+              72.93594087959625,
+              56.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dataset": "CTX_EDR",
+        "product_id": "F23_044728_2356_XN_55N286W",
+        "observation_group": "F23_044728_2356_XN_55N286W",
+        "observation_start_utc": "2016-02-10T17:15:42.252",
+        "observation_stop_utc": "2016-02-10T17:17:06.811",
+        "solar_longitude_deg": "107.26",
+        "local_solar_time_hours": "unknown",
+        "incidence_deg": "44.8",
+        "map_scale_m_per_pixel": "6.02",
+        "centre_latitude": "55.317",
+        "centre_longitude": "73.279",
+        "centre_inside_roi": false,
+        "geometry_type": "Polygon",
+        "polygon_status": "positive_area_intersection",
+        "nominal_intersection_km2": 280.34756426244184,
+        "nominal_line_intersection_km": null,
+        "footprint_source": "PDS Archive Index Table",
+        "product_url": "http://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=F23_044728_2356_XN_55N286W&product_idGeo=25475062",
+        "label_url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_2491/data/F23_044728_2356_XN_55N286W.IMG",
+        "radiance_factor_cube": false,
+        "source_file": "ode_CTX_EDR.json.gz",
+        "source_sha256": "0c3530b2e9cf6bdd158004f54a871577a8eaef8000db43d92ac6935c5d5b2332",
+        "support_limit": "Nominal catalogue geometry only;not valid-pixel QA,ice detection,independent observation count or complete archive guarantee"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.65427158273381,
+              57.0
+            ],
+            [
+              73.0,
+              57.0
+            ],
+            [
+              73.0,
+              56.5
+            ],
+            [
+              72.763309352518,
+              56.5
+            ],
+            [
+              72.65427158273381,
+              57.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dataset": "CTX_EDR",
+        "product_id": "V17_086795_2355_XN_55N286W",
+        "observation_group": "V17_086795_2355_XN_55N286W",
+        "observation_start_utc": "2025-01-31T10:19:36.067",
+        "observation_stop_utc": "2025-01-31T10:21:14.079",
+        "solar_longitude_deg": "37.83",
+        "local_solar_time_hours": "unknown",
+        "incidence_deg": "50.75",
+        "map_scale_m_per_pixel": "6.08",
+        "centre_latitude": "55.2402",
+        "centre_longitude": "73.4932",
+        "centre_inside_roi": false,
+        "geometry_type": "Polygon",
+        "polygon_status": "positive_area_intersection",
+        "nominal_intersection_km2": 345.2717228001772,
+        "nominal_line_intersection_km": null,
+        "footprint_source": "PDS Archive Index Table",
+        "product_url": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=V17_086795_2355_XN_55N286W&product_idGeo=48687774",
+        "label_url": "https://planetarydata.jpl.nasa.gov/img/data/mro/ctx/mrox_5267/data/V17_086795_2355_XN_55N286W.IMG",
+        "radiance_factor_cube": false,
+        "source_file": "ode_CTX_EDR.json.gz",
+        "source_sha256": "0c3530b2e9cf6bdd158004f54a871577a8eaef8000db43d92ac6935c5d5b2332",
+        "support_limit": "Nominal catalogue geometry only;not valid-pixel QA,ice detection,independent observation count or complete archive guarantee"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.58253316217373,
+              57.0
+            ],
+            [
+              73.0,
+              57.0
+            ],
+            [
+              73.0,
+              56.5
+            ],
+            [
+              72.7002053915276,
+              56.5
+            ],
+            [
+              72.58253316217373,
+              57.0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "path": "outputs/research/mars_reselection_20261114/report.md",
+    "local_bytes": 16524,
+    "local_sha256": "1708e2d7af86118edf2a88c3e896464406d5bd617f9ab197f7c4d412f5969e4b",
+    "local_blob": "ff21a1256666d25a45a59a245f962e967768bb7f",
+    "remote_blob": "ff21a1256666d25a45a59a245f962e967768bb7f",
+    "match": true
+  },
+  {
+    "path": "outputs/research/mars_reselection_20261114/selected_targets.json",
+    "local_bytes": 3434,
+    "local_sha256": "388ca89110b2a8fbb4fc6fa403994ab54cd193fd23eefd8aa5987a75e3255ba5",
+    "local_blob": "a93c2ef45ef78922ec4ab88498ce92ef6aafabf5",
+    "remote_blob": "a93c2ef45ef78922ec4ab88498ce92ef6aafabf5",
+    "match": true
+  },
+  {
+    "path": "outputs/research/mars_reselection_20261114/final_candidates.csv",
+    "local_bytes": 5897,
+    "local_sha256": "83a03d1f4273fa7c45c0d22b5c29a8b8cfc0544e481d5f2bbca2c85812534c4e",
+    "local_blob": "2371ade1c27087efaa165acb98b7541266eaa606",
+    "remote_blob": "2371ade1c27087efaa165acb98b7541266eaa606",
+    "match": true
+  },
+  {
+    "path": "outputs/research/mars_reselection_20261114/candidate_native_evidence.json",
+    "local_bytes": 38206,
+    "local_sha256": "1b752bb1f045f1a9f57302f26865f6a82cf2e306c2fdb7081668b93c827719a5",
+    "local_blob": "abde8f69a3db769699dc54db2dd5bcf8e002e49e",
+    "remote_blob": "faf4421c57da38852972efe36623c603c29eda4c",
+    "match": false
+  },
+  {
+    "path": "outputs/research/mars_reselection_20261114/all_data_usage.csv",
+    "local_bytes": 803,
+    "local_sha256": "384fd5358f45c0ba4965a829f51a5e28496efbb5c90435f57823ec747ef345bd",
+    "local_blob": "18542b97e34899f3cfd5f0c3d5c8141cbf559d9a",
+    "remote_blob": "18542b97e34899f3cfd5f0c3d5c8141cbf559d9a",
+    "match": true
+  }
+]

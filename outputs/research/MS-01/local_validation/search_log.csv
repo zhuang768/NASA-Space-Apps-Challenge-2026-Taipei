@@ -1,0 +1,18 @@
+search_id,date_taipei,platform,query_or_url,observed_result,read_scope
+N01,2026-11-15,web search engine2,"Mars SHARAD ""72"" ""57"" ice Utopia",未找到已確認ROI相交非熱觀測；多為格外Utopia文獻,search results only
+N02,2026-11-15,web search engine2,"Mars ""56.75"" ""72.75""",未確認精確座標先例；不是不存在證明,search results only
+N03,2026-11-15,web search engine2,"Mars ice ""72.5"" ""56.5""",未確認局部產品／先例,search results only
+N04,2026-11-15,web search engine1,site.ode.rsl.wustl.edu mars ODE REST SHARAD product query minlat westernlon,取得官方ODE搜尋／足跡／USGEOM說明,primary provider descriptions
+N05,2026-11-15,web search engine1,site.pds-geosciences.wustl.edu SHARAD footprint REST ODE,取得MRO服務入口與產品說明,primary provider descriptions
+N06,2026-11-15,web search engine1,"site.nasa.gov Mars ice ""72"" ""56""",沒有確認ROI直接冰證據,search results only
+N07,2026-11-15,web open,https://oderest.rsl.wustl.edu/,not accessible via this tool；無有效response,failure
+N08,2026-11-15,web open,https://ode.rsl.wustl.edu/mars/pagehelp/Content/Tools/ODE_REST_Service.htm,not accessible via this tool；猜測help路徑未確認,failure
+N09,2026-11-15,Python urllib,https://oderest.rsl.wustl.edu/live2/?target=mars&query=product&results=c&ihid=MRO&iid=SHARAD&pt=USRDR&minlat=56.5&maxlat=57&westernlon=72.5&easternlon=73&output=JSON,URLError [Errno8] DNS；無response,failure
+N10,2026-11-15,web open,同N09完整URL,not accessible via this tool；沒有JSON／HTTP狀態,failure
+N11,2026-11-15,web search engine2,"""oderest"" ""SHARAD"" ""query"" ""pt""",未找到可直接使用的成功查詢；取得SHARAD原始文獻及綜述,search results snippets
+N12,2026-11-15,web search engine2,"""Mars"" ""57"" ""73"" ""ice"" ""SHARAD""",未確認ROI局部冰證據；含格外案例,search results snippets
+N13,2026-11-15,Node fetch,同N09完整URL；AbortSignal.timeout(12000),工具沒有回傳，後由上層中止；未知HTTP狀態／內容,aborted;no accepted data
+N14,2026-11-15,local primarycatalogue metadata suppliedbyRoot,/tmp/ms01_lv_optical/ode_SHARAD_RDR.json,Count6;independentlineclip6intersections;noDATecho read,"Full6metadatarecords,Footprint_C0_geometry,UTCtimes,IDs"
+ROOT01,2026-11-15,web engine1+2,Mars 56.75 72.75;4 CTX IDs,未確認專門格內研究；不是從未研究,search results
+ROOT02,2026-11-15,Node fetch,https://doi.org/10.5066/P9Y8FR1R,HTTP403;5595bytes HTML,no dataset
+ROOT03,2026-11-15,Node fetch,Caltech5files;ODE15queries;PDS3THEMIS+CRISM+USGEOM,actualsuccess/error receipts retained inputs and QC folders,full downloaded files QC

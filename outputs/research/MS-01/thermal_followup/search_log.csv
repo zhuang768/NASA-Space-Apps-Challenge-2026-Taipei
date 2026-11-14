@@ -1,0 +1,13 @@
+search_id,date_taipei,platform,query_or_target,observed_result,source_id
+F01,2026-11-15,Web search engine 1,"""UniversityV_09_10_Hobo_deep36cm_data_good_only_calibrated.txt""",Zenodo record / files located,UD
+F02,2026-11-15,Web search engine 1,"""UnivValley_Dec2009Deployment_HoboInfo"" University Valley",Deployment asset located in fixed record,D09
+F03,2026-11-15,Web search engine 1,"""University Valley"" ""deep"" ""22"" ""8"" temperature thermal 2022",Primary Marinova article and data record checked,U1;UD
+F04,2026-11-15,Publisher full HTML,"Marinova2022 Methods, Thermal diffusivity, Appendix Methods1–3 Eq12–20","Read thermal methods, sensors, limitations and energy-model prior work",U1
+F05,2026-11-15,Publisher full HTML,Liu2018 Beacon Valley §2–5 Tables1–2/Fig2,"Read known interface, material measurements and prior models; no raw reanalysis",B1
+F06,2026-11-15,Zenodo Files/MD5/Rights,"Record10553882 v1 Files, exact names and rights",Read seven required file metadata and CC0-1.0 rights,UD
+F07,2026-11-15,Web asset open,UnivValley_Dec2009Deployment_HoboInfo.docx; UnivValley_HoboInfo_Dec2010_Update.docx,Binary Unicode decoding error; not treated as data,D09;D10
+F08,2026-11-15,Python urllib / shell network,Zenodo fixed-file URLs for HOBO and deployment assets,DNS failure/timeout; no accepted asset,UD;D09;D10
+F09,2026-11-15,Node fetch,Zenodo record API / file retrieval,HTTP403; no accepted asset,UD
+F10,2026-11-15,Chrome ordinary download,Four 09_10 HOBO TXT and two DOCX exact file links,Six files actually acquired after multi-download timeout; all provider MD5 match,UD;D09;D10
+F11,2026-11-15,DOCX ZIP/XML source reading,"word/document.xml all w:p; S/M/D serials, geometry, coordinates; maintenance paragraphs",S/D coordinate-version conflict and channel mapping explicitly retained,D09;D10
+F12,2026-11-15,Local verified author TXT reanalysis,Full short-file headers/units/times; primary printed dates2010-11-07 to18 exclusive,5 profiles;18 channels;5808 source-row/column values; no interpolation,UD

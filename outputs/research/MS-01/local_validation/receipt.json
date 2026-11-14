@@ -1,0 +1,26 @@
+{
+  "scope": "MS01 nonthermal evidence bounded collection",
+  "accepted_local_products": 0,
+  "accepted_local_product_count": null,
+  "no_coverage_claim": false,
+  "no_ice_claim": false,
+  "files": [
+    "notes.md",
+    "search_log.csv",
+    "proposed_mars_ice_evidence.csv",
+    "sharad_nominal_track_clip.csv",
+    "sharad_nominal_track_clip.json"
+  ],
+  "attempted_url": "https://oderest.rsl.wustl.edu/live2/?target=mars&query=product&results=c&ihid=MRO&iid=SHARAD&pt=USRDR&minlat=56.5&maxlat=57&westernlon=72.5&easternlon=73&output=JSON",
+  "failures": [
+    "web inaccessible",
+    "Python DNS Errno8",
+    "Node tool no result then aborted"
+  ],
+  "raw_downloads": [],
+  "accepted_raw_RDR_files": 0,
+  "root_supplied_catalogue_products": 6,
+  "independently_clipped_nominal_intersections": 6,
+  "root_catalogue_path": "/tmp/ms01_lv_optical/ode_SHARAD_RDR.json",
+  "ice_existence_depth_abundance": "notdetermined"
+}

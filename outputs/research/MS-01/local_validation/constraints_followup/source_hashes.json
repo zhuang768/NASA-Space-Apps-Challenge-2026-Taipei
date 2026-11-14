@@ -1,0 +1,38 @@
+[
+  {
+    "filename": "radar_window.bin",
+    "bytes": 29176000,
+    "sha256": "a5986d7288aea1eef67ecc6122a32198b644a3a9a2e7dbe091d86a4e11f48a71",
+    "archive_policy": "Original rawcache;URL/range in acquisitionlog;selectedROI retained;papers not redistributed"
+  },
+  {
+    "filename": "sim_window.bin",
+    "bytes": 29176000,
+    "sha256": "83dbda837149592b887e72e1fba17850a64d68cd393b077a7bdc547bd39b008c",
+    "archive_policy": "Original rawcache;URL/range in acquisitionlog;selectedROI retained;papers not redistributed"
+  },
+  {
+    "filename": "albedo_rows.bin",
+    "bytes": 46080,
+    "sha256": "7e864ca1d67c883bef399d26ccf5ef2fe39cc2a0ff17887c0e6a8b08f0237e6e",
+    "archive_policy": "Original rawcache;URL/range in acquisitionlog;selectedROI retained;papers not redistributed"
+  },
+  {
+    "filename": "sim_userguide.pdf",
+    "bytes": 13196337,
+    "sha256": "d3d5206aecef2860c8d4b89f02a29d8a1ca7ccf477ea7742a49ae1ba6d8a4353",
+    "archive_policy": "Original rawcache;URL/range in acquisitionlog;selectedROI retained;papers not redistributed"
+  },
+  {
+    "filename": "rgram_processing.pdf",
+    "bytes": 887309,
+    "sha256": "ecaa5acbe8fef3fa35e0301318a9ffc2ee0475d2e6ac7f1bb6ea90db6f51a228",
+    "archive_policy": "Original rawcache;URL/range in acquisitionlog;selectedROI retained;papers not redistributed"
+  },
+  {
+    "filename": "s_01958801_rtrn.csv",
+    "bytes": 533335,
+    "sha256": "bb5a1af030eeec50ba18c73c03d9285db135bdbdee9fff928f7847beebbe85df",
+    "archive_policy": "Original rawcache;URL/range in acquisitionlog;selectedROI retained;papers not redistributed"
+  }
+]

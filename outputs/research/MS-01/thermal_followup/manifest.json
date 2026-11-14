@@ -1,0 +1,154 @@
+{
+  "schema": "MS01-KNOWN-INTERFACE-FOLLOWUP-v1",
+  "starting_sha": "33f78ed986b0c39585dc4224b5f68bd6a7e9bed7",
+  "original_mars_baseline_sha": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+  "branch": "research/ms-01-earth-analogs",
+  "pr": 8,
+  "research_date_taipei": "2026-11-15",
+  "sources": "source_manifest.json",
+  "sources_read_scope": "sources.json",
+  "files": [
+    {
+      "path": "docs/research/MS-01/thermal_followup.md",
+      "bytes": 18263,
+      "sha256": "7e3444758fae54713008f3afa38f96c1d783041fdcc1effd299017a457d84975"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/amplitudes.csv",
+      "bytes": 6785,
+      "sha256": "8ac8df7962085c91603da54d483a3d38688fde327e7740e9aebbcae00253b52b"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/analyze.py",
+      "bytes": 11902,
+      "sha256": "7ecc2b4ef60bc4e8e33f2d84812e61f43b8cac356203a025259874cbea4cad70"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/channel_metadata.csv",
+      "bytes": 4522,
+      "sha256": "897eecd7254547b7a3c48421f275cd04707579a147f47b8d9419041540604eab"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/comparison.json",
+      "bytes": 29150,
+      "sha256": "8f481a124f2b03df665d38db53665defbaf75734ec79d0e56c27bf061ba4a460"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/comparison_figure.png",
+      "bytes": 735074,
+      "sha256": "3d34ddfbf02af89616efb7e078215ce4f94a30411fafcd03af845d023aae97f0"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/comparison_figure.svg",
+      "bytes": 133473,
+      "sha256": "5c3600cd274a0a589dd4bfb5fe18eb7c095da81dd060495cf49d445f1561d587"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/deployment_paragraphs.json",
+      "bytes": 12371,
+      "sha256": "fe1f86860c3847d9263b8f43db70873258865cae83d86bdb7530e995d97d16eb"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/dispositions.csv",
+      "bytes": 692,
+      "sha256": "def7f94b97cea8b25e22568d39db4bb0bcf6afc78877d50a9258bca6877e5eb5"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/extract_deployment.py",
+      "bytes": 1540,
+      "sha256": "405be707f7e6500872f0068103b8a01a15c8852cf3ebcecfc7e54e8fc10732a5"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/fetch_inputs.py",
+      "bytes": 1903,
+      "sha256": "bea27ef9ef9ece09c6d9baa9b544d94273982f669b49f0b97882ce9fb22d7e79"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/independent_audit.json",
+      "bytes": 19970,
+      "sha256": "1ba7bf343aa6146c93057ca3c019eadad031d78c7bf97db92a827e4b524284b7"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/independent_check.py",
+      "bytes": 5979,
+      "sha256": "c551805da685ff6fb21836c4290d0bcb158459f70ed5ccca8f0e6689a0f0c8ba"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/interpretation_table.csv",
+      "bytes": 3105,
+      "sha256": "d2fe62fe283d6d5c9f2ef9883446e6c073b79408295bd496c743112783c43459"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/make_manifest.py",
+      "bytes": 2145,
+      "sha256": "dac2105868bcc3cf96d70e83f6060febe135d60e9a03e7fb4ed3fb5c36717e60"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/plot_comparison.py",
+      "bytes": 9046,
+      "sha256": "27262c69e6f214bb027608061fe5936235a30df0a319655955413bcb9e5b8ce6"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/primary_temperature_records.csv.gz",
+      "bytes": 43785,
+      "sha256": "bfa679478ebf9e1279c277356f94bd047a3a9dda8ea01ef6d7b60c27f6713bfd"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/prior_work_delta.csv",
+      "bytes": 1040,
+      "sha256": "686c0fbe5ce032005b120e26aab71b9f76e22f18ac86837062aa877d01b18492"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/protocol.json",
+      "bytes": 2850,
+      "sha256": "3f31735e85ca683b8d14a5699bfc5fa67aceba8e44f2af364769bed25f746569"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/search_log.csv",
+      "bytes": 2030,
+      "sha256": "a148cf0399e644243c4712780fc8b0224692f537d7ed3cbd37b1e7fb181448ad"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/source_manifest.json",
+      "bytes": 5775,
+      "sha256": "242db0fc271db1f011ab96523f3e0bc397ed5da0a33097cb0e77ff4a63d22286"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/sources.json",
+      "bytes": 3169,
+      "sha256": "7dfddd25062a640bccd9c6c7556b35c14177238f00dfac03c3a506cf8bd028db"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/station_metadata.csv",
+      "bytes": 2865,
+      "sha256": "c0eacaec1c2b9cb2f88e4fd0cf2bad05b90b773b410ab4632e804f5e45bd51cf"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/validate.py",
+      "bytes": 6797,
+      "sha256": "e4e8ab235b8e7aa3853c078211c2adb00df75c9032eb71dc24cefced3d0cff7e"
+    },
+    {
+      "path": "outputs/research/MS-01/thermal_followup/verification.json",
+      "bytes": 918,
+      "sha256": "036478e3818a2f31d861f3698b9077b1446980856b2cb8e0fe4524e8575c4b2f"
+    }
+  ],
+  "hash_exclusion": "Only this manifest excludes itself; root MS01 manifest additionally hashes this file.",
+  "findings": [
+    "Known-interface profiles attenuate24h component; this is not unique ice identification.",
+    "UV retained for heat-transfer and identifiability checks; S/D coordinate crosswalk unresolved.",
+    "Beacon is optional literature-level massive-ice/material contrast; no new raw comparison."
+  ],
+  "contribution": "Descriptive reproduction/application plus source QA and MS01 evidence interpretation; no new mechanism, field discovery, inverse model or Mars ice proof.",
+  "unresolved_gaps": [
+    "No same-material same-forcing ice-free control",
+    "No independent UV k/rho/Cp, complete local energy boundary or per-probe footprint",
+    "S/D coordinates swapped between2009 note and2022 paper",
+    "Historical cross-logger clocks unknown; W HOBO decimal-day offset~1hour",
+    "Oblique probe geometry and surface contact/exposure uncertainties",
+    "Beacon raw hourly series not acquired; no dual-site validation",
+    "MS01 local ice truth/material and matched multitemporal forcing remain unknown"
+  ],
+  "scope": "Only docs/research/MS-01 and outputs/research/MS-01; no main merge or teammate work modification."
+}

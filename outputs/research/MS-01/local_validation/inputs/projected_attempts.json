@@ -1,0 +1,26 @@
+[
+  {
+    "pt": "IRPBT1",
+    "url": "https://oderest.rsl.wustl.edu/live2/?easternlon=73&ihid=ODY&iid=THEMIS&limit=1000&maxlat=57&minlat=56.5&output=JSON&pt=IRPBT1&query=PRODUCT&results=FMPC&target=mars&westernlon=72.5",
+    "status": 200,
+    "bytes": 46216,
+    "count": "8",
+    "query_status": "Success"
+  },
+  {
+    "pt": "IRPBT2",
+    "url": "https://oderest.rsl.wustl.edu/live2/?easternlon=73&ihid=ODY&iid=THEMIS&limit=1000&maxlat=57&minlat=56.5&output=JSON&pt=IRPBT2&query=PRODUCT&results=FMPC&target=mars&westernlon=72.5",
+    "status": 200,
+    "bytes": 103298,
+    "count": "17",
+    "query_status": "Success"
+  },
+  {
+    "pt": "IRPBT4",
+    "url": "https://oderest.rsl.wustl.edu/live2/?easternlon=73&ihid=ODY&iid=THEMIS&limit=1000&maxlat=57&minlat=56.5&output=JSON&pt=IRPBT4&query=PRODUCT&results=FMPC&target=mars&westernlon=72.5",
+    "status": 200,
+    "bytes": 72294,
+    "count": "12",
+    "query_status": "Success"
+  }
+]

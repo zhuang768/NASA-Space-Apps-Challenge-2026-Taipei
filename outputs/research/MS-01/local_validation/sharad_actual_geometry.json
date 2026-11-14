@@ -1,0 +1,34 @@
+{
+  "product": "S_01958801_GEOM",
+  "source_url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/geom/s_0195xx/s_01958801_geom.tab",
+  "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-sharad-5-radargram-v2/mrosh_2101/data/geom/s_0195xx/s_01958801_geom.lbl",
+  "source_sha256": "4201d70900184e28cf13328161612364af65e0a2550d67b6161f3b385c005d19",
+  "total_rows": 5210,
+  "selected_rows": 64,
+  "first": {
+    "column_label": 1664,
+    "UTC": "2010-09-30T20:09:47.039",
+    "latitude_n": 56.9931,
+    "longitude_e": 72.6657,
+    "Mars_radius_km": 3383.803,
+    "spacecraft_radius_km": 3688.793,
+    "SZA_deg": 98.12
+  },
+  "last": {
+    "column_label": 1727,
+    "UTC": "2010-09-30T20:09:56.350",
+    "latitude_n": 56.5049,
+    "longitude_e": 72.5512,
+    "Mars_radius_km": 3383.947,
+    "spacecraft_radius_km": 3688.665,
+    "SZA_deg": 98.41
+  },
+  "source_locator": "LBL TABLE columns1–4:column/time/latitude/longitude;start_byte1/7/31/40;TAB100bytes×5210rows",
+  "coordinates": "Planetocentric,east-positive per official USGEOM product description;degrees",
+  "method": "Parse actual ASCII table;half-open fixedROI mask;no timing transfer to ItalianRDR processing",
+  "limits": [
+    "Locations refer to radargram columns,not echo picks,beam area,independent ice detections or depth",
+    "No radargram IMG or calibrated DAT parsed;no clutter simulation or dielectric inversion",
+    "USV2 and ItalianRDR times/column definitions differ;not joined by observation-prefix alone"
+  ]
+}

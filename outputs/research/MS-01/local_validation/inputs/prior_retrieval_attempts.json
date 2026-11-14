@@ -1,0 +1,17 @@
+[
+  {
+    "filename": "arcgis_point_query.json",
+    "url": "https://services.arcgis.com/nzS0F0zdNLvs7nc8/ArcGIS/rest/services/Mars_Geology_feature_layer/FeatureServer/0/query?geometry=72.75%2C56.75&geometryType=esriGeometryPoint&inSR=104971&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CUnit%2CUnitDesc&returnGeometry=false&f=pjson",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "filename": "arcgis_item.json",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/e9189209b71544408387b8698ac88a56?f=pjson",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "filename": "usgs_global_page.html",
+    "url": "https://pubs.usgs.gov/sim/3292/",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  }
+]

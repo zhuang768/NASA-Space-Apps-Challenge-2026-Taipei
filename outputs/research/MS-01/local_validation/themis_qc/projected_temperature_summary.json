@@ -1,0 +1,576 @@
+{
+  "task": "MS01 projected THEMIS brightness-temperature ROI audit",
+  "ROI": {
+    "south": 56.5,
+    "north": 57.0,
+    "west": 72.5,
+    "east": 73.0
+  },
+  "selection": "Half-open latitude/longitude pixel-centre mask;finite and non-null only;no interpolation",
+  "products": [
+    {
+      "product_id": "I71532035PBT",
+      "filename": "I71532035PBT.IMG",
+      "source_kind": "PDS projected brightness-temperature product; this-run ROI selection and summaries",
+      "dataset_id": "ODY-M-THM-5-IRPBT-V2.0",
+      "version": "2.0",
+      "UTC_start": "2018-01-29T03:06:20.767",
+      "UTC_stop": "2018-01-29T03:07:21.032",
+      "solar_longitude_deg": 121.768,
+      "local_time_h": 19.472,
+      "band_number": 9,
+      "band_centre_micrometre": 12.57,
+      "unit": "KELVIN",
+      "image_shape": [
+        1813,
+        612
+      ],
+      "image_offset_bytes": 4896,
+      "payload_md5_matches_label": true,
+      "whole_image_valid_n": 634744,
+      "whole_image_null_n": 474812,
+      "ROI_nominal_pixel_centres_n": 23617,
+      "ROI_valid_n": 21868,
+      "ROI_null_n": 1749,
+      "ROI_valid_stats": {
+        "n": 21868,
+        "min_K": 219.84707641601562,
+        "p05_K": 222.94415130615235,
+        "median_K": 224.0732650756836,
+        "mean_K": 224.14773589365004,
+        "p95_K": 225.61858291625975,
+        "max_K": 227.71343994140625,
+        "std_population_K": 0.8293159968887166
+      },
+      "ROI_selected_centre_bounds": {
+        "south": 56.75861945439994,
+        "north": 56.999869103870985,
+        "west": 72.50001821087132,
+        "east": 72.99801225005464
+      },
+      "labelled_footprint_bounds": {
+        "MINIMUM_LATITUDE": 56.753,
+        "MAXIMUM_LATITUDE": 59.811,
+        "WESTERNMOST_LONGITUDE": 71.975,
+        "EASTERNMOST_LONGITUDE": 73.937
+      },
+      "nearest_MS01_centre": {
+        "requested_latitude_n": 56.75,
+        "requested_longitude_e": 72.75,
+        "row_0based": 1815,
+        "column_0based": 253,
+        "inside_array": false,
+        "valid": false,
+        "brightness_K": null
+      },
+      "projection": {
+        "type": "SINUSOIDAL",
+        "radius_km": 3396.19,
+        "map_scale_km": 0.1,
+        "centre_lon_e": 72.95,
+        "sample_projection_offset": 317.5,
+        "line_projection_offset": 35453.5,
+        "formula_zero_based": "lat=degrees((LPO-row)*MAP_SCALE/R);lon=LON0+degrees((col-SPO)*MAP_SCALE/(R*cos(lat)))",
+        "normative_convention_status": "Pending source CAT reading; exact numeric convention is explicit; +/-1pixel sensitivity provided"
+      },
+      "one_pixel_convention_sensitivity": [
+        {
+          "line_shift_px": -1,
+          "sample_shift_px": -1,
+          "n": 22047,
+          "min_K": 219.84707641601562,
+          "p05_K": 222.94223327636718,
+          "median_K": 224.06617736816406,
+          "mean_K": 224.14209483311865,
+          "p95_K": 225.6144775390625,
+          "max_K": 227.71343994140625,
+          "std_population_K": 0.8281695283505279
+        },
+        {
+          "line_shift_px": -1,
+          "sample_shift_px": 0,
+          "n": 22030,
+          "min_K": 219.84707641601562,
+          "p05_K": 222.9459426879883,
+          "median_K": 224.07293701171875,
+          "mean_K": 224.14756077694125,
+          "p95_K": 225.617724609375,
+          "max_K": 227.71343994140625,
+          "std_population_K": 0.828553539063172
+        },
+        {
+          "line_shift_px": -1,
+          "sample_shift_px": 1,
+          "n": 22013,
+          "min_K": 219.84707641601562,
+          "p05_K": 222.95260009765624,
+          "median_K": 224.07864379882812,
+          "mean_K": 224.15320496941905,
+          "p95_K": 225.62540283203126,
+          "max_K": 227.71343994140625,
+          "std_population_K": 0.8298882394248366
+        },
+        {
+          "line_shift_px": 0,
+          "sample_shift_px": -1,
+          "n": 21885,
+          "min_K": 219.84707641601562,
+          "p05_K": 222.94117431640626,
+          "median_K": 224.06707763671875,
+          "mean_K": 224.14230491284343,
+          "p95_K": 225.6150634765625,
+          "max_K": 227.71343994140625,
+          "std_population_K": 0.8289861748948915
+        },
+        {
+          "line_shift_px": 0,
+          "sample_shift_px": 0,
+          "n": 21868,
+          "min_K": 219.84707641601562,
+          "p05_K": 222.94415130615235,
+          "median_K": 224.0732650756836,
+          "mean_K": 224.14773589365004,
+          "p95_K": 225.61858291625975,
+          "max_K": 227.71343994140625,
+          "std_population_K": 0.8293159968887166
+        },
+        {
+          "line_shift_px": 0,
+          "sample_shift_px": 1,
+          "n": 21851,
+          "min_K": 219.84707641601562,
+          "p05_K": 222.95046997070312,
+          "median_K": 224.07933044433594,
+          "mean_K": 224.15329372780823,
+          "p95_K": 225.62559509277344,
+          "max_K": 227.71343994140625,
+          "std_population_K": 0.830574115766626
+        },
+        {
+          "line_shift_px": 1,
+          "sample_shift_px": -1,
+          "n": 21723,
+          "min_K": 219.84707641601562,
+          "p05_K": 222.94068908691406,
+          "median_K": 224.0682373046875,
+          "mean_K": 224.14348279003588,
+          "p95_K": 225.61715087890624,
+          "max_K": 227.71343994140625,
+          "std_population_K": 0.8298029632001468
+        },
+        {
+          "line_shift_px": 1,
+          "sample_shift_px": 0,
+          "n": 21706,
+          "min_K": 219.84707641601562,
+          "p05_K": 222.9432487487793,
+          "median_K": 224.07454681396484,
+          "mean_K": 224.1488629760011,
+          "p95_K": 225.6199073791504,
+          "max_K": 227.71343994140625,
+          "std_population_K": 0.8300057414524887
+        },
+        {
+          "line_shift_px": 1,
+          "sample_shift_px": 1,
+          "n": 21689,
+          "min_K": 219.84707641601562,
+          "p05_K": 222.94885864257813,
+          "median_K": 224.08030700683594,
+          "mean_K": 224.15434723765728,
+          "p95_K": 225.6262664794922,
+          "max_K": 227.71343994140625,
+          "std_population_K": 0.8311133189662632
+        }
+      ]
+    },
+    {
+      "product_id": "I73671033PBT",
+      "filename": "I73671033PBT.IMG",
+      "source_kind": "PDS projected brightness-temperature product; this-run ROI selection and summaries",
+      "dataset_id": "ODY-M-THM-5-IRPBT-V2.0",
+      "version": "2.0",
+      "UTC_start": "2018-07-24T07:40:03.768",
+      "UTC_stop": "2018-07-24T07:41:04.041",
+      "solar_longitude_deg": 217.09,
+      "local_time_h": 6.985,
+      "band_number": 9,
+      "band_centre_micrometre": 12.57,
+      "unit": "KELVIN",
+      "image_shape": [
+        1809,
+        606
+      ],
+      "image_offset_bytes": 4848,
+      "payload_md5_matches_label": true,
+      "whole_image_valid_n": 635606,
+      "whole_image_null_n": 460648,
+      "ROI_nominal_pixel_centres_n": 32919,
+      "ROI_valid_n": 66,
+      "ROI_null_n": 32853,
+      "ROI_valid_stats": {
+        "n": 66,
+        "min_K": 165.75205993652344,
+        "p05_K": 166.1683006286621,
+        "median_K": 167.4688262939453,
+        "mean_K": 167.5338731245561,
+        "p95_K": 169.24493789672852,
+        "max_K": 170.41845703125,
+        "std_population_K": 0.9105778309249386
+      },
+      "ROI_selected_centre_bounds": {
+        "south": 56.50049920007078,
+        "north": 56.544362772701874,
+        "west": 72.5001800644278,
+        "east": 72.5094802766425
+      },
+      "labelled_footprint_bounds": {
+        "MINIMUM_LATITUDE": 55.188,
+        "MAXIMUM_LATITUDE": 58.238,
+        "WESTERNMOST_LONGITUDE": 70.943,
+        "EASTERNMOST_LONGITUDE": 72.81
+      },
+      "nearest_MS01_centre": {
+        "requested_latitude_n": 56.75,
+        "requested_longitude_e": 72.75,
+        "row_0based": 883,
+        "column_0based": 576,
+        "inside_array": true,
+        "valid": false,
+        "brightness_K": null,
+        "nearest_pixel_latitude_n": 56.750184151970885,
+        "nearest_pixel_longitude_e": 72.75016004843275
+      },
+      "projection": {
+        "type": "SINUSOIDAL",
+        "radius_km": 3396.19,
+        "map_scale_km": 0.1,
+        "centre_lon_e": 71.924,
+        "sample_projection_offset": 307.5,
+        "line_projection_offset": 34521.5,
+        "formula_zero_based": "lat=degrees((LPO-row)*MAP_SCALE/R);lon=LON0+degrees((col-SPO)*MAP_SCALE/(R*cos(lat)))",
+        "normative_convention_status": "Pending source CAT reading; exact numeric convention is explicit; +/-1pixel sensitivity provided"
+      },
+      "one_pixel_convention_sensitivity": [
+        {
+          "line_shift_px": -1,
+          "sample_shift_px": -1,
+          "n": 36,
+          "min_K": 165.7892608642578,
+          "p05_K": 166.29021453857422,
+          "median_K": 167.45218658447266,
+          "mean_K": 167.58183330959744,
+          "p95_K": 169.55592727661133,
+          "max_K": 170.41845703125,
+          "std_population_K": 0.974695115313671
+        },
+        {
+          "line_shift_px": -1,
+          "sample_shift_px": 0,
+          "n": 62,
+          "min_K": 165.75205993652344,
+          "p05_K": 166.12910690307618,
+          "median_K": 167.4688262939453,
+          "mean_K": 167.5205587571667,
+          "p95_K": 169.28081130981445,
+          "max_K": 170.41845703125,
+          "std_population_K": 0.9292346828053267
+        },
+        {
+          "line_shift_px": -1,
+          "sample_shift_px": 1,
+          "n": 95,
+          "min_K": 165.56326293945312,
+          "p05_K": 166.25648651123046,
+          "median_K": 167.49954223632812,
+          "mean_K": 167.5464500025699,
+          "p95_K": 169.30453338623047,
+          "max_K": 170.41845703125,
+          "std_population_K": 0.891728455673892
+        },
+        {
+          "line_shift_px": 0,
+          "sample_shift_px": -1,
+          "n": 39,
+          "min_K": 165.7892608642578,
+          "p05_K": 166.32439575195312,
+          "median_K": 167.4521026611328,
+          "mean_K": 167.57518122746393,
+          "p95_K": 169.42574615478514,
+          "max_K": 170.41845703125,
+          "std_population_K": 0.9406661603178328
+        },
+        {
+          "line_shift_px": 0,
+          "sample_shift_px": 0,
+          "n": 66,
+          "min_K": 165.75205993652344,
+          "p05_K": 166.1683006286621,
+          "median_K": 167.4688262939453,
+          "mean_K": 167.5338731245561,
+          "p95_K": 169.24493789672852,
+          "max_K": 170.41845703125,
+          "std_population_K": 0.9105778309249386
+        },
+        {
+          "line_shift_px": 0,
+          "sample_shift_px": 1,
+          "n": 100,
+          "min_K": 165.56326293945312,
+          "p05_K": 166.30547866821288,
+          "median_K": 167.49246215820312,
+          "mean_K": 167.5428810119629,
+          "p95_K": 169.29223861694337,
+          "max_K": 170.41845703125,
+          "std_population_K": 0.883061329015697
+        },
+        {
+          "line_shift_px": 1,
+          "sample_shift_px": -1,
+          "n": 42,
+          "min_K": 165.7892608642578,
+          "p05_K": 166.35172500610352,
+          "median_K": 167.4688262939453,
+          "mean_K": 167.5782917567662,
+          "p95_K": 169.30568084716796,
+          "max_K": 170.41845703125,
+          "std_population_K": 0.9072003015483157
+        },
+        {
+          "line_shift_px": 1,
+          "sample_shift_px": 0,
+          "n": 70,
+          "min_K": 165.75205993652344,
+          "p05_K": 166.1068962097168,
+          "median_K": 167.48553466796875,
+          "mean_K": 167.51697932652064,
+          "p95_K": 169.20906448364258,
+          "max_K": 170.41845703125,
+          "std_population_K": 0.9011340576265591
+        },
+        {
+          "line_shift_px": 1,
+          "sample_shift_px": 1,
+          "n": 105,
+          "min_K": 165.56326293945312,
+          "p05_K": 166.10125427246095,
+          "median_K": 167.48568725585938,
+          "mean_K": 167.51361723400296,
+          "p95_K": 169.25798645019532,
+          "max_K": 170.41845703125,
+          "std_population_K": 0.8916974402540758
+        }
+      ]
+    },
+    {
+      "product_id": "I74120036PBT",
+      "filename": "I74120036PBT.IMG",
+      "source_kind": "PDS projected brightness-temperature product; this-run ROI selection and summaries",
+      "dataset_id": "ODY-M-THM-5-IRPBT-V2.0",
+      "version": "2.0",
+      "UTC_start": "2018-08-30T07:19:08.792",
+      "UTC_stop": "2018-08-30T07:20:09.065",
+      "solar_longitude_deg": 240.236,
+      "local_time_h": 6.72,
+      "band_number": 9,
+      "band_centre_micrometre": 12.57,
+      "unit": "KELVIN",
+      "image_shape": [
+        1810,
+        605
+      ],
+      "image_offset_bytes": 4840,
+      "payload_md5_matches_label": true,
+      "whole_image_valid_n": 632710,
+      "whole_image_null_n": 462340,
+      "ROI_nominal_pixel_centres_n": 48277,
+      "ROI_valid_n": 20016,
+      "ROI_null_n": 28261,
+      "ROI_valid_stats": {
+        "n": 20016,
+        "min_K": 147.27003479003906,
+        "p05_K": 153.9841766357422,
+        "median_K": 156.70602416992188,
+        "mean_K": 156.68510228285876,
+        "p95_K": 159.34697341918945,
+        "max_K": 162.56349182128906,
+        "std_population_K": 1.6363089914384608
+      },
+      "ROI_selected_centre_bounds": {
+        "south": 56.50049920007078,
+        "north": 56.999869103870985,
+        "west": 72.7260602331324,
+        "east": 72.99999196506135
+      },
+      "labelled_footprint_bounds": {
+        "MINIMUM_LATITUDE": 55.154,
+        "MAXIMUM_LATITUDE": 58.209,
+        "WESTERNMOST_LONGITUDE": 72.397,
+        "EASTERNMOST_LONGITUDE": 74.258
+      },
+      "nearest_MS01_centre": {
+        "requested_latitude_n": 56.75,
+        "requested_longitude_e": 72.75,
+        "row_0based": 865,
+        "column_0based": 103,
+        "inside_array": true,
+        "valid": false,
+        "brightness_K": null,
+        "nearest_pixel_latitude_n": 56.750184151970885,
+        "nearest_pixel_longitude_e": 72.74884145305005
+      },
+      "projection": {
+        "type": "SINUSOIDAL",
+        "radius_km": 3396.19,
+        "map_scale_km": 0.1,
+        "centre_lon_e": 73.375,
+        "sample_projection_offset": 306.5,
+        "line_projection_offset": 34503.5,
+        "formula_zero_based": "lat=degrees((LPO-row)*MAP_SCALE/R);lon=LON0+degrees((col-SPO)*MAP_SCALE/(R*cos(lat)))",
+        "normative_convention_status": "Pending source CAT reading; exact numeric convention is explicit; +/-1pixel sensitivity provided"
+      },
+      "one_pixel_convention_sensitivity": [
+        {
+          "line_shift_px": -1,
+          "sample_shift_px": -1,
+          "n": 20355,
+          "min_K": 147.27003479003906,
+          "p05_K": 153.9865951538086,
+          "median_K": 156.71481323242188,
+          "mean_K": 156.69034468881097,
+          "p95_K": 159.3504425048828,
+          "max_K": 162.56349182128906,
+          "std_population_K": 1.6348993359881685
+        },
+        {
+          "line_shift_px": -1,
+          "sample_shift_px": 0,
+          "n": 20058,
+          "min_K": 147.27003479003906,
+          "p05_K": 153.98430480957032,
+          "median_K": 156.7108612060547,
+          "mean_K": 156.68778037207113,
+          "p95_K": 159.34762573242188,
+          "max_K": 162.56349182128906,
+          "std_population_K": 1.6366710376330496
+        },
+        {
+          "line_shift_px": -1,
+          "sample_shift_px": 1,
+          "n": 19761,
+          "min_K": 147.27003479003906,
+          "p05_K": 153.97860717773438,
+          "median_K": 156.71084594726562,
+          "mean_K": 156.68741497670848,
+          "p95_K": 159.3503875732422,
+          "max_K": 162.56349182128906,
+          "std_population_K": 1.6394531229972444
+        },
+        {
+          "line_shift_px": 0,
+          "sample_shift_px": -1,
+          "n": 20313,
+          "min_K": 147.27003479003906,
+          "p05_K": 153.9865264892578,
+          "median_K": 156.7099151611328,
+          "mean_K": 156.6877865975126,
+          "p95_K": 159.3498565673828,
+          "max_K": 162.56349182128906,
+          "std_population_K": 1.6345797974568608
+        },
+        {
+          "line_shift_px": 0,
+          "sample_shift_px": 0,
+          "n": 20016,
+          "min_K": 147.27003479003906,
+          "p05_K": 153.9841766357422,
+          "median_K": 156.70602416992188,
+          "mean_K": 156.68510228285876,
+          "p95_K": 159.34697341918945,
+          "max_K": 162.56349182128906,
+          "std_population_K": 1.6363089914384608
+        },
+        {
+          "line_shift_px": 0,
+          "sample_shift_px": 1,
+          "n": 19719,
+          "min_K": 147.27003479003906,
+          "p05_K": 153.97811431884764,
+          "median_K": 156.70602416992188,
+          "mean_K": 156.68455119161771,
+          "p95_K": 159.34959106445314,
+          "max_K": 162.56349182128906,
+          "std_population_K": 1.6392727455623766
+        },
+        {
+          "line_shift_px": 1,
+          "sample_shift_px": -1,
+          "n": 20271,
+          "min_K": 147.27003479003906,
+          "p05_K": 153.9880142211914,
+          "median_K": 156.70932006835938,
+          "mean_K": 156.6871598910688,
+          "p95_K": 159.34600067138672,
+          "max_K": 162.56349182128906,
+          "std_population_K": 1.6334264313368811
+        },
+        {
+          "line_shift_px": 1,
+          "sample_shift_px": 0,
+          "n": 19974,
+          "min_K": 147.27003479003906,
+          "p05_K": 153.98559112548827,
+          "median_K": 156.70410919189453,
+          "mean_K": 156.6844744542417,
+          "p95_K": 159.3421989440918,
+          "max_K": 162.56349182128906,
+          "std_population_K": 1.6352138892983243
+        },
+        {
+          "line_shift_px": 1,
+          "sample_shift_px": 1,
+          "n": 19677,
+          "min_K": 147.27003479003906,
+          "p05_K": 153.97874145507814,
+          "median_K": 156.70428466796875,
+          "mean_K": 156.6839309609408,
+          "p95_K": 159.34552001953125,
+          "max_K": 162.56349182128906,
+          "std_population_K": 1.6381748764770285
+        }
+      ]
+    }
+  ],
+  "source_receipts": [
+    {
+      "filename": "I71532035PBT.IMG",
+      "bytes": 4443120,
+      "sha256": "5d3e54cf05a3ec8d8a170a2863ac8a9baf10897edd194e811864a93c4ab28f71",
+      "payload_md5": "f0f5b61cb1c634dd6e779b2801825a34",
+      "label_md5": "f0f5b61cb1c634dd6e779b2801825a34"
+    },
+    {
+      "filename": "I73671033PBT.IMG",
+      "bytes": 4389864,
+      "sha256": "8a8e0338550e02463672312d112d27455629423c907751c0f147a2b7f9633862",
+      "payload_md5": "fd8f36aacdb0be2a4e9601afc7df49ff",
+      "label_md5": "fd8f36aacdb0be2a4e9601afc7df49ff"
+    },
+    {
+      "filename": "I74120036PBT.IMG",
+      "bytes": 4385040,
+      "sha256": "592aa32f02e287626c865ab0cca80822f904eb4f697c2709a58b9a9196678887",
+      "payload_md5": "c4ddef02d3d10b2adcd3dcfb486884ab",
+      "label_md5": "c4ddef02d3d10b2adcd3dcfb486884ab"
+    }
+  ],
+  "limits": [
+    "Brightness temperature at band9,not emissivity/atmosphere-corrected kinetic ground temperature",
+    "Individual scene subsets have unequal coverage;not the wholeROI mean",
+    "Different UTC,Ls and local times are not a same-sol day/night pair,season-controlled experiment or causal ice test",
+    "No product per-pixel calibration uncertainty or cloud/dust QA has been independently validated here",
+    "Sinusoidal sphere uses label3396.190km,not commonMars3396.000km",
+    "Projection offset source CAT pending reading; +/-1pixel convention sensitivity is not geographic accuracy or confidence interval",
+    "No ice-depth,ice-abundance or Earth-to-Mars thermal-parameter inference"
+  ]
+}

@@ -71,8 +71,8 @@
   "files": [
     {
       "path": "docs/research/MS-02/local_validation/research_notes.md",
-      "bytes": 16627,
-      "sha256": "0806fa57b20474eca3dab4bd0c4e441487282c1f781a198131ed7092a6c418e3"
+      "bytes": 17106,
+      "sha256": "1eba5d027fbaffc39b58162fafe5f91b4111fd71a93d7ffd617052ab98fbe130"
     },
     {
       "path": "outputs/research/MS-02/local_validation/analog_validation.csv",
@@ -93,6 +93,11 @@
       "path": "outputs/research/MS-02/local_validation/build_tables.py",
       "bytes": 44346,
       "sha256": "559a5bc840c7f482d04ddfb15b9c5dac6ffc39c1988dd2ae1ef646e27991032d"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/ctx_product_metadata.csv",
+      "bytes": 1189,
+      "sha256": "b44713d5cfe73392997c7e5007f0fdfe7bfd0a42279f6cb0470660829380b90a"
     },
     {
       "path": "outputs/research/MS-02/local_validation/derive_metrics.py",
@@ -137,7 +142,7 @@
     {
       "path": "outputs/research/MS-02/local_validation/statistics_summary.md",
       "bytes": 3715,
-      "sha256": "90de416d1e6a8ea09c3e2cdbb5904feb62e647ef9206887a4e4226232a0458b0"
+      "sha256": "580c4c373f4eff3ea1aa1908318665e438874d89abe6b8976ffeae5d2f33f40f"
     },
     {
       "path": "outputs/research/MS-02/local_validation/verification.json",

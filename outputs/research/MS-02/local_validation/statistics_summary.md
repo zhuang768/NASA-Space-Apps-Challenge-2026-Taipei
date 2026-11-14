@@ -1,6 +1,6 @@
 # MS-02 統計彙整（僅計數與核對結果；非報告正文）
 
-目標：MS-02，52.75°N、168.25°E；branch research/ms-02-earth-analogs；HEAD `cdcf3baaa0342a852cc4f6060f3d8fb048dcce53`
+目標：MS-02，52.75°N、168.25°E；branch research/ms-02-earth-analogs；HEAD `ef5eb162b1df0919b8d6dd780782896188607b2c`
 
 ## 1. 檔案與列數
 

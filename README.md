@@ -193,3 +193,8 @@ The workflow repair is pushed; publication remains blocked on valid Cloudflare c
 ### 2026-11-14: Local website fallback
 
 The user could not access Cloudflare and chose local operation. Started the latest organized workbench at `http://127.0.0.1:4178/` and opened it in the in-app browser. The rendered page showed the three-view navigation, selected-candidate summary and maps. The development server remains running for this session. Restart from the repository root with `npm run dev --prefix web -- --host 127.0.0.1 --port 4178 --strictPort` if it stops. This address is local to this computer, not a public competition demo link. Cloudflare deployment remains blocked and was not represented as complete. No scientific data or rankings changed.
+
+
+### 2026-11-14: Push-triggered deployment recheck
+
+At the user's request, pushed `f47c72c` with web run/deployment documentation to exercise the reported GitHub integration. [Run 43563444490](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/actions/runs/43563444490) passed data generation and web build, then failed credential-format validation before upload. The previously checked Pages URL still served `index-BVqdeinh.js`, not the organized layout. No alternative deployment check or repository homepage URL was reported by GitHub at this check. Requested the teammate's actual public URL if a separate hosting integration is in use. Local operation remains available; successful deployment is not claimed.

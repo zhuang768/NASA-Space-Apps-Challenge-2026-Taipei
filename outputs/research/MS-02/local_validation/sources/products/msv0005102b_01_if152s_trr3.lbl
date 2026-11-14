@@ -1,0 +1,210 @@
+PDS_VERSION_ID                 = PDS3
+LABEL_REVISION_NOTE            = "2004-11-22, S. Slavney (GEO);
+                                  2005-12-20, H. Taylor (JHU/APL);
+                                  2006-04-05, S. Murchie (JHU/APL);
+                                  2006-09-18, P. Cavender (JHU/APL);
+                                  2007-02-19, P. Cavender (JHU/APL);
+                                    Version 2, new stray light subtraction
+                                  2010-06-01, D. Humm (JHU/APL);
+                                    Version 3, shutter mirror correction
+                                  2010-10-12, C. Hash (ACT);
+                                    Version 3, Added data filter control
+                                    parameters"
+DATA_SET_ID                    = "MRO-M-CRISM-3-RDR-TARGETED-V1.0"
+PRODUCT_ID                     = "MSV0005102B_01_IF152S_TRR3"
+
+/* cccnnnnnnnn_xx_ooaaas_TRRv              */
+/* ccc = Class Type                        */
+/* nnnnnnnn = Observation ID, hexadecimal  */
+/* ooaaa = Image type, Macro number        */
+/* s = Sensor ID (S or L)                  */
+/* v = Version number                      */
+
+INSTRUMENT_HOST_NAME           = "MARS RECONNAISSANCE ORBITER" 
+SPACECRAFT_ID                  = MRO
+INSTRUMENT_NAME                = "COMPACT RECONNAISSANCE IMAGING
+                                      SPECTROMETER FOR MARS"
+INSTRUMENT_ID                  = CRISM
+TARGET_NAME                    = MARS
+PRODUCT_TYPE                   = TARGETED_RDR
+PRODUCT_CREATION_TIME          = 2020-03-09T23:22:27
+START_TIME                     = 2019-12-06T18:57:46.016
+STOP_TIME                      = 2019-12-06T19:00:45.984
+SPACECRAFT_CLOCK_START_COUNT   = "18/1260125917.23159"
+SPACECRAFT_CLOCK_STOP_COUNT    = "18/1260126097.21091"
+ORBIT_NUMBER                   = "NULL"
+OBSERVATION_TYPE               = "MSV"
+OBSERVATION_ID                 = "16#0005102B#"
+MRO:OBSERVATION_NUMBER         = 16#01#
+MRO:ACTIVITY_ID                = "IF152"
+MRO:SENSOR_ID                  = "S"
+MRO:DETECTOR_TEMPERATURE       = -60.932
+MRO:OPTICAL_BENCH_TEMPERATURE  = -50.410
+MRO:SPECTROMETER_HOUSING_TEMP  = -73.577
+MRO:SPHERE_TEMPERATURE         = -50.240
+MRO:FPE_TEMPERATURE            =  4.355
+PRODUCT_VERSION_ID             = "3"
+SOURCE_PRODUCT_ID = {
+    "CDR410000000000_SH0200001S_4",
+    "CDR410000000000_SS0200001S_2",
+    "CDR421012262433_DM0200030S_3",
+    "CDR421012262433_NU4200031S_4",
+    "CDR421012262433_SF0200030S_2",
+    "CDR421012262433_TD0200000S_2",
+    "CDR481260123729_SP0242501S_3",
+    "CDR481260123757_BP0242500S_3",
+    "CDR481260123757_BP4242530S_3",
+    "CDR481260125913_BI4242530S_3",
+    "CDR481260125913_UB4242530S_3",
+    "CDR481260126100_BI4242530S_3",
+    "CDR481260126100_UB4242530S_3",
+    "CDR6_1_0000000000_AS_S_0",
+    "CDR6_1_0000000000_DB_S_0",
+    "CDR6_1_0000000000_EB_S_0",
+    "CDR6_1_0000000000_GH_S_1",
+    "CDR6_1_0000000000_HD_J_1",
+    "CDR6_1_0000000000_HK_J_1",
+    "CDR6_1_0000000000_HV_J_1",
+    "CDR6_1_0000000000_LC_S_1",
+    "CDR6_1_0000000000_LI_J_0",
+    "CDR6_1_0000000000_VL_S_0",
+    "CDR6_2_0835294537_PP_S_0",
+    "CDR6_8_1260057651_ST_J_0",
+    "MSV0005102B_01_SC152S_EDR0"
+}
+MRO:INVALID_PIXEL_LOCATION = {
+}
+PRODUCER_INSTITUTION_NAME      = "JOHNS HOPKINS UNIVERSITY
+                                  APPLIED PHYSICS LABORATORY"
+SOFTWARE_NAME                  = "crism_imagecal"
+SOFTWARE_VERSION_ID            = "2.5.4"
+
+/* Targeted RDR Instrument and Observation Parameters */
+
+TARGET_CENTER_DISTANCE         = "NULL" <KM>
+SOLAR_DISTANCE                 = 241695884.535357 <KM>
+SOLAR_LONGITUDE                = 116.954648
+SHUTTER_MODE_ID                = "OPEN"
+LIGHT_SOURCE_NAME              = "NONE"
+MRO:CALIBRATION_LAMP_STATUS    = "OFF"
+MRO:CALIBRATION_LAMP_LEVEL     = "N/A"
+PIXEL_AVERAGING_WIDTH          = 5
+MRO:INSTRUMENT_POINTING_MODE   = "FIXED POINTING"
+SCAN_MODE_ID                   = "N/A"
+MRO:FRAME_RATE                 = 30.00 <HZ>
+MRO:EXPOSURE_PARAMETER         = 425
+SAMPLING_MODE_ID               = "MULTISPEC"
+COMPRESSION_TYPE               = "NONE"
+MRO:WAVELENGTH_FILTER          = "3"
+MRO:WAVELENGTH_FILE_NAME       = "CDR421012262433_WA0200030S_2.IMG"
+MRO:PIXEL_PROC_FILE_NAME       = "CDR6_2_0835294537_PP_S_0.TAB"
+MRO:INV_LOOKUP_TABLE_FILE_NAME = "CDR6_1_0000000000_LI_J_0.TAB"
+MRO:ATMO_CORRECTION_FLAG       = "OFF"
+MRO:THERMAL_CORRECTION_MODE    = "OFF"
+MRO:PHOTOCLIN_CORRECTION_FLAG  = "OFF"
+MRO:SPATIAL_RESAMPLING_FLAG    = "OFF"
+MRO:SPATIAL_RESAMPLING_FILE    = "N/A"
+MRO:SPATIAL_RESCALING_FLAG     = "OFF"
+MRO:SPATIAL_RESCALING_FILE     = "N/A"
+MRO:SPECTRAL_RESAMPLING_FLAG   = "OFF"
+MRO:SPECTRAL_RESAMPLING_FILE   = "N/A"
+
+/* Hyperspectral Data Filter Control Parameters */
+
+MRO:HDF_SOFTWARE_NAME          = "N/A"
+MRO:HDF_SOFTWARE_VERSION_ID    = "N/A"
+MRO:IF_MIN_VALUE               = "N/A"
+MRO:IF_MAX_VALUE               = "N/A"
+MRO:TRACE_MIN_VALUE            = "N/A"
+MRO:TRACE_MAX_VALUE            = "N/A"
+MRO:REFZ_MEDIAN_BOX_WIDTH      = "N/A"
+MRO:REFZ_SMOOTH_BOX_WIDTH      = "N/A"
+MRO:FRAM_STAT_MEDIAN_BOX_WIDTH = "N/A"
+MRO:FRAM_STAT_MIN_DEVIATION    = "N/A"
+MRO:FRAM_STAT_MEDIAN_CONF_LVL  = "N/A"
+MRO:FRAM_STAT_IQR_CONF_LVL     = "N/A"
+MRO:RSC_REF_XY_MEDIAN_WIDTH    = "N/A"
+MRO:RSC_REF_XY_SMOOTH_WIDTH    = "N/A"
+MRO:RSC_REF_YZ_MEDIAN_WIDTH    = "N/A"
+MRO:RSC_REF_YZ_SMOOTH_WIDTH    = "N/A"
+MRO:RSC_RATIO_XY_MEDIAN_WIDTH  = "N/A"
+MRO:RSC_RATIO_XY_SMOOTH_WIDTH  = "N/A"
+MRO:RSC_RES_XY_PLY_ORDER       = "N/A"
+MRO:RSC_RES_XY_PLY_EXTND_WIDTH = "N/A"
+MRO:LOG_XFORM_NEG_CLIP_VALUE   = "N/A"
+MRO:IKF_NUM_REGIONS            = "N/A"
+MRO:IKF_START_CHANNEL          = ("N/A", "N/A")
+MRO:IKF_STOP_CHANNEL           = ("N/A", "N/A")
+MRO:IKF_CONFIDENCE_LEVEL       = ("N/A", "N/A")
+MRO:IKF_WEIGHTING_STDDEV       = ("N/A", "N/A")
+MRO:IKF_KERNEL_SIZE_X          = ("N/A", "N/A")
+MRO:IKF_KERNEL_SIZE_Y          = ("N/A", "N/A")
+MRO:IKF_KERNEL_SIZE_Z          = ("N/A", "N/A")
+MRO:IKF_MODEL_ORDER_X          = ("N/A", "N/A")
+MRO:IKF_MODEL_ORDER_Y          = ("N/A", "N/A")
+MRO:IKF_MODEL_ORDER_Z          = ("N/A", "N/A")
+
+/* This Targeted RDR label describes two data files.  The first file */
+/* contains the first two objects and the second file contains the   */
+/* third:                                                            */
+/*   1. A multiple-band image file containing calibrated RDR data,   */
+/*      in units of I / F,                                           */
+/*   2. A binary table of selected image row numbers from detector,  */
+/*   3. A table of ancillary and housekeeping data converted to      */
+/*      engineering units.                                           */
+
+OBJECT          = FILE
+  ^IMAGE        =  "MSV0005102B_01_IF152S_TRR3.IMG"
+  ^ROWNUM_TABLE = ("MSV0005102B_01_IF152S_TRR3.IMG", 486001 )
+  RECORD_TYPE   = FIXED_LENGTH
+  RECORD_BYTES  = 512
+  FILE_RECORDS  = 486001
+
+  OBJECT              = IMAGE
+    LINES             = 5400
+    LINE_SAMPLES      = 128
+    SAMPLE_TYPE       = PC_REAL
+    SAMPLE_BITS       = 32
+    UNIT              = "I_OVER_F"
+    BANDS             = 90
+    BAND_STORAGE_TYPE = LINE_INTERLEAVED
+  END_OBJECT = IMAGE
+
+  OBJECT                = ROWNUM_TABLE 
+    NAME                = "SELECTED ROWS FROM DETECTOR" 
+    INTERCHANGE_FORMAT  = "BINARY" 
+    ROWS                = 90
+    COLUMNS             = 1
+    ROW_BYTES           = 2
+    DESCRIPTION   = "The detector is subsampled in the spectral direction
+                     by selecting specific rows to be downlinked.  This
+                     table provides a list of the rows selected for all
+                     frames in this multidimensional image cube."
+      OBJECT = COLUMN
+        NAME           = DETECTOR_ROW_NUMBER
+        DATA_TYPE      = MSB_UNSIGNED_INTEGER
+        COLUMN_NUMBER  = 1
+        BIT_MASK       = 2#0000000111111111#
+        START_BYTE     = 1
+        BYTES          = 2
+        DESCRIPTION    = "Detector row number from which the data was taken."
+      END_OBJECT = COLUMN
+  END_OBJECT           = ROWNUM_TABLE
+
+END_OBJECT = FILE
+
+OBJECT = FILE
+  ^TRDR_HK_TABLE       = "MSV0005102B_01_RA152S_HKP3.TAB"
+  RECORD_TYPE          = FIXED_LENGTH
+  RECORD_BYTES         = 1221
+  FILE_RECORDS         = 5400
+  OBJECT               = TRDR_HK_TABLE
+    NAME               = "TARGETED RDR HOUSEKEEPING TABLE"
+    INTERCHANGE_FORMAT = ASCII
+    ROWS               = 5400
+    COLUMNS            = 233
+    ROW_BYTES          = 1221
+    ^STRUCTURE         = "TRDRHK.FMT"
+  END_OBJECT           = TRDR_HK_TABLE
+END_OBJECT = FILE
+END

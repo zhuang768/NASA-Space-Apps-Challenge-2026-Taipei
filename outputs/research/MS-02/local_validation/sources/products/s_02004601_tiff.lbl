@@ -1,0 +1,66 @@
+PDS_VERSION_ID                = PDS3
+
+/* File characteristics */
+RECORD_TYPE                   = UNDEFINED
+
+/* Pointers to objects in file */
+^TIFFID_HEADER                     = ("S_02004601_TIFF.TIF", 1)
+^IMAGE                             = ("S_02004601_TIFF.TIF", 9)
+^TIFFTAG_HEADER                    = ("S_02004601_TIFF.TIF", 21099609)
+
+/* Identification data elements */
+DATA_SET_ID                        = "MRO-M-SHARAD-5-RADARGRAM-V2.0"
+PRODUCT_ID                         = "S_02004601_TIFF"
+INSTRUMENT_HOST_ID                 = "MRO"
+INSTRUMENT_HOST_NAME               = "MARS RECONNAISSANCE ORBITER"
+INSTRUMENT_ID                      = "SHARAD"
+INSTRUMENT_NAME                    = "SHALLOW RADAR"
+TARGET_NAME                        = "MARS"
+ORBIT_NUMBER                       = 20046
+MRO:START_SUB_SPACECRAFT_LONGITUDE = 176.35071 <DEGREE>
+MRO:START_SUB_SPACECRAFT_LATITUDE  = 75.193069 <DEGREE>
+MRO:STOP_SUB_SPACECRAFT_LONGITUDE  = 164.49218 <DEGREE>
+MRO:STOP_SUB_SPACECRAFT_LATITUDE   = 29.788629 <DEGREE>
+START_TIME                         = 2010-11-05T12:32:09.484
+STOP_TIME                          = 2010-11-05T12:46:33.241
+SPACECRAFT_CLOCK_START_COUNT       = "UNK"
+SPACECRAFT_CLOCK_STOP_COUNT        = "UNK"
+PRODUCT_CREATION_TIME              = 2021-10-22T08:44:45.446
+PRODUCT_VERSION_ID                 = "1"
+PRODUCER_FULL_NAME                 = "BRUCE A. CAMPBELL"
+PRODUCER_INSTITUTION_NAME          = "SMITHSONIAN INSTITUTION"
+
+/* Descriptive data elements                         */
+/* SYNTHETIC_APERTURE_DURATION     = 8.774 <SECOND>  */
+/* MULTILOOK_DOPPLER_BANDWIDTH     = 0.4 <HERTZ>     */
+/* NUMBER_OF_LOOKS                 = 7               */
+/* CHIRP_FREQUENCY_ENVELOPE        = LINEAR          */
+/* RANGE_COMPRESSION_WINDOW        = HANN            */
+/* AZIMUTH_PROCESSING_WINDOW       = HANN            */
+
+/* Standard TIFF image identification header */
+OBJECT                             = TIFFID_HEADER
+ BYTES                             = 8
+ HEADER_TYPE                       = "N/A"
+ DESCRIPTION                       = "Bytes 1-2: II for LSB
+                                      bytes 3-4: 42,
+                                      bytes 5-8: offset to TIFF tags."
+END_OBJECT                         = TIFFID_HEADER
+
+/* Image information */
+OBJECT                         = IMAGE
+ LINES                         = 3600
+ LINE_SAMPLES                  = 5861
+ SAMPLE_TYPE                   = UNSIGNED_INTEGER
+ SAMPLE_BITS                   = 8
+ DESCRIPTION                   = "TIFF version of the radargram image file."
+END_OBJECT                     = IMAGE
+
+/* TIFF tags */
+OBJECT                         = TIFFTAG_HEADER
+ BYTES                         = 22000
+ HEADER_TYPE                   = "N/A"
+ DESCRIPTION                   = "TIFF tags."
+END_OBJECT                     = TIFFTAG_HEADER
+
+END

@@ -1,0 +1,3 @@
+﻿relative_permittivity_assumed,assumption,sample_interval_ns,one_way_distance_per_sample_m,bandwidth_MHz,ideal_one_way_bandwidth_resolution_m,trial_interface_depth_m,trial_round_trip_delay_ns,trial_delay_samples,bandwidth_resolution_divided_by_trial_depth,scope
+1.0,vacuum reference,37.5,5.621108587499999,10.0,14.9896229,0.1,0.6671281903963041,0.017790085077234778,149.896229,homogeneous nondispersive nonmagnetic medium; separability scale only; not detection probability
+3.15,illustrative pure-water-ice assumption; not MS-03 measurement,37.5,3.1671358926777513,10.0,8.445695713807337,0.1,1.1840350799818218,0.03157426879951525,84.45695713807336,homogeneous nondispersive nonmagnetic medium; separability scale only; not detection probability

@@ -1,0 +1,346 @@
+{
+  "schema": "MS03-independent-evidence-only-v1",
+  "source_pr": 26,
+  "source_commit": "ac39ed6810156feefd97f60647b95b754210a7da",
+  "scope": "28 new independent evidence files only; not a blanket merge of PR26",
+  "scientific_completion": false,
+  "formal_report_change": false,
+  "preserved_main_report": {
+    "path": "docs/research/MS-03/report.md",
+    "git_blob_sha1": "f9164ae35147f6007f486fe69cb93cc41572c2b5",
+    "bytes": 74658,
+    "sha256": "2d2209b42de1a982e3c1e9a26aa2f38197e39335675213934091df16d4a7b27d"
+  },
+  "accepted_files": [
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_atmosphere.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fef5e44020403f887753be7456f3db71975b8e4",
+      "bytes": 7898,
+      "sha256": "323c8ef3c3cec3d3560b73f5831d0da82b7e6464f853d21c2358952e960d8263",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_atmosphere_monthly.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e070542a542eff6ebbbf593cafd0e2239094593",
+      "bytes": 4493,
+      "sha256": "20ea255952ee9ba2bcd11ab5c72541dc7cb1f54477db0029286bda14c4702e24",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_atmosphere_summary.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "696ced0e5da79647aa5b085848552f34532bae9c",
+      "bytes": 2245,
+      "sha256": "5f4200f8412dec434ff3a30afdcb8739393a50d915223abe9d7ae4635228aad4",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_comparability.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cca215f61ffdc7345956e2e6ecb9fc21a79e89f0",
+      "bytes": 4929,
+      "sha256": "7200dd9bcbd758604f372983a05786edca143a2156cfa2c0d79f75781ab57c1d",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_evidence.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74ba15c84e1e4e2e23649e6829eadfe8c16ab608",
+      "bytes": 1835,
+      "sha256": "56057bdcd0c70ae6cf3f76c6a33995cf36203a4e3bc3dc4a889fc5aa5c5dcee7",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_four_dimensions.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b9bfbe6335bf4824bab0c2e0301543aa35c2b0f",
+      "bytes": 8338,
+      "sha256": "eb39109eab42cfa474e25add464bfdc6da7e1e0b8296eee2c8fc74f28e5454cf",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_input_receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15d5bdf7139dc7014387b81d2e5631c8e24e78e7",
+      "bytes": 3513,
+      "sha256": "2cdfad01c2bee49f5efa77e876e3427e7ab1b721991382a7064016c3c2197be6",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_new_prior_citation.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0e6439c2207d2680910869b372a8b646160aa27",
+      "bytes": 1236,
+      "sha256": "2770d0a41a7b3bfa4e578b89ce4e9dd0727e94777b9775108b65db17a55a0965",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_prior_work.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b956e19ccbd5fa002c81317232fcaa5b1128d058",
+      "bytes": 1290,
+      "sha256": "8f437ce1028959ecf0f05696b836400813eb305f6371cf61b248855f43e85cd5",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_raw/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efa9c1e247893bcfc74494cc1d3d292cf6f0954f",
+      "bytes": 2035,
+      "sha256": "e1968b73cd1e7a04e97a8fb9283b7666aa0f4e05d1dcc6340ed3b5211fd86a91",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_raw/UniversityV_09_10_Campbell_data_good_only_calibrated.txt.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db3803b36af95ee90d6c44d2e6f446445acc1307",
+      "bytes": 506804,
+      "sha256": "f2ab00f49fdfa9f64cb2e6fe15df3d32599f382292ba7b2e4b916f75c5f311f1",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_raw/provenance.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b691fade867d97b806377fca650ff76ec173471",
+      "bytes": 2254,
+      "sha256": "93c24f4d0e120c8cef9767f5ec717af0c6714b142a9a6b6203cd0dcd82c5be27",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_search_log.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a13446d814e2f12851e3d161c32549549541c29",
+      "bytes": 1332,
+      "sha256": "ec8b2cdd83820ba2d9b10f04bd2ad1d3519cd683e20c978af7319862e2dd97c1",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_source_read_log.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecf76b41c34009120ab21e29fbd65803ee9a206d",
+      "bytes": 2013,
+      "sha256": "c5046f612d2497306fa80d67ae0f16dd71f1781225d43cd73300a56195dc1aa2",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_validate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae0ef9dc846af88596abb5bd4eb6066a7af32bee",
+      "bytes": 3556,
+      "sha256": "8fdef96682b603fe2daf30f292a31b6a6f8f568c357c22ce43ac5b4b859698b5",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/earth_validation.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3cb1471153bd3a9318430b448cb278adb6a9a76",
+      "bytes": 2029,
+      "sha256": "a19960f3f71796a62fa797a791985d1fb33fb05eec445c60f4d2fb60535a4cef",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/F-RAD01_peak_index_diagnostic.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65fe09440fb68f0d900d6183b1d3956bff639ad3",
+      "bytes": 172006,
+      "sha256": "6ed927827080a7b77aa2c8d35696e79b9f21359120953bfeb66642d6bcdc07c8",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d952067c13ceeff0931d79fd27a569cc1a1dd152",
+      "bytes": 3641,
+      "sha256": "ada9ba6b8d5110173bb48d48a1cdc64642ac1a1f4ada223bc5001487958f8e4d",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/analyze.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c62ec8e59bef1591c436abeeebba1c0fdb7955b",
+      "bytes": 6089,
+      "sha256": "057cdeb626f042ec4a750fe5662eda27862e986be59ddc8ee3d3978e41815cdf",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19b451d94ae55216daac4067093e1c0db253c523",
+      "bytes": 2076,
+      "sha256": "6cd60f7468262b5e95823ba137da15a1ef00cabf506f4d7033dad1f446014b3a",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/plot.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e07b552b8f66a89214970c5bd93411cabfc1cc3a",
+      "bytes": 1431,
+      "sha256": "f4b52393be39aefc1a4918b6a9851ac4cdf8f37dfbf7bf0746ae0b19be8b9051",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/radar_diagnostic_summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "490efa0e2f687fea432af291adab700e9e413aad",
+      "bytes": 1670,
+      "sha256": "e8d6377cc7baa5f683b101dfbbaeb1124901f3e349e2db471e40ca302ac60f5f",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/radar_pick_diagnostic.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcc85be6b19920ecd6c414820f621429906535b6",
+      "bytes": 7947,
+      "sha256": "8e9375b87db2c314941cef8e2d2975155e90a046ad30f71bb3b60da9ff91039d",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/range_support.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55cdf40ec2493d28d8cb0cd49bfc3d26da96a947",
+      "bytes": 748,
+      "sha256": "ffc20a763f4a3e33a323c3d47db88f02b66f574078d971cd2fbfd98a3f0eb70d",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/search_log.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fdf83f75b948fd3345cc1c3941e7d9e6764edf6",
+      "bytes": 1343,
+      "sha256": "8ce5d8c94aa8ac8a4513f5ee7044002ff22cc31aa5970af4c7dd7495aae42400",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/source_read_log.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8334e6198101bcc5455b06c69e84b200c10f73e",
+      "bytes": 2552,
+      "sha256": "17803c5c569448eb25930b45e8fcf469d5f4958f58d2a30dcb3be05c360be477",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/validation.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edfbd100b0555df658b727da1499edbb58204a25",
+      "bytes": 420,
+      "sha256": "2594327564900a6edcb0fdc780cf3e011d75158aa8796e356c328d569be6af57",
+      "local_bytes_verified": true
+    },
+    {
+      "path": "outputs/research/MS-03/completion_20261115/radar_diagnostics/visual_review.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "656784288fece4f957de3b55f7d56b1f55ca020b",
+      "bytes": 241,
+      "sha256": "255a36cfd8bd5878010d0633943b164d5321bbbbd62c514e5ce9768d2fc45de6",
+      "local_bytes_verified": true
+    }
+  ],
+  "excluded_pr26_paths": [
+    "docs/research/MS-03/completion_20261115/earth_evidence.md",
+    "docs/research/MS-03/completion_20261115/prior_followup.md",
+    "docs/research/MS-03/completion_20261115/requirements_review.md",
+    "docs/research/MS-03/completion_20261115/technical_review.md",
+    "docs/research/MS-03/report.md",
+    "docs/research/MS-03/report_history_before_completion_20261115.md",
+    "outputs/research/MS-03/candidates.csv",
+    "outputs/research/MS-03/completion_20261115/README.md",
+    "outputs/research/MS-03/completion_20261115/all_search_records.csv",
+    "outputs/research/MS-03/completion_20261115/baseline_git_tree.json",
+    "outputs/research/MS-03/completion_20261115/build_delivery_index.py",
+    "outputs/research/MS-03/completion_20261115/earth_evidence_append.csv",
+    "outputs/research/MS-03/completion_20261115/earth_prior_append.csv",
+    "outputs/research/MS-03/completion_20261115/earth_retained_validation.json",
+    "outputs/research/MS-03/completion_20261115/earth_search_append.csv",
+    "outputs/research/MS-03/completion_20261115/file_inventory.csv",
+    "outputs/research/MS-03/completion_20261115/integrate_earth.py",
+    "outputs/research/MS-03/completion_20261115/integrate_local_evidence.py",
+    "outputs/research/MS-03/completion_20261115/link_inventory.csv",
+    "outputs/research/MS-03/completion_20261115/local_evidence_append.csv",
+    "outputs/research/MS-03/completion_20261115/manifest.json",
+    "outputs/research/MS-03/completion_20261115/open_questions.csv",
+    "outputs/research/MS-03/completion_20261115/original_research_instructions.txt",
+    "outputs/research/MS-03/completion_20261115/parent_manifest_before_completion_20261115.json",
+    "outputs/research/MS-03/completion_20261115/prior_protocol.csv",
+    "outputs/research/MS-03/completion_20261115/prior_search_log.csv",
+    "outputs/research/MS-03/completion_20261115/prior_source_read_log.csv",
+    "outputs/research/MS-03/completion_20261115/publication_receipt.json",
+    "outputs/research/MS-03/completion_20261115/refresh_parent_manifest.py",
+    "outputs/research/MS-03/completion_20261115/requirement_audit.csv",
+    "outputs/research/MS-03/completion_20261115/search_log_index.csv",
+    "outputs/research/MS-03/completion_20261115/shared_input_verification.json",
+    "outputs/research/MS-03/completion_20261115/shared_inputs/all_data_usage.csv",
+    "outputs/research/MS-03/completion_20261115/shared_inputs/candidate_native_evidence.json",
+    "outputs/research/MS-03/completion_20261115/shared_inputs/final_candidates.csv",
+    "outputs/research/MS-03/completion_20261115/shared_inputs/report.md.snapshot.txt",
+    "outputs/research/MS-03/completion_20261115/shared_inputs/selected_targets.json",
+    "outputs/research/MS-03/completion_20261115/source_byte_recovery.json",
+    "outputs/research/MS-03/completion_20261115/source_cross_reference_checks.csv",
+    "outputs/research/MS-03/completion_20261115/source_crosswalk.csv",
+    "outputs/research/MS-03/completion_20261115/validation.json",
+    "outputs/research/MS-03/evidence.csv",
+    "outputs/research/MS-03/manifest.json",
+    "outputs/research/MS-03/prior_work.csv",
+    "outputs/research/MS-03/search_log.csv",
+    "outputs/research/MS-03/sources.json"
+  ],
+  "excluded_policy": "Excluded files stay on original PR26 branch. The source README is replaced by an evidence-only index; no report draft is adopted. Root tables and prior whole-package receipts are not accepted implicitly.",
+  "integration_added_paths": [
+    "outputs/research/MS-03/completion_20261115/README.md",
+    "outputs/research/MS-03/completion_20261115/evidence_only_manifest.json"
+  ],
+  "dependency": {
+    "path": "outputs/research/MS-03/local_validation/gap_completion/radar_local_arrays.npz",
+    "bytes": 111476,
+    "sha256": "ac36e98d8af635bf1078ac7689005e490b09f2d765a7e60aa170a24b266c095c",
+    "git_blob_sha1": "bce599c608b4488f3b7f796d2de545eee938e42b",
+    "already_in_main": true
+  },
+  "replay": {
+    "w_source_rows": 17705,
+    "w_selected_rows": 16032,
+    "summary_rows": 5,
+    "monthly_rows": 55,
+    "independent_decimal_validator": "passed",
+    "radar_numerical_checks": 9,
+    "exact_reproduced_tables": [
+      "earth_atmosphere_summary.csv",
+      "earth_atmosphere_monthly.csv",
+      "radar_diagnostics/radar_pick_diagnostic.csv",
+      "radar_diagnostics/range_support.csv"
+    ],
+    "radar_manifest_files_verified": 11,
+    "all_28_selected_blobs_verified": true
+  },
+  "publication_state": "staged_locally_not_a_remote_merge_receipt",
+  "hash_graph_exclusions": "This manifest cannot hash itself; README is scope metadata. Original retained subpackage manifests keep their historical scope."
+}

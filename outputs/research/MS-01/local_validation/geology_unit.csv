@@ -1,0 +1,5 @@
+query_id,query_geometry_lon_lat,units_returned,unit_description,map_scale,source,limitations
+GQ-01,"point 72.75E,56.75N (MS-01 centre)",mAl,Middle Amazonian lowland unit,1:20000000,"Mars Geology feature layer (ArcGIS item e9189209b71544408387b8698ac88a56) of Tanaka et al. 2014 SIM 3292","Queried 2026-11-15 via fetch tool; response summarised by tool, attributes only"
+GQ-02,"envelope 72.5-73.0E,56.5-57.0N (MS-01 box)",mAl,Middle Amazonian lowland unit,1:20000000,same,"Only one unit intersects the box; polygon geometry not downloaded"
+GQ-03,"4 box corners as points",mAl,Middle Amazonian lowland unit,1:20000000,same,"Same result at all corners"
+GQ-04,"envelope 70.75-74.75E,54.75-58.75N (±2° neighbourhood)",mAl,Middle Amazonian lowland unit,1:20000000,same,"Only one unit intersects the neighbourhood"

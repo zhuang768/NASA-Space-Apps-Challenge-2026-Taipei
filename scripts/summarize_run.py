@@ -81,7 +81,9 @@ def main():
                 )
     write_json(folder / "sensitivity.json", sensitivity)
     with (folder / "shortlist.csv").open("w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=list(rows[0]) if rows else ["candidate_id"])
+        writer = csv.DictWriter(
+            f, fieldnames=list(rows[0]) if rows else ["candidate_id"], lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(rows)
     lines += [
@@ -118,7 +120,7 @@ def main():
     shutil.copyfile(RAW_DIR / "public_sources.json", meta / "public_sources.json")
     from analog.mars import RAW_DIR as MARS_RAW
 
-    shutil.copyfile(MARS_RAW / "megt90n000eb.lbl", meta / "megt90n000eb.lbl")
+    (meta / "megt90n000eb.lbl").write_text((MARS_RAW / "megt90n000eb.lbl").read_text())
     for p in (RAW_DIR / "power").glob("*.json"):
         if p.name.startswith("power_+33.000_+87.000"):
             continue  # connection probe, not a ranked candidate

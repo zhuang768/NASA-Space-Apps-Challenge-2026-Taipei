@@ -31,7 +31,7 @@ python3.12 -m venv .venv
 | [Natural Earth land](https://www.naturalearthdata.com/downloads/110m-physical-vectors/110m-land/) | 免登入陸地遮罩，下載檔 VERSION 為 4.1.0 | 1:110 million；不保證排除所有內陸水體或準確描述海岸 |
 | [NASA POWER](https://power.larc.nasa.gov/docs/services/) | 六個候選中心的 2023–2024 月資料，免登入，原始 JSON 留存 | MERRA2/POWER，再分析與衍生資料；氣象網格 0.5° lat × 0.625° lon，不是場址實測或 4 km 觀測 |
 
-來源清單保存 URL、SHA-256、檔案大小、版本、期間、座標與單位。來源快照見 `outputs/analysis/source_metadata/`；完整參數及本輪來源見 `results.json`。MOLA 標籤指出無量測格有插值，赤道附近軌跡間可能存在最長約 12 km 缺口。因此 4 km 是分析取樣間距，不能稱為真實有效解析度。
+來源清單保存 URL、SHA-256、檔案大小、版本、期間、座標與單位。來源快照見 `outputs/analysis/source_metadata/`（MOLA 文字標籤副本正規化為 LF；SHA-256 對應原始下載檔）；完整參數及本輪來源見 `results.json`。MOLA 標籤指出無量測格有插值，赤道附近軌跡間可能存在最長約 12 km 缺口。因此 4 km 是分析取樣間距，不能稱為真實有效解析度。
 
 ## 物理尺度與搜尋範圍
 

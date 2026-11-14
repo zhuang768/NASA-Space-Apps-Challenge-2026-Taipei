@@ -260,3 +260,10 @@ The Chinese PDFs identify themselves as unofficial translations. The official ex
 ### 2026-11-14: Printable participant-guide PDF
 
 Created a four-page Traditional Chinese internal preparation PDF with requirements tables, bullet points, judging/SI guidance, 14 printable checklist boxes and six clickable source links. [Download the PDF](output/pdf/spaceapps_2026_team_checklist_zh-TW.pdf). This is an internal reference summary, not the final English competition demo. Preserved source-access limitations and distinguished official requirements from project recommendations. Verified four pages and extracted key text/source annotations, rendered all pages and inspected layout; corrected a narrow checklist header before final export. No scientific outputs or website code changed. OpenAI Codex assisted document layout and verification.
+
+
+### 2026-11-14: Team Worker and automatic deployment recheck
+
+Confirmed the official team Worker URL serves the organized layout. Public Chromium checks passed at 1440×1000 and 390×844 for overview, evidence/sensitivity navigation, three targets, candidate selection, drawer/Escape and Demo reset. Mobile document width remained 390 px, including open method details; no page errors in these flows.
+
+Manually dispatched [run 43567297561](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/actions/runs/43567297561) against current main. Account-ID format validation no longer reports an error, but CLOUDFLARE_API_TOKEN still fails format validation. The site is publicly available; automatic upload is not yet working. Owner must replace the token secret with the pure value of a token authorized for Workers deployment in the team account. No credential values were read or published; no scientific or website changes were needed.

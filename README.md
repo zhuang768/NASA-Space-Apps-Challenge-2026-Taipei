@@ -119,8 +119,15 @@ All entries are from 2026-11-14. Full reports with verification details and per-
 - **Website:** candidates, dual maps, evidence drawer and sensitivity views; deep-dive candidates and the Oytag overlay; three views (Overview & map, Evidence & sources, Sensitivity & gaps). Browser-checked at 1440 px and 390 px.
 - **Participant guides:** [English rules digest](docs/submission/official_rules_digest.md) with submission fields, 7-slide / 30-second limits, judging criteria and dates, plus a printable [Chinese team checklist PDF](output/pdf/spaceapps_2026_team_checklist_zh-TW.pdf) for internal use.
 - **Mars discovery handoff:** literature checks on the top five sites per use (handoff files not yet committed); novelty of exact locations remains unconfirmed.
-- **Deployment:** official site moved to the team Cloudflare Worker; the workflow now runs `wrangler deploy` with release verification. The team site passed public desktop and mobile checks; automatic deploys wait for a valid team API token (see [Public site](#public-site-cloudflare)).
+- **Deployment:** official site moved to the team Cloudflare Worker; the workflow now runs `wrangler deploy` with release verification. The team site passed public desktop and mobile checks; the full deployment pipeline passed run 43569162001; main-push trigger verification is in progress (see [Public site](#public-site-cloudflare)).
 
-Open: team Cloudflare API token, original-code license, challenge-specific and Taipei event details, Earth QA-controlled data handoff, qualified regional Mars temperature, and four-theme scoring.
+Open: original-code license, challenge-specific and Taipei event details, Earth QA-controlled data handoff, qualified regional Mars temperature, and four-theme scoring.
 
 AI assistance (OpenAI Codex, Antigravity, Claude) is disclosed per entry in the full log.
+
+
+### 2026-11-14: Deployment credentials repaired and pipeline verified
+
+After the owner updated the configuration, [workflow run 43569162001](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/actions/runs/43569162001) completed successfully: configuration validation, data build, web build, Worker upload and public release verification all passed. The public deployment stamp reported commit `bc25d3ae4d89b2b1c62eef1f42268f3d78988f59` and this run ID. The previous credential-format blocker is resolved for this tested run.
+
+The official site remains https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/ . Every main push is configured to trigger this same workflow; this report update is also being used to exercise the push trigger separately from manual dispatch. No science, ranking or website code was changed. OpenAI Codex assisted verification and English reporting.

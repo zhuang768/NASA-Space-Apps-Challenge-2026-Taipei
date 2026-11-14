@@ -1,0 +1,16 @@
+[
+  {
+    "id": "CZ-author-MBARS-tree",
+    "url": "https://api.github.com/repos/dhood14/MBARS/git/trees/master?recursive=1",
+    "output": "hood_MBARS_tree.json",
+    "route_basis": "Public MBARS repository owned by author linked from his homepage; inspect file inventory, not a substitute for original selected-image table",
+    "retrieved_utc": "2026-11-14T19:29:50.769693+00:00",
+    "http_status": 200,
+    "final_url": "https://api.github.com/repos/dhood14/MBARS/git/trees/master?recursive=1",
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 1477,
+    "sha256": "6473949d7980b842680937feaa8a94c0edc1137a6ccb428bd4d464eeef9a3e1d",
+    "file": "responses/hood_MBARS_tree.json",
+    "status": "response_retained_not_yet_content_validated"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "D-official-AIS",
+    "url": "https://www1.usgs.gov/pir/api/identifiers/USGS:5f99f0b8d34e198cb786e8e7",
+    "output": "dundas_ais.xml",
+    "route_basis": "Exact identifier URL embedded by official USGS Data Catalog; inspect resolved download locations",
+    "retrieved_utc": "2026-11-14T19:28:14.627475+00:00",
+    "http_status": 200,
+    "final_url": "https://data.usgs.gov/datacatalog/metadata/USGS.5f99f0b8d34e198cb786e8e7.xml",
+    "content_type": "application/xml",
+    "bytes": 32225,
+    "sha256": "1992a7b2e651466d8be4ef3183aec1ccf96f6fb01e9c4de088de048863125928",
+    "file": "responses/dundas_ais.xml",
+    "status": "response_retained_not_yet_content_validated"
+  },
+  {
+    "id": "CZ-author-repos",
+    "url": "https://api.github.com/users/dhood14/repos?per_page=100",
+    "output": "hood_repos.json",
+    "route_basis": "GitHub profile linked from actual author homepage; inspect public repositories only",
+    "retrieved_utc": "2026-11-14T19:28:14.627795+00:00",
+    "http_status": 200,
+    "final_url": "https://api.github.com/users/dhood14/repos?per_page=100",
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 10172,
+    "sha256": "8ea8859bf50133cc2a2cf3ac186deeb660712251acb8856697efee1d8f37c6ab",
+    "file": "responses/hood_repos.json",
+    "status": "response_retained_not_yet_content_validated"
+  },
+  {
+    "id": "L-author-research-old",
+    "url": "https://sites.google.com/site/colddirt/research",
+    "output": "levy_oldsite.html",
+    "route_basis": "Potential historical public lab alias from Cold Dirt name; conjectured alias, not a verified original link",
+    "retrieved_utc": "2026-11-14T19:28:14.627930+00:00",
+    "http_status": 200,
+    "final_url": "https://accounts.google.com/v3/signin/identifier",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 945703,
+    "sha256": "f5e5bd047514ecd77f69de5c6e60987a2eef23c61f7cbc457550633d0f9b62b5",
+    "file": "responses/levy_oldsite.html",
+    "status": "response_retained_not_yet_content_validated",
+    "final_url_query_omitted": "Unnecessary sign-in-flow query identifiers omitted from research log; requested public URL retained."
+  },
+  {
+    "id": "CZ-author-data-paper",
+    "url": "https://www.academia.edu/121188177/The_Role_of_Ice_and_Latitude_Dependent_Mantling_on_Boulder_Distributions_Across_the_Martian_Northern_Lowlands",
+    "output": "cohen_author_paper.html",
+    "route_basis": "Indexed author-uploaded original paper; distinguish manuscript from downloadable supplementary table",
+    "retrieved_utc": "2026-11-14T19:28:14.628031+00:00",
+    "http_status": 403,
+    "final_url": "https://www.academia.edu/121188177/The_Role_of_Ice_and_Latitude_Dependent_Mantling_on_Boulder_Distributions_Across_the_Martian_Northern_Lowlands",
+    "content_type": "text/html; charset=UTF-8",
+    "error": "HTTP Error 403: Forbidden",
+    "bytes": 5923,
+    "sha256": "176227daf87d2ba8b3348c7c6559b79c1fdb75d1a07f5359ec9960b0333d143d",
+    "file": "responses/cohen_author_paper.html",
+    "status": "response_retained_not_yet_content_validated",
+    "error_body_retention_limit_bytes": 100000,
+    "response_body_may_be_truncated": false
+  }
+]

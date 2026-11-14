@@ -1,0 +1,50 @@
+[
+  {
+    "id": "L-lab-site",
+    "url": "https://sites.google.com/colgate.edu/levy",
+    "output": "levy_lab.html",
+    "route_basis": "Exact author research-site link from official Colgate faculty page"
+  },
+  {
+    "id": "L-lab-research",
+    "url": "https://sites.google.com/colgate.edu/levy/research",
+    "output": "levy_research.html",
+    "route_basis": "Author research page linked to same lab; inspect current public material only"
+  },
+  {
+    "id": "CZ-hood-site",
+    "url": "https://dhood14.github.io/",
+    "output": "hood_home.html",
+    "route_basis": "Author public website identified by indexed CV"
+  },
+  {
+    "id": "D-usgs-landing",
+    "url": "https://www.usgs.gov/data/locations-and-properties-ice-exposing-scarps-and-new-impact-craters-mid-latitudes-mars",
+    "output": "dundas_usgs.html",
+    "route_basis": "Official USGS release page; inspect any direct alternative file links"
+  },
+  {
+    "id": "D-data-correct-entry",
+    "url": "https://data.usgs.gov/datacatalog/data/USGS%3A5f99f0b8d34e198cb786e8e7",
+    "output": "dundas_catalog.html",
+    "route_basis": "Exact USGS catalogue URL found in web index; colon is part of identifier"
+  },
+  {
+    "id": "levy-figshare",
+    "url": "https://api.figshare.com/v2/articles?resource_doi=10.1029/2008JE003273",
+    "output": "levy_figshare.json",
+    "route_basis": "Public Figshare published-articles filter by source DOI; a list response must be checked for exact resource DOI, not assumed matching"
+  },
+  {
+    "id": "dundas-figshare",
+    "url": "https://api.figshare.com/v2/articles?resource_doi=10.1029/2020JE006617",
+    "output": "dundas_figshare.json",
+    "route_basis": "Public Figshare published-articles filter by source DOI; a list response must be checked for exact resource DOI, not assumed matching"
+  },
+  {
+    "id": "cohen-figshare",
+    "url": "https://api.figshare.com/v2/articles?resource_doi=10.1029/2024JE008387",
+    "output": "cohen_figshare.json",
+    "route_basis": "Public Figshare published-articles filter by source DOI; a list response must be checked for exact resource DOI, not assumed matching"
+  }
+]

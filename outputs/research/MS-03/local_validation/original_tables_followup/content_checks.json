@@ -1,0 +1,244 @@
+{
+  "date_taipei": "2026-11-15",
+  "original_tables_acquired": 0,
+  "request_count": 29,
+  "checks": [
+    {
+      "request_id": "CZ-datacite-parent",
+      "classification": "acquired_datacite_metadata_not_original_table",
+      "original_table_acquired": false,
+      "response_file": "responses/cz_parent.json",
+      "http_status": 200,
+      "response_sha256": "f0936025b3e205e6cb18341da25b9b0b5cd8115527432c610a89f1f7830b14c5"
+    },
+    {
+      "request_id": "CZ-datacite-data",
+      "classification": "acquired_datacite_metadata_not_original_table",
+      "original_table_acquired": false,
+      "response_file": "responses/cz_data.json",
+      "http_status": 200,
+      "response_sha256": "93f584f6b5669255e019fe644c2028e3122ea9e373d241c9810225d6253917f2"
+    },
+    {
+      "request_id": "CZ-datacite-headers",
+      "classification": "acquired_datacite_metadata_not_original_table",
+      "original_table_acquired": false,
+      "response_file": "responses/cz_headers.json",
+      "http_status": 200,
+      "response_sha256": "8c281269d3f3643f00e6c1169800d052b9ecff5e8dba0099cc66048f2883e87d"
+    },
+    {
+      "request_id": "CZ-datacite-si",
+      "classification": "acquired_datacite_metadata_not_original_table",
+      "original_table_acquired": false,
+      "response_file": "responses/cz_si.json",
+      "http_status": 200,
+      "response_sha256": "58f627705a8217b323acd034ca5121628eaa31a0a2f1ef5b1db7a76282eb711e"
+    },
+    {
+      "request_id": "CZ-export",
+      "classification": "http_403_error_or_challenge_not_table",
+      "original_table_acquired": false,
+      "response_file": "responses/cz_export.json",
+      "http_status": 403,
+      "response_sha256": "e0161b7213dbe964c7c85fb347d6c473bf90db13c685ff91293f83f691e7e35f"
+    },
+    {
+      "request_id": "CZ-access",
+      "classification": "http_403_error_or_challenge_not_table",
+      "original_table_acquired": false,
+      "response_file": "responses/cz_data.tab",
+      "http_status": 403,
+      "response_sha256": "028d2477b859d726f300f829ddd32a5719b331e9d376a84fa5db84f72a2dc8f4"
+    },
+    {
+      "request_id": "CZ-oai",
+      "classification": "http_403_error_or_challenge_not_table",
+      "original_table_acquired": false,
+      "response_file": "responses/cz_oai.xml",
+      "http_status": 403,
+      "response_sha256": "0ba10d97d7763e6bd703a982e48f4fee28e681d1e4f1e7728ec7534637ec417c"
+    },
+    {
+      "request_id": "D-dataentry",
+      "classification": "http_404_not_table",
+      "original_table_acquired": false,
+      "response_file": "responses/dundas_entry.html",
+      "http_status": 404,
+      "response_sha256": "11480b5fc96c5766e553470c46bed3679ec0b7b61770a342306d1e0e4ce4ad9f"
+    },
+    {
+      "request_id": "D-item-json",
+      "classification": "http_403_error_or_challenge_not_table",
+      "original_table_acquired": false,
+      "response_file": "responses/dundas_item.json",
+      "http_status": 403,
+      "response_sha256": "a3742fbb7d555c1593dcc0ef49f1ccbb603c001d2c8c406c141a23306f3907f3"
+    },
+    {
+      "request_id": "D-items-query",
+      "classification": "http_403_error_or_challenge_not_table",
+      "original_table_acquired": false,
+      "response_file": "responses/dundas_search.json",
+      "http_status": 403,
+      "response_sha256": "48eb3cd03cdec0e816051b7c0a6e2e46bb106a5e97f80c026d4705bd0ef7cb4d"
+    },
+    {
+      "request_id": "D-direct",
+      "classification": "http_403_error_or_challenge_not_table",
+      "original_table_acquired": false,
+      "response_file": "responses/dundas_tableS4.csv",
+      "http_status": 403,
+      "response_sha256": "64f49ba3c8acf5901acdd1b7c70e60aaf4930cea1d467b65aafbaf066a9dc1a7"
+    },
+    {
+      "request_id": "D-publisher",
+      "classification": "http_403_error_or_challenge_not_table",
+      "original_table_acquired": false,
+      "response_file": "responses/dundas_publisher.csv",
+      "http_status": 403,
+      "response_sha256": "35a9fbb5a0db2b318a43dce7c61d69d580b2a8979fdd4dc18cb9a9affdf2395e"
+    },
+    {
+      "request_id": "L-xls",
+      "classification": "http_403_error_or_challenge_not_table",
+      "original_table_acquired": false,
+      "response_file": "responses/levy_ds01.xls",
+      "http_status": 403,
+      "response_sha256": "d15cfae9f8555e9085cd16115759675199c9dadfe917d02e186a49edefa02473"
+    },
+    {
+      "request_id": "L-txt",
+      "classification": "http_403_error_or_challenge_not_table",
+      "original_table_acquired": false,
+      "response_file": "responses/levy_ds01.txt",
+      "http_status": 403,
+      "response_sha256": "ce963e66073611fdb88e7442561fa02852bb82e8c10a8f359ccd312c1abc0116"
+    },
+    {
+      "request_id": "L-author-brown",
+      "classification": "transport_failure_no_content",
+      "original_table_acquired": false,
+      "response_file": null,
+      "http_status": null,
+      "response_sha256": null
+    },
+    {
+      "request_id": "L-author-colgate",
+      "classification": "public_html_landing_or_author_page_not_target_table",
+      "original_table_acquired": false,
+      "response_file": "responses/colgate_levy.html",
+      "http_status": 200,
+      "response_sha256": "f8921cb6d1adf36b917a78531cade0b44e2a20a2fd96c41634833c3b42eb4165"
+    },
+    {
+      "request_id": "L-lab-site",
+      "classification": "public_html_landing_or_author_page_not_target_table",
+      "original_table_acquired": false,
+      "response_file": "responses/levy_lab.html",
+      "http_status": 200,
+      "response_sha256": "87321ab2385e5a2aec4c2a3eedb6606779007b31a4834673246b8da34becb9fd"
+    },
+    {
+      "request_id": "L-lab-research",
+      "classification": "public_html_landing_or_author_page_not_target_table",
+      "original_table_acquired": false,
+      "response_file": "responses/levy_research.html",
+      "http_status": 200,
+      "response_sha256": "b13e79b61437e846bce7c4c70d85bda0033cb5aebad71f614a2be8abbc99a21a"
+    },
+    {
+      "request_id": "CZ-hood-site",
+      "classification": "public_html_landing_or_author_page_not_target_table",
+      "original_table_acquired": false,
+      "response_file": "responses/hood_home.html",
+      "http_status": 200,
+      "response_sha256": "0c42c5411175a07a84c1fe9d32d9f499ee1f3858b1e07f6a51cd89dfbe8bba4d"
+    },
+    {
+      "request_id": "D-usgs-landing",
+      "classification": "public_html_landing_or_author_page_not_target_table",
+      "original_table_acquired": false,
+      "response_file": "responses/dundas_usgs.html",
+      "http_status": 200,
+      "response_sha256": "48fd11015dcfc246a5630181442a85e42df78abb8799b61bfbffed7fd266359d"
+    },
+    {
+      "request_id": "D-data-correct-entry",
+      "classification": "public_html_landing_or_author_page_not_target_table",
+      "original_table_acquired": false,
+      "response_file": "responses/dundas_catalog.html",
+      "http_status": 200,
+      "response_sha256": "6024ada6004c94fba56290eddb739375a83c734b09ad9577f2978ce9b303c004"
+    },
+    {
+      "request_id": "levy-figshare",
+      "classification": "empty_exact_resource_doi_query_not_global_absence",
+      "original_table_acquired": false,
+      "response_file": "responses/levy_figshare.json",
+      "http_status": 200,
+      "response_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "request_id": "dundas-figshare",
+      "classification": "empty_exact_resource_doi_query_not_global_absence",
+      "original_table_acquired": false,
+      "response_file": "responses/dundas_figshare.json",
+      "http_status": 200,
+      "response_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "request_id": "cohen-figshare",
+      "classification": "empty_exact_resource_doi_query_not_global_absence",
+      "original_table_acquired": false,
+      "response_file": "responses/cohen_figshare.json",
+      "http_status": 200,
+      "response_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "request_id": "D-official-AIS",
+      "classification": "same_fgdc_metadata_as_existing_source_not_table",
+      "original_table_acquired": false,
+      "response_file": "responses/dundas_ais.xml",
+      "http_status": 200,
+      "response_sha256": "1992a7b2e651466d8be4ef3183aec1ccf96f6fb01e9c4de088de048863125928"
+    },
+    {
+      "request_id": "CZ-author-repos",
+      "classification": "public_author_repository_inventory_only",
+      "original_table_acquired": false,
+      "response_file": "responses/hood_repos.json",
+      "http_status": 200,
+      "response_sha256": "8ea8859bf50133cc2a2cf3ac186deeb660712251acb8856697efee1d8f37c6ab"
+    },
+    {
+      "request_id": "L-author-research-old",
+      "classification": "http_200_sign_in_not_public_research_content",
+      "original_table_acquired": false,
+      "response_file": "responses/levy_oldsite.html",
+      "http_status": 200,
+      "response_sha256": "f5e5bd047514ecd77f69de5c6e60987a2eef23c61f7cbc457550633d0f9b62b5"
+    },
+    {
+      "request_id": "CZ-author-data-paper",
+      "classification": "http_403_error_or_challenge_not_table",
+      "original_table_acquired": false,
+      "response_file": "responses/cohen_author_paper.html",
+      "http_status": 403,
+      "response_sha256": "176227daf87d2ba8b3348c7c6559b79c1fdb75d1a07f5359ec9960b0333d143d"
+    },
+    {
+      "request_id": "CZ-author-MBARS-tree",
+      "classification": "six_public_repository_entries_no_target_table",
+      "original_table_acquired": false,
+      "response_file": "responses/hood_MBARS_tree.json",
+      "http_status": 200,
+      "response_sha256": "6473949d7980b842680937feaa8a94c0edc1137a6ccb428bd4d464eeef9a3e1d"
+    }
+  ],
+  "inspection_limits": [
+    "Author homepage and lab/research pages are bounded inspections, not a complete history of all author publications.",
+    "Figshare exact resource DOI filters are not exhaustive repository searches.",
+    "No membership calculation without original rows and usable geometry."
+  ]
+}

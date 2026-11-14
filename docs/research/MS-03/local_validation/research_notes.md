@@ -42,6 +42,29 @@
 - 已讀驗收 PR #9：`c206553fc681328d214cbbcd508d3c5b1391e200`；整合 PR #10：`0260c511d9fce6be12d3460a69e474f333160cbf`。PR #10 使用較早 MS-03 版本，不等於本輪新增資料已驗收。
 - 資料表、程式、圖與取得紀錄：[local_validation](../../../../outputs/research/MS-03/local_validation/)。
 
+## 2026-11-15 補查：三份原始表的作者／官方入口
+
+- 本次起始 SHA：`778af696c654a191fe2a720f24d9f30ebd7d247b`；使用獨立本機副本，未改動原副本尚未提交的 CRISM 工作。
+- 交付歷史：首次交付時依「先不要推 PR」保留在本機。使用者後續授權推送並直接合併；發布核對時 PR #7 已合併，因此本補查另以後續 PR 提交。
+- 本次整合基準：最新 main `08d2740a23694a54bcc11cabf7120114d2e120fc`；分支 `codex/ms03-original-tables-followup`。保留已合併的 CRISM 資料、判定與查詢紀錄；實際發布／合併狀態以 GitHub 後續 PR 為準。
+- [逐表取得狀態](../../../../outputs/research/MS-03/local_validation/original_tables_followup/table_acquisition.csv)、[公開入口／內容核對](../../../../outputs/research/MS-03/local_validation/original_tables_followup/content_checks.json)、[重跑與後續取得步驟](../../../../outputs/research/MS-03/local_validation/original_tables_followup/README.md)。先前失敗紀錄仍保留；本次另存 29 次公開請求。
+
+|原始表|本次確認的證據|尚未取得／空間判定|
+|---|---|---|
+|Cohen-Zada 2024 `Data Set 1.tab`＋欄位說明|DataCite 父子紀錄確認資料檔 DOI [`J9K4HL`](https://doi.org/10.18738/T8/DUCOYB/J9K4HL)、欄位說明 DOI [`E4MMUE`](https://doi.org/10.18738/T8/DUCOYB/E4MMUE)；另有 `SI_Revised.pdf`。已讀 Hood 公開首頁及其 MBARS 程式庫完整六項檔案清單，未在這些頁面找到指定原表|Dataverse 公開資料、匯出及 OAI 入口均為 CloudFront 403。**只有 metadata，沒有原表資料列**；54 幅研究影像與本格的實際關係仍 unknown，不將 Hood 的其他表直接當作同一清單|
+|Levy 2009 Data Set S1|原文 Supporting Information 列有 `jgre2606-sup-0002-ds01.txt`，並有同表 XLS／PDF 版本；實讀原文 §§2–3、Appendix A 與附件清單。沿 Colgate 官方師資頁讀取作者公開實驗室及研究頁|TXT／替代 XLS 下載仍 HTTP403；已讀作者頁未提供指定附件。推測的舊站網址回 HTTP200，實為 **Google Drive 登入頁**，沒有讀到其內容。完整影像／分類表未取得；格內關係 unknown|
+|Dundas 2021 `TableS4.csv`|成功取得 [USGS 正式資料頁](https://www.usgs.gov/data/locations-and-properties-ice-exposing-scarps-and-new-impact-craters-mid-latitudes-mars)、[Data Catalog 正確冒號 ID 入口](https://data.usgs.gov/datacatalog/data/USGS%3A5f99f0b8d34e198cb786e8e7)及其列出的 [AIS XML](https://www1.usgs.gov/pir/api/identifiers/USGS:5f99f0b8d34e198cb786e8e7)。AIS 位元組與既有 FGDC 完全相同，可確認欄位定義，但不是觀測表|ScienceBase 單筆／搜尋／檔案入口及 publisher CSV 仍 HTTP403。`TableS4.csv` 未取得；不能計數格內暴露冰，也不能作完整清單排除。誤用底線 ID 的另一個 Data Catalog 嘗試回404，與正確冒號入口分開記錄|
+
+- 三份原表皆 **未取得**；沒有執行資料列篩選或新的足跡交集，命中數留空，**不是零命中**。也沒有新增可改變冰存在、實際冰深或冰含量判定的資料。
+- 已保存取得的 [DataCite metadata](../../../../outputs/research/MS-03/local_validation/original_tables_followup/metadata/)；父紀錄文字稱 xlsx/docx，但格式清單列兩份 TSV 與一份 PDF。這只確認典藏描述，不能冒稱已驗證實際檔案格式、資料列或精度。
+- 已抽出 [USGS Table S4 九項欄位定義](../../../../outputs/research/MS-03/local_validation/original_tables_followup/source_column_notes.csv)。其中 `Yes (CTX)` 缺 HiRISE 彩色確認；`CRISM ice? = x` 代表沒有適當資料，不能改成未探測到冰。
+- Figshare 以三篇原文 DOI 作 `resource_doi` 精確查詢，均回空清單；只說明該入口／條件的結果，不是跨平台或歷史完整排除。作者頁查找也只涵蓋實際讀到的頁面與程式庫；未寄信或存取私人檔案。
+- 資料到手後須先核對原始座標、缺值、ID 與欄位說明；點位置及影像足跡分開判定，不能只用中心在格外排除整張影像。沒有可靠足跡時保留 unknown，不能以地區名稱、大區研究範圍或索引零命中代替原表核對。
+- **目前可說：** 三份指定表的來源與缺件已具體化；本次公開入口補查尚未取得原始資料列，固定格內成員關係未能確認。
+- **目前不能說：** 三份表都不含 MS-03、本格從未研究、本格沒有多邊形／冰、AD1 已完成具體定量配對。AD1 維持一般方法參照，MS-03 形貌維持 unknown；不跨 Campbell／HOBO 配時。
+
+以下保留先前已完成分析及查核紀錄；本次補查不代表其 PR 驗收狀態改變。
+
 ## 判定與變化
 
 |問題|本輪取得／計算|判定與限制|

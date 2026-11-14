@@ -1,0 +1,7 @@
+__pycache__/
+sources/*.zip
+sources/*.pdf
+sources/*.html
+sources/cat_selected/
+sources/jcat_*.java
+sources/jcat_pom.xml

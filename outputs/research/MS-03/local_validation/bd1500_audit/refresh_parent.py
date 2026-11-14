@@ -1,0 +1,16 @@
+from pathlib import Path
+import csv,json
+O=Path(__file__).resolve().parent;P=O.parent
+
+def read(p):
+ with p.open(encoding='utf-8-sig',newline='') as f:
+  r=csv.DictReader(f);return list(r),r.fieldnames
+
+def write(p,a,f):
+ with p.open('w',encoding='utf-8-sig',newline='') as z:
+  w=csv.DictWriter(z,fieldnames=f);w.writeheader();w.writerows(a)
+a,f=read(P/'mars_ice_evidence.csv');a=[x for x in a if x['evidence_id']!='LV-ICE13'];x={k:'' for k in f};x.update({k:a[0][k] for k in ['candidate_id','roi','date_checked_taipei']});x.update(evidence_id='LV-ICE13',evidence_type='software_equation_and_arithmetic_audit_not_new_ice_observation',quantity='BD1500_2_product_minus_reference_cause',value='unknown; disclosed CAT formula agrees; float precision insufficient; producer source/build not obtained',units='dimensionless index differences; no probability',url_or_doi='https://pds-geosciences.wustl.edu/missions/mro/CAT_v7_4_codeonly.zip ; https://pds-geosciences.wustl.edu/missions/mro/crism_summary_parameter_reference.pdf',product_id='MRDR T1811 software1.03.94; CAT7.4 reference functions; JCAT commitba093b070c6d535c15209c8fc2d7a6b2893eb017',source_locator='CAT crism_summary_bd1500_2,band_depth,single,lookupwv,icer1_2; original product LABEL/HDR; July2026 reference pp1–2,5',period='MRDR product2023/source2006–2014; CAT release2018 comments2012/2013; reference2026',depth_support='none; software audit only',resolution_or_scale='same180.4662m native product;13169 strict-source map centres',effective_extent='fixed MS-03 ROI, no changed geometry or scientific values',ice_presence_assessment='unknown; arithmetic tests do not validate ice detection',actual_ice_depth_m='unknown',ice_content_fraction='unknown',dependencies_json=json.dumps(['LV-ICE12 same MRDR data','CAT disclosed equation, not actual production runtime','JCAT is not MRDR production implementation']),assumptions='Python equation port is explicitly not original IDL execution; six independent point checks limited to sampled locations',alternative_explanations='exact production branches, preprocessing, normalization, per-parameter handling or build differences remain possible but unproven',limits='floatperturbation~1.35e-7 cannot explain maxdiff~0.01935; ICER identity discrepancy~0.001822 does not establish cause or vendor error; no fitted correction',evidence_path='bd1500_audit/README.md;bd1500_audit/results.json;bd1500_audit/version_comparison.csv;bd1500_audit/hypothesis_checks.csv');a.append(x);write(P/'mars_ice_evidence.csv',a,f)
+a,f=read(P/'search_log.csv');a=[x for x in a if not x['log_id'].startswith('LV-BD-')]
+for i,r in enumerate(json.loads((O/'retrievals.json').read_text())):
+ a.append(dict(log_id=f'LV-BD-{i+1:03}',date_taipei='2026-11-15',platform='public official-source HTTP;UTC '+r['utc'],query_or_url=r['url'],status=r['status'],actual_read_scope='bd1500_audit/'+r['file']+'; Range '+str(r.get('request_headers',{}).get('Range','none')),result=r.get('error','bytes/hash retained; relevant functions/selected document sections only'),spatial_basis='same fixed ROI data; software-source inquiry, not new site search or new ice detection'))
+write(P/'search_log.csv',a,f);print('Appended LV-ICE13 and bounded acquisition history; prior records preserved')

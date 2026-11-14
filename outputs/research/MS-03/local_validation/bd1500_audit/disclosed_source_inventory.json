@@ -1,0 +1,134 @@
+{
+  "members": [
+    {
+      "member": "CAT_ENVI/save_add/CAT_programs/Additions/mro_crism_lookupwv.pro",
+      "bytes": 1184,
+      "sha256": "30c3d8fdaf34a3175856d9f7e7c5ab7fedf82c42fb5bc26abedfd48529d059d9",
+      "crc32": 336072449,
+      "zip_member_time": [
+        2007,
+        10,
+        5,
+        13,
+        23,
+        56
+      ],
+      "source_url": "https://pds-geosciences.wustl.edu/missions/mro/CAT_v7_4_codeonly.zip",
+      "match_line_numbers": [
+        1,
+        6
+      ]
+    },
+    {
+      "member": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/compute_summary_params_cev.pro",
+      "bytes": 24767,
+      "sha256": "f9062e829f2ff43b7ad484c8f334cb359f2f7f0ec06ada0ab8c7560f3baf6b29",
+      "crc32": 2095757837,
+      "zip_member_time": [
+        2015,
+        3,
+        5,
+        16,
+        20,
+        36
+      ],
+      "source_url": "https://pds-geosciences.wustl.edu/missions/mro/CAT_v7_4_codeonly.zip",
+      "match_line_numbers": [
+        31,
+        232,
+        233,
+        234,
+        294,
+        369
+      ]
+    },
+    {
+      "member": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_bd1500_2.pro",
+      "bytes": 1046,
+      "sha256": "be038c390f81eb5a978b8bac8831cb981f4d7bc4e9d88c4e86d63dcf589190f7",
+      "crc32": 1705735531,
+      "zip_member_time": [
+        2015,
+        3,
+        5,
+        16,
+        20,
+        36
+      ],
+      "source_url": "https://pds-geosciences.wustl.edu/missions/mro/CAT_v7_4_codeonly.zip",
+      "match_line_numbers": [
+        7,
+        9,
+        17
+      ]
+    },
+    {
+      "member": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_summary_icer1_2.pro",
+      "bytes": 474,
+      "sha256": "8e59e29163786b82ca0d0a4d52c952ab0739a7b0262112ae7ed7f92895be606d",
+      "crc32": 416783185,
+      "zip_member_time": [
+        2015,
+        3,
+        5,
+        16,
+        20,
+        36
+      ],
+      "source_url": "https://pds-geosciences.wustl.edu/missions/mro/CAT_v7_4_codeonly.zip",
+      "match_line_numbers": [
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "member": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_sumutil_band_depth.pro",
+      "bytes": 2605,
+      "sha256": "11fc1b96ec69bb82b88d055042df2561c8b750892fe1bb31ad7cd62d51864ed4",
+      "crc32": 2338185461,
+      "zip_member_time": [
+        2015,
+        3,
+        5,
+        16,
+        20,
+        36
+      ],
+      "source_url": "https://pds-geosciences.wustl.edu/missions/mro/CAT_v7_4_codeonly.zip",
+      "match_line_numbers": [
+        3,
+        28,
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    {
+      "member": "CAT_ENVI/save_add/CAT_programs/Additions/SummaryParams2014/crism_sumutil_single.pro",
+      "bytes": 4236,
+      "sha256": "0d2aef68f9745155686d17dd2618c1f020f66eb0e334f98575b01f6a4491164e",
+      "crc32": 348786253,
+      "zip_member_time": [
+        2015,
+        3,
+        5,
+        16,
+        20,
+        36
+      ],
+      "source_url": "https://pds-geosciences.wustl.edu/missions/mro/CAT_v7_4_codeonly.zip",
+      "match_line_numbers": [
+        19,
+        33,
+        36,
+        64
+      ]
+    }
+  ],
+  "readable_members_scanned": 320,
+  "production_flow_text_matches": [],
+  "production_flow_filename_matches": [],
+  "scope": "This fetched CAT archive only, not all author material. No claim that production source is globally unavailable."
+}

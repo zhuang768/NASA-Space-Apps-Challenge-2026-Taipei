@@ -2,6 +2,55 @@
 
 Team zasa. Review date: **2026-11-14, Asia/Taipei**. Phase 1 repository baseline: `3e3ffff`; Phase 2 main baseline: `263269a`. Scope: literature and proposal checks for I-01, I-02, D-03 and D-04, followed by the supplied Earth candidate EARTH-UV-001. No new site selection, Earth pairing, environmental validation or ranking.
 
+## 2026-11-14：Head替代探索區原始簡報追查
+
+本輪基準main `e040aef36a8940a937b5a17421d2bd824c164224`；同步保留隊友1新增的資料可用性／MR-v1回覆，沒有改其檔案。只追Head Figure2尚未對應的替代EZ，不重算P1–P7的幾何或重搜已完成地球用途。
+
+**本輪取得原始45頁簡報，但仍沒有取得Figure2所有替代標記的原始邊界與提案對照。I-01／I-02針對這批未對應替代區仍為 `insufficient_data`，不能判不重疊。**
+
+### P8：原始簡報已從歷史存檔完整取回
+
+原NASA網址 `1033-head_humans_to_mars_presentation_10-28-15final.pdf` 現在404。沿[Internet Archive公開可用性查詢](https://archive.org/wayback/available?url=http%3A%2F%2Fwww.nasa.gov%2Fsites%2Fdefault%2Ffiles%2Fatoms%2Ffiles%2F1033-head_humans_to_mars_presentation_10-28-15final.pdf)找到2017-02-18 12:36:16的歷史快照，實際取得[原NASA簡報存檔](https://web.archive.org/web/20170218123616/https://www.nasa.gov/sites/default/files/atoms/files/1033-head_humans_to_mars_presentation_10-28-15final.pdf)（[原始PDF位元下載](https://web.archive.org/web/20170218123616id_/https://www.nasa.gov/sites/default/files/atoms/files/1033-head_humans_to_mars_presentation_10-28-15final.pdf)）。2017為存檔時間，不是新提案日期。
+
+檔案 **71,774,262 bytes、45頁**，SHA-256 `822ae3158bea01b5df95a0f2ea200ce65e045ba863ec490bfca72a3e0ab1d219`。第一次下載在70,938,892 bytes逾時，續傳後核對完整大小、PDF末端EOF與45頁可解析，沒有把未完成下載當全文。已抽取文字、視覺檢視全45頁縮圖，並放大檢視第7及41–45頁；頁碼均指PDF頁序。PDF附件清單為空，未發現附帶GIS檔案。
+
+這是原始提案者簡報的公開歷史副本，與原摘要標題、作者及1033主區座標相符；不是現在NASA端檔案的逐位元核驗或新版官方圖層，也不是從後來二手文章重建的邊界。
+
+### 本檔能支持與不能支持的對照
+
+| 原始內容／頁序 | 實際支持的範圍 | 與替代區查核的關係 |
+|---|---|---|
+| 第1、13頁 | 同名1033主探索區與39.11°N、23.199°E錨點 | 身份可對上原摘要與P6主提案；不是新增替代區 |
+| 第13–19頁 | 主區地形／地史圖與同一主區圈界 | 未提供其他替代EZ的逐點邊界；不重算已完成主區排除 |
+| 第20–30頁 | 主區六個Science-Resource ROI逐項說明／圖示 | 可確認主區用途及ROI編號脈絡；不能將六ROI當六個獨立替代EZ |
+| 第41–42頁 | 主區六ROI的科學／資源評估rubric | 不是替代區名單或座標表；其中評分也不是本專案量測與合格門檻 |
+| 第6–7、44頁 | 冰相關地貌／中緯度區域背景圖 | 區域冰背景不是某個已提出的完整EZ，不能從色帶推出替代提案範圍 |
+| 第43頁 | 原提案所列軌道／探測資料需求 | 證明探查需求的提案脈絡；不是已完成冰資源調查或替代區邊界 |
+
+**本次未在這份45頁簡報找到**能把摘要Figure2各標記逐一接到具名提案／範圍的表格。文字抽取對圖像不完整，因此另做視覺檢視；仍不將未見表格擴張為作者從未建立其他資料。原摘要Figure2仍是額外替代EZ的證據，但不是足以直接做重疊判定的原始GIS邊界。
+
+### 候選分項結論
+
+| 檢查範圍 | I-01 | I-02 |
+|---|---|---|
+| 1033主區及已取得的P6 ROI／EZ邊界 | 保留上一輪已確認不重疊；本輪未重算 | 同左 |
+| Head Figure2其餘未對應替代EZ／資源ROI | **範圍與提案對照不足，無法判定** | **範圍與提案對照不足，無法判定** |
+| 全部歷史同地同用途提案 | `insufficient_data` | `insufficient_data` |
+
+不以圖上中心點、近似緯度、主區100km半徑或P6目錄整體不重疊，代替未對應替代區的真實範圍。沒有新的幾何交集結果，也沒有新確認的同範圍同用途重複。既有觀測／科學研究與提案三層仍分開。
+
+### 其他來源路徑與界線
+
+搜尋找到二手書目指向另一份NASA檔 `exploration_zones_briefing_naochis_terra_deuteronilus_mensae_and_phlegra_dorsa_tagged.pdf`；原連結與嘗試的遷移位置無可讀檔，Archive可用性查詢沒有回傳快照。**沒有讀到該文件，不據其標題認定是Head替代區清單。** 1033簡報的嘗試遷移路徑亦404；最後成功的是上列公開歷史快照。
+
+新查詢，2026-11-14（Asia/Taipei）：`"1033-head_humans_to_mars_presentation_10-28-15final.pdf"`；`"Head" "Deuteronilus" "alternative" "2015" exploration zones`；`"Head" "humans to mars" "2015" presentation Deuteronilus`；`"1033" "Head" "exploration" site:ntrs.nasa.gov`；`"Deuteronilus" "Head" "presentation" "2015" site:nasa.gov`；`"exploration_zones_briefing_naochis"`；`"Head" "Deuteronilus" "2015" "Figure 2" candidate EZ`。只用二手結果找原始連結，沒有把二手引用當提案邊界。NTRS後續科學文章的1033引用不自動等於新提案。
+
+**下一筆真正能改變判斷的證據：** 作者列出Figure2各替代標記的ID／原坐標／完整圈界或ROI，以及與具名提案的對照；或可追溯的原始GIS／表格。在取得前，只能回報本次讀到的資料界線，不編造逐點對應。未向作者發送訊息，未提交大型原始PDF。
+
+本輪僅增加P8取得與讀取紀錄；舊「簡報未取得」為歷史狀態，現由本節更新。CSV兩冰候選新增P8的未解範圍判定，保留舊排除紀錄及其餘候選。來源大小／hash、頁數及JSON格式已核對；資料取得成功不等於替代區重疊問題已結案。
+
+---
+
 ## 2026-11-14：I-01／I-02新增原始提案幾何查核
 
 本輪接續main `76ba95f`，只補未完的Mars提案範圍。讀回選點brief、Mars handoff與既有novelty記錄；指定名稱 `ice_candidate_followup_2026-11-14.md` 仍未見於checkout，先前Excel轉存與讀取界線沿用歷史紀錄，不冒稱取得原稿。不另選地球場址、不撤銷已交付三個Earth查核，D-03／D-04維持參考。

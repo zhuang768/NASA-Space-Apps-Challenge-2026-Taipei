@@ -3,7 +3,7 @@
 import numpy as np
 import xarray as xr
 
-from analog import dust, mars, swim
+from analog import dust, mars, swim, temperature
 from analog.matching import FEATURES
 from analog.screening import TARGETS, local_coordinates, patch_features, sample_patch
 
@@ -216,7 +216,13 @@ def build_profiles(targets=None, raw_dir=mars.RAW_DIR, window_km=100.0, spacing_
                 inventory[year] = {"status": "invalid", "error_type": type(exc).__name__}
                 errors[year] = str(exc)
         profiles[name] = p
+    try:
+        temperature_context, _ = temperature.build_context(raw_dir)
+    except (ValueError, OSError, KeyError) as exc:
+        temperature_context = {"status": "invalid", "error": str(exc)}
+        errors["temperature_context"] = str(exc)
     return {
+        "rover_temperature_context": temperature_context,
         "profiles": profiles,
         "inventory": inventory,
         "errors": errors,

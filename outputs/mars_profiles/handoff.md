@@ -9,6 +9,11 @@ profiles.json 保留單位、缺值、來源及方法；這些描述值不是綜
 | gale | -4.59, 137.44 | available | 0.9775 | 0.0813 | 0.2971 / 0.1700 |
 | arcadia | 40.0, -170.0 | available | 0.9439 | 0.1145 | 0.2194 / 0.1604 |
 
+## MEDA 日夜亮溫
+
+狀態：quality_incomplete。詳見 profiles.json 的 rover_temperature_context 與 ../mars_temperature/summary.json。
+Jezero 探測車局部亮溫不代表 100 km 區域或全球動力地表溫度；探索摘要不進相似度評分。
+
 ## 接軌規則
 
 - Match terrain at the declared physical scale.

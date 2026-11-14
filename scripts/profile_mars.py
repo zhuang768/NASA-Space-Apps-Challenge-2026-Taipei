@@ -94,7 +94,9 @@ def main():
     p.add_argument("--raw-dir", type=Path, default=mars.RAW_DIR)
     p.add_argument("--output", type=Path, default=Path("outputs/mars_profiles"))
     p.add_argument(
-        "--strict", action="store_true", help="Exit nonzero if any source missing/invalid"
+        "--strict",
+        action="store_true",
+        help="Require core grids; rover temperature quality is reported separately",
     )
     args = p.parse_args()
     targets = json.loads(args.targets.read_text()) if args.targets else None
@@ -128,6 +130,14 @@ def main():
         lines.append(
             f"| {name} | {v['lat']}, {v['lon']} | {v['terrain']['status']} | {number(ti.get('valid_fraction'))} | {number(ice.get('mean'))} | {number(yrs['dust_my34'].get('mean_cdodtot'))} / {number(yrs['dust_my35'].get('mean_cdodtot'))} |"
         )
+    context = result["rover_temperature_context"]
+    lines += [
+        "",
+        "## MEDA 日夜亮溫",
+        "",
+        f"狀態：{context['status']}。詳見 profiles.json 的 rover_temperature_context 與 ../mars_temperature/summary.json。",
+        "Jezero 探測車局部亮溫不代表 100 km 區域或全球動力地表溫度；探索摘要不進相似度評分。",
+    ]
     lines += ["", "## 接軌規則", ""] + [f"- {s}" for s in result["earth_team_handoff"]]
     lines += ["", "## 仍缺的火星資料／定義", ""] + [
         f"- {s}" for s in result["missing_requirements"]

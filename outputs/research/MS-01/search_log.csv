@@ -1,0 +1,27 @@
+search_id,date,candidate_id,platform,query,result,read_scope,limitation
+SR-001,2026-11-14,MS-01,GitHub REST API,GET branches/main,base=3cc8488577535e2fa4d146021fde51f8ff6cc667,branch commit/tree SHA,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-002,2026-11-14,MS-01,GitHub REST API,GET contents/docs/TEAM_START.md?ref=main,404；本機有，但未發布,,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-003,2026-11-14,MS-01,GitHub REST API,GET contents/outputs/handoff?ref=main,404；再核對recursive tree確認缺件,,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-004,2026-11-14,MS-01-E01,web search engine2,University Valley Antarctica dry permafrost ice table thermal properties McKay Marinova 2013 2016,U1/U2/U3/U4候選線索,後以原始全文核對,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-005,2026-11-14,MS-01-E02,web search engine2,Beacon Valley Antarctica debris covered buried ice thermal vapor diffusion Mars analog sublimation Kowalewski 2006,B2/B3/B4候選線索,後以原始全文核對,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-006,2026-11-14,MS-01-E01,web search engine1,"""Climate and energy balance of the ground in University Valley"" data Zenodo",U1/U5,全文Methods、站座標；Zenodo MD5,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-007,2026-11-14,MS-01-E02,web search engine1,"""Atmosphere/ice energy exchange"" Beacon Valley Putkonen 2003",B3,3頁原始PDF；root open逾時、協作研究者成功,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-008,2026-11-14,MS-01,web search engine1,SWIM 2.0 ice consistency not ice abundance thermal inertia 2021,M3與SWIM原理頁,產品Composite及共享資料/歧義,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-009,2026-11-14,MS-01-E01,web search engine1,"""University Valley"" ""56.75"" ""72.75"" thermal ice",未確認此MS-01明確配對文獻,不是從未研究證明,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-010,2026-11-14,MS-01-E02,web search engine1,"""Beacon Valley"" ""Quantifying low rates"" 2006 PDF",B4摘要/作者稿,詳prior_work與sources,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-011,2026-11-14,MS-01-E02,web search engine1,"""An enhanced model"" ""2014JF003415"" Beacon Valley",B2全文,詳prior_work與sources,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-012,2026-11-14,MS-01-E02,web search engine1,"""Atmosphere/ice energy exchange"" Beacon Valley 2003",B3全文,詳prior_work與sources,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-013,2026-11-14,MS-01-E02,web search engine1,"""Beacon Valley"" thermal ice data repository Liu Sletten 1999 2011",B1/B2資料聲明,詳prior_work與sources,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-014,2026-11-14,MS-01-E02,web search engine1,"""Beacon Valley"" ""160.580"" polygons 2008 Levy",Levy2008搜尋片段；未全文採用,詳prior_work與sources,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-015,2026-11-14,MS-01-E02,web search engine1,"""Beacon Valley"" ""56.75"" ""72.75""",未保留明確配對來源,詳prior_work與sources,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-016,2026-11-14,MS-01-E02,web search engine1,"""Beacon Valley"" ""thermal inertia"" Mars ice regolith",無新增主來源,詳prior_work與sources,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-017,2026-11-14,MS-01-E02,web search engine1,"""2017JF004535"" data Beacon Valley repository",B1全文；GCMD入口502,詳prior_work與sources,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-018,2026-11-14,MS-01,web search engine1,site.science.nasa.gov mars facts atmosphere carbon dioxide thin,NASA官方氣體/低壓定性背景,使用G1；不以全球值代填本站,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-019,2026-11-14,MS-01-E01,web search engine1,"University Valley Antarctica ""Climate and energy balance"" 2021",U1出版年校正為2022,Methods/站點座標/相關模型,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-020,2026-11-14,MS-01-E01,web search engine1,"""University Valley"" ""2016JF004054""",U2全文,Methods/站點座標/相關模型,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-021,2026-11-14,MS-01-E01,web search engine1,"""University Valley"" ""163.758"" ""160""",U1/U2/U3座標衝突,Methods/站點座標/相關模型,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-022,2026-11-14,MS-01-E01,直接開原始來源,https://doi.org/10.1017/S0954102022000025,讀取成功,Methods/Results/Appendix，PDF p153 TableII/III,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-023,2026-11-14,MS-01-E01,直接開原始來源,https://doi.org/10.1002/2016JF004054,讀取成功,§1/2/4.1,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-024,2026-11-14,MS-01-E01,直接開原始來源,https://doi.org/10.1017/S0954102017000402,讀取成功,Meteorological/model/TableI/Discussion,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-025,2026-11-14,MS-01-E01,直接開原始來源,https://doi.org/10.1017/S0954102025100448,讀取成功,pp129–130 TableII；pp132–133 Mars,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明
+SR-026,2026-11-14,MS-01-E01,直接開原始來源,https://doi.org/10.5281/zenodo.10553882,讀取成功,Files/MD5,有限網頁/文獻檢索，非全球完整文獻庫或新穎性證明

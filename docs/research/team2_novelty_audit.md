@@ -2,13 +2,93 @@
 
 Team zasa. Review date: **2026-11-14, Asia/Taipei**. Phase 1 repository baseline: `3e3ffff`; Phase 2 main baseline: `263269a`. Scope: literature and proposal checks for I-01, I-02, D-03 and D-04, followed by the supplied Earth candidate EARTH-UV-001. No new site selection, Earth pairing, environmental validation or ranking.
 
-## Decision for Team 1
+Latest ice-footprint results are in the dated follow-up immediately below. Earlier sections remain as the audit history.
+
+## Ice-purpose footprint follow-up, 2026-11-14
+
+This follow-up uses main `74c7ed6` and retains the earlier audit below. Only unfinished I-01/I-02 proposal-extent checks were extended. Purpose: **subsurface ice characterization and preliminary resource assessment research**. The fixed planetocentric, east-positive nominal cells remain **I-01: 54.00–54.50°N, 1.00–1.50°E** and **I-02: 53.50–54.00°N, 42.00–42.50°E**. These are project screening cells, not proposed drill footprints.
+
+**Both candidates remain `insufficient_data` for the overall exact-site, same-purpose proposal question.** Several inspected targeting footprints are now confirmed separate from both cells. No same-footprint, same-purpose hit was confirmed in this follow-up. The unresolved alternative-EZ inventory prevents novelty clearance.
+
+### Results by inspected footprint
+
+| Inspected object and purpose | I-01 | I-02 | Evidence and boundary of conclusion |
+|---|---|---|---|
+| I-MIM 2022 initial reconnaissance zone: ice survey and resource assessment | Confirmed inspected footprint does not overlap | Confirmed inspected footprint does not overlap | P1, printed p.152 / PDF page 160: the entire initial RZ is restricted to ±40° latitude and maximum 0 km elevation. Both cells are entirely north of that band. This excludes the specified priority RZ only; it does not exclude future high-latitude observations or every mission objective. |
+| Released SWIM4MIM notional reconnaissance-zone geometry: future orbital buried-ice targeting | Confirmed inspected footprint does not overlap | Confirmed inspected footprint does not overlap | P2: downloaded provider SHP/SHX/PRJ and README; actual polygon intersections are empty. Released geometry reaches only 51.217655°N. Do not equate this download automatically with the engineering-clipped I-MIM map. |
+| ASU catalog “Deuteronilus Mensae”: represented 100 km EZ circle | Confirmed inspected footprint does not overlap | Confirmed inspected footprint does not overlap | P3 stores radius 100 km at approximately 23.20, 39.10. N2 already establishes ice/resource purpose for the primary EZ. The complete catalog circle is well south of both cells. This reuses the primary proposal's earlier purpose check. |
+| ASU catalog “Deuteronilus Mensae 2”: represented 100 km EZ circle | Confirmed inspected footprint does not overlap | Confirmed inspected footprint does not overlap | P3 stores radius 100 km at 22, 41; even the northern edge is below 42.70° in the stated spherical calculation. The catalog provides no source citation establishing which Figure 2 marker or resource ROI this entry represents. Its individual purpose linkage remains insufficient. |
+| Other alternative Deuteronilus EZs / associated resource ROIs in N2 Figure 2 | Extent or purpose insufficient; unresolved | Extent or purpose insufficient; unresolved | Original figure inspected in P4. It locates alternatives with similar objectives, but does not provide a coordinate table or full resource-ROI polygons. The two ASU entries do not establish completeness or a one-to-one crosswalk. |
+| NASA MarsGIS full EZ / science-and-resource ROI inventory | Extent or purpose insufficient; unresolved | Extent or purpose insufficient; unresolved | P5 identifies a GIS product, but no public downloadable full layer was obtained. A software catalog description cannot substitute for the actual footprint data. |
+
+The existing Protonilus and primary Deuteronilus checks remain in the historical record; no new regional geology or candidate matching was performed. “Confirmed separate” applies to each named representation above, never to every prior proposal in that region.
+
+### Geometry, provenance and reproducibility
+
+P2 is a released targeting polygon, distinct from the broad SWIM consistency-map coverage. The ancillary README describes notional lowest-latitude buried-ice targeting and refers to Morgan et al. (2025), section 7, DOI [10.3847/PSJ/ad9b24](https://doi.org/10.3847/PSJ/ad9b24). Publisher full access was restricted; the downloaded README and geometry support the intersection result independently. The provider does not identify in the ancillary attributes whether this is the filtered or unfiltered figure variant; that identity remains unverified.
+
+- Accessed 2026-11-14. Provider lists reconnaissance product update **2025-08-05 09:13:41**. This is a provider timestamp, not an independently verified collection version.
+- File `SWIM4MIM_RZ_GIS.shp`, SHA-256 `d652283966a46b93979010d4ffcd28171bd05d9e006f2857a36e4557f5209796`; inner ancillary ZIP SHA-256 `e2963b9a02966d1db83e0c8c4128708e195977079b96a935060ddf9f41445429`.
+- PRJ: `Mars2000_equicylindrical_clon0`, spherical Mars radius **3,396,190 m**, Plate Carrée, central longitude 0°, false easting/northing 0, metre units. No Earth CRS or Earth distance formula was used.
+- One valid MultiPolygon, five parts, 10,764 vertices. No DBF was supplied in the retrieved archive; no region names or feature attributes were inferred.
+- Inverse-projected bounds: approximately **−179.999989 to 179.999989° longitude, −57.217651 to 51.217655° latitude**. Whole-cell north/south exclusion independently agrees with polygon intersection. Longitude wrapping cannot affect this latitude-based exclusion.
+- Both `intersects` results are false and intersection areas are zero. Projected areas/distances are not reported as geodesic physical measurements. These calculations say nothing about ice abundance, accessibility or absence.
+
+Minimal reproduction after downloading and extracting P2 (Python packages `pyshp`, `shapely`):
+
+```python
+from math import pi
+import shapefile
+from shapely.geometry import shape, box
+
+stem = "SWIM4MIM_RZ_Ancillary/SWIM4MIM_RZ_GIS"
+r = shapefile.Reader(shp=stem + ".shp", shx=stem + ".shx")
+g = shape(r.shapes()[0].__geo_interface__)
+assert g.is_valid
+m = 3396190.0 * pi / 180.0  # metres per degree in the supplied PRJ
+for site, lat, lon in [("I-01", 54.25, 1.25), ("I-02", 53.75, 42.25)]:
+    cell = box((lon-.25)*m, (lat-.25)*m, (lon+.25)*m, (lat+.25)*m)
+    print(site, g.intersects(cell), g.intersection(cell).area)
+# I-01 False 0.0; I-02 False 0.0
+```
+
+P3's XML explicitly supplies a `Radius` field and `RadiusKm` geometry units, so these checks use complete represented circles rather than distances to unbounded centers. For a spherical circle, its northern bound is center latitude plus `100000 / 3396190 * 180/pi` degrees: **40.788°** and **42.688°**, respectively. The catalog latitude convention is not explicit; adding a conservative 0.5° convention allowance still leaves both circles south of 43.2°N and both candidate cells north of 53.5°N. Longitude orientation is therefore immaterial to this exclusion. Stored longitudes agree approximately with the primary N2 center, but a normalized all-ROI longitude overlay was not performed. The 0.5° allowance is an audit robustness check, not a provider accuracy specification. No editable JMARS layer was changed or saved back to its provider.
+
+P3 file `2015_proposed_exp_zones.jlf` SHA-256: `51b371b8fc0dff5d00be2d9a2470ee9c59d0eda19cf752294d1d75ee2f79704e`. The tutorial session is dated 2016-02-09; this is a catalog snapshot, not proof of the complete current proposal inventory.
+
+### Additional primary-source register
+
+| Ref | Source and inspected material | What it supports / access limit |
+|---|---|---|
+| P1 | [I-MIM MDT final report, 31 August 2022](https://science.nasa.gov/wp-content/uploads/2023/10/i-mim-mdt-final-report-31-aug-2022-final-hi-qual-copy-tagged.pdf), §6.1.1, printed p.152, Figure 6.1 | Explicit initial-RZ bounds. The figure's black circles are illustrative, randomly positioned prospective TAIs, not actual selected targets. Local PDF SHA-256 `17d0212d4a7727a392153766ea41c9112909c1b3d3243e507f9c52b78c986778`. |
+| P2 | [SWIM4MIM provider page](https://swim.psi.edu/SWIM4MIMProducts.php), [ancillary selection download](https://swim.psi.edu/SWIM4MIMProducts.php?RZ-Ancillary=True&DL-Sel=True), bundled README and SHP/SHX/PRJ | Actual released notional targeting extent. Download redirects to a temporary ZIP; retain hashes above to identify this snapshot. Broader mapping is a separate product. |
+| P3 | [ASU JMARS2035 description](https://jmars.asu.edu/jmars2035/), [saved session](https://jmars.mars.asu.edu/static/saved-sessions/2035_tutorial.jmars), [original proposed-EZ XML layer](https://jmars.mars.asu.edu/static/saved-layers/mars2035/2015_proposed_exp_zones.jlf) | Catalog circle radii and centers. Read as XML, without executing serialized session objects. The second entry lacks a proposal/ROI cross-reference. |
+| P4 | [NASA-hosted 2015 abstract collection](https://www.nasa.gov/wp-content/uploads/2015/06/mars-c-abstracts_in_order_of_presentation10242015_0.pdf), Head abstract 1033, PDF pp.55–56 / printed pp.49–50; same abstract as [N2](https://www.hou.usra.edu/meetings/explorationzone2015/pdf/1033.pdf) | Figure 2 visually inspected. Alternative locations and shared objectives are established; exact individual boundaries remain unavailable. No claim that the whole collection was reviewed. |
+| P5 | [NASA MarsGIS software catalog, LAR-19183-1](https://software.nasa.gov/software/LAR-19183-1) | Leads to the potentially fuller GIS inventory; actual full EZ/ROI geometry not obtained. No access request or message sent. |
+
+### Follow-up query log and remaining evidence
+
+All additional searches: 2026-11-14, Asia/Taipei. Exact representative queries are retained here; landing pages, downloaded source contents and figure inspection determine conclusions, rather than search snippets.
+
+| Group | Exact queries | Result and limit |
+|---|---|---|
+| Q10, reconnaissance footprints | `International Mars Ice Mapper reconnaissance zones 2022 report boundaries latitude`; `"SWIM4MIM" "RZ" shapefile`; `"ad9b24" "RZs" "boundaries"` | P1 and P2 obtained; published targeting boundaries can now be distinguished from mapping coverage. |
+| Q11, alternative exploration / resource zones | `Mars exploration zones GIS shapefile 2015 human landing sites Deuteronilus alternative`; `"Deuteronilus" "exploration zone" "Figure 2" alternatives`; `"Head" "Deuteronilus" site:nasa.gov "2015" "pdf"`; `"MarsGIS" "FeatureServer"`; `"MarsGIS" "arcgis.com"` | P3/P4 inspected; P5 remains a catalog lead. No verified public full MarsGIS endpoint found in this search. |
+| Q12, additional regional planning lead | `"Multi-criteria Overlay Analysis for Identifying Preferred Exploration Zones on Mars" pdf`; `"ade30e" "50°" "mask"` | Located [2025 paper DOI](https://doi.org/10.3847/PSJ/ade30e) and [Zenodo v1](https://zenodo.org/records/15854213). Publisher full access restricted; 140.8 MB analysis archive not downloaded. No footprint exclusion or candidate-purpose conclusion is based on this lead. |
+
+Remaining evidence: a full alternative-EZ/resource-ROI polygon inventory with coordinate metadata and original-proposal crosswalks; the specific purpose and provenance of the ASU second entry; and any later named ice-survey/resource targets that include either whole cell or a documented subarea. Regional names, marker dots and unverified search-result summaries cannot close those gaps. Previously documented observation/mapping and regional science remain established and are not promoted to site proposals.
+
+Permitted wording: “Neither nominal candidate cell intersects the inspected I-MIM initial RZ or the released SWIM4MIM notional RZ geometry. The inspected ASU Deuteronilus circles are also separate. This bounded search has not verified an overlapping same-purpose proposal; alternative-ROI coverage remains incomplete.” Do not claim “never studied,” “first ice-resource site,” “outside all exploration proposals,” “no ice,” or that SWIM mapping itself proves a new targeted proposal. D-03/D-04 remain unchanged references. No additional Earth candidates were audited; further Earth checks wait for Team 1's new list.
+
+Follow-up verification: downloaded P2 geometry read successfully; validity, both exact cell intersections and an independent latitude-bound check agreed. P3 radius units and the two stored records were inspected. CSV retains all five prior records and all original fields, adding dated structured checks only for I-01/I-02. Only the two Team 2 deliverables changed.
+
+## Decision for Team 1 (prior audit, retained)
 
 **All four Mars candidates have related prior research. No exact-footprint, same-purpose Mars site proposal was verified in this bounded search. None is cleared as new or understudied.** These statements describe different checks: regional research is established; exact proposal overlap remains unresolved.
 
 | ID | Classification | Exact-site / same-purpose result | Handoff |
 |---|---|---|---|
-| I-01 | Related research exists | No verified proposal hit; proposal inventory incomplete | Retain only as a conditional shallow-ice research candidate. Prior SWIM reconnaissance already covers this longitude/latitude sector. |
+| I-01 | Related research exists | No verified proposal hit; proposal inventory incomplete | Retain only as a conditional shallow-ice research candidate. Prior SWIM mapping covers this sector; that mapping coverage is distinct from a targeting reconnaissance-zone footprint (see the follow-up). |
 | I-02 | Related research exists | No verified proposal hit; proposal inventory incomplete | Same treatment. The inspected Deuteronilus and Protonilus exploration zones are geographically separate. |
 | D-03 | Related research exists | No verified dust-observation or equipment-test site proposal in this nominal cell | Existing eastern Hellas geological mapping encompasses the nominal coordinates. Keep as a context reference; withdraw any unstudied-terrain claim. |
 | D-04 | Related research exists | No verified exact-cell operations proposal; published dust-study footprints remain unresolved | Cerberus/Elysium dust sources, sinks and surface changes are established research topics. Keep as a context reference; withdraw any newly identified dusty-region claim. |

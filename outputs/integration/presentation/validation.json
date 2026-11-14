@@ -1,0 +1,73 @@
+{
+  "pptx_slide_count": 8,
+  "pdf_page_count": 8,
+  "embedded_notes_count": 8,
+  "native_tables": 4,
+  "package_integrity": "pass",
+  "layout_findings": 0,
+  "first_party_reimport_passed": true,
+  "chinese_text_extraction_on_all_pdf_pages": "passed",
+  "csv_parse": "passed",
+  "figure_id_unique": "passed",
+  "visual_review": "All 8 final PDF pages individually inspected; 8 Artifact Tool slide previews generated. No remaining clipping, overlap, unreadable main labels or missing source footer.",
+  "native_powerpoint_ui_tested": false,
+  "scientific_raw_reanalysis_performed": false,
+  "pptx_sha256": "6b093e0c3be0eb795ce7720c00e683cd5d87e6732c160da082e4aff1e1709ede",
+  "pdf_sha256": "e8bcf053a14fa2fd001ed2d46e8ec0f50a55eaea4171058a9caedea182a8501b",
+  "visual_review_record": {
+    "reviewed": "2026-11-15",
+    "pdf_sha256": "e8bcf053a14fa2fd001ed2d46e8ec0f50a55eaea4171058a9caedea182a8501b",
+    "pages": [
+      {
+        "page": 1,
+        "status": "visually_checked",
+        "findings": []
+      },
+      {
+        "page": 2,
+        "status": "visually_checked",
+        "findings": []
+      },
+      {
+        "page": 3,
+        "status": "visually_checked",
+        "findings": []
+      },
+      {
+        "page": 4,
+        "status": "visually_checked",
+        "findings": []
+      },
+      {
+        "page": 5,
+        "status": "visually_checked",
+        "findings": []
+      },
+      {
+        "page": 6,
+        "status": "visually_checked",
+        "findings": []
+      },
+      {
+        "page": 7,
+        "status": "visually_checked",
+        "findings": []
+      },
+      {
+        "page": 8,
+        "status": "visually_checked",
+        "findings": []
+      }
+    ],
+    "renderer": "Poppler, 1600 px page width",
+    "checks": [
+      "Chinese glyphs",
+      "main label readability",
+      "cropping",
+      "overlap",
+      "source footer",
+      "science scope labels"
+    ],
+    "native_PowerPoint_UI_opened": false
+  }
+}

@@ -1,0 +1,658 @@
+{
+  "generated_utc": "2026-11-14T07:14:56.441889+00:00",
+  "scope": "Source QA for original I-01 and I-02 only. No rescoring or reranking.",
+  "candidates": [
+    {
+      "id": "I-01",
+      "center_lat_lon": [
+        54.25,
+        1.25
+      ],
+      "stored_score_unchanged": 0.9437740152757202,
+      "stored_layers": {
+        "slope": 0.3025961974521107,
+        "relief": 76.0,
+        "thermal_inertia": 244.7096710205078,
+        "ice_shallow": 0.3543070239029174,
+        "dust_cdod": 0.10687771439552307
+      },
+      "nominal_cell_bounds": {
+        "south": 54.0,
+        "north": 54.5,
+        "west": 1.0,
+        "east": 1.5
+      },
+      "nominal_size_km_NS_EW_at_center": [
+        29.635690698863716,
+        17.31464238174555
+      ],
+      "mola_native_cell": {
+        "shape": [
+          8,
+          8
+        ],
+        "total_pixels": 64,
+        "valid_pixels": 64,
+        "mean": -4621.65625,
+        "min": -4662.0,
+        "max": -4586.0,
+        "std_population": 20.3471579326819
+      },
+      "mola_native_cell_slopes": {
+        "shape": [
+          8,
+          8
+        ],
+        "total_pixels": 64,
+        "valid_pixels": 64,
+        "mean": 0.30259619745207744,
+        "min": 0.05504317567315518,
+        "max": 0.6424634952817433,
+        "std_population": 0.12915510142211656
+      },
+      "tes_native_unmasked_cell": {
+        "shape": [
+          10,
+          10
+        ],
+        "total_pixels": 100,
+        "valid_pixels": 100,
+        "mean": 244.61,
+        "min": 185.0,
+        "max": 284.0,
+        "std_population": 18.024924410382418
+      },
+      "tes_native_non_infilled_cell": {
+        "shape": [
+          10,
+          10
+        ],
+        "total_pixels": 100,
+        "valid_pixels": 93,
+        "mean": 244.70967741935485,
+        "min": 185.0,
+        "max": 284.0,
+        "std_population": 18.622209335658944
+      },
+      "tes_mask_zero_pixels_excluded": 7,
+      "swim_0_1m": {
+        "nominal_cell_native_stats": {
+          "shape": [
+            10,
+            10
+          ],
+          "total_pixels": 100,
+          "valid_pixels": 100,
+          "mean": 0.35579622745513917,
+          "min": 0.30571669340133667,
+          "max": 0.4420803189277649,
+          "std_population": 0.02700541554524723
+        },
+        "coarsened_then_interpolated": 0.3543070239029174,
+        "contributing_blocks": [
+          {
+            "coarse_center": [
+              53.75697080946096,
+              0.7500880874595651
+            ],
+            "weight": 4.301626132787756e-06,
+            "coarse_mean_float32": 0.23224376142024994,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.23224378734827042,
+              "min": 0.21575605869293213,
+              "max": 0.33972424268722534,
+              "std_population": 0.03408295468350793
+            }
+          },
+          {
+            "coarse_center": [
+              53.75697080946096,
+              1.2501528914738826
+            ],
+            "weight": 0.014065101816771517,
+            "coarse_mean_float32": 0.2502797245979309,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.25027969628572466,
+              "min": 0.2361878901720047,
+              "max": 0.33972424268722534,
+              "std_population": 0.014846261409197052
+            }
+          },
+          {
+            "coarse_center": [
+              54.257035613475274,
+              0.7500880874595651
+            ],
+            "weight": 0.00030144169484342726,
+            "coarse_mean_float32": 0.3406612277030945,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.34066124469041825,
+              "min": 0.28545305132865906,
+              "max": 0.4420803189277649,
+              "std_population": 0.024123521264413413
+            }
+          },
+          {
+            "coarse_center": [
+              54.257035613475274,
+              1.2501528914738826
+            ],
+            "weight": 0.9856291548622522,
+            "coarse_mean_float32": 0.355796217918396,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.35579622745513917,
+              "min": 0.30571669340133667,
+              "max": 0.4420803189277649,
+              "std_population": 0.02700541554524723
+            }
+          }
+        ],
+        "note": "Grid samples are not independent observations. Positive values are not ice fractions."
+      },
+      "swim_1_5m_context_only": {
+        "nominal_cell_native_stats": {
+          "shape": [
+            10,
+            10
+          ],
+          "total_pixels": 100,
+          "valid_pixels": 100,
+          "mean": 0.53,
+          "min": 0.25,
+          "max": 1.0,
+          "std_population": 0.1469693845669907
+        },
+        "coarsened_then_interpolated": 0.5297929459184739,
+        "contributing_blocks": [
+          {
+            "coarse_center": [
+              53.75697080946096,
+              0.7500880874595651
+            ],
+            "weight": 4.301626132787756e-06,
+            "coarse_mean_float32": 0.5724999904632568,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.5725,
+              "min": 0.5,
+              "max": 1.0,
+              "std_population": 0.1631525359900973
+            }
+          },
+          {
+            "coarse_center": [
+              53.75697080946096,
+              1.2501528914738826
+            ],
+            "weight": 0.014065101816771517,
+            "coarse_mean_float32": 0.5149999856948853,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.515,
+              "min": 0.5,
+              "max": 1.0,
+              "std_population": 0.07762087348130013
+            }
+          },
+          {
+            "coarse_center": [
+              54.257035613475274,
+              0.7500880874595651
+            ],
+            "weight": 0.00030144169484342726,
+            "coarse_mean_float32": 0.5425000190734863,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.5425,
+              "min": 0.25,
+              "max": 1.0,
+              "std_population": 0.12774486291041218
+            }
+          },
+          {
+            "coarse_center": [
+              54.257035613475274,
+              1.2501528914738826
+            ],
+            "weight": 0.9856291548622522,
+            "coarse_mean_float32": 0.5299999713897705,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.53,
+              "min": 0.25,
+              "max": 1.0,
+              "std_population": 0.1469693845669907
+            }
+          }
+        ],
+        "note": "Grid samples are not independent observations. Positive values are not ice fractions."
+      },
+      "native_recomputed_minus_stored": {
+        "slope": -3.3362201889985954e-14,
+        "relief": 0.0,
+        "thermal_inertia": 0.0,
+        "ice_shallow": 0.0
+      },
+      "nominal_2015_EZ_screen": {
+        "assumption": "All centers at <=50N, circular radius 100 km, not actual polygons",
+        "minimum_cell_distance_to_50N_km": 237.08552559090973,
+        "clearance_beyond_nominal_100km_radius_km": 137.08552559090973,
+        "interpretation": "Outside this nominal envelope only; not novelty clearance"
+      },
+      "published_comparator_center_distances_km": {
+        "Protonilus_2015_EZ_42.187N_48.062E": 1939.5520395718163,
+        "AP1_Luzzi2025_39.8N_202.1E": 4994.184072815527,
+        "AP8_Luzzi2025_40.75N_201.3E": 4946.503557536308,
+        "AP9_Luzzi2025_40.02N_203.35E": 4969.228548804408,
+        "Dundas2021_Fig14a_crater_41.4N_48.8E": 1994.100268242354,
+        "Dundas2021_Fig14b_crater_41.9N_36.4E": 1550.5819026031638
+      }
+    },
+    {
+      "id": "I-02",
+      "center_lat_lon": [
+        53.75,
+        42.25
+      ],
+      "stored_score_unchanged": 0.9388455040774983,
+      "stored_layers": {
+        "slope": 0.3057384545431363,
+        "relief": 88.0,
+        "thermal_inertia": 160.6666717529297,
+        "ice_shallow": 0.3550860505459027,
+        "dust_cdod": 0.11224822700023651
+      },
+      "nominal_cell_bounds": {
+        "south": 53.5,
+        "north": 54.0,
+        "west": 42.0,
+        "east": 42.5
+      },
+      "nominal_size_km_NS_EW_at_center": [
+        29.635690698863716,
+        17.52386984615699
+      ],
+      "mola_native_cell": {
+        "shape": [
+          8,
+          8
+        ],
+        "total_pixels": 64,
+        "valid_pixels": 64,
+        "mean": -3642.34375,
+        "min": -3672.0,
+        "max": -3584.0,
+        "std_population": 19.108423167218692
+      },
+      "mola_native_cell_slopes": {
+        "shape": [
+          8,
+          8
+        ],
+        "total_pixels": 64,
+        "valid_pixels": 64,
+        "mean": 0.30573845454310855,
+        "min": 0.02662763255356848,
+        "max": 0.9073258322288597,
+        "std_population": 0.20663762066192667
+      },
+      "tes_native_unmasked_cell": {
+        "shape": [
+          10,
+          10
+        ],
+        "total_pixels": 100,
+        "valid_pixels": 100,
+        "mean": 160.89,
+        "min": 135.0,
+        "max": 190.0,
+        "std_population": 11.584381727135895
+      },
+      "tes_native_non_infilled_cell": {
+        "shape": [
+          10,
+          10
+        ],
+        "total_pixels": 100,
+        "valid_pixels": 96,
+        "mean": 160.66666666666666,
+        "min": 135.0,
+        "max": 190.0,
+        "std_population": 11.723077904524715
+      },
+      "tes_mask_zero_pixels_excluded": 4,
+      "swim_0_1m": {
+        "nominal_cell_native_stats": {
+          "shape": [
+            10,
+            10
+          ],
+          "total_pixels": 100,
+          "valid_pixels": 100,
+          "mean": 0.3519712156057358,
+          "min": 0.298789381980896,
+          "max": 0.4351530373096466,
+          "std_population": 0.024099483541608166
+        },
+        "coarsened_then_interpolated": 0.3550860505459027,
+        "contributing_blocks": [
+          {
+            "coarse_center": [
+              53.25690600544665,
+              41.755402016633504
+            ],
+            "weight": 0.00015239315506017622,
+            "coarse_mean_float32": 0.48808667063713074,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.4880866575241089,
+              "min": 0.4392545223236084,
+              "max": 0.5756181478500366,
+              "std_population": 0.016413222536534305
+            }
+          },
+          {
+            "coarse_center": [
+              53.25690600544665,
+              42.255466820647825
+            ],
+            "weight": 0.013787419055278955,
+            "coarse_mean_float32": 0.4975757598876953,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.49757573276758194,
+              "min": 0.40484845638275146,
+              "max": 0.5866666436195374,
+              "std_population": 0.030775109354026428
+            }
+          },
+          {
+            "coarse_center": [
+              53.75697080946096,
+              41.755402016633504
+            ],
+            "weight": 0.010779831236538624,
+            "coarse_mean_float32": 0.45276939868927,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.4527693682909012,
+              "min": 0.298789381980896,
+              "max": 0.5461409091949463,
+              "std_population": 0.045728853475748205
+            }
+          },
+          {
+            "coarse_center": [
+              53.75697080946096,
+              42.255466820647825
+            ],
+            "weight": 0.9752803565531223,
+            "coarse_mean_float32": 0.35197120904922485,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.3519712156057358,
+              "min": 0.298789381980896,
+              "max": 0.4351530373096466,
+              "std_population": 0.024099483541608166
+            }
+          }
+        ],
+        "note": "Grid samples are not independent observations. Positive values are not ice fractions."
+      },
+      "swim_1_5m_context_only": {
+        "nominal_cell_native_stats": {
+          "shape": [
+            10,
+            10
+          ],
+          "total_pixels": 100,
+          "valid_pixels": 100,
+          "mean": 0.5425,
+          "min": 0.25,
+          "max": 1.0,
+          "std_population": 0.13254716141811565
+        },
+        "coarsened_then_interpolated": 0.5421012548651338,
+        "contributing_blocks": [
+          {
+            "coarse_center": [
+              53.25690600544665,
+              41.755402016633504
+            ],
+            "weight": 0.00015239315506017622,
+            "coarse_mean_float32": 0.512499988079071,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.5125,
+              "min": 0.25,
+              "max": 1.0,
+              "std_population": 0.08926785535678562
+            }
+          },
+          {
+            "coarse_center": [
+              53.25690600544665,
+              42.255466820647825
+            ],
+            "weight": 0.013787419055278955,
+            "coarse_mean_float32": 0.5099999904632568,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.51,
+              "min": 0.0,
+              "max": 1.0,
+              "std_population": 0.16926310879810758
+            }
+          },
+          {
+            "coarse_center": [
+              53.75697080946096,
+              41.755402016633504
+            ],
+            "weight": 0.010779831236538624,
+            "coarse_mean_float32": 0.5475000143051147,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.5475,
+              "min": 0.25,
+              "max": 1.0,
+              "std_population": 0.14446020213193667
+            }
+          },
+          {
+            "coarse_center": [
+              53.75697080946096,
+              42.255466820647825
+            ],
+            "weight": 0.9752803565531223,
+            "coarse_mean_float32": 0.5425000190734863,
+            "native_block_stats": {
+              "shape": [
+                10,
+                10
+              ],
+              "total_pixels": 100,
+              "valid_pixels": 100,
+              "mean": 0.5425,
+              "min": 0.25,
+              "max": 1.0,
+              "std_population": 0.13254716141811565
+            }
+          }
+        ],
+        "note": "Grid samples are not independent observations. Positive values are not ice fractions."
+      },
+      "native_recomputed_minus_stored": {
+        "slope": -2.781108676686017e-14,
+        "relief": 0.0,
+        "thermal_inertia": 0.0,
+        "ice_shallow": 0.0
+      },
+      "nominal_2015_EZ_screen": {
+        "assumption": "All centers at <=50N, circular radius 100 km, not actual polygons",
+        "minimum_cell_distance_to_50N_km": 207.449834892046,
+        "clearance_beyond_nominal_100km_radius_km": 107.449834892046,
+        "interpretation": "Outside this nominal envelope only; not novelty clearance"
+      },
+      "published_comparator_center_distances_km": {
+        "Protonilus_2015_EZ_42.187N_48.062E": 722.5195902398417,
+        "AP1_Luzzi2025_39.8N_202.1E": 5029.307754628392,
+        "AP8_Luzzi2025_40.75N_201.3E": 4966.693007994651,
+        "AP9_Luzzi2025_40.02N_203.35E": 5027.80424657048,
+        "Dundas2021_Fig14a_crater_41.4N_48.8E": 776.632541464096,
+        "Dundas2021_Fig14b_crater_41.9N_36.4E": 739.3140970971058
+      }
+    }
+  ],
+  "raw_sources_verified_against_profiles_manifest": [
+    {
+      "file": "megt90n000eb.lbl",
+      "url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg016/megt90n000eb.lbl",
+      "sha256": "0f2bd919dddb86d83489a008d3007bd915507c892a0f22ce49ad5dd5d2fc7d8a"
+    },
+    {
+      "file": "megt90n000eb.img",
+      "url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg016/megt90n000eb.img",
+      "sha256": "d18d9b9ab8c5516d02e157dd2cde0f1d0d160c21940e953ba22391269a545e7b"
+    },
+    {
+      "file": "global_ti_night_2007.lbl",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_night_2007.lbl",
+      "sha256": "c1c897d9bd5399292166f99d84a29a73e42432cedfb9dd9a81a1441b3004b72b"
+    },
+    {
+      "file": "global_ti_night_2007.img",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_night_2007.img",
+      "sha256": "faee32838da40045ee7ebd21bed156cc649620312c01165b556d77a2128258f4"
+    },
+    {
+      "file": "global_ti_msk_night_2007.lbl",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_msk_night_2007.lbl",
+      "sha256": "164838970c1405b2dc6cf367a74c60c0de96d18f05f5e924db6c00f77038ee8a"
+    },
+    {
+      "file": "global_ti_msk_night_2007.img",
+      "url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_msk_night_2007.img",
+      "sha256": "fca7ec6fab8b3e81226e1d14dbb3a22509ad111bda4e03bf2b64f050bd550d0b"
+    },
+    {
+      "file": "SWIM2_c0_1.tif",
+      "url": "https://swim.psi.edu/output/SWIM2/Global/Composite/SWIM2_c0_1.tif",
+      "sha256": "0dd22f8a07172112c68fb304af9966bcdd788bbedf6ea40187a30f70130fea37"
+    },
+    {
+      "file": "SWIM2_c1_5.tif",
+      "url": "https://swim.psi.edu/output/SWIM2/Global/Composite/SWIM2_c1_5.tif",
+      "sha256": "2ade8ab6aa4aae1c51ec71f10139e9b9ffa0a31ef1948566d0929ab7e91713ed"
+    }
+  ],
+  "protected_inputs_sha256": {
+    "outputs/mars_discovery/mars_site_discovery.json": "3c45d6af3c786394b856e36a726eada5cf00118e7a0cec39b24a88e8f992b7e9",
+    "data/processed/mars_stack_0p5deg.nc": "a351dada81b4105825b8e3baa1d060a4f3ee25c09fef303409abdd36dbdcf7aa",
+    "scripts/discover_mars_sites.py": "eb7be014afac05cfb8a12d97b490e901d36624b1a9c2523230878818a1e2345f",
+    "analog/__init__.py": "f435eb5aaddf4cb3aa9c1cace36f1b999747427c9e073868fd63c9800e59ad2c",
+    "analog/climate.py": "c43a0fd3466405781bca0cad9277a747cdf57b3857313774e8bfcccdc7e9661a",
+    "analog/dust.py": "2178af7c960ed963b7e23c1e16dedc621b7eed8be5d988178a667b98bd7ede46",
+    "analog/earth.py": "622d4eedc4ae85684fc32dfdede57542804d3ea6a24b173eb0e108176fe35919",
+    "analog/evidence_status.py": "0b097afa69c9252664eafcbc754378956dc78e122d802fa53abf904d0ffed453",
+    "analog/mars.py": "93513dc36ff8f602f97d7983be812c35f132aabea476f10d2ae778f4605643a5",
+    "analog/mars_profiles.py": "3ff71113b46b9a7da81df4ca51b4e0f5680037fd292e87c061e75c596725296e",
+    "analog/matching.py": "f6bbfa0a86f3476bd3c48a05f80f47121e0d7028f29a93c16f7c72e7d9ac2896",
+    "analog/pds.py": "e6d9bfb6b8a346df0876be8409ab5b24cb89f656db41d89bfea095fd8b3591f4",
+    "analog/provenance.py": "a57a1b5c054c19dd538c72a079437a845067db152afde2d913c24228e44ee318",
+    "analog/regional_temperature.py": "490fcdc9012e83f3e3b48e25d8bd8f1b85c7e0bc40f4ca4de81ca03b48932edb",
+    "analog/score.py": "c0622dc799b1c8802571d1ee76e64396e70a3fd648e32d8de3cd43a8dfef3195",
+    "analog/screening.py": "daf5b7a3668c8476d99cd28854bb232c978e404b773666a9847846f280332672",
+    "analog/sites.py": "f5e158c1e9ab7a122e6e9f90decce763d142d4a30aaa599f5636823014cc7ca7",
+    "analog/stack.py": "c7de207c9e7b1d3ad35e60c49bac9b3fff01e91b232acc045dc2728936e5bebb",
+    "analog/swim.py": "00821308786922f586730d75a497c6abe68825e30f2eef632616f32665e4d115",
+    "analog/temperature.py": "7cf0c60e50b4a47ec5936ea07cde5575a6e3abfe1a5dbd01befbee8d92e43141",
+    "analog/terrain.py": "62e5e34b6606fea77df658cd6e1bd8da15a13a4146fca33e3fee97c409b04346",
+    "outputs/mars_discovery/figures/dusty_flat_ops_map.png": "a52121cb0f197a6b02f94b3d337925ccaeeb8d1faad07c286f639240cd7edb3f",
+    "outputs/mars_discovery/figures/firm_rocky_surface_map.png": "619adcdbd4426ca3b20400d742b644ec2ec71708dcfa1b3588ddd42601e2236c",
+    "outputs/mars_discovery/figures/isru_shallow_ice_map.png": "5a2776aea99d3930f5487028d691d903eb8369d654e6eb8cee7ab9f86895975e"
+  },
+  "protected_inputs_unchanged": true,
+  "dust_note": "Matched JSON to stack only; no native dust reprocessing in this follow-up.",
+  "deep_ice_note": "Not part of the original score; context only and shares shallow-product inputs.",
+  "novelty_status": "unchecked_exact_site; nominal 2015 envelope screen is a bounded subcheck"
+}

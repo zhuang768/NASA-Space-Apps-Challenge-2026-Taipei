@@ -1,0 +1,228 @@
+{
+  "version": "MR-20261114-v3-final",
+  "files": [
+    {
+      "path": "docs/research/final_research_summary_en.md",
+      "bytes": 6091,
+      "sha256": "b7a906db783e58cb977d5ace3a98661980fa0cc6733b489a57b9e3dc5e4f710d",
+      "git_blob_sha": "b7a04c760feebd98b976f898cae55eb4c505daeb"
+    },
+    {
+      "path": "docs/research/main_mars_research_cards.md",
+      "bytes": 16379,
+      "sha256": "51f8a4347160beaedc9c0a34b4349202a8cc65b12ad1aaaa14afcd840bde372e",
+      "git_blob_sha": "0a4f8a35aa04698c409730b76f53ebb5d56eddc2"
+    },
+    {
+      "path": "docs/research/main_project_synthesis.md",
+      "bytes": 10589,
+      "sha256": "815f7a278126f4441bc73e9905efe4878183dc158a99762eed7cb2e097901138",
+      "git_blob_sha": "256510b14877bf374469af8560fa5cedc78fa063"
+    },
+    {
+      "path": "docs/research/main_research_requirements.csv",
+      "bytes": 39071,
+      "sha256": "2f8e9bfcef97fc61718d2648a0027d0eb482996d150f64a2f827a1578609e353",
+      "git_blob_sha": "d7824b67d3daf5b4eb8416f281f41b4e21b894a7"
+    },
+    {
+      "path": "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
+      "bytes": 23035176,
+      "sha256": "157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175",
+      "git_blob_sha": "3cad1ffc711dbddeef6def24447e1bd1ff3fb5ba",
+      "remote_publication": "not_uploaded_connector_request_limit; accepted_local_artifact"
+    },
+    {
+      "path": "outputs/consolidated/previews/main_v3/EH Summary.png",
+      "bytes": 95635,
+      "sha256": "a87e5ea685155f379e8db8f0311cbd951c89a4d3fecc3ab8da2d50937de3edc5",
+      "git_blob_sha": "6015bbc6af251ee31a5e11710cc9e3a56f7798d4"
+    },
+    {
+      "path": "outputs/consolidated/previews/main_v3/Overview.png",
+      "bytes": 98714,
+      "sha256": "1da46d071243e8339ab98120ea5855a73721cc0f1baf2bf251138d61c68b9c81",
+      "git_blob_sha": "9799271ce5433141631151f511cf770bd70fdb11"
+    },
+    {
+      "path": "outputs/consolidated/research_main_20261114/final_validation.json",
+      "bytes": 915,
+      "sha256": "84ba4f67d36638e284fad0d473a19f2efda1388f5bd1cebf26e9649111467714",
+      "git_blob_sha": "230f81f0e1a26f532ffb55d0c3374455d7a5aac2"
+    },
+    {
+      "path": "outputs/consolidated/research_main_20261114/sources/final_ab1da697/docs/research/team2_novelty_audit.md",
+      "bytes": 127669,
+      "sha256": "0e4e6270130dce20aa7ea33d13bc400b5204373e0c6ce9afd6b210cc60924de8",
+      "git_blob_sha": "054f9f5816035de4b1230c39354d9265f581eebc"
+    },
+    {
+      "path": "outputs/consolidated/research_main_20261114/sources/final_ab1da697/outputs/research/team2_novelty_audit.csv",
+      "bytes": 39497,
+      "sha256": "7cd2f437083b67bd941a3e5929008a7aa83872ccaede53594cea056e0218b511",
+      "git_blob_sha": "58e3fa8c8669744be5b226103566da8d1f7457a2"
+    },
+    {
+      "path": "outputs/consolidated/research_main_20261114/sources/final_local_science/docs/research/ice_candidate_followup/README.md",
+      "bytes": 9783,
+      "sha256": "dd0556061d4fb2a89b1f0bef89112ff597142016326071ac2305a55fc3cd3689",
+      "git_blob_sha": "90bae10b40b66a54aa71aa18afb15fa17d7c67af"
+    },
+    {
+      "path": "outputs/consolidated/research_main_20261114/sources/final_local_science/outputs/research/ice_candidate_followup/native_audit.json",
+      "bytes": 22177,
+      "sha256": "5a914b5a5be79ce43b9d20fc5e1a396b7892646047eda56803d9275ff9cedb08",
+      "git_blob_sha": "c7c27d3a8c01840cbb05cafef544ff92a5c5021c"
+    },
+    {
+      "path": "outputs/consolidated/research_main_20261114/sources/v2_14be2d5b/docs/research/team2_novelty_audit.md",
+      "bytes": 106754,
+      "sha256": "336f0ccddce7ea58a593bd7ee7a5ef6041125061ad96676e3906a48ec89f7a47",
+      "git_blob_sha": "aa595880169307ebc8df0de4a61c401231145cd3"
+    },
+    {
+      "path": "outputs/consolidated/research_main_20261114/sources/v2_14be2d5b/outputs/research/team2_novelty_audit.csv",
+      "bytes": 28436,
+      "sha256": "b09390f3d58c82ceade22ceeaed67222f2f28032932d12e7828836a59099cc38",
+      "git_blob_sha": "ed9371daf19f92578f069f44433979b55c37e039"
+    },
+    {
+      "path": "outputs/consolidated/research_main_20261114/sources/v2_b35a01de/docs/research/team1_earth_analog_matching.md",
+      "bytes": 63184,
+      "sha256": "647e7bca00cb9617db91b2fda445caa79311853cf78154d45d93599deff25aa7",
+      "git_blob_sha": "83d2136c797a494f9063dc49b23a082410cd251e"
+    },
+    {
+      "path": "outputs/consolidated/research_main_20261114/sources/v2_b35a01de/outputs/research/team1_data_availability.csv",
+      "bytes": 21695,
+      "sha256": "24321bd5ea5e8660b39c50c93f6709d078db7a5a352bd26842a979d4e7a01a25",
+      "git_blob_sha": "36a610cfe9bcc609dc5667e67165962155a19679"
+    },
+    {
+      "path": "outputs/consolidated/research_main_20261114/sources/v2_b35a01de/outputs/research/team1_earth_analog_candidates.csv",
+      "bytes": 31113,
+      "sha256": "07d3ccf7e26e0940a3c7753bfa07b8039184fe1151f772b8941b2b3557e123bd",
+      "git_blob_sha": "894babc0373de43d841ac9dd0d0014ad855524c8"
+    },
+    {
+      "path": "outputs/consolidated/review/main_v3/before_inventory.json",
+      "bytes": 3941,
+      "sha256": "e28742fb8d43338b4aadd853e2e12b0148ee14fb2531422123104326cecdbaeb",
+      "git_blob_sha": "acac0cca56a7abb6d6f9f1b138f417231f021a88"
+    },
+    {
+      "path": "outputs/consolidated/review/main_v3/merge_manifest.json",
+      "bytes": 3326,
+      "sha256": "fef8504a91e582e28585063a7b6f6f5f936f1256813ec966310f1cb929c2b60d",
+      "git_blob_sha": "01c8f66c34ac963929d4c52f291f79059bfbac52"
+    },
+    {
+      "path": "outputs/consolidated/review/main_v3/reader_qa.json",
+      "bytes": 2025,
+      "sha256": "8816c3bfae93a3f1fff2f37da39911ec8654894dbaf7f82e38338f4f2d1d864e",
+      "git_blob_sha": "5cb304a5f5f697be3db0e2ccd8068a903b905261"
+    },
+    {
+      "path": "outputs/consolidated/review/main_v3/source_mapping.json",
+      "bytes": 4211,
+      "sha256": "1b8425b4563f47be9210bc17b88a127eb74d0644410d961e6481385be258905f",
+      "git_blob_sha": "4e525beb530e3320b4a99e6ac7097366fa65a686"
+    },
+    {
+      "path": "outputs/consolidated/review/main_v3/verification.json",
+      "bytes": 5504,
+      "sha256": "e20957283dbdc0ab510dd5f657c19c9794da1eb294e3de43ebf5af4168041b63",
+      "git_blob_sha": "c890bffbe30c37bcfdcfbadb48873101cd898b48"
+    },
+    {
+      "path": "outputs/research/elephant_head_final/README.md",
+      "bytes": 4502,
+      "sha256": "328aaa23fe3dda77cb86b2fb02b58d37733fc08be5518701779c83a29f988bad",
+      "git_blob_sha": "21e01c63576d197f5f1e2693d0bb1e7a23338264"
+    },
+    {
+      "path": "outputs/research/elephant_head_final/data_dictionary.csv",
+      "bytes": 5635,
+      "sha256": "905189e520b231ffff01bab0148092138bf02494d05d15b644002907596b5c83",
+      "git_blob_sha": "e884ea0481d69e2477134cb1040d1632368842ee"
+    },
+    {
+      "path": "outputs/research/elephant_head_final/elephant_head_2019_supplement.pdf",
+      "bytes": 1165179,
+      "sha256": "20fe70f574bc394f05f0c720809f80a9602ac73f6ede34d322ea816cf25590d9",
+      "git_blob_sha": "90601d38a5c20fc9a6dca776177cf0d412e32912"
+    },
+    {
+      "path": "outputs/research/elephant_head_final/elephant_head_records.csv",
+      "bytes": 3558255,
+      "sha256": "168c19132ff62c14c2179b6174d9b8e95e3cacf64505a681d82db66b24a74566",
+      "git_blob_sha": "6128fd7026071cc74cd438276ba886cdbe6a6cfd"
+    },
+    {
+      "path": "outputs/research/elephant_head_final/manifest.json",
+      "bytes": 1938,
+      "sha256": "95252b0684322680370590545e3d684272f954ecbc4ab8a3ec8174b5ba3ffb57",
+      "git_blob_sha": "e7beb00cd318dec5621778ef882b2f2d00cdfb5e"
+    },
+    {
+      "path": "outputs/research/elephant_head_final/qa.json",
+      "bytes": 7407,
+      "sha256": "b894abd8ce9b5ee8235c0a058309a41a599df37508f17be2f1cc5c1ab2f32e86",
+      "git_blob_sha": "d1b86a2af0008e73feda4d8c84be2f097a78ed1b"
+    },
+    {
+      "path": "outputs/research/elephant_head_final/summer_temperature_difference.png",
+      "bytes": 588630,
+      "sha256": "ff53bbef8f0453c91689d4d36bf551eb51582190043f09ceaaca07c31d3a1129",
+      "git_blob_sha": "3756f41a99e830f18d84b0623a8e44788f77af9d"
+    },
+    {
+      "path": "outputs/research/elephant_head_final/summer_temperatures.png",
+      "bytes": 577814,
+      "sha256": "0eb14dc5edca7e926b5c46dcac9c66b006e8fbf96eca2571379ad0344dfd91ef",
+      "git_blob_sha": "cccc2339dc3223fb91f0eb84558e5ce07dc0494a"
+    },
+    {
+      "path": "outputs/research/final_research_summary_en.pdf",
+      "bytes": 49055,
+      "sha256": "2a516030bf5238d1e9703908002fe7c3fbee608a108c9a3bc9c6e695a8e6648f",
+      "git_blob_sha": "d5ecda94c7f8fc54a3bc7f6a22f1d2f4c7f5cf13"
+    },
+    {
+      "path": "scripts/reporting/build_final_research_summary.py",
+      "bytes": 16970,
+      "sha256": "8002319fca027ded400cd09941dc0e2f041a35d716761cbc8dc3f8dfd148d028",
+      "git_blob_sha": "1338df64b1a1f6317b06734adcc1d6499e7ae6b9"
+    },
+    {
+      "path": "scripts/reporting/build_main_update.mjs",
+      "bytes": 6265,
+      "sha256": "2564b61ff2a029cd96338bea0a04a34d0d816fe33d6e8fd837bde7304eca9e30",
+      "git_blob_sha": "3f0131493dae2fc85f346d96e7f1dcebeb3473ff"
+    },
+    {
+      "path": "scripts/reporting/update_main_workbook.py",
+      "bytes": 36869,
+      "sha256": "78b5872e8a4722a929b42c4b9e48343d9cd5aeac3ab12342f4c593e38b982d6a",
+      "git_blob_sha": "295088b7f8eb8c3172261d94374289f5d8b33dc8"
+    },
+    {
+      "path": "scripts/research/export_elephant_head_final.py",
+      "bytes": 26571,
+      "sha256": "e996bcc5981864a95608fda7fef9ed3ada33596f7710c09334c86f3f78053010",
+      "git_blob_sha": "6c8369b44856f27e8100645eacc7a5774039ae3e"
+    },
+    {
+      "path": "scripts/research/finalize_delivery_record.py",
+      "bytes": 16057,
+      "sha256": "61633cfdcab7df82857fbc345bb43537c5eb92fcc380eb307d9374fdfad29e26",
+      "git_blob_sha": "8543d5679bfec288996707c8aef996b70f0790d4"
+    }
+  ],
+  "exclusions": [
+    "local archival backup; inherited sheets preserved in new workbook",
+    "temporary support and rendering files",
+    "mutable evidence/source/delivery metadata have no self-hash"
+  ],
+  "no_large_raw_grids": true
+}

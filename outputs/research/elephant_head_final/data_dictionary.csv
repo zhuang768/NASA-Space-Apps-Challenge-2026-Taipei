@@ -1,0 +1,36 @@
+column,printed_header,unit,medium,nominal_depth_cm,missing_encoding,definition
+version,,,,,empty field where source value is absent,Mainline export version; does not change the publisher's observation date.
+earth_candidate_id,,,,,empty field where source value is absent,Fixed EARTH-002 key; Elephant Head published station.
+mars_candidate_id,,,,,empty field where source value is absent,I-02 research-question correspondence; no physical-equivalence claim.
+source_row,,,,,empty field where source value is absent,Original printed # record identifier (not spreadsheet row).
+source_page,,,,,empty field where source value is absent,One-based PDF page containing the record.
+source_extracted_line_on_page,,,,,empty field where source value is absent,One-based PDFium extracted-text line; source_row is the printed identifier.
+printed_time_1_label,,,,,empty field where source value is absent,Exact first printed column label; UTC interpretation unresolved.
+printed_time_1,,,,,empty field where source value is absent,"Original first printed timestamp string, unchanged."
+printed_time_2_label,,,,,empty field where source value is absent,Exact second printed column label; UTC interpretation unresolved.
+printed_time_2,,,,,empty field where source value is absent,"Original second printed timestamp string, unchanged."
+time_1_nominal_iso,,,,,empty field where source value is absent,Naive parsed first timestamp for within-table selection; no timezone conversion.
+time_2_nominal_iso,,,,,empty field where source value is absent,Naive parsed second timestamp; no timezone conversion.
+source_numeric_count,,,,,empty field where source value is absent,Six or nine printed numeric values; six means the 3 cm group is absent.
+ice49_depth_cm,,,,,empty field where source value is absent,"Nominal published 49 cm subsurface sensor depth, not a new interface estimate."
+soil3_depth_cm,,,,,empty field where source value is absent,Nominal published 3 cm subsurface sensor depth; not satellite LST.
+air_temperature_C,"Temp,AIR",degC,air,,empty field where source value is absent,Original published numeric token; no rescaling or independent recalibration. Air sensor height is not specified by this table header.
+air_RH_raw_pct,"RH,%",percent,air,,empty field where source value is absent,"Original published numeric token; no rescaling or independent recalibration. Original RH column, distinct from the adjacent author-corrected RH. Air sensor height is not specified by this table header."
+air_RH_corrected_pct,RHice,percent,air,,empty field where source value is absent,"Original published numeric token; no rescaling or independent recalibration. Author-corrected RH as printed; no new correction formula, clipping, or water-activity inference. Air sensor height is not specified by this table header."
+ice49_temperature_C,"Temp, ice 49 cm",degC,ice,49,empty field where source value is absent,Original published numeric token; no rescaling or independent recalibration.
+ice49_RH_raw_pct,"RH,%",percent,ice,49,empty field where source value is absent,"Original published numeric token; no rescaling or independent recalibration. Original RH column, distinct from the adjacent author-corrected RH."
+ice49_RH_corrected_pct,RHice,percent,ice,49,empty field where source value is absent,"Original published numeric token; no rescaling or independent recalibration. Author-corrected RH as printed; no new correction formula, clipping, or water-activity inference."
+soil3_temperature_C,"Temp, 3 cm",degC,soil,3,empty field where source value is absent,Original published numeric token; no rescaling or independent recalibration.
+soil3_RH_raw_pct,"RH, % raw",percent,soil,3,empty field where source value is absent,"Original published numeric token; no rescaling or independent recalibration. Original RH column, distinct from the adjacent author-corrected RH."
+soil3_RH_corrected_pct,"RH_ice <0, -2",percent,soil,3,empty field where source value is absent,"Original published numeric token; no rescaling or independent recalibration. Author-corrected RH as printed; no new correction formula, clipping, or water-activity inference."
+air_missing,,,,,empty field where source value is absent,True only if the air group is missing; no such parsed records in this export.
+ice49_missing,,,,,empty field where source value is absent,True only if the 49 cm group is missing; no such parsed records in this export.
+soil3_missing,,,,,empty field where source value is absent,True when all three 3 cm values are absent in the printed six-value record.
+soil3_missing_reason,,,,,empty field where source value is absent,Source absence is retained; no winter infilling or zero substitution.
+air_RH_corrected_gt100,,,,,empty field where source value is absent,Flag only; published air corrected RH retained above 100 percent.
+ice49_RH_corrected_gt100,,,,,empty field where source value is absent,Flag only; published 49 cm corrected RH retained above 100 percent.
+soil3_RH_corrected_gt100,,,,,empty field where source value is absent,Flag only; blank when the 3 cm group is missing.
+in_annual_window_time1,,,,,empty field where source value is absent,"First printed time in [2017-12-01, 2018-12-01); not a UTC year."
+in_summer_paired_window_time1,,,,,empty field where source value is absent,"Both depths printed and first time in [2017-12-01, 2018-03-01)."
+flags,,,,,empty field where source value is absent,Semicolon-separated export cautions; absence of a sensor flag is not calibration clearance.
+source_text,,,,,empty field where source value is absent,"Complete extracted printed record, preserved for source-row audit."

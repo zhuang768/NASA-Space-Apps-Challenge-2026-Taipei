@@ -1,0 +1,71 @@
+{
+  "sheet_count": 32,
+  "first_sheet": "Overview",
+  "EH_records": 8922,
+  "EH_columns": 35,
+  "source_rows_contiguous": true,
+  "first_printed_time": "11/28/17 0:00",
+  "last_printed_time": "12/4/18 17:00",
+  "first_nominal_iso_type": "str",
+  "soil3_present": 2646,
+  "soil3_missing": 6276,
+  "summer_paired_n": 2160,
+  "RH49_above100": 2807,
+  "Overview_count_cached": 8922,
+  "Mars_I02_lat": 53.75,
+  "Mars_I02_TI": 160.6666717529297,
+  "Mars_I01_TI": 244.7096710205078,
+  "Mars_missing_temperature": null,
+  "figure_cached_label": "outputs/research/elephant_head_final/summer_temperatures.png",
+  "Overview_count_formula": "=COUNTA('EH Records'!A2:A8923)",
+  "figure_formula": "=HYPERLINK(\"https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/main/outputs/research/elephant_head_final/summer_temperatures.png\",\"outputs/research/elephant_head_final/summer_temperatures.png\")",
+  "zip_crc": null,
+  "relationship_count": 66,
+  "invalid_relationships": [],
+  "invalid_style_ids": [],
+  "new_sheet_row_heights": [
+    {
+      "part": "xl/worksheets/mr_v3_sheet5.xml",
+      "rows": 140,
+      "height_max": 48.0
+    },
+    {
+      "part": "xl/worksheets/mr_v3_sheet8.xml",
+      "rows": 28,
+      "height_max": 48.0
+    },
+    {
+      "part": "xl/worksheets/mr_v3_sheet3.xml",
+      "rows": 40,
+      "height_max": 48.0
+    },
+    {
+      "part": "xl/worksheets/mr_v3_sheet7.xml",
+      "rows": 36,
+      "height_max": 48.0
+    },
+    {
+      "part": "xl/worksheets/mr_v3_sheet1.xml",
+      "rows": 52,
+      "height_max": 48.0
+    },
+    {
+      "part": "xl/worksheets/mr_v3_sheet6.xml",
+      "rows": 8923,
+      "height_max": 48.0
+    },
+    {
+      "part": "xl/worksheets/mr_v3_sheet4.xml",
+      "rows": 9,
+      "height_max": 48.0
+    },
+    {
+      "part": "xl/worksheets/mr_v3_sheet2.xml",
+      "rows": 24,
+      "height_max": 48.0
+    }
+  ],
+  "reader": "openpyxl3.1.5 read-only; no save",
+  "sha256": "157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175",
+  "status": "PASS"
+}

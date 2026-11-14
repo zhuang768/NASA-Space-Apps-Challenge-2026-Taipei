@@ -1,9 +1,9 @@
 {
-  "version": "MR-20261114-v2",
-  "checked_taipei": "2026-11-14T20:20:01.569049+08:00",
-  "remote_main_at_start": "409a2e77dbeb741486901f840da3643180bed2ac",
-  "remote_source_main": "bc9fe3c0f352632a7117dbdab24df21b7450738e",
-  "remote_source_tree": "ee4b92db79ac7ca1053ba96619a87e08652b3c66",
+  "version": "MR-20261114-v3-final",
+  "checked_taipei": "2026-11-14T20:53:25.753449+08:00",
+  "remote_main_at_start": "501d6454624108cf7b7e7f8ad572540bc7f774eb",
+  "remote_source_main": "ab1da697ad2093ca8185d29932e3fc5b85e7f80b",
+  "remote_source_tree": null,
   "research_branch_head_at_start": "9e5c49ea7b4d7272972e7d409e6a298e6ef3da4a",
   "research_branch_updated_at_start": false,
   "owned_paths_absent_from_main_at_start": [
@@ -75,33 +75,37 @@
     },
     {
       "source_path": "outputs/research/ice_candidate_followup/native_audit.json",
-      "read_path": "outputs/research/ice_candidate_followup/native_audit.json",
+      "read_path": "outputs/consolidated/research_main_20261114/sources/final_local_science/outputs/research/ice_candidate_followup/native_audit.json",
       "role": "local_uncommitted_original_or_workbook_snapshot",
       "remote_ref": null,
       "sha256": "5a914b5a5be79ce43b9d20fc5e1a396b7892646047eda56803d9275ff9cedb08",
       "bytes": 22177,
       "modified_taipei": "2026-11-14T15:14:56.442510+08:00",
-      "status_this_round": "reused_unchanged"
+      "status_this_round": "reused_unchanged",
+      "publication_snapshot_path": "outputs/consolidated/research_main_20261114/sources/final_local_science/outputs/research/ice_candidate_followup/native_audit.json"
     },
     {
       "source_path": "docs/research/ice_candidate_followup/README.md",
-      "read_path": "docs/research/ice_candidate_followup/README.md",
+      "read_path": "outputs/consolidated/research_main_20261114/sources/final_local_science/docs/research/ice_candidate_followup/README.md",
       "role": "local_uncommitted_original_or_workbook_snapshot",
       "remote_ref": null,
       "sha256": "dd0556061d4fb2a89b1f0bef89112ff597142016326071ac2305a55fc3cd3689",
       "bytes": 9783,
       "modified_taipei": "2026-11-14T15:37:02.043150+08:00",
-      "status_this_round": "reused_unchanged"
+      "status_this_round": "reused_unchanged",
+      "publication_snapshot_path": "outputs/consolidated/research_main_20261114/sources/final_local_science/docs/research/ice_candidate_followup/README.md"
     },
     {
-      "source_path": "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
-      "read_path": "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
-      "role": "local_uncommitted_original_or_workbook_snapshot",
+      "source_path": "outputs/consolidated/backups/All_Data_before_MR_v3_a789fcdc9c0a.xlsx.bak",
+      "read_path": "outputs/consolidated/backups/All_Data_before_MR_v3_a789fcdc9c0a.xlsx.bak",
+      "role": "archival_workbook_local_backup",
       "remote_ref": null,
       "sha256": "a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731",
       "bytes": 21402463,
       "modified_taipei": "2026-11-14T16:36:38.995584+08:00",
-      "status_this_round": "reused_unchanged"
+      "status_this_round": "reused_unchanged",
+      "original_path": "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx",
+      "publication_scope": "local_backup_only; original cells retained in final workbook"
     },
     {
       "source_path": "docs/research/team1_earth_analog_matching.md",
@@ -129,26 +133,26 @@
     },
     {
       "source_path": "docs/research/team2_novelty_audit.md",
-      "read_path": "outputs/consolidated/research_main_20261114/sources/v2_14be2d5b/docs/research/team2_novelty_audit.md",
+      "read_path": "outputs/consolidated/research_main_20261114/sources/final_ab1da697/docs/research/team2_novelty_audit.md",
       "role": "current_teammate_report_or_csv",
-      "remote_ref": "14be2d5b46ec49ecf2d685af60d249c7a4fd97b7",
-      "git_blob_sha": "aa595880169307ebc8df0de4a61c401231145cd3",
-      "sha256": "336f0ccddce7ea58a593bd7ee7a5ef6041125061ad96676e3906a48ec89f7a47",
-      "bytes": 106754,
+      "remote_ref": "ab1da697ad2093ca8185d29932e3fc5b85e7f80b",
+      "git_blob_sha": "054f9f5816035de4b1230c39354d9265f581eebc",
+      "sha256": "0e4e6270130dce20aa7ea33d13bc400b5204373e0c6ce9afd6b210cc60924de8",
+      "bytes": 127669,
       "byte_identical_to_remote": true,
-      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/14be2d5b46ec49ecf2d685af60d249c7a4fd97b7/docs/research/team2_novelty_audit.md",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/ab1da697ad2093ca8185d29932e3fc5b85e7f80b/docs/research/team2_novelty_audit.md",
       "raw_files_reread_by_mainline": false
     },
     {
       "source_path": "outputs/research/team2_novelty_audit.csv",
-      "read_path": "outputs/consolidated/research_main_20261114/sources/v2_14be2d5b/outputs/research/team2_novelty_audit.csv",
+      "read_path": "outputs/consolidated/research_main_20261114/sources/final_ab1da697/outputs/research/team2_novelty_audit.csv",
       "role": "current_teammate_report_or_csv",
-      "remote_ref": "14be2d5b46ec49ecf2d685af60d249c7a4fd97b7",
-      "git_blob_sha": "ed9371daf19f92578f069f44433979b55c37e039",
-      "sha256": "b09390f3d58c82ceade22ceeaed67222f2f28032932d12e7828836a59099cc38",
-      "bytes": 28436,
+      "remote_ref": "ab1da697ad2093ca8185d29932e3fc5b85e7f80b",
+      "git_blob_sha": "58e3fa8c8669744be5b226103566da8d1f7457a2",
+      "sha256": "7cd2f437083b67bd941a3e5929008a7aa83872ccaede53594cea056e0218b511",
+      "bytes": 39497,
       "byte_identical_to_remote": true,
-      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/14be2d5b46ec49ecf2d685af60d249c7a4fd97b7/outputs/research/team2_novelty_audit.csv",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/ab1da697ad2093ca8185d29932e3fc5b85e7f80b/outputs/research/team2_novelty_audit.csv",
       "raw_files_reread_by_mainline": false
     },
     {
@@ -170,14 +174,17 @@
       "source_manifest_url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/9e5c49ea7b4d7272972e7d409e6a298e6ef3da4a/outputs/consolidated/research_main_20261114/source_manifest.json",
       "local_archive": "outputs/consolidated/research_main_20261114/history/MR-20261114-v1/",
       "canonical_remote_history_not_overwritten": true
+    },
+    "MR-20261114-v2": {
+      "published_commit": "501d6454624108cf7b7e7f8ad572540bc7f774eb",
+      "local_archive": "outputs/consolidated/research_main_20261114/history/MR-20261114-v2/"
     }
   },
-  "raw_access_boundary": "Mainline read teammate reports/CSVs and local science/QA/workbook, not EH rawPDF. Team2 executed EH full-table QA and delivered report/parser/summaryJSON; tidy row artifacts/plots not received by mainline. Do not attribute Team2 work to GPU.",
+  "raw_access_boundary": "Mainline re-read only the same-hash EH supplement using the existing Team2 method. Mars native-grid results inherited. Team2 subsequent closeout received; no new source search.",
   "source_version_discrepancies": [
-    "Team1 latest CSV now records MR-v1 and prior provisional history; its main-absent statements describe premerge context. MR-v2 acknowledgement pending.",
-    "Team1 availability manifest received; local_project_path all blank and raw hashes inherited/not recomputed in that round. Team2 EH transcription QA remains a separate delivered result.",
-    "Team2 LT/P6/P7 and QA received; remaining unknowns are depth-citation cause/full1998text, undefined new protocols and complete proposal inventory, not an entirely missing audit.",
-    "P8 supersedes historical presentation-unavailable statements only; unassigned alternative EZ geometry remains unknown. Mainline read Team2 receipt, not original71.8MB PDF."
+    "Team2 final closeout received atab1da697; novelty remains uncleared and no further searches assigned.",
+    "EH reproduction uses frozen14be2d5b QA/parser inputs; later closeout is received separately.",
+    "Workbook source_mapping records bundle-capture hashes; artifact manifest records final hashes."
   ],
   "excluded_current_inputs": [
     "retired Earth terrain ranking runs",
@@ -185,10 +192,17 @@
     "historical Earth rankings in workbook snapshot"
   ],
   "excel_refresh": {
-    "updated_this_round": false,
-    "sha256": "a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731",
-    "reason": "GPU and new source/novelty followups pending; avoid repeated large rebuilds",
-    "next_gate": "Stable IDs/use versions/source scope, received GPU input/QA and sufficiently scoped audit; then single white English workbook rebuild without retired rankings"
+    "updated_this_round": true,
+    "bytes": 23035176,
+    "sha256": "157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175",
+    "git_blob_sha": "3cad1ffc711dbddeef6def24447e1bd1ff3fb5ba",
+    "local_backup": "outputs/consolidated/backups/All_Data_before_MR_v3_a789fcdc9c0a.xlsx.bak",
+    "original_sheet_parts_retained": 24,
+    "new_sheets": 8,
+    "MEDA_records_retained": 159418,
+    "known_styles_child_order_fixed": 4,
+    "large_grids_included": false,
+    "QA_path": "outputs/consolidated/review/main_v3/verification.json"
   },
   "no_reranking_or_weights_change": true,
   "delivery_record": "delivery_status.json",
@@ -210,5 +224,15 @@
       "reason": "Team2 P8 original45page Head presentation recovered; all alternative EZ crosswalk/boundaries unresolved; scoped P6 result unchanged and novelty uncleared."
     }
   ],
-  "current_receipt_main": "14be2d5b46ec49ecf2d685af60d249c7a4fd97b7"
+  "current_receipt_main": "ab1da697ad2093ca8185d29932e3fc5b85e7f80b",
+  "MRv2_remote_main_at_start": "409a2e77dbeb741486901f840da3643180bed2ac",
+  "original_EH_QA_inputs": [
+    "outputs/consolidated/research_main_20261114/sources/v2_14be2d5b/docs/research/team2_novelty_audit.md",
+    "outputs/consolidated/research_main_20261114/sources/v2_14be2d5b/outputs/research/team2_novelty_audit.csv"
+  ],
+  "final_artifact_manifest": "outputs/consolidated/research_main_20261114/final_artifact_manifest.json",
+  "final_stop_rule": "Fixed-scope acceptance complete; no further sites, experiments, literature search or teammate tasks.",
+  "MRv2_remote_source_main": "bc9fe3c0f352632a7117dbdab24df21b7450738e",
+  "MRv2_remote_source_tree": "ee4b92db79ac7ca1053ba96619a87e08652b3c66",
+  "remote_source_tree_note": "Source references are pinned by commit and per-file Git blob; no stale earlier tree SHA is used."
 }

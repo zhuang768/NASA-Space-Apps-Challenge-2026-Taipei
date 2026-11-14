@@ -1,0 +1,175 @@
+{
+  "sha256": "a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731",
+  "bytes": 21402463,
+  "backup": "outputs/consolidated/backups/All_Data_before_MR_v3_a789fcdc9c0a.xlsx.bak",
+  "sheets": [
+    {
+      "name": "Overview",
+      "part": "xl/worksheets/sheet1.xml",
+      "rows": 45,
+      "cells": 270,
+      "height_max": 48.0
+    },
+    {
+      "name": "Mars Discovery",
+      "part": "xl/worksheets/sheet2.xml",
+      "rows": 25,
+      "cells": 625,
+      "height_max": 48.0
+    },
+    {
+      "name": "Ice Candidate QA",
+      "part": "xl/worksheets/sheet3.xml",
+      "rows": 3,
+      "cells": 162,
+      "height_max": 48.0
+    },
+    {
+      "name": "Earth Candidates",
+      "part": "xl/worksheets/sheet4.xml",
+      "rows": 73,
+      "cells": 3504,
+      "height_max": 48.0
+    },
+    {
+      "name": "Mars Novelty Review",
+      "part": "xl/worksheets/sheet5.xml",
+      "rows": 16,
+      "cells": 464,
+      "height_max": 48.0
+    },
+    {
+      "name": "Mars Reference Regions",
+      "part": "xl/worksheets/sheet6.xml",
+      "rows": 4,
+      "cells": 464,
+      "height_max": 48.0
+    },
+    {
+      "name": "Earth Terrain Windows",
+      "part": "xl/worksheets/sheet7.xml",
+      "rows": 5213,
+      "cells": 78195,
+      "height_max": 48.0
+    },
+    {
+      "name": "Earth Terrain Ranks",
+      "part": "xl/worksheets/sheet8.xml",
+      "rows": 15637,
+      "cells": 297103,
+      "height_max": 48.0
+    },
+    {
+      "name": "Earth POWER Climate",
+      "part": "xl/worksheets/sheet9.xml",
+      "rows": 157,
+      "cells": 2983,
+      "height_max": 48.0
+    },
+    {
+      "name": "Mars Dust Series",
+      "part": "xl/worksheets/sheet10.xml",
+      "rows": 4015,
+      "cells": 40150,
+      "height_max": 48.0
+    },
+    {
+      "name": "Mars Regional Temp",
+      "part": "xl/worksheets/sheet11.xml",
+      "rows": 865,
+      "cells": 13840,
+      "height_max": 48.0
+    },
+    {
+      "name": "Rover Temp Provisional",
+      "part": "xl/worksheets/sheet12.xml",
+      "rows": 73,
+      "cells": 511,
+      "height_max": 48.0
+    },
+    {
+      "name": "Research Requirements",
+      "part": "xl/worksheets/sheet13.xml",
+      "rows": 6,
+      "cells": 60,
+      "height_max": 48.0
+    },
+    {
+      "name": "Report Claims",
+      "part": "xl/worksheets/sheet14.xml",
+      "rows": 9,
+      "cells": 63,
+      "height_max": 48.0
+    },
+    {
+      "name": "Submission Gaps",
+      "part": "xl/worksheets/sheet15.xml",
+      "rows": 54,
+      "cells": 540,
+      "height_max": 48.0
+    },
+    {
+      "name": "Oytag Literature Points",
+      "part": "xl/worksheets/sheet16.xml",
+      "rows": 4,
+      "cells": 36,
+      "height_max": 48.0
+    },
+    {
+      "name": "Oytag Supplement Points",
+      "part": "xl/worksheets/sheet17.xml",
+      "rows": 11,
+      "cells": 121,
+      "height_max": 48.0
+    },
+    {
+      "name": "Earth Shortlist CSV",
+      "part": "xl/worksheets/sheet18.xml",
+      "rows": 37,
+      "cells": 925,
+      "height_max": 48.0
+    },
+    {
+      "name": "Legacy File Inventories",
+      "part": "xl/worksheets/sheet19.xml",
+      "rows": 346,
+      "cells": 4152,
+      "height_max": 48.0
+    },
+    {
+      "name": "MEDA Raw Records",
+      "part": "xl/worksheets/sheet20.xml",
+      "rows": 159419,
+      "cells": 3666637,
+      "height_max": 48.0
+    },
+    {
+      "name": "JSON Source Records",
+      "part": "xl/worksheets/sheet21.xml",
+      "rows": 21819,
+      "cells": 174552,
+      "height_max": 48.0
+    },
+    {
+      "name": "Report Text",
+      "part": "xl/worksheets/sheet22.xml",
+      "rows": 1072,
+      "cells": 7504,
+      "height_max": 48.0
+    },
+    {
+      "name": "File Index",
+      "part": "xl/worksheets/sheet23.xml",
+      "rows": 427,
+      "cells": 4270,
+      "height_max": 48.0
+    },
+    {
+      "name": "Source Crosswalk",
+      "part": "xl/worksheets/sheet24.xml",
+      "rows": 120,
+      "cells": 600,
+      "height_max": 48.0
+    }
+  ]
+}

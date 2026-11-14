@@ -1,8 +1,8 @@
 {
-  "version": "MR-20261114-v2",
-  "checked_taipei": "2026-11-14T20:20:01.569049+08:00",
-  "workbook_sha256": "a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731",
-  "status": "PASS",
+  "version": "MR-20261114-v3-final",
+  "checked_taipei": "2026-11-14T20:53:25.753449+08:00",
+  "workbook_sha256": "157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175",
+  "status": "PASS_FIXED_SCOPE_FINAL_ARTIFACTS",
   "executable_cell_checks": 44,
   "checks": [
     {
@@ -394,7 +394,7 @@
       "earth_candidate_id": "EARTH-002",
       "mars_candidate_id": "I-02",
       "role": "priority_archival_method_reference",
-      "pair_status": "GPU_QA_and_v2_difference_pending",
+      "pair_status": "archival_delivery_accepted_physical_equivalence_unvalidated",
       "anchor_lat_lon": [
         -79.820216667,
         -83.314333333
@@ -414,7 +414,10 @@
       "GPU_plots_received": false,
       "novelty_cleared": false,
       "team2_fulltable_QA_report_received": true,
-      "team2_descriptive_summary_received": true
+      "team2_descriptive_summary_received": true,
+      "mainline_CSV_delivered": true,
+      "mainline_QA_delivered": true,
+      "two_descriptive_figures_delivered": true
     },
     {
       "earth_candidate_id": "EARTH-003",
@@ -448,8 +451,8 @@
       "full_1998_text_received": false
     }
   ],
-  "source_main": "bc9fe3c0f352632a7117dbdab24df21b7450738e",
-  "verification_provenance": "44 executable key-cell comparisons inherited from MR-v1; all scientific source hashes unchanged this round; no raw/GPU analysis rerun.",
+  "source_main": "ab1da697ad2093ca8185d29932e3fc5b85e7f80b",
+  "verification_provenance": "MR-v1 source comparisons inherited; 44 retained workbook cells rechecked against original snapshot; no raw Mars raster rerun.",
   "completion_classes": {
     "A": {
       "status": "delivered_documentary_evidence",
@@ -460,21 +463,13 @@
       ]
     },
     "B": {
-      "status": "reported_Team2_QA_and_descriptive_summary_received_row_artifacts_and_plots_pending",
-      "producer_of_received_results": "Team2",
-      "received": [
-        "full-table transcription QA report",
-        "reproduction parser",
-        "machine-readable counts and means"
-      ],
-      "pending": [
-        "source-page-row tidy export handoff",
-        "mainline/GPU artifact acceptance",
-        "descriptive plots"
-      ]
+      "status": "accepted_CSV_dictionary_QA_two_figures",
+      "original_QA_owner": "Team2",
+      "current_export_owner": "mainline",
+      "pending_required_artifacts": []
     },
     "C": {
-      "status": "partially_received_remaining_primary_clarification_and_access_handoff",
+      "status": "received_review_closed_with_known_limits",
       "received": [
         "EARTH003 initial audit",
         "25/45 source chain",
@@ -483,10 +478,11 @@
         "Team2 NASA EMC P6/P7 scoped geometry",
         "P8 original Head presentation acquisition record; alternative EZ boundaries still unresolved"
       ],
-      "pending": [
-        "1998fulltext or explicit correction/author explanation for depth cause",
-        "MRv2 recipient acknowledgments and raw row-artifact handoff",
-        "future exact protocols if activated"
+      "pending": [],
+      "unresolved_limits_no_new_tasks": [
+        "1998 full text and25/45 citation cause",
+        "unassigned alternative EZ boundaries",
+        "new site/use/distinct scientific difference not established"
       ]
     },
     "D": {
@@ -513,7 +509,7 @@
     "after_main_analysis": 3,
     "unavailable_limit": 1
   },
-  "backup_decision": "Do not activate LT before actual EH processing evidence, Team2 reply, a specific solvable gap and an explicit versioned decision.",
+  "backup_decision": "Linnaeus Terrace not activated; unresolved limits archived. No additional work requested this round.",
   "received_EH_QA": {
     "producer": "Team2",
     "source_commit": "bc9fe3c0f352632a7117dbdab24df21b7450738e",
@@ -554,7 +550,7 @@
     },
     "report_cross_engine_check": "Team2 reports all8922 row IDs,firsttimestamps andvalues identical between pypdf/PDFium; not independently rerun by mainline"
   },
-  "receipt_main": "14be2d5b46ec49ecf2d685af60d249c7a4fd97b7",
+  "receipt_main": "ab1da697ad2093ca8185d29932e3fc5b85e7f80b",
   "received_availability": {
     "producer": "Team1",
     "path": "outputs/research/team1_data_availability.csv",
@@ -587,5 +583,63 @@
       "alternative_EZ_crosswalk": "insufficient_data",
       "changes_catalog_geometry_result": false
     }
-  }
+  },
+  "archive_workbook_sha256": "a789fcdc9c0a7e780f85b63687ad54f05b87cd6e341ecf024375dcd6fcb3f731",
+  "mainline_EH_reproduction": {
+    "status": "accepted",
+    "original_observations": "McKay et al. published supplement",
+    "original_parser_QA": "Team2",
+    "export_and_artifact_checks": "mainline",
+    "GPU_acceleration_claimed": false,
+    "qa_path": "outputs/research/elephant_head_final/qa.json",
+    "summary": {
+      "source_sha256": "20fe70f574bc394f05f0c720809f80a9602ac73f6ede34d322ea816cf25590d9",
+      "pages": 108,
+      "records": 8922,
+      "bad_records": [],
+      "first": "2017-11-28 00:00:00",
+      "last": "2018-12-04 17:00:00",
+      "row_ids_contiguous": true,
+      "hourly_first_timestamp_contiguous": true,
+      "second_timestamp_offset_minutes": 90,
+      "timezone_status": "printedoffsetconsistent_butUTCmeaning_unverified",
+      "records_with_3cm": 2646,
+      "missing_3cm_records": 6276,
+      "last_3cm": "2018-03-18 05:00:00",
+      "annual_n": 8760,
+      "summer_paired_n": 2160,
+      "annual_air_mean_C": -20.29401712328767,
+      "annual_ice49_mean_C": -19.23700114155251,
+      "summer_air_mean_C": -10.34088888888889,
+      "summer_ice49_mean_C": -8.630152777777777,
+      "summer_soil3_mean_C": -5.355300925925926,
+      "summer_soil3_minus_ice49_mean_C": 3.2748518518518517,
+      "RH_ice49_corrected_above100_n": 2807,
+      "annual_window": {
+        "start_inclusive": "2017-12-01 00:00:00",
+        "stop_exclusive": "2018-12-01 00:00:00"
+      },
+      "summer_window": {
+        "start_inclusive": "2017-12-01 00:00:00",
+        "stop_exclusive": "2018-03-01 00:00:00"
+      },
+      "summer_first_source_row": 73,
+      "summer_last_source_row": 2232,
+      "summer_first_source_page": 1,
+      "summer_last_source_page": 27,
+      "summer_expected_hourly_records": 2160,
+      "summer_paired_coverage_fraction": 1.0
+    },
+    "engine": {
+      "engine": "pypdfium2 (existing Team2 second-engine path)",
+      "pdfium_version": "5.14.0",
+      "pattern": "^(\\d+)\\s+(\\d+/\\d+/\\d+ \\d+:\\d+)\\s+(\\d+/\\d+/\\d+ \\d+:\\d+)\\s+(.+)$",
+      "method": "Existing anchored row regex and 6/9 numeric-value interpretation, unchanged",
+      "pypdf_plain_note": "Local pypdf 6.14.2 plain extraction concatenates rows and yields no anchored records; not used to change or reconstruct records",
+      "current_double_engine_check": false,
+      "prior_Team2_double_engine_QA": "Team2 reported full pypdf/PDFium row comparison; inherited with attribution, not claimed as this export's run"
+    }
+  },
+  "final_validation_path": "outputs/consolidated/research_main_20261114/final_validation.json",
+  "inherited_source_main_MRv2": "bc9fe3c0f352632a7117dbdab24df21b7450738e"
 }

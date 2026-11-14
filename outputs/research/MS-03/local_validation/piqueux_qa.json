@@ -1,0 +1,68 @@
+{
+  "files": [
+    {
+      "file": "Lat.ascii",
+      "bytes": 2660,
+      "provider_checksum": "md5:9b70d4b2f0297594ce7e02494cf8564b",
+      "provider_checksum_verified": true,
+      "sha256": "e85e1881c73691ae5dd58f7e1e5dbb805e900776c72a8b82b6efed14b545f0e3",
+      "content_url": "https://data.caltech.edu/api/records/ym7fc-x0r93/files/Lat.ascii/content"
+    },
+    {
+      "file": "Lon.ascii",
+      "bytes": 4820,
+      "provider_checksum": "md5:c60b8ff5f8b0bc603c92967862ad7431",
+      "provider_checksum_verified": true,
+      "sha256": "d0ad069f1f456b3291cc57f7116e75696ffdcaff69b40c38189e9807c23de86a",
+      "content_url": "https://data.caltech.edu/api/records/ym7fc-x0r93/files/Lon.ascii/content"
+    },
+    {
+      "file": "Notes.txt",
+      "bytes": 1926,
+      "provider_checksum": "md5:931c03a665d02755470be11becf7841b",
+      "provider_checksum_verified": true,
+      "sha256": "472a30fe9ce97f8e476eeceb5d42ac5e4ddb9cd55fb33f48a2741302cf3c75ca",
+      "content_url": "https://data.caltech.edu/api/records/ym7fc-x0r93/files/Notes.txt/content"
+    },
+    {
+      "file": "TI_SI.ascii",
+      "bytes": 2484261,
+      "provider_checksum": "md5:267810eb52f6c053dd2adefe4dc2010a",
+      "provider_checksum_verified": true,
+      "sha256": "20e842167fcb4daa811cc83ba69a666d47a73338274d8a65f85e69b5b7e4d2fb",
+      "content_url": "https://data.caltech.edu/api/records/ym7fc-x0r93/files/TI_SI.ascii/content"
+    },
+    {
+      "file": "d_m.ascii",
+      "bytes": 2434482,
+      "provider_checksum": "md5:080dd616a822fa74f20f4c923a1d79f1",
+      "provider_checksum_verified": true,
+      "sha256": "1101d38a45c88f7531fcfa0e7af163d94e8fb337d53e0b7f766f81762ae5b1ff",
+      "content_url": "https://data.caltech.edu/api/records/ym7fc-x0r93/files/d_m.ascii/content"
+    }
+  ],
+  "actual_matrix_shape_lat_lon": [
+    360,
+    720
+  ],
+  "row_index": 64,
+  "column_index": 484,
+  "valid_cells_in_fixed_roi": 1,
+  "product_grid_degrees": 0.5,
+  "deposited_ppd": 2,
+  "paper_reports_ppd": 3,
+  "grid_note": "Use deposited 2 ppd coordinates; conversion from paper 3 ppd to deposited 2 ppd undocumented in retrieved notes. Do not imply 3 ppd data were extracted.",
+  "metadata_dimension_note": "Notes lists 720x360; actual ASCII matrix is360 latitude rows x720 longitude columns, independently resolved by coordinate-file lengths.",
+  "raw_depth_m": 0.103161566,
+  "display_depth_m": "~0.10 (conditional model)",
+  "upper_material_ti": 215.4277344,
+  "ti_unit_note": "Physical SI J m^-2 K^-1 s^-1/2 from paper; Notes renders m^2 (unit typography not used to redefine TI).",
+  "limits": [
+    "Two-layer thermal model assumes ice as the lower material; no unique material separation or independent local ice truth.",
+    "Lookup depths discrete, raw decimals not measurement precision.",
+    "Cannot distinguish massive from pore ice; local fraction remains unknown.",
+    "Published MCS native support ~7 km; deposited cell ~30x16 km. No sub-cell variability resolved.",
+    "MCS/THEMIS overlap other thermal evidence; no independent-truth count.",
+    "Exact per-cell observation times and QA not provided in the deposited grids."
+  ]
+}

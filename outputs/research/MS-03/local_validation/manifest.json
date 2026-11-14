@@ -1,0 +1,641 @@
+{
+  "task": "MS-03 bounded local validation; evidence and bullet notes only",
+  "created_utc": "2026-11-14T19:02:20.028722+00:00",
+  "starting_sha": "8fa07afac4a98096958880f6a5ece16f35abc4db",
+  "audit_pr9_sha": "c206553fc681328d214cbbcd508d3c5b1391e200",
+  "integration_pr10_sha": "0260c511d9fce6be12d3460a69e474f333160cbf",
+  "branch": "research/ms-03-earth-analogs",
+  "pr": 7,
+  "roi": {
+    "lat_min": 57.5,
+    "lat_max": 58,
+    "lon_east_min": 242,
+    "lon_east_max": 242.5,
+    "latitude": "planetocentric"
+  },
+  "disposition": {
+    "morphology": "unknown",
+    "AD1": "general_method_reference_only",
+    "UV": "known_interface_and_quality_reference_only",
+    "ice_independently_confirmed": false,
+    "actual_ice_depth_m": null,
+    "ice_fraction": null,
+    "campbell_hobo_aligned": false
+  },
+  "source_provenance": "retrievals.json; source locators/read scopes in four primary CSV tables",
+  "local_only_inputs": [
+    "Caltech ASCII grids and Notes, original publication HTML/PDF (not redistributed)",
+    "global USGS SHP/DBF/SHX/PRJ and ZIP members (large, ignored)",
+    "SWIM2 original GeoTIFFs in read-only other clone; hashes in swim_recheck.json"
+  ],
+  "known_acquisition_limits": [
+    "ScienceBase CSV and Texas Dataverse API access failures: inventory membership unknown",
+    "IOP HTTP200 is CAPTCHA, not article",
+    "USRDR query invalid product class, not zero coverage",
+    "CTX patches opaque/nonempty does not certify scientific-pixel quality"
+  ],
+  "methods": {
+    "analyze.py": "native grid extraction, original geology intersection, pinned SWIM reproduction, actual ODE geometries and CTX bounds",
+    "acquire_sharad_sample.py": "HTTP ranges and original FMT geometry decoding only; no waveform inference",
+    "plot.py": "two data/observability figures, no interpolation or fake geometry"
+  },
+  "tests": "validation.json; PNGs visually opened",
+  "files": [
+    {
+      "path": "outputs/research/MS-03/local_validation/.gitignore",
+      "bytes": 312,
+      "sha256": "c79584b56a5e59f9908b2fa3e1b06457b2a1c7cdffc5e9adb4f4f1efa8aaf491"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/F-LV01_CTX_samples.png",
+      "bytes": 610581,
+      "sha256": "ab405ab38c96be0cc166dd6cda0f00db7f30448298ecfa0ef6ccfbfec453154b"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/F-LV02_observation_support.png",
+      "bytes": 182000,
+      "sha256": "9f6a22e16d18e8fb36330a5c114caa7af3b511ad0288a44d54279b5736b816e7"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/README.md",
+      "bytes": 2738,
+      "sha256": "5d225b3d02f0e7a85882c19d35ec8480c53a1407829652763833eff13bc624fb"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/acquire.py",
+      "bytes": 1424,
+      "sha256": "d855786e29484769a646e6bdf95772dce48dadb1aa75d8e4ba928932384f1767"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/acquire_ctx_kml.py",
+      "bytes": 1554,
+      "sha256": "410b34b79df023ccc406aec4715e6c7a3535174d5d9796ec156377adbf9d10ea"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/acquire_ctx_samples.py",
+      "bytes": 2395,
+      "sha256": "0893bea383e747c0237a5f839ccb1d70e5fae00d70ea678ce8c82365190606a5"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/acquire_sharad_sample.py",
+      "bytes": 3349,
+      "sha256": "2bd50b5327adfef7346b2d92d10dc3f07f8a006fac78d8e4a4da45611f461efd"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/analog_validation.csv",
+      "bytes": 1554,
+      "sha256": "24451a4b8f28b3853732a394e415c9c8798e172148caf347b6a041ee2cdb7437"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/analysis_summary.json",
+      "bytes": 861,
+      "sha256": "92263a61b970baa29cee12225bdb77a397d8107e8e280104608b39057bf15882"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/analyze.py",
+      "bytes": 14840,
+      "sha256": "f099f6d8071390f6091d91953135313e562542c0990ba0d380fa4de0fce4cb73"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/build_tables.py",
+      "bytes": 29389,
+      "sha256": "0532f46c5388e7cd468da6d2c72f2067f3a2d26a4fa353a0485a6e70067be3a6"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/catalogue_qa.json",
+      "bytes": 1149,
+      "sha256": "fc0316a10f172bd799feec6e976b07152b8f86b01e822a42178951fec15e3a15"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/content_validation.json",
+      "bytes": 578,
+      "sha256": "7a9604f44f9fc1af01f2cf05e6fa33dbe3a05fdb92b127867d1e1f8d1a7ceb5e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/ctx_kml_chain.json",
+      "bytes": 7912,
+      "sha256": "b284d1ccd7aef5be1790399f69669ae0ac1e4e4516973b15fd17134e9b9a87a7"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/ctx_observability.json",
+      "bytes": 6153,
+      "sha256": "862c02bbf8b171281310fc68f3e025a22e8a5914e6a8fb1e8b3d72b874626609"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/ctx_pixel_qa.csv",
+      "bytes": 2851,
+      "sha256": "c226785eff4afd9f929bc7ea932936c376ab0cbbcde641fb8603215dbbac5f1b"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/ctx_sample_manifest.json",
+      "bytes": 17385,
+      "sha256": "22c1783ee7efcd1a37fb41c0723bfa41cd9742401e0da29646609e579cc178b0"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/ctx_seam_roi_records.json",
+      "bytes": 4248,
+      "sha256": "69bc00012d41fab9978251c6b44844ca82665a382c9922cef0575645da7b9318"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/geology_query.json",
+      "bytes": 1353,
+      "sha256": "de1b1f7709bf34d151537ac20df53b397ac181b1e2f9131ccf99997e5acd4b6b"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/gregg_named_image_scope.json",
+      "bytes": 862,
+      "sha256": "ed894ae18837ac6609485138c2e98bbc3b8f06b08360dad363cb3d7d68d67009"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/local_prior_work.csv",
+      "bytes": 7794,
+      "sha256": "7e67cdfada43c286bdd61b1fcb55410640dc08f33eaf924b2cf1d2f06b3251ea"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/mars_ice_evidence.csv",
+      "bytes": 11505,
+      "sha256": "9b154d03643e6f051be6deeabc1698f68403b2bd0fc552a595d44b073ff19ec3"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/observation_inventory.csv",
+      "bytes": 342137,
+      "sha256": "be94b82200adce2b76ef6f1cb18970da5ede715056eae8bcf72e45cd53936111"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/piqueux_native_cell.csv",
+      "bytes": 501,
+      "sha256": "f22c4079294f6a6a4c4f138bd328a21c14875e13bb7728f6c0519994c63e273f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/piqueux_qa.json",
+      "bytes": 3134,
+      "sha256": "ee10072f281023d310421a7d9c1fb1c9a87f1c9c20ab8f453f027f8de9d96ee8"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/plot.py",
+      "bytes": 4101,
+      "sha256": "e4474dbf3ddd0b872d64c236ee2b152ba7243dc8a0454a318cc67f8c9f258925"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/remote_geology.py",
+      "bytes": 2375,
+      "sha256": "e647ba5a58ca8e991c69a7d8f88ee8e20f9123e72cf357b4d485ca6992d2d37f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/retrievals.json",
+      "bytes": 78517,
+      "sha256": "34032de55440d39a4d85c7c577e4e029c72c0a417a3df7981d1f8aa8885025fd"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/search_log.csv",
+      "bytes": 56846,
+      "sha256": "21665970a20a269d3a44f2f4a9e9893335abd4e40b30b2b7915075736e7fba62"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sharad_local_geometry.csv",
+      "bytes": 24180,
+      "sha256": "bc75138570ad568991eadecf38bf1bba3f63ee627247e72e7e41860f7ea72cae"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sharad_sample_qa.json",
+      "bytes": 7445,
+      "sha256": "559b4e03f76c015b0c9d5463919de799691f25100fbf6d34d8fff6bd2ae978bf"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sharad_tracks.geojson",
+      "bytes": 3848,
+      "sha256": "688c5d3ca7e6c18a8cc91000a35eb5c03c1a4a0c0272ad17f5dc8ee7b464add9"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CRISM_HSP0002DE65_03_IF218L_TRR3.LBL",
+      "bytes": 9483,
+      "sha256": "1546337cc47a9a9da9faf9e9f3f0ebb2a538c8ff94562f980597cc7cfcf4a442"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CRISM_MSP00018FDA_01_IF214L_TRR3.LBL",
+      "bytes": 9479,
+      "sha256": "a567f46a9bacb023a995097142b75298acef3209449bf3f0ca5392d60aae091b"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_C_kml_13.kml",
+      "bytes": 998,
+      "sha256": "b6dba9be25439c014fb3ca37260db5d04fb330e8f279c307b0b52585ef633cc9"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_E-120_N56_seams.zip",
+      "bytes": 2529560,
+      "sha256": "a8faa07f927784015ccadc00b0cf714974091da8f993e0be1cb22e67c691f88e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_NE_kml_11.kml",
+      "bytes": 3699,
+      "sha256": "bbed302e24e670066343e16c4be1a651241ac547aa3fbec3e948aab5e060d1c9"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_NE_kml_12.kml",
+      "bytes": 3707,
+      "sha256": "67efb30d05d4c28d967ebdd7d770bc17538ebd458e5c8d720e439ef902d462e6"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_NE_kml_13.kml",
+      "bytes": 998,
+      "sha256": "801f75c667635daed42e95db57311db2858143b7eaf042749753f86c7fd38915"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_NW_kml_10.kml",
+      "bytes": 3697,
+      "sha256": "d3ad0eb3f5799a6ed07f1527bd40e3eaa4971988fc7876d13be3ddd9b6085afa"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_NW_kml_11.kml",
+      "bytes": 3699,
+      "sha256": "73808bd83e3efbcc0f930645b90228dcbb3af1ccc03cf1eda06cbfe05e295214"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_NW_kml_12.kml",
+      "bytes": 3707,
+      "sha256": "6fc51e72be27eb02652987304f6806b95a5a1b80dded6312c4406a345778e285"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_NW_kml_13.kml",
+      "bytes": 998,
+      "sha256": "3b97da7b1fde0c75875911d74824a133da29fa85d48477b990bfd5b5618ac89f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_SE_kml_10.kml",
+      "bytes": 3697,
+      "sha256": "0d7ddf4624270bb4c5f9a404ed56c30c3fae15959bbdcead0795071ba67654bc"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_SE_kml_11.kml",
+      "bytes": 3699,
+      "sha256": "ce9b39940f83953ce2ed125deb6a61036e9dbb014f5381d55ffcfbe2595b7476"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_SE_kml_12.kml",
+      "bytes": 3707,
+      "sha256": "27a386e2e8fceaf9e68bb570d40af1b48db07602602ebdffb63f4e7a15a40c0d"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_SE_kml_13.kml",
+      "bytes": 998,
+      "sha256": "210dac2ef16ca311fefdbae8799d9b2e25a56107b8a85679948c10239e2e376c"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_SW_kml_09.kml",
+      "bytes": 3687,
+      "sha256": "7a578148f4d6ad323671a9e3b2ca12534c065af406cc6819b109d30dcfc71980"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_SW_kml_10.kml",
+      "bytes": 3697,
+      "sha256": "7775f4655cd65867e58135117fdd39888dd649c3061b884a2ad33222a6924d36"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_SW_kml_11.kml",
+      "bytes": 3699,
+      "sha256": "3295a97f0824b421745a4c757e9cb588228ca6f291f212e2c3cfc7953092bc11"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_SW_kml_12.kml",
+      "bytes": 3707,
+      "sha256": "ddef9dab971bbdbae7376ec37a20b5a3fd9cc02ec3c5cef939f701ff5cb0dcb8"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_SW_kml_13.kml",
+      "bytes": 998,
+      "sha256": "732c38f1da121abd93c8ce2454c0c90fd79f5665efc9a1c52e63665a39f68e36"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_mosaic_centre.png",
+      "bytes": 48683,
+      "sha256": "0a2c886a771ceaa316579b358dddae2559bad56f86803e7f69b4007239714e84"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_sample_C.png",
+      "bytes": 46198,
+      "sha256": "97f6cc62ac401bec72696efc6d24b2e729e6dc691d95c5bd96e5e0e1d04bc3b8"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_sample_NE.png",
+      "bytes": 45724,
+      "sha256": "c8d99158615f42727e611acd463b1826da9fea34d4fb668f13f981e0335c4a94"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_sample_NW.png",
+      "bytes": 47908,
+      "sha256": "cf38732b4e40322fc0372b4259099543af6476f4dd649ccf4fd708ea586916c4"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_sample_SE.png",
+      "bytes": 45887,
+      "sha256": "f2fdc6c935eafcc04c9552457530f9078eea0fc466162eb96c7c4061adb45e4e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/CTX_sample_SW.png",
+      "bytes": 50848,
+      "sha256": "379dd580f186a6464c94d42c09c66b727129588913125dd1a0ad760f1233a572"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_RDR.FMT",
+      "bytes": 62657,
+      "sha256": "bf21d628bd09d8e42c726be09cd4f4d8d5d5592760dbb9cd6495f3c69a28f87e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_R_1768301_001_SS19_700_A.LBL",
+      "bytes": 5382,
+      "sha256": "e69e7c84b65555bf3ef71494b05b40cd17d969293461be2adbbe2622f67cf274"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_R_1768301_001_SS19_700_A_B.LBL",
+      "bytes": 2970,
+      "sha256": "af3866f22a63d0f801f4e5787fb8237cee5ffa371d48d9016e4b05dce0e3c45f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_000000.bin",
+      "bytes": 5822,
+      "sha256": "ab375d4b189d35cfa24a7248cb2fbaac6f8adba7f64ccdadb394d3fa290d4a08"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_037722.bin",
+      "bytes": 5822,
+      "sha256": "76cbe015bb4a63be424945af061bef88752e4adf38aed02332dbf1d32f2bf684"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_056583.bin",
+      "bytes": 5822,
+      "sha256": "9bccf17082b2eb7579d2e4da9b89a46146399f00689a2956bf48139161ec5d30"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_057172.bin",
+      "bytes": 5822,
+      "sha256": "81872929d8492972391f6d8057d7c8eb002ee63822b412eaa78fc5bdc69714a4"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_057319.bin",
+      "bytes": 5822,
+      "sha256": "292975cc88bc11b141436c268e53702801a96670951dfbc713bd5d85fea9d53d"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_057337.bin",
+      "bytes": 5822,
+      "sha256": "db13900301b164880dee3cd486a6d44ab153ccab1e7b6efe522b9ffa376b7d83"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_057346.bin",
+      "bytes": 5822,
+      "sha256": "25ee8de2f29e89ca9d80735584b63e540f384f94146ac8f3ee06cc503d15d2c9"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_057350.bin",
+      "bytes": 5822,
+      "sha256": "3bcc5695f38d9f385a1da1259976ede9d8e243bb737c91e7983a786c3664bea4"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_057352.bin",
+      "bytes": 5822,
+      "sha256": "59ce5d1f404cd899d75e78e3991947bd563b57db14ff90fca2fa30cb86e21a95"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_057353.bin",
+      "bytes": 5822,
+      "sha256": "d36c9346aafa9230d5c548b51ccc94c92361cf53be0f2271b768b86db5d1c114"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_057354.bin",
+      "bytes": 5822,
+      "sha256": "a25dc9a0f286349db98821e4066e6894694bbbf3208b4f2be447634492e2810d"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_057355.bin",
+      "bytes": 5822,
+      "sha256": "a035b0452401b8969ec80fde4c34e8e98fb0ee57404e8022c969b1268aca4ccb"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_057392.bin",
+      "bytes": 5822,
+      "sha256": "549d53f63eca80a4e8ce86a0b3180ab3fa7a5b117578716a5d51c488ce94ea5e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_057466.bin",
+      "bytes": 5822,
+      "sha256": "d91cfd93905cef38ed0428c0bbe96ed40e23d8e78103c45bfaa9c9e1a5d62def"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_057761.bin",
+      "bytes": 5822,
+      "sha256": "2031a7d90e97778ff33a79d7d423e759a5ee8b2294ced9ac75d44fb605130ed4"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_058940.bin",
+      "bytes": 5822,
+      "sha256": "978526e193d9ab441862cc13f70003c312ff6cdf731aea3031aa9a51d3992b91"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_061298.bin",
+      "bytes": 5822,
+      "sha256": "08cf9ea5e151ae04e761ad5c83d532cd55c6d1bbcef6557aa2c34f1035dd988e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_066014.bin",
+      "bytes": 5822,
+      "sha256": "41b01aa0771dca6065877b2bbac69430ab3a9f517e01f14f245b504b4f949286"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_075445.bin",
+      "bytes": 5822,
+      "sha256": "df0af1a85c9cebfb631e287e2decd1422a079b82bc43fed7bb1c59740d873275"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_bisect_row_150891.bin",
+      "bytes": 5822,
+      "sha256": "9b2e7e059af9d76daeab6ade9b82587e61056fee1b5700b31c272b933782dfa4"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/SHARAD_local_records.bin",
+      "bytes": 1490432,
+      "sha256": "1fc7666dc1e4393f5aaf5cd2c57a3526b4e26ad3134f162b0312dd3a3ee1765c"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_centre_level_00.kml",
+      "bytes": 992,
+      "sha256": "d942c48294387ef1717c20e7ebcdeeb7595f222c2a8ef2a29beaa0f218e302d7"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_centre_level_01.kml",
+      "bytes": 2304,
+      "sha256": "6cdd19e55acadf9e93ed649e8afd412c7fc4a1bb15c8c9dba25aad6be3cac624"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_centre_level_02.kml",
+      "bytes": 1647,
+      "sha256": "62cc9b46d70ee5c9b0333ba052cb87e5c8563d25b5b1bcf9b0f7db46ccca92df"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_centre_level_03.kml",
+      "bytes": 2316,
+      "sha256": "14f07831f0f70d4e9d2127856968c4bf2d7e82845a5d21d8e779fa43598a4986"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_centre_level_04.kml",
+      "bytes": 2321,
+      "sha256": "523c88b4de9428184dbb736570a5c35f50f880b4369fb48c1185954dd29dec16"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_centre_level_05.kml",
+      "bytes": 3660,
+      "sha256": "eb3adeec5ad81d1b34fbf580e86700654f87a7d189b04fd6e6dbdf7abdcce2af"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_centre_level_06.kml",
+      "bytes": 3661,
+      "sha256": "7c192b1409ddb8f37e66e5ee79f5dcb6e5368b576cc74023ce0eef6a45cd9938"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_centre_level_07.kml",
+      "bytes": 3669,
+      "sha256": "b1cf9f32d2f00fb396fffbbe2141eb229113a0856a1e9d163b64ed7805217b5d"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_centre_level_08.kml",
+      "bytes": 3671,
+      "sha256": "8c86a4c417df27cd0f082489b1dcbfd14a8044a39137d9136c4b2dc8fbf1b6b1"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_centre_level_09.kml",
+      "bytes": 3687,
+      "sha256": "c3daad3966753dd421b506c57b9f37d863a7a0ddde473afb6b8028c7a52ee882"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_centre_level_10.kml",
+      "bytes": 3697,
+      "sha256": "11a953cb4c10d770a073a8ba12ab5b9b936373697632e89d1543186d8aaea688"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_centre_level_11.kml",
+      "bytes": 3699,
+      "sha256": "17bc6208940b4257765a067a5f4e5bc8201e5a7c4e08d700ecb59e72ab13c553"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_centre_level_12.kml",
+      "bytes": 3707,
+      "sha256": "c1e433615abc85edb2f94b1be7f4e23a57716d090a392c24f5c6cc87cafb1c3f"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_mapserver.json",
+      "bytes": 5217,
+      "sha256": "7e2b7767b6bb5471559b24100a6dd39c9d2088e0b3f49f2a61201ddcc42f1198"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_region.kml",
+      "bytes": 992,
+      "sha256": "d942c48294387ef1717c20e7ebcdeeb7595f222c2a8ef2a29beaa0f218e302d7"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ctx_root.kml",
+      "bytes": 67646,
+      "sha256": "8dd1771b8f889e9ad08261082289a6db958f19d045e753964a1ab4a3da1a2ae4"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/dundas_datacite.json",
+      "bytes": 13489,
+      "sha256": "75f6f5828721de0f4ddca05fdacc5ab0bb6b60fecf328e1dfa012e21f41f6225"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/dundas_fgdc.xml",
+      "bytes": 32225,
+      "sha256": "1992a7b2e651466d8be4ef3183aec1ccf96f6fb01e9c4de088de048863125928"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/geology_item.json",
+      "bytes": 3003,
+      "sha256": "7ceb026730001f95e00f5ccba70cf29e8c3487bb70d51465ac1a6faa39567c18"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/geology_service.json",
+      "bytes": 6020,
+      "sha256": "bbba1be96f2435d45e2669990da9c22de2d2d9f777da945dc63c798f2a9c1f61"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/gregg_G17_024823_2204_XI_40N109W.json",
+      "bytes": 5970,
+      "sha256": "acc9805c94ce0786be7bdba1d12e0334464c51e7cfeaff71b45f52ef78ca1385"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/gregg_G21_026590_2205_XI_40N110W.json",
+      "bytes": 5965,
+      "sha256": "e908492b815e41004647f93375263c63c0b0cd05a196086ce64a13ec51252858"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ode_CRISM_TRDR_expanded.json",
+      "bytes": 1845289,
+      "sha256": "897bdcd7ca4963c391df872d49eff8d3c40ae0d1cbec25473e65e0949a45f51e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ode_CRISM_TRDR_local.json",
+      "bytes": 549588,
+      "sha256": "d583c03312e7d12bf9f30572c9cad0e1fb07778ad1c159174f5fd69579486784"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ode_SHARAD_RDR_expanded.json",
+      "bytes": 190721,
+      "sha256": "1fa09c979b11336151d90ba36700487da577d78da07c3193e1b7bbf55aa569ee"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ode_SHARAD_USRDR_local.json",
+      "bytes": 521,
+      "sha256": "45be38e9e3c76d3b324476cff0dd6b2ffdde32e7f7d98d7ac978f6489da9bbdb"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/ode_THEMIS_IRBTR_local.json",
+      "bytes": 221672,
+      "sha256": "85e4361911126320b58123da337d4b0671aae8f0c5cf5c3a4caff7f36b9e363d"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/piqueux_record.json",
+      "bytes": 8822,
+      "sha256": "6014164dfacfb97b20473d7be6be468b8c165f402e92e58a8fdfcafdd17c5b41"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/usgs_geology_metadata.xml",
+      "bytes": 14721,
+      "sha256": "38806845cae2354e4ab65c55f57819d3e001b3865aceb5a24426efd5412683f8"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/usgs_geology_selected_members.json",
+      "bytes": 1561,
+      "sha256": "0ff50080000318a97b10ce6fd2c51e0a8efc687c17a97a1dca868114adf28a25"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/sources/usgs_geology_zip_members.json",
+      "bytes": 52169,
+      "sha256": "82e5f8d4aa09e27b9fb0a6de65152fcfd4af7158993758a2d21d184d4c04af8d"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/swim_native_cells.csv",
+      "bytes": 15410,
+      "sha256": "5ee94b74b5d2c1db6316a954dcada9005d88a569d431405a2a8b04e78b73379e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/swim_recheck.json",
+      "bytes": 2567,
+      "sha256": "5305a51221adde1cb2be13eebf5fa9c4843f8d6a5cdb9ecaae4e77953d2acb8e"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/validate.py",
+      "bytes": 3667,
+      "sha256": "fbcfa41bcbcab5bcc63cc50a1086701ebe31da6ade0eb2ed337f53ebf5fd26a4"
+    },
+    {
+      "path": "outputs/research/MS-03/local_validation/validation.json",
+      "bytes": 1411,
+      "sha256": "c2dfd086f3c98b950104aa4f6205f14b386b349ad1c76a4ccc324a5e524f36fb"
+    },
+    {
+      "path": "docs/research/MS-03/local_validation/research_notes.md",
+      "bytes": 10931,
+      "sha256": "8714f93e593e18f587309ec5768846eb61a3c0a61832a106425a645ea84b65a3"
+    }
+  ],
+  "source_preservation_note": "Original acquired PDS labels, KML and XML retain provider whitespace/CRLF; git diff whitespace warnings for source bytes are intentionally not normalized. Authored Python/Markdown passed whitespace check."
+}

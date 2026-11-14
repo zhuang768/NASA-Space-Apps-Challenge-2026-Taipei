@@ -1,0 +1,46 @@
+[
+  {
+    "name": "SIM3292_MarsGlobalGeologicGIS_20M/SIM3292_Shapefiles/SIM3292_Global_Geology.dbf",
+    "compressed_size": 35465,
+    "uncompressed_size": 156235,
+    "compression": 8,
+    "local_header_offset": 744194452,
+    "crc32": 3074503595,
+    "acquired_bytes": 156235,
+    "sha256": "06a7b40338f8f62e1d8192e07068fcb343ca7c2f02ffb353bead832ffa1d2bab",
+    "crc32_verified": true
+  },
+  {
+    "name": "SIM3292_MarsGlobalGeologicGIS_20M/SIM3292_Shapefiles/SIM3292_Global_Geology.prj",
+    "compressed_size": 132,
+    "uncompressed_size": 176,
+    "compression": 8,
+    "local_header_offset": 744230026,
+    "crc32": 162087622,
+    "acquired_bytes": 176,
+    "sha256": "2fb085b6ac6c8594c2e411b1c99b35093b1ff01ba125b06e1b57328a2dc8f8bc",
+    "crc32_verified": true
+  },
+  {
+    "name": "SIM3292_MarsGlobalGeologicGIS_20M/SIM3292_Shapefiles/SIM3292_Global_Geology.shp",
+    "compressed_size": 54478945,
+    "uncompressed_size": 63803656,
+    "compression": 8,
+    "local_header_offset": 744240735,
+    "crc32": 1897203292,
+    "acquired_bytes": 63803656,
+    "sha256": "9c0fbc204c1c7f108a854036d85f44c77531e85e0c03959eaea2b6cd33197f3a",
+    "crc32_verified": true
+  },
+  {
+    "name": "SIM3292_MarsGlobalGeologicGIS_20M/SIM3292_Shapefiles/SIM3292_Global_Geology.shx",
+    "compressed_size": 8210,
+    "uncompressed_size": 10588,
+    "compression": 8,
+    "local_header_offset": 798729406,
+    "crc32": 2807353495,
+    "acquired_bytes": 10588,
+    "sha256": "c6e40da9148010bf93ac1cf57b4976635574e9b1977e5eef75c3930212011935",
+    "crc32_verified": true
+  }
+]

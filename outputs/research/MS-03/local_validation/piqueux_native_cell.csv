@@ -1,0 +1,2 @@
+﻿candidate_id,dataset_doi,record,version,row_0based,column_0based,latitude_planetocentric_deg,longitude_east_deg,lat_min,lat_max,lon_min,lon_max,model_ice_depth_m_raw,model_upper_regolith_TI,TI_units,actual_ice_depth_m,ice_volume_or_mass_fraction,evidence_type,nodata_code
+MS-03,10.22002/D1.1316,ym7fc-x0r93,1.0 (2019-11-27),64,484,57.75,242.25,57.5,58,242,242.5,0.103161566,215.4277344,J m^-2 K^-1 s^-1/2,unknown,unknown,"published model estimate, locally extracted; NOT direct measurement",-32768

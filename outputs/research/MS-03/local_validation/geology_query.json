@@ -1,0 +1,55 @@
+{
+  "dataset": "USGS SIM3292, original official ZIP",
+  "map_scale": "1:20,000,000",
+  "crs_wkt": "GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"D_Mars_2000_Sphere\",SPHEROID[\"Mars_2000_Sphere_IAU_IAG\",3396190.0,0.0]],PRIMEM[\"Reference_Meridian\",0.0],UNIT[\"Degree\",0.0174532925199433]]",
+  "query_bounds": [
+    -118,
+    57.5,
+    -117.5,
+    58
+  ],
+  "units": [
+    {
+      "attributes": {
+        "OBJECTID": 1264,
+        "Shape_Leng": 54157647.0854,
+        "Shape_Area": 9104016409190.0,
+        "Unit": "AHv",
+        "UnitDesc": "Amazonian and Hesperian volcanic",
+        "SphArea_km": 10105400.0
+      },
+      "source_shape_id": 1263,
+      "geometry_valid": true,
+      "covers_fixed_roi": true,
+      "contains_center": true,
+      "clipped_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.0,
+              57.5
+            ],
+            [
+              -118.0,
+              58.0
+            ],
+            [
+              -117.5,
+              58.0
+            ],
+            [
+              -117.5,
+              57.5
+            ],
+            [
+              -118.0,
+              57.5
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "limits": "Mapped regional volcanic substrate; no local soil, mantle, mineral assay, ice proof or map-contact accuracy claim."
+}

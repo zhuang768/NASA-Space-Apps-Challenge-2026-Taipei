@@ -20,10 +20,10 @@
   - **尺度對齊**：火星 1 度 ≈ 59 km、地球 1 度 ≈ 111 km；不直接用「經緯度度數」硬比，而是換算為相近的實際地面距離（火星 1° ≈ 地球 0.5°）。
   - **不比絕對海拔，比可跨星體物理量**：改用坡度（`slope_deg`）、局部起伏（`relief`）、熱慣量、乾旱度與冰徵兆。
 - **四大比較面向（定量 Core ＋ 定性 Subtopics）**：
-  1. **地形（Terrain）**：MOLA 坡度 ↔ NASADEM／地形坡度（子題：地質礦物、洞穴熔岩管）
+  1. **地形（Terrain）**：MOLA 坡度 ↔ SRTMGL30／地形坡度（子題：地質礦物、洞穴熔岩管）
   2. **溫度（Temperature）**：TES 夜間熱慣量 ↔ MODIS LST 日夜溫差（子題：地質軟硬、UV／輻射）
-  3. **水／冰（Water / Ice）**：SWIM 2.0 地下水冰一致性 ↔ GPM＋SMAP 乾旱度＋NDVI 植被扣分（子題：永凍土 ISRU、古水文與極端生物）
-  4. **大氣與沙塵（Air）**：Montabone MY34/MY35 沙塵氣候 ↔ MODIS AOD（子題：風成地形、氣壓限制）
+  3. **水／冰（Water / Ice）**：SWIM 2.0 地下水冰一致性 ↔ GPM＋GLDAS 土壤濕度乾旱度＋NDVI 植被扣分（子題：永凍土 ISRU、古水文與極端生物）
+  4. **大氣與沙塵（Air）**：Montabone MY34/MY35 沙塵氣候 ↔ MERRA-2 沙塵 AOT（子題：風成地形、氣壓限制）
 
 ---
 
@@ -78,8 +78,9 @@
   - 隊友 B（我）：專案策略、四大面向整合、場址深入分析與簡報敘事。
 - **核心開放資料來源**：
   - **火星**：NASA PDS（MGS MOLA、MGS TES）、SWIM 2.0（NASA 資助）、Montabone et al. LMD 沙塵氣候（TES/THEMIS/MCS）。
-  - **地球**：NASA Earthdata（NASADEM、MODIS LST/AOD/NDVI、GPM、SMAP）、NASA Worldview、Mars Trek。
+  - **地球**：NASA Earthdata（SRTMGL30、MODIS LST／NDVI、GPM IMERG、GLDAS、MERRA-2）、ESA CCI Permafrost v4.0、NASA Worldview、Mars Trek。
 - **AI 工具使用聲明（比賽規定必列）**：
   - **Cursor（Claude）**：協助專案架構設計、PDS/GeoTIFF/NetCDF 資料下載與讀取程式及單元測試撰寫。
   - **Gemini**：協助解讀 2026 挑戰規範、資料分類與四大面向整理、類比極限分析、簡報架構與場址報告撰寫。
+  - **Claude Code**：協助授權 Earthdata 資料中心、建立 Python 3.12 環境，並驗證下載的地球端資料與修正文件。
 - **專案連結**：GitHub Repo（`zhuang768/NASA-Space-Apps-Challenge-2026-Taipei`）。

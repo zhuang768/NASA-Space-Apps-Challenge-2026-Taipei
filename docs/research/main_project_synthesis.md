@@ -2,6 +2,8 @@
 
 Team zasa · 2026-11-14（Asia/Taipei）· Earth↔Mars。
 
+本文件是固定 I-01／I-02 範圍的 MR-v3 歷史交付，完整檔案見 `archive/mr-v3-final-delivery-20261114`。後續 main 已改採 MS-01／MS-02／MS-03，本輪不把 I-01／I-02 恢復為現行候選。
+
 ## 主要結論與本輪成果
 
 **我們完成的是：用已發表的地球冰界面資料，整理火星候選探查能依靠哪些證據、還有哪些限制。**主案例固定為 **I-02（53.75°N、42.25°E）→ EARTH-002 Elephant Head**，因為它已有可接續的歷史表與QA；這不是最佳類比、資源或登陸地點的判定。
@@ -13,7 +15,7 @@ Team zasa · 2026-11-14（Asia/Taipei）· Earth↔Mars。
 讀取順序：
 
 1. [兩頁英文摘要](../../outputs/research/final_research_summary_en.pdf)及[文字版](final_research_summary_en.md)。
-2. 總Excel `outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx`（本機已驗收；[檔案與驗收索引](../../outputs/consolidated/review/main_v3/verification.json)）：白底英文，Overview、當前卡片／角色／EH結果在前；保留的舊表明確標作歷史快照。
+2. [總Excel](../../outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx)（本機及遠端 Git 檔案物件已核對；[檔案與驗收索引](../../outputs/consolidated/review/main_v3/verification.json)）：白底英文，Overview、當前卡片／角色／EH結果在前；保留的舊表明確標作歷史快照。
 3. [EH交付索引](../../outputs/research/elephant_head_final/README.md)：原PDF、完整CSV、字典、QA與兩張PNG。
 4. [兩張火星研究卡](main_mars_research_cards.md)、[27項需求及歷史](main_research_requirements.csv)、[來源紀錄](../../outputs/consolidated/research_main_20261114/source_manifest.json)、[真實驗收狀態](../../outputs/consolidated/research_main_20261114/delivery_status.json)。
 
@@ -79,9 +81,17 @@ Team zasa · 2026-11-14（Asia/Taipei）· Earth↔Mars。
 
 本機HEAD與約50項其他tracked修改／刪除保留，不使用reset、stash、整棵覆寫或恢復已退役檔案。以最新遠端tree只加入自己負責的檔案，再用expected-head lease推送；實際GitHub交付與檔案hash以delivery_status／來源紀錄為準，不把本機Git未同步說成已同步。
 
-## 發布限制
+## 發布驗收
 
-本機Excel已完整驗收，23,035,176 bytes、SHA-256 `157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175`。GitHub連接器的16 MiB請求限制拒絕其base64上傳；CLI路徑不可用，瀏覽器上傳未完成。本輪遠端交付因此不含這一本Excel，不能稱全部成果已在main。CSV、字典、QA、兩圖、英文摘要及研究文件按實際遠端核對結果交付；完整Excel與備份保留在指定本機專案。這是發布缺件，不是以缺值補造結果或刪除原始溫度來縮檔。驗收後停止，不另開研究。
+完整Excel為23,035,176 bytes，SHA-256 `157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175`、Git blob `3cad1ffc711dbddeef6def24447e1bd1ff3fb5ba`。先前16 MiB連接器上傳限制是歷史阻礙；本次續接驗收時，該完整檔案已存在後續main `234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa`，大小與本機內容雜湊一致。直接沿用同一Git物件加入本輪交付分支，沒有刪除原始溫度、重存工作表或換算科學值。
+
+整套MR-v3檔案集中在 `archive/mr-v3-final-delivery-20261114`。以既有封存提交 `a9b5948d2ea29dbc7d9550d9fb9236beb266902a` 為基底，保留來源與歷史；本輪科學主案例仍只限I-02／EARTH-002。這不是將舊案例重新合併為現行main結果。
+
+既有Excel的兩個圖表公式指向main原路徑；在 `1506ede572435588eb5e64f95f24639279b77e56` 只補回兩張有原始歸屬的歷史EH圖及說明，修復連結。該提交只涉及這三個檔案，沒有修改現行MS科學資料、網站或已退役排名。
+
+遠端驗收以逐檔Git物件雜湊、大小、可讀CSV／QA／摘要及圖檔讀取為據。二進位Excel的連接器全文下載不支援；其遠端Git物件SHA與本機全部bytes計得的SHA相同，並有可開啟的GitHub檔案／下載連結。這與本機Excel內容、24張原表完整保留及32張總表的讀取驗收分開記錄，不假稱已用連接器全文下載23 MB檔案。
+
+本輪檔案交付完整，科學新穎性及火星冰況仍未確認。完成必要驗收後停止，不新增搜尋、場址、排名、實驗或隊友任務。
 
 ## 可直接轉述
 

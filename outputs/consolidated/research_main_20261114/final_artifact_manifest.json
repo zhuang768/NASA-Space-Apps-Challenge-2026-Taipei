@@ -15,9 +15,9 @@
     },
     {
       "path": "docs/research/main_project_synthesis.md",
-      "bytes": 10589,
-      "sha256": "815f7a278126f4441bc73e9905efe4878183dc158a99762eed7cb2e097901138",
-      "git_blob_sha": "256510b14877bf374469af8560fa5cedc78fa063"
+      "bytes": 11850,
+      "sha256": "d0412d349bab95b2dd7436c3974a46e283ed279013c8ad31cd58287f39a4eeb3",
+      "git_blob_sha": "6824c8500108721f1838ee32307b006ce900a84b"
     },
     {
       "path": "docs/research/main_research_requirements.csv",
@@ -30,7 +30,7 @@
       "bytes": 23035176,
       "sha256": "157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175",
       "git_blob_sha": "3cad1ffc711dbddeef6def24447e1bd1ff3fb5ba",
-      "remote_publication": "not_uploaded_connector_request_limit; accepted_local_artifact"
+      "remote_publication": "verified_existing_Git_blob_reused_in_final_delivery_branch"
     },
     {
       "path": "outputs/consolidated/previews/main_v3/EH Summary.png",
@@ -46,9 +46,9 @@
     },
     {
       "path": "outputs/consolidated/research_main_20261114/final_validation.json",
-      "bytes": 930,
-      "sha256": "6641fe801a0e0b7305c66e7abaaa0a9d6f6c4ed7050822116aa18a34ff0a9315",
-      "git_blob_sha": "216ab90f7d7b213d5e688bd3142c9b2a03d26232"
+      "bytes": 1930,
+      "sha256": "450a4016dc850de9102fac637630b3deec8190c99c8a6018466cf5101f4330ad",
+      "git_blob_sha": "36bac61238deee4a0ed137d4966d7442fb1f874b"
     },
     {
       "path": "outputs/consolidated/research_main_20261114/sources/final_ab1da697/docs/research/team2_novelty_audit.md",
@@ -224,5 +224,7 @@
     "temporary support and rendering files",
     "mutable evidence/source/delivery metadata have no self-hash"
   ],
-  "no_large_raw_grids": true
+  "no_large_raw_grids": true,
+  "publication_branch": "archive/mr-v3-final-delivery-20261114",
+  "current_main_role": "Historical workbook plus two figure-link compatibility assets; current MS research remains authoritative."
 }

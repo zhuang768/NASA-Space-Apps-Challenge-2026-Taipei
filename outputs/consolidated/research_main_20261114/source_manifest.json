@@ -1,6 +1,6 @@
 {
   "version": "MR-20261114-v3-final",
-  "checked_taipei": "2026-11-14T20:58:22.309892+08:00",
+  "checked_taipei": "2026-11-15T04:59:02.055039+08:00",
   "remote_main_at_start": "501d6454624108cf7b7e7f8ad572540bc7f774eb",
   "remote_source_main": "ab1da697ad2093ca8185d29932e3fc5b85e7f80b",
   "remote_source_tree": null,
@@ -202,7 +202,10 @@
     "MEDA_records_retained": 159418,
     "known_styles_child_order_fixed": 4,
     "large_grids_included": false,
-    "QA_path": "outputs/consolidated/review/main_v3/verification.json"
+    "QA_path": "outputs/consolidated/review/main_v3/verification.json",
+    "remote_verified": true,
+    "remote_blob_sha": "3cad1ffc711dbddeef6def24447e1bd1ff3fb5ba",
+    "remote_source_ref": "234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa"
   },
   "no_reranking_or_weights_change": true,
   "delivery_record": "delivery_status.json",
@@ -235,5 +238,15 @@
   "MRv2_remote_source_main": "bc9fe3c0f352632a7117dbdab24df21b7450738e",
   "MRv2_remote_source_tree": "ee4b92db79ac7ca1053ba96619a87e08652b3c66",
   "remote_source_tree_note": "Source references are pinned by commit and per-file Git blob; no stale earlier tree SHA is used.",
-  "publication_receipt": "outputs/consolidated/research_main_20261114/publication_receipt.json"
+  "publication_receipt": "outputs/consolidated/research_main_20261114/publication_receipt.json",
+  "final_delivery_publication": {
+    "branch": "archive/mr-v3-final-delivery-20261114",
+    "base_commit": "a9b5948d2ea29dbc7d9550d9fb9236beb266902a",
+    "remote_main_at_resumption": "234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa",
+    "science_scope": "Historical MR-v3 I-01/I-02; no update or replacement of current MS results",
+    "workbook_reused_from_existing_git_blob": "3cad1ffc711dbddeef6def24447e1bd1ff3fb5ba",
+    "workbook_same_bytes_as_local": true,
+    "figure_link_repair_commit": "1506ede572435588eb5e64f95f24639279b77e56",
+    "old_upload_blocker_resolved": true
+  }
 }

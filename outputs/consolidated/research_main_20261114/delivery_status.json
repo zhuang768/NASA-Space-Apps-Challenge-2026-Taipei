@@ -1,6 +1,6 @@
 {
   "version": "MR-20261114-v3-final",
-  "updated_taipei": "2026-11-14T20:58:22.309892+08:00",
+  "updated_taipei": "2026-11-15T04:59:02.055039+08:00",
   "scope": "fixed_archival_QA_descriptive_reproduction_and_evidence_requirements",
   "main_case": "I-02/EARTH-002",
   "content_acceptance": "complete",
@@ -11,7 +11,7 @@
   "previous_MRv2_merge_commit": "b35a01ded4d03132cea8ef141e0864dcf4ca39cc",
   "previous_MRv2_receipt_commit": "501d6454624108cf7b7e7f8ad572540bc7f774eb",
   "source_main": "ab1da697ad2093ca8185d29932e3fc5b85e7f80b",
-  "research_branch": "codex/mars-research-mainline-20261114",
+  "research_branch": "archive/mr-v3-final-delivery-20261114",
   "local_main_synced": false,
   "other_local_work_preserved": true,
   "excel_updated": true,
@@ -30,16 +30,14 @@
   "scientific_limits_retained": true,
   "future_experiments_executed": false,
   "known_limits_closed_no_further_tasks": true,
-  "publication_commit": "e9554f121133662c25f3707d16a8b79a8a5cde41",
-  "workbook_remote_verified": false,
+  "publication_commit": null,
+  "workbook_remote_verified": true,
   "integrated_into_main": false,
-  "research_documents_integrated_into_main": true,
-  "remote_artifact_gaps": [
-    "outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx"
-  ],
-  "remote_upload_blocker": "GitHub connector rejects request bodies above16MiB;23,035,176-byte workbook requires larger base64 body. CLI path unavailable; browser upload not completed.",
-  "remote_delivery_status": "limited_workbook_upload_blocked",
-  "task_delivery_label": "本輪限制版交付完成",
+  "research_documents_integrated_into_main": false,
+  "remote_artifact_gaps": [],
+  "remote_upload_blocker": null,
+  "remote_delivery_status": "final_branch_publication_in_progress",
+  "task_delivery_label": "本輪檔案驗收完成；交付分支發布待核對",
   "artifact_manifest": "outputs/consolidated/research_main_20261114/final_artifact_manifest.json",
   "validation": {
     "version": "MR-20261114-v3-final",
@@ -69,8 +67,41 @@
     "science_limits_retained": true,
     "workbook_QA_path": "outputs/consolidated/review/main_v3/verification.json",
     "reader_QA_path": "outputs/consolidated/review/main_v3/reader_qa.json",
-    "validation_scope": "Final artifacts and inherited references; no reranking, new measurements or new literature searches."
+    "validation_scope": "Final artifacts and inherited references; no reranking, new measurements or new literature searches.",
+    "resumption_acceptance": {
+      "checked_taipei": "2026-11-15T04:59:02.055039+08:00",
+      "content_validation_reused_by_same_workbook_sha256": true,
+      "independently_recomputed_EH_rows": 8922,
+      "independently_recomputed_EH_valid_3cm": 2646,
+      "independently_recomputed_summer_pairs": 2160,
+      "independently_recomputed_mean_delta_C": 3.2748518518518517,
+      "source_page_spot_checks_repeated": [
+        1,
+        73,
+        2232,
+        2646,
+        2647,
+        4500,
+        8922
+      ],
+      "original_worksheet_parts_compared_again": 24,
+      "workbook_zip_CRC_valid": true,
+      "remote_workbook_blob_sha": "3cad1ffc711dbddeef6def24447e1bd1ff3fb5ba",
+      "remote_workbook_bytes": 23035176,
+      "binary_remote_verification_method": "Git content-addressed blob SHA and size match independently hashed local bytes; no connector full-binary download claimed",
+      "historical_scope_only": true,
+      "two_historical_figure_links_repaired_in_main_commit": "1506ede572435588eb5e64f95f24639279b77e56"
+    }
   },
   "stop_after_necessary_acceptance_repairs": true,
-  "publication_receipt": "outputs/consolidated/research_main_20261114/publication_receipt.json"
+  "publication_receipt": "outputs/consolidated/research_main_20261114/publication_receipt.json",
+  "previous_publication_commit": "e9554f121133662c25f3707d16a8b79a8a5cde41",
+  "finalization_remote_main_at_start": "234e58a8a0a0a9966e97e1b13d7ccc587cf3e8aa",
+  "final_delivery_base_commit": "a9b5948d2ea29dbc7d9550d9fb9236beb266902a",
+  "excel_git_blob_sha": "3cad1ffc711dbddeef6def24447e1bd1ff3fb5ba",
+  "excel_remote_bytes": 23035176,
+  "research_documents_previously_integrated_into_main": true,
+  "delivery_branch_is_historical": true,
+  "main_preservation": "Current MS research retained; only the two historical EH figure targets and their explanatory index were added.",
+  "figure_link_repair_commit": "1506ede572435588eb5e64f95f24639279b77e56"
 }

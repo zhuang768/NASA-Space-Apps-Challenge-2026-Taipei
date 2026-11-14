@@ -26,5 +26,29 @@
   "science_limits_retained": true,
   "workbook_QA_path": "outputs/consolidated/review/main_v3/verification.json",
   "reader_QA_path": "outputs/consolidated/review/main_v3/reader_qa.json",
-  "validation_scope": "Final artifacts and inherited references; no reranking, new measurements or new literature searches."
+  "validation_scope": "Final artifacts and inherited references; no reranking, new measurements or new literature searches.",
+  "resumption_acceptance": {
+    "checked_taipei": "2026-11-15T04:59:02.055039+08:00",
+    "content_validation_reused_by_same_workbook_sha256": true,
+    "independently_recomputed_EH_rows": 8922,
+    "independently_recomputed_EH_valid_3cm": 2646,
+    "independently_recomputed_summer_pairs": 2160,
+    "independently_recomputed_mean_delta_C": 3.2748518518518517,
+    "source_page_spot_checks_repeated": [
+      1,
+      73,
+      2232,
+      2646,
+      2647,
+      4500,
+      8922
+    ],
+    "original_worksheet_parts_compared_again": 24,
+    "workbook_zip_CRC_valid": true,
+    "remote_workbook_blob_sha": "3cad1ffc711dbddeef6def24447e1bd1ff3fb5ba",
+    "remote_workbook_bytes": 23035176,
+    "binary_remote_verification_method": "Git content-addressed blob SHA and size match independently hashed local bytes; no connector full-binary download claimed",
+    "historical_scope_only": true,
+    "two_historical_figure_links_repaired_in_main_commit": "1506ede572435588eb5e64f95f24639279b77e56"
+  }
 }

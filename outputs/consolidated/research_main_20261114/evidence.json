@@ -1,6 +1,6 @@
 {
   "version": "MR-20261114-v3-final",
-  "checked_taipei": "2026-11-14T20:58:22.309892+08:00",
+  "checked_taipei": "2026-11-15T04:59:02.055039+08:00",
   "workbook_sha256": "157a108a08b8ca32ca52b40f3e9e80536431125cecfb838aa21223a933ac1175",
   "status": "PASS_FIXED_SCOPE_FINAL_ARTIFACTS",
   "executable_cell_checks": 44,
@@ -641,5 +641,9 @@
     }
   },
   "final_validation_path": "outputs/consolidated/research_main_20261114/final_validation.json",
-  "inherited_source_main_MRv2": "bc9fe3c0f352632a7117dbdab24df21b7450738e"
+  "inherited_source_main_MRv2": "bc9fe3c0f352632a7117dbdab24df21b7450738e",
+  "final_delivery_branch": "archive/mr-v3-final-delivery-20261114",
+  "workbook_remote_verified": true,
+  "workbook_git_blob_sha": "3cad1ffc711dbddeef6def24447e1bd1ff3fb5ba",
+  "current_main_scientific_cases_not_replaced": true
 }

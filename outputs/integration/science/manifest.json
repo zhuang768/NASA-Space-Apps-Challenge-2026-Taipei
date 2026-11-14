@@ -1,0 +1,286 @@
+{
+  "schema": "ZASA-FINAL-SCIENCE-SYNTHESIS-v1",
+  "team": "zasa",
+  "date_taipei": "2026-11-15",
+  "main_baseline_sha": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+  "branch": "integration/research-synthesis",
+  "source_prs": [
+    {
+      "pr": 6,
+      "head": "38b8fa0dea527b1cc47aeb02dc260e039da37122",
+      "branch": "research/ms-02-earth-analogs",
+      "base": "handoff/verified-data-20261114",
+      "base_sha": "f7076c9fdc77e00244ed5d6863aad2bf78cfa28f",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/6",
+      "updated_at": "2026-11-14T17:17:19Z"
+    },
+    {
+      "pr": 7,
+      "head": "8f6d3134bc5bfef6e83a4caddb1d602872d40708",
+      "branch": "research/ms-03-earth-analogs",
+      "base": "main",
+      "base_sha": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/7",
+      "updated_at": "2026-11-14T17:39:09Z"
+    },
+    {
+      "pr": 8,
+      "head": "b4b6929e890018668ef4faa9a74128a4ce5aa8df",
+      "branch": "research/ms-01-earth-analogs",
+      "base": "main",
+      "base_sha": "3cc8488577535e2fa4d146021fde51f8ff6cc667",
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/pull/8",
+      "updated_at": "2026-11-14T17:24:08Z"
+    }
+  ],
+  "scope": "Read completed fixed research only; no new site, literature search or physical validation; no source branch mutation or main merge",
+  "source_index": "outputs/integration/science/source_index.json",
+  "source_files": 42,
+  "source_byte_exact_matches": 42,
+  "comparison_grain": "one Mars target per row;3 rows;8 scoped candidate IDs in nested JSON",
+  "data_kind_policy": "Measurements and author-processed exports remain Earth observations;Mars products remain inferences;prior team reprocessing is attributed;this integration copies/compares sources and labels hypotheses.",
+  "units": {
+    "mola_slope_deg_mean": "degree at~3.7km baseline",
+    "mola_relief_m": "m,nominal native centres",
+    "TES_TI_mean": "J m^-2 K^-1 s^-0.5",
+    "SWIM_0_1m_mean": "dimensionless consistency,not fraction/probability",
+    "SWIM_1_5m_mean": "dimensionless consistency,not fraction/probability",
+    "dust_*_cdodtot": "dimensionless9.3micrometre absorption column optical depth",
+    "MCS_paired_contrast_median_K": "K,MY/Ls paired bins,not daily amplitude"
+  },
+  "latest_dispositions": {
+    "MS-01": {
+      "MS-01-E01": "保留，限定熱傳與可辨識性",
+      "MS-01-E02": "保留可選文獻補充；原始序列待證"
+    },
+    "MS-02": {
+      "MS-02-E01": "保留，限定熱響應參照",
+      "MS-02-E02": "待補證據",
+      "MS-02-E03": "降為一般方法參照；CS-1子過程仍可引用",
+      "MS-02-E04": "待補證據"
+    },
+    "MS-03": {
+      "MS-03-E01": "保留為已知方法／歷史資料參照",
+      "MS-03-E02": "降為一般方法參照，退出具體MS-03配對"
+    }
+  },
+  "issues": [
+    {
+      "id": "I01",
+      "classification": "歷史狀態與新版補充不一致",
+      "topic": "MS-01候選主表仍稱S/M/D待下載",
+      "sources": [
+        {
+          "source_id": "MS01_CANDIDATES",
+          "locator": "E01.available_data/next_step"
+        },
+        {
+          "source_id": "MS01_THERMAL",
+          "locator": "§1–3"
+        }
+      ],
+      "decision": "共同結論採已核hash及264有效列的新補充；原候選表保留歷史，不回寫他人成果。",
+      "unresolved": "來源表是否另行整理由統籌決定；不影響固定短窗結果。"
+    },
+    {
+      "id": "I02",
+      "classification": "同一報告用途敘述寬於最新處置",
+      "topic": "MS-02前段及候選用途仍提覆土＋雷達，與§8B降級不同",
+      "sources": [
+        {
+          "source_id": "MS02_REPORT",
+          "locator": "§5/§6對照§8B"
+        },
+        {
+          "source_id": "MS02_CANDIDATES",
+          "locator": "E01.disposition_reason;E03.testable_physical_processes"
+        },
+        {
+          "source_id": "MS02_CLAIMS",
+          "locator": "C7/C9"
+        }
+      ],
+      "decision": "採§8B限定；不引用H1/H2編號錯位或同址雷達已成立的措辭。",
+      "unresolved": "原稿措辭修訂歸原作者／統籌；本輪不補雷達真值。"
+    },
+    {
+      "id": "I03",
+      "classification": "歷史enum與取得狀態不同",
+      "topic": "MS-03 E01字串仍帶pending_raw_series，但data_status說處理後匯出已取得",
+      "sources": [
+        {
+          "source_id": "MS03_CANDIDATES",
+          "locator": "E01.disposition/data_status"
+        },
+        {
+          "source_id": "MS03_REPORT",
+          "locator": "2026-11-15時序取得與時標交接"
+        }
+      ],
+      "decision": "明寫作者處理匯出已得，未處理logger／原碼與時鐘記錄未得；不籠統寫原時序全未取。",
+      "unresolved": "enum是否更新由統籌決定；不能把已得匯出當未處理真值。"
+    },
+    {
+      "id": "I04",
+      "classification": "同名候選、不同用途與閱讀範圍",
+      "topic": "Beacon在MS-01保留補充、MS-02待證；UV／Adventdalen也不是同名即可同孔",
+      "sources": [
+        {
+          "source_id": "MS01_THERMAL",
+          "locator": "§6"
+        },
+        {
+          "source_id": "MS02_CANDIDATES",
+          "locator": "E01–E04"
+        },
+        {
+          "source_id": "MS03_CANDIDATES",
+          "locator": "E01/E02"
+        }
+      ],
+      "decision": "保留完整候選ID及各自處置；不按谷名合併、套座標或自動升級。",
+      "unresolved": "跨來源精確範圍對應未完成，留待統籌判定是否可共用。"
+    },
+    {
+      "id": "I05",
+      "classification": "匯出檔／時期不同，來源關係未知",
+      "topic": "W短版與長版時間欄位差不同",
+      "sources": [
+        {
+          "source_id": "MS01_THERMAL",
+          "locator": "§2時標；short09_10"
+        },
+        {
+          "source_id": "MS03_CLOCK",
+          "locator": "long09_13 offsets−1/−5h;2012boundary"
+        },
+        {
+          "source_id": "MS03_CLOCK_SEARCH",
+          "locator": "root_cause=unknown"
+        }
+      ],
+      "decision": "按檔／期間保留限制；不平均、不校時、不跨logger join，也不因2012長檔問題否定2010短窗全部數字。",
+      "unresolved": "真正對時與生成鏈未知，需原碼與logger紀錄；本輪不追查。"
+    },
+    {
+      "id": "I06",
+      "classification": "未經本輪核定的定義與數值",
+      "topic": "MS-02 EV-018約2560h同時水活度與溫度雙閾值",
+      "sources": [
+        {
+          "source_id": "MS02_EVIDENCE",
+          "locator": "EV-018;p161 Fig6"
+        },
+        {
+          "source_id": "MS02_REPORT",
+          "locator": "§8 E01"
+        }
+      ],
+      "decision": "列待核定，不納入共同關鍵結論；另外兩組未交付同定義雙閾值核算，不能由其他溫度統計補證。",
+      "unresolved": "需核對原文圖說、量的定義、年／深度與實測／模型別；本輪未重查原文。"
+    },
+    {
+      "id": "I07",
+      "classification": "定義差異，非已證實數字錯誤",
+      "topic": "原生格摘要與stack摘要不可混欄比較",
+      "sources": [
+        {
+          "source_id": "MARS_CSV",
+          "locator": "native SWIM/TES/MOLA columns vs stack_*"
+        },
+        {
+          "source_id": "MS02_VERIFICATION",
+          "locator": "checks;expected_scale_differences_not_errors"
+        }
+      ],
+      "decision": "三點總表統一原生格欄；保留stack是另一定義，不以同名近值相互替代。",
+      "unresolved": "不重做原始網格；共同數字的來源一致性不等於獨立真值。"
+    },
+    {
+      "id": "I08",
+      "classification": "測站座標版本衝突仍未解",
+      "topic": "UV的2009部署與2022論文把S/D具名座標對調；MS-02另用谷錨點",
+      "sources": [
+        {
+          "source_id": "MS01_STATIONS",
+          "locator": "S8/D36 paper vs deployment2009"
+        },
+        {
+          "source_id": "MS02_CANDIDATES",
+          "locator": "E01 coordinate/boundary_basis"
+        }
+      ],
+      "decision": "S/D按匯出與serial辨識；谷錨點與W孔位分開；不做未核對的坡向／陰影歸因。",
+      "unresolved": "哪版位置正確未知，本輪不代原作者修正。"
+    },
+    {
+      "id": "I09",
+      "classification": "舊警示已釐清，根因仍未知",
+      "topic": "MS-03舊615筆位置未知與新版緯度排除不同",
+      "sources": [
+        {
+          "source_id": "MS03_INDEX",
+          "locator": "legacy_flagged_rows;flagged_latitude_intersections;all_raw_rows_roi_bbox_intersections;decision"
+        },
+        {
+          "source_id": "MS03_REPORT",
+          "locator": "最新生成元件追查；正式交接"
+        },
+        {
+          "source_id": "MS03_DUPLICATES",
+          "locator": "149/78/71/29及causal_interpretation"
+        }
+      ],
+      "decision": "採新版：615筆有有效緯度且可排除本格；149額外列數量已對應，生成根因仍未知。",
+      "unresolved": "不能延伸成完整觀測無覆蓋、已修正官方表、已知SQL根因或形貌不存在。"
+    }
+  ],
+  "unmet_goals": [
+    "Global novelty/understudied status not established for all3 targets",
+    "Not3 confirmed environmental matches or2successful matches per target",
+    "No local Mars ice/material truth or unique thermal attribution",
+    "No same-forcing/material ice-free control or co-located Adventdalen radar truth",
+    "MS03 local morphology unknown;catalogue completeness/rootcause unknown",
+    "Per-export clock and UVS/Dposition conflicts unresolved"
+  ],
+  "files": [
+    {
+      "path": "docs/integration/science/synthesis.md",
+      "bytes": 43840,
+      "sha256": "9bf91041b250edb1a2af56e80ffdf74ee28b29c8381ec9891c45bd6b27c1c9d7"
+    },
+    {
+      "path": "outputs/integration/science/build.py",
+      "bytes": 23548,
+      "sha256": "7e05a48a60c9daf23e84a01a5b4a450810b01db74dca7bbdf61d75eb27145169"
+    },
+    {
+      "path": "outputs/integration/science/comparison.csv",
+      "bytes": 16148,
+      "sha256": "dfc123021128e050b2b9397cde4338129289df46ff36e3949cef802def9c9798"
+    },
+    {
+      "path": "outputs/integration/science/research_cards.json",
+      "bytes": 27701,
+      "sha256": "64247dcb95934c15f181404771f3f3ba892dd9d9ffa71d8aa023d197a07d80eb"
+    },
+    {
+      "path": "outputs/integration/science/source_index.json",
+      "bytes": 45093,
+      "sha256": "22bacd9c6dd2b4bf8e21d15ee3153bdfff77f095697197cd9e6734a361d6694b"
+    },
+    {
+      "path": "outputs/integration/science/verification.json",
+      "bytes": 1225,
+      "sha256": "cbd90ee8e0f0068945e2dc3641722f48b43526c164c92df12e374ee617004063"
+    },
+    {
+      "path": "outputs/integration/science/verify.py",
+      "bytes": 8932,
+      "sha256": "1ab4a1c0d7955c6b217e160c48cb5947f5989214fee534ed155fa006a4651827"
+    }
+  ],
+  "hash_scope": "All own deliverables including verification.json;only this manifest and __pycache__ excluded.",
+  "preservation": "Remote branch created from pinned main via GitHub API;shared dirty checkout not switched/reset;only science paths published.",
+  "stop": "Deliver this synthesis and PR;do not expand research or wait for other integration streams."
+}

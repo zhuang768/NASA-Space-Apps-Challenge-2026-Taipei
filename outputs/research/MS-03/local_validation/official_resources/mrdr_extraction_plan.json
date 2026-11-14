@@ -1,0 +1,189 @@
+{
+  "starting_sha": "44c2e03b8617c7bb536ad712b85f4716dd190d7c",
+  "native_lines": 1636,
+  "native_samples": 1091,
+  "radius_m": 3381164.4,
+  "pixel_scale_m": 180.4662,
+  "standard_parallel_deg": 60.0,
+  "central_meridian_east_deg": -116.666667,
+  "line_projection_offset": 20436.6830587,
+  "sample_projection_offset": 544.1293782,
+  "roi_rows_0based": [
+    1471,
+    1634
+  ],
+  "roi_columns_0based": [
+    327,
+    407
+  ],
+  "roi_pixel_centres": 13284,
+  "coordinate_method": "PDS 0-based centre: x=(column-sample_offset)*scale; y=(line_offset-row)*scale; longitude=lon0+x/(R*cos(lat_ts)); latitude=y/R. Independent HDR corner-plus-half-pixel check.",
+  "metadata_warning": "Source EASTERNMOST_LONGITUDE=+113.32495 conflicts with projected last centre near-113.328; unchanged source retained. Select from projection, not the faulty bbox.",
+  "requests": [
+    {
+      "product_id": "T1811_MRRAL_60N243_0327_4",
+      "type": "al",
+      "band_index_0based": 28,
+      "quantity": 1367,
+      "actual_wavelength_nm": 1368.61,
+      "byte_start": 206325556,
+      "byte_end": 207041251,
+      "subset_file": "t1811_mrral_60n243_0327_4_band28_rows.bin",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrral_60n243_0327_4.img"
+    },
+    {
+      "product_id": "T1811_MRRAL_60N243_0327_4",
+      "type": "al",
+      "band_index_0based": 33,
+      "quantity": 1505,
+      "actual_wavelength_nm": 1506.61,
+      "byte_start": 242023076,
+      "byte_end": 242738771,
+      "subset_file": "t1811_mrral_60n243_0327_4_band33_rows.bin",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrral_60n243_0327_4.img"
+    },
+    {
+      "product_id": "T1811_MRRAL_60N243_0327_4",
+      "type": "al",
+      "band_index_0based": 34,
+      "quantity": 1558,
+      "actual_wavelength_nm": 1559.21,
+      "byte_start": 249162580,
+      "byte_end": 249878275,
+      "subset_file": "t1811_mrral_60n243_0327_4_band34_rows.bin",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrral_60n243_0327_4.img"
+    },
+    {
+      "product_id": "T1811_MRRAL_60N243_0327_4",
+      "type": "al",
+      "band_index_0based": 39,
+      "quantity": 1808,
+      "actual_wavelength_nm": 1809.39,
+      "byte_start": 284860100,
+      "byte_end": 285575795,
+      "subset_file": "t1811_mrral_60n243_0327_4_band39_rows.bin",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrral_60n243_0327_4.img"
+    },
+    {
+      "product_id": "T1811_MRRAL_60N243_0327_4",
+      "type": "al",
+      "band_index_0based": 44,
+      "quantity": 2007,
+      "actual_wavelength_nm": 2007.23,
+      "byte_start": 320557620,
+      "byte_end": 321273315,
+      "subset_file": "t1811_mrral_60n243_0327_4_band44_rows.bin",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrral_60n243_0327_4.img"
+    },
+    {
+      "product_id": "T1811_MRRAL_60N243_0327_4",
+      "type": "al",
+      "band_index_0based": 45,
+      "quantity": 2067,
+      "actual_wavelength_nm": 2066.64,
+      "byte_start": 327697124,
+      "byte_end": 328412819,
+      "subset_file": "t1811_mrral_60n243_0327_4_band45_rows.bin",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrral_60n243_0327_4.img"
+    },
+    {
+      "product_id": "T1811_MRRSU_60N243_0327_4",
+      "type": "su",
+      "band_index_0based": 24,
+      "quantity": "BD1500_2",
+      "actual_wavelength_nm": null,
+      "byte_start": 177767540,
+      "byte_end": 178483235,
+      "subset_file": "t1811_mrrsu_60n243_0327_4_band24_rows.bin",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrsu_60n243_0327_4.img"
+    },
+    {
+      "product_id": "T1811_MRRSU_60N243_0327_4",
+      "type": "su",
+      "band_index_0based": 23,
+      "quantity": "BD1435",
+      "actual_wavelength_nm": null,
+      "byte_start": 170628036,
+      "byte_end": 171343731,
+      "subset_file": "t1811_mrrsu_60n243_0327_4_band23_rows.bin",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrsu_60n243_0327_4.img"
+    },
+    {
+      "product_id": "T1811_MRRSU_60N243_0327_4",
+      "type": "su",
+      "band_index_0based": 25,
+      "quantity": "ICER1_2",
+      "actual_wavelength_nm": null,
+      "byte_start": 184907044,
+      "byte_end": 185622739,
+      "subset_file": "t1811_mrrsu_60n243_0327_4_band25_rows.bin",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrsu_60n243_0327_4.img"
+    },
+    {
+      "product_id": "T1811_MRRDE_60N243_0327_4",
+      "type": "de",
+      "band_index_0based": 0,
+      "quantity": "Target ID",
+      "actual_wavelength_nm": null,
+      "byte_start": 6419444,
+      "byte_end": 7135139,
+      "subset_file": "t1811_mrrde_60n243_0327_4_band00_rows.bin",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrde_60n243_0327_4.img"
+    },
+    {
+      "product_id": "T1811_MRRDE_60N243_0327_4",
+      "type": "de",
+      "band_index_0based": 1,
+      "quantity": "Segment ID (Counter)",
+      "actual_wavelength_nm": null,
+      "byte_start": 13558948,
+      "byte_end": 14274643,
+      "subset_file": "t1811_mrrde_60n243_0327_4_band01_rows.bin",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrde_60n243_0327_4.img"
+    },
+    {
+      "product_id": "T1811_MRRDE_60N243_0327_4",
+      "type": "de",
+      "band_index_0based": 4,
+      "quantity": "IR (L-detector) Sample",
+      "actual_wavelength_nm": null,
+      "byte_start": 34977460,
+      "byte_end": 35693155,
+      "subset_file": "t1811_mrrde_60n243_0327_4_band04_rows.bin",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrde_60n243_0327_4.img"
+    },
+    {
+      "product_id": "T1811_MRRDE_60N243_0327_4",
+      "type": "de",
+      "band_index_0based": 5,
+      "quantity": "IR (L-detector) Line",
+      "actual_wavelength_nm": null,
+      "byte_start": 42116964,
+      "byte_end": 42832659,
+      "subset_file": "t1811_mrrde_60n243_0327_4_band05_rows.bin",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrde_60n243_0327_4.img"
+    },
+    {
+      "product_id": "T1811_MRRDE_60N243_0327_4",
+      "type": "de",
+      "band_index_0based": 9,
+      "quantity": "Latitude - areocentric - deg N",
+      "actual_wavelength_nm": null,
+      "byte_start": 70674980,
+      "byte_end": 71390675,
+      "subset_file": "t1811_mrrde_60n243_0327_4_band09_rows.bin",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrde_60n243_0327_4.img"
+    },
+    {
+      "product_id": "T1811_MRRDE_60N243_0327_4",
+      "type": "de",
+      "band_index_0based": 10,
+      "quantity": "Longitude - areocentric - deg E",
+      "actual_wavelength_nm": null,
+      "byte_start": 77814484,
+      "byte_end": 78530179,
+      "subset_file": "t1811_mrrde_60n243_0327_4_band10_rows.bin",
+      "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrde_60n243_0327_4.img"
+    }
+  ]
+}

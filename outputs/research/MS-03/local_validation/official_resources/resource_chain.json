@@ -1,0 +1,29 @@
+{
+  "starting_sha": "44c2e03b8617c7bb536ad712b85f4716dd190d7c",
+  "official_resources_verified": true,
+  "read_method": "urllib HTTP200 HTML; decoded Next flight text length, no scripts executed; web reader initially failed",
+  "flight_reference": "25",
+  "fragment_utf8_bytes": 5240,
+  "resource_names": [
+    "NASA Earthdata Search",
+    "NASA Worldview",
+    "NASA Planetary Data System (PDS)",
+    "NASA Lunar Reconnaissance Orbiter (LRO)",
+    "NASA LRO Diviner Lunar Data",
+    "RADARSAT Constellation Mission (RCM) - Data",
+    "RADARSAT 1 - Data",
+    "Synthetic Aperture Radar (SAR) Python Tutorial",
+    "Copernicus Data Space Ecosystem",
+    "ESA Open Science Catalog",
+    "JAXA G-Portal"
+  ],
+  "selected_gateway": "NASA Planetary Data System (PDS)",
+  "chain": [
+    "official challenge resourcesTabContent",
+    "https://pds.nasa.gov/",
+    "PDS Geosciences Node",
+    "https://pds-geosciences.wustl.edu/missions/mro/crism.htm",
+    "official CRISM derived products and ODE lookup"
+  ],
+  "limits": "Official list supplies PDS gateway; it does not specifically name the local products, certify this analysis or supply pixel quality for MS-03."
+}

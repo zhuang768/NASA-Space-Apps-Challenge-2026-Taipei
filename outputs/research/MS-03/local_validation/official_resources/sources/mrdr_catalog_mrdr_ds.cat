@@ -1,0 +1,1018 @@
+PDS_VERSION_ID                     = PDS3
+LABEL_REVISION_NOTE                = "2006-09-20, S. MURCHIE edited;
+                                      2007-01-17, S. MURCHIE edited;
+                                      2007-05-10, S. MURCHIE edited;
+                                      2007-11-19, S. MURCHIE edited;
+                                      2008-07-21, S. MURCHIE edited;
+                                      2020-09-18, A. WHITE edited; 
+                                      2022-04-24, S. MURCHIE edited."
+RECORD_TYPE                        = STREAM
+
+OBJECT                             = DATA_SET
+
+  DATA_SET_ID                      = "MRO-M-CRISM-5-RDR-MULTISPECTRAL-V1.0"
+
+  OBJECT                           = DATA_SET_INFORMATION
+    DATA_SET_NAME                  = "MRO CRISM MULTISPECTRAL REDUCED 
+                                     DATA RECORD V1.0"
+    DATA_SET_COLLECTION_MEMBER_FLG = "N"
+    DATA_OBJECT_TYPE               = {"TABLE", "IMAGE"}
+    START_TIME                     = "N/A"
+    STOP_TIME                      = "N/A"
+    DATA_SET_RELEASE_DATE          = 2007-12-07
+    PRODUCER_FULL_NAME             = "SCOTT MURCHIE"
+    DETAILED_CATALOG_FLAG          = "N"
+    ARCHIVE_STATUS                 = "ARCHIVED - ACCUMULATING"
+
+    CITATION_DESC                  = "Murchie, S., Mars Reconnaissance
+      Orbiter Compact Reconnaissance Imaging Spectrometer for Mars
+      Multispectral Reduced Data Record,
+      MRO-M-CRISM-5-RDR-MULTISPECTRAL-V1.0, NASA Planetary Data System,
+      2006."
+
+    DATA_SET_TERSE_DESC            = "Multispectral Reduced Data Records
+      for IR and VNIR image cubes for CRISM (Compact Reconnaissance
+      Imaging Spectrometer for Mars)."
+
+    ABSTRACT_DESC                  = "This dataset contains CRISM
+      Multispectral Reduced Data Records (MRDRs). MRDRs are organized
+      into 30 subdirectories named by the Mars Chart containing the
+      MRDR, e.g. MC01. Latitude and longitude limits of Mars Charts
+      are given in the CRISM Data Product SIS and Data Archive SIS.
+
+      An MRDR consists of several or more strips of multispectral survey
+      data mosaicked into a map tile. Thus a map tile is constructed from
+      a large number of TRDRs. The mosaic is uncontrolled (accepting
+      existing pointing data resulting in minor image mismatch at seams
+      within a mosaic). The tile contains up to five images:
+        I/F extracted from TRDRs
+        Lambert albedo
+        summary products
+        DDR data corresponding to the I/F and/or Lambert albedo, augmented
+          with additional positional information
+
+      The MRDR also contains one text file, listing the wavelengths present.
+
+      Each file has a separate label.
+
+      For every latitude or longitude in an MRDR, there is a value of I/F
+      and/or Lambert albedo corrected for atmospheric and photometric 
+      effects, plus all the information needed to provide 
+      traceability to the source data. For the first two of three 
+      versions of the map, while detailed corrections for instrumental
+      and atmospheric effects were still under development (v1, v3), 
+      I/F from source TRDRs was included. In v1 and the final version (v4)
+      corrected Lambert albedo is included.
+
+      A global pattern of 1964 tiles each approximately 5 by 5 degrees
+      in size is used, forming the major data product for 
+      multispectral survey observations. Multiple MRDRs tiles are in 
+      each of the 30 subdirectories."
+
+    DATA_SET_DESC           = "
+
+    Data Set Overview
+    =================
+
+      This volume contains portions of the CRISM Multispectral Reduced
+      Data Record (MRDR) Archive, a collection of multiband images
+      from the Compact Reconnaissance Imaging Spectrometer for Mars on
+      the Mars Reconnaissance Orbiter spacecraft. Images consist of
+      map-projected data calibrated to units of corrected I/F plus a 
+      text file listing the wavelengths present. Additional image
+      data have had further corrections applied. Each image or text
+      file is stored with a PDS label.
+
+      This volume also contains an index file ('imgindx.tab') that
+      tabulates the contents of the volume, ancillary data files, and
+      documentation files. It may also contain browse images in PNG
+      or IMG format, and HTML documents that support a web browser 
+      interface to the volume.
+
+      For more information on the contents and organization of the
+      volume set refer to the aareadme.txt file located in the root
+      directory of the data volumes.
+
+
+    Parameters
+    ==========
+
+      CRISM observing scenarios are constructed using a set of key
+      variables ('configurations') which include the following. (All
+      are selectable separately for the VNIR and IR detectors. Only a
+      subset of the configurations are used to generate MRDRs.)
+
+      Image source: Image data may be generated using digitized output
+      from the detector, or using one of up to seven test patterns. Only
+      data from the detector are processed to a TRDR.
+
+      Pixel binning: Pixels can be saved unbinned or binned 2x, 5x, or
+      10x in the spatial direction. No pixel binning in the spectral
+      direction is supported. Data with 10x pixel binning are used in
+      the generation of MRDRs.
+
+      Row selection:  All detector rows having useful signal can be
+      saved, or alternatively an arbitrary, commandable subset of rows
+      can be saved. The number of rows with useful signal is 545, 107
+      in the VNIR and 438 in the IR. The nominal number of rows for
+      multispectral mode was 73, 18 in the VNIR and 55 in the IR prior
+      to 10 Dec 2006. On that date an extra channel was added to the
+      VNIR for a total of 19. One row in each detector is for calibration
+      Purposes. Mapping data have also been collected with extended
+      wavelength sets, all 107 VNIR channels and 155 IR channels, for
+      a partially hyperspectral equivalent of the multispectral data.
+      Those data are included in the MRDRs by extracting the wavelengths
+      that are common to multispectral operating mode.
+
+      Calibration lamps: 4095 levels are commandable in each of two
+      lamps at each focal plane, and in two lamps in the integrating
+      sphere. All lamps can be commanded open-loop, meaning that current
+      is commanded directly.  For the integrating sphere only, closed
+      loop control is available at 4095 settings. For closed loop
+      control, the setting refers to output from a photodiode viewing
+      the interior of the integrating sphere; current is adjusted
+      dynamically to attain the commanded photodiode output. Note: lamps
+      reach maximum current at open- or closed-loop settings <4095. Only
+      data for which the calibration lamps are off may be processed to
+      an MRDR. Focal plane lamps are not used as part of the calibration
+      process, but the integrating sphere lamp controlled by the 
+      IR focal plane is. 
+
+      Shutter position:  Open, closed, or viewing the integrating
+      sphere. The shutter is actually commandable directly to position 0
+      through 32.  In software, open=3, sphere=17, closed=32. NOTE:
+      during integration and testing, it was discovered that at
+      positions <3 the hinge end of the shutter is directly illuminated
+      and creates scattered light. Position 3 does not cause this
+      effect, but the other end of the shutter slightly vignettes
+      incoming light. Only data in which the shutter is open, and at
+      position 3, may be processed to an MRDR.
+
+      Pointing:  CRISM has two basic gimbal pointing configurations and
+      two basic superimposed scan patterns.  Pointing can be (1) fixed
+      (nadir-pointed in the primary science orbit) or (2) dynamic,
+      tracking a target point on the surface of Mars and taking out
+      ground track motion.  Two types of superimposed scans are
+      supported: (1) a short, 4-second duration fixed-rate ('EPF-type')
+      scan which superimposes a constant angular velocity scan on either
+      of the basic pointing profiles, or (2) a long, minutes-duration
+      fixed-rate ('target swath-type') scan. Only fixed nadir-pointed 
+      data are processed to an MRDR.
+
+    Processing
+    ==========
+
+      The CRISM data stream downlinked by the spacecraft unpacks into a
+      succession of compressed image frames with binary headers
+      containing housekeeping. In each image, one direction is spatial
+      and one is spectral.  There is one image for the VNIR focal plane
+      and one image for the IR focal plane. The image from each focal
+      plane has a header with 220 housekeeping items that contain full
+      status of the instrument hardware, including data configuration,
+      lamp and shutter status, gimbal position, a time stamp, and the
+      target ID and macro within which the frame of data was taken.
+      These parameters are stored as part of an Experiment Data Record
+      (EDR), which consists of raw data. The data in one EDR
+      represents a series of image frames acquired with a consistent
+      instrument configuration (shutter position, frame rate, pixel
+      binning, compression, exposure time, on/off status and setting
+      of different lamps).
+
+      Once data are assembled into EDRs, they are calibrated into TRDRs.
+      Image data are converted to units of radiance using level-4 and
+      level-6 CDRs, and analog housekeeping items in the text file
+      (voltages, currents, and temperatures) have been converted into
+      physical units using a level-6 CDR. Both files share a common
+      label. The calibration algorithms are discussed at length in 
+      the CRISM Data Products SIS.
+
+      A TRDR may also contain separately labeled multiband images in
+      which radiance has been processed to one of the following:
+
+        radiance in units of (W / (m^2 sr micron))
+
+        I/F (radiance divided by (pi * solar flux at 1 AU * heliocentric
+        distance^2)),
+
+      During construction of MRDRs, additional values generated from I/F
+      include: 
+
+        Lambert albedo, or
+
+        a set of derived spectral parameters (summary products) that
+        provide an overview of the data set. The summary products
+        include Lambert albedo at key wavelengths, or key band depths
+        or spectral reflectance ratios.
+
+      To create Lambert albedo or most summary products, estimated
+      corrections for atmospheric and photometric effects are
+      applied to the I/F data. 
+
+      Information on physical properties and illumination conditions of
+      the site observed in the EDR or TRDR is maintained in a Derived
+      Data Record or DDR. There are 14 layers in each DDR:
+
+        Solar incidence angle relative to areoid, at the same planetary
+        radius as surface projection of pixel, units degrees.
+
+        Emission angle relative to areoid, at the same planetary
+        radius as surface projection of pixel, units degrees.
+
+        Solar phase angle, units degrees.
+
+        Areocentric latitude, units degrees N.
+
+        Areocentric longitude, units degrees E.
+
+        Solar incidence angle relative to planetary surface as estimated
+        using MOLA shape model, units degrees.
+
+        Emission angle relative to planetary surface as estimated using
+        MOLA shape model, units degrees.
+
+        Slope magnitude, using MOLA shape model and reference ellipsoid,
+        units degrees.
+
+        Slope azimuth, using MOLA shape model and reference ellipsoid,
+        units degrees clockwise from N.
+
+        Elevation relative to MOLA datum, units meters.
+
+        TES thermal inertia, units J m^-2 K^-1 s^-0.5.
+
+        TES bolometric albedo, unitless.
+
+        Spare.
+
+        Spare.
+
+      The TES data are in support for a correction for thermal emission
+      which is not included as part of MRDR processing.
+
+      The sequence of processing that creates an MRDR from the above
+      products is as follows:
+
+      (a) EDRs are assembled from raw data.
+
+      (b) The radiance multiple band images in TRDRs are created from 
+      EDRs and Calibration Data Records, or CDRs, using a calibration
+      algorithm discussed at length in an Appendix in the CRISM Data
+      Products SIS. Briefly, a measurement of bias is subtracted from
+      shutter-closed dark measurements, images of the interior of the
+      integrating sphere taken with the shutter in an intermediate 
+      position, and scene data taken in the appropriate open position.
+      Electronics artifacts are removed as detailed in the Data Product
+      SIS, and the data are linearized. Dark measurements accompanying
+      each the sphere and scene data are averaged by wavelength to 
+      improve signal-to-noise ratio, and scaled spatially to the 
+      dimensions of the scene and sphere data. Dark measurements are 
+      subtracted from both the scene and sphere measurements. The 
+      sphere measurements are averaged by wavelength to improve signal-
+      to-noise ratio, and scaled spatially to the dimensions of the 
+      scene data. The scene and sphere measurements are divided by 
+      their respective exposure times. The scene data are divided by
+      the sphere data, both now in units of corrected DN per second,
+      to yield a unitless result, which is multiplied by a
+      ground-calibration-derived model of integrating sphere
+      spectral radiance, to yield scene spectral radiance.
+
+      (c) Gimbal positions are extracted from the EDR housekeeping and
+      formatted as a gimbal C kernel.
+
+      (d) Using the gimbal C kernel and other SPICE kernels, DDRs are
+      created. The surface intercept on the MOLA shape model is
+      calculated for each spatial pixel (sample at the reference
+      detector row). The angles of this pixel relative to the equatorial
+      plane and reference longitude constitute the latitude and
+      longitude of the pixel. For that latitude and longitude, solar
+      incidence, emission, and phase angles are determined at a
+      surface parallel to the areoid but having a radius from
+      planetary center equivalent to that of the surface intercept of
+      the shape model. Solar incidence and emission are also
+      determined relative to the shape model itself. Using the
+      latitude and longitude of the surface intercept of each spatial
+      pixel, MOLA elevation is retrieved from a global elevation map 
+      and resampled into CRISM sensor space using nearest neighbor 
+      resampling.
+
+      (e) Radiance is converted to I/F by dividing by (pi *
+      solar flux at 1 AU * heliocentricdistance^2)). Solar flux is
+      maintained in a level 4 CDR, and solar distance is written in the
+      label to the radiance image.
+
+      (f) I/F is converted to Lambert albedo to allow rapid
+      identification of new ROIs and to quickly assess the information
+      content of targeted observations. Some or all of the following
+      corrections may be made:
+
+        I/F is divided by cosine of the solar incidence angle
+
+        The estimated contribution to and attenuation of the signal by
+        atmospheric aerosols is removed.
+
+        The estimated attenuation of the signal by atmospheric dust and 
+        ice aerosols is corrected to a target value.
+
+      (g) After the corrections discussed below are performed,
+      multispectral TRDRs are map projected into MRDRs using the
+      latitude and longitude information in the DDRs. Because of the
+      mosaicked nature of an MRDR, the following protocol was used in 
+      MRDR versions 1 and 3 to select between overlapping TRDRs for 
+      inclusion in the MRDR:
+
+        If I/F is available but not Lambert albedo, the TRDR with
+          the lower incidence angle at the areoid is used
+
+        If Lambert albedo is available, then:
+
+             If both TRDRs have incidence angles >70 degrees, the one 
+               with the lower incidence angle is used.
+
+             If one incidence angle is >70 degrees and one is <70, 
+               the TRDR with i < 70 degrees is used.
+
+             If both incidence angles are <70 degrees, then the TRDR with 
+               the lower 440-nm Lambert albedo is used.
+
+      For version 4, strips of mapping data are placed into the Lambert 
+      albedo multiple band images such that the strip acquired under the 
+      conditions of highest atmospheric opacity from [MONTABONEETAL2015]
+      data is placed first, and strips are then placed in order of 
+      decreasing atmospheric opacity with the strip acquired under the 
+      lowest atmospheric opacity is placed 'on top'. Only data acquired
+      during periods of atmospheric opacity <1.0 from
+      [MONTABONEETAL2015] are included, to limit the opacity whose
+      Effects are to be corrected as described below.
+
+      TIME DEPENDENCY OF THE APPROACH TO ATMOSPHERIC CORRECTION: 
+      There are two alternative paths for correction of atmospheric
+      and photometric effects (the second path only applies to 
+      version 4 MRDRs):
+
+      Mapping data acquired prior to May 2012 fall within the time range 
+      of acquisition of gimbaled CRISM Emission Phase Functions, from 
+      which retrievals provide a record of atmospheric dust opacity 
+      sampled at CRISM's wavelength sampling and resolution as a 
+      function of latitude, longitude, solar longitude, and Mars year. 
+      MRO MARCI data provide retrievals of atmospheric water-ice 
+      opacity also as a function of latitude, longitude, Ls, and Mars 
+      year. For times when these opacities are present, using the 
+      procedures described by [MCGUIREETAL2013], a full radiative
+      transfer model is used to correct I/F to a standard reference 
+      photometric geometry with atmospheric contributions to I/F 
+      normalized to a nadir geometry with a dust opacity of 0.2 and 
+      an ice opacity of 0.0. Information on latitude, longitude, Ls, 
+      and altitude are extracted from the header of the TRDR containing
+      the I/F data and the companion DDR. These data are used to 
+      extrapolate to the best estimate of the atmospheric opacites 
+      from CRISM and MARCI data. Then the photometric angles, 
+      altitude, Ls, and wavelength plus the opacities extracted from 
+      CRISM and MARCI data are used to interpolate wavelength-by-
+      wavelength to correct from I/F to Lambert albedo at i=30 
+      degrees, e=0, g=30, dust opacity=0.2, and ice opacity=0.0 
+      with no absorptions due to atmospheric gases. The Lambert
+      albedo becomes the basis to which mapping strips acquired 
+      after May 2012 (when EPFs were no longer acquired) are corrected.
+
+      For mapping data acquired after May 2012, a two-step correction
+      is used that does normalize out atmospheric gas absorptions and
+      correct for photometric effects, but does not attempt to correct
+      for aerosol effects. This processing closely follows that 
+      applied to CRISM TERs and MTRDRs. The first step is the 
+      volcano scan atmospheric correction uses empirically derived 
+      Mars atmospheric transmission spectra to correct CRISM IR 
+      (L-detector) spectral reflectance data for atmospheric gas 
+      absorptions (due primarily to CO2, H2O, and CO) 
+      [MURCHIEETAL2009, MORGANETAL2011]. There are no significant 
+      atmospheric gas absorptions over the CRISM VNIR wavelength 
+      range, so this correction is not applied to VNIR (S-detector) 
+      data. Detector column-specific reference atmospheric transmission 
+      spectra (to accommodate spectral smile) are derived from a suite 
+      of push-broom hyperspectral Flat Field Calibration (FFC) scans 
+      over Olympus Mons and are matched to a given observation to 
+      minimize high frequency residual spectral structure due to sub-nm
+      wavelength calibration variability across the wavelengths
+      affected by the 2000 nm CO2 absorption (1947 - 2066 nm). 
+      The depth of the 2000 nm CO2 absorption is determined for the 
+      spectrum of each spatial pixel in the image cube under 
+      consideration, the selected reference transmission spectrum 
+      is scaled to match according to the Beer-Lambert Law, and the 
+      resulting model transmission spectrum is ratioed out of the I/F 
+      data. The MRDR pipeline implementation of the volcano also 
+      includes a CRISM-specific volcano scan patch (included in the 
+      CRISM Analysis Toolkit v7.1+ available at the PDS Geosciences 
+      Node) that is applied after the initial correction to reduce 
+      the influence of varying path length and pressure broadening 
+      in the derivation of the reference transmission spectra. 
+
+      The second step for data corrected using the volcano scan is 
+      application of a photometric correction using a Lambert 
+      assumption: 
+
+      IOF_corrected = IOF_uncorrected / cos(theta) 
+
+      where theta is the solar incidence angle. 
+
+      The photometric correction is calculated for each spatial 
+      pixel and is applied uniformly to all spectral 
+      channels. The spatial pixel specific incidence angle 
+      information is derived from the 'INA at areoid' band 
+      (incidence angle with respect to the Mars areoid) in the 
+      CRISM DDR (Derived Data Record) associated with the 
+      observation and segment under consideration.
+
+      FILTERING TO REDUCE NOISE (version 4 only):
+      72-channel I/F mapping strips are filtered for stochastic noise 
+      and systematic noise and artifacts in two steps, respectively. 
+      The first step to remediate stochastic noise is a simplified 
+      version of the Iterative Kernel Filter used for noise 
+      remediation in the I/F version of TRR3s. The second step to 
+      remediate systematic effects is the Ratio Shift Correction also 
+      applied during that filtering. 
+
+      The Iterative Kernel Filter (IKF) procedure as applied to 
+      multispectral data is a kernel based filtering algorithm that 
+      models the information content of a given two dimensional 
+      normalized data kernel as a multidimensional polynomial. 
+      The model residuals are treated as a sample set and examined 
+      for outliers using the Grubbs test. If an outlier is detected, 
+      the corresponding pixel is removed from consideration and the 
+      kernel model is iterated. Model iteration is terminated when 
+      no further outliers are detected. The filtered value for the 
+      target pixel at the center of the input kernel is then given 
+      by a proximity weighted model of the kernel elements that were 
+      not marked as outliers. The confidence level threshold for 
+      the Grubbs test is conservative so the filter retains some 
+      marginal noise. The IKF is applied primarily to IR data.
+
+      The Ratio Shift Correction (RSC) procedure as applied to 
+      multispectral data is the primary filtering process for VNIR 
+      data. Within a given spectral band, a spatial column 
+      corresponds to a single detector element. The Ratio Shift 
+      Correction characterizes residual bias of each detector 
+      element through the evaluation of inter-column (or cross-
+      track shifted) ratio statistics relative to a cross track 
+      model. Modifying the complexity of the underlying cross track 
+      model allows the RSC procedure to address high frequency 
+      column striping or low frequency banding while retaining real
+      scene cross-track variability.
+
+      NORMALIZATION OF STRIP-TO-STRIP RESIDUALS (version 4 only): 
+      At this stage of processing there are significant residual 
+      differences in I/F between overlapping strips of mapping 
+      data due to several effects: systematic errors in radiometric
+      calibration between strips; inaccuracy in the assumption of 
+      a wavelength-independent Lambert photometric function; for strips 
+      processed to Lambert albedo, differences between the modeled and
+      actual atmospheric dust and ice opacities; for strips processed 
+      using the volcano scan correction, the presence of atmospheric 
+      dust and ice opacities different that the target values of dust 
+      opacity = 0.2, and ice opacity=0.0; and differences between the 
+      actual and modeled values of H2O vapor and CO due to seasonal 
+      or meteorological variations. The calibration residuals are 
+      only somewhat notable in I/F, but the magnitudes are in family 
+      with real spectral variations for many of the mineralogical 
+      spectral indices represented as summary products.
+
+      To remediate these interstrip differences, an optimization 
+      procedure is performed in which derived values of surface 
+      reflectance are corrected to the values in the closest to ideal 
+      data among the mapping strips, using the millions of overlap and 
+      proximity relations among the approximately 83,000 strips of 
+      VNIR+IR data in the map. Prior to optimization, the millions 
+      of areas of intersection and close proximity are identified. 
+      The differences between each such pair of strips is analyzed 
+      using graph theory, and the best-fit gain and offset 
+      describing the differences are recorded. Of course, each such 
+      solution will have some systematic error. 
+
+      In the optimization procedure, overall error is minimized (and the 
+      data set is optimized) by applying the gains and offsets in a 
+      weighted fashion, anchoring the output values to that part of the 
+      data which is closest to ideal. Those 'anchor' strips have the 
+      following attributes: low IR detector temperature, as close as 
+      possible to the minimum value used in flight; low solar incidence 
+      angles; low dust opacity in the data as acquired as recorded in 
+      [MONTABONEETAL2015] data; and the atmospheric corrections were 
+      performed using the full radiometric model, not the volcano scan 
+      correction. Note that only mapping strips corrected to 
+      dust opacity=0.2 and ice opacity=0.0 using DISORT-traceable 
+      procedures populate the anchor strips. Provided that there are 
+      overlaps with such strips, the strips corrected with the volcano 
+      scan approach effectively have their dust and ice opacities also 
+      normalized to the target values. Thus correction to Lambert 
+      albedo is propagated among all strips. 
+
+
+    Data
+    ====
+
+      DATA DESCRIPTION:
+
+      There is only one data type associated with this volume, the
+      Multispectral Reduced Data Records or MRDRs.
+
+      An MRDR consists of mosaicked, map-projected multispectral TRDRs.
+      All data are represented as 32-bit real numbers. The
+      multispectral map RDR contains up to five multiple-band images at 
+      256 pixels/degree (versions 1 and 3) or 327 pixels/degree 
+      (version 4) and one list file.
+
+      The first multiple-band image is map-projected I/F without
+      any further corrections applied, taken directly from the
+      TRDR associated with a strip of multispectral data.
+      Although in the TRDRs there are separate multiple-band images
+      for the VNIR and IR detectors, in this case the data are merged.
+      The size of the multiple-band image varies between map tiles. A
+      typical multiple-band image might have 1280 pixels (versions 1 
+      and 3) or 1635 pixels (version 4) in the latitude direction,
+      a variable number of pixels in the longitude direction, and
+      approximately 72 pixels in the wavelength dimension, representing
+      each of the selected channels in multispectral mode. This type
+      of multiple-band image is present in version 1 and 3 MRDRs.
+
+      The second multiple-band image is geometrically identical to the
+      map-projected I/F multiple-band image (if present), except that 
+      data have been processed to Lambert albedo. This type of multiple
+      band image is present in version 1 and 4 MRDRs.
+
+      The third multiple-band image contains map-projected data from
+      DDRs associated with a strip of multispectral data, used to
+      derive I/F from radiance. The file corresponds to mosaicked I/F.
+      11 additional layers that are specific to individual multispectral 
+      strips used to assemble the tile, and are thus not contained in 
+      the DDR. This additional information provides traceability back
+      to the source TRDRs:
+
+        Solar longitude, units degrees
+
+        Solar distance at time of measurement, units AU (versions 1,3)
+
+        VNIR observation ID of constituent measurement
+
+        IR observation ID of constituent measurement
+
+        The VNIR ordinal counter carried through from the source scene
+        EDRs
+
+        The IR ordinal counter carried through from the source scene
+        EDRs
+
+        The VNIR column number carried through from the TRDR
+        used to populate the MRDR; this identifies the VNIR wavelength
+        calibration at the spatial pixel of the MRDR
+
+        The IR column number carried through from the TRDR
+        used to populate the MRDR; this identifies the IR wavelength
+        calibration at the spatial pixel of the MRDR
+
+        The ordinal number of the frame from the source VNIR TRDR; this
+        together with column number, observation ID, and ordinal counter
+        provides traceability back to a spatial pixel in a source EDR
+
+        The ordinal number of the frame from the source IR TRDR
+
+        Time of day, hhmm.ss
+
+      This type of multiple-band image is present in version 1 and 3
+      MRDRs.
+
+      The fourth multiple-band image contains map-projected data from 
+      DDRs associated with a strip of multispectral data, which has been 
+      processed to Lambert albedo. The files correspond to the mosaicked 
+      Lambert albedo. The same additional layers as in the third file are
+      also present. This type of multiple-band image is present in 
+      version 1 and 4 MRDRs.
+
+      The fifth multiple-band image contains map-projected summary
+      products.
+
+      The list file, in ASCII format, contains wavelengths
+      of each layer in the I/F and Lambert albedo images.
+
+      A suite of mineral indicators and other measures of spectral 
+      shape and reflectivity, collectively called spectral summary 
+      parameters, is calculated from the Lambert albedo or I/F data.
+      Summary product multiple band images are included in version 1 and 
+      4 MRDRs. Version 1 used formulations based upon the published
+      formulations of [PELKEYETAL2007]. Version 4 MRDRs used the
+      revised and expanded spectral summary parameter library of
+      [VIVIANO-BECKETAL2014] which was developed to better detect
+      the surprisingly large range of minerals found by CRISM and 
+      to reduce false positives. The bands in the SU image cube are 
+      given below along with a brief description of their significance. 
+      Users are referred to Table 3-12 of the CRISM Data Product SIS for 
+      detailed formulations and caveats.
+
+      R770 (versions 1, 4)
+                   = 0.77-micron reflectance (higher value more dusty 
+                     or icy)
+      RBR (versions 1, 4)
+                   = Red/blue ratio (higher value indicates more 
+                     nanophase iron oxide or sky illumination)
+      BBD530 (version 1), BD530_2 (version 4)     
+                   = 0.53-micron band depth (higher value has more 
+                     fine-grained crystalline hematite)
+      SH600 (version 1), SH600_2 (version 4)
+                   = 0.6-micron shoulder height (select ferric 
+                     minerals esp. hematite, goethite, or a 
+                     compacted texture)
+      SH770 (version 4)
+                   = 0.77-micron shoulder height (select ferric 
+                     minerals, less sensitive to LCP than SH600_2)
+      BD640 (version 1), BD640_2 (version 4)
+                   = 0.64-micron band depth (select ferric minerals,
+                     esp. maghemite, but obscured by VNIR detector 
+                     artifact)
+      BD860 (version 1), BD860_2 (version 4)
+                   = 0.86-micron band depth (select crystalline 
+                     ferric minerals, esp. hematite)
+      BD920 (version 1), BD920_2 (version 4)
+                   = 0.92-micron band depth (crystalline ferric minerals 
+                     and low-Ca pyroxene, or LCP)
+      RPEAK1 (versions 1, 3, 4)
+                   = Reflectance peak 1 near 0.77 microns (<0.75 
+                     suggests olivine, 0.75 pyroxene, >0.8 dust)
+      BDI1000VIS (versions 1, 4)
+                   = 1-micron integrated band depth; VNIR wavelengths
+                     (olivine, pyroxene, or Fe-bearing glass)
+      BDI1000IR (versions 1, 4)  
+                   = 1-micron integrated band depth; IR wavelengths
+                     (crystalline Fe2+ silicates)
+      IRA (version 1), R1330 (version 4)
+                   = IR albedo at 1.3 microns, near peak between pyroxene
+                     absorptions
+      BD1300 (version 4)
+                   = 1.3-micron absorption associated with Fe2+ 
+                     substitution in plagioclase
+      OLINDEX (version 1), OLINDEX3 (version 4)    
+                   = Broad absorption centered at 1 micron 
+                     (olivine strongly >0, also detects Fe-phyllosilicate)
+      LCPINDEX (version 1), LCPINDEX2 (version 4)
+                   = Broad absorption centered at 1.81 micron
+                     (pyroxene is strongly +; favors LCP)
+      HCPINDEX (version 1), HCPINDEX2 (version 4)
+                   = Broad absorption centered at 2.12 microns
+                     (pyroxene is strongly +; favors HCP)
+      VAR (versions 1, 4)
+                   = 1.0-2.3-micron spectral variance; Ol & Px will 
+                    have high values; MGS/TES Type 2 areas will have
+                    low values
+      BD1270O2 (version 1)
+                  = O2 emission; inversely correlated with high altitude
+                    water; signature of ozone
+      ISLOPE1 (versions 1, 4)
+                   = Spectral slope 1 (from 1.185 to 2.530 microns; 
+                     ferric coating on dark rock)
+      BD1400H20 (version 1), BD1400 (version 4)
+                   = 1.4-micron H2O and -OH band depth
+                    (hydrated or hydroxylated minerals)
+      BD1435 (versions 1, 4)    
+                   = 1.435-micron CO2 ice band depth
+      BD1500 (version 1), BD1500_2 (version 4)
+                   = 1.5-micron H2O ice band depth
+      ICER1 (version 1), ICER1_2 (version 4)
+                   = CO2 and H2O ice band depth ratio at 1.43-1.5 microns
+      BD1750 (version 1), BD1750_2 (version 4)
+                   = 1.75-micron H2O band depth (gypsum or alunite)
+      BD1900 (version 1), BD1900_2 (version 4)
+                   = 1.9-micron H2O band depth (hydrated minerals 
+                     except monohydrated sulfates)
+      BD1900r2 (version 4)
+                   = 1.9-micron H2O band depth (hydrated minerals 
+                     except monohydrated sulfates)
+      BDI2000 (versions 1, 4)
+                   = 2-micron integrated band depth (pyroxene)
+      BD2100 (version 1), BD2100_2 (version 4)
+                   = 2.1-micron shifted H2O band depth in monohydrated
+                     sulfates
+      BD2165 (version 4)
+                   = 2.165-micron Al-OH band depth 
+                     (pyrophyllite, kaolinite-group minerals)
+      BD2190 (version 4)
+                   = 2.190-micron Al-OH band depth
+                     (beidellite, allophane, imogolite)
+      MIN2200 (version 4)
+                   = 2.16-micron Si-OH band depth and 2.21-micron 
+                     H-bound Si-OH band depth (doublet; kaolinite)
+      BD2210 (version 1), BD2210_2 (version 4)
+                   = 2.21-micron Al-OH band depth (Al-OH minerals)
+      D2200 (version 4)
+                   = 2.2-micron dropoff (Al-OH minerals)
+      BD2230 (version 4)
+                   = 2.23-micron band depth 
+                     (hydroxylated ferric sulfate)
+      BD2250 (version 4)
+                   = 2.25-micron broad Al-OH and Si-OH band depth
+                     (opal, Al-OH minerals)
+      MIN2250 (version 4)
+                   = 2.21-micron Si-OH band depth and 2.26-micron 
+                     H-bound Si-OH band depth (opal)
+      BD2265 (version 4)
+                   = 2.265-micron band depth (jarosite, gibbsite,
+                     acid-leached nontronite)
+      BD2290 (versions 1, 4)
+                   = 2.29-micron Mg,Fe-OH band depth / 2.292-micron 
+                     CO2 ice band depth (Mg-OH and Fe-OH minerals,
+                     Mg carbonate, and CO2 ice)
+      D2300 (versions 1, 4)
+                   = 2.3-micron dropoff (hydroxylated Fe,Mg 
+                     silicates strongly >0)
+      BD2350 (version 1), BD2355 (version 4)
+                   = 2.35-micron band depth (chlorite, prehnite, 
+                     pumpellyite, carbonate, serpentine)
+      SINDEX (version 1), SINDEX2 (version 4)
+                   = Inverse lever rule to detect convexity at 2.29 
+                     microns due to 2.1- and 2.4-micron absorptions
+                     (hydrated sulfates strongly >0)
+      ICER2 (version 1), ICER2_2 (version 4)
+                   = 2.7-micron CO2 ice band
+      BDCARB (version 1)
+                   = 2.33, 2.53-micron Ca or Fe carbonate band
+      MIN2295_2480 (version 4)
+                   = Mg Carbonate overtone band depth and metal-OH 
+                     band
+      MIN2345_2537 (version 4)
+                   = Ca/Fe Carbonate overtone band depth and 
+                          metal-OH band
+      BD2500_2 (version 4)
+                   = Mg Carbonate overtone band depth, or zeolite
+      BD3000 (versions 1, 4)
+                   = 3-micron H2O band depth (adsorbed and bound
+                     H2O and ice)
+      BD3100 (versions 1, 4)
+                   = 3.1-micron H2O ice band depth
+      BD3200 (versions 1, 4) 
+                   = 3.2-micron CO2 ice band depth
+      BD3400 (version 1), BD3400_2 (version 4)
+                   = 3.4-micron carbonate band depth
+      CINDEX (version 1), CINDEX2 (version 4)
+                   = Inverse lever rule to detect convexity at 3.6 
+                     micron due to 3.4- and 3.8-micron 
+                     carbonate absorptions
+      R440 (versions 1, 4)
+                   = 0.44-micron reflectance
+      R530 (version 4)
+                   = 0.53-micron reflectance
+      R600 (version 4)
+                   = 0.60-micron reflectance
+      IRR1 (versions 1, 4) 
+                   = IR ratio 1 (R880/R997; aphelion ice clouds >1,
+                     seasonal ice clouds and dust <1))
+      R1080 (version 4)
+                   = 1.08-micron reflectance
+      R1506 (version 4)
+                   = 1.51-micron reflectance
+      R2529 (version 4)
+                   = 2.53-micron reflectance
+      BD2000CO2 (version 1)
+                   = 2-micron atmospheric CO2 band depth
+      BD2600 (versions 1, 4)
+                   = 2.6-micron atmospheric H2O band depth
+      BD2700 (version 1)
+                   = 2.7-micron atmospheric CO2 band depth
+      IRR2 (versions 1, 4)
+                   = IR ratio 2 (R2530/R2210; aphelion ice clouds 
+                     vs. seasonal ice clouds or dust)
+      R2700 (version 1)
+                   = high clouds above most atmospheric CO2 
+      IRR3 (versions 1, 4)
+                   = IR ratio 3 (R3500/R3390; aphelion ice clouds 
+                     vs. seasonal ice clouds or dust)
+      R3920 (version 4)
+                   = 3.92-micron reflectance, useful in detecting ice-free
+                     Regions at the poles
+
+
+    Ancillary Data
+    ==============
+
+      There is one type of ancillary data provided with this
+      dataset:
+
+      1. The BROWSE directory contains browse images in PNG format.
+      See BROWINFO.TXT for more details.
+
+
+    Coordinate System
+    =================
+
+      Areocentric latitude and longitude, incidence, emission, and
+      phase angles are derived from spacecraft attitude, gimbal
+      position, pixel location, and MOLA shape model of Mars. The
+      detailed procedure is described in the documentation on DDRs.
+      The adopted projection convention is planetocentric, positive
+      east, using the 2000 IAU prime meridian and pole of rotation.
+      The projection varies in 5 degree latitude bands, using
+      EQUIRECTANGULAR equatorward of 65 degrees latitude and POLAR
+      STEREOGRAPHIC poleward of 65 degrees latitude. For the latitude
+      band projected equirectangularly, the center latitude of
+      projection is the equatorward boundary of each band to minimize
+      distortion. For the latitude bands projected polar
+      stereographically, the center of projection is the pole. In the
+      north polar region, 0 longitude is down, and in the south polar
+      region 0 longitude is up. The planet is divided into 1964 non-
+      overlapping tiles, 256 pixel/degree in versions 1 and 3, 
+      and 327 pixels/degree in version 4. Their longitude width
+      increases poleward to keep tiles approximately the same in area.
+
+
+    Media/Format
+    ============
+
+      The CRISM archive is made available online via Web and FTP
+      servers.  This is the primary means of distribution.
+      Therefore the archive is organized as a set of virtual
+      volumes, with each data set stored online as a single volume. As
+      new data products are released they are added to the volume's
+      data directory, and the volume's index table is updated
+      accordingly. The size of the volume is not limited by the
+      capacity of the physical media on which it is stored; hence the
+      term virtual volume.  When it is necessary to transfer all or part
+      of a data set to other media such as DVD for distribution or for
+      offline storage, the virtual volume's contents are written to
+      the other media according to PDS policy, possibly dividing the
+      contents among several physical volumes."
+
+
+    CONFIDENCE_LEVEL_NOTE           = "
+
+    Confidence Level Overview
+    =========================
+
+      All of the uncertainties in the constituent TRDRs and DDRs are
+      propagated into the MRDRs. These are summarized below.
+
+      Versions 1 and 3 of MRDRs contain effects from the intra- and
+      inter-strip effects on mapping data that are described above 
+      (both meteorological and instrumental effects). These effects
+      result in large strip-to-strip differences in some summary
+      products. In addition, Versions 1 and 3 MRDRs
+      contain systematic and stochastic noise inherited from
+      the source TRDR scene data, which typically appears as short
+      streaks in the along-track direction, or as spikes in single 
+      detector elements. Noise inherited from Calibration Data 
+      Records or from dark or integrating sphere measurements
+      more typically appears as differences column-to-column in
+      the source scene data, that are aligned in the along-track 
+      direction. Optical artifacts in the source scene data include
+      spectral smile, a systematic small shift in wavelength of a 
+      particular image band across the field-of-view (the 
+      cross-track direction). This shift creates cross-track variations
+      in the values of summary products, especially those evaluated
+      over narrow wavelength ranges or at wavelengths of steeply
+      sloping radiance.
+
+      In version 4 MRDRs, all of these effects have been mitigated
+      to the extent possible. The Interative Kernel Filter greatly
+      reduces the magnitude of both stochastic and systematic noise. 
+      The Ratio Shift Correction largely eliminates the effects of 
+      spectral smile. Finally, the combination of the radiative 
+      transfer correction of atmospheric gas absorptions and 
+      normalization of dust opacity to 0.2, combined with strip-to-
+      strip normalization, result in a close approximation of 
+      spectral reflectance of Mars as it would appear with the
+      Sun at zenith, a uniform low dust opacity.
+
+      The 256 pixels/degree scale of version 1 and 3 MRDRs resulted
+      in aliasing, as some spatial pixels dropped out because native
+      resolution of the multispectral data is higher. The 327
+      pixels/degree scale of version 4 MRDRs corrects this problem.
+
+      In all MRDR versions, the following issues remain:
+
+      - Water-ice clouds remaining in the data create residuals in 
+        summary products that measure absorptions in the 1.9 to 
+        2.1 micron region. Locations possessing such artifacts 
+        may be recognized by having an elevated value of BD1500.
+
+      - Real variations between adjacent mapping strips occur 
+        due to migration of dust and sand between the times of 
+        measurement of the strips of data.
+
+      - Real variations between adjacent mapping strips occur 
+        due to seasonal adsorption and desorption of atmospheric 
+        water.
+
+      - In the circumpolar regions a best effort has been made to
+        put 'on top' in the stacking order strips of data lacking
+        seasonal frost cover. However, outliers remain where seasonal
+        frost appears.
+
+      - Because of the fact that inter-strip normalization of 
+        residuals was performed over finite areas, small changes
+        in Lambert albedo or summary products my occur across tile
+        boundaries in version 4 MRDRs.
+
+      - Lambert albedo cannot be compared directly with corrected
+        I/F in CRISM MTRDR and TER data. In that latter data, opacity
+        of atmospheric dust or ice is normalized to the value at
+        the geometry closest to nadir, which may be quite 
+        different from the target atmospheric opacities in MRDRs of
+        dust = 0.2 and water ice = 0.0.
+
+      - Summary products in the MRDR data set are close to those 
+        in CRISM MTRDR and TER data, but the values cannot be compared
+        one-for-one. Each summary product formulation is based on 
+        idealized wavelengths present in targeted observation 
+        hyperspectral data. In MRDRs, that expression is evaluated at
+        the data from the detector rows having the closest wavelengths.
+        In MTRDRs and TERs, that expression is evaluated at the exact 
+        wavelength, using a low order polynomial fitted to an odd 
+        number of detector rows yielding a much 'cleaner' result.
+
+
+    Limitations
+    ===========
+      None."
+
+
+  END_OBJECT                       = DATA_SET_INFORMATION
+
+  OBJECT                  = DATA_SET_TARGET
+    TARGET_NAME           = "MARS"
+  END_OBJECT              = DATA_SET_TARGET
+
+  OBJECT                  = DATA_SET_HOST
+    INSTRUMENT_HOST_ID    = "MRO"
+    INSTRUMENT_ID         = "CRISM"
+  END_OBJECT              = DATA_SET_HOST
+
+  OBJECT                  = DATA_SET_MISSION
+    MISSION_NAME          = "MARS RECONNAISSANCE ORBITER"
+  END_OBJECT              = DATA_SET_MISSION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "BUGBYETAL2005"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "LEESETAL2005"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "MCGUIREETAL2013"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "MELLONETAL2000"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "MONTABONEETAL2015"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "MORGANETAL2011"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "MURCHIEETAL2004"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "MURCHIEETAL2006"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "MURCHIEETAL2009"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "PELKEYETAL2005"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "SILVERGLATE&FORT2004"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "SMITH2004"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "SMITHETAL1999"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "SMITHETAL2002"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "SMITHETAL2003"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "SWAYZEETAL2003"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "TROLLETAL2005"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+  OBJECT                  = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID      = "VIVIANO-BECKETAL2014"
+  END_OBJECT              = DATA_SET_REFERENCE_INFORMATION
+
+END_OBJECT                = DATA_SET
+END

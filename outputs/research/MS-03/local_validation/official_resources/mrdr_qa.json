@@ -1,0 +1,42 @@
+{
+  "starting_sha": "44c2e03b8617c7bb536ad712b85f4716dd190d7c",
+  "official_gateway_verified": true,
+  "tile": "T1811_60N243_0327_4",
+  "native_radius_m": 3381164.4,
+  "map_grid_m": 180.4662,
+  "grid_centres": 13284,
+  "numeric_valid_BD1500_2": 13284,
+  "map_and_source_centres_inside_fixed_roi": 13169,
+  "source_observation_count": 5,
+  "source_date_min": "2006-12-01T09:40:51.127Z",
+  "source_date_max": "2014-07-26T03:40:14.775Z",
+  "official_BD1500_2_range": [
+    -0.03691958636045456,
+    -0.0017515234649181366
+  ],
+  "formula_comparison": {
+    "reference": "PDS CRISM Summary Parameter Calculation Reference, July2026 pp1\u20132 and5",
+    "matched_pixels": 13284,
+    "median_calculated_minus_official": 0.000716466891466816,
+    "max_abs_calculated_minus_official": 0.019347334519968284,
+    "is_independent_ice_validation": false,
+    "limitations": "Agreement/disagreement checks parameter implementation only, not detection; pipeline2023 and reference2026 may differ; do not tune to match"
+  },
+  "metadata_warning": "Source EASTERNMOST_LONGITUDE=+113.32495 conflicts with projected last centre near-113.328; unchanged source retained. Select from projection, not the faulty bbox.",
+  "correction_evidence": "MRDR v4 catalogue describes atmosphere/photometry/noise/smile/interstrip processing; source-label flags appear inside comments, not independent per-pixel QA flags",
+  "post_May2012_aerosol_limit": "Catalogue says volcano-scan branch removes gas but does not itself correct aerosols; strip normalization propagates anchor assumptions; not a validated local cloud-free mask",
+  "ice_presence": "unknown",
+  "ice_depth_m": "unknown",
+  "ice_fraction": "unknown",
+  "negative_indices_not_absence": true,
+  "uniform_epoch": false,
+  "full_scientific_pixel_quality_confirmed": false,
+  "strict_source_inside_statistics": {
+    "count": 13169,
+    "official_BD1500_2_median": -0.018115174025297165,
+    "official_BD1500_2_min": -0.03691958636045456,
+    "official_BD1500_2_max": -0.0017515234649181366
+  },
+  "source_tuples_unique": 11359,
+  "source_tuple_limit": "Unique reported source tuples, not proof of independent detector samples; indexing convention and effective PSF remain unvalidated"
+}

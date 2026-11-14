@@ -1,0 +1,91 @@
+PDS_VERSION_ID                    = PDS3                                      
+LABEL_REVISION_NOTE               = "Scott Murchie, 2006-09-25; 
+                                     Scott Murchie, 2007-01-12;
+                                     J. Ward, 2007-01-12;
+                                     Scott Murchie, 2010-11-29;
+                                     Scott Murchie, 2022-04-22"
+               
+RECORD_TYPE                       = "STREAM"                                  
+INSTRUMENT_HOST_NAME              = "MARS RECONNAISSANCE ORBITER"
+SPACECRAFT_ID                     = MRO
+INSTRUMENT_NAME                   = "COMPACT RECONNAISSANCE IMAGING
+                                     SPECTROMETER FOR MARS"
+INSTRUMENT_ID                     = CRISM
+TARGET_NAME                       = MARS
+OBJECT                            = DATA_SET_MAP_PROJECTION                   
+DATA_SET_ID                       = "MRO-M-CRISM-5-RDR-MULTISPECTRAL-V1.0"    
+  OBJECT                          = DATA_SET_MAP_PROJECTION_INFO              
+    MAP_PROJECTION_TYPE           = "POLAR STEREOGRAPHIC"                     
+    MAP_PROJECTION_DESC           = "CRISM multispectral imaging of Mars 
+      is mosaicked into 1964 non-overlapping tiles each containing multiple   
+      strips of mapping data. Their longitude width increases poleward to 
+      keep tiles approximately the same in area. The adopted projection 
+      convention is planetocentric, positive east, using the 2000 IAU prime 
+      meridian and pole of rotation. The projection varies in 5 degree 
+      using EQUIRECTANGULAR equatorward of 87.5 degrees latitude, and POLAR 
+      latitude bands, STEREOGRAPHIC poleward of 87.5 degrees latitude. 
+      Versions 1 and 3 were 256 pixels per degree. Version 4 is 327 pixels 
+      per degree.
+
+      For the latitude bands projected polar stereographically, projection 
+      is centered on the north or south pole. Lines of longitude extend 
+      radially from the pole and parallels of latitude are concentric 
+      circles around the center. In the north, longitude 0 extends straight 
+      down from the center and Longitude 90 East extends to the right. In 
+      the south, longitude 0 extends straight up from the center, and 
+      longitude 90 East extends to the right. Thus in any given tile, 
+      north is at a variable orientation in LINE-SAMPLE space. The 
+      transformation from line and sample coordinates to planetocentric 
+      latitude and longitude is given by these equations.
+
+      x = (SAMPLE - LINE_PROJECTION_OFFSET - 0.5)/MAP_RESOLUTION
+      y = (LINE - SAMPLE_PROJECTION_OFFSET - 0.5)/MAP_RESOLUTION
+
+      r = sqrt(x^2 + y^2)
+
+      lon = atan2(x,y) * 180/pi
+      lat = 90 - 2*atan(r*pi/360) * 180/pi (northern hemisphere)
+      lat = -90 + 2*atan(r*pi/360) * 180/pi (southern hemisphere)
+
+      where
+
+      lat = latitude in degrees and
+      lon = longitude in degrees.
+
+      MAP_RESOLUTION= the map resolution in pixels per degree,
+      256 pixels/degree for versions 1 and 3 MRDRs and 
+      327 pixels/degree for version 4 MRDRs.
+
+      LINE_PROJECTION_OFFSET is the line number minus the line on which 
+      the map projection origin occurs. For a POLAR STEREOGRAPHIC 
+      projection the direction and magnitude of offset will depend on 
+      longitude of the map tile. 
+
+      SAMPLE_PROJECTION_OFFSET is the nearest sample number to the left of 
+      the projection longitude. For a POLAR STEREOGRAPHIC projection 
+      the direction and magnitude of offset will depend on 
+      longitude of the map tile. 
+
+      MAP_RESOLUTION is measured in pixels/degree.
+
+      MAP_SCALE is measured in km/pixel and is an average.
+
+      There are four PDS parameters that specify the latitude and 
+      longitude boundaries of an image.  MAXIMUM_LATITUDE and 
+      MINIMUM_LATITUDE specify the latitude boundaries of the image, and 
+      EASTERNMOST_LONGITUDE and WESTERNMOST_LONGITUDE specify the 
+      longitudinal boundaries of the map.
+
+      Definitions of other mapping parameters can be found in the PDS Data 
+      dictionary."
+      
+    ROTATIONAL_ELEMENT_DESC       = "UNK"
+    
+    OBJECT                        = DS_MAP_PROJECTION_REF_INFO
+      REFERENCE_KEY_ID            = "UNK"
+    END_OBJECT                    = DS_MAP_PROJECTION_REF_INFO
+    
+  END_OBJECT                      = DATA_SET_MAP_PROJECTION_INFO              
+END_OBJECT                        = DATA_SET_MAP_PROJECTION                   
+                                                                              
+END                                                                           

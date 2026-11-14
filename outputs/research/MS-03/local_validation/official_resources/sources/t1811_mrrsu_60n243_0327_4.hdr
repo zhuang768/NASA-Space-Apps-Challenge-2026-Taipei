@@ -1,0 +1,26 @@
+ENVI
+samples = 1091
+lines   = 1636
+bands   = 60
+data type = 4
+interleave = bsq
+file type = ENVI Standard
+header offset = 0
+byte order = 0
+map info = {MRO Mars Equirectangular [IAU 2000] [60.00N; -116.67E], 1.0000, 1.0000, -98287.1943, 3688220.7653, 1.804662e+02, 1.804662e+02, D_Mars_2000_IAU_IAG_custom_sphere_lat60, units=Meters}
+projection info = {17, 3381164.4, 60.000000, -116.666667, 0.0, 0.0, D_Mars_2000_IAU_IAG_custom_sphere_lat60, MRO Mars Equirectangular [IAU 2000] [60.00N; -116.67E], units=Meters}
+coordinate system string = {PROJCS["MRO Mars Equirectangular [IAU 2000] [60.00N; -116.67E]",GEOGCS["GCS_Mars_2000_IAU_IAG_custom_sphere_lat60",DATUM["D_Mars_2000_IAU_IAG_custom_sphere_lat60",SPHEROID["Mars_2000_IAU_IAG_custom_sphere_lat60",3381164.391679915,0.0]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Equidistant_Cylindrical"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",-116.6666667461395],PARAMETER["Standard_Parallel_1",60.0],UNIT["Meter",1.0]]}
+x start = 176
+y start = 176
+band names = {
+ R770, RBR, BD530_2, SH600_2, SH770, BD640_2, BD860_2, BD920_2, RPEAK1, 
+ BDI1000VIS, R440, IRR1, R530, R600, BDI1000IR, OLINDEX3, R1330, BD1300, 
+ LCPINDEX2, HCPINDEX2, VAR, ISLOPE1, BD1400, BD1435, BD1500_2, ICER1_2, 
+ BD1750_2, BD1900_2, BD1900R2, BDI2000, BD2100_2, BD2165, BD2190, MIN2200, 
+ BD2210_2, D2200, BD2230, BD2250, MIN2250, BD2265, BD2290, D2300, BD2355, 
+ SINDEX2, ICER2_2, MIN2295_2480, MIN2345_2537, BD2500_2, BD3000, BD3100, 
+ BD3200, BD3400_2, CINDEX2, BD2600, IRR2, IRR3, R1080, R1506, R2529, R3920}
+wavelength units = Unknown
+data ignore value = 65535.00000000
+default stretch = 1.0% linear
+sensor type = Unknown

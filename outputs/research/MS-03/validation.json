@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "command": "python3 scripts/research/MS-03/validate.py",
+  "stdout": "PASS: IDs;coordinates;4themes;source crossrefs;CSV/JSON;native-vs-finalMS03;input hashes;EarthGIS ZIP/CRS/185records.",
+  "scope": "Handoff correctness and source/data structure;not physical validation",
+  "not_executed": [
+    "raw Mars reprocessing",
+    "Earth thermal statistics",
+    "new field experiment",
+    "Earth-Mars performance transfer"
+  ],
+  "shared_file_validation": "Completed by actual Git-blob retrieval and ZIP/gzip/CSV checks;scientific Excel content not audited"
+}

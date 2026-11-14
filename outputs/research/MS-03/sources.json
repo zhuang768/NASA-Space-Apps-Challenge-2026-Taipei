@@ -1,0 +1,68 @@
+{
+  "M0": {
+    "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/3cc8488577535e2fa4d146021fde51f8ff6cc667/outputs/research/mars_reselection_20261114/candidate_native_evidence.json",
+    "locator": "records[review_id=C]; units_periods_and_support; sources",
+    "read_scope": "Repository full JSON record C and shared metadata; final CSV cross-check; no raw Mars reprocessing",
+    "access_date_taipei": "2026-11-14"
+  },
+  "U1": {
+    "url": "https://doi.org/10.1017/S0954102022000025",
+    "locator": "Meteorological measurements; TableII; Thermal diffusivity; Appendix",
+    "read_scope": "Publisher HTML named full-text sections; no supplementary numeric file downloaded",
+    "access_date_taipei": "2026-11-14"
+  },
+  "U2": {
+    "url": "https://www.usgs.gov/publications/effects-snow-and-salt-ice-table-stability-university-valley-antarctica",
+    "locator": "Author abstract; DOI10.1017/S0954102017000402",
+    "read_scope": "USGS original abstract; PMC fulltext blocked by browser check; no fulltext claim",
+    "access_date_taipei": "2026-11-14"
+  },
+  "U3": {
+    "url": "https://www.lpi.usra.edu/meetings/lpsc2011/pdf/1901.pdf",
+    "locator": "pp1-2; exact drill coordinates p1",
+    "read_scope": "Both pages author conference abstract",
+    "access_date_taipei": "2026-11-14"
+  },
+  "A1": {
+    "url": "https://doi.pangaea.de/10.1594/PANGAEA.921087",
+    "locator": "Event Svalbard2009_Act-IWS; data table; license; supplement citation",
+    "read_scope": "Dataset HTML and actual downloaded TSV7554bytes; Acts-IWS ZIP57636bytes opened; no thermal time series",
+    "access_date_taipei": "2026-11-14"
+  },
+  "A2": {
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/ppp.1985",
+    "locator": "Sections2,3,4.1; Fig1 and supporting-information listing",
+    "read_scope": "Publisher HTML named sections; sensor supplement not downloaded; exact plot linkage to AD1 not geometrically proved",
+    "access_date_taipei": "2026-11-14"
+  },
+  "A3": {
+    "url": "https://tc.copernicus.org/articles/15/283/2021/",
+    "locator": "Section2; Methods summary; Code and data availability",
+    "read_scope": "Publisher HTML named sections; raw seismic data not obtained; only available upon request",
+    "access_date_taipei": "2026-11-14"
+  },
+  "A4": {
+    "url": "https://meetingorganizer.copernicus.org/EPSC-DPS2025/EPSC-DPS2025-710.html",
+    "locator": "Svalbard field test location; Results/Fig3; References[5]",
+    "read_scope": "Full author conference abstract HTML; not journal article or registered conference presentation; exact profile geometry not obtained",
+    "access_date_taipei": "2026-11-14"
+  },
+  "A5": {
+    "url": "https://apgc.awi.de/dataset/mapped-poly-pattern-geomorph-hrsc-ax-2009-iws-svalbard",
+    "locator": "Additional Info; source DOI link",
+    "read_scope": "Metadata only; IWS broad bounding box is NOT substituted for Act-IWS; IWS ZIP503",
+    "access_date_taipei": "2026-11-14"
+  },
+  "A6": {
+    "url": "https://tc.copernicus.org/articles/20/1179/2026/index.html",
+    "locator": "2.1,2.2,Data availability",
+    "read_scope": "Named full-text sections; 2023 cores/InSAR valley context, not established as AD1 samples; linked Zenodo not downloaded",
+    "access_date_taipei": "2026-11-14"
+  },
+  "A7": {
+    "url": "https://doi.org/10.1016/j.geomorph.2011.07.002",
+    "locator": "Original abstract/publisher index; dataset supplement link",
+    "read_scope": "Indexed author abstract and PANGAEA original attribution; AWI author PDF returned Anubis access-denied; no full article claim",
+    "access_date_taipei": "2026-11-14"
+  }
+}

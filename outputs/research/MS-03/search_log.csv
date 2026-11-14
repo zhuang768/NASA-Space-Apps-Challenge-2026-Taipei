@@ -1,0 +1,16 @@
+search_id,date_taipei,platform,query,source_ids,outcome,limitation
+MS03-Q01,2026-11-14,Web search,University Valley dry permafrost ice table thermal conductivity 2022 Marinova,U1,Located publisher fulltext sections,Bounded primary-source search;not complete historical exclusion
+MS03-Q02,2026-11-14,Web search,University Valley thermal response Mars,U1;U2,Existing thermal interpretation;no novelty inferred,Bounded primary-source search;not complete historical exclusion
+MS03-Q03,2026-11-14,Web search,University Valley thermal ice table data download,U1,Supplement listing found;numeric file not downloaded,Bounded primary-source search;not complete historical exclusion
+MS03-Q04,2026-11-14,Web search,University Valley snow ice table Williams 2018 doi,U2,USGS author abstract;PMC browser check,Bounded primary-source search;not complete historical exclusion
+MS03-Q05,2026-11-14,Direct official conference PDF,https://www.lpi.usra.edu/meetings/lpsc2011/pdf/1901.pdf,U3,Read two-page original;separate borehole,Bounded primary-source search;not complete historical exclusion
+MS03-Q06,2026-11-14,Web search,Adventdalen dry permafrost ground penetrating radar ice wedge thermal Mars analogue,A2;A7,Located prior thermal and Mars comparison work,Bounded primary-source search;not complete historical exclusion
+MS03-Q07,2026-11-14,Web search,Adventdalen ice thermal Mars analogue,A1;A4;A7,Located dataset and2025GPRprecedent,Bounded primary-source search;not complete historical exclusion
+MS03-Q08,2026-11-14,Web search,Performance validation of WISDOM Svalbard 2025,A4,Read original conference abstract,Bounded primary-source search;not complete historical exclusion
+MS03-Q09,2026-11-14,Direct publisher,https://onlinelibrary.wiley.com/doi/10.1002/ppp.1985,A2,Read selected methods/results;raw data unavailable in this run,Bounded primary-source search;not complete historical exclusion
+MS03-Q10,2026-11-14,Direct data portal,https://doi.pangaea.de/10.1594/PANGAEA.921087?format=textfile,A1,Downloaded7554byte TSV;metadata event and file name verified,Bounded primary-source search;not complete historical exclusion
+MS03-Q11,2026-11-14,Direct binary download,https://download.pangaea.de/dataset/921087/files/polygons_Act-IWS.zip,A1,Downloaded57636bytes;ZIP+PRJ+185polygon record QA,Bounded primary-source search;not complete historical exclusion
+MS03-Q12,2026-11-14,Direct author repository,https://epic.awi.de/id/eprint/24005/1/Ulr2011a.pdf,A7,Access-denied HTML;not originalPDF全文,Bounded primary-source search;not complete historical exclusion
+MS03-Q13,2026-11-14,Direct binary download,https://download.pangaea.de/dataset/921087/files/polygons_IWS.zip,A5,HTTP503;IWS notused asAct-IWS,Bounded primary-source search;not complete historical exclusion
+MS03-Q14,2026-11-14,Direct publisher,https://tc.copernicus.org/articles/15/283/2021/,A3,Data/code upon request;no request sent,Bounded primary-source search;not complete historical exclusion
+MS03-Q15,2026-11-14,Direct publisher,https://tc.copernicus.org/articles/20/1179/2026/index.html,A6,"Read2.1,2.2,data availability;notco-located AD1 evidence",Bounded primary-source search;not complete historical exclusion

@@ -2,6 +2,54 @@
 
 Team zasa. Review date: **2026-11-14, Asia/Taipei**. Phase 1 repository baseline: `3e3ffff`; Phase 2 main baseline: `263269a`. Scope: literature and proposal checks for I-01, I-02, D-03 and D-04, followed by the supplied Earth candidate EARTH-UV-001. No new site selection, Earth pairing, environmental validation or ranking.
 
+## 2026-11-14 新版交接：已知用途、待查缺口與 EARTH-002
+
+本段以最新 main `cf72039` 的 Team 1 版本 `TEAM1-ICE-REDO-v1`（`EARTH-002 → I-02`，`EARTH-UV-001 → I-01`）更新交接；下方舊階段敘述保留為當時紀錄。研究需求 `TEAM1-PROVISIONAL-ICE-v1 / 2026-11-14` 尚待主要對話定案；`docs/research_requirements.csv` 仍是較早的綜合需求，不能當作新冰探查規格。清理提交 `5901362` 已包含在此 main 歷史中；總 Excel 不是本輪新配對的交付證據。本次只改本報告與 Team 2 CSV。
+
+### 隊友 1 選點可用的已知用途簡表
+
+| 地點／區域 | 已知研究或測試用途、原始來源 | 已取得範圍 | 與目前用途相近及已確定重複的部分 | 尚不能判定；給新候選的提醒 |
+|---|---|---|---|---|
+| University Valley，W 站與山谷 | W 站冰界面及氣象監測 [U1]；Icebreaker 火星類比鑽探、短段取樣及控溫 [U2–U3]；樣品處理 [U5] | U1 的 W 點位；U2 另一鑽孔點約離 W 2.13 km；U5 未定位到 W | 山谷尺度的火星類比鑽探和分段、控溫用途已有先例；W 點的冰界面也已量測 | `EARTH-UV-001` 的「周邊」未畫範圍；盲判、獨立取芯誤差與冰質量收支的完整聯合流程未證實。保留為已知用途對照，不能稱首次鑽探 |
+| Elephant Head，Mount Dolence 北側監測站／Site 3 | 壕溝確認冰界面與熱濕監測 [EHA1]；Site 1/3 分層採土、鑽取冰芯與低溫保存 [EHA2]；與 UV 的冰界面機制比較 [EHA3] | 監測站點位；EHA1 明載站點在 Site 3 的 10 m 內；EHA2 的 Site 1、3 座標，兩點約 0.3 km；無新試驗區 | 冰界面已有直接真值；Site 3 附近已有分層採樣及鑽冰芯。跨 UV/EH 的自然機制比較已做過 | 現有原文未顯示盲判深度誤差、鑽採時樣品升溫或初末冰量收支。不可把「10 cm 分層採土」改述為「10 cm 分段鑽冰」，也不能以低溫保存代替升溫量測；需界定新試驗區 |
+| I-01／I-02 火星名義格 | SWIM 冰一致性製圖與冰資源探索區先例 [N1–N3, P1–P5] | 兩個 0.5° 名義格；已查 I-MIM 初始 RZ、已釋出的 SWIM4MIM RZ 及兩個 ASU 圓；其他替代 EZ／ROI 未取得完整幾何 | 廣域冰探查與資源評估已有研究；上述具名受查範圍與兩格不重疊 | 未取得所有替代 EZ／ROI 與後續提案的原始邊界及用途對照。不得從已查的不重疊推成所有提案均不重疊；低溫及 SWIM 指標不證明可挖冰 |
+| D-03 Hellas／D-04 Elysium 周邊 | 已有區域沙塵與地表變化研究 [N6–N9] | 區域研究；候選格與研究／任務完整範圍的交集仍有缺口 | 已研究區域與沙塵背景，不能稱發現全新沙塵區 | 隊友 1 尚未交新地球 ID、範圍與測試用途；先等交接，不自行配對 |
+
+狀態整理：既有四個火星格的區域文獻與已查幾何結果屬**已完成、沒有新疑點**；若得到完整替代 EZ／ROI 資料或新提案，才更新那些範圍結論。`EARTH-UV-001` 的山谷先例已完成，確切 W 周邊範圍仍待 Team 1。`EARTH-002` 已收到並於下方逐項查核。D-03／D-04 的新地球候選待 Team 1；儀器、深度、誤差、冰損失門檻與正式聯合流程待主要對話。
+
+### EARTH-002 → I-02：新候選逐項查核
+
+**交接身份與問題。** 固定 ID `EARTH-002`；Elephant Head monitoring station／Elephants Head Permafrost Site，Mount Dolence 北側，南極洲。Team 1 的地球錨點 `−79.820216667°, −83.314333333°`（北、東為正，原始文獻 `79°49.213′S, 83°18.860′W`）；火星 I-02 `53.75°N, 42.25°E` 為 planetocentric／東經。地球文獻未報水平 datum 或定位誤差。新測試區只有已發表站點錨點，無半徑、多邊形或鑽孔；不得用站點與 Site 3 的 10 m 既有關係冒充新試驗範圍。用途版本 `TEAM1-PROVISIONAL-ICE-v1 / 2026-11-14`：盲判乾覆土下冰膠結界面並以獨立真值驗證，接著受控分段採樣，分開量測樣品升溫與冰質量損失；屬**提議、未執行**。查核 Team 1 §8 四項問題，尤其分清觀測、取樣、工程驗證與整套流程。
+
+| 層次／組成部分 | 讀到的原始證據與範圍 | 本次判定 |
+|---|---|---|
+| A. 站點與冰界面研究 | [EHA1] 2016 年在 Elephant Head 四處以挖溝定冰界面；監測站在 Site 3 的 10 m 內，長期感測器置於 49 cm 界面。[EHA3] 已研究本站與 UV 冰界面受夏季積雪、熱及水汽影響的機制 | `related_research_exists`；本站不是未研究場址，UV–EH 自然機制比較也已有先例 |
+| B1. 分層土樣、冰芯與冷藏 | [EHA2] 2020 年在 Site 1／Site 3 每 10 cm 分層以無菌勺取乾凍土，在 30／45 cm 見冰界面，以手持電鑽及鑽石取芯鑽頭取得 13／3 cm 冰芯，現地、運輸、實驗室維持 −20°C。Site 3 的發表座標與 EHA1 的 Site 3 相同，而站點在 Site 3 10 m 內 | **站點鄰近尺度的用途組成先例已確認**；先前 Team 1 僅從 EHA2 摘要得知微生物用途，現在讀到全文方法，應補記分層與取芯。這不是受控分段鑽進、鑽頭／樣品升溫曲線或冰損失量測 |
+| B2. 盲判界面與獨立真值 | [EHA1] 壕溝與 [EHA2] 採樣提供已知界面；兩者所讀方法未述隱藏真值、固定盲判演算法、預先登記誤差／漏判／誤判 | 已有**真值測定**，本次未找到**盲判驗證**；不能把文獻沒提到直接寫成從未執行 |
+| B3. 升溫、冰損失與完整流程 | [EHA2] 的 −20°C 是保存條件，不是鑽進時樣品溫度；[EHA1] 的冰界面長期水汽穩定性，[EHA3] 的冰界面機制也不是回收冰芯初末質量量測 | 本次未找到可驗證的升溫曲線、初末冰量或完整聯合流程；`complete_joint_protocol_status=insufficient_data` |
+| C. 相同範圍、相同完整用途 | EHA1 明載站點與舊 Site 3 的距離關係；EHA2 重用 Site 3 座標，但未提供鑽孔的精確位置或新提議試驗區 | **既有取芯活動可能與提議站點周邊高度接近**，不能說沒有同址先例；完整同範圍同用途仍 `insufficient_data`，不設定無來源的半徑 |
+
+**可保留的研究差異（待證實，不是新穎性結論）：** 將已有實測界面當獨立真值，在明定場址、儀器與輸入後，先盲判界面深度與漏誤判，再同一試驗設計量測分段取芯的樣品溫度、處理時間、初末含冰量及質量變化。這些輸出會回答「探查方法的誤差」與「採樣是否保存冰」，與 EHA1 的熱濕平衡、EHA2 的微生物取樣、EHA3 的自然形成機制所報量測不同；是否有未查到的同流程研究仍未排除。站點可作**待設計的方法參照候選**，不稱已證實新研究場址或已可施工。與 I-02 的關係僅是方法問題：不得由 Elephant Head 冰芯推算火星格內冰深、可採量、能耗或安全性。
+
+**查核與存取紀錄。** 2026-11-14（Asia/Taipei）查詢公開網頁及出版者／NASA 原文，詞組：`"Elephant Head" Antarctica ice cemented drilling sampling core ice loss blind detection`；`"Elephant Head" "ice-cemented" drilling sampling Mars analog`；`"Elephants Head" permafrost site ice probe borehole thermophysical experiment`；`"Elephant Head" "ice table" thermal probe McKay sampling`；`"Elephant Head" Antarctica "drill" "ice" Mars 2021 2022 2023`；`"Elephant Head" "ice-cemented" "radar" Antarctica`；`"Elephant Head" Antarctica "ice loss" sampling`；`"Elephant Head" Antarctica "blind" "ice" probe`。實際讀到 EHA1 NASA 原文 PDF 的 Methods、Table I、Discussion；EHA2 作者原文 PDF 的 Site description／field sampling／Figure 1，檔案由 Semantic Scholar 鏡像取得並核對出版者 DOI；EHA3 出版者 PDF 的方法及結論。EHA2 出版者 HTML 開啟失敗，PMC 直接開啟遇瀏覽器驗證；未以搜尋摘要代替原文。未完整查 ADS／Scopus、所有後續引文、所有會議摘要、EHA2 補充資料及未公開野外紀錄；故「未找到」只限本次所列查詢與可讀材料。
+
+| 來源 | 原始文獻與本次支持範圍 |
+|---|---|
+| EHA1 | McKay et al. (2019), [Dry permafrost over ice-cemented ground at Elephant Head](https://www.nasa.gov/wp-content/uploads/2019/09/mckay_etal_2019_dry_permafrost_ellsworth_land21.pdf)，Methods、Table I、Discussion；2016 挖溝、2017–2018 站點量測及 Site 3／站點位置。 |
+| EHA2 | Wood et al. (2024), [Active microbiota persist in dry permafrost and active layer from Elephant Head](https://doi.org/10.1093/ismeco/ycad002)，[可讀原文 PDF](https://pdfs.semanticscholar.org/6702/fb238f8ae546875a33f0e1348cf9807ac160.pdf)，Methods pp.2–3／Figure 1；2020 分層土樣、鑽冰芯及保存條件。原研究目的是微生物學，不是儀器盲判或冰損失工程驗證。 |
+| EHA3 | McKay et al. (2026，2025-11-27 線上發表), [Summer snow determines the depth to ice-cemented ground under dry permafrost in Antarctica](https://doi.org/10.1017/S0954102025100448)，[出版者 PDF](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/5B2E97EBA4C91035CAFCECC234A532A0/S0954102025100448a.pdf/summer-snow-determines-the-depth-to-ice-cemented-ground-under-dry-permafrost-in-antarctica.pdf)，結果及結論；UV–EH 機制比較，非新取芯實驗。 |
+
+**交接。** 隊友 1：將 EHA2 的 Site 3 分層／取芯先例加入 `EARTH-002` 自己的來源核對，明確標示「取芯已做；升溫與冰質量收支未驗證」，並提供預定試驗區、儀器與量測流程；可保留候選作方法參照，也可修訂用途，不能以新 ID 隱藏先例。主要對話：可說「利用已研究的乾覆土—冰界面場址，設計盲判探查與採樣保冰性的聯合驗證」，**不可說**首次在 Elephant Head 發現冰、首次取芯、首次與 UV 比較、已證實完整流程新穎、I-02 有可挖冰或地球測試能直接預測火星性能。正式用途、誤差／損失指標與是否實作由主要對話決定。GPU 若只處理既有熱濕時序，可用於背景與 QA；那組表不能代替新流程的樣品升溫和初末冰量觀測。
+
+CSV 沿用原有 45 欄，新增 `EARTH-002` 一列而未改欄名。此列 `classification=related_research_exists` 表示站點有研究；`site_level_same_use_status=related_research_exists` 表示相近的取樣／取芯**方法組成**已做，但 EHA2 的微生物研究目的不同；`exact_site_same_use_status=insufficient_data` 與 `complete_joint_protocol_status=insufficient_data` 表示新試驗區及完整用途尚不能判定。這些欄位是不同層次，不是分數或新穎性保證。原有 `EARTH-UV-001` 山谷尺度 `same_use_exists` 結論保留，不移用到 EARTH-002。
+
+### 目前真正未完成的查核
+
+1. **EARTH-002／EARTH-UV-001 的精確範圍：** Team 1 需提供試驗圖、半徑或多邊形，以及規劃鑽孔與歷史 Site 3／UV 鑽孔的關係；目前只能說站點錨點與已知採樣點的關係，不能判定整套流程的同範圍重複。
+2. **用途版本：** 主要對話需定儀器、探測深度、盲判輸入與真值、分段採樣方法、樣品溫度及冰損失量測、決策門檻。定版後才檢索是否有完全相同的方法研究；EHA2 的補充資料和後續引文也是具體可查缺口。
+3. **I-01／I-02 未覆蓋的火星提案：** 需取得 Head et al. 替代 EZ／資源 ROI 的原始幾何和名稱對應，以及 MarsGIS 的完整 EZ／ROI 圖層；得到資料才做相同座標慣例下的交集。P1–P3 已確定的分離結果不重算。也需核對後續具名冰探查目標，避免把目前搜尋未找到寫成沒有提案。
+4. **D-03／D-04：** 等 Team 1 固定 ID、地點、座標、範圍、用途版本、來源及具體查核問題；目前沒有可逐項審查的新地球交接。
+
 Latest ice-footprint results are in the dated follow-up immediately below. Earlier sections remain as the audit history.
 
 ## Ice-purpose footprint follow-up, 2026-11-14

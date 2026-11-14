@@ -188,3 +188,8 @@ Opened the public Cloudflare Pages URL in headless Chromium at desktop 1440×100
 GitHub Actions for `f0cdd59` failed at upload with an invalid header value. Added masked token normalization/validation and reran deployment; `fb10a3c` failed validation because the configured token still contains unsupported characters after trimming. Five synthetic format checks passed. Requested that the repository owner replace the token secret and configure the missing account-ID secret, without sharing credentials in chat. [Full evidence and next checks](docs/deployment_check_2026-11-14.md).
 
 The workflow repair is pushed; publication remains blocked on valid Cloudflare configuration. Public desktop/mobile verification of the new layout will resume after the owner updates secrets. No science or site-content changes were made in this diagnostic task. OpenAI Codex assisted CI diagnosis, browser checks and English reporting.
+
+
+### 2026-11-14: Local website fallback
+
+The user could not access Cloudflare and chose local operation. Started the latest organized workbench at `http://127.0.0.1:4178/` and opened it in the in-app browser. The rendered page showed the three-view navigation, selected-candidate summary and maps. The development server remains running for this session. Restart from the repository root with `npm run dev --prefix web -- --host 127.0.0.1 --port 4178 --strictPort` if it stops. This address is local to this computer, not a public competition demo link. Cloudflare deployment remains blocked and was not represented as complete. No scientific data or rankings changed.

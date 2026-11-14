@@ -1,0 +1,63 @@
+{
+  "source_url": "https://authors.library.caltech.edu/records/h6pv6-fhf02",
+  "doi": "10.1016/j.icarus.2023.115612",
+  "pdf_sha256": "9241bfc143f2ecb653aa68accd88fe7da94d576f0b175bbf76cc59a59d00f730",
+  "provider_md5_verified": true,
+  "pdf_pages": 34,
+  "pypdf_version": "6.21.4",
+  "record_file_count": 1,
+  "record_related_identifiers": null,
+  "read_pages": [
+    {
+      "pdf_page_1based": 24,
+      "printed_page": 24,
+      "locator": "Fig21; sections6.4-6.6",
+      "extracted_text_sha256": "83975afef385833d3155db53f83437d63988dd85d17be4f597996abbd07eeee4",
+      "scope": "complete indicated page text read; pages24-26 additionally rendered and visually checked"
+    },
+    {
+      "pdf_page_1based": 25,
+      "printed_page": 25,
+      "locator": "section6.6; Fig22; Fig23 caption",
+      "extracted_text_sha256": "1b96ed1e7dffe78a0f77ebefc16c0dfe5323ae2c5a4e813b5e8572e1912da459",
+      "scope": "complete indicated page text read; pages24-26 additionally rendered and visually checked"
+    },
+    {
+      "pdf_page_1based": 26,
+      "printed_page": 26,
+      "locator": "sections6.7-6.11",
+      "extracted_text_sha256": "20d54deecf6f3b4e0fdbbad4df5b7cb4f657b4741a6609597a644e0021f32173",
+      "scope": "complete indicated page text read; pages24-26 additionally rendered and visually checked"
+    },
+    {
+      "pdf_page_1based": 32,
+      "printed_page": 32,
+      "locator": "Data availability",
+      "extracted_text_sha256": "56b06f0ff8b1cc5064c7c0e94f078df353fa8736e673d2773fa85c2c702fc6c4",
+      "scope": "complete indicated page text read; pages24-26 additionally rendered and visually checked"
+    }
+  ],
+  "embedded_file_count": 0,
+  "T1811_text_hits": 0,
+  "fig23_support": {
+    "latitude_N": [
+      17.0,
+      19.5
+    ],
+    "longitude_E": [
+      76.0,
+      79.0
+    ],
+    "region": "Jezero",
+    "RGB_nm": [
+      716,
+      599,
+      534
+    ],
+    "both_autostretched": true,
+    "overlaps_fixed_MS03_roi": false,
+    "usable_MS03_BD1500_pre_post_pair": false
+  },
+  "actual_coefficients_or_run_files_obtained": false,
+  "license": "CC BY-NC-ND4.0; original PDF local-only, not republished or altered"
+}

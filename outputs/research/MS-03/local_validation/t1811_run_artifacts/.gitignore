@@ -1,0 +1,4 @@
+__pycache__/
+sources/*.pdf
+sources/*.html
+sources/collection_data_mrdr_inventory.csv

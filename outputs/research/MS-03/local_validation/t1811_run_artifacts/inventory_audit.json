@@ -1,0 +1,54 @@
+{
+  "starting_main_sha": "fee734610c6bacc57880eaaba1a1301f09fdd4d6",
+  "roi": "57.50..58.00N;242.00..242.50E;planetocentric/east-positive",
+  "bundle_members": [
+    "urn:nasa:pds:mro_crism_mrdr:data_browse",
+    "urn:nasa:pds:mro_crism_mrdr:data_mrdr",
+    "urn:nasa:pds:mro_crism_mrdr:document",
+    "urn:nasa:pds:mro_crism_mrdr:document_catalog",
+    "urn:nasa:pds:mro_crism_mrdr:miscellaneous"
+  ],
+  "data_inventory_records": 7056,
+  "T1811_members": 4,
+  "T1811_physical_listing_files": 15,
+  "T1811_file_urls": [
+    "/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrral_60n243_0327_4.hdr",
+    "/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrral_60n243_0327_4.img",
+    "/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrral_60n243_0327_4.lbl",
+    "/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrral_60n243_0327_4.xml",
+    "/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrde_60n243_0327_4.hdr",
+    "/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrde_60n243_0327_4.img",
+    "/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrde_60n243_0327_4.lbl",
+    "/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrde_60n243_0327_4.xml",
+    "/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrsu_60n243_0327_4.hdr",
+    "/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrsu_60n243_0327_4.img",
+    "/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrsu_60n243_0327_4.lbl",
+    "/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrsu_60n243_0327_4.xml",
+    "/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrwv_60n243_0327_4.lbl",
+    "/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrwv_60n243_0327_4.tab",
+    "/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrwv_60n243_0327_4.xml"
+  ],
+  "index_source": {
+    "path": "official_resources/sources/mrdr_index_index.tab",
+    "bytes": 5588352,
+    "sha256": "d14d2252d90a49c3ece2218c20c94ec0d88a4f7c31dafb32b1b0baaa6eecdb6d",
+    "record_bytes": 792,
+    "records": 7056,
+    "selected_records_0based": [
+      492,
+      493,
+      494,
+      495
+    ],
+    "excerpt_sha256": "5b85d47a5d3e9bcb7803790dc09d26622e9f749b4120f627aae3b2fbccda3744"
+  },
+  "index_column_count": 57,
+  "inventoried_run_configuration": "not_identified_in_checked_bundle",
+  "inventoried_optimization_coefficients": "not_identified_in_checked_bundle",
+  "inventoried_pre_post_arrays": "not_identified_in_checked_bundle",
+  "global_absence_claim": false,
+  "source_five_strips_are_complete_optimization_network": "unknown",
+  "reproducible_stage_replay": false,
+  "quantitative_residual_cause": "unknown",
+  "corrected_values_generated": false
+}

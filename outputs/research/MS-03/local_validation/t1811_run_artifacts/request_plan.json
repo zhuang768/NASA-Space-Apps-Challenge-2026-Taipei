@@ -1,0 +1,67 @@
+[
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/bundle_crism_mrdr.xml",
+    "file": "sources/bundle_crism_mrdr.xml",
+    "max_bytes": 3000000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/",
+    "file": "sources/listing_mrdr.html",
+    "max_bytes": 3000000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/index/",
+    "file": "sources/listing_index.html",
+    "max_bytes": 3000000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/errata.txt",
+    "file": "sources/errata.txt",
+    "max_bytes": 3000000
+  },
+  {
+    "url": "https://authors.library.caltech.edu/api/records/h6pv6-fhf02",
+    "file": "sources/caltech_record.json",
+    "max_bytes": 3000000
+  },
+  {
+    "url": "https://authors.library.caltech.edu/records/h6pv6-fhf02/files/1-s2.0-S0019103523001896-main.pdf?download=1",
+    "file": "sources/seelos2024_overview.pdf",
+    "max_bytes": 40000000
+  },
+  {
+    "url": "https://ntrs.nasa.gov/api/citations/77934855965157",
+    "file": "sources/ntrs_record.json",
+    "max_bytes": 3000000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/collection_data_mrdr.xml",
+    "file": "sources/collection_data_mrdr.xml",
+    "max_bytes": 3000000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/collection_data_mrdr_inventory.csv",
+    "file": "sources/collection_data_mrdr_inventory.csv",
+    "max_bytes": 3000000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/index/index.lbl",
+    "file": "sources/index.lbl",
+    "max_bytes": 3000000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/index/collection_miscellaneous_inventory.csv",
+    "file": "sources/collection_miscellaneous_inventory.csv",
+    "max_bytes": 3000000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrde_60n243_0327_4.xml",
+    "file": "sources/T1811_DE.xml",
+    "max_bytes": 3000000
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc03/t1811_mrrwv_60n243_0327_4.xml",
+    "file": "sources/T1811_WV.xml",
+    "max_bytes": 3000000
+  }
+]

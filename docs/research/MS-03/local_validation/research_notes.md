@@ -1,5 +1,24 @@
 # MS-03 — local validation evidence notes
 
+## 2026-11-15：T1811 執行設定、係數與配對中間資料補查
+
+- 起始main：`fee734610c6bacc57880eaaba1a1301f09fdd4d6`；只更新local_validation，保留以下歷史紀錄。
+- [來源與實讀範圍](../../../../outputs/research/MS-03/local_validation/t1811_run_artifacts/source_audit.csv)、[逐項判定](../../../../outputs/research/MS-03/local_validation/t1811_run_artifacts/artifact_status.csv)、[精確重現所需檔案](../../../../outputs/research/MS-03/local_validation/t1811_run_artifacts/replay_inputs_needed.csv)、[索引核對](../../../../outputs/research/MS-03/local_validation/t1811_run_artifacts/inventory_audit.json)。
+
+|本輪新增核對|結果|限制／處置|
+|---|---|---|
+|官方PDS4 bundle及資料集合清單|解析7056筆；T1811恰有AL／SU／DE／WV四個logical products，與15個實體檔名相符|受查項目未識別出run設定、optimizer係數或stage中間資料；不代表全球不存在|
+|標籤及索引是否藏有設定？|四份XML來源／檔名交叉核對；沿用原始index抽出4筆×792bytes及57欄定義，保存原始record位置與SHA|產品軟體版本、儀器欄位、storage byte offset、地圖offset及波長表都不等於optimizer係數；未讀到實際run options|
+|作者全文是否交付係數／前後資料？|Caltech原始PDF取得，34頁，MD5與典藏一致；完整讀取pp24-26、32，pp24-26已渲染看圖；典藏只有一個PDF，PDF無內嵌附件|新取得全文，不再只依摘錄；所讀方法／資料可用性未提供T1811數值係數或run檔；NTRS記錄亦無下載附件|
+|前後圖能否拿來驗證？|Fig23位於Jezero，17.0至19.5°N、76至79°E；RGB為716／599／534nm，前後均自動stretch|格外可見光展示，不是MS-03 BD1500_2配對；不能讀圖反推本地正規化量|
+|GPU下一步能否重現？|Fig21列出design matrix、weighting/data vectors及model parameters等實際應索取的類型；這些T1811 run檔仍未取得|五個格內來源strip不等於完整最佳化相依網路；需真實overlap／proximity／anchor資料與兩stage輸出，不能從最終SU擬合硬補|
+
+- 類別限制：一般儀器CDR、ADR大氣／光度lookup corrections及跨條帶optimizer參數分開。SIS §2.3.4.11記載的2023年ADR典藏計畫不能當成目前所有係數均無公開的證明。
+- 數值處置：沒有新增stage replay或修正值；既有公式重算、官方SU與殘差統計均維持。精確差異原因、冰存在／深度／含量仍unknown；AD1降級與形貌unknown不變。
+- 給主要對話：可說「已核對具體集合、標籤、索引及作者原文，尚未取得可重現T1811的run artifacts」；不能說「係數已還原」「差異已解釋」「官網確定沒有中間資料」。
+- 給GPU：收到versioned執行設定、兩stage的同來源前後陣列、實際係數／權重、anchors、遮罩及GLT／template後才啟用重現；不以原始TRR3與最終AL差值代替單一正規化stage。
+- 本輪沒有新增場址、冰偵測或新的物理資料處理。原始論文只作本地來源，未改圖或重新發布其PDF；來源、MD5、SHA與實讀頁碼保存在專用資料包。
+
 ## 2026-11-15：1.03.94 歷史流程與中間資料查核
 
 - 起始 main：`826780f0b270eebe9b6f2f64b8ba1ac5ddcc8177`；提交前同步 `2b3984047b8983a1db8b9f15a585d88651d74a5b`，保留其他人的更新。

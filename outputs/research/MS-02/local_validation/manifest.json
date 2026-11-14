@@ -19,7 +19,7 @@
     "outputs/research/mars_reselection_20261114/known_ice_points_morgan2025.csv",
     "outputs/research/mars_reselection_20261114/bounded_prior_site_audit.json (inherited statements, not re-read)"
   ],
-  "search_log_rows": 55,
+  "search_log_rows": 60,
   "verification": {
     "PASS": 12,
     "FAIL": 0
@@ -71,8 +71,8 @@
   "files": [
     {
       "path": "docs/research/MS-02/local_validation/research_notes.md",
-      "bytes": 14797,
-      "sha256": "10d0c969b9af61a287a8a594c6bb605c7be6b11a83ce7208c4dea8ed177359af"
+      "bytes": 16627,
+      "sha256": "0806fa57b20474eca3dab4bd0c4e441487282c1f781a198131ed7092a6c418e3"
     },
     {
       "path": "outputs/research/MS-02/local_validation/analog_validation.csv",
@@ -83,6 +83,11 @@
       "path": "outputs/research/MS-02/local_validation/build_manifest.py",
       "bytes": 3573,
       "sha256": "0f749654f1e306d1165c8da6d127f2422fda7f1a34f98ad8d10d49ca4135fa18"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/build_statistics.py",
+      "bytes": 4212,
+      "sha256": "c6cbc5728e347372838b6af949d51cafc019621d9f7bae494b0f116155e57df7"
     },
     {
       "path": "outputs/research/MS-02/local_validation/build_tables.py",
@@ -111,23 +116,43 @@
     },
     {
       "path": "outputs/research/MS-02/local_validation/mars_ice_evidence.csv",
-      "bytes": 10876,
-      "sha256": "9329c3398b6913ad123bfdb6af1ca63ad01c92f04952e38202055f64c86e3a2a"
+      "bytes": 12227,
+      "sha256": "7f920dfd6cf923b7c40adeb18142c22aea66eb074e1816f0692669f2b23f7228"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/ode_coverage_query.csv",
+      "bytes": 772,
+      "sha256": "c5c68c374ca55fea0d48e5078a07562caaffa6d332a9b4716d544ab56a4792a1"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/scale_gap_resolution.csv",
+      "bytes": 3043,
+      "sha256": "729681fbb330d576671223373e84c5635510d50d4733b4180f38eed0c2b96af9"
     },
     {
       "path": "outputs/research/MS-02/local_validation/search_log.csv",
-      "bytes": 12415,
-      "sha256": "2b9996d6d06b6e12b8268fb727e437c26426667c271e1e6fc84b8b2d9699e024"
+      "bytes": 13697,
+      "sha256": "f14540c284c3eb157736233f7276e278ac78f9aa4325bd9e8dfadcd1afd950b0"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/statistics_summary.md",
+      "bytes": 3715,
+      "sha256": "90de416d1e6a8ea09c3e2cdbb5904feb62e647ef9206887a4e4226232a0458b0"
     },
     {
       "path": "outputs/research/MS-02/local_validation/verification.json",
       "bytes": 1633,
-      "sha256": "c55f86fb77459efe8ce5b7a077478d15df13a9a957b4fa8a87e0b4e62cc8c2fa"
+      "sha256": "5832e173f05bb7a256258c779ca66f8fa9dda71cf1685006a371f03bb21c5942"
     },
     {
       "path": "outputs/research/MS-02/local_validation/verify_local_validation.py",
       "bytes": 4781,
       "sha256": "b1e05d366b165853aea7d356780391e4e3b285e19d35637b771ef17bba47f85a"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/verify_scale_gap.py",
+      "bytes": 1324,
+      "sha256": "23953d96ec8b108219b5fa259d85ae50caa87124b9b838853e5f896b53e7b053"
     }
   ]
 }

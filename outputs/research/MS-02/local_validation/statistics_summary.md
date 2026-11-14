@@ -1,6 +1,6 @@
 # MS-02 統計彙整（僅計數與核對結果；非報告正文）
 
-目標：MS-02，52.75°N、168.25°E；branch research/ms-02-earth-analogs；HEAD `c309675fbe713a8548a75abf29b54e64217768f9`
+目標：MS-02，52.75°N、168.25°E；branch research/ms-02-earth-analogs；HEAD `cdcf3baaa0342a852cc4f6060f3d8fb048dcce53`
 
 ## 1. 檔案與列數
 
@@ -15,7 +15,7 @@
 | local_validation/local_prior_work.csv | 14 |
 | local_validation/mars_ice_evidence.csv | 25 |
 | local_validation/analog_validation.csv | 9 |
-| local_validation/search_log.csv | 55 |
+| local_validation/search_log.csv | 60 |
 | local_validation/scale_gap_resolution.csv | 8 |
 
 

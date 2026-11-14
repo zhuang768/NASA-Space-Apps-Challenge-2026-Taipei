@@ -1,0 +1,17 @@
+dataset,product_type,count_in_box,notes
+MRO CTX,EDR / non-PDS RDR,5,5 listed with IDs and dates (ME-14)
+MRO HiRISE,Raw + Derived,0,none listed
+MRO SHARAD,EDR,3,3 observations
+MRO SHARAD,USRDRV2 radargram,3,same 3 observations
+MRO SHARAD,USGEOMV2,3,geometry; not opened
+MRO SHARAD,3D / clutter simulation,0,no clutter simulation available in ODE for this box
+MRO CRISM,TRDR,180,not opened
+MRO CRISM,MRDR4,136,not opened
+MRO CRISM,DDR,61,not opened
+MRO CRISM,VRDR,6,hyperspectral map products; not opened
+MRO MCS,all,0,
+MRO RSS,all,28,radio science; not relevant to surface
+Mars Odyssey,all (incl. THEMIS),278,not opened
+Mars Express,all,350,not opened
+Mars Global Surveyor,all,14703,not opened; includes MOLA/MOC/TES-type products
+Viking,all,85,not opened

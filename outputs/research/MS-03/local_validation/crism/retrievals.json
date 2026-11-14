@@ -1,0 +1,358 @@
+[
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2014/2014_041/hsp0002de65/hsp0002de65_03_if218l_trr3.lbl",
+    "file": "sources/hsp0002de65_03_if218l_trr3.lbl",
+    "utc": "2026-11-14T19:05:58.755702+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "text/plain",
+    "last_modified": "Tue, 18 Feb 2014 09:48:42 GMT",
+    "bytes": 9483,
+    "sha256": "1546337cc47a9a9da9faf9e9f3f0ebb2a538c8ff94562f980597cc7cfcf4a442",
+    "status": "acquired"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-6-ddr-v1/mrocr_1008/ddr/2014/2014_041/hsp0002de65/hsp0002de65_03_de218l_ddr1.lbl",
+    "file": "sources/hsp0002de65_03_de218l_ddr1.lbl",
+    "utc": "2026-11-14T19:05:59.885732+00:00",
+    "request_headers": {},
+    "status": "not_acquired",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2104/trdr/2010/2010_145/msp00018fda/msp00018fda_01_if214l_trr3.lbl",
+    "file": "sources/msp00018fda_01_if214l_trr3.lbl",
+    "utc": "2026-11-14T19:06:00.766719+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "text/plain",
+    "last_modified": "Mon, 15 Nov 2010 23:49:54 GMT",
+    "bytes": 9479,
+    "sha256": "a567f46a9bacb023a995097142b75298acef3209449bf3f0ca5392d60aae091b",
+    "status": "acquired"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-6-ddr-v1/mrocr_1004/ddr/2010/2010_145/msp00018fda/msp00018fda_01_de214l_ddr1.lbl",
+    "file": "sources/msp00018fda_01_de214l_ddr1.lbl",
+    "utc": "2026-11-14T19:06:01.807497+00:00",
+    "request_headers": {},
+    "status": "not_acquired",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2110/document/crism_dpsis.htm",
+    "file": "sources/crism_dpsis.htm",
+    "utc": "2026-11-14T19:06:02.625143+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "text/html",
+    "last_modified": "Fri, 28 Mar 2025 16:16:14 GMT",
+    "bytes": 3234023,
+    "sha256": "75bc4b07f1849b997bc268916d4a5c78c184955f5ac2bbd6acb4b9a2ee041d95",
+    "status": "acquired"
+  },
+  {
+    "url": "https://oderest.rsl.wustl.edu/live2/?target=mars&query=product&pdsid=hsp0002de65_03_de218l_ddr1&results=fmpc&output=JSON",
+    "file": "sources/hsp0002de65_03_de218l_ddr1_ode.json",
+    "utc": "2026-11-14T19:06:32.178473+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "application/json; charset=utf-8",
+    "last_modified": null,
+    "bytes": 11611,
+    "sha256": "7ed4c6dbe67035cb73a99fb7ce35aa364167e3e5d6378169f2d1de9b36748ac6",
+    "status": "acquired"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-6-ddr-v1/mrocr_1006/ddr/2014/2014_041/hsp0002de65/hsp0002de65_03_de218l_ddr1.img",
+    "file": "sources/hsp0002de65_03_de218l_ddr1.img",
+    "utc": "2026-11-14T19:06:33.783781+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "application/octet-stream",
+    "last_modified": "Thu, 20 Feb 2014 18:18:57 GMT",
+    "bytes": 9676800,
+    "sha256": "7edbdbd7446708c4726e43a8810cd3d308db47fefe54898f6ddc800c98cae144",
+    "status": "acquired"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-6-ddr-v1/mrocr_1006/ddr/2014/2014_041/hsp0002de65/hsp0002de65_03_de218l_ddr1.lbl",
+    "file": "sources/hsp0002de65_03_de218l_ddr1.lbl",
+    "utc": "2026-11-14T19:06:48.665522+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "text/plain",
+    "last_modified": "Thu, 20 Feb 2014 18:18:57 GMT",
+    "bytes": 4610,
+    "sha256": "c937ffe16a67e337b5b8ff4c0172011febed424854d970c6c399e555fd5a414d",
+    "status": "acquired"
+  },
+  {
+    "url": "https://oderest.rsl.wustl.edu/live2/?target=mars&query=product&pdsid=msp00018fda_01_de214l_ddr1&results=fmpc&output=JSON",
+    "file": "sources/msp00018fda_01_de214l_ddr1_ode.json",
+    "utc": "2026-11-14T19:06:49.527714+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "application/json; charset=utf-8",
+    "last_modified": null,
+    "bytes": 10431,
+    "sha256": "6801c8abb1b988c9b74e066f5d2ff8cbfb2d27abd491ada43afe3e43bb3a69d1",
+    "status": "acquired"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-6-ddr-v1/mrocr_1002/ddr/2010/2010_145/msp00018fda/msp00018fda_01_de214l_ddr1.img",
+    "file": "sources/msp00018fda_01_de214l_ddr1.img",
+    "utc": "2026-11-14T19:06:50.367261+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "application/octet-stream",
+    "last_modified": "Fri, 04 Jun 2010 00:00:58 GMT",
+    "bytes": 9676800,
+    "sha256": "c31326ef44654bfc460224bc065b9a47c78d7f8e91dc2cfad1714b2bd8cff8eb",
+    "status": "acquired"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-6-ddr-v1/mrocr_1002/ddr/2010/2010_145/msp00018fda/msp00018fda_01_de214l_ddr1.lbl",
+    "file": "sources/msp00018fda_01_de214l_ddr1.lbl",
+    "utc": "2026-11-14T19:07:04.273584+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "text/plain",
+    "last_modified": "Fri, 04 Jun 2010 00:00:58 GMT",
+    "bytes": 4637,
+    "sha256": "21ce52e42f0d9a1d30f4ef4b24ce494949a9309132d1f42e7462c9dd477ae0ca",
+    "status": "acquired"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/cdr/",
+    "file": "sources/cdr_directory.html",
+    "utc": "2026-11-14T19:07:05.266147+00:00",
+    "request_headers": {},
+    "status": "not_acquired",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2014/2014_041/hsp0002de65/hsp0002de65_03_if218l_trr3.img",
+    "file": "sources/hsp0002de65_03_if218l_trr3_roi_rows.bin",
+    "utc": "2026-11-14T19:08:02.721268+00:00",
+    "request_headers": {
+      "Range": "bytes=24758272-30080511"
+    },
+    "status": "not_acquired",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2014/2014_041/hsp0002de65/hsp0002de65_03_if218l_trr3.img",
+    "file": "sources/hsp0002de65_03_if218l_trr3_rownum.bin",
+    "utc": "2026-11-14T19:08:03.214886+00:00",
+    "request_headers": {
+      "Range": "bytes=106444800-106445107"
+    },
+    "status": "not_acquired",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+  },
+  {
+    "url": "https://oderest.rsl.wustl.edu/live2/?target=mars&query=product&pdsid=CDR490947778566_WA0300020L_3&results=fmpc&output=JSON",
+    "file": "sources/hsp0002de65_03_if218l_trr3_WA_ode.json",
+    "utc": "2026-11-14T19:08:03.640422+00:00",
+    "request_headers": {},
+    "status": "not_acquired",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2104/trdr/2010/2010_145/msp00018fda/msp00018fda_01_if214l_trr3.img",
+    "file": "sources/msp00018fda_01_if214l_trr3_roi_rows.bin",
+    "utc": "2026-11-14T19:08:04.058497+00:00",
+    "request_headers": {
+      "Range": "bytes=34270720-36368639"
+    },
+    "status": "not_acquired",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2104/trdr/2010/2010_145/msp00018fda/msp00018fda_01_if214l_trr3.img",
+    "file": "sources/msp00018fda_01_if214l_trr3_rownum.bin",
+    "utc": "2026-11-14T19:08:04.487685+00:00",
+    "request_headers": {
+      "Range": "bytes=38016000-38016109"
+    },
+    "status": "not_acquired",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+  },
+  {
+    "url": "https://oderest.rsl.wustl.edu/live2/?target=mars&query=product&pdsid=CDR490947778566_WA0300010L_3&results=fmpc&output=JSON",
+    "file": "sources/msp00018fda_01_if214l_trr3_WA_ode.json",
+    "utc": "2026-11-14T19:08:04.987958+00:00",
+    "request_headers": {},
+    "status": "not_acquired",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/missions/mro/crism.htm",
+    "file": "sources/official_crism_page.html",
+    "utc": "2026-11-14T19:08:05.387885+00:00",
+    "request_headers": {},
+    "status": "not_acquired",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2014/2014_041/hsp0002de65/hsp0002de65_03_if218l_trr3.img",
+    "file": "sources/hsp0002de65_03_if218l_trr3_roi_rows.bin",
+    "utc": "2026-11-14T19:08:33.810754+00:00",
+    "request_headers": {
+      "Range": "bytes=24758272-30080511"
+    },
+    "http_status": 206,
+    "content_range": "bytes 24758272-30080511/106445312",
+    "content_type": "application/octet-stream",
+    "last_modified": "Tue, 18 Feb 2014 09:48:42 GMT",
+    "bytes": 5322240,
+    "sha256": "0f4b67b9f3add98aba015d3791cddae911eaa864807abe28822a3377ea6fa9bc",
+    "status": "acquired"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2014/2014_041/hsp0002de65/hsp0002de65_03_if218l_trr3.img",
+    "file": "sources/hsp0002de65_03_if218l_trr3_rownum.bin",
+    "utc": "2026-11-14T19:08:45.032557+00:00",
+    "request_headers": {
+      "Range": "bytes=106444800-106445107"
+    },
+    "http_status": 206,
+    "content_range": "bytes 106444800-106445107/106445312",
+    "content_type": "application/octet-stream",
+    "last_modified": "Tue, 18 Feb 2014 09:48:42 GMT",
+    "bytes": 308,
+    "sha256": "b093968f6b07d0d7fb281e368197afb09caae202fedf6d0532c64113b3fd06e5",
+    "status": "acquired"
+  },
+  {
+    "url": "https://oderest.rsl.wustl.edu/live2/?target=mars&query=product&pdsid=CDR490947778566_WA0300020L_3&results=fmpc&output=JSON",
+    "file": "sources/hsp0002de65_03_if218l_trr3_WA_ode.json",
+    "utc": "2026-11-14T19:08:45.953400+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "application/json; charset=utf-8",
+    "last_modified": null,
+    "bytes": 2474,
+    "sha256": "501e2a67e5919dfb8f3257812b8c0ae527f2ac3c9d369462bbd8c6051baa478c",
+    "status": "acquired"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2104/trdr/2010/2010_145/msp00018fda/msp00018fda_01_if214l_trr3.img",
+    "file": "sources/msp00018fda_01_if214l_trr3_roi_rows.bin",
+    "utc": "2026-11-14T19:08:46.957055+00:00",
+    "request_headers": {
+      "Range": "bytes=34270720-36368639"
+    },
+    "http_status": 206,
+    "content_range": "bytes 34270720-36368639/38016256",
+    "content_type": "application/octet-stream",
+    "last_modified": "Mon, 15 Nov 2010 23:49:54 GMT",
+    "bytes": 2097920,
+    "sha256": "6cc17f9cd7356515ddb7b39f558891562a6622a898aef250cecb90c382be387e",
+    "status": "acquired"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2104/trdr/2010/2010_145/msp00018fda/msp00018fda_01_if214l_trr3.img",
+    "file": "sources/msp00018fda_01_if214l_trr3_rownum.bin",
+    "utc": "2026-11-14T19:08:49.800909+00:00",
+    "request_headers": {
+      "Range": "bytes=38016000-38016109"
+    },
+    "http_status": 206,
+    "content_range": "bytes 38016000-38016109/38016256",
+    "content_type": "application/octet-stream",
+    "last_modified": "Mon, 15 Nov 2010 23:49:54 GMT",
+    "bytes": 110,
+    "sha256": "ae97450de9655bbb6b0a93fe3fe2854396712da625bea4cdb4e2a36945771af6",
+    "status": "acquired"
+  },
+  {
+    "url": "https://oderest.rsl.wustl.edu/live2/?target=mars&query=product&pdsid=CDR490947778566_WA0300010L_3&results=fmpc&output=JSON",
+    "file": "sources/msp00018fda_01_if214l_trr3_WA_ode.json",
+    "utc": "2026-11-14T19:08:50.678272+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "application/json; charset=utf-8",
+    "last_modified": null,
+    "bytes": 2474,
+    "sha256": "e0c22e19a8975abed403becb26eafeac1bb9bbbafdfdbd342b5e3c8409ed8b33",
+    "status": "acquired"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/missions/mro/crism.htm",
+    "file": "sources/official_crism_page.html",
+    "utc": "2026-11-14T19:08:51.577429+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "text/html",
+    "last_modified": "Wed, 30 Sep 2026 19:37:32 GMT",
+    "bytes": 58477,
+    "sha256": "df7a7e7bf3c9c9c1897401c1c27d5f2a85784a4529031db11f595f0fa55cf966",
+    "status": "acquired"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-2-edr-v1/mrocr_0001/cdr/wa/cdr490947778566_wa0300020l_3.img",
+    "file": "sources/cdr490947778566_wa0300020l_3.img",
+    "utc": "2026-11-14T19:09:26.475224+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "application/octet-stream",
+    "last_modified": "Thu, 06 Jan 2011 20:57:48 GMT",
+    "bytes": 39936,
+    "sha256": "8520a9a8b2b6d36365a727936ac303329c3c3d45028b31807eb8e6439a8bf73b",
+    "status": "acquired"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-2-edr-v1/mrocr_0001/cdr/wa/cdr490947778566_wa0300020l_3.lbl",
+    "file": "sources/cdr490947778566_wa0300020l_3.lbl",
+    "utc": "2026-11-14T19:09:27.625462+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "text/plain",
+    "last_modified": "Thu, 06 Jan 2011 20:57:48 GMT",
+    "bytes": 6316,
+    "sha256": "5536d292711f6a98d26aca96038a7d6b55051a140d7ba82e1b0f82db35a0edfe",
+    "status": "acquired"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-2-edr-v1/mrocr_0001/cdr/wa/cdr490947778566_wa0300010l_3.img",
+    "file": "sources/cdr490947778566_wa0300010l_3.img",
+    "utc": "2026-11-14T19:09:28.481245+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "application/octet-stream",
+    "last_modified": "Thu, 06 Jan 2011 20:57:48 GMT",
+    "bytes": 14336,
+    "sha256": "aefc99982550ac7fc38acb6902fdad4366f9eb35ea2cbd733867e958507e56af",
+    "status": "acquired"
+  },
+  {
+    "url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-2-edr-v1/mrocr_0001/cdr/wa/cdr490947778566_wa0300010l_3.lbl",
+    "file": "sources/cdr490947778566_wa0300010l_3.lbl",
+    "utc": "2026-11-14T19:09:29.366240+00:00",
+    "request_headers": {},
+    "http_status": 200,
+    "content_range": null,
+    "content_type": "text/plain",
+    "last_modified": "Thu, 06 Jan 2011 20:57:48 GMT",
+    "bytes": 6316,
+    "sha256": "291af22ff0c446149b253869abcc70ba444820aa570520454d7ee352fab883fe",
+    "status": "acquired"
+  }
+]

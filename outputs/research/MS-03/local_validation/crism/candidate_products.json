@@ -1,0 +1,926 @@
+[
+  {
+    "pdsid": "msp00036f2c_01_if214l_trr3",
+    "UTC_start_time": "2015-05-17T01:05:42.440Z",
+    "Solar_longitude": "343.350615",
+    "Incidence_angle": "71.1299133300781",
+    "Footprint_geometry": "POLYGON ((242.7299 55.1515, 242.648 55.5296, 242.5229 56.0973, 242.4808 56.2861, 242.3955 56.6644, 242.3524 56.8536, 242.2654 57.2316, 242.1776 57.61, 242.0878 57.9882, 242.0427 58.1768, 241.9972 58.3658, 241.9055 58.744, 241.8589 58.9331, 241.8118 59.1216, 241.7649 59.3106, 241.7174 59.4997, 241.6213 59.8776, 241.5727 60.0662, 241.5236 60.2553, 241.4741 60.4444, 241.4242 60.6333, 241.3736 60.822, 241.323 61.0103, 241.272 61.1992, 241.2206 61.388, 241.1687 61.577, 241.1162 61.7658, 241.0634 61.9542, 240.9558 62.3318, 240.9014 62.5206, 240.8465 62.7093, 240.7911 62.8976, 240.7353 63.0863, 240.6789 63.275, 240.6219 63.4636, 240.5642 63.6523, 240.4476 64.0292, 240.3882 64.2179, 240.3282 64.4065, 239.8639 64.3778, 239.9272 64.1894, 239.9899 64.0008, 240.1128 63.6241, 240.1736 63.4355, 240.2337 63.247, 240.2932 63.0584, 240.352 62.8698, 240.4103 62.6816, 240.4681 62.4929, 240.5254 62.3043, 240.6386 61.9268, 240.6942 61.7385, 240.7494 61.5498, 240.804 61.3609, 240.858 61.1722, 240.9117 60.9834, 240.9649 60.7952, 241.018 60.6066, 241.0704 60.4177, 241.1224 60.2287, 241.174 60.0397, 241.225 59.8511, 241.2756 59.6624, 241.326 59.4734, 241.3758 59.2844, 241.425 59.0954, 241.4744 58.907, 241.5232 58.718, 241.6194 58.3399, 241.6671 58.151, 241.7144 57.9625, 241.7615 57.7734, 241.8083 57.5844, 241.8545 57.3952, 241.9003 57.2061, 241.9913 56.8282, 242.0364 56.639, 242.1256 56.2608, 242.1696 56.0721, 242.2569 55.6937, 242.3003 55.5045, 242.3432 55.3153, 242.3858 55.1265, 242.7299 55.1515))",
+    "ODE_notes": {
+      "ODE_note": [
+        "NOTE: Product Type set by ODE",
+        "NOTE: Instrument Host Id set by ODE",
+        "NOTE: Label Solar Distance unit in KM",
+        "NOTE: Observation time set to mid-point between start time and stop time",
+        "NOTE: Corresponding DDR: msp00036f2c_01_de214l_ddr1",
+        "NOTE: Emission angle - from DDR msp00036f2c_01_de214l_ddr1",
+        "msp00036f2c_01_de214l_ddr1 - NOTE: Emission angle - set to center pixel emission angle from Image file",
+        "NOTE: Incidence angle - from DDR msp00036f2c_01_de214l_ddr1",
+        "msp00036f2c_01_de214l_ddr1 - NOTE: Incidence angle - set to center pixel incidence angle from Image file",
+        "NOTE: Phase angle - from DDR msp00036f2c_01_de214l_ddr1",
+        "msp00036f2c_01_de214l_ddr1 - NOTE: Phase angle - set to center pixel phase angle from Image file",
+        "NOTE: Solar time - from DDR msp00036f2c_01_de214l_ddr1",
+        "msp00036f2c_01_de214l_ddr1 - NOTE: Solar time - set to center solar time from Image file",
+        "NOTE: TRDR areocentric footprints information taken from DDR msp00036f2c_01_de214l_ddr1"
+      ]
+    },
+    "Product_files": {
+      "Product_file": [
+        {
+          "Creation_date": "2016-02-16T18:37:42Z",
+          "Description": "PRODUCT DATA FILE",
+          "FileName": "MSP00036F2C_01_IF214L_TRR3.IMG",
+          "KBytes": "37126",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2109/trdr/2015/2015_137/msp00036f2c/msp00036f2c_01_if214l_trr3.img"
+        },
+        {
+          "Creation_date": "2016-02-16T18:37:42Z",
+          "Description": "PDS3 PRODUCT LABEL FILE",
+          "FileName": "MSP00036F2C_01_IF214L_TRR3.LBL",
+          "KBytes": "10",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2109/trdr/2015/2015_137/msp00036f2c/msp00036f2c_01_if214l_trr3.lbl"
+        },
+        {
+          "Creation_date": "2025-09-15T13:41:24Z",
+          "Description": "PDS4 PRODUCT LABEL FILE",
+          "FileName": "MSP00036F2C_01_IF214L_TRR3.XML",
+          "KBytes": "27",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2109/trdr/2015/2015_137/msp00036f2c/msp00036f2c_01_if214l_trr3.xml"
+        },
+        {
+          "Creation_date": "2026-04-15T12:44:51.130",
+          "Description": "PRODUCT KML FILE <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00036F2C_01_IF214L_TRR3_XML.KML",
+          "KBytes": "6",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/kmlfiles/mro_crism_trdr_2109-data_trdr/mrocr_2109/trdr/2015/2015_137/msp00036f2c/msp00036f2c_01_if214l_trr3_xml.kml"
+        },
+        {
+          "Creation_date": "2026-04-15T12:44:50.945",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (TAR.GZ) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00036F2C_01_IF214L_TRR3_XML.TAR.GZ",
+          "KBytes": "4",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2109-data_trdr/mrocr_2109/trdr/2015/2015_137/msp00036f2c/msp00036f2c_01_if214l_trr3_xml.tar.gz"
+        },
+        {
+          "Creation_date": "2026-04-15T12:44:50.886",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (ZIP) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00036F2C_01_IF214L_TRR3_XML.ZIP",
+          "KBytes": "11",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2109-data_trdr/mrocr_2109/trdr/2015/2015_137/msp00036f2c/msp00036f2c_01_if214l_trr3_xml.zip"
+        }
+      ]
+    }
+  },
+  {
+    "pdsid": "msp0002c80a_03_if214l_trr3",
+    "UTC_start_time": "2013-11-30T19:14:21.028Z",
+    "Solar_longitude": "56.582269",
+    "Incidence_angle": "48.4027366638184",
+    "Footprint_geometry": "POLYGON ((243.1245 54.6916, 243.0432 55.0697, 242.9601 55.4481, 242.9184 55.6372, 242.8765 55.8261, 242.8343 56.0153, 242.7919 56.2045, 242.749 56.3937, 242.7057 56.5828, 242.6628 56.7715, 242.619 56.9607, 242.575 57.1498, 242.5309 57.3388, 242.4862 57.528, 242.3963 57.9058, 242.35059999999999 58.0949, 242.2587 58.4728, 242.2126 58.6614, 242.1657 58.8505, 242.0709 59.2284, 242.023 59.4173, 241.9747 59.6059, 241.9261 59.7948, 241.8771 59.9838, 241.7777 60.3616, 241.7276 60.55, 241.6772 60.7389, 241.626 60.9277, 241.5745 61.1165, 241.5224 61.3054, 241.4701 61.493899999999996, 241.4173 61.6826, 241.3101 62.0601, 241.256 62.2489, 241.1458 62.626, 241.09 62.8146, 241.0338 63.0032, 240.9769 63.1919, 240.9195 63.3801, 240.8616 63.5687, 240.8031 63.7573, 240.7437 63.9459, 240.287 63.9172, 240.3496 63.7287, 240.4113 63.5402, 240.4723 63.3516, 240.5327 63.1636, 240.5927 62.975, 240.6519 62.7865, 240.7106 62.598, 240.8265 62.221, 240.8834 62.0324, 240.9399 61.8437, 240.9961 61.655, 241.0516 61.4664, 241.1066 61.2781, 241.1613 61.0892, 241.2154 60.9005, 241.2692 60.7118, 241.3222 60.523, 241.3747 60.3346, 241.4791 59.957, 241.5305 59.7681, 241.5815 59.5792, 241.6321 59.3907, 241.6824 59.2019, 241.7818 58.8241, 241.8309 58.6351, 241.8792 58.4465, 241.97559999999999 58.0688, 242.0234 57.8797, 242.0706 57.6907, 242.1642 57.313, 242.2104 57.124, 242.2564 56.9349, 242.3021 56.7459, 242.347 56.5572, 242.3923 56.3682, 242.4371 56.179, 242.5255 55.8007, 242.5693 55.6119, 242.6128 55.4228, 242.6562 55.2337, 242.6994 55.0445, 242.7843 54.6665, 243.1245 54.6916))",
+    "ODE_notes": {
+      "ODE_note": [
+        "NOTE: Product Type set by ODE",
+        "NOTE: Instrument Host Id set by ODE",
+        "NOTE: Label Solar Distance unit in KM",
+        "NOTE: Observation time set to mid-point between start time and stop time",
+        "NOTE: Corresponding DDR: msp0002c80a_03_de214l_ddr1",
+        "NOTE: Emission angle - from DDR msp0002c80a_03_de214l_ddr1",
+        "msp0002c80a_03_de214l_ddr1 - NOTE: Emission angle - set to center pixel emission angle from Image file",
+        "NOTE: Incidence angle - from DDR msp0002c80a_03_de214l_ddr1",
+        "msp0002c80a_03_de214l_ddr1 - NOTE: Incidence angle - set to center pixel incidence angle from Image file",
+        "NOTE: Phase angle - from DDR msp0002c80a_03_de214l_ddr1",
+        "msp0002c80a_03_de214l_ddr1 - NOTE: Phase angle - set to center pixel phase angle from Image file",
+        "NOTE: Solar time - from DDR msp0002c80a_03_de214l_ddr1",
+        "msp0002c80a_03_de214l_ddr1 - NOTE: Solar time - set to center solar time from Image file",
+        "NOTE: TRDR areocentric footprints information taken from DDR msp0002c80a_03_de214l_ddr1"
+      ]
+    },
+    "Product_files": {
+      "Product_file": [
+        {
+          "Creation_date": "2014-08-14T10:53:12Z",
+          "Description": "PRODUCT DATA FILE",
+          "FileName": "MSP0002C80A_03_IF214L_TRR3.IMG",
+          "KBytes": "37126",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2013/2013_334/msp0002c80a/msp0002c80a_03_if214l_trr3.img"
+        },
+        {
+          "Creation_date": "2014-08-14T10:53:17Z",
+          "Description": "PDS3 PRODUCT LABEL FILE",
+          "FileName": "MSP0002C80A_03_IF214L_TRR3.LBL",
+          "KBytes": "10",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2013/2013_334/msp0002c80a/msp0002c80a_03_if214l_trr3.lbl"
+        },
+        {
+          "Creation_date": "2025-08-11T21:49:45Z",
+          "Description": "PDS4 PRODUCT LABEL FILE",
+          "FileName": "MSP0002C80A_03_IF214L_TRR3.XML",
+          "KBytes": "27",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2013/2013_334/msp0002c80a/msp0002c80a_03_if214l_trr3.xml"
+        },
+        {
+          "Creation_date": "2026-04-15T07:01:47.184",
+          "Description": "PRODUCT KML FILE <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP0002C80A_03_IF214L_TRR3_XML.KML",
+          "KBytes": "6",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/kmlfiles/mro_crism_trdr_2108-data_trdr/mrocr_2108/trdr/2013/2013_334/msp0002c80a/msp0002c80a_03_if214l_trr3_xml.kml"
+        },
+        {
+          "Creation_date": "2026-04-15T07:01:47.124",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (TAR.GZ) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP0002C80A_03_IF214L_TRR3_XML.TAR.GZ",
+          "KBytes": "4",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2108-data_trdr/mrocr_2108/trdr/2013/2013_334/msp0002c80a/msp0002c80a_03_if214l_trr3_xml.tar.gz"
+        },
+        {
+          "Creation_date": "2026-04-15T07:01:47.058",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (ZIP) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP0002C80A_03_IF214L_TRR3_XML.ZIP",
+          "KBytes": "11",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2108-data_trdr/mrocr_2108/trdr/2013/2013_334/msp0002c80a/msp0002c80a_03_if214l_trr3_xml.zip"
+        }
+      ]
+    }
+  },
+  {
+    "pdsid": "hsp0002de65_03_if218l_trr3",
+    "UTC_start_time": "2014-02-10T17:28:23.764Z",
+    "Solar_longitude": "88.051829",
+    "Incidence_angle": "46.5413436889648",
+    "Footprint_geometry": "POLYGON ((242.6115 55.3029, 242.5288 55.6811, 242.487 55.8703, 242.4025 56.2485, 242.3161 56.6264, 242.2726 56.8157, 242.2288 57.0049, 242.1406 57.3829, 242.096 57.572, 242.051 57.761, 241.96 58.1392, 241.8679 58.5166, 241.8213 58.7056, 241.7744 58.8947, 241.7271 59.0838, 241.6796 59.2725, 241.6317 59.4616, 241.5832 59.6506, 241.5344 59.8395, 241.4852 60.0284, 241.4356 60.2169, 241.3857 60.4057, 241.3354 60.5946, 241.2847 60.7835, 241.2335 60.9724, 241.182 61.1609, 241.0771 61.5385, 241.0245 61.7274, 240.9709 61.9162, 240.8626 62.2933, 240.752 62.6709, 240.6963 62.8597, 240.6399 63.048, 240.5251 63.4252, 240.4668 63.6138, 240.4082 63.8024, 240.3488 63.9906, 240.2889 64.1791, 240.2286 64.3679, 240.1672 64.5564, 239.7005 64.5274, 239.7652 64.3389, 239.8289 64.1503, 239.892 63.9618, 239.9545 63.7738, 240.0163 63.5853, 240.0777 63.3968, 240.1986 63.0198, 240.2579 62.8316, 240.3166 62.6429, 240.375 62.4542, 240.433 62.2655, 240.5469 61.8886, 240.6032 61.6999, 240.6586 61.5111, 240.7687 61.1336, 240.8229 60.9452, 240.8766 60.7564, 240.9298 60.5676, 240.9827 60.3788, 241.087 60.0016, 241.1387 59.8127, 241.1899 59.6239, 241.2408 59.435, 241.3409 59.0574, 241.3904 58.8684, 241.4396 58.6793, 241.4884 58.4904, 241.5368 58.3015, 241.5848 58.1131, 241.6801 57.735, 241.7272 57.5461, 241.7739 57.357, 241.8661 56.9792, 241.9119 56.79, 241.9573 56.6008, 242.0476 56.223, 242.1359 55.8449, 242.1796 55.6557, 242.266 55.2776, 242.6115 55.3029))",
+    "ODE_notes": {
+      "ODE_note": [
+        "NOTE: Product Type set by ODE",
+        "NOTE: Instrument Host Id set by ODE",
+        "NOTE: Label Solar Distance unit in KM",
+        "NOTE: Observation time set to mid-point between start time and stop time",
+        "NOTE: Corresponding DDR: hsp0002de65_03_de218l_ddr1",
+        "NOTE: Emission angle - from DDR hsp0002de65_03_de218l_ddr1",
+        "hsp0002de65_03_de218l_ddr1 - NOTE: Emission angle - set to center pixel emission angle from Image file",
+        "NOTE: Incidence angle - from DDR hsp0002de65_03_de218l_ddr1",
+        "hsp0002de65_03_de218l_ddr1 - NOTE: Incidence angle - set to center pixel incidence angle from Image file",
+        "NOTE: Phase angle - from DDR hsp0002de65_03_de218l_ddr1",
+        "hsp0002de65_03_de218l_ddr1 - NOTE: Phase angle - set to center pixel phase angle from Image file",
+        "NOTE: Solar time - from DDR hsp0002de65_03_de218l_ddr1",
+        "hsp0002de65_03_de218l_ddr1 - NOTE: Solar time - set to center solar time from Image file",
+        "NOTE: TRDR areocentric footprints information taken from DDR hsp0002de65_03_de218l_ddr1"
+      ]
+    },
+    "Product_files": {
+      "Product_file": [
+        {
+          "Creation_date": "2014-11-11T21:26:53Z",
+          "Description": "PRODUCT DATA FILE",
+          "FileName": "HSP0002DE65_03_IF218L_TRR3.IMG",
+          "KBytes": "103951",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2014/2014_041/hsp0002de65/hsp0002de65_03_if218l_trr3.img"
+        },
+        {
+          "Creation_date": "2014-11-11T21:26:55Z",
+          "Description": "PDS3 PRODUCT LABEL FILE",
+          "FileName": "HSP0002DE65_03_IF218L_TRR3.LBL",
+          "KBytes": "10",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2014/2014_041/hsp0002de65/hsp0002de65_03_if218l_trr3.lbl"
+        },
+        {
+          "Creation_date": "2025-08-11T22:04:00Z",
+          "Description": "PDS4 PRODUCT LABEL FILE",
+          "FileName": "HSP0002DE65_03_IF218L_TRR3.XML",
+          "KBytes": "27",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2014/2014_041/hsp0002de65/hsp0002de65_03_if218l_trr3.xml"
+        },
+        {
+          "Creation_date": "2026-04-15T12:55:49.250",
+          "Description": "PRODUCT KML FILE <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "HSP0002DE65_03_IF218L_TRR3_XML.KML",
+          "KBytes": "6",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/kmlfiles/mro_crism_trdr_2108-data_trdr/mrocr_2108/trdr/2014/2014_041/hsp0002de65/hsp0002de65_03_if218l_trr3_xml.kml"
+        },
+        {
+          "Creation_date": "2026-04-15T12:55:49.131",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (TAR.GZ) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "HSP0002DE65_03_IF218L_TRR3_XML.TAR.GZ",
+          "KBytes": "4",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2108-data_trdr/mrocr_2108/trdr/2014/2014_041/hsp0002de65/hsp0002de65_03_if218l_trr3_xml.tar.gz"
+        },
+        {
+          "Creation_date": "2026-04-15T12:55:49.031",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (ZIP) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "HSP0002DE65_03_IF218L_TRR3_XML.ZIP",
+          "KBytes": "11",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2108-data_trdr/mrocr_2108/trdr/2014/2014_041/hsp0002de65/hsp0002de65_03_if218l_trr3_xml.zip"
+        }
+      ]
+    }
+  },
+  {
+    "pdsid": "hsp0002eb57_05_if218l_trr3",
+    "UTC_start_time": "2014-03-23T08:05:13.382Z",
+    "Solar_longitude": "106.157245",
+    "Incidence_angle": "82.611701965332",
+    "Footprint_geometry": "POLYGON ((241.898 57.7269, 241.9432 57.9156, 242.0348 58.2937, 242.128 58.6719, 242.2225 59.0495, 242.2701 59.2385, 242.3182 59.4275, 242.4157 59.8049, 242.4651 59.9938, 242.5644 60.3716, 242.6148 60.5604, 242.6658 60.749, 242.769 61.1267, 242.8211 61.3156, 242.8739 61.5045, 242.927 61.6928, 242.9806 61.8816, 243.0346 62.0703, 243.0892 62.2589, 243.1444 62.4477, 243.1998 62.6361, 243.2558 62.8248, 243.3125 63.0134, 243.4275 63.3908, 243.4856 63.579, 243.5445 63.7677, 243.604 63.9563, 243.6642 64.1449, 243.7247 64.3333, 243.7859 64.5215, 243.848 64.7101, 243.9107 64.8986, 243.9741 65.0871, 244.1026 65.4639, 244.168 65.6523, 244.2343 65.8408, 244.3017 66.0292, 244.3694 66.2176, 244.4374 66.4055, 244.5069 66.5938, 244.5771 66.7821, 244.6482 66.9703, 245.162 66.9398, 245.087 66.7517, 245.0128 66.5635, 244.9394 66.3754, 244.8675 66.1876, 244.7959 65.9994, 244.7248 65.8111, 244.6548 65.6228, 244.5859 65.4345, 244.518 65.2466, 244.4502 65.0579, 244.3833 64.8695, 244.3173 64.6811, 244.2518 64.4927, 244.1873 64.3046, 244.1235 64.1163, 244.0601 63.9278, 243.9974 63.7393, 243.9354 63.5508, 243.8742 63.3626, 243.8134 63.1741, 243.7531 62.9855, 243.6935 62.797, 243.6345 62.6083, 243.5762 62.4201, 243.5182 62.2314, 243.4607 62.0428, 243.4039 61.8542, 243.3476 61.6656, 243.2918 61.4773, 243.2364 61.2885, 243.1816 61.0997, 243.0733 60.7221, 243.0197 60.5337, 242.9669 60.3449, 242.9146 60.1561, 242.8625 59.9673, 242.8108 59.7785, 242.7596 59.5901, 242.7085 59.4012, 242.6581 59.2123, 242.6082 59.0233, 242.5586 58.8345, 242.5092 58.6459, 242.4602 58.4568, 242.4115 58.2678, 242.3634 58.0788, 242.3157 57.8898, 242.2684 57.7012, 241.898 57.7269))",
+    "ODE_notes": {
+      "ODE_note": [
+        "NOTE: Product Type set by ODE",
+        "NOTE: Instrument Host Id set by ODE",
+        "NOTE: Label Solar Distance unit in KM",
+        "NOTE: Observation time set to mid-point between start time and stop time",
+        "NOTE: Corresponding DDR: hsp0002eb57_05_de218l_ddr1",
+        "NOTE: Emission angle - from DDR hsp0002eb57_05_de218l_ddr1",
+        "hsp0002eb57_05_de218l_ddr1 - NOTE: Emission angle - set to center pixel emission angle from Image file",
+        "NOTE: Incidence angle - from DDR hsp0002eb57_05_de218l_ddr1",
+        "hsp0002eb57_05_de218l_ddr1 - NOTE: Incidence angle - set to center pixel incidence angle from Image file",
+        "NOTE: Phase angle - from DDR hsp0002eb57_05_de218l_ddr1",
+        "hsp0002eb57_05_de218l_ddr1 - NOTE: Phase angle - set to center pixel phase angle from Image file",
+        "NOTE: Solar time - from DDR hsp0002eb57_05_de218l_ddr1",
+        "hsp0002eb57_05_de218l_ddr1 - NOTE: Solar time - set to center solar time from Image file",
+        "NOTE: TRDR areocentric footprints information taken from DDR hsp0002eb57_05_de218l_ddr1"
+      ]
+    },
+    "Product_files": {
+      "Product_file": [
+        {
+          "Creation_date": "2014-11-11T22:59:40Z",
+          "Description": "PRODUCT DATA FILE",
+          "FileName": "HSP0002EB57_05_IF218L_TRR3.IMG",
+          "KBytes": "103951",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2014/2014_082/hsp0002eb57/hsp0002eb57_05_if218l_trr3.img"
+        },
+        {
+          "Creation_date": "2014-11-11T22:59:42Z",
+          "Description": "PDS3 PRODUCT LABEL FILE",
+          "FileName": "HSP0002EB57_05_IF218L_TRR3.LBL",
+          "KBytes": "10",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2014/2014_082/hsp0002eb57/hsp0002eb57_05_if218l_trr3.lbl"
+        },
+        {
+          "Creation_date": "2025-08-11T22:11:46Z",
+          "Description": "PDS4 PRODUCT LABEL FILE",
+          "FileName": "HSP0002EB57_05_IF218L_TRR3.XML",
+          "KBytes": "27",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2014/2014_082/hsp0002eb57/hsp0002eb57_05_if218l_trr3.xml"
+        },
+        {
+          "Creation_date": "2026-04-15T16:43:44.692",
+          "Description": "PRODUCT KML FILE <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "HSP0002EB57_05_IF218L_TRR3_XML.KML",
+          "KBytes": "6",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/kmlfiles/mro_crism_trdr_2108-data_trdr/mrocr_2108/trdr/2014/2014_082/hsp0002eb57/hsp0002eb57_05_if218l_trr3_xml.kml"
+        },
+        {
+          "Creation_date": "2026-04-15T16:43:44.635",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (TAR.GZ) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "HSP0002EB57_05_IF218L_TRR3_XML.TAR.GZ",
+          "KBytes": "4",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2108-data_trdr/mrocr_2108/trdr/2014/2014_082/hsp0002eb57/hsp0002eb57_05_if218l_trr3_xml.tar.gz"
+        },
+        {
+          "Creation_date": "2026-04-15T16:43:44.580",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (ZIP) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "HSP0002EB57_05_IF218L_TRR3_XML.ZIP",
+          "KBytes": "11",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2108-data_trdr/mrocr_2108/trdr/2014/2014_082/hsp0002eb57/hsp0002eb57_05_if218l_trr3_xml.zip"
+        }
+      ]
+    }
+  },
+  {
+    "pdsid": "msp00026a97_07_if214l_trr3",
+    "UTC_start_time": "2012-09-20T02:45:01.328Z",
+    "Solar_longitude": "174.661959",
+    "Incidence_angle": "68.9595565795898",
+    "Footprint_geometry": "POLYGON ((243.1425 54.9264, 243.101 55.1157, 243.0169 55.4941, 242.9338 55.8724, 242.892 56.0617, 242.808 56.4404, 242.7659 56.6294, 242.7233 56.8187, 242.6803 57.008, 242.6361 57.1971, 242.5467 57.5749, 242.4564 57.953, 242.3188 58.5202, 242.2724 58.7093, 242.2256 58.8985, 242.1784 59.0876, 242.0833 59.4652, 242.0351 59.6542, 241.9865 59.8433, 241.9375 60.0323, 241.8882 60.2213, 241.8385 60.4099, 241.7377 60.7878, 241.6869 60.9767, 241.6354 61.1658, 241.5836 61.3544, 241.5312 61.5432, 241.4783 61.7321, 241.3715 62.1098, 241.3173 62.2982, 241.2626 62.487, 241.2073 62.6758, 241.1516 62.8646, 241.0954 63.0534, 241.0386 63.2418, 240.9812 63.4305, 240.9234 63.6192, 240.8649 63.808, 240.8059 63.9967, 240.7461 64.1849, 240.2869 64.1563, 240.3498 63.9681, 240.412 63.7795, 240.4737 63.5909, 240.5346 63.4022, 240.595 63.2136, 240.6549 63.0254, 240.7141 62.8367, 240.7727 62.6479, 240.8309 62.4592, 240.8884 62.2705, 240.9454 62.0822, 241.0018 61.8935, 241.0578 61.7047, 241.1134 61.5159, 241.1684 61.3272, 241.2229 61.1386, 241.2769 60.9497, 241.3303 60.7608, 241.4361 60.3831, 241.4884 60.1946, 241.5401 60.0057, 241.5916 59.8167, 241.6425 59.6278, 241.6931 59.4388, 241.743 59.2503, 241.7928 59.0613, 241.8423 58.8723, 241.8914 58.6832, 241.94 58.4941, 241.9881 58.3054, 242.0362 58.1162, 242.084 57.9272, 242.1786 57.5493, 242.272 57.1716, 242.3182 56.9825, 242.3633 56.7932, 242.4078 56.6039, 242.4519 56.4149, 242.5398 56.0363, 242.6702 55.4689, 242.7578 55.0906, 242.8011 54.9014, 243.1425 54.9264))",
+    "ODE_notes": {
+      "ODE_note": [
+        "NOTE: Product Type set by ODE",
+        "NOTE: Instrument Host Id set by ODE",
+        "NOTE: Label Solar Distance unit in KM",
+        "NOTE: Observation time set to mid-point between start time and stop time",
+        "NOTE: Corresponding DDR: msp00026a97_07_de214l_ddr1",
+        "NOTE: Emission angle - from DDR msp00026a97_07_de214l_ddr1",
+        "msp00026a97_07_de214l_ddr1 - NOTE: Emission angle - set to center pixel emission angle from Image file",
+        "NOTE: Incidence angle - from DDR msp00026a97_07_de214l_ddr1",
+        "msp00026a97_07_de214l_ddr1 - NOTE: Incidence angle - set to center pixel incidence angle from Image file",
+        "NOTE: Phase angle - from DDR msp00026a97_07_de214l_ddr1",
+        "msp00026a97_07_de214l_ddr1 - NOTE: Phase angle - set to center pixel phase angle from Image file",
+        "NOTE: Solar time - from DDR msp00026a97_07_de214l_ddr1",
+        "msp00026a97_07_de214l_ddr1 - NOTE: Solar time - set to center solar time from Image file",
+        "NOTE: TRDR areocentric footprints information taken from DDR msp00026a97_07_de214l_ddr1"
+      ]
+    },
+    "Product_files": {
+      "Product_file": [
+        {
+          "Creation_date": "2013-05-15T13:56:36Z",
+          "Description": "PRODUCT DATA FILE",
+          "FileName": "MSP00026A97_07_IF214L_TRR3.IMG",
+          "KBytes": "37126",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2107/trdr/2012/2012_264/msp00026a97/msp00026a97_07_if214l_trr3.img"
+        },
+        {
+          "Creation_date": "2013-05-15T13:56:37Z",
+          "Description": "PDS3 PRODUCT LABEL FILE",
+          "FileName": "MSP00026A97_07_IF214L_TRR3.LBL",
+          "KBytes": "10",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2107/trdr/2012/2012_264/msp00026a97/msp00026a97_07_if214l_trr3.lbl"
+        },
+        {
+          "Creation_date": "2025-08-11T12:34:40Z",
+          "Description": "PDS4 PRODUCT LABEL FILE",
+          "FileName": "MSP00026A97_07_IF214L_TRR3.XML",
+          "KBytes": "27",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2107/trdr/2012/2012_264/msp00026a97/msp00026a97_07_if214l_trr3.xml"
+        },
+        {
+          "Creation_date": "2026-04-20T10:31:11.728",
+          "Description": "PRODUCT KML FILE <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00026A97_07_IF214L_TRR3_XML.KML",
+          "KBytes": "6",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/kmlfiles/mro_crism_trdr_2107-data_trdr/mrocr_2107/trdr/2012/2012_264/msp00026a97/msp00026a97_07_if214l_trr3_xml.kml"
+        },
+        {
+          "Creation_date": "2026-04-20T10:31:11.682",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (TAR.GZ) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00026A97_07_IF214L_TRR3_XML.TAR.GZ",
+          "KBytes": "4",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2107-data_trdr/mrocr_2107/trdr/2012/2012_264/msp00026a97/msp00026a97_07_if214l_trr3_xml.tar.gz"
+        },
+        {
+          "Creation_date": "2026-04-20T10:31:11.628",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (ZIP) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00026A97_07_IF214L_TRR3_XML.ZIP",
+          "KBytes": "11",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2107-data_trdr/mrocr_2107/trdr/2012/2012_264/msp00026a97/msp00026a97_07_if214l_trr3_xml.zip"
+        }
+      ]
+    }
+  },
+  {
+    "pdsid": "msp00031696_03_if214l_trr3",
+    "UTC_start_time": "2014-07-26T03:40:14.775Z",
+    "Solar_longitude": "167.54865",
+    "Incidence_angle": "65.3804321289063",
+    "Footprint_geometry": "POLYGON ((244.0786 51.4036, 244.0413 51.5944, 243.9277 52.1675, 243.8895 52.3588, 243.8125 52.7403, 243.7738 52.9312, 243.6955 53.3128, 243.6561 53.504, 243.6166 53.6945, 243.5767 53.8854, 243.4962 54.267, 243.4556 54.4579, 243.3323 55.0302, 243.2488 55.412, 243.1645 55.7931, 243.1218 55.9839, 243.0359 56.3654, 242.9926 56.5558, 242.9487 56.7465, 242.8605 57.1279, 242.8158 57.3185, 242.7709 57.5084, 242.6803 57.8898, 242.5879 58.2709, 242.5415 58.461, 242.4946 58.6517, 242.4475 58.842, 242.4 59.0326, 242.3519 59.2232, 242.3036 59.4133, 242.2057 59.7943, 242.1564 59.9848, 242.1064 60.1755, 242.0055 60.5559, 241.9543 60.7465, 241.4893 60.7138, 241.5434 60.5235, 241.6501 60.1432, 241.7028 59.9527, 241.755 59.7621, 241.8068 59.5719, 241.8583 59.3814, 241.9094 59.1914, 241.9601 59.0009, 242.0103 58.8102, 242.06 58.6199, 242.1094 58.4293, 242.1583 58.2395, 242.2072 58.0487, 242.2558 57.8582, 242.3511 57.4774, 242.3984 57.2871, 242.4455 57.0966, 242.5382 56.7156, 242.5844 56.5249, 242.6299 56.3346, 242.6753 56.1436, 242.7204 55.953, 242.7652 55.7623, 242.8096 55.5718, 242.8536 55.3816, 242.9413 55.0001, 243.0706 54.428, 243.1132 54.2372, 243.1977 53.8552, 243.2808 53.4742, 243.3632 53.0923, 243.4041 52.9015, 243.4444 52.7111, 243.525 52.3295, 243.5651 52.1381, 243.6444 51.7558, 243.6838 51.5651, 243.7229 51.3738, 244.0786 51.4036))",
+    "ODE_notes": {
+      "ODE_note": [
+        "NOTE: Product Type set by ODE",
+        "NOTE: Instrument Host Id set by ODE",
+        "NOTE: Label Solar Distance unit in KM",
+        "NOTE: Observation time set to mid-point between start time and stop time",
+        "NOTE: Corresponding DDR: msp00031696_03_de214l_ddr1",
+        "NOTE: Emission angle - from DDR msp00031696_03_de214l_ddr1",
+        "msp00031696_03_de214l_ddr1 - NOTE: Emission angle - set to center pixel emission angle from Image file",
+        "NOTE: Incidence angle - from DDR msp00031696_03_de214l_ddr1",
+        "msp00031696_03_de214l_ddr1 - NOTE: Incidence angle - set to center pixel incidence angle from Image file",
+        "NOTE: Phase angle - from DDR msp00031696_03_de214l_ddr1",
+        "msp00031696_03_de214l_ddr1 - NOTE: Phase angle - set to center pixel phase angle from Image file",
+        "NOTE: Solar time - from DDR msp00031696_03_de214l_ddr1",
+        "msp00031696_03_de214l_ddr1 - NOTE: Solar time - set to center solar time from Image file",
+        "NOTE: TRDR areocentric footprints information taken from DDR msp00031696_03_de214l_ddr1"
+      ]
+    },
+    "Product_files": {
+      "Product_file": [
+        {
+          "Creation_date": "2015-02-20T22:06:37Z",
+          "Description": "PRODUCT DATA FILE",
+          "FileName": "MSP00031696_03_IF214L_TRR3.IMG",
+          "KBytes": "37126",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2014/2014_207/msp00031696/msp00031696_03_if214l_trr3.img"
+        },
+        {
+          "Creation_date": "2015-02-20T22:06:38Z",
+          "Description": "PDS3 PRODUCT LABEL FILE",
+          "FileName": "MSP00031696_03_IF214L_TRR3.LBL",
+          "KBytes": "10",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2014/2014_207/msp00031696/msp00031696_03_if214l_trr3.lbl"
+        },
+        {
+          "Creation_date": "2025-08-11T22:35:47Z",
+          "Description": "PDS4 PRODUCT LABEL FILE",
+          "FileName": "MSP00031696_03_IF214L_TRR3.XML",
+          "KBytes": "27",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2108/trdr/2014/2014_207/msp00031696/msp00031696_03_if214l_trr3.xml"
+        },
+        {
+          "Creation_date": "2026-04-16T05:11:34.559",
+          "Description": "PRODUCT KML FILE <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00031696_03_IF214L_TRR3_XML.KML",
+          "KBytes": "6",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/kmlfiles/mro_crism_trdr_2108-data_trdr/mrocr_2108/trdr/2014/2014_207/msp00031696/msp00031696_03_if214l_trr3_xml.kml"
+        },
+        {
+          "Creation_date": "2026-04-16T05:11:34.511",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (TAR.GZ) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00031696_03_IF214L_TRR3_XML.TAR.GZ",
+          "KBytes": "4",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2108-data_trdr/mrocr_2108/trdr/2014/2014_207/msp00031696/msp00031696_03_if214l_trr3_xml.tar.gz"
+        },
+        {
+          "Creation_date": "2026-04-16T05:11:34.433",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (ZIP) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00031696_03_IF214L_TRR3_XML.ZIP",
+          "KBytes": "11",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2108-data_trdr/mrocr_2108/trdr/2014/2014_207/msp00031696/msp00031696_03_if214l_trr3_xml.zip"
+        }
+      ]
+    }
+  },
+  {
+    "pdsid": "msp00029f06_01_if214l_trr3",
+    "UTC_start_time": "2013-06-23T12:17:11.788Z",
+    "Solar_longitude": "340.388026",
+    "Incidence_angle": "71.4610137939453",
+    "Footprint_geometry": "POLYGON ((242.9434 54.6776, 242.862 55.056399999999996, 242.7794 55.4345, 242.6112 56.1915, 242.5686 56.3804, 242.5253 56.5696, 242.4819 56.7587, 242.3945 57.1371, 242.3505 57.3259, 242.2611 57.7042, 242.2161 57.8933, 242.1249 58.2712, 242.0788 58.4604, 241.9854 58.8384, 241.9384 59.0274, 241.891 59.216, 241.8432 59.4051, 241.7467 59.7832, 241.6975 59.9722, 241.6481 60.1607, 241.5983 60.3497, 241.5482 60.5386, 241.4466 60.9164, 241.3954 61.1049, 241.3437 61.2938, 241.2911 61.4827, 241.1848 61.8604, 241.1312 62.0489, 241.077 62.2379, 241.0226 62.4267, 240.9674 62.6153, 240.8553 62.9924, 240.7987 63.1811, 240.7413 63.3698, 240.6247 63.7471, 240.5658 63.9354, 240.1104 63.9068, 240.1725 63.7186, 240.2953 63.3414, 240.3557 63.1528, 240.4153 62.9643, 240.5334 62.5874, 240.5914 62.3988, 240.6487 62.2101, 240.7057 62.0213, 240.7621 61.8329, 240.8738 61.4553, 240.929 61.2665, 240.9833 61.0777, 241.0371 60.8893, 241.1438 60.5117, 241.1964 60.3228, 241.2487 60.1339, 241.3005 59.9455, 241.3521 59.7566, 241.4533 59.3786, 241.5035 59.1896, 241.5532 59.001, 241.6025 58.8121, 241.7004 58.4343, 241.7486 58.2452, 241.8441 57.8674, 241.9381 57.4892, 241.9847 57.3002, 242.0307 57.1113, 242.1222 56.7331, 242.2128 56.3549, 242.2572 56.166, 242.3013 55.9768, 242.4329 55.4093, 242.476 55.2205, 242.519 55.0312, 242.5617 54.842, 242.604 54.6526, 242.9434 54.6776))",
+    "ODE_notes": {
+      "ODE_note": [
+        "NOTE: Product Type set by ODE",
+        "NOTE: Instrument Host Id set by ODE",
+        "NOTE: Label Solar Distance unit in KM",
+        "NOTE: Observation time set to mid-point between start time and stop time",
+        "NOTE: Corresponding DDR: msp00029f06_01_de214l_ddr1",
+        "NOTE: Emission angle - from DDR msp00029f06_01_de214l_ddr1",
+        "msp00029f06_01_de214l_ddr1 - NOTE: Emission angle - set to center pixel emission angle from Image file",
+        "NOTE: Incidence angle - from DDR msp00029f06_01_de214l_ddr1",
+        "msp00029f06_01_de214l_ddr1 - NOTE: Incidence angle - set to center pixel incidence angle from Image file",
+        "NOTE: Phase angle - from DDR msp00029f06_01_de214l_ddr1",
+        "msp00029f06_01_de214l_ddr1 - NOTE: Phase angle - set to center pixel phase angle from Image file",
+        "NOTE: Solar time - from DDR msp00029f06_01_de214l_ddr1",
+        "msp00029f06_01_de214l_ddr1 - NOTE: Solar time - set to center solar time from Image file",
+        "NOTE: TRDR areocentric footprints information taken from DDR msp00029f06_01_de214l_ddr1"
+      ]
+    },
+    "Product_files": {
+      "Product_file": [
+        {
+          "Creation_date": "2014-02-22T00:26:54Z",
+          "Description": "PRODUCT DATA FILE",
+          "FileName": "MSP00029F06_01_IF214L_TRR3.IMG",
+          "KBytes": "37126",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2107/trdr/2013/2013_174/msp00029f06/msp00029f06_01_if214l_trr3.img"
+        },
+        {
+          "Creation_date": "2014-02-22T00:26:57Z",
+          "Description": "PDS3 PRODUCT LABEL FILE",
+          "FileName": "MSP00029F06_01_IF214L_TRR3.LBL",
+          "KBytes": "10",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2107/trdr/2013/2013_174/msp00029f06/msp00029f06_01_if214l_trr3.lbl"
+        },
+        {
+          "Creation_date": "2025-08-11T13:16:38Z",
+          "Description": "PDS4 PRODUCT LABEL FILE",
+          "FileName": "MSP00029F06_01_IF214L_TRR3.XML",
+          "KBytes": "27",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2107/trdr/2013/2013_174/msp00029f06/msp00029f06_01_if214l_trr3.xml"
+        },
+        {
+          "Creation_date": "2026-04-20T19:24:52.235",
+          "Description": "PRODUCT KML FILE <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00029F06_01_IF214L_TRR3_XML.KML",
+          "KBytes": "6",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/kmlfiles/mro_crism_trdr_2107-data_trdr/mrocr_2107/trdr/2013/2013_174/msp00029f06/msp00029f06_01_if214l_trr3_xml.kml"
+        },
+        {
+          "Creation_date": "2026-04-20T19:24:52.181",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (TAR.GZ) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00029F06_01_IF214L_TRR3_XML.TAR.GZ",
+          "KBytes": "4",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2107-data_trdr/mrocr_2107/trdr/2013/2013_174/msp00029f06/msp00029f06_01_if214l_trr3_xml.tar.gz"
+        },
+        {
+          "Creation_date": "2026-04-20T19:24:52.131",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (ZIP) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00029F06_01_IF214L_TRR3_XML.ZIP",
+          "KBytes": "11",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2107-data_trdr/mrocr_2107/trdr/2013/2013_174/msp00029f06/msp00029f06_01_if214l_trr3_xml.zip"
+        }
+      ]
+    }
+  },
+  {
+    "pdsid": "msp00003385_01_if214l_trr3",
+    "UTC_start_time": "2006-12-01T09:40:51.127Z",
+    "Solar_longitude": "143.644469",
+    "Incidence_angle": "55.5020294189453",
+    "Footprint_geometry": "POLYGON ((243.7558 50.0503, 243.7202 50.2396, 243.6121 50.8083, 243.5393 51.1872, 243.5026 51.3767, 243.4286 51.7558, 243.3913 51.9454, 243.3165 52.324, 243.2787 52.5135, 243.2024 52.8925, 243.164 53.0815, 243.1253 53.2709, 243.0475 53.6499, 243.0081 53.8393, 242.9288 54.2175, 242.8888 54.407, 242.8487 54.5964, 242.7678 54.9748, 242.6856 55.3535, 242.6026 55.7321, 242.5607 55.921, 242.4762 56.2996, 242.4334 56.4888, 242.347 56.8668, 242.3034 57.0561, 242.2596 57.2453, 242.2155 57.4345, 242.1709 57.6238, 242.0812 58.0016, 242.0358 58.1908, 241.9899 58.38, 241.9438 58.5691, 241.8975 58.7579, 241.8508 58.9471, 241.756 59.3251, 241.3683 59.2989, 241.4182 59.1099, 241.4678 58.921, 241.5167 58.7318, 241.5652 58.5432, 241.6136 58.3541, 241.6616 58.1649, 241.7091 57.9758, 241.7562 57.7868, 241.803 57.5981, 241.8497 57.4089, 241.8959 57.2198, 241.9417 57.0306, 242.0324 56.6526, 242.0775 56.4635, 242.1223 56.2743, 242.1666 56.0851, 242.2106 55.8959, 242.2543 55.707, 242.2978 55.5177, 242.341 55.3285, 242.4268 54.9499, 242.4691 54.7609, 242.5111 54.5716, 242.5947 54.1928, 242.6773 53.8147, 242.7183 53.6253, 242.7589 53.4358, 242.8397 53.057, 242.9193 52.6786, 242.959 52.4891, 242.9983 52.2996, 243.0762 51.9211, 243.115 51.7316, 243.1536 51.542, 243.1919 51.3526, 243.23 51.163, 243.2678 50.9738, 243.3431 50.5948, 243.4178 50.2156, 243.4548 50.0264, 243.7558 50.0503))",
+    "ODE_notes": {
+      "ODE_note": [
+        "NOTE: Product Type set by ODE",
+        "NOTE: Instrument Host Id set by ODE",
+        "NOTE: Label Solar Distance unit in KM",
+        "NOTE: Observation time set to mid-point between start time and stop time",
+        "NOTE: Corresponding DDR: msp00003385_01_de214l_ddr1",
+        "NOTE: Emission angle - from DDR msp00003385_01_de214l_ddr1",
+        "msp00003385_01_de214l_ddr1 - NOTE: Emission angle - set to center pixel emission angle from Image file",
+        "NOTE: Incidence angle - from DDR msp00003385_01_de214l_ddr1",
+        "msp00003385_01_de214l_ddr1 - NOTE: Incidence angle - set to center pixel incidence angle from Image file",
+        "NOTE: Phase angle - from DDR msp00003385_01_de214l_ddr1",
+        "msp00003385_01_de214l_ddr1 - NOTE: Phase angle - set to center pixel phase angle from Image file",
+        "NOTE: Solar time - from DDR msp00003385_01_de214l_ddr1",
+        "msp00003385_01_de214l_ddr1 - NOTE: Solar time - set to center solar time from Image file",
+        "NOTE: TRDR areocentric footprints information taken from DDR msp00003385_01_de214l_ddr1"
+      ]
+    },
+    "Product_files": {
+      "Product_file": [
+        {
+          "Creation_date": "2011-12-07T20:18:35Z",
+          "Description": "PRODUCT DATA FILE",
+          "FileName": "MSP00003385_01_IF214L_TRR3.IMG",
+          "KBytes": "37126",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2101/trdr/2006/2006_335/msp00003385/msp00003385_01_if214l_trr3.img"
+        },
+        {
+          "Creation_date": "2011-12-07T20:18:37Z",
+          "Description": "PDS3 PRODUCT LABEL FILE",
+          "FileName": "MSP00003385_01_IF214L_TRR3.LBL",
+          "KBytes": "10",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2101/trdr/2006/2006_335/msp00003385/msp00003385_01_if214l_trr3.lbl"
+        },
+        {
+          "Creation_date": "2025-06-18T13:07:00Z",
+          "Description": "PDS4 PRODUCT LABEL FILE",
+          "FileName": "MSP00003385_01_IF214L_TRR3.XML",
+          "KBytes": "27",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2101/trdr/2006/2006_335/msp00003385/msp00003385_01_if214l_trr3.xml"
+        },
+        {
+          "Creation_date": "2026-04-17T04:35:41.123",
+          "Description": "PRODUCT KML FILE <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00003385_01_IF214L_TRR3_XML.KML",
+          "KBytes": "6",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/kmlfiles/mro_crism_trdr_2101-data_trdr/mrocr_2101/trdr/2006/2006_335/msp00003385/msp00003385_01_if214l_trr3_xml.kml"
+        },
+        {
+          "Creation_date": "2026-04-17T04:35:41.066",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (TAR.GZ) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00003385_01_IF214L_TRR3_XML.TAR.GZ",
+          "KBytes": "4",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2101-data_trdr/mrocr_2101/trdr/2006/2006_335/msp00003385/msp00003385_01_if214l_trr3_xml.tar.gz"
+        },
+        {
+          "Creation_date": "2026-04-17T04:35:41.018",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (ZIP) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00003385_01_IF214L_TRR3_XML.ZIP",
+          "KBytes": "11",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2101-data_trdr/mrocr_2101/trdr/2006/2006_335/msp00003385/msp00003385_01_if214l_trr3_xml.zip"
+        }
+      ]
+    }
+  },
+  {
+    "pdsid": "msp0001bbe7_01_if214l_trr3",
+    "UTC_start_time": "2010-11-06T20:03:34.800Z",
+    "Solar_longitude": "176.704795",
+    "Incidence_angle": "69.6881561279297",
+    "Footprint_geometry": "POLYGON ((242.7513 54.2238, 242.7116 54.4133, 242.5906 54.9814, 242.4675 55.549, 242.4261 55.7385, 242.3421 56.1167, 242.2998 56.3059, 242.2572 56.4953, 242.2143 56.6846, 242.1712 56.8737, 242.084 57.2519, 242.0401 57.4412, 241.9509 57.8197, 241.9062 58.0085, 241.8152 58.3868, 241.7694 58.5759, 241.6764 58.9537, 241.6295 59.1428, 241.5821 59.3319, 241.5344 59.521, 241.4864 59.7101, 241.4382 59.8989, 241.3894 60.088, 241.3402 60.2771, 241.2904 60.4661, 241.2403 60.6551, 241.19 60.8437, 241.088 61.2215, 241.0361 61.4105, 240.9839 61.5995, 240.8783 61.9769, 240.8248 62.1658, 240.7705 62.3547, 240.7159 62.5436, 240.661 62.732, 240.6055 62.9209, 240.5493 63.1097, 240.4926 63.2985, 240.4354 63.4873, 239.9884 63.4592, 240.0487 63.2706, 240.1085 63.0819, 240.1676 62.8931, 240.2261 62.7044, 240.2839 62.516, 240.3414 62.3272, 240.3985 62.1384, 240.4548 61.9496, 240.5658 61.5724, 240.6207 61.3835, 240.6752 61.1946, 240.729 61.0057, 240.7824 60.8169, 240.8353 60.6284, 240.8879 60.4395, 240.9401 60.2506, 240.9918 60.0616, 241.043 59.8725, 241.0936 59.6838, 241.144 59.4948, 241.1941 59.3058, 241.2438 59.1167, 241.2929 58.9276, 241.3904 58.55, 241.4384 58.3609, 241.5337 57.9828, 241.5806 57.7941, 241.6738 57.4157, 241.7199 57.2264, 241.811 56.8484, 241.8561 56.6593, 241.901 56.47, 241.9897 56.0915, 242.0336 55.9027, 242.0774 55.7134, 242.1207 55.524, 242.2492 54.9565, 242.3334 54.5779, 242.3753 54.3885, 242.4168 54.1991, 242.7513 54.2238))",
+    "ODE_notes": {
+      "ODE_note": [
+        "NOTE: Product Type set by ODE",
+        "NOTE: Instrument Host Id set by ODE",
+        "NOTE: Label Solar Distance unit in KM",
+        "NOTE: Observation time set to mid-point between start time and stop time",
+        "NOTE: Corresponding DDR: msp0001bbe7_01_de214l_ddr1",
+        "NOTE: Emission angle - from DDR msp0001bbe7_01_de214l_ddr1",
+        "msp0001bbe7_01_de214l_ddr1 - NOTE: Emission angle - set to center pixel emission angle from Image file",
+        "NOTE: Incidence angle - from DDR msp0001bbe7_01_de214l_ddr1",
+        "msp0001bbe7_01_de214l_ddr1 - NOTE: Incidence angle - set to center pixel incidence angle from Image file",
+        "NOTE: Phase angle - from DDR msp0001bbe7_01_de214l_ddr1",
+        "msp0001bbe7_01_de214l_ddr1 - NOTE: Phase angle - set to center pixel phase angle from Image file",
+        "NOTE: Solar time - from DDR msp0001bbe7_01_de214l_ddr1",
+        "msp0001bbe7_01_de214l_ddr1 - NOTE: Solar time - set to center solar time from Image file",
+        "NOTE: TRDR areocentric footprints information taken from DDR msp0001bbe7_01_de214l_ddr1"
+      ]
+    },
+    "Product_files": {
+      "Product_file": [
+        {
+          "Creation_date": "2011-09-29T16:10:52Z",
+          "Description": "PRODUCT DATA FILE",
+          "FileName": "MSP0001BBE7_01_IF214L_TRR3.IMG",
+          "KBytes": "37126",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2105/trdr/2010/2010_310/msp0001bbe7/msp0001bbe7_01_if214l_trr3.img"
+        },
+        {
+          "Creation_date": "2011-09-29T16:10:52Z",
+          "Description": "PDS3 PRODUCT LABEL FILE",
+          "FileName": "MSP0001BBE7_01_IF214L_TRR3.LBL",
+          "KBytes": "10",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2105/trdr/2010/2010_310/msp0001bbe7/msp0001bbe7_01_if214l_trr3.lbl"
+        },
+        {
+          "Creation_date": "2025-07-31T14:03:41Z",
+          "Description": "PDS4 PRODUCT LABEL FILE",
+          "FileName": "MSP0001BBE7_01_IF214L_TRR3.XML",
+          "KBytes": "27",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2105/trdr/2010/2010_310/msp0001bbe7/msp0001bbe7_01_if214l_trr3.xml"
+        },
+        {
+          "Creation_date": "2026-04-14T18:15:38.751",
+          "Description": "PRODUCT KML FILE <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP0001BBE7_01_IF214L_TRR3_XML.KML",
+          "KBytes": "6",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/kmlfiles/mro_crism_trdr_2105-data_trdr/mrocr_2105/trdr/2010/2010_310/msp0001bbe7/msp0001bbe7_01_if214l_trr3_xml.kml"
+        },
+        {
+          "Creation_date": "2026-04-14T18:15:38.581",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (TAR.GZ) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP0001BBE7_01_IF214L_TRR3_XML.TAR.GZ",
+          "KBytes": "4",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2105-data_trdr/mrocr_2105/trdr/2010/2010_310/msp0001bbe7/msp0001bbe7_01_if214l_trr3_xml.tar.gz"
+        },
+        {
+          "Creation_date": "2026-04-14T18:15:38.511",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (ZIP) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP0001BBE7_01_IF214L_TRR3_XML.ZIP",
+          "KBytes": "11",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2105-data_trdr/mrocr_2105/trdr/2010/2010_310/msp0001bbe7/msp0001bbe7_01_if214l_trr3_xml.zip"
+        }
+      ]
+    }
+  },
+  {
+    "pdsid": "msp00008c83_01_if214l_trr3",
+    "UTC_start_time": "2007-12-16T13:50:04.302Z",
+    "Solar_longitude": "3.431936",
+    "Incidence_angle": "59.1583023071289",
+    "Footprint_geometry": "POLYGON ((243.8099 49.3033, 243.7395 49.6827, 243.7042 49.8721, 243.6686 50.0618, 243.5968 50.4411, 243.5242 50.82, 243.4513 51.1993, 243.4143 51.3889, 243.3026 51.9575, 243.2652 52.1472, 243.2275 52.3367, 243.1895 52.5261, 243.1514 52.7151, 243.0745 53.0941, 243.0356 53.2837, 242.9573 53.6622, 242.9179 53.8517, 242.8385 54.2307, 242.7983 54.4201, 242.7174 54.7984, 242.6767 54.9878, 242.5941 55.3666, 242.5526 55.5556, 242.4686 55.9342, 242.4262 56.1236, 242.3836 56.3129, 242.3408 56.5018, 242.2976 56.6911, 242.2541 56.8804, 242.2103 57.0696, 242.1661 57.2589, 242.0772 57.6368, 242.0323 57.8261, 241.987 58.0154, 241.8953 58.3935, 241.8489 58.5825, 241.4699 58.5564, 241.5185 58.3674, 241.6145 57.9895, 241.6619 57.8003, 241.7089 57.611, 241.802 57.2332, 241.8482 57.044, 241.894 56.8548, 241.9395 56.6656, 241.9846 56.4764, 242.0294 56.2875, 242.0739 56.0983, 242.1182 55.9089, 242.1622 55.7197, 242.2059 55.5304, 242.2492 55.3415, 242.3354 54.9628, 242.4201 54.5841, 242.4622 54.3952, 242.5041 54.2059, 242.5457 54.0164, 242.5869 53.827, 242.6279 53.6375, 242.7095 53.259, 242.7499 53.0695, 242.79 52.8801, 242.8696 52.5017, 242.9091 52.3123, 242.9484 52.1228, 242.9873 51.9331, 243.1034 51.3647, 243.1418 51.1751, 243.1798 50.9855, 243.2553 50.6067, 243.2929 50.417, 243.3675 50.0378, 243.4044 49.8481, 243.5142 49.2794, 243.8099 49.3033))",
+    "ODE_notes": {
+      "ODE_note": [
+        "NOTE: Product Type set by ODE",
+        "NOTE: Instrument Host Id set by ODE",
+        "NOTE: Label Solar Distance unit in KM",
+        "NOTE: Observation time set to mid-point between start time and stop time",
+        "NOTE: Corresponding DDR: msp00008c83_01_de214l_ddr1",
+        "NOTE: Emission angle - from DDR msp00008c83_01_de214l_ddr1",
+        "msp00008c83_01_de214l_ddr1 - NOTE: Emission angle - set to center pixel emission angle from Image file",
+        "NOTE: Incidence angle - from DDR msp00008c83_01_de214l_ddr1",
+        "msp00008c83_01_de214l_ddr1 - NOTE: Incidence angle - set to center pixel incidence angle from Image file",
+        "NOTE: Phase angle - from DDR msp00008c83_01_de214l_ddr1",
+        "msp00008c83_01_de214l_ddr1 - NOTE: Phase angle - set to center pixel phase angle from Image file",
+        "NOTE: Solar time - from DDR msp00008c83_01_de214l_ddr1",
+        "msp00008c83_01_de214l_ddr1 - NOTE: Solar time - set to center solar time from Image file",
+        "NOTE: TRDR areocentric footprints information taken from DDR msp00008c83_01_de214l_ddr1"
+      ]
+    },
+    "Product_files": {
+      "Product_file": [
+        {
+          "Creation_date": "2011-12-09T13:37:36Z",
+          "Description": "PRODUCT DATA FILE",
+          "FileName": "MSP00008C83_01_IF214L_TRR3.IMG",
+          "KBytes": "37126",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2102/trdr/2007/2007_350/msp00008c83/msp00008c83_01_if214l_trr3.img"
+        },
+        {
+          "Creation_date": "2011-12-09T13:37:37Z",
+          "Description": "PDS3 PRODUCT LABEL FILE",
+          "FileName": "MSP00008C83_01_IF214L_TRR3.LBL",
+          "KBytes": "10",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2102/trdr/2007/2007_350/msp00008c83/msp00008c83_01_if214l_trr3.lbl"
+        },
+        {
+          "Creation_date": "2025-06-30T13:47:33Z",
+          "Description": "PDS4 PRODUCT LABEL FILE",
+          "FileName": "MSP00008C83_01_IF214L_TRR3.XML",
+          "KBytes": "27",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2102/trdr/2007/2007_350/msp00008c83/msp00008c83_01_if214l_trr3.xml"
+        },
+        {
+          "Creation_date": "2026-04-18T22:50:50.556",
+          "Description": "PRODUCT KML FILE <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00008C83_01_IF214L_TRR3_XML.KML",
+          "KBytes": "6",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/kmlfiles/mro_crism_trdr_2102-data_trdr/mrocr_2102/trdr/2007/2007_350/msp00008c83/msp00008c83_01_if214l_trr3_xml.kml"
+        },
+        {
+          "Creation_date": "2026-04-18T22:50:50.503",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (TAR.GZ) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00008C83_01_IF214L_TRR3_XML.TAR.GZ",
+          "KBytes": "4",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2102-data_trdr/mrocr_2102/trdr/2007/2007_350/msp00008c83/msp00008c83_01_if214l_trr3_xml.tar.gz"
+        },
+        {
+          "Creation_date": "2026-04-18T22:50:50.409",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (ZIP) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00008C83_01_IF214L_TRR3_XML.ZIP",
+          "KBytes": "11",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2102-data_trdr/mrocr_2102/trdr/2007/2007_350/msp00008c83/msp00008c83_01_if214l_trr3_xml.zip"
+        }
+      ]
+    }
+  },
+  {
+    "pdsid": "msp0001587c_01_if214l_trr3",
+    "UTC_start_time": "2010-01-12T20:44:49.083Z",
+    "Solar_longitude": "37.012518",
+    "Incidence_angle": "50.9075393676758",
+    "Footprint_geometry": "POLYGON ((243.6965 51.6812, 243.6597 51.8708, 243.585 52.25, 243.5097 52.6287, 243.4334 53.0078, 243.395 53.1974, 243.3178 53.576, 243.2393 53.9549, 243.1602 54.3334, 243.1203 54.5229, 243.0397 54.9018, 242.9992 55.0912, 242.9583 55.2802, 242.8757 55.6589, 242.7921 56.0377, 242.7077 56.416, 242.6649 56.6052, 242.6219 56.7945, 242.5351 57.1727, 242.4912 57.3622, 242.4025 57.7405, 242.3578 57.9297, 242.3127 58.1185, 242.2672 58.3077, 242.2216 58.4969, 242.1755 58.6861, 242.129 58.8753, 242.0823 59.0641, 242.0352 59.2532, 241.9877 59.4424, 241.8917 59.8205, 241.8431 60.0092, 241.7941 60.1982, 241.7447 60.3874, 241.695 60.5764, 241.6448 60.7654, 241.5942 60.954, 241.1853 60.9272, 241.2384 60.7387, 241.2912 60.5498, 241.3434 60.3608, 241.3953 60.1717, 241.4467 59.9828, 241.4977 59.7942, 241.5986 59.4162, 241.6978 59.0381, 241.7467 58.8494, 241.7955 58.6602, 241.8438 58.4711, 241.9393 58.0928, 241.9865 57.9041, 242.0334 57.7149, 242.1261 57.3367, 242.1721 57.1473, 242.2628 56.7693, 242.3079 56.58, 242.3526 56.3908, 242.4408 56.0126, 242.4846 55.8233, 242.5282 55.6339, 242.6144 55.2553, 242.6571 55.0664, 242.7834 54.4982, 242.8251 54.3088, 242.9075 53.9303, 242.9893 53.5515, 243.0697 53.173, 243.1097 52.9835, 243.1891 52.6045, 243.2675 52.2258, 243.3065 52.0362, 243.3452 51.8467, 243.3836 51.6571, 243.6965 51.6812))",
+    "ODE_notes": {
+      "ODE_note": [
+        "NOTE: Product Type set by ODE",
+        "NOTE: Instrument Host Id set by ODE",
+        "NOTE: Label Solar Distance unit in KM",
+        "NOTE: Observation time set to mid-point between start time and stop time",
+        "NOTE: Corresponding DDR: msp0001587c_01_de214l_ddr1",
+        "NOTE: Emission angle - from DDR msp0001587c_01_de214l_ddr1",
+        "msp0001587c_01_de214l_ddr1 - NOTE: Emission angle - set to center pixel emission angle from Image file",
+        "NOTE: Incidence angle - from DDR msp0001587c_01_de214l_ddr1",
+        "msp0001587c_01_de214l_ddr1 - NOTE: Incidence angle - set to center pixel incidence angle from Image file",
+        "NOTE: Phase angle - from DDR msp0001587c_01_de214l_ddr1",
+        "msp0001587c_01_de214l_ddr1 - NOTE: Phase angle - set to center pixel phase angle from Image file",
+        "NOTE: Solar time - from DDR msp0001587c_01_de214l_ddr1",
+        "msp0001587c_01_de214l_ddr1 - NOTE: Solar time - set to center solar time from Image file",
+        "NOTE: TRDR areocentric footprints information taken from DDR msp0001587c_01_de214l_ddr1"
+      ]
+    },
+    "Product_files": {
+      "Product_file": [
+        {
+          "Creation_date": "2011-09-27T05:35:13Z",
+          "Description": "PRODUCT DATA FILE",
+          "FileName": "MSP0001587C_01_IF214L_TRR3.IMG",
+          "KBytes": "37126",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2104/trdr/2010/2010_012/msp0001587c/msp0001587c_01_if214l_trr3.img"
+        },
+        {
+          "Creation_date": "2011-09-27T05:35:13Z",
+          "Description": "PDS3 PRODUCT LABEL FILE",
+          "FileName": "MSP0001587C_01_IF214L_TRR3.LBL",
+          "KBytes": "10",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2104/trdr/2010/2010_012/msp0001587c/msp0001587c_01_if214l_trr3.lbl"
+        },
+        {
+          "Creation_date": "2025-07-01T13:04:56Z",
+          "Description": "PDS4 PRODUCT LABEL FILE",
+          "FileName": "MSP0001587C_01_IF214L_TRR3.XML",
+          "KBytes": "27",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2104/trdr/2010/2010_012/msp0001587c/msp0001587c_01_if214l_trr3.xml"
+        },
+        {
+          "Creation_date": "2026-04-17T09:45:31.591",
+          "Description": "PRODUCT KML FILE <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP0001587C_01_IF214L_TRR3_XML.KML",
+          "KBytes": "6",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/kmlfiles/mro_crism_trdr_2104-data_trdr/mrocr_2104/trdr/2010/2010_012/msp0001587c/msp0001587c_01_if214l_trr3_xml.kml"
+        },
+        {
+          "Creation_date": "2026-04-17T09:45:31.503",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (TAR.GZ) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP0001587C_01_IF214L_TRR3_XML.TAR.GZ",
+          "KBytes": "4",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2104-data_trdr/mrocr_2104/trdr/2010/2010_012/msp0001587c/msp0001587c_01_if214l_trr3_xml.tar.gz"
+        },
+        {
+          "Creation_date": "2026-04-17T09:45:31.449",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (ZIP) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP0001587C_01_IF214L_TRR3_XML.ZIP",
+          "KBytes": "11",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2104-data_trdr/mrocr_2104/trdr/2010/2010_012/msp0001587c/msp0001587c_01_if214l_trr3_xml.zip"
+        }
+      ]
+    }
+  },
+  {
+    "pdsid": "msp00018fda_01_if214l_trr3",
+    "UTC_start_time": "2010-05-25T09:48:43.578Z",
+    "Solar_longitude": "95.410373",
+    "Incidence_angle": "44.5529251098633",
+    "Footprint_geometry": "POLYGON ((244.2197 48.9671, 244.1852 49.1568, 244.1155 49.5361, 244.0451 49.915, 243.9742 50.2943, 243.8665 50.8627, 243.8302 51.0522, 243.7572 51.431399999999996, 243.6836 51.8101, 243.6463 51.9997, 243.5338 52.5682, 243.496 52.7573, 243.4193 53.1362, 243.3807 53.3257, 243.342 53.5151, 243.264 53.8935, 243.1849 54.2724, 243.1452 54.4618, 243.105 54.6507, 243.0241 55.0294, 242.9423 55.4081, 242.8595 55.7863, 242.7334 56.3542, 242.6476 56.7323, 242.6045 56.9214, 242.5172 57.2998, 242.4734 57.4888, 242.4288 57.678, 242.339 58.0563, 242.2939 58.2453, 241.9182 58.2195, 241.9655 58.0305, 242.0126 57.8414, 242.0595 57.6524, 242.1062 57.4632, 242.1978 57.0852, 242.2434 56.896, 242.2885 56.7069, 242.3782 56.329, 242.51 55.7612, 242.5964 55.3831, 242.6392 55.1939, 242.6818 55.0045, 242.7662 54.626, 242.8081 54.4371, 242.8496 54.2477, 242.9321 53.868899999999996, 243.0134 53.4906, 243.0537 53.3012, 243.1338 52.9224, 243.1737 52.7329, 243.213 52.5439, 243.2912 52.1649, 243.3301 51.9754, 243.3689 51.786, 243.4455 51.4073, 243.4833 51.2177, 243.5214 51.0282, 243.5591 50.8386, 243.6709 50.2703, 243.7078 50.0808, 243.7811 49.702, 243.8538 49.3227, 243.89 49.133, 243.9258 48.9434, 244.2197 48.9671))",
+    "ODE_notes": {
+      "ODE_note": [
+        "NOTE: Product Type set by ODE",
+        "NOTE: Instrument Host Id set by ODE",
+        "NOTE: Label Solar Distance unit in KM",
+        "NOTE: Observation time set to mid-point between start time and stop time",
+        "NOTE: Corresponding DDR: msp00018fda_01_de214l_ddr1",
+        "NOTE: Emission angle - from DDR msp00018fda_01_de214l_ddr1",
+        "msp00018fda_01_de214l_ddr1 - NOTE: Emission angle - set to center pixel emission angle from Image file",
+        "NOTE: Incidence angle - from DDR msp00018fda_01_de214l_ddr1",
+        "msp00018fda_01_de214l_ddr1 - NOTE: Incidence angle - set to center pixel incidence angle from Image file",
+        "NOTE: Phase angle - from DDR msp00018fda_01_de214l_ddr1",
+        "msp00018fda_01_de214l_ddr1 - NOTE: Phase angle - set to center pixel phase angle from Image file",
+        "NOTE: Solar time - from DDR msp00018fda_01_de214l_ddr1",
+        "msp00018fda_01_de214l_ddr1 - NOTE: Solar time - set to center solar time from Image file",
+        "NOTE: TRDR areocentric footprints information taken from DDR msp00018fda_01_de214l_ddr1"
+      ]
+    },
+    "Product_files": {
+      "Product_file": [
+        {
+          "Creation_date": "2011-10-03T03:46:23Z",
+          "Description": "PRODUCT DATA FILE",
+          "FileName": "MSP00018FDA_01_IF214L_TRR3.IMG",
+          "KBytes": "37126",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2104/trdr/2010/2010_145/msp00018fda/msp00018fda_01_if214l_trr3.img"
+        },
+        {
+          "Creation_date": "2011-10-03T03:46:25Z",
+          "Description": "PDS3 PRODUCT LABEL FILE",
+          "FileName": "MSP00018FDA_01_IF214L_TRR3.LBL",
+          "KBytes": "10",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2104/trdr/2010/2010_145/msp00018fda/msp00018fda_01_if214l_trr3.lbl"
+        },
+        {
+          "Creation_date": "2025-07-01T14:28:07Z",
+          "Description": "PDS4 PRODUCT LABEL FILE",
+          "FileName": "MSP00018FDA_01_IF214L_TRR3.XML",
+          "KBytes": "27",
+          "Type": "Product",
+          "URL": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2104/trdr/2010/2010_145/msp00018fda/msp00018fda_01_if214l_trr3.xml"
+        },
+        {
+          "Creation_date": "2026-04-20T01:15:29.184",
+          "Description": "PRODUCT KML FILE <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00018FDA_01_IF214L_TRR3_XML.KML",
+          "KBytes": "6",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/kmlfiles/mro_crism_trdr_2104-data_trdr/mrocr_2104/trdr/2010/2010_145/msp00018fda/msp00018fda_01_if214l_trr3_xml.kml"
+        },
+        {
+          "Creation_date": "2026-04-20T01:15:29.109",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (TAR.GZ) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00018FDA_01_IF214L_TRR3_XML.TAR.GZ",
+          "KBytes": "4",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2104-data_trdr/mrocr_2104/trdr/2010/2010_145/msp00018fda/msp00018fda_01_if214l_trr3_xml.tar.gz"
+        },
+        {
+          "Creation_date": "2026-04-20T01:15:29.045",
+          "Description": "PRODUCT FOOTPRINT SHAPEFILES (ZIP) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+          "FileName": "MSP00018FDA_01_IF214L_TRR3_XML.ZIP",
+          "KBytes": "11",
+          "Type": "Derived",
+          "URL": "https://ode.rsl.wustl.edu/mars/datafile/shapefiles/mro_crism_trdr_2104-data_trdr/mrocr_2104/trdr/2010/2010_145/msp00018fda/msp00018fda_01_if214l_trr3_xml.zip"
+        }
+      ]
+    }
+  }
+]

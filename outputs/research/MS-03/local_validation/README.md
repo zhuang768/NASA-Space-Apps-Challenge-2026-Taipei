@@ -19,3 +19,9 @@
 - `F-LV01_CTX_samples.png`: actual fixed local display patches, dates and observability limitations.
 - `F-LV02_observation_support.png`: real catalogue sub-spacecraft tracks and acquired RDR geometry segment; echoes not interpreted.
 - Source instrument dates/solar times are preserved as supplied. No Earth logger clock correction or Campbell–HOBO alignment is performed.
+
+## 2026-11-15 CRISM acquisition update
+
+- Two local I/F subsets, exact wavelength calibration and DDR geolocation are now acquired; the earlier catalogue-only status for these two products is retained in `crism/previous_catalogue_status.json` and superseded in current tables.
+- Start with `crism/README.md`, `crism/qa.json` and `crism/F-CRISM01_pixel_QA_spectra.png`. Ice classification remains unknown; basic numeric checks are not final scientific validity.
+- If regenerating parent tables with `build_tables.py`, run `crism/refresh_crism_evidence.py` afterwards to apply the new acquisition statuses while preserving prior history.

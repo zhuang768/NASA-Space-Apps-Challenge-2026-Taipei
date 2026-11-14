@@ -1,5 +1,121 @@
 # Team 1 地球類比場址與用途配對
 
+## 備案增補：EARTH-003，2026-11-14
+
+本次只新增 **Linnaeus Terrace 的 LT 歷史溫度站 → I-02**，固定 ID `EARTH-003`，定位為**尚未啟用的檔案資料方法備案**。EARTH-UV-001 及 EARTH-002 的原資料列、用途與查核狀態完整保留；Elephant Head 仍是 GPU 優先工作。以下是本輪更新，後面的前次報告作版本化紀錄保留。
+
+### 版本核對與最新需求
+
+開始時為 main，工作區乾淨，`git pull --ff-only` 顯示與遠端一致，基準 `cf72039a4bdfb94666c8df176de41eefd55f30ee`。主分支尚無 `docs/research/main_research_requirements.csv`；本輪 fetch 找到主要對話分支 `codex/mars-research-mainline-20261114`，只讀取其 commit `9e5c49ea7b4d7272972e7d409e6a298e6ef3da4a` 的[需求單](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/9e5c49ea7b4d7272972e7d409e6a298e6ef3da4a/docs/research/main_research_requirements.csv)與[研究卡](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/9e5c49ea7b4d7272972e7d409e6a298e6ef3da4a/docs/research/main_mars_research_cards.md)，沒有合併或修改他人文件。需求單 SHA-256 `89fe4d295856c09edeaabd8a32b6e63fcb5cbc1ea3fe762e211eb6a773ccfaf3`；研究卡 `4ca4f38ef53a6326ed3d779e0c47669fb0ea00c557a0200a69229f0b7763a784`。
+
+採用 **MR-20261114-v1** 的暫定研究設計：先做已發表資料的熱響應描述與驗證需求規劃；研究覆土如何造成冰界面判讀歧義。沒有獨立真值、控制與儀器規格，不能報盲判準確度或因果效應；冰損失為附屬模組。所有門檻仍 `not_defined`。該分支需求不是「已整合 main 的正式定案」。其中 T1-09 要求先補 EH 協定，本輪依使用者較新的指示，只備妥一個備案，**不啟用第二組計算、不改主題**。
+
+已重讀本報告、候選 CSV、選點 brief、Team 2 的報告與 CSV、Mars discovery JSON。main 的 Team 2 尚無 EARTH-002 新回覆，故保留待 QA／查核狀態；UV 已知用途對照不變。未還原舊排名，未重新開啟總 Excel，未將檔案清單當作原始 raster。
+
+### 為什麼保留這個備案
+
+它有直接的歷史剖面與同站深度溫度量測，且官方小型 ASCII 原始檔已實際取得，適合在需要時評估深度熱響應。其價值是**不同深度支撐與資料取得路徑**，不是少有人研究。它位於 McMurdo Dry Valleys，屬已知冰穩定性研究站；如果展示必須以新場址為主，它不能直接承擔該主張。
+
+本輪證據搜尋只沿用前次 Linnaeus Terrace 線索，查詢 `McKay Mellon Friedmann 1998 soil temperature stability ice cemented ground Linnaeus Terrace 25 cm data coordinates` 及 `"Soil temperatures and stability of ice-cemented ground" pdf McKay 1998`。未展開大量地點搜尋，也未進行隊友 2 的系統性新穎性查核。
+
+### 固定身份、範圍與資料證據
+
+| 欄位 | 本輪紀錄 |
+|---|---|
+| 地球／火星 ID | `EARTH-003 → I-02`，作 EARTH-002 的研究用途備案；不表示定量最相似，亦可供 I-01 問題規劃參考 |
+| 名稱、別名與地區 | Linnaeus Terrace；LT；GGD6；Upper Wright Valley，Asgard Range，McMurdo Dry Valleys，南極洲 |
+| 原座標 | LT1 site LT：77°36′S、161°05′E；換算北東為正 **−77.6°、161.083333333°**。目錄經度 161.083°為較短表示，不另建新地點 |
+| 定位慣例與限制 | 原 guide 明列 `Geodetic datum: none`，不能自行指定 WGS84。角分座標只是歷史 point anchor，不表示轉換後九位小數精度；未提供水平誤差 |
+| 代表範圍 | 同站感測剖面；沒有調查多邊形、周邊半徑或新採樣區。不外推到整個 Terrace |
+| 地下結構 | LT2 作者摘要報冰膠結界面 **25 cm**；LT1 記錄挖坑至冰層並用錘鑽安裝地下感測器。此為歷史直接場地工作，非現在的獨立留出真值 |
+| 四面向：地形 | LT1 站點表的平坦／脊狀／砂質等定性欄位；未有同物理尺度 DEM、數值坡度或局部安全檢查。表內 bedrock 勾選不代表所有覆土是完整基岩 |
+| 四面向：溫度 | LT1 深度 0、17、23、40 cm；10 分鐘取樣、30 分鐘平均。僅原始檔取得與樣本列核對，無新統計 |
+| 四面向：水／冰 | 歷史界面可作已知剖面參照；純度、連續性、厚度、當前冰況、可採量與鑽採性能 unknown |
+| 四面向：大氣／沙塵 | 原格式列 air T/RH、日照；沒有取得地下 RH、站點風壓或沉積／磨蝕量，不配對沙塵耐受測試 |
+
+LT1 guide 記錄 1993 部署，儲存期 1994-01-06 至 1995-01-16；目錄名義期間為 1994 年。實際原始檔起訖、缺列與有效數尚未抽取，不能先稱完整全年。guide 的深度精度為 ±0.03 m；23 cm 與文獻 25 cm 界面僅差 2 cm，不能將該感測器當作精確、全程確定的純乾土控制。這個限制會影響分層判讀。
+
+LT1 的局部時間缺 UTC offset，RH 在低於 15% 時有偏差提醒。未確認校準／RH 基準前不改值；也不把零深度接觸式溫度與軌道 LST 當同一觀測。上述都是方法與品質文件資訊，不是本專案新量測。
+
+LT2 原始論文全文本輪未取得：NASA NTRS 只有作者摘要，明列無可下載全文；DOI 的 web 讀取失敗。25 cm 依作者摘要與作者資料集的現地安裝方法使用。[UV 論文 Introduction](https://www.cambridge.org/core/journals/antarctic-science/article/climate-and-energy-balance-of-the-ground-in-university-valley-antarctica/432141245F43EF744DD8ABDB56580A5F) 中出現的 Linnaeus 45 cm 引述與此處 25 cm 不一致，**不以次級引述改寫本站真值**；請隊友 2 核對是否引用誤差、不同位置或年代。沒有取得全文就保留這個缺口。
+
+### 三個案例的用途比較
+
+既有 UV／EH 值沿用前次 Team 1 報告，**本輪沒有重算**；新備案也只有文獻值與資料可取得性。不同年份與材料不能用來作覆土的受控因果比較。
+
+| 比較項 | EARTH-UV-001：已知用途對照 | EARTH-002：Elephant Head，待 QA／查核 | EARTH-003：本輪備案 |
+|---|---|---|---|
+| 已定位地下結構 | W 歷史界面 42 cm；新試驗區未知 | 監測站歷史界面 49 cm | LT 歷史界面 25 cm；角分錨點較粗，新試驗區未知 |
+| 可用觀測資料 | 既有交接的現地序列與氣候抽取；本輪未讀 raw | 108 頁 EH2 表，原交接待 GPU 恢復與 QA | 官方 `mckay.dat` ASCII 已取到；多深度溫度，尚未完整 QA |
+| 可支援的研究 | 已知參照／驗證設計 | 已知剖面熱響應描述；後續獨立真值設計 | 備用多深度熱響應描述，檢查層位／深度不確定性如何限制判讀 |
+| 材料／環境差異 | 沿用前次冷乾谷底背景，熱物性未等效 | 前次 EH1 為石英岩來源、少量千枚岩；有地下 RH | LT1 為砂質場地並有砂岩表面通道；沒有地下 RH，不能補 EH 同類水汽分析 |
+| 主要資料缺口 | 原序列與新實驗真值／範圍需交接 | PDF 解析、兩時標、3 cm 冬季缺測 | 年代較早、實際記錄期與時區待查；23 cm 層位誤差；無新冰／材料真值 |
+| 已知用途與待查項 | 山谷尺度鑽採／溫控先例已確認 | 已有環境、微生物和 UV–EH 比較；完整協定待查 | 已有冰穩定性、熱性質研究；覆土控制＋獨立真值的完整問題交 Team 2 |
+| 現有資料能完成什麼 | 在來源與 QA 足夠範圍內描述既有觀測 | QA 後描述共同有效時段溫差 | 若主要對話啟用、QA 後描述表層與多深度溫差；不是界面偵測驗證 |
+| 仍需新量測／實驗 | 留出真值、正負控制、覆土材料／範圍 | 同左；冰損失另須初末冰量 | 同左；無新資料就不能報盲判誤差、因果效應或冰損失 |
+
+這三地的冰界面與雪／水汽背景已有跨場址研究（前次 EH3 包含 Linnaeus Terrace 比較脈絡）。不能把這張比較表包裝為首次配對或新機制；我們交付的是版本化資料支撐、未能識別的條件與待測協定。
+
+### 與 MR-20261114-v1 的對照
+
+- `ALL-01`：固定 ID、用途、版本、來源與 unknown 已保留。
+- `T1-03`／`T1-05` 的精神：只將既有多深度觀測用於描述；未取得覆土粒徑、密度、含冰量與同尺度地形，不宣稱控制條件滿足或 TES 等效。
+- `T1-02`／`T1-04` 的精神：25 cm 是公開歷史答案，不能同時作擬合目標及獨立留出真值；缺無冰負樣本就不報誤判率，缺盲測就不報準確度。
+- `T1-08`、`MAIN-01`：冰質量收支資料尚無，附屬冰損失模組不啟用；不新增門檻。
+- `T1-09`／GPU-09/10：EH 仍先做。本備案需求為 `prepared_not_activated`，由主要對話決定是否接續；不能當作已完成需求單的第二組計算。
+
+以上是把既有需求套用到備案的可行性說明，沒有替主要對話修改需求本身。真正獨立真值與控制不足，當前結論只到描述性檔案研究與驗證設計。
+
+### 隊友 2 查核包（待查核）
+
+固定 `EARTH-003 / I-02 / MR-20261114-v1`，地名別名、原座標、point anchor 與範圍限制見上表；來源 LT1–LT4。請分開記錄觀測／製圖、相關科學、同用途提案和已執行實驗。
+
+精確用途：用已知歷史界面與多深度溫度作描述性參照，評估下一步要什麼獨立真值／覆土控制，才能避免把表層效應誤判為地下冰差異。真正盲判或受控覆土試驗尚未執行，冰損失不是本輪結果。
+
+請查：（1）本站或明確重疊範圍是否已有覆土控制＋獨立留出真值的界面判讀實驗？（2）既有熱性質反演、冰穩定性模型是否已回答我們擬提問題與反應量？（3）是否有分段採樣／樣品控溫／含冰量收支的同站先例？（4）取得 1998 全文時，核對 25 cm／45 cm 引述與實際測站／年代。每項請給範圍、控制、真值、反應量與讀取範圍；未找到僅記本次未找到。
+
+交接內容已寫入本報告與 CSV `team2_questions_json`；未直接傳送訊息、未收到回覆。`novelty_status` 保持待隊友 2 查核，有既有研究不等於完整新協定已做，也不等於新協定有原創性。查到重複用途時改列相應對照，不靠換 ID 規避。
+
+### GPU 備案需求（主要對話決定是否啟用）
+
+不啟動第二條批次處理。CSV `gpu_requests_json` 提供 `GPU-EARTH-003-AVAIL` 完整規格，狀態 `not_activated_main_decision_required_EH_first`。
+
+| 輸入／問題 | 要求 |
+|---|---|
+| 來源 | GGD6 v1，DOI `10.7265/tjgd-wp08`；官方 FTP `mckay.dat`，網址、hash、大小見下節；不用重新搜尋全球資料 |
+| 空間與期間 | 歷史 LT 點位；guide／目錄期間不同，先報原始檔實際起訖及缺列；local time UTC offset 未知 |
+| 變數與單位 | 9 欄：1994 decimal day、air T（°C）、air RH（%）、sunlight（W m⁻²）、soil surface T、17／23／40 cm T、rock surface T（後五項 °C）；RH 基準待核 |
+| 啟用後第一步 | 保留行號與原時間，檢查欄序／缺值代碼／重複／間隔／校準，輸出來源 manifest、字典與各深度有效數。小數日已四捨五入，不能要求每列精確差 1/48 |
+| QA 後可問 | 有哪些共同有效觀測可描述多深度熱響應、季節變化與層位不確定性？依原始有效支撐報 paired N，不插補或反演冰深／TI |
+| 不能做 | 無地下 RH 就不重建地表—冰層水汽梯度；無儀器規格／真值就不報界面偵測成功率；無初末冰量就不報損失；無同期資料不作 Earth 跨站受控因果結論 |
+
+原欄位維持 `earth_candidate_id`、`mars_candidate_id`、`test_purpose`、`site_extent_description`。若 GPU 改名仍沿用前次 §7 的欄位對照，不刪原鍵。
+
+### 來源、實際取得與限制
+
+| ID | 原始來源與定位 | 本輪實際讀取 |
+|---|---|---|
+| LT1 | [NSIDC GGD6 v1](https://nsidc.org/data/ggd6/versions/1)、[原作者資料指南](https://nsidc.org/sites/default/files/20ggd6-userguide-v001.pdf)；printed pp.2–5 / PDF pp.3–6，§1.1–1.4、site LT | metadata 與整份 7 頁 guide 已取得；讀方法／欄位／site／精度。不是新 QA，也不是期刊全文 |
+| LT2 | McKay, Mellon & Friedmann (1998)，[DOI](https://doi.org/10.1017/S0954102098000054)；[NASA NTRS 20040089259](https://ntrs.nasa.gov/citations/20040089259)，作者摘要 | 作者摘要可讀，全文未取得。支持歷史冰界面與溫度／冰穩定性研究，不能引用未讀 Methods 的細節 |
+| LT3 | [官方原始 ASCII](ftp://sidads.colorado.edu/pub/DATASETS/fgdc/ggd6_soiltemp_antarctica/mckay.dat)；同目錄 `README.txt` | 已實際下載 1,171,171 bytes，核對前 3 列有 9 欄，首列與 guide 範例相符；未解析全表、未算統計或有效數 |
+| LT4 | [NSIDC OAI/DIF metadata](https://nsidc.org/api/dataset/metadata/v2/oai?verb=GetRecord&amp;metadataPrefix=dif&amp;identifier=GGD6.001)，identifier `GGD6.001` | XML 已讀 point bounds 與資料連結；目錄時間不是實際檔案完整性證明 |
+
+LT3 SHA-256 `ad566f8e48b0a3542153e5f2da478f801a18c114a8c76ba3462cdcbd957d1b68`；LT1 guide SHA-256 `f76541b6f4905a3cabf6f7a3373ccd55fb9e8e8f60492bb1f93b8b88aa1fc922`。暫存於本機 `/tmp/team1_earth_003/`，不加入 Git；GPU 可從官方端重取核對。FTP 實際成功；相同目錄的 HTTPS 嘗試於 15 秒逾時。瀏覽器不支援 FTP 不代表原始檔不存在。
+
+NSIDC 要求引用資料集及使用子集；本輪沒有把第三方資料當專案原創，也沒有將專案程式授權套到它。尚未取得原始全文、現地新量測或新試驗許可／設備資訊，不安排實地作業。
+
+### 本輪完成度與待辦
+
+完成：只新增一個備案；固定 ID 與 point anchor；歷史現地證據；原始檔取得與來源 manifest；三地限制比較；用途查核包；**未啟用**的 GPU 需求。保留兩個既有案例的全部 CSV 欄值與歷史紀錄。
+
+未完成：主線需求進 main、GPU 全表 QA／數值分析、隊友 2 用途查核、現代試驗區與獨立真值／材料控制。無新準確度、因果、冰損失、資源量或新穎性結論。本輪不改網站、Excel、Team 2、GPU、analog/ 或排名。
+
+驗證：三個 ID 唯一；原兩列逐欄不變；原 58 欄保留；座標依角分重算；I-02 引用值等於 discovery JSON；所有 JSON 交接欄可解析；原始檔／guide hash 與首列核對；僅兩個 Team 1 責任檔案修改。這些是交接一致性檢查，不是科學 QA 通過。AI：OpenAI Codex 協助來源查找、文件比對與交接撰寫。
+
+---
+
+## 前次交接版本：TEAM1-ICE-REDO-v1（保留）
+
 2026-11-14，Asia/Taipei。本輪版本：`TEAM1-ICE-REDO-v1`。研究需求：`TEAM1-PROVISIONAL-ICE-v1 / 2026-11-14`，**provisional**。
 
 本輪先交付 **EARTH-002 → I-02：Elephant Head 監測站**，定位為有條件的方法參照候選，等待 GPU 資料 QA 與隊友 2 用途查核。保留 **EARTH-UV-001 → I-01**，接受隊友 2 查核，改列已知用途對照。兩者都沒有新穎性認證；未做實地測試、未重跑排名。本輪不提出第二個新地點。

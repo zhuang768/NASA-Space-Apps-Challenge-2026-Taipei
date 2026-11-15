@@ -1,10 +1,17 @@
 {
-  "version": "MARS-RESELECT-20261114-v1-clean",
-  "scope": "immutable files in curated main; publication metadata excluded to avoid self-referential hashes",
+  "version": "ZASA-CHALLENGE-EVIDENCE-20261115-v1",
+  "scope": "Explicitly listed current evidence, code and active entry points; not the entire repository history or scientific/eligibility approval",
+  "starting_main": "07dbe29203504ba0ccde5e379f42ecc16e4b1b4f",
+  "historical_manifest": "outputs/integration/challenge_alignment_20261115/baseline_release_manifest.json",
+  "retired_manifest_paths": [
+    "outputs/research/mars_reselection_20261114/mars_three_candidates_report_zh.pdf",
+    "outputs/research/mars_reselection_20261114/report.md"
+  ],
   "dynamic_metadata": [
     "CURRENT_STATUS.json",
     "PUBLICATION.json",
-    "release_manifest.json"
+    "release_manifest.json",
+    "outputs/integration/challenge_alignment_20261115/verification.json"
   ],
   "files": [
     {
@@ -14,13 +21,13 @@
     },
     {
       "path": "DATA_LICENSES.md",
-      "bytes": 1721,
-      "sha256": "9accc92aa7da41741bc357c713265fe470011526232904d7efa491b0910ee752"
+      "bytes": 3432,
+      "sha256": "57fb323109f5cefeb74908703ca3c55b866c0730292ccdc6e152822f2511f966"
     },
     {
       "path": "README.md",
-      "bytes": 2734,
-      "sha256": "6fe907bb0ca7ef38e496bff0b04debc85920cdbc405bd475221c2c9a66eea861"
+      "bytes": 5176,
+      "sha256": "b83aa4afe9e1bcc242691fd3e3c8c77b52d42fe2e4420a80ce1cb479f738078f"
     },
     {
       "path": "analog/__init__.py",
@@ -84,18 +91,328 @@
     },
     {
       "path": "docs/ARCHIVE.md",
-      "bytes": 1111,
-      "sha256": "7c5427c0a435a0e015d993dafe3ece89cb3f14258537ed42389e4b5cb0202dd2"
+      "bytes": 1456,
+      "sha256": "fc557bcf9aed8ea59b99bef6dbfd18f40aecbd2d3ac83bc80732181acc7782e5"
+    },
+    {
+      "path": "docs/CHALLENGE_ALIGNMENT.md",
+      "bytes": 8183,
+      "sha256": "aa65b4b28cf63850bfdfd930fa6ea05f529169d350dcefc4a826e32281b85ed6"
     },
     {
       "path": "docs/REPORT.md",
-      "bytes": 7660,
-      "sha256": "36db20ee8f67b482cec01a4338703606d91620ef73724198df88c11550bc6bc2"
+      "bytes": 26624,
+      "sha256": "3319af778a6670536de1f50df4996a1811932b73771dba43c8693f66c4fd98ac"
     },
     {
       "path": "docs/REPRODUCE.md",
       "bytes": 3799,
       "sha256": "707bcacbe0577010c52bc71e9d380b399027a706c868adfbe3278093a1da374c"
+    },
+    {
+      "path": "docs/earth_submission_status.csv",
+      "bytes": 3254,
+      "sha256": "135e367ec1907191879d1a97a5584f02ec9fb2adc50a037c286ad0d38e2b3bc2"
+    },
+    {
+      "path": "outputs/integration/challenge_alignment_20261115/baseline_release_manifest.json",
+      "bytes": 9270,
+      "sha256": "ad16f297d08fdfb84c18ab04e8562b1f49d80223f829b4c3e6028d325c3b21a1"
+    },
+    {
+      "path": "outputs/integration/challenge_alignment_20261115/browser_panels.json",
+      "bytes": 1475,
+      "sha256": "83de46ad9f4a16770929258b9f39e4cc95d884139ffe8cb6cec1481f4de8ef17"
+    },
+    {
+      "path": "outputs/integration/challenge_alignment_20261115/local_ice_labels.png",
+      "bytes": 85745,
+      "sha256": "b9530362bb1d4c9b7978d2e9ad282f2d80d893f506d160019788ed5b72b15ab9"
+    },
+    {
+      "path": "outputs/integration/zasa-acceptance-20261115/manifest.json",
+      "bytes": 12603,
+      "sha256": "f1469829f04d95804581fb487e1acf53d14e0db95d27502e04d75d5f9b1f87c8"
+    },
+    {
+      "path": "outputs/integration/zasa-acceptance-20261115/web/SOURCE_PROVENANCE.md",
+      "bytes": 3710,
+      "sha256": "7cdd5d193c149faea224bc653f6022c69e2edef621c45fff8928036f1bdf6c21"
+    },
+    {
+      "path": "outputs/integration/zasa-acceptance-20261115/web/app.js",
+      "bytes": 31794,
+      "sha256": "c076b3024899f6870db4fc322b9f4b953657b73cb2d7cb6a7047c48cb218f24a"
+    },
+    {
+      "path": "outputs/integration/zasa-acceptance-20261115/web/deployment.json",
+      "bytes": 950,
+      "sha256": "e8706f18f3326b3dd34535f0bea6d85c9c25a000612bf1cd27d274a320c90ad4"
+    },
+    {
+      "path": "outputs/integration/zasa-acceptance-20261115/web/index.html",
+      "bytes": 4639,
+      "sha256": "06794fa47b882ff090e6c5d2af3f708033d9120318952444bd4468405eb4327e"
+    },
+    {
+      "path": "outputs/integration/zasa-acceptance-20261115/web/mola.jpg",
+      "bytes": 521522,
+      "sha256": "72a590d14106909381ab65f86b4cc0e455670a6467431a441a84216d92e9e3bb"
+    },
+    {
+      "path": "outputs/integration/zasa-acceptance-20261115/web/style.css",
+      "bytes": 7170,
+      "sha256": "0cd08324403e377ea84221f537aefd64a233affac04756a881a49562e01545db"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/README.md",
+      "bytes": 1305,
+      "sha256": "6e6bc0cd7445cb805ce842c5586affb934eed1bb1928abc6084d29aee28b32d6"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/REPRODUCE.md",
+      "bytes": 2408,
+      "sha256": "42116fb8d0a0872aa70e71b0cd0f9ed9b757dd2b4197b8aa3e82287ac05d7d77"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/archive_member_scan.csv",
+      "bytes": 1643,
+      "sha256": "0ccad936bce3a4abee432a54bb4c1b844696f0e9231b8de5dd912dbb9adab351"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/audit_details.md",
+      "bytes": 12565,
+      "sha256": "3ea6432a00c6c9a1c1bd6df37a4faafbf57a6bc66bef1b978f5dc83dedb05902"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/earth_audit/AD1_Earth_reference_contours.geojson",
+      "bytes": 198772,
+      "sha256": "9a1dd7bd0e189fb8f5690c68252bf178242c5688ff1c0bc109fcd491d39d5f15"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/earth_audit/AD1_independent_geometry.csv",
+      "bytes": 49681,
+      "sha256": "be3cf92a84e0e8059910fbd93b328d9e788ab49fcfff7279b559f7059d1a53d8"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/earth_audit/AD1_readback_comparison.csv",
+      "bytes": 1329,
+      "sha256": "e8d10a74c6d01e471b7d10f27f8f3e863306c9a2039f7ecce6e78f676212e8ac"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/earth_audit/AD1_sampling_upper_bound.csv",
+      "bytes": 1514,
+      "sha256": "b8e19fde7ae6ea92b3ed32dc012079d36846a5c4f566c085030c33ecf1af71bf"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/earth_audit/AD1_summary.json",
+      "bytes": 1469,
+      "sha256": "8b1d6995e65eac28616d53cfc94bbb40f1b7f52d6311cdb61c3788ce2619ad1f"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/earth_audit/AD1_version_comparison.json",
+      "bytes": 598,
+      "sha256": "a8038c0fc9362a4671baf609408f2eefdb5ae9908dda72db0d5cc521002e0a09"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/earth_audit/Cape_branch_search.csv",
+      "bytes": 6664,
+      "sha256": "8081c917911609341904622573512e16046463c6539a1603962f400272197e85"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/earth_audit/Earth_unmeasured_items.csv",
+      "bytes": 1302,
+      "sha256": "fc5277f2d8f04948cd35c61742c68dea75ee9eb56d2cab4f14bbb4988ec856aa"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/earth_audit/README.md",
+      "bytes": 459,
+      "sha256": "a11b2ca9a9fe3669b08de0feb078953990ee3bb8031902f54918f8501194a336"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/earth_audit/audit_ad1.py",
+      "bytes": 7397,
+      "sha256": "1fc9aec5784616d7fe82e4076230238a8636c0bd1d4b3a01411f837a1184aa29"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/earth_audit/geometry_warnings.json",
+      "bytes": 3503,
+      "sha256": "b2a2f3f4e068c9cc9dc36082524512bbe4036814a627f8011be6f86d840abc7d"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/environment.json",
+      "bytes": 310,
+      "sha256": "379b8774af53afb41642dc4d9dfabfb72e876bac90965828045c03eb6f26fc04"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/github_metadata/branches.json",
+      "bytes": 10656,
+      "sha256": "2eb1f6bff4b2e731018fee2c0180d24cb715484f3f408495889d6698ea0b34e8"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/make_support_figure.py",
+      "bytes": 3320,
+      "sha256": "f9f84c9416d174a0fff0d09d0ce2cff26b4c195e893adeb4255453d9a75e66e0"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/manifest.json",
+      "bytes": 8315,
+      "sha256": "2b7e96c0d7569d8e3d9afb13275ce394a2c32801717caa8139e4ac1d78ae7d05"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/MS03_support_and_review_windows.pdf",
+      "bytes": 350619,
+      "sha256": "3daa93aa1d5b9647d2eed400880ab6e221fdc5952435a32a55e419344f14ab1f"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/MS03_support_and_review_windows.png",
+      "bytes": 174369,
+      "sha256": "d184a098aeb1bc28c649b8ee55c48efb11d6c5ab524122fb3bcc647babd981f9"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/README.md",
+      "bytes": 183,
+      "sha256": "e555e5420c0126eac3a8f338ac43de73f23df59c60406eeee414d2a10beaeef6"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/all_refs_raw_image_hits.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/catalogue_footprints.csv",
+      "bytes": 1468,
+      "sha256": "7c57754b51c12f05a825195d91758d31d7d48fae91fb78665b2d47f5b77a6010"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/catalogue_run.log",
+      "bytes": 792,
+      "sha256": "0838079667cd009f5f96af34555121383bd24ff51b09caadbf99410ea56f4e11"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/catalogue_stdout.txt",
+      "bytes": 792,
+      "sha256": "0838079667cd009f5f96af34555121383bd24ff51b09caadbf99410ea56f4e11"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/catalogue_summary.json",
+      "bytes": 604,
+      "sha256": "1c25a11a991af78d8514619dd7b375806d4ded6c21af987f241c4dfcb76cc91d"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/input_hashes.json",
+      "bytes": 1321,
+      "sha256": "861e64a179a2dea8c409813d0bae48ff90967475b4b139b367d8d229d9221141"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/native_review_contact_sheet.png",
+      "bytes": 911332,
+      "sha256": "7ef6d7ce66bc6780a2835cdbcc8a8488414fe32e54790bb8697a82fab4c892f3"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/protocol.json",
+      "bytes": 781,
+      "sha256": "b7b506f1d438d5d9e1b6da620af7991cdae8a6bbf989dca0b9015a9277b2fef5"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/retained_image_inventory.csv",
+      "bytes": 8240,
+      "sha256": "bb0ecc3708f00f78b13632552f9bf4557d3b9f6b741e7f1b6eab85a238cdab70"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/run.log",
+      "bytes": 2223,
+      "sha256": "b75649dfd4bb35d6a810edd8b69b0ccec6578828ddf8a180e477b82f5e77557a"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/run_stdout.txt",
+      "bytes": 2223,
+      "sha256": "cc9e0b89d40831e4ba226fb55f7b19133a0015f2613dc87b42841f90d35a2dbe"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/summary.json",
+      "bytes": 2223,
+      "sha256": "cc9e0b89d40831e4ba226fb55f7b19133a0015f2613dc87b42841f90d35a2dbe"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/verify_catalogue.py",
+      "bytes": 3459,
+      "sha256": "c03c9f5e731f5a23a173941ab41c653e5c79da7174b5bf845577597d646b12fe"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/verify_mars.py",
+      "bytes": 10676,
+      "sha256": "150f7f3f1d13167e0d54be7cb83078c206a840ee072c6faffad46108bc751ec9"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/mars_audit/windows.csv",
+      "bytes": 5217,
+      "sha256": "abc4fd9c0802140e0d08301b721df8b688088a5b381b0ac42be097f1245f6e34"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/numeric_audit/SWIM2_c0_1.tif.metadata.json",
+      "bytes": 752,
+      "sha256": "1482af7dd2bae6ed49becd7c9cc504bbe51b724d7b0766fea0ea2dde0b44d62a"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/numeric_audit/SWIM2_c1_5.tif.metadata.json",
+      "bytes": 752,
+      "sha256": "1482af7dd2bae6ed49becd7c9cc504bbe51b724d7b0766fea0ea2dde0b44d62a"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/numeric_audit/input_receipt.json",
+      "bytes": 3509,
+      "sha256": "2e0486d5b6b03f67ad7a1b4e66d95984ed555625077d75b03a59e362a1154370"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/numeric_audit/ms03_numeric_checks.csv",
+      "bytes": 23173,
+      "sha256": "f0bcb8e9056f4cc774ea363e951330e08776611e0b20c54f550a9550c0a74562"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/numeric_audit/recompute_ms03.py",
+      "bytes": 8620,
+      "sha256": "6cdf0da5ad624e0d9a0adbb0b22ff5fd59aa90a5a0e5f5f8baded99c998839ca"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/numeric_audit/results.json",
+      "bytes": 387,
+      "sha256": "893f6fc1370e083370d50dfd299ab9c0f06645bd2bb68e70f8f3ecb886369c0d"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/numeric_evidence.csv",
+      "bytes": 11834,
+      "sha256": "33fa3109d9ff03636578724a66d1f08560f2e15dca4c39b9cd116d1277a5584c"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/report_paragraph.txt",
+      "bytes": 850,
+      "sha256": "ab7758f1666d1b326a3bbdb9620da1df823439cd81877f8f7418692d458133d3"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/unmeasured_items.csv",
+      "bytes": 2090,
+      "sha256": "8652a02ca6c043ba77ad06824d91ee41ce09959a37d670ca0fdeb08ac3111bf7"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/version_audit/all_branch_content_matches.csv",
+      "bytes": 715,
+      "sha256": "2b1bb4260fe108bce5a35f2e0df2f137ef514bc30aefbd5593b8836fcd813b0a"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/version_audit/main_pr26_ms03_inventory.csv",
+      "bytes": 160636,
+      "sha256": "765c601b37945fecce2b012eb4fc4661641b02a52ba9f3e9e22fb691a5db8de8"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/version_audit/release_asset_inventory.csv",
+      "bytes": 89575,
+      "sha256": "be06f0cc1085c967cf4a4573cddd7463ad9489768e92109fb0331177b25d4107"
+    },
+    {
+      "path": "outputs/research/MS-03/repository_validation_20261115/version_audit/version_audit.json",
+      "bytes": 989,
+      "sha256": "e4373c61d3cd83ef48a2b123a34b9814598f48f4af498088edf698015972cc82"
     },
     {
       "path": "outputs/research/mars_reselection_20261114/COMPUTATION.md",
@@ -168,11 +485,6 @@
       "sha256": "00e32cfc0666ea56a6901dae365dc00d59d8fd60d7590f76d8a994483a0e41a6"
     },
     {
-      "path": "outputs/research/mars_reselection_20261114/mars_three_candidates_report_zh.pdf",
-      "bytes": 469106,
-      "sha256": "b0b17d071ffb0fedc90bfac150b189c4c9b446d389135a9a0345c5cf0d869bb8"
-    },
-    {
       "path": "outputs/research/mars_reselection_20261114/method.json",
       "bytes": 7543,
       "sha256": "9629b682ed05ed6a456375ff26aa4c943c872f9ab6d818ad33bfce5fa71e47ff"
@@ -191,11 +503,6 @@
       "path": "outputs/research/mars_reselection_20261114/preservation_check.json",
       "bytes": 3714,
       "sha256": "efc0ce3286f2adbc135f14d195e3e1a99016a4c7fb47b2e9b3d2f5ab538e6b12"
-    },
-    {
-      "path": "outputs/research/mars_reselection_20261114/report.md",
-      "bytes": 16524,
-      "sha256": "1708e2d7af86118edf2a88c3e896464406d5bd617f9ab197f7c4d412f5969e4b"
     },
     {
       "path": "outputs/research/mars_reselection_20261114/report_manifest.json",
@@ -258,9 +565,19 @@
       "sha256": "6d4f126496938f3b577a424252d0ff556fb578c5ed91dde596ad5d6bdf75e2e3"
     },
     {
+      "path": "scripts/verify_challenge_alignment.py",
+      "bytes": 2125,
+      "sha256": "aad54d172335a5af6df322f544377a1a190a394268251dca6342905772254c5a"
+    },
+    {
       "path": "scripts/verify_release.py",
-      "bytes": 2186,
-      "sha256": "9c36b6c0dbe933a488410543bddcf7f3a796ee7144258e2176181c16aef6da32"
+      "bytes": 2271,
+      "sha256": "c9c907dab97a0f8dae0a5494c8748e841c2bca0545631313463a0eb96913e852"
+    },
+    {
+      "path": "wrangler.jsonc",
+      "bytes": 463,
+      "sha256": "ee9650dbf8d22ed5e9f51b65c8c24ebff5c6e978bb4a57961b6fb9722646914c"
     }
   ]
 }

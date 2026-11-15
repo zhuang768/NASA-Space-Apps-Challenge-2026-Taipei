@@ -1,0 +1,30 @@
+{
+  "main_sha": "07dbe29203504ba0ccde5e379f42ecc16e4b1b4f",
+  "pr26_sha": "ac39ed6810156feefd97f60647b95b754210a7da",
+  "main_tracked_files": 1307,
+  "pr26_tracked_files": 1114,
+  "branch_heads_searched": 42,
+  "search_patterns": [
+    "Cape Blossom",
+    "14756139",
+    "Samoylov",
+    "944071",
+    "Blueberry Hills"
+  ],
+  "text_path_matches": 6,
+  "limitations": [
+    "Search covers fetched branch-head trees, main/PR26 and relevant histories; does not claim exhaustive inaccessible/deleted commits.",
+    "No external DOI or source URL was opened.",
+    "An archive filename is not proof of its member contents; existing AD1 ZIP is inspected separately.",
+    "Four matches in historical terrain tables are numeric substring 6.870982944071293, not Samoylov944071 source records."
+  ],
+  "releases": 2,
+  "release_assets": 226,
+  "asset_bytes_downloaded": 0,
+  "comparison_path_states": {
+    "different_blob": 7,
+    "main_only": 18,
+    "pr26_only": 39,
+    "same_blob": 561
+  }
+}

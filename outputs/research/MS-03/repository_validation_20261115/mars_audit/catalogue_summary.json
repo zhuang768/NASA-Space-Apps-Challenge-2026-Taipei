@@ -1,0 +1,10 @@
+{
+  "CTX_nominal_union_degree_area_fraction": 1.0,
+  "HiRISE_retained_latitude_eligible_rows": 305,
+  "HiRISE_retained_latitude_eligible_bbox_hits": [],
+  "HiRISE_retained_flagged_rows": 615,
+  "HiRISE_retained_flagged_latitude_hits": [],
+  "full_cumulative_index_present": false,
+  "interpretation": "Retained index extract/catalogue calculations, not a fresh full cumulative index run or observation absence proof",
+  "CTX_geometric_fraction_note": "Both independent degree-square and README-specified LAEA calculations reported. LAEA uses R3389500m at57.75N242.25E; nominal geometric support only."
+}

@@ -10,8 +10,8 @@ var MARS_R_KM = 3389.5;
    MS-01 and MS-02 local-validation ODE queries. Geologic units: USGS SIM 3292. */
 var SITES = [
   { id: 'MS-01', hash: 'ms-01', lat: 56.75, lon: 72.75, coords: '56.75°N, 72.75°E',
-    one: 'Strong ice evidence at both depths on low, level ground.',
-    text: 'Ice evidence is consistent at both depths and the terrain is low and level. Thermal inertia is the highest of the three, but only 73 of 100 thermal cells hold direct measurements.',
+    one: 'Positive SWIM consistency in both depth zones on low regional slopes.',
+    text: 'Both SWIM depth-zone consistency means are positive and regional slopes are low. Thermal inertia is the highest of the three; 73 of 100 native TES-derived cells remain after excluding infill.',
     elev: -3700.9, slope: 0.287, relief: 76, ti: 325.2, swim1: 0.639, swim5: 0.647, p95: 0.222,
     tesValid: 73, ewKm: 16.2,
     dust34: [0.1236, 0.1005, 0.1662, 0.0921], dust35: [0.1344, 0.0920, 0.1021, 0.0969],
@@ -20,7 +20,7 @@ var SITES = [
     imagery: '4 CTX images at about 6 m per pixel, no HiRISE images, 6 SHARAD radar tracks and 207 CRISM products are listed over the review area.' },
   { id: 'MS-02', hash: 'ms-02', lat: 52.75, lon: 168.25, coords: '52.75°N, 168.25°E',
     one: 'Southernmost, with the fullest thermal coverage.',
-    text: 'The southernmost of the three, with the fullest thermal coverage: 93 of 100 cells. Dust haze peaks higher here and the ground has more relief, 117 meters across the area.',
+    text: 'The southernmost of the three, with the fullest thermal coverage: 93 of 100 cells. Its MY34 reconstructed dust 95th percentile is higher and the regional relief is 117 meters.',
     elev: -3898.7, slope: 0.302, relief: 117, ti: 217.3, swim1: 0.693, swim5: 0.622, p95: 0.240,
     tesValid: 93, ewKm: 17.9,
     dust34: [0.1295, 0.1091, 0.1534, 0.1131], dust35: [0.1412, 0.1066, 0.0904, 0.0934],
@@ -28,14 +28,14 @@ var SITES = [
     unit: 'Middle Amazonian lowland unit (mAl)',
     imagery: '5 CTX images at about 6 m per pixel, no HiRISE images, 3 SHARAD radar observations and 383 CRISM products are listed over the review area.' },
   { id: 'MS-03', hash: 'ms-03', lat: 57.75, lon: 242.25, coords: '57.75°N, 242.25°E',
-    one: 'Flattest and clearest air, with the strongest signal near the surface.',
-    text: 'The flattest and least hazy of the three, with the strongest signal in the top meter. That signal weakens between 1 and 5 meters, and thermal coverage is partial: 79 of 100 cells.',
+    one: 'Lowest regional slope and highest shallow SWIM consistency of the three.',
+    text: 'This region has the lowest mean slope and MY34 reconstructed dust 95th percentile of the three. Shallow SWIM consistency exceeds the deeper-zone mean; the layers share evidence. TES support is partial: 79 of 100 non-infill cells.',
     elev: -2548.3, slope: 0.163, relief: 76, ti: 152.8, swim1: 0.911, swim5: 0.510, p95: 0.173,
     tesValid: 79, ewKm: 15.8,
     dust34: [0.1055, 0.0839, 0.1208, 0.0847], dust35: [0.1080, 0.0791, 0.0830, 0.0807],
     night: 154.6, day: 234.9,
     unit: 'Amazonian and Hesperian volcanic unit (AHv)',
-    imagery: null }
+    imagery: 'Retained CTX and MOC fixed windows did not yield accepted adjacent closed polygon contours. Local morphology remains unknown; this does not establish absence.' }
 ];
 
 function $(id) { return document.getElementById(id); }
@@ -404,13 +404,13 @@ var METRICS = {
   relief: { title: 'Height range', unit: 'meters from lowest to highest point in the area', dom: [0, 140], d: 0, hi: 'Most height range', lo: 'Least height range',
     note: 'A bigger range means more regional undulation.' },
   ti: { title: 'Thermal inertia', unit: 'J m⁻² K⁻¹ s⁻½, how slowly the surface changes temperature', dom: [0, 350], d: 0, hi: 'Highest', lo: 'Lowest',
-    note: 'Rock, sand, ice and cementation all raise it, so a high value does not show harder ground or more ice.' },
-  swim1: { title: 'Ice evidence, top meter', unit: 'consistency index from 0 to 1', dom: [0, 1], d: 2, hi: 'Strongest', lo: 'Weakest',
-    note: 'How well the data fits ice. It is not an amount or a probability.' },
-  swim5: { title: 'Ice evidence, 1 to 5 meters', unit: 'consistency index from 0 to 1', dom: [0, 1], d: 2, hi: 'Strongest', lo: 'Weakest',
-    note: 'Deeper layers are inferred with less certainty than the top meter.' },
-  p95: { title: 'Peak dust haze', unit: 'opacity on the worst 5% of days, Mars year 34', dom: [0, 0.3], d: 3, hi: 'Hazier', lo: 'Clearer',
-    note: 'Dust dims the surface and shifts temperatures. Higher is hazier.' }
+    note: 'Thermal inertia depends on material, particle size and cementation; it does not uniquely identify hardness or ice.' },
+  swim1: { title: 'SWIM consistency, 0 to 1 m', unit: 'signed consistency index from −1 to +1', dom: [-1, 1], d: 2, hi: 'Strongest', lo: 'Weakest',
+    note: 'Composite consistency with ice: −1 to +1. It is not ice amount, probability or an independent detection.' },
+  swim5: { title: 'SWIM consistency, 1 to 5 m', unit: 'signed consistency index from −1 to +1', dom: [-1, 1], d: 2, hi: 'Strongest', lo: 'Weakest',
+    note: 'The two depth-zone maps share evidence; neither establishes local ice depth or an independent confirmation.' },
+  p95: { title: 'Reconstructed dust, 95th percentile', unit: 'dimensionless column opacity, Mars year 34', dom: [0, 0.3], d: 3, hi: 'Higher percentile', lo: 'Lower percentile',
+    note: '95th percentile across 669 reconstructed sols; not a measured peak, local visibility or surface dust deposition.' }
 };
 
 function rankSentence(key, i) {
@@ -462,8 +462,8 @@ function strip(key, active) {
 
 function swingBox(active) {
   var box = h('div', 'strip');
-  box.appendChild(h('h3', null, 'Temperature, night to day'));
-  box.appendChild(h('p', 'unit', 'median air temperature in kelvin from the Mars Climate Sounder'));
+  box.appendChild(h('h3', null, 'Surface temperature context'));
+  box.appendChild(h('p', 'unit', 'model-time-adjusted surface temperature (K); separate populated-bin medians'));
   var W = 420, H = 150, x0 = 14, x1 = W - 14, lo = 140, hi = 260;
   var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img',
     'aria-label': SITES.map(function (s) { return s.id + ' ' + num(s.night, 0) + ' kelvin at night, ' + num(s.day, 0) + ' by day'; }).join('; ') });
@@ -482,25 +482,25 @@ function swingBox(active) {
     txt(svg, (X(s.night) + X(s.day)) / 2, y - 10, s.id, { fill: on ? '#fff' : '#9aa1ab', 'font-size': 11, 'font-weight': 600, 'text-anchor': 'middle' });
   });
   box.appendChild(svg);
-  box.appendChild(h('p', 'read', 'Hollow square: night. Filled square: day. Bins are 5 degrees wide, so they sit near each region, not on it.'));
+  box.appendChild(h('p', 'read', 'Hollow: nominal 03:00 LTST. Filled: nominal 15:00 LTST. These separate medians use populated 5-degree bins in MY29–36; their difference is not a paired daily amplitude or local weather record.'));
   return box;
 }
 
 function coverageBox(active) {
   var s = SITES[active], box = h('div', 'strip');
   box.appendChild(h('h3', null, 'Thermal coverage'));
-  box.appendChild(h('p', 'unit', 'TES cells with a measured value, out of 100 in the review area'));
+  box.appendChild(h('p', 'unit', 'Non-infill TES-derived native cells, out of 100 in the review area'));
   var bar = h('div', 'cov'); bar.style.setProperty('--c', COLORS[active]);
   var seg = h('i'); seg.style.width = s.tesValid + '%'; bar.appendChild(seg);
   box.appendChild(bar);
-  box.appendChild(h('p', 'read', '<b>' + s.tesValid + ' of 100 measured.</b> The other ' + (100 - s.tesValid) + ' are filled in by interpolation and left out of the averages.'));
+  box.appendChild(h('p', 'read', '<b>' + s.tesValid + ' of 100 non-infill cells.</b> The other ' + (100 - s.tesValid) + ' are filled in by interpolation and left out of the averages.'));
   return box;
 }
 
 function dustBox(active) {
   var box = h('div', 'strip');
-  box.appendChild(h('h3', null, 'Dust haze through the Martian year'));
-  box.appendChild(h('p', 'unit', 'column dust opacity, averaged over each quarter of the year; higher is hazier'));
+  box.appendChild(h('h3', null, 'Reconstructed dust by season'));
+  box.appendChild(h('p', 'unit', 'regional column dust opacity; mean within each 90-degree Ls interval'));
   var seg = h('div', 'seg'); seg.setAttribute('role', 'group'); seg.setAttribute('aria-label', 'Mars year');
   [34, 35].forEach(function (y) {
     var b = h('button', null, 'Mars year ' + y); b.type = 'button'; b.setAttribute('aria-pressed', y === dustYear ? 'true' : 'false');

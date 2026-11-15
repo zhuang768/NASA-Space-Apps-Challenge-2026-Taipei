@@ -1,0 +1,58 @@
+{
+  "source_sha": "07dbe29203504ba0ccde5e379f42ecc16e4b1b4f",
+  "roi_area_spherical_km2": 468.71079795994723,
+  "roi_area_radius_m": 3396190.0,
+  "ctx_five_window_area_km2": 9.661102519519023,
+  "ctx_five_window_fraction_of_roi": 0.02061207585054312,
+  "ctx_opaque_px": 327680,
+  "moc_retained_valid_pixels": 9272742,
+  "moc_retained_valid_area_km2": 71.14071232362964,
+  "moc_retained_valid_fraction_of_roi": 0.1517795464351748,
+  "moc_nonzero_outside_roi": 0,
+  "moc_valid_pixel_centre_extrema": [
+    57.63202293739351,
+    57.99999993597462,
+    242.29047119445391,
+    242.49131468977293
+  ],
+  "moc_three_reviewed_windows_area_km2": 6.033449403578696,
+  "moc_three_reviewed_windows_fraction_of_roi": 0.012872435262509726,
+  "fixed_review_window_count": 8,
+  "supplemental_window_count": 1,
+  "qualified_contour_count": 0,
+  "morphology": "unknown",
+  "original_moc_IMG_present": false,
+  "moc_full_original_rebuild": "not_executed;original IMG absent;masked PNG/count/geolocation and retained fixed tiles tested",
+  "ctx_native_rows": {
+    "source_path": "outputs/research/MS-03/morphology/D01_native_rows.bin.gz",
+    "rows_0based": [
+      36000,
+      37023
+    ],
+    "samples": [
+      0,
+      5055
+    ],
+    "raw_byte_count": 5177344,
+    "sha256_uncompressed": "4ecf31416e3f76ce564dda7264d8ee0b8147d26f74ace17d5d2adf31d90aecae",
+    "no_map_projection": true,
+    "precise_ground_area": "NA",
+    "visual_crop_rows": [
+      36000,
+      37023
+    ],
+    "visual_crop_samples": [
+      600,
+      1623
+    ],
+    "visual_crop_pixels": 1048576,
+    "native_grid_m": "6.089997 nominal source",
+    "verified_png_equal_retained_bytes": true,
+    "acceptance": "not_accepted",
+    "reason": "Uncalibrated/striped DN; approximate bilinear index locator only; no qualified adjacent closed network"
+  },
+  "nonzero_is_not_quality_qualification": true,
+  "ground_area_method": "Mars spherical pixel-centre approximation; polar map area corrected by k^-2; areas are observation support, not qualified polygon area",
+  "overlap_limit": "CTX and MOC supports overlap; do not sum them as unique coverage",
+  "figure_limit": "No source-corner footprint interpreted as valid-pixel mask; no optical resolution asserted"
+}

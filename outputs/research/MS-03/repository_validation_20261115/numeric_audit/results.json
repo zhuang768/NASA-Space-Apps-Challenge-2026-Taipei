@@ -1,0 +1,9 @@
+{
+  "checks": 70,
+  "passed": 70,
+  "main": "07dbe29203504ba0ccde5e379f42ecc16e4b1b4f",
+  "raw_source_commit": "8f666d878fe0a3d97e41daa64fab43660174652f",
+  "raw_originals_github_available": 11,
+  "scope": "Only MS-03 native values, coordinate and retained-series checks; no new candidate selection, polygon detection or ice validation",
+  "original_global_validation_not_rerun": true
+}

@@ -1,0 +1,7 @@
+field,n,max_abs_difference,median_recomputed,unit,source_commit,source_path,comparison_path
+area_m2,185,0.0,268.3605718672786,m2,07dbe29203504ba0ccde5e379f42ecc16e4b1b4f,outputs/research/MS-03/polygons_Act-IWS_source.zip,outputs/research/MS-03/morphology/AD1_recomputed_geometry.csv
+perimeter_m,185,0.0,65.00322827771915,m,07dbe29203504ba0ccde5e379f42ecc16e4b1b4f,outputs/research/MS-03/polygons_Act-IWS_source.zip,outputs/research/MS-03/morphology/AD1_recomputed_geometry.csv
+equivalent_circle_diameter_m,185,0.0,18.48478542881041,m,07dbe29203504ba0ccde5e379f42ecc16e4b1b4f,outputs/research/MS-03/polygons_Act-IWS_source.zip,outputs/research/MS-03/morphology/AD1_recomputed_geometry.csv
+mrr_width_m,185,0.002243001928110999,16.595711457389864,m,07dbe29203504ba0ccde5e379f42ecc16e4b1b4f,outputs/research/MS-03/polygons_Act-IWS_source.zip,outputs/research/MS-03/morphology/AD1_recomputed_geometry.csv
+mrr_length_m,185,0.0030005371363479583,21.433245001671118,m,07dbe29203504ba0ccde5e379f42ecc16e4b1b4f,outputs/research/MS-03/polygons_Act-IWS_source.zip,outputs/research/MS-03/morphology/AD1_recomputed_geometry.csv
+circularity_4piA_over_P2,185,0.0,0.8066001368914908,1,07dbe29203504ba0ccde5e379f42ecc16e4b1b4f,outputs/research/MS-03/polygons_Act-IWS_source.zip,outputs/research/MS-03/morphology/AD1_recomputed_geometry.csv

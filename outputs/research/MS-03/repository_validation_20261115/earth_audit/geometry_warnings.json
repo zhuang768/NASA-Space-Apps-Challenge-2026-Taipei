@@ -1,0 +1,104 @@
+{
+  "warnings": [
+    {
+      "polygon_row_1based": 19,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    },
+    {
+      "polygon_row_1based": 32,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    },
+    {
+      "polygon_row_1based": 44,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    },
+    {
+      "polygon_row_1based": 45,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    },
+    {
+      "polygon_row_1based": 83,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    },
+    {
+      "polygon_row_1based": 96,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    },
+    {
+      "polygon_row_1based": 97,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    },
+    {
+      "polygon_row_1based": 99,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    },
+    {
+      "polygon_row_1based": 100,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    },
+    {
+      "polygon_row_1based": 120,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    },
+    {
+      "polygon_row_1based": 126,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    },
+    {
+      "polygon_row_1based": 129,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    },
+    {
+      "polygon_row_1based": 136,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    },
+    {
+      "polygon_row_1based": 146,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    },
+    {
+      "polygon_row_1based": 147,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    },
+    {
+      "polygon_row_1based": 180,
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in oriented_envelope",
+      "cause": "unknown;not_inferred_from_warning_alone"
+    }
+  ],
+  "nonfinite_metric_count": 0,
+  "all_output_metrics_finite_and_positive": true,
+  "warning_root_cause": "unknown",
+  "scope": "Numeric QA only; independent mapping accuracy not established"
+}

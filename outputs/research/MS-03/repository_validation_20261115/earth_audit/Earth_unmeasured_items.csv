@@ -1,0 +1,9 @@
+required_item,status,reason
+CapeBlossom original centre/vector file,not_found_in_scanned_refs,"README.md anddocs/REPORT.md provide claims/DOIs only; no storedoriginalcentrecoordinates,units,CRS or acquisition bytes"
+CapeBlossom closed contour annotations,not_found_in_scanned_refs,Centres are not closed contour groundtruth; declared count1927 not independently reproducible
+CapeBlossom orthomosaic and second independent flight,not_found_in_scanned_refs,"No rastergeotransform,pixel spacing,NoData,error,repeatdate or registration"
+AD1 source raster,not_found_main_or_pr26,"Published vector ZIP is present; no original orthomosaic available for anonymous independent delineation, raster degradation or brightnesscontrast"
+AD1 independent repeat contours/flight,not_found_main_or_pr26,One published outline set; no second independent annotations or flights. IoU selfcomparison would be circular
+MS03 closed Mars contours,not_produced,Earth vectormetrics cannot create or validate Mars boundaries
+CapeBlossom noveltypriorrecord,insufficient,Main narrative cites known polygon research; boundedsource record does not validate firstuse
+AD1 exact polygon thermal/GPR registration,insufficient,Retained crosswalk_status.json states unknown TR/radarcoordinates; cannot assigngroundice toeachpolygon

@@ -1,3 +1,11 @@
+# Current evidence-label correction, 2026-11-15
+
+The current explorer keeps the same regional numerical values and source snapshots. Labels now use signed SWIM consistency, model-time-adjusted surface temperature and reconstructed dust percentiles. MS-03 fixed-window morphology remains unknown. The challenge/evidence ledger is linked from the overview.
+
+Current code streams public NASA Trek terrain tiles at runtime and loads Google Fonts. The no-runtime-request statement and four hashes in the older handoff below describe that earlier payload only. Current asset fingerprints are in `deployment.json`; they identify files, not proof of a successful public deployment. Historical production notes are unchanged.
+
+---
+
 # TerraMatch static demo handoff
 
 Public payload is exactly `web/index.html`, `web/style.css`, `web/app.js`, `web/mola.jpg`. Nothing contacts a server at runtime except explicit public source links. Do not upload the evidence snapshots, original image, or this handoff with the public assets without separate review. There are no secrets or private-output links in the four-file payload. The old production site was not modified.

@@ -1,0 +1,90 @@
+[
+  {
+    "commit": "8f666d878fe0a3d97e41daa64fab43660174652f",
+    "path": "data/raw/mars/megt90n000eb.img",
+    "git_blob": "7017608f54a89cab509cf82bb0e42b241fbbad73",
+    "sha256": "d18d9b9ab8c5516d02e157dd2cde0f1d0d160c21940e953ba22391269a545e7b",
+    "bytes": 33177600,
+    "manifest_sha256_match": true
+  },
+  {
+    "commit": "8f666d878fe0a3d97e41daa64fab43660174652f",
+    "path": "data/raw/mars/megt90n000eb.lbl",
+    "git_blob": "c6dd9ba5710c26b3cb0f00d509abf6a71496c0a5",
+    "sha256": "0f2bd919dddb86d83489a008d3007bd915507c892a0f22ce49ad5dd5d2fc7d8a",
+    "bytes": 4813,
+    "manifest_sha256_match": true
+  },
+  {
+    "commit": "8f666d878fe0a3d97e41daa64fab43660174652f",
+    "path": "data/raw/mars/global_ti_night_2007.img",
+    "git_blob": "ed9ed992c412e63bbe04f4ed3dd750ba1dc2e0b8",
+    "sha256": "faee32838da40045ee7ebd21bed156cc649620312c01165b556d77a2128258f4",
+    "bytes": 51840000,
+    "manifest_sha256_match": true
+  },
+  {
+    "commit": "8f666d878fe0a3d97e41daa64fab43660174652f",
+    "path": "data/raw/mars/global_ti_night_2007.lbl",
+    "git_blob": "d472fafe3ecdfed12117dbc9f7c2a744dbda7929",
+    "sha256": "c1c897d9bd5399292166f99d84a29a73e42432cedfb9dd9a81a1441b3004b72b",
+    "bytes": 2415,
+    "manifest_sha256_match": true
+  },
+  {
+    "commit": "8f666d878fe0a3d97e41daa64fab43660174652f",
+    "path": "data/raw/mars/global_ti_msk_night_2007.img",
+    "git_blob": "205c8edf5f4889215cfba41333ec2a5804b45f25",
+    "sha256": "fca7ec6fab8b3e81226e1d14dbb3a22509ad111bda4e03bf2b64f050bd550d0b",
+    "bytes": 25920000,
+    "manifest_sha256_match": true
+  },
+  {
+    "commit": "8f666d878fe0a3d97e41daa64fab43660174652f",
+    "path": "data/raw/mars/global_ti_msk_night_2007.lbl",
+    "git_blob": "43d6c01ac0f8c78856bc58a0633994b068885c3c",
+    "sha256": "164838970c1405b2dc6cf367a74c60c0de96d18f05f5e924db6c00f77038ee8a",
+    "bytes": 2485,
+    "manifest_sha256_match": true
+  },
+  {
+    "commit": "8f666d878fe0a3d97e41daa64fab43660174652f",
+    "path": "data/raw/mars/SWIM2_c0_1.tif",
+    "git_blob": "d116698387131a88cd090f5a452d9443fe6b224d",
+    "sha256": "0dd22f8a07172112c68fb304af9966bcdd788bbedf6ea40187a30f70130fea37",
+    "bytes": 70995819,
+    "manifest_sha256_match": true
+  },
+  {
+    "commit": "8f666d878fe0a3d97e41daa64fab43660174652f",
+    "path": "data/raw/mars/SWIM2_c1_5.tif",
+    "git_blob": "fa958ed6319580aa63bc23d9af4355d454bb8fcb",
+    "sha256": "2ade8ab6aa4aae1c51ec71f10139e9b9ffa0a31ef1948566d0929ab7e91713ed",
+    "bytes": 70995805,
+    "manifest_sha256_match": true
+  },
+  {
+    "commit": "8f666d878fe0a3d97e41daa64fab43660174652f",
+    "path": "data/raw/mars/dustscenario_MY35_v2-5.nc",
+    "git_blob": "6ebea8588e949b7b3f24bc515ca2103f56340d7c",
+    "sha256": "95613d68e2d03904bfd93612f2fe70e84f8410b00ef33cafe59d77d50a41063a",
+    "bytes": 57832064,
+    "manifest_sha256_match": true
+  },
+  {
+    "commit": "8f666d878fe0a3d97e41daa64fab43660174652f",
+    "path": "data/raw/mars/dustscenario_MY34_v2-5.nc",
+    "git_blob": "dae70f67e222fd0dd79c2a47f9fb6ff1d85b49b4",
+    "sha256": "032b9627247e9cc4397c9f007cc8f97a01acf689006b46ff3a51e5abed828797",
+    "bytes": 57814188,
+    "manifest_sha256_match": true
+  },
+  {
+    "commit": "8f666d878fe0a3d97e41daa64fab43660174652f",
+    "path": "data/raw/mars/temperature/mcs_corrected/MCS_tsurf_corrected.nc",
+    "git_blob": "a17495880e50c382de721c9437b804ffdfaac406",
+    "sha256": "a75dbcd5e77fbc0d78591e62427843f0dadde10cd0e87e7767789025a2b7fecd",
+    "bytes": 14940903,
+    "manifest_sha256_match": true
+  }
+]

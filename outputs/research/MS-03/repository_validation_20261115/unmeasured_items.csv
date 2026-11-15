@@ -1,0 +1,11 @@
+item_id,missing_or_unverified_item,status,blocked_claim_or_test,required_evidence
+U01,Cape Blossom source centre records and coordinates,not_found_in_scanned_GitHub_paths,"Reproduce1927count,400offsetgridcounts,area-derived19.6mclaim",Rawvectors/CSV+CRS+units+source rowIDs andscriptoutputs
+U02,Cape Blossom closed outline annotations,not_found_in_scanned_GitHub_paths,"Area,width,IoU truth;centres cannot substitute","Closed rings,annotationdefinition,sourceimages,independenttruth"
+U03,Georeferenced Earth image and independent second flight,not_found_for_qualified_reference,"Real image degradation,brightnesscontrast,anonymousretracing,repeatflightregistration/IoU",Raster+transform+NoData+dates+PSF+registrationerror+fixedAOI
+U04,Independent AD1 annotation accuracy,not_executed,Segmentationtruth validation,Sourceorthomosaic andsecondblindtrace orindependentflight;onepublishedset isinsufficient
+U05,Accepted in-box Mars closed boundaries,no_accepted_measurements,"Common-scale Mars/Earthshapecomparison,width,area,density","Atleast2adjacentcompleteunits,>=8samplesnarrowest,>=3repeatablebends/junctions;noinventededges"
+U06,Full original MOC/CTX/HiRISE local image files,not_found_complete_native_products,FullsourceparsingandindependentimageQA,Originalgeographicimagepixels+labels/cameramodel+qualityfields;retainedsubsets tested separately
+U07,"Local effective optical resolution,noise and registration uncertainty",unknown,Quantitativeoutlineuncertainty andrealisticallymatchedEarthdegradation,"MTF/PSF,noise/qualitymask,validpixelmap,positionalaccuracy"
+U08,Full HiRISE cumulative index TAB,not_in_audited_trees,Freshentire205451rowcataloguereparse,Originalindexbytes;retained305+615extracts testedonly
+U09,Independent ice depth/content or genesis truth per polygon,not_established,Inferringiceorcommonformationfromshape,Colocatedindependentobservations;SWIMandlowregional slopeareinsufficient
+U10,Cape-to-MS03 novelty evidence package,insufficient,First/newanalogue claim,Actuallocalquantitativecomparison andboundedpriorusecorpus;externalDOIlinkaloneisnotreadsource

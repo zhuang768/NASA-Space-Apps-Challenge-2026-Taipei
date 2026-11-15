@@ -1,0 +1,82 @@
+{
+  "url": "http://127.0.0.1:8931/",
+  "panels": [
+    {
+      "site": "MS-03",
+      "panel": "Heat",
+      "rendered": true
+    },
+    {
+      "site": "MS-03",
+      "panel": "Ice evidence",
+      "rendered": true
+    },
+    {
+      "site": "MS-03",
+      "panel": "Dust",
+      "rendered": true
+    },
+    {
+      "site": "MS-03",
+      "panel": "Unknown",
+      "rendered": true
+    },
+    {
+      "site": "MS-01",
+      "panel": "Heat",
+      "rendered": true
+    },
+    {
+      "site": "MS-01",
+      "panel": "Ice evidence",
+      "rendered": true
+    },
+    {
+      "site": "MS-01",
+      "panel": "Dust",
+      "rendered": true
+    },
+    {
+      "site": "MS-01",
+      "panel": "Unknown",
+      "rendered": true
+    },
+    {
+      "site": "MS-02",
+      "panel": "Heat",
+      "rendered": true
+    },
+    {
+      "site": "MS-02",
+      "panel": "Ice evidence",
+      "rendered": true
+    },
+    {
+      "site": "MS-02",
+      "panel": "Dust",
+      "rendered": true
+    },
+    {
+      "site": "MS-02",
+      "panel": "Unknown",
+      "rendered": true
+    },
+    {
+      "site": "MS-01",
+      "panel": "Terrain",
+      "rendered": true
+    },
+    {
+      "site": "MS-02",
+      "panel": "Terrain",
+      "rendered": true
+    },
+    {
+      "site": "MS-03",
+      "panel": "Terrain",
+      "rendered": true
+    }
+  ],
+  "sourcesDialogVerified": true,
+  "scope": "local DOM interaction checks; no independent scientific validation or public deployment verification"
+}

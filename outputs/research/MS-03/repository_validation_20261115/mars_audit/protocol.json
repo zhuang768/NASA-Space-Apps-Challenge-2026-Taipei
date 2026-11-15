@@ -1,0 +1,9 @@
+{
+"frozen_before_current_visual_review":true,
+"source_main":"07dbe29203504ba0ccde5e379f42ecc16e4b1b4f",
+"roi_planetocentric_east360":[242,57.5,242.5,58],
+"sampling":"Existing five predeclared CTX windows C,NW,NE,SW,SE and three fixed MOC windows; one existing uncalibrated CTX native DN crop is supplemental only.",
+"acceptance":"All required: narrowest dimension >=8 map samples; >=3 repeatably identifiable bends/intersections; >=2 adjacent complete closed units, without inferring missing edges.",
+"unknown":"No accepted contours means width/area/density=NA, not0; does not establish absence.",
+"no_processing":"No sharpening, interpolation, smoothing, invented edges or segmentation. Native DN images inspected. Metadata geometry does not establish optical resolving power."
+}

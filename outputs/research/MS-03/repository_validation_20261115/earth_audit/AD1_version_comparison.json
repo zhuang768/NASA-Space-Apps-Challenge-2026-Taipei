@@ -1,0 +1,16 @@
+[
+  {
+    "commit": "07dbe29203504ba0ccde5e379f42ecc16e4b1b4f",
+    "path": "outputs/research/MS-03/polygons_Act-IWS_source.zip",
+    "bytes": 57636,
+    "sha256": "c75e7568c9fbfc67898f64e9c18681e5dc7e24a1ec272ceafa12c51377b8054e",
+    "git_blob_sha": "d1295f97043c84aa2cca9a66f383a28f7f1f2317"
+  },
+  {
+    "commit": "ac39ed6810156feefd97f60647b95b754210a7da",
+    "path": "outputs/research/MS-03/polygons_Act-IWS_source.zip",
+    "bytes": 57636,
+    "sha256": "c75e7568c9fbfc67898f64e9c18681e5dc7e24a1ec272ceafa12c51377b8054e",
+    "git_blob_sha": "d1295f97043c84aa2cca9a66f383a28f7f1f2317"
+  }
+]

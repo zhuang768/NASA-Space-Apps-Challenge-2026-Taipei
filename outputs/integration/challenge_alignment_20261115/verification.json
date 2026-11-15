@@ -1,0 +1,76 @@
+{
+  "date_taipei": "2026-11-15",
+  "starting_main": "07dbe29203504ba0ccde5e379f42ecc16e4b1b4f",
+  "scope": "source preservation, numerical readback, evidence packaging, website labels and local interaction checks; not challenge eligibility or scientific equivalence",
+  "checks": {
+    "ms03_native_numeric_recalculation": {
+      "status": "pass",
+      "fields": 70,
+      "source_manifest_exact_hash_matches": 11
+    },
+    "ad1_source_remeasurement": {
+      "status": "limited",
+      "closed_source_records": 185,
+      "area_perimeter_equivalent_diameter_circularity_readback": "exact",
+      "independent_annotation_accuracy": "not_verified",
+      "runtime_warning_count": 16,
+      "nonfinite_output_metrics": 0,
+      "warning_cause": "unknown"
+    },
+    "mars_fixed_window_review": {
+      "status": "insufficient_for_geometry",
+      "fixed_windows": 8,
+      "supplemental_native_CTX_crops": 1,
+      "accepted_contours": 0,
+      "width_area_density": "NA"
+    },
+    "protected_science_inputs": {
+      "status": "pass",
+      "exactly_unchanged": 6
+    },
+    "website_static_values": {
+      "status": "pass",
+      "values_compared_with_final_candidates": 30,
+      "numeric_values_changed": false
+    },
+    "website_units_and_semantics": {
+      "status": "pass",
+      "SWIM_domain": [
+        -1,
+        1
+      ],
+      "MCS_quantity": "model-time-adjusted surface temperature;separate populated-bin medians",
+      "dust": "reconstructed MY34 column-opacity p95"
+    },
+    "local_browser": {
+      "status": "pass",
+      "site_panels": 15,
+      "sources_dialog": true,
+      "browser_error_logs": [],
+      "mobile_breakpoint_check": "not_run",
+      "public_deployment_check": "not_run"
+    },
+    "javascript_syntax": {
+      "status": "pass",
+      "command": "node --check outputs/integration/zasa-acceptance-20261115/web/app.js"
+    },
+    "evidence_structure": {
+      "status": "pass",
+      "command": "python3 scripts/verify_challenge_alignment.py"
+    },
+    "current_file_inventory": {
+      "status": "pass",
+      "command": "python3 scripts/verify_release.py"
+    },
+    "git_whitespace": {
+      "status": "pass",
+      "command": "git diff --check"
+    }
+  },
+  "official_full_pages": "not_verified;direct_reads_failed;indexed synopsis used only as broad alignment context",
+  "challenge_alignment": "partial;new_validated_Earth_analogue_not_established",
+  "novelty_verified": false,
+  "submission_completed": false,
+  "public_deployment_verified": false,
+  "C2C_review": "not_used;user_requested_local_verification_after_auto_review_rejection"
+}

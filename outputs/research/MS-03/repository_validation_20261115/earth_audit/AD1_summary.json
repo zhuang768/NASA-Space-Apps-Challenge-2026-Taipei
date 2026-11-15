@@ -1,0 +1,30 @@
+{
+  "main_sha": "07dbe29203504ba0ccde5e379f42ecc16e4b1b4f",
+  "source_path": "outputs/research/MS-03/polygons_Act-IWS_source.zip",
+  "source_sha256": "c75e7568c9fbfc67898f64e9c18681e5dc7e24a1ec272ceafa12c51377b8054e",
+  "source_crs": "WGS84 UTM33N metres EPSG:32633 as .prj",
+  "feature_count": 185,
+  "valid_count": 185,
+  "closed_count": 185,
+  "singlepart_count": 185,
+  "sum_source_polygon_area_m2": 62912.27695892842,
+  "union_area_m2": 62898.54436670143,
+  "bounding_envelope_m": [
+    520884.4168742588,
+    8679090.099269308,
+    521340.990423915,
+    8679522.009239422
+  ],
+  "bounding_envelope_area_m2": 197198.6681868546,
+  "median_area_m2": 268.3605718672786,
+  "median_equivalent_diameter_m": 18.48478542881041,
+  "median_minimum_Feret_m": 16.340277852490544,
+  "raster_available": false,
+  "two_independent_flights_available": false,
+  "independent_ground_truth_annotation": false,
+  "source_mapping_status": "Published closed vectors; full raster registration, completeness, positional error, inter-annotator or repeat-flight validation unavailable",
+  "xml_conflicting_bounds": "Source XML contains stale 16.365895 to16.411791E box and synchronized15.913665 to15.933937E box. Shape coordinates and EPSG32633 transformation select latter; stale XML not used.",
+  "audited_branch_heads": 42,
+  "closed_single_ring_count": 185,
+  "feature_identity": "Source shapefile record order (1-based), source ZIP SHA256 and commit; no persistent FID in source DBF"
+}

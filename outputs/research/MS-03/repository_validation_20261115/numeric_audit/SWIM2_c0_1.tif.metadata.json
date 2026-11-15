@@ -1,0 +1,17 @@
+{
+  "crs_wkt": "PROJCS[\"Mars2000_equicylindrical_clon0\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere_IAU_IAG\",3396190,0],AUTHORITY[\"ESRI\",\"106971\"]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "transform": [
+    2964.119,
+    0.0,
+    -10673793.0595,
+    0.0,
+    -2964.119,
+    3556943.0595,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "width": 7200,
+  "height": 2400,
+  "nodata": -100.0
+}

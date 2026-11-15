@@ -1,0 +1,11 @@
+{
+  "outputs/research/MS-03/local_validation/sources/CTX_sample_C.png": "97f6cc62ac401bec72696efc6d24b2e729e6dc691d95c5bd96e5e0e1d04bc3b8",
+  "outputs/research/MS-03/local_validation/sources/CTX_sample_NW.png": "cf38732b4e40322fc0372b4259099543af6476f4dd649ccf4fd708ea586916c4",
+  "outputs/research/MS-03/local_validation/sources/CTX_sample_NE.png": "c8d99158615f42727e611acd463b1826da9fea34d4fb668f13f981e0335c4a94",
+  "outputs/research/MS-03/local_validation/sources/CTX_sample_SW.png": "379dd580f186a6464c94d42c09c66b727129588913125dd1a0ad760f1233a572",
+  "outputs/research/MS-03/local_validation/sources/CTX_sample_SE.png": "f2fdc6c935eafcc04c9552457530f9078eea0fc466162eb96c7c4061adb45e4e",
+  "outputs/research/MS-03/local_validation/gap_completion/MOC_S1700607_roi_native_DN.png": "9fe879b66d547ac8f4c2076a0785f1e2d758cd3f32289b37556aa7753274b30b",
+  "outputs/research/MS-03/local_validation/gap_completion/MOC_detail_1_native_DN.png": "ecc8801bae3b84861a751b46c415ffd763922ad27407fe52a2592eda1d2b147c",
+  "outputs/research/MS-03/local_validation/gap_completion/MOC_detail_2_native_DN.png": "b38efe40df0a92022cd86bec7525da92aeeb5a3c1026fe4fcb052590c7f7ee91",
+  "outputs/research/MS-03/local_validation/gap_completion/MOC_detail_3_native_DN.png": "660861537673c5e034122e4658710dd8a7cd443d0815eb8658c9f7552c245c06"
+}

@@ -316,8 +316,8 @@
     {
       "path": "web/README.md",
       "size": 662,
-      "sha256": "625c45b96076fcb4048aa8668d245f5846a66f7446fa52b72d37ddd439f9ab8d",
-      "git_blob": "cb51deffc1ef650b7fdeb6cb68d1969d8922d447"
+      "sha256": "68acffdaeaed08b2f170f7f2beeb3e70ae827201f1fb021ee7616f698c5da831",
+      "git_blob": "3d048a980fbcd1af18bc8cd8888180838ebb3541"
     },
     {
       "path": "web/SOURCE_PROVENANCE.md",
@@ -328,23 +328,23 @@
     {
       "path": "web/app.js",
       "size": 4612,
-      "sha256": "ccc04e73cd3da2c440d753bab06c2562cad6d3b88246cf12473fefcb6eda3ab7",
-      "git_blob": "a05ab2e4ecf581fd908785e120ab84d7cd7086a9",
-      "bytes": 28372
+      "sha256": "ecbce51db0adf58a2bf2ce58d6e4ddea75e1e1f7200dfe3bea99495468d1bf6c",
+      "git_blob": "b7c49b7f7c36970f2d7e38b72e7bc6fb37d35224",
+      "bytes": 31251
     },
     {
       "path": "web/deployment.json",
       "size": 824,
-      "sha256": "1c221088b0f3567e5f5eb74a39973522fc2acad0679a1b7e7fbe813f15489d79",
-      "git_blob": "5de5b38b17532bd187122800f84e497f862e0e6b",
-      "bytes": 786
+      "sha256": "a96a874ee9756cf38dc08b7b73b0f13df4309aed15b8069393d6a338959fd2a4",
+      "git_blob": "ba5f053427cdc6e2acbe9df2ca533b5496403b39",
+      "bytes": 836
     },
     {
       "path": "web/index.html",
       "size": 6059,
-      "sha256": "94e7987c76a4c57c39c68dfea64ffdaf328afad8cddb795adcea959ec137cf3a",
-      "git_blob": "92530e7fe2d4190845de12a0c62d9b937e900d93",
-      "bytes": 4024
+      "sha256": "fc60cf7be827b404f30c453ae4d789704fa3db39490acc1965775b2d7e53b9bb",
+      "git_blob": "022fc0f29bcc73a8f5608845bfd4099c39976b02",
+      "bytes": 4106
     },
     {
       "path": "web/mola.jpg",
@@ -357,7 +357,7 @@
       "path": "web/style.css",
       "size": 6954,
       "sha256": "0cd08324403e377ea84221f537aefd64a233affac04756a881a49562e01545db",
-      "git_blob": "5d7db58ebe2b73351ba579772d710965b3bc5dbd",
+      "git_blob": "de8e866d3689a4798a95440d5c533828b5bbaa91",
       "bytes": 7170
     }
   ]

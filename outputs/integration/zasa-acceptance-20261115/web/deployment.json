@@ -1,13 +1,13 @@
 {
-  "release": "zasa-terramatch-three-sites-20261115-r6-interactive",
+  "release": "zasa-terramatch-three-sites-20261115-r7-hires-map",
   "assets_sha256": {
     "style.css": "0cd08324403e377ea84221f537aefd64a233affac04756a881a49562e01545db",
     "mola.jpg": "72a590d14106909381ab65f86b4cc0e455670a6467431a441a84216d92e9e3bb",
-    "index.html": "94e7987c76a4c57c39c68dfea64ffdaf328afad8cddb795adcea959ec137cf3a",
-    "app.js": "ccc04e73cd3da2c440d753bab06c2562cad6d3b88246cf12473fefcb6eda3ab7"
+    "index.html": "fc60cf7be827b404f30c453ae4d789704fa3db39490acc1965775b2d7e53b9bb",
+    "app.js": "ecbce51db0adf58a2bf2ce58d6e4ddea75e1e1f7200dfe3bea99495468d1bf6c"
   },
   "regional_metrics_research_commit": "1506ede572435588eb5e64f95f24639279b77e56",
   "regional_metrics_blob": "2371ade1c27087efaa165acb98b7541266eaa606",
   "model_table_sha256": "639e447ed2f074a162f73a2b804c198b7b2142945bb7530f7b3c253c780295fa",
-  "scope": "three-site research demonstrator (interactive single-screen redesign); no local ice detection"
+  "scope": "three-site research demonstrator (interactive single-screen redesign); no local ice detection; zoomed map streams NASA Trek MOLA tiles at runtime"
 }

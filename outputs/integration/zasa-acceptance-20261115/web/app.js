@@ -81,6 +81,39 @@ var selected = -1;
 var texW = 0, texH = 0, tex = null;
 var canvas = $('globe'), ctx = canvas.getContext('2d');
 var N = canvas.width, R = N / 2;
+var patch = null, patchFor = -1;
+var TILE = 'https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0/default/default028mm/6/';
+function loadPatch(k) {
+  if (patchFor === k) return;
+  patchFor = k; patch = null;
+  var s = SITES[k], lon = s.lon > 180 ? s.lon - 360 : s.lon;
+  var c0 = Math.floor((lon - 10 + 180) / 360 * 128), c1 = Math.floor((lon + 10 + 180) / 360 * 128);
+  var r0 = Math.floor((90 - s.lat - 5.5) / 180 * 64), r1 = Math.floor((90 - s.lat + 5.5) / 180 * 64);
+  var w = (c1 - c0 + 1) * 256, hh = (r1 - r0 + 1) * 256;
+  var cv = document.createElement('canvas'); cv.width = w; cv.height = hh;
+  var g = cv.getContext('2d'), left = 0, bad = false;
+  for (var r = r0; r <= r1; r++) for (var c = c0; c <= c1; c++) (function (r, c) {
+    var im = new Image(); im.crossOrigin = 'anonymous';
+    im.onload = function () {
+      g.drawImage(im, (c - c0) * 256, (r - r0) * 256);
+      if (--left === 0 && !bad && patchFor === k) finish();
+    };
+    im.onerror = function () { bad = true; };
+    left++; im.src = TILE + r + '/' + c + '.jpg';
+  })(r, c);
+  function finish() {
+    try {
+      var d = g.getImageData(0, 0, w, hh).data;
+      patch = { data: new Uint32Array(d.buffer), w: w, h: hh, lon0: c0 / 128 * 360 - 180, lon1: (c1 + 1) / 128 * 360 - 180,
+        lat0: 90 - r0 / 64 * 180, lat1: 90 - (r1 + 1) / 64 * 180 };
+      $('hint').textContent = hintText();
+      drawGlobe();
+    } catch (e) { patch = null; }
+  }
+}
+function hintText() {
+  return 'Drag to move. Colors show elevation, blue low to red high.' + (patch ? ' Detail: 463 m per pixel.' : '');
+}
 var frame = ctx.createImageData(N, N);
 var out = new Uint32Array(frame.data.buffer);
 var L = (function () { var v = [-0.45, 0.42, 0.78], m = Math.hypot(v[0], v[1], v[2]); return [v[0] / m, v[1] / m, v[2] / m]; })();
@@ -102,7 +135,7 @@ function pixToLatLon(px, py) {
 function drawGlobe() {
   if (!tex) return;
   var z = view.zoom, sinP0 = Math.sin(view.lat), cosP0 = Math.cos(view.lat);
-  var smooth = z > 1.4, blend = Math.max(0, Math.min(1, (z - 1) / 1.5));
+  var pz = z > 2 ? patch : null, smooth = z > 1.4, blend = Math.max(0, Math.min(1, (z - 1) / 1.5));
   var i = 0;
   for (var y = 0; y < N; y++) {
     var ny = (1 - 2 * (y + 0.5) / N) / z;
@@ -129,6 +162,22 @@ function drawGlobe() {
         var ty = v | 0; if (ty < 0) ty = 0; else if (ty >= texH) ty = texH - 1;
         var c = tex[ty * texW + ((u * texW) | 0)];
         rr = c & 255; gg = (c >> 8) & 255; bb = (c >> 16) & 255;
+      }
+      if (pz) {
+        var ld = lam / RAD; ld -= Math.floor(ld / 360) * 360; if (ld > 180) ld -= 360;
+        var pd = phi / RAD;
+        var wx = (ld - pz.lon0) / (pz.lon1 - pz.lon0), wy = (pz.lat0 - pd) / (pz.lat0 - pz.lat1);
+        if (wx > 0 && wx < 1 && wy > 0 && wy < 1) {
+          var e = Math.min(wx, 1 - wx, wy, 1 - wy) * 12; if (e > 1) e = 1;
+          var qx = wx * pz.w - 0.5, qy = wy * pz.h - 0.5, qx0 = Math.floor(qx), qy0 = Math.floor(qy), bx = qx - qx0, by = qy - qy0;
+          if (qx0 < 0) qx0 = 0; if (qy0 < 0) qy0 = 0; if (qx0 > pz.w - 2) qx0 = pz.w - 2; if (qy0 > pz.h - 2) qy0 = pz.h - 2;
+          var q = qy0 * pz.w + qx0, p00 = pz.data[q], p10 = pz.data[q + 1], p01 = pz.data[q + pz.w], p11 = pz.data[q + pz.w + 1];
+          var v00 = (1 - bx) * (1 - by), v10 = bx * (1 - by), v01 = (1 - bx) * by, v11 = bx * by;
+          var pr = (p00 & 255) * v00 + (p10 & 255) * v10 + (p01 & 255) * v01 + (p11 & 255) * v11;
+          var pg = ((p00 >> 8) & 255) * v00 + ((p10 >> 8) & 255) * v10 + ((p01 >> 8) & 255) * v01 + ((p11 >> 8) & 255) * v11;
+          var pb = ((p00 >> 16) & 255) * v00 + ((p10 >> 16) & 255) * v10 + ((p01 >> 16) & 255) * v01 + ((p11 >> 16) & 255) * v11;
+          rr += (pr - rr) * e; gg += (pg - gg) * e; bb += (pb - bb) * e;
+        }
       }
       var ux = nx * z, uy = ny * z, ur2 = ux * ux + uy * uy;
       var unz = Math.sqrt(ur2 < 1 ? 1 - ur2 : 0);
@@ -221,7 +270,7 @@ function setZoomState() {
   var zoomed = selected >= 0;
   $('stage').classList.toggle('zoomed', zoomed);
   $('zoomctl').hidden = !zoomed;
-  $('hint').textContent = zoomed ? 'Drag to move. Colors show elevation, blue low to red high.' : 'Drag to turn the globe. Click a marker to zoom in.';
+  $('hint').textContent = zoomed ? hintText() : 'Drag to turn the globe. Click a marker to zoom in.';
 }
 
 /* drag + tap */
@@ -291,6 +340,7 @@ function select(i) {
   setZoomState();
   renderTabs();
   try { history.replaceState(null, '', '#' + s.hash); } catch (e) {}
+  loadPatch(i);
   flyTo(s.lon * RAD, s.lat * RAD, 5);
   $('panel').scrollTop = 0;
   if (first) $('btn-back').focus({ preventScroll: true });

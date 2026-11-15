@@ -1,14 +1,14 @@
 {
-  "release": "zasa-terramatch-evidence-ui-20261115",
+  "release": "zasa-terramatch-submission-references-20261115",
   "assets_sha256": {
     "style.css": "b4fe1a0243b7d746cf8d2ce0d2d561393d79f546da0aaa7eada5ee00a8a024c6",
     "mola.jpg": "72a590d14106909381ab65f86b4cc0e455670a6467431a441a84216d92e9e3bb",
-    "index.html": "98ddbdeba0ae28241b804eff4d49e6e9a3a14ae8dedc119f32693e215140c78d",
+    "index.html": "4ab4e20f9ea65b8c48c0448891811d86523d0c672ea46e7e87162eb5a047a9c4",
     "app.js": "a39d1039daea51d1761ad39baf4d85eca14852501661e5c7a1a6e0afe2c7aafa"
   },
   "regional_metrics_research_commit": "1506ede572435588eb5e64f95f24639279b77e56",
   "regional_metrics_blob": "2371ade1c27087efaa165acb98b7541266eaa606",
   "model_table_sha256": "639e447ed2f074a162f73a2b804c198b7b2142945bb7530f7b3c253c780295fa",
   "scope": "three-site research demonstrator (interactive single-screen redesign); no local ice detection; zoomed map streams NASA Trek MOLA tiles at runtime",
-  "verification_note": "Desktop, phone and tablet local UI checks recorded in outputs/integration/site_polish_20261115; public asset verification follows the existing Cloudflare build. No scientific analogy validation."
+  "verification_note": "Submission source-index and AI-disclosure links added; no chart values changed. Public verification is recorded in outputs/submission/final_verification.json after deployment."
 }

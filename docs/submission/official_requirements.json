@@ -1,0 +1,197 @@
+{
+  "checked_at_utc": "2026-11-15T07:18:58.481173+00:00",
+  "client_date": "2026-11-15",
+  "timezone": "Asia/Taipei",
+  "method": "Official public HTTP responses retrieved with curl --location; HTML parsed. Challenge Details were read from an RSC text record without executing code. No account or submission action.",
+  "history": "The web reader returned 502 for challenge/legal/resources/2026. Search results were not treated as full rules. Ordinary curl returned 200; the current full Guide, FAQ and Legal text were actually read.",
+  "sources": [
+    {
+      "name": "legal",
+      "url": "https://www.spaceappschallenge.org/legal/",
+      "http_status": 200,
+      "bytes": 97616,
+      "sha256": "f3977ecd0c62d537e6b87e953fc324974f90e5d6c8cce14cf3cddb5a0ae891d8",
+      "read_sections": [
+        "2026 participant terms",
+        "Submissions",
+        "Intellectual property rights",
+        "Use of third-party materials"
+      ],
+      "retrieval": "curl --location; web reader failed502"
+    },
+    {
+      "name": "2026",
+      "url": "https://www.spaceappschallenge.org/2026/",
+      "http_status": 200,
+      "bytes": 88114,
+      "sha256": "d96fe1a9672eb89d1cac8a9e539b448db2c27b67d2e9c6cde9d53377fca65c06",
+      "read_sections": [
+        "Registration and team formation",
+        "Project submission window"
+      ],
+      "retrieval": "curl --location; web reader failed502"
+    },
+    {
+      "name": "resources",
+      "url": "https://www.spaceappschallenge.org/resources/",
+      "http_status": 200,
+      "bytes": 67039,
+      "sha256": "a8609ae61cc4bad548f900b96e290fbbd6d1abe691695fc48282a9cb7467f798",
+      "read_sections": [
+        "Server-rendered resource list empty; not evidence guides unavailable"
+      ],
+      "retrieval": "curl --location; web reader failed502"
+    },
+    {
+      "name": "faq",
+      "url": "https://www.spaceappschallenge.org/resources/participant-faqs/",
+      "http_status": 200,
+      "bytes": 155202,
+      "sha256": "cdd18a62ddf5e9b41a2567c4551d3c581bc1e6847badb3803a819889b4193681",
+      "read_sections": [
+        "2026 dates",
+        "team membership",
+        "no pre-hackathon work",
+        "SI/AI acknowledgement"
+      ],
+      "retrieval": "curl --location; web reader failed502"
+    },
+    {
+      "name": "submission",
+      "url": "https://www.spaceappschallenge.org/resources/project-submission-guide/",
+      "http_status": 200,
+      "bytes": 177564,
+      "sha256": "3feaf33f68a238423da89e424c399889846caead6c306d138a4fccb3addcb9df",
+      "read_sections": [
+        "Project Submission Start & End Times",
+        "Project Page Form Field Instructions",
+        "Tips for Creating a Project Demo",
+        "Submitting Your Project"
+      ],
+      "retrieval": "curl --location; web reader failed502"
+    },
+    {
+      "name": "challenge",
+      "url": "https://www.spaceappschallenge.org/2026/challenges/permanent-moon-base-locations-and-mars/",
+      "http_status": 200,
+      "bytes": 86060,
+      "sha256": "5a3f5ca78c15f736f1a01ba1aa8b0d3db4e903c65d8160bad499cd07e63fd7b5",
+      "read_sections": [
+        "Full Details delivered as RSC string24,9680 UTF8bytes; parsed asHTMLtext",
+        "Background",
+        "Objectives",
+        "Potential Considerations"
+      ],
+      "retrieval": "curl --location; web reader failed502"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "challenge_scope",
+      "status": "confirmed",
+      "requirement": "Identify and characterize one or more useful Earth analogues for Moon or Mars. Explain supported characteristics, breakdown and exploration use. A single site or process and a method-led tool are allowed. Less-studied analogues are encouraged; all dimensions need not match.",
+      "source": "challenge",
+      "section": "Objectives;Background;Potential Considerations",
+      "access": "full Details HTML embedded in official response RSC string24, decoded using declared UTF8byte length"
+    },
+    {
+      "id": "submission_deadline",
+      "status": "confirmed",
+      "requirement": "Click Submit for Judging by 2026-11-15 23:59 in the team Local Event time zone. Submission opens 2026-11-14 09:00. Universal Event uses the Team Owner residence time zone. Local judging may differ.",
+      "source": "submission",
+      "section": "Project Submission Start & End Times;Submitting Your Project"
+    },
+    {
+      "id": "demo_format",
+      "status": "confirmed",
+      "requirement": "A demo is required: up to seven slides including title and intro, OR a video of 30 seconds or less. Exceeding the limit prevents Global Judging eligibility.",
+      "source": "submission",
+      "section": "Project Page Form Field Instructions/Link to Project Demo;Tips for Creating a Project Demo/Limitations"
+    },
+    {
+      "id": "language",
+      "status": "confirmed",
+      "requirement": "Use English in the project form and linked materials. Slide decks must be English. A non-English spoken video must include English subtitles.",
+      "source": "submission",
+      "section": "Tips for Creating a Project Demo/Language Requirements;Submitting Your Project"
+    },
+    {
+      "id": "public_links",
+      "status": "confirmed",
+      "requirement": "Demo and final-project links must work without password, permission or registration. Host documents/videos externally. The form accepts JPG, PNG or GIF images up to 10 MB.",
+      "source": "submission",
+      "section": "Sharing Files to Your Project Submission Page;Link to Project Demo;Link to Final Project"
+    },
+    {
+      "id": "nasa_data",
+      "status": "confirmed",
+      "requirement": "Use at least one NASA datum or resource for Global Award eligibility and explain its contribution.",
+      "source": "submission",
+      "section": "Project Page Form Field Instructions/NASA Data"
+    },
+    {
+      "id": "all_references",
+      "status": "confirmed",
+      "requirement": "Cite all used data, resources, tools, code, text and images, including open/free sources. Identify third-party licences and verify rights and public availability.",
+      "source": "legal",
+      "section": "Use of Third-Party Materials"
+    },
+    {
+      "id": "original_license",
+      "status": "confirmed",
+      "requirement": "Original content must be freely available without restriction or OSI licensed. Terms state NASA uses Apache 2.0 if no specific OSI licence is specified. Team approval was previously pending; the official fallback is not team approval.",
+      "source": "legal",
+      "section": "Intellectual Property Rights in Solutions"
+    },
+    {
+      "id": "ai_si_disclosure",
+      "status": "confirmed",
+      "requirement": "The guide calls AI tools SI. Describe where and how they were used. Acknowledge code/data assistance in descriptive text and metadata. SI-generated images/videos need a visible watermark; generated audio needs descriptive-text/metadata acknowledgement. Generated content must not use, contain or modify NASA branding or design elements.",
+      "source": "submission",
+      "section": "Project Page Form Field Instructions/Use of Super Intelligence (SI)"
+    },
+    {
+      "id": "team",
+      "status": "confirmed",
+      "requirement": "All members must be confirmed at the same Local Event. Maximum six members. Local Event minimum one; Universal Event minimum two.",
+      "source": "faq",
+      "section": "Do I need to be on a team? When can I join a team?;Universal Event Teams"
+    },
+    {
+      "id": "submission_confirmation",
+      "status": "confirmed",
+      "requirement": "Complete required fields, agree to Terms and Confirm All Work is Original, click Submit for Judging, then verify the success banner and confirmation. Save Progress does not establish submission.",
+      "source": "submission",
+      "section": "Submitting Your Project"
+    },
+    {
+      "id": "pre_event_work",
+      "status": "confirmed",
+      "requirement": "Teams may not begin work on challenges before the hackathon.",
+      "source": "faq",
+      "section": "What are the challenges?"
+    },
+    {
+      "id": "resources_listing",
+      "status": "limited",
+      "requirement": "Resources returned HTTP 200 but its server-rendered grid was empty. This does not mean guides are unpublished: the current FAQ and Submission Guide were directly retrieved and fully read. Challenge Resources-tab contents were not fully recovered.",
+      "source": "resources",
+      "section": "Resources listing"
+    },
+    {
+      "id": "team_actual_submission",
+      "status": "unknown",
+      "requirement": "This check did not access actual team registration, event acceptance, current form/demo URLs, sharing permissions or the Submit for Judging banner.",
+      "source": null,
+      "section": null
+    }
+  ],
+  "unverified": [
+    "Actual Taipei local judging deadline",
+    "Team zasa registration and final submission banner",
+    "Full Challenge Resources-tab list",
+    "Whether the current demo and all submission materials satisfy language, length and public-access requirements"
+  ],
+  "source_bytes_redistributed": false,
+  "note": "Source hashes record actual retrievals; complete provider HTML is not redistributed. Current team submission/account status is not inferred."
+}

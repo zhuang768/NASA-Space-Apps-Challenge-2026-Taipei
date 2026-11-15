@@ -310,16 +310,16 @@
     },
     {
       "path": "web/deployment.json",
-      "size": 1044,
-      "sha256": "bf32ef4bfb9f9f6ffabfaeb98904e2a654d21c608165a1fe777ae27728c6af69",
-      "git_blob": "6a6567b00fc6ffcc37d3bbd290d06d17cb8ff480",
+      "size": 1035,
+      "sha256": "28d81d2ef9b561a6166bce191eda512067a2024e64fb1e77bbf88fb3e784930b",
+      "git_blob": "8aea57c6161f31193e9784f347066093a1435505",
       "bytes": 840
     },
     {
       "path": "web/index.html",
-      "size": 5749,
-      "sha256": "98ddbdeba0ae28241b804eff4d49e6e9a3a14ae8dedc119f32693e215140c78d",
-      "git_blob": "a784bcd09d9f15cbaaaa376c6e1c3aaab7a811ac",
+      "size": 6196,
+      "sha256": "4ab4e20f9ea65b8c48c0448891811d86523d0c672ea46e7e87162eb5a047a9c4",
+      "git_blob": "f8bfa2e8456b58ea2fde7ff97fed571642e940be",
       "bytes": 4246
     },
     {
@@ -338,11 +338,11 @@
     }
   ],
   "current_asset_update": {
-    "source_main": "25b0744ac3d2230803505e1679109c2c35b6204d",
-    "scope": "Evidence hierarchy, source-and-scale disclosure, aligned regional plots and responsive navigation; science arrays preserved",
-    "deployment_verified": true,
+    "source_main": "42f55166c3a12d86b24757880c11d2be7eb2f20c",
+    "scope": "Complete reference index and AI assistance links; no chart or science values changed",
+    "deployment_verified": false,
     "science_values_changed": false,
-    "verified_code_commit": "e26bc0541b21f371a2ac5c8299e8d1412aeb214d",
-    "verification_receipt": "outputs/integration/site_polish_20261115/public_deployment_verification.json"
+    "verification_receipt": "outputs/submission/final_verification.json",
+    "prior_verified_payload_commit": "e26bc0541b21f371a2ac5c8299e8d1412aeb214d"
   }
 }

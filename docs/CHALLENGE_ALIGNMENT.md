@@ -8,9 +8,9 @@ Reviewed 2026-11-15. Starting main: `07dbe29203504ba0ccde5e379f42ecc16e4b1b4f`. 
 
 The [official challenge](https://www.spaceappschallenge.org/2026/challenges/permanent-moon-base-locations-and-mars/) is “Identify Earth Locations that Analog the Permanent Moon Base Locations and Mars.” Its indexed synopsis asks teams to use open space-agency planetary/Earth data to identify and characterise terrestrial analogues and present the findings through a map, visualisation or tool.
 
-On this review date, direct reads of the complete challenge page, its Resources tab, [general Resources](https://www.spaceappschallenge.org/resources/) and [Participant Terms](https://www.spaceappschallenge.org/legal/) failed. Search-indexed official text was available. It supports the broad task summary above, not a claim that every complete rule, resource or submission requirement has been checked. The team must confirm the current full Details/Resources and its account's submission form. No slide limit, format approval or eligibility ruling is inferred here.
+Earlier direct web-reader attempts failed and only indexed text was available. The final pre-submission check on 15 November retrieved the actual official challenge Details, [2026 Submission Guide](https://www.spaceappschallenge.org/resources/project-submission-guide/), [FAQ](https://www.spaceappschallenge.org/resources/participant-faqs/) and Terms over public HTTP. [The retrieval record](submission/official_requirements.json) preserves source hashes and sections. The complete Resources-tab listing remains unrecovered.
 
-Earth–Mars remains the team's chosen scope. No Moon analysis was added. That scope is declared rather than presented as formally approved by the organisers.
+The full Details permit an Earth analogue for Moon **or** Mars, so the team's Earth–Mars scope is allowed. The Guide confirms at most seven English slides or a video of at most 30 seconds, publicly accessible links, NASA data use for Global Award eligibility, attribution and AI/SI disclosure. It does not certify this team's registration, rights clearance or submission. Current account actions are in the [final checklist](submission/FINAL_CHECKLIST.md).
 
 ## What the repository supports
 
@@ -23,7 +23,7 @@ Earth–Mars remains the team's chosen scope. No Moon analysis was added. That s
 | Quantitative MS-03 geometry comparison | [Repository-only audit](../outputs/research/MS-03/repository_validation_20261115/README.md) | 185 published AD1 closed source polygons can be remeasured; no accepted in-box Mars contours. Common-scale comparison remains insufficient. |
 | Present findings | Existing TerraMatch explorer and source notes | Implemented regional viewer; map texture or display sampling does not supply high-resolution local truth. |
 | Attribution and original-code reuse | [Data rights record](../DATA_LICENSES.md) | Third-party terms remain separate. Original-code licence requires the team's decision. |
-| Evaluator access and submission | Existing public-site link and private-repository publication history | Current signed-out evidence access, registration, form completion and final SUBMIT are not certified by this repository update. |
+| Evaluator access and submission | Existing public-site link and private-repository publication history | The repository is now public and the explorer was verified. Registration, form completion and final SUBMIT remain unverified. |
 
 The six screening objectives are exploratory choices, not official mission requirements. The four comparison themes are terrain, temperature/thermal properties, water/ice and atmosphere/dust. Missing comparable measurements remain unknown; they do not become an overall similarity percentage.
 
@@ -64,7 +64,8 @@ The broader MS-01/02 comparison tables are retained with their own source manife
 - [ ] Deliver source files, spatial support, units, QA, methods and outputs for each newer Earth proposal before claiming its calculation as completed.
 - [ ] Obtain qualified in-box Mars outlines and independent Earth image/outline truth before a common-scale geometry or IoU claim.
 - [ ] Establish a defensible, use-specific Earth research difference; do not claim a first or globally new analogue from a limited search.
-- [ ] Confirm full official Details/Resources and account-specific submission requirements.
+- [x] Retrieve full official Details, current Guide, FAQ and Terms.
+- [ ] Confirm the complete Resources-tab list and actual account-specific submission state.
 - [ ] Confirm the team's original-code licence; do not apply a licence on behalf of an unconfirmed team decision.
 - [ ] Check third-party attribution/terms and signed-out evaluator access to required evidence.
 - [ ] Confirm registration/team details, final submission material and the actual SUBMIT action. These remain outside this code/data update.

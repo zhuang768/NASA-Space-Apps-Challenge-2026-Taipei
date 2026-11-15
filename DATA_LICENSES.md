@@ -19,3 +19,9 @@ Each source retains its own applicable terms. This notice does not assign a new 
 - Newer Edson Hills, Bethel, Cape Blossom and secondary narrative cases are citations/proposals without their corresponding reproducible source packages in the checked GitHub records. A DOI or accessible paper is not blanket permission to redistribute its figures or data. Their exact input versions and applicable terms remain handoff requirements.
 
 Original project-code licensing remains pending team confirmation. No licence for the team's original code is granted by this update. Historical publication/access receipts do not prove current signed-out evaluator access.
+
+## Submission check, 15 November 2026
+
+The current [official Terms](https://www.spaceappschallenge.org/legal/) require source and third-party licence documentation. They state that NASA uses Apache-2.0 for original content when no specific OSI licence is specified. This is an official distribution provision, not a record of the team adopting a licence. The earlier team decision remains pending.
+
+The newer comparison source note records Victoria Valley/Bull Pass as CC BY-NC 4.0. Its public availability does not settle permission for every competition/distribution use. Confirm permission or omit affected material from the final submitted claims and artifacts. Slidesgo/template and external-media rights also require the team to confirm its entitlement and any required credit. The [complete reference index](docs/SUBMISSION_REFERENCES.md) preserves used, unavailable and literature-only sources separately.

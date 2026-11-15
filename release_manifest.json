@@ -21,13 +21,13 @@
     },
     {
       "path": "DATA_LICENSES.md",
-      "bytes": 3432,
-      "sha256": "57fb323109f5cefeb74908703ca3c55b866c0730292ccdc6e152822f2511f966"
+      "bytes": 4347,
+      "sha256": "ef7a43639e2c69ef303094f90d5d2d7262a1eda0b0890cfecaa662230839f70a"
     },
     {
       "path": "README.md",
-      "bytes": 6645,
-      "sha256": "717419c807ea950c56302016e79975b38ade71ff37fa11a9d919077aa53ed4fd"
+      "bytes": 8434,
+      "sha256": "2dddf12c6b72d03b69f02a46063ac282e94b752116e50144a967f83991e44cd6"
     },
     {
       "path": "analog/__init__.py",
@@ -96,23 +96,43 @@
     },
     {
       "path": "docs/CHALLENGE_ALIGNMENT.md",
-      "bytes": 10528,
-      "sha256": "d367e84bc0084183a3da5f8ead3915afdbfb7d79aa79549fa9e8e3345406328e"
+      "bytes": 10851,
+      "sha256": "1b87166b91bcb9b647a3b9c08fb91c19b9308401119928ead52315bc37f85a71"
     },
     {
       "path": "docs/REPORT.md",
-      "bytes": 27056,
-      "sha256": "bfbe3c028a1a8b52ba99aff4f914f844b194474e1b2ef67e9c5edadb5133d88d"
+      "bytes": 27108,
+      "sha256": "59d0888f9f21e4dd4a5d84ac5fc31f705a46ea5040c9b7dffbd77baa89b5c8bd"
     },
     {
       "path": "docs/REPRODUCE.md",
-      "bytes": 3799,
-      "sha256": "707bcacbe0577010c52bc71e9d380b399027a706c868adfbe3278093a1da374c"
+      "bytes": 3946,
+      "sha256": "178bb2af01d8baffe056b5e4e8422e14573a486ed3d2a87806bdfc96a0600170"
+    },
+    {
+      "path": "docs/SUBMISSION_REFERENCES.md",
+      "bytes": 92616,
+      "sha256": "9e09d33b9cf1a8fca4c1b25c8a2b72b35da7d298f0bf7c971b38de659042a9a6"
     },
     {
       "path": "docs/earth_submission_status.csv",
       "bytes": 3402,
       "sha256": "1a737be2ea75a8deb5afb4be8dda74444f5cb54492c119ff91051a3590b3a253"
+    },
+    {
+      "path": "docs/submission/AI_USAGE.md",
+      "bytes": 2435,
+      "sha256": "6947498a3c863c53d37fd0f194a3346df249ed3f14ea577fc0fa1f9fa1a3a1b2"
+    },
+    {
+      "path": "docs/submission/FINAL_CHECKLIST.md",
+      "bytes": 4943,
+      "sha256": "ba022dde29e6b3c835b5ce512be56a1141e4288898e719aafe9331b6907cd03f"
+    },
+    {
+      "path": "docs/submission/official_requirements.json",
+      "bytes": 9211,
+      "sha256": "972989c015ab01675578235dbb70051238f38058740a5da7cdb2692c56a2206a"
     },
     {
       "path": "outputs/integration/challenge_alignment_20261115/ad1_grid_replay/phase_results.csv.gz",
@@ -201,8 +221,8 @@
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/manifest.json",
-      "bytes": 12819,
-      "sha256": "5eb447aade0e988f59a2d2b6ac274928c26998b57e99937c5e9dd4cf43a8718d"
+      "bytes": 12756,
+      "sha256": "f36d29969282b8bb3ec13713fdec97a2648ef413a20909b2d02b55f542c50e66"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/SOURCE_PROVENANCE.md",
@@ -216,13 +236,13 @@
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/deployment.json",
-      "bytes": 1044,
-      "sha256": "bf32ef4bfb9f9f6ffabfaeb98904e2a654d21c608165a1fe777ae27728c6af69"
+      "bytes": 1035,
+      "sha256": "28d81d2ef9b561a6166bce191eda512067a2024e64fb1e77bbf88fb3e784930b"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/index.html",
-      "bytes": 5749,
-      "sha256": "98ddbdeba0ae28241b804eff4d49e6e9a3a14ae8dedc119f32693e215140c78d"
+      "bytes": 6196,
+      "sha256": "4ab4e20f9ea65b8c48c0448891811d86523d0c672ea46e7e87162eb5a047a9c4"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/mola.jpg",
@@ -611,8 +631,8 @@
     },
     {
       "path": "outputs/research/mars_reselection_20261114/README.md",
-      "bytes": 1987,
-      "sha256": "50a6604d70da94cc430c5e8e6d02360faba89bd46b4067186b0710ee129bf07a"
+      "bytes": 2178,
+      "sha256": "8b61f8ad2002fd6ae529979bae97df13943d92c40af63a39a847c6b95bbc9383"
     },
     {
       "path": "outputs/research/mars_reselection_20261114/all_data_usage.csv",
@@ -710,6 +730,26 @@
       "sha256": "388ca89110b2a8fbb4fc6fa403994ab54cd193fd23eefd8aa5987a75e3255ba5"
     },
     {
+      "path": "outputs/submission/final_verification.json",
+      "bytes": 507,
+      "sha256": "03bd2a42f136732d2fc451cdf0996eaad13cf8120ade3cb69259a415c49ce5e7"
+    },
+    {
+      "path": "outputs/submission/link_checks.json",
+      "bytes": 246,
+      "sha256": "d4efafed54340767e4598faec4d2ef55017755e71e967d56a67d1a3020b7ba39"
+    },
+    {
+      "path": "outputs/submission/manifest.json",
+      "bytes": 1082,
+      "sha256": "616f5bec662f6c82bd31bb51171bff7cc9734e2a81d9b9b1edc01dbc6a16f095"
+    },
+    {
+      "path": "outputs/submission/references.csv",
+      "bytes": 69620,
+      "sha256": "18fb8258936303b85e00d669d5b61bcde8034dc7e4d70192794718ed3aaf0557"
+    },
+    {
       "path": "requirements.txt",
       "bytes": 220,
       "sha256": "75c5217b185d9ae75c052f75dc324799c1d1e79a08576701ea47fd8b6e118c83"
@@ -753,6 +793,11 @@
       "path": "scripts/research/mars_reselection_20261114.py",
       "bytes": 30764,
       "sha256": "6d4f126496938f3b577a424252d0ff556fb578c5ed91dde596ad5d6bdf75e2e3"
+    },
+    {
+      "path": "scripts/submission/verify_submission_links.py",
+      "bytes": 2153,
+      "sha256": "8356082f262ae627c568651828798b823b78124c24f0ce7a4c6acb7f4d80734e"
     },
     {
       "path": "scripts/verify_challenge_alignment.py",

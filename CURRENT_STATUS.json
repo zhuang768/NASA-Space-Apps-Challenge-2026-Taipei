@@ -22,7 +22,7 @@
   "verified_content_commit": "3408648ef9f16b3b21600574d1017136f4b30a21",
   "verified_content_tree": "bda4a68a4a4bc268e03e4d38986d46f18a798a5d",
   "verified_at_taipei": "2026-11-14T23:01:49.819281+08:00",
-  "repository_visibility": "private, unchanged",
+  "repository_visibility": "public",
   "local_original_worktree_synced": false,
   "original_local_uncommitted_work_preserved": true,
   "verification_scope_note": "verified_content_commit/tree and PUBLICATION.json describe the historical verification only; see current evidence review separately",
@@ -34,10 +34,20 @@
     "earth_status": "docs/earth_submission_status.csv",
     "new_field_experiment_completed": false,
     "new_analogue_or_global_novelty_established": false,
-    "official_full_requirements": "not_verified;direct_fetch_failed",
+    "official_full_requirements": "Details, Submission Guide, FAQ and Terms retrieved in final check; Resources listing incomplete; actual account form unverified",
     "submission_completed_by_this_update": false,
     "integrated_main": "1a0f6ba0ac1fa003f049498b56a76b10e7d876ab",
     "AD1_grid_replay_cases": 11840,
     "AD1_replay_scope": "digital_geometry_only;not_Mars_contour_validation"
+  },
+  "repository_visibility_checked_at_taipei": "2026-11-15T15:25:25.237699+08:00",
+  "submission_review": {
+    "date_taipei": "2026-11-15",
+    "starting_main": "42f55166c3a12d86b24757880c11d2be7eb2f20c",
+    "checklist": "docs/submission/FINAL_CHECKLIST.md",
+    "references": "docs/SUBMISSION_REFERENCES.md",
+    "official_details_guide_terms_retrieved": true,
+    "challenge_resources_list_complete": false,
+    "actual_form_submission_verified": false
   }
 }

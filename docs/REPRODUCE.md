@@ -1,6 +1,6 @@
 # Reproduce the three Mars targets
 
-Use a fresh clone or working copy: rebuilding replaces local generated outputs. The published PDF and its original manifests are frozen, as-produced `MARS-RESELECT-20261114-v1` records. The cleaned runtime generates `MARS-RESELECT-20261114-v1-clean` artifacts with their own provenance.
+Use a fresh clone or working copy: rebuilding replaces local generated outputs. The original PDF is a historical artifact, not a file in the current tree; its retained manifests describe the as-produced `MARS-RESELECT-20261114-v1` version. Use `--skip-report` for the numerical rebuild and read the current English draft separately. The cleaned runtime generates `MARS-RESELECT-20261114-v1-clean` artifacts with their own provenance.
 
 ## Environment and original inputs
 

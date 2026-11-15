@@ -12,7 +12,7 @@ In the Earth test, we resampled 185 mapped polygons from Adventdalen, Svalbard. 
 
 ## What the project shows
 
-The [TerraMatch explorer](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/) lets you compare the three Mars regions. Start with the map, then look at slope, thermal inertia and the SWIM ice consistency index. The modeled depths have their own explanation because they depend on assumptions about the material below the surface.
+The [TerraMatch explorer](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/) lets you compare the three Mars regions. Start with the map, then look at slope, thermal inertia and the SWIM ice consistency index. Conditional model depths and their assumptions are discussed separately in the [English research draft](docs/REPORT.md); they are not measured interfaces.
 
 We kept MS-01, MS-02 and MS-03 because they present different research questions. MS-01 has the highest mean thermal inertia of the three. MS-02 is farther south and has more complete thermal inertia coverage, but also higher relief and a higher dust percentile in Mars Year 34. MS-03 has the lowest mean regional slope and the highest shallow SWIM score of the three.
 
@@ -20,7 +20,7 @@ The retained Earth records are established method references: University Valley,
 
 ## Challenge alignment and current evidence
 
-The challenge asks for Earth analogue candidates and their characterisation, presented through a map, visualisation or tool. Our Mars screen and explorer support that investigation. The new-Earth-analogue component remains incomplete; a known Earth method reference is not a newly discovered analogue. The project keeps its Earth–Mars scope and does not claim lunar analysis or formal eligibility approval. Full official Details/Resources and submission-form requirements still need confirmation; a searchable synopsis is not the complete rules.
+The challenge asks for Earth analogue candidates and their characterisation, presented through a map, visualisation or tool. Our Mars screen and explorer support that investigation. The new-Earth-analogue component remains incomplete; a known Earth method reference is not a newly discovered analogue. The project keeps its Earth–Mars scope and does not claim lunar analysis or formal eligibility approval. The final check retrieved the complete official Details, Submission Guide, FAQ and Terms. They allow a Mars-only scope. The full Resources-tab list and actual team-account submission state remain unverified.
 
 | Component | Current status |
 |---|---|
@@ -60,3 +60,7 @@ Later main `ec3f38fd018b55b993232151d441d84286676da3` added final comparison/rep
 The explorer now leads with evidence status, separates the three regions into readable comparison rows, and places source, period and spatial-support notes beside each research theme. Earth plots expand on demand; the January–November 2010 air series has a keyboard-accessible month selector. Mobile navigation exposes all six themes, and map errors leave the research data usable.
 
 All 18 region/theme combinations were operated. Desktop, phone and tablet layouts, key chart controls, source disclosure and a missing-map fixture were checked. Scientific source arrays and candidate files are unchanged. The [review record and screenshots](outputs/integration/site_polish_20261115/README.md) distinguish completed checks from scientific limits. Cloudflare deployed code `e26bc05` successfully; the public fingerprint and all four assets matched. The public desktop and mobile views were also operated. This update adds no new scientific result.
+
+## Submission links and final check
+
+The [complete data, software and research references](docs/SUBMISSION_REFERENCES.md) supplement the source rows in the submission form. They distinguish used data, literature, metadata checks and unsuccessful retrievals. See the [final checklist](docs/submission/FINAL_CHECKLIST.md), [official-rule retrieval record](docs/submission/official_requirements.json) and [AI assistance record](docs/submission/AI_USAGE.md). The repository is currently public; historical private-access receipts are preserved. Final account submission and team rights decisions still require human confirmation.

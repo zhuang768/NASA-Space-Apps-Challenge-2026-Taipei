@@ -1,0 +1,28 @@
+{
+  "date_taipei": "2026-11-15",
+  "starting_main": "42f55166c3a12d86b24757880c11d2be7eb2f20c",
+  "scope": "References, official requirements and final submission checks; not a scientific discovery or submission receipt",
+  "ai_assistance": "Codex and ChatGPT assisted code, source checks and editing; observations remain attributable to source providers. See docs/submission/AI_USAGE.md.",
+  "files": [
+    {
+      "path": "docs/SUBMISSION_REFERENCES.md",
+      "bytes": 92616,
+      "sha256": "9e09d33b9cf1a8fca4c1b25c8a2b72b35da7d298f0bf7c971b38de659042a9a6"
+    },
+    {
+      "path": "outputs/submission/references.csv",
+      "bytes": 69620,
+      "sha256": "18fb8258936303b85e00d669d5b61bcde8034dc7e4d70192794718ed3aaf0557"
+    },
+    {
+      "path": "docs/submission/official_requirements.json",
+      "bytes": 9211,
+      "sha256": "972989c015ab01675578235dbb70051238f38058740a5da7cdb2692c56a2206a"
+    },
+    {
+      "path": "docs/submission/AI_USAGE.md",
+      "bytes": 2435,
+      "sha256": "6947498a3c863c53d37fd0f194a3346df249ed3f14ea577fc0fa1f9fa1a3a1b2"
+    }
+  ]
+}

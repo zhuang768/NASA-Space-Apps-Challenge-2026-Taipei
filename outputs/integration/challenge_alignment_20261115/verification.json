@@ -44,11 +44,12 @@
     },
     "local_browser": {
       "status": "pass",
-      "site_panels": 15,
+      "site_panels": 18,
       "sources_dialog": true,
       "browser_error_logs": [],
       "mobile_breakpoint_check": "not_run",
-      "public_deployment_check": "not_run"
+      "public_deployment_check": "not_run",
+      "Earth_check_tab_scope_verified": true
     },
     "javascript_syntax": {
       "status": "pass",
@@ -65,6 +66,13 @@
     "git_whitespace": {
       "status": "pass",
       "command": "git diff --check"
+    },
+    "AD1_digital_grid_phase_replay": {
+      "status": "pass",
+      "cases": 11840,
+      "CSV_hashes_matching_expectations": 3,
+      "summary_tables_byte_identical": 2,
+      "scope": "known-vector digital geometry only;not optical recognition or independent truth"
     }
   },
   "official_full_pages": "not_verified;direct_reads_failed;indexed synopsis used only as broad alignment context",
@@ -72,5 +80,6 @@
   "novelty_verified": false,
   "submission_completed": false,
   "public_deployment_verified": false,
-  "C2C_review": "not_used;user_requested_local_verification_after_auto_review_rejection"
+  "C2C_review": "not_used;user_requested_local_verification_after_auto_review_rejection",
+  "integrated_main": "ec3f38fd018b55b993232151d441d84286676da3"
 }

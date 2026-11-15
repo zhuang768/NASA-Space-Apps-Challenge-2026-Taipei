@@ -555,17 +555,17 @@ var UV_MONTHLY_C = [-12.12, -18.08, -22.97, -27.02, -29.92, -31.36, -33.91, -31.
 var UV_DAMP = [['Surface', 8.38], ['10 cm down', 3.89], ['Ice, 42 cm', 0.21], ['In the ice, 49 cm', 0.13]];
 var PTS = {
   uv: { name: 'University Valley, Antarctica', where: '77.86°S, 160.71°E, 1,677 m', url: 'https://doi.org/10.1017/S0954102022000025',
-    yes: 'Ice-cemented ground lies 8 to 42 cm down at four stations, under a dry cover. Ground temperature barely changes with depth: −24.3, −24.1 and −24.0 °C at 10, 42 and 49 cm.',
+    yes: 'Published University Valley stations report shallow ice-cemented interfaces under dry cover. This location anchors W; valley-wide interface ranges and W temperature summaries have separate spatial and temporal support.',
     no: 'Station values, not a valley map. No slope or thermal inertia was derived.' },
   beacon: { name: 'Beacon Valley, Antarctica', where: '77.82°S, 160.65°E', url: 'https://doi.org/10.1029/2017JF004535',
     yes: 'About 0.3 m of dry soil over blocky ice, with polygons 10 to 20 m across. A published model gives about 0.11 mm of ice loss a year.',
     no: 'Original hourly records were not obtained. It does not show that this region has the same ice.' },
   adv: { name: 'Adventdalen, Svalbard', where: '78.17°N, 16.06°E', url: 'https://doi.org/10.5194/tc-17-3363-2023',
-    yes: 'Radar sees an ice-like reflector near 1.5 m in polygon terrain. Core ice content reaches 20 to 50 percent where it was measured.',
+    yes: 'Separate Adventdalen studies report radar returns and core observations. Their coordinates and exact radar-to-core correspondence are not established as one validation test.',
     no: 'Coordinates are not matched across the studies. Wetter and warmer than Mars.' },
   hau: { name: 'Haughton crater, Devon Island', where: '75.37°N, 89.53°W', url: 'https://doi.org/10.1029/2012JE004053',
-    yes: 'Radar finds frozen ground 0.6 to 0.9 m down. Thaw depth in July 2019 was 0.5 to 0.7 m.',
-    no: 'A single season. It is not a ground-ice measurement.' },
+    yes: 'The bounded published radar/core subcase used a short line after overburden excavation. The July 2019 thaw observations are a separate study and footprint.',
+    no: 'Excavated cover does not validate intact-cover detection. Separate thaw and radar records cannot be combined into one ice truth.' },
   ad1: { name: 'Adventdalen polygons (AD1), Svalbard', where: '78.18°N, 15.92°E', url: 'https://doi.pangaea.de/10.1594/PANGAEA.921087',
     yes: '185 mapped polygons, median equivalent diameter about 18 m. The site is identified as active ice-wedge terrain.',
     no: 'No ice volume and no matched temperature record.' }

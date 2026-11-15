@@ -1,24 +1,10 @@
 {
   "url": "http://127.0.0.1:8931/",
+  "integrated_main": "ec3f38fd018b55b993232151d441d84286676da3",
   "panels": [
     {
-      "site": "MS-03",
-      "panel": "Heat",
-      "rendered": true
-    },
-    {
-      "site": "MS-03",
-      "panel": "Ice evidence",
-      "rendered": true
-    },
-    {
-      "site": "MS-03",
-      "panel": "Dust",
-      "rendered": true
-    },
-    {
-      "site": "MS-03",
-      "panel": "Unknown",
+      "site": "MS-01",
+      "panel": "Terrain",
       "rendered": true
     },
     {
@@ -38,7 +24,17 @@
     },
     {
       "site": "MS-01",
+      "panel": "Earth check",
+      "rendered": true
+    },
+    {
+      "site": "MS-01",
       "panel": "Unknown",
+      "rendered": true
+    },
+    {
+      "site": "MS-02",
+      "panel": "Terrain",
       "rendered": true
     },
     {
@@ -58,25 +54,45 @@
     },
     {
       "site": "MS-02",
-      "panel": "Unknown",
-      "rendered": true
-    },
-    {
-      "site": "MS-01",
-      "panel": "Terrain",
+      "panel": "Earth check",
       "rendered": true
     },
     {
       "site": "MS-02",
-      "panel": "Terrain",
+      "panel": "Unknown",
       "rendered": true
     },
     {
       "site": "MS-03",
       "panel": "Terrain",
+      "rendered": true
+    },
+    {
+      "site": "MS-03",
+      "panel": "Heat",
+      "rendered": true
+    },
+    {
+      "site": "MS-03",
+      "panel": "Ice evidence",
+      "rendered": true
+    },
+    {
+      "site": "MS-03",
+      "panel": "Dust",
+      "rendered": true
+    },
+    {
+      "site": "MS-03",
+      "panel": "Earth check",
+      "rendered": true
+    },
+    {
+      "site": "MS-03",
+      "panel": "Unknown",
       "rendered": true
     }
   ],
-  "sourcesDialogVerified": true,
-  "scope": "local DOM interaction checks; no independent scientific validation or public deployment verification"
+  "Earth_scope_disclaimer": true,
+  "scope": "local browser interaction checks; not deployment or scientific validation"
 }

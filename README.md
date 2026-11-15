@@ -23,7 +23,7 @@ The challenge asks for Earth analogue candidates and their characterisation, pre
 | New Earth analogue and common-scale comparison | not established |
 | Global novelty and full submission eligibility | not verified |
 
-See the [challenge/evidence checklist](docs/CHALLENGE_ALIGNMENT.md), [Earth data-status table](docs/earth_submission_status.csv) and [MS-03 executable audit](outputs/research/MS-03/repository_validation_20261115/README.md). The audit reviewed main `07dbe29203504ba0ccde5e379f42ecc16e4b1b4f`, PR #26 and 42 branch heads; it distinguishes absent source packages from negative scientific findings.
+See the [challenge/evidence checklist](docs/CHALLENGE_ALIGNMENT.md), [Earth data-status table](docs/earth_submission_status.csv) and [MS-03 executable audit](outputs/research/MS-03/repository_validation_20261115/README.md). The frozen audit reviewed main `07dbe29203504ba0ccde5e379f42ecc16e4b1b4f`, PR #26 and 42 branch heads; it distinguishes absent source packages from negative scientific findings.
 
 The existing Earth candidate records are [MS-01](outputs/research/MS-01/candidates.csv), [MS-02](outputs/research/MS-02/candidates.csv) and [MS-03](outputs/research/MS-03/candidates.csv). Their IDs and dispositions remain authoritative over newer narrative proposals.
 
@@ -44,3 +44,5 @@ NASA, data publishers and the original investigators retain credit for their obs
 ## 2026-11-15 evidence-alignment update
 
 Corrected unsupported completed-result wording for Cape Blossom/Samoylov, published the repository-only MS-03 check, and separated retained Earth references from proposals without source packages. Website labels now distinguish signed SWIM consistency, model-time-adjusted surface temperature and reconstructed dust percentiles. Original science values and candidate IDs are unchanged. Verification in this update checks the declared files and semantics; it does not establish ice, novelty, deployment or a completed NASA submission. Original-code licensing, evaluator access and final submission remain team actions in the checklist.
+
+Later main `ec3f38fd018b55b993232151d441d84286676da3` added final comparison/replay tables and an Earth check tab. They are preserved. The stored AD1 grid-phase test can be replayed from repository inputs; it measures digital geometry sensitivity, not optical recognition or a Mars match. Other replay entry points explicitly require separately supplied team ZIPs.

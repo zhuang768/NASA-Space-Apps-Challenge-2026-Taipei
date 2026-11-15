@@ -1,0 +1,39 @@
+{
+  "input_main": "ec3f38fd018b55b993232151d441d84286676da3",
+  "program": "outputs/research/final-comparison-20261115/replay/ms03/replay_ad1_grid_phases.py",
+  "source_zip_sha256": "c75e7568c9fbfc67898f64e9c18681e5dc7e24a1ec272ceafa12c51377b8054e",
+  "polygons": 185,
+  "spacings_m": [
+    0.5,
+    1,
+    3,
+    6.11
+  ],
+  "deterministic_grid_origins": 16,
+  "cases": 11840,
+  "outputs": [
+    {
+      "output": "phase_results.csv",
+      "bytes": 2107342,
+      "sha256": "5072707ff4e21d734b5fcdc76110b03264e90d67275cf4a7e208687d59bf1644",
+      "matches_teammate_record": true
+    },
+    {
+      "output": "phase_summary.csv",
+      "bytes": 923,
+      "sha256": "351d1f87dd66e048176c73c3330123acb42c248d40a640b7e2af0c73b2177b16",
+      "matches_teammate_record": true
+    },
+    {
+      "output": "per_polygon_phase_summary.csv",
+      "bytes": 56705,
+      "sha256": "e5e6be55ea4c6be9f1f2afb638d2c554b0ca8ce0d1860db8d6dee00b2a90e96e",
+      "matches_teammate_record": true
+    }
+  ],
+  "summary_paths": [
+    "outputs/research/final-comparison-20261115/ms03/adventdalen_grid_summary.csv",
+    "outputs/research/final-comparison-20261115/ms03/adventdalen_polygon_summary.csv"
+  ],
+  "limitation": "Digital geometric IoU of known Earth vector shapes. Not independent annotation truth, optical detection rate, local Mars morphology or validated Earth\u2013Mars analogy.0.8 is exploratory."
+}

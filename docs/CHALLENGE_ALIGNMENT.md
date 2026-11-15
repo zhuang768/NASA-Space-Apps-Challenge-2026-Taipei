@@ -1,6 +1,6 @@
 # Challenge alignment and evidence checklist
 
-Reviewed 2026-11-15. Starting main: `07dbe29203504ba0ccde5e379f42ecc16e4b1b4f`.
+Reviewed 2026-11-15. Starting main: `07dbe29203504ba0ccde5e379f42ecc16e4b1b4f`. Later main integrated before publication: `ec3f38fd018b55b993232151d441d84286676da3`.
 
 **Assessment: partial challenge response.** The retained work supplies Mars candidate screening, source-scale context, an interactive map and established Earth method references. It has not established a new, validated terrestrial analogue or a qualified common-scale MS-03/Earth contour comparison.
 
@@ -41,6 +41,16 @@ The six screening objectives are exploratory choices, not official mission requi
 The previous draft's proposed-source citations remain traceable: [Cape/Blueberry study](https://doi.org/10.5194/tc-19-6355-2025), [centre dataset](https://doi.org/10.5281/zenodo.14756139), [Samoylov inventory](https://doi.org/10.1594/PANGAEA.944071). A DOI destination was not acquired as data in this repository-only audit. These links do not certify the removed project calculations.
 
 MS-01/02's newer narrative numbers were not silently recalculated or changed. Their source packages need to be handed over before they can be treated as repository-reproducible results. The team should review their interpretation in the final human-authored report.
+
+## Later main integration
+
+Before publication, main added [final comparison tables and replay entry points](../outputs/research/final-comparison-20261115/README.md). These files and the new Earth check tab were preserved. Their [input manifest](../outputs/research/final-comparison-20261115/replay/inputs.json) distinguishes repository inputs from separately supplied team ZIPs. A hash for a missing team ZIP is provenance, not its source bytes in this checkout.
+
+The AD1 geometric grid-phase experiment is executable from the stored shapefile: 185 published polygons, four spacings and 16 deterministic grid origins (11,840 cases). This update reran that program: all three output CSV hashes match the supplied expectations, and the two committed summaries match byte-for-byte. The [rerun receipt](../outputs/integration/challenge_alignment_20261115/ad1_grid_replay/receipt.json) and compressed 11,840-case table retain this check. It is digital preservation of known vector geometry, not independent Earth tracing, optical recognition or an in-box Mars contour comparison. The exploratory IoU threshold is not a mission requirement.
+
+The final-comparison receipt also mentions Cape brightness contrast and a different CTX coverage replay requiring separate projected image subsets. Those subsets and image-workflow code are not supplied by that replay entry point. Its newer table does not replace the frozen MOC/CTX support audit or its inspected-area definitions. The two versions are not averaged or described as one replay.
+
+The broader MS-01/02 comparison tables are retained with their own source manifests. This update did not rerun workstreams needing the separately supplied ZIPs and does not upgrade their field truth, registration or novelty.
 
 ## Before final submission
 

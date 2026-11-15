@@ -35,6 +35,9 @@
     "new_field_experiment_completed": false,
     "new_analogue_or_global_novelty_established": false,
     "official_full_requirements": "not_verified;direct_fetch_failed",
-    "submission_completed_by_this_update": false
+    "submission_completed_by_this_update": false,
+    "integrated_main": "ec3f38fd018b55b993232151d441d84286676da3",
+    "AD1_grid_replay_cases": 11840,
+    "AD1_replay_scope": "digital_geometry_only;not_Mars_contour_validation"
   }
 }

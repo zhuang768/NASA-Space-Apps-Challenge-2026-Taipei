@@ -26,8 +26,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5176,
-      "sha256": "b83aa4afe9e1bcc242691fd3e3c8c77b52d42fe2e4420a80ce1cb479f738078f"
+      "bytes": 5656,
+      "sha256": "3ea29b247933520bcbdc9b3086351dcf395165a4afec83b44b742a8fc902743d"
     },
     {
       "path": "analog/__init__.py",
@@ -96,13 +96,13 @@
     },
     {
       "path": "docs/CHALLENGE_ALIGNMENT.md",
-      "bytes": 8183,
-      "sha256": "aa65b4b28cf63850bfdfd930fa6ea05f529169d350dcefc4a826e32281b85ed6"
+      "bytes": 10026,
+      "sha256": "edb50ec3d6b7b1abf60890774852751fd2376b78f2648b16649108fb44b76a6f"
     },
     {
       "path": "docs/REPORT.md",
-      "bytes": 26624,
-      "sha256": "3319af778a6670536de1f50df4996a1811932b73771dba43c8693f66c4fd98ac"
+      "bytes": 27056,
+      "sha256": "bfbe3c028a1a8b52ba99aff4f914f844b194474e1b2ef67e9c5edadb5133d88d"
     },
     {
       "path": "docs/REPRODUCE.md",
@@ -111,8 +111,18 @@
     },
     {
       "path": "docs/earth_submission_status.csv",
-      "bytes": 3254,
-      "sha256": "135e367ec1907191879d1a97a5584f02ec9fb2adc50a037c286ad0d38e2b3bc2"
+      "bytes": 3402,
+      "sha256": "1a737be2ea75a8deb5afb4be8dda74444f5cb54492c119ff91051a3590b3a253"
+    },
+    {
+      "path": "outputs/integration/challenge_alignment_20261115/ad1_grid_replay/phase_results.csv.gz",
+      "bytes": 536953,
+      "sha256": "580ff140700ea69f87b8c6838dc39630842bd6e839885911529930ff463036d4"
+    },
+    {
+      "path": "outputs/integration/challenge_alignment_20261115/ad1_grid_replay/receipt.json",
+      "bytes": 1396,
+      "sha256": "a3152f94b81f1c6431a4088f82bf725d1c502d2f1b9d7501ed196636fd7a3245"
     },
     {
       "path": "outputs/integration/challenge_alignment_20261115/baseline_release_manifest.json",
@@ -121,18 +131,23 @@
     },
     {
       "path": "outputs/integration/challenge_alignment_20261115/browser_panels.json",
-      "bytes": 1475,
-      "sha256": "83de46ad9f4a16770929258b9f39e4cc95d884139ffe8cb6cec1481f4de8ef17"
+      "bytes": 1781,
+      "sha256": "1087520d3a1be3132e2560402c2a97693ad1a8c3c2e91a39a23d4f192e0f20bc"
+    },
+    {
+      "path": "outputs/integration/challenge_alignment_20261115/local_earth_labels.png",
+      "bytes": 90542,
+      "sha256": "62d231f38d70096e9d462597ec557aa2ffef4a1220717c466dbfc54736008f33"
     },
     {
       "path": "outputs/integration/challenge_alignment_20261115/local_ice_labels.png",
-      "bytes": 85745,
-      "sha256": "b9530362bb1d4c9b7978d2e9ad282f2d80d893f506d160019788ed5b72b15ab9"
+      "bytes": 85217,
+      "sha256": "df9288d069387a1a44c078bf31ca656d527a300d55ada9b96721620a9fb362c5"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/manifest.json",
-      "bytes": 12603,
-      "sha256": "f1469829f04d95804581fb487e1acf53d14e0db95d27502e04d75d5f9b1f87c8"
+      "bytes": 12708,
+      "sha256": "4eb1288cdca60c5824e50a11c2bd6b7c76aa94c26a4e75fe29bb1537e4851812"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/SOURCE_PROVENANCE.md",
@@ -141,13 +156,13 @@
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/app.js",
-      "bytes": 31794,
-      "sha256": "c076b3024899f6870db4fc322b9f4b953657b73cb2d7cb6a7047c48cb218f24a"
+      "bytes": 42404,
+      "sha256": "83cfe7597b43393077b34539f0dc859f207000d21f4e283b5273bbd0cbea7d2e"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/deployment.json",
-      "bytes": 950,
-      "sha256": "e8706f18f3326b3dd34535f0bea6d85c9c25a000612bf1cd27d274a320c90ad4"
+      "bytes": 944,
+      "sha256": "7897ca099fb6341acf6bdf4f9ad49691516747dde533a122d6111c2ffd0ba6b4"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/index.html",
@@ -161,8 +176,8 @@
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/style.css",
-      "bytes": 7170,
-      "sha256": "0cd08324403e377ea84221f537aefd64a233affac04756a881a49562e01545db"
+      "bytes": 7864,
+      "sha256": "3f93d30f0c9021859cf2c92e188b78dd1e34100bc7b6c60b637b28d5d58755ec"
     },
     {
       "path": "outputs/research/MS-03/repository_validation_20261115/README.md",
@@ -415,6 +430,126 @@
       "sha256": "e4373c61d3cd83ef48a2b123a34b9814598f48f4af498088edf698015972cc82"
     },
     {
+      "path": "outputs/research/final-comparison-20261115/README.md",
+      "bytes": 6458,
+      "sha256": "dc53bf748998ed0f09948a9366f95326a3df223b6c4fd4b5d37f6e6f27806b1b"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/SHA256SUMS",
+      "bytes": 2231,
+      "sha256": "48a350888bca71e990bca53462d8b65008fb4b47d5dfa2158f42cac60354c456"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/SOURCES.md",
+      "bytes": 1936,
+      "sha256": "a175f1deb6b228859ac3907ddf9063f4218b52f4056ed1380233b9cc61461051"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/ms01/annual_phase_consistency.csv",
+      "bytes": 4494,
+      "sha256": "ee05e2ad8581b8d6f0a98709b716177922b56ceda24d74b4a65c6b4d3a37fb7b"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/ms01/thermal_month_comparison.csv",
+      "bytes": 2851,
+      "sha256": "51857f7619b63812591e7fb03ca77e6e85366ec1d58853e472ac4ad01f8d888d"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/ms02/askja_registration_scenarios.csv",
+      "bytes": 1449,
+      "sha256": "a1cc1de5dc4ae08ac2db80409fcbc60a7320098e1cc60e3771108683053ed7d3"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/ms02/sharad_echo_width.csv",
+      "bytes": 14620,
+      "sha256": "b322ddf20a948a3b585534d07570e38c9429dde22a78a4ac65a1a87a52041326"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/ms02/velocity_and_orbital_scale.csv",
+      "bytes": 496,
+      "sha256": "d09b1bd086332d4f9428218ec70d8f5600a77541d14fb8cb6849db41643c965d"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/ms03/adventdalen_grid_summary.csv",
+      "bytes": 923,
+      "sha256": "351d1f87dd66e048176c73c3330123acb42c248d40a640b7e2af0c73b2177b16"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/ms03/adventdalen_polygon_summary.csv",
+      "bytes": 56705,
+      "sha256": "e5e6be55ea4c6be9f1f2afb638d2c554b0ca8ce0d1860db8d6dee00b2a90e96e"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/replay/README.md",
+      "bytes": 2373,
+      "sha256": "2c22ab2bdba04f97bce0d5f16bba7a281763734ba7877c53791ab9ae548215dd"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/replay/check_inputs.py",
+      "bytes": 1387,
+      "sha256": "0f7692389840ab99a079f4bbc588e0be7c7ab1e88b8f1b478050bd48dc09ab90"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/replay/inputs.json",
+      "bytes": 3362,
+      "sha256": "14d9e2c8aaf698d1e94ca8dc4f09c753c87b5296f56718f4732345dcd7555474"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/replay/ms01/replay.py",
+      "bytes": 6089,
+      "sha256": "64887fae723e79412f9793fd2976d24f03c73e17496f65a736f4c94d970424d8"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/replay/ms01/requirements.txt",
+      "bytes": 12,
+      "sha256": "a83a2a4ed7ab2e022b9b8a83cfa2b8cf52cc243006c597e8b96f90a8365590ac"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/replay/ms02/REPLAY.md",
+      "bytes": 3709,
+      "sha256": "d81ee58f72cdb73f284d9026882baac0bbfb6ddb944e3aaae09e650548bdf92a"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/replay/ms02/askja/recompute_alignment.py",
+      "bytes": 6733,
+      "sha256": "2fea50d55a77a51b098f513f33bd0dfe0a7b927cdb0c63f35de93340fdac89a3"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/replay/ms02/askja/recompute_gis.py",
+      "bytes": 1766,
+      "sha256": "6f86005d8459cd9808d43b384b1b96067de2c1d15ade5f8eaa4074c3c6545654"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/replay/ms02/askja/recompute_sensitivity.py",
+      "bytes": 5336,
+      "sha256": "801e4ccc9d88b5be4943578bba8cd5407236e4b292a7651f4bbe45c2e0255e60"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/replay/ms02/askja/usgs_source_checksums.csv",
+      "bytes": 1482,
+      "sha256": "4682454370aa08608742108eb1e5a5aa82e6ed8f19a0737d060edd63e9d26744"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/replay/ms02/replay.py",
+      "bytes": 6794,
+      "sha256": "3208cf2305da5af964e6dcfeb0a7f4351647e56ffdc0de0f7f959fe79b9e1376"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/replay/ms03/README.md",
+      "bytes": 2663,
+      "sha256": "1b76953998e19a5ac886dd60f26bf3e3542fa2434fbbbe23caf84c4228ea3cbe"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/replay/ms03/replay_ad1_grid_phases.py",
+      "bytes": 5463,
+      "sha256": "0f015a98e5d3a74d51b6113be0c0f8bde2b2a40c3586ffbae41fef4a660f243b"
+    },
+    {
+      "path": "outputs/research/final-comparison-20261115/replay/ms03/requirements.txt",
+      "bytes": 143,
+      "sha256": "c4d4bcde55609d25d2b265fd2d63422f8b7307c9c59406e73705be42b90e1f2d"
+    },
+    {
       "path": "outputs/research/mars_reselection_20261114/COMPUTATION.md",
       "bytes": 9609,
       "sha256": "e3ef245034f9db9aa4ab84e7c2252f22fc4b1b675c5bd6566ab0e02e69591af8"
@@ -579,5 +714,6 @@
       "bytes": 463,
       "sha256": "ee9650dbf8d22ed5e9f51b65c8c24ebff5c6e978bb4a57961b6fb9722646914c"
     }
-  ]
+  ],
+  "integrated_main": "ec3f38fd018b55b993232151d441d84286676da3"
 }

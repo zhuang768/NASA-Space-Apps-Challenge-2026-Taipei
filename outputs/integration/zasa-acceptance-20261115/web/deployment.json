@@ -1,14 +1,13 @@
 {
-  "release": "zasa-terramatch-three-sites-20261115-r2",
+  "release": "zasa-terramatch-three-sites-20261115-r5-redesign",
   "assets_sha256": {
-    "style.css": "7fb75254011e2d2ba848118fcc7bb3b4219cb969a6d5ba66dd506c2cbc52f9c5",
+    "style.css": "2371ff925118974ae4ca530f51f8801d272006517da739aa1d324f58876bbd04",
     "mola.jpg": "72a590d14106909381ab65f86b4cc0e455670a6467431a441a84216d92e9e3bb",
-    "index.html": "66b07662549607a3093976b1513e38e8d8315f7ff75a6b58efb7c2f0c435e576",
-    "app.js": "55d73bae2e925782832a8b12fd0c77ab92dc72ca4a0c070d7aedf6a48afd1144"
+    "index.html": "8be318b2536bde8240718c3879611f76912fb7568573171b61cec46eb5ff848a",
+    "app.js": "9f6f2eeb131cbef39d47adf30977be1e9794a280484e1c5798be72cb0e06686f"
   },
-  "bundle_sha256": "32402e26323e67e2c1d3a696a6567275e49de5da4fde99a57fb79d444fd5ce89",
   "regional_metrics_research_commit": "1506ede572435588eb5e64f95f24639279b77e56",
   "regional_metrics_blob": "2371ade1c27087efaa165acb98b7541266eaa606",
   "model_table_sha256": "639e447ed2f074a162f73a2b804c198b7b2142945bb7530f7b3c253c780295fa",
-  "scope": "three-site research demonstrator; no local ice detection"
+  "scope": "three-site research demonstrator (dark editorial redesign); no local ice detection; not deployed by this commit"
 }

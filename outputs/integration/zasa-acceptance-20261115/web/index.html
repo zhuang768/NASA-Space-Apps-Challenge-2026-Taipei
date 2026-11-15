@@ -1,1 +1,125 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Explore three Mars shallow-ice research candidates and compare the evidence behind them."><title>TerraMatch | Mars candidate explorer</title><link rel="stylesheet" href="style.css"></head><body><header><a class="brand" href="#top"><span class="mark">◉</span> ZASA <span class="sep">/</span> TERRAMATCH</a><nav><a href="#explore">Explore</a><a href="#compare">Compare</a><a href="#method">Method & limits</a></nav></header><main id="top"><section class="hero"><div class="eyebrow"><span></span> MARS RECONNAISSANCE · RESEARCH DEMO</div><h1>Three places.<br><em>One better question.</em></h1><p>Explore three northern Mars regions selected for follow-up shallow-ice research. Compare what the data suggests, then see what it cannot yet tell us.</p><a class="cta" href="#explore">Explore the candidates <span>↗</span></a><div class="hero-note">NOT A LANDING-SITE CERTIFICATION <b>·</b> NOT A VERIFIED ICE DETECTION</div></section><section id="explore" class="section"><div class="section-heading"><div><div class="kicker">01 / THE MAP</div><h2>Start with a location</h2></div><p>Select a marker or a candidate below. The map is global context, not an image of the subsurface.</p></div><div class="workspace"><div><div class="map" role="group" aria-label="Global Mars topographic map with three selectable candidate locations"><img src="mola.jpg" alt="MOLA global color-shaded topographic map of Mars, cylindrical projection"><div class="graticule"></div><button class="pin" data-site="0" style="left:20.2083%;top:18.4722%" aria-label="Select MS-01 at 56.75 degrees north, 72.75 degrees east"><span>01</span></button><button class="pin" data-site="1" style="left:46.7361%;top:20.6944%" aria-label="Select MS-02 at 52.75 degrees north, 168.25 degrees east"><span>02</span></button><button class="pin" data-site="2" style="left:67.2917%;top:17.9167%" aria-label="Select MS-03 at 57.75 degrees north, 242.25 degrees east"><span>03</span></button><span class="map-label left">0° E</span><span class="map-label right">360° E</span></div><p class="caption">MOLA elevation + shaded relief · NASA/MGS. North is up; 0–360° east. Markers indicate candidate centers, not footprints. <a href="https://marsoweb.nas.nasa.gov/globalData/datamaps.html">Map source ↗</a></p><div class="tabs" role="group" aria-label="Select candidate"><button data-site="0">MS-01</button><button data-site="1">MS-02</button><button data-site="2">MS-03</button></div></div><article class="detail" aria-live="polite"><div class="detail-top"><span class="kicker">SELECTED CANDIDATE</span><span id="site-id" class="site-id">MS-01</span></div><h3 id="site-title"></h3><p class="coords" id="site-coords"></p><p id="site-desc"></p><div class="detail-line"><span>Research question</span><p id="site-question"></p></div><div class="detail-line"><span>Trade-off to investigate</span><p id="site-trade"></p></div><a class="inline" href="#compare">Compare all three ↓</a></article></div></section><section id="compare" class="section compare"><div class="section-heading"><div><div class="kicker">02 / COMPARE EVIDENCE</div><h2>Read the trade-offs</h2></div><p>Choose a measure to compare all three. Values describe different products and scales, not a single quality score.</p></div><div class="metric-picker"><label for="metric">COMPARE BY</label><select id="metric"><option value="slope">Mean slope</option><option value="thermal">Thermal inertia</option><option value="ice">Shallow ice consistency index</option><option value="depth">Conditional modeled depth</option></select></div><div class="chart-layout"><div class="chart"><div class="chart-head"><h3 id="metric-title"></h3><span id="metric-unit"></span></div><div id="bars"></div><p id="metric-note" class="caption"></p></div><aside class="interpret"><div class="kicker">HOW TO READ THIS</div><h3 id="interpret-title"></h3><p id="interpret-text"></p><div class="caution">No metric proves accessible ice or site safety. Different spatial footprints and incomplete coverage limit comparisons.</div></aside></div></section><section id="method" class="section"><div class="section-heading"><div><div class="kicker">03 / FROM SIGNAL TO QUESTION</div><h2>What would make a match?</h2></div><p>Earth studies help frame testable methods. They are not validated one-to-one matches to these Mars candidates.</p></div><div class="steps"><article><span>01</span><h3>Screen</h3><p>Use regional topography, thermal and ice-consistency products to identify contrasting research candidates.</p></article><article><span>02</span><h3>Compare</h3><p>Examine each signal separately, record its resolution and gaps, and identify conflicting interpretations.</p></article><article><span>03</span><h3>Test</h3><p>Use local imagery, radar and independent ground truth where possible. Model assumptions must be challenged, not treated as measurements.</p></article></div><div class="sources"><div><h3>Earth as a methods reference</h3><p>University Valley observations illustrate ground-temperature and ice-depth research. Haughton field work illustrates radar and coring methods. Neither establishes a proven Mars match.</p><p><a href="https://zenodo.org/records/10553882">University Valley data ↗</a> <a href="https://doi.org/10.1029/2012JE004053">Haughton study ↗</a></p></div><div><h3>Evidence & limits</h3><p>Conditional depths use a published two-layer model assuming an ice-bearing lower layer; they are not direct interface measurements. The three regions are not cleared as globally novel and require independent validation.</p><p><a href="https://doi.org/10.22002/D1.1316">Published model data ↗</a> <a href="https://marsoweb.nas.nasa.gov/globalData/MOLA_notes.html">MOLA data notes ↗</a></p></div></div></section></main><footer><span>◉ ZASA / TERRAMATCH</span><span>Built for exploration. Evidence before conclusions.</span></footer><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Northern Mars ice targets | Team zasa</title>
+<meta name="description" content="Three northern Mars regions chosen for shallow-ice research: what orbital data says about each, and what it cannot tell us yet.">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Schibsted+Grotesk:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <a class="mark" href="#top">zasa</a>
+  <nav aria-label="Sections">
+    <a href="#evidence">Orbital data</a>
+    <a href="#unknowns">What is unknown</a>
+    <a href="#sources">Sources</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <svg class="orbits" viewBox="0 0 1200 800" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <ellipse cx="760" cy="420" rx="640" ry="230" transform="rotate(-18 760 420)"/>
+    <ellipse cx="760" cy="420" rx="760" ry="300" transform="rotate(-18 760 420)"/>
+    <circle cx="1252" cy="310" r="3"/>
+  </svg>
+
+  <div class="hero-text">
+    <h1>Where on northern Mars is shallow ice worth a closer look?</h1>
+    <p class="lede">Three regions between 52°N and 58°N, picked from global orbital data. This page shows what that data says about each one, and where it stops being able to tell us anything.</p>
+
+    <div class="picker" role="group" aria-label="Choose a region">
+      <button type="button" data-i="0" aria-pressed="true">MS-01</button>
+      <button type="button" data-i="1" aria-pressed="false">MS-02</button>
+      <button type="button" data-i="2" aria-pressed="false">MS-03</button>
+    </div>
+    <div class="region" aria-live="polite">
+      <p class="coords" id="r-coords"></p>
+      <p id="r-text"></p>
+    </div>
+    <p class="caveat">These are research targets. They are not confirmed ice detections, and they are not landing sites.</p>
+  </div>
+
+  <figure class="globe-wrap">
+    <canvas id="globe" width="640" height="640" role="img" aria-label="Rotatable globe of Mars showing the three regions. Use the region buttons to move between them."></canvas>
+    <figcaption>Drag to turn the globe. Color shows elevation from the Mars Orbiter Laser Altimeter (MOLA); blue is low, red is high. Rings mark region centers, not their outlines.</figcaption>
+  </figure>
+</section>
+
+<section class="block" id="evidence">
+  <div class="head">
+    <h2>What orbital data says about each region</h2>
+    <p>Every value is an average over a review area of roughly 30 by 16 km. Each row is a different instrument at a different resolution, so the rows are not added into a score.</p>
+  </div>
+
+  <div id="dots" class="dots"></div>
+
+  <div class="pair">
+    <div>
+      <h3>Dust haze through the Martian year</h3>
+      <p class="sub">Column dust opacity at the surface, averaged over each quarter of the year. Higher means hazier.</p>
+      <div id="dust" class="chart-grid"></div>
+    </div>
+    <div>
+      <h3>Temperature swing between night and day</h3>
+      <p class="sub">Median air temperature from the Mars Climate Sounder, in kelvin. Each line runs from night to day.</p>
+      <div id="swing" class="chart"></div>
+      <p class="note">Bins are 5 degrees wide, so they sit near each region, not on it. Day and night are time-adjusted to 3 a.m. and 3 p.m. local time.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="unknowns">
+  <div class="head">
+    <h2>What we can and cannot say</h2>
+    <p>The data is good at telling regions apart. It is not good at telling us what is on the ground.</p>
+  </div>
+  <div class="ladder">
+    <div>
+      <h3>Known at the scale of a review area</h3>
+      <p>How flat each region is, how quickly its surface heats and cools, how consistent the ice evidence is at two depths, and how dusty the air gets. Thermal coverage is incomplete: 73, 93 and 79 of 100 thermal cells are measured for MS-01, MS-02 and MS-03.</p>
+    </div>
+    <div>
+      <h3>Known only on a coarse map</h3>
+      <p>The USGS global geologic map, drawn at 1:20 million, places MS-01 and MS-02 in the Middle Amazonian lowland unit, and MS-03 in a unit of Amazonian and Hesperian volcanic material. Those are regional labels, not descriptions of the rock or soil underfoot.</p>
+    </div>
+    <div>
+      <h3>Not known</h3>
+      <p>Whether ice is there, how deep, and how much. What the ground is made of, what covers it, and how rough it is at a landing scale. MS-01 and MS-02 each have a handful of 6-meter CTX images and no HiRISE images, so local detail is still out of reach.</p>
+    </div>
+  </div>
+  <p class="close">Settling it takes projected high-resolution images, radar echoes, spectra, and an independent measurement on the ground. Earth sites such as University Valley and Haughton crater show how those methods work, but they are not matches for these regions.</p>
+</section>
+
+<section class="block" id="sources">
+  <div class="head">
+    <h2>Sources</h2>
+    <p>Original observations belong to their providers. This is independent team research, not endorsed or certified by NASA.</p>
+  </div>
+  <ul class="links">
+    <li><a href="https://marsoweb.nas.nasa.gov/globalData/datamaps.html">MOLA global elevation map</a> and its <a href="https://marsoweb.nas.nasa.gov/globalData/MOLA_notes.html">data notes</a></li>
+    <li><a href="https://pds-geosciences.wustl.edu/missions/mgs/tes-timap.html">TES thermal inertia, NASA PDS</a></li>
+    <li><a href="https://swim.psi.edu/SWIM2Products.php">SWIM 2.0 ice consistency</a></li>
+    <li><a href="https://doi.org/10.22002/D1.1316">Published two-layer ice model data</a></li>
+    <li><a href="https://zenodo.org/records/10553882">University Valley ground-temperature data</a></li>
+    <li><a href="https://doi.org/10.1029/2012JE004053">Haughton crater radar and coring study</a></li>
+  </ul>
+</section>
+</main>
+
+<footer class="foot">
+  <p>Team zasa, NASA Space Apps Challenge 2026 Taipei.</p>
+  <p>Dust opacity from the Montabone reconstruction (Mars years 34 and 35). The three regions have not been checked against every earlier proposal, so none is cleared as new.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -304,23 +304,23 @@
     {
       "path": "web/app.js",
       "size": 4612,
-      "sha256": "70a0d12ab4bf1f48be84cf01a3d8ac20c25a761de1802a51fc77b0bd45053fa4",
-      "git_blob": "a49a80cf8d643b9559d851fbbdc6b3b8c24f1461",
-      "bytes": 41402
+      "sha256": "a2f43f2f0a1600fecacc2b0c15f53f0aabded08c9cc6494a2efc3e2125572493",
+      "git_blob": "61b7cb9e24c8d61ada417bdc73640eb539e32f69",
+      "bytes": 46219
     },
     {
       "path": "web/deployment.json",
       "size": 824,
-      "sha256": "9c0d15a7114eabc561283673b73fc8c933019dff68222cb5c955d44ceb4f8462",
-      "git_blob": "49ff3ec82ce8d8a7f6352130ca1078dccb3a130f",
-      "bytes": 834
+      "sha256": "28dff28035927a6ef27e4bfdfa399988ecb41a82f944c63e788bb7d8845514a9",
+      "git_blob": "fceda4b2ddb133c0e7e1bd42bd0d5840599adba3",
+      "bytes": 840
     },
     {
       "path": "web/index.html",
       "size": 6059,
-      "sha256": "fc60cf7be827b404f30c453ae4d789704fa3db39490acc1965775b2d7e53b9bb",
-      "git_blob": "022fc0f29bcc73a8f5608845bfd4099c39976b02",
-      "bytes": 4106
+      "sha256": "cd4f9ec838fda2813e7d00c1a400bc8d2e6ddb5c94e78f55d213b8c8ab3facdb",
+      "git_blob": "d2b238e3ec5b7ce8d6a03ee23d1a4cc742e96ae3",
+      "bytes": 4246
     },
     {
       "path": "web/mola.jpg",
@@ -332,9 +332,9 @@
     {
       "path": "web/style.css",
       "size": 6954,
-      "sha256": "3f93d30f0c9021859cf2c92e188b78dd1e34100bc7b6c60b637b28d5d58755ec",
-      "git_blob": "68f1c0bd52facd48fa9b8905d028be31e52d0b0c",
-      "bytes": 7864
+      "sha256": "4c3e04a4d508357f30e2ccf983ce8ae81ea4d85500af1f9e7ecb7b88d07f7ef1",
+      "git_blob": "d987a9e1ef4c0a22bfaf468c7e60f03e30cfd8d6",
+      "bytes": 8135
     }
   ]
 }

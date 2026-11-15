@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5008,
-      "sha256": "25ffa831bd0829af19621d451c8c37674e70848d77efdb1486c31518261a2954"
+      "bytes": 2757,
+      "sha256": "5caac014ef4e0ca195b575fa5e31da525a09592f30e29b2da857d4ccbc2e779d"
     },
     {
       "path": "analog/__init__.py",

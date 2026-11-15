@@ -316,7 +316,7 @@ $('zout').addEventListener('click', function () { flyTo(view.lon, view.lat, Math
 
 /* ---------- panel ---------- */
 var tab = 'terrain', dustYear = 34;
-var TABS = [['terrain', 'Terrain'], ['heat', 'Heat'], ['ice', 'Ice evidence'], ['dust', 'Dust'], ['unknowns', 'Unknown']];
+var TABS = [['terrain', 'Terrain'], ['heat', 'Heat'], ['ice', 'Ice evidence'], ['dust', 'Dust'], ['earth', 'Earth check'], ['unknowns', 'Unknown']];
 
 function buildOverview() {
   var host = $('regions');
@@ -527,6 +527,124 @@ function unknowns(i) {
   return d;
 }
 
+/* ---------- Earth check ----------
+   Earth values come from outputs/research/MS-01..03 (Earth evidence tables) and
+   MS-03/completion_20261115/earth_atmosphere_monthly.csv (University Valley, Jan-Nov 2010). */
+var UV_MONTHLY_C = [-12.12, -18.08, -22.97, -27.02, -29.92, -31.36, -33.91, -31.35, -30.27, -23.98, -18.18];
+var UV_DAMP = [['Surface', 8.38], ['10 cm down', 3.89], ['Ice, 42 cm', 0.21], ['In the ice, 49 cm', 0.13]];
+var PTS = {
+  uv: { name: 'University Valley, Antarctica', where: '77.86°S, 160.71°E, 1,677 m', url: 'https://doi.org/10.1017/S0954102022000025',
+    yes: 'Ice-cemented ground lies 8 to 42 cm down at four stations, under a dry cover. Ground temperature barely changes with depth: −24.3, −24.1 and −24.0 °C at 10, 42 and 49 cm.',
+    no: 'Station values, not a valley map. No slope or thermal inertia was derived.' },
+  beacon: { name: 'Beacon Valley, Antarctica', where: '77.82°S, 160.65°E', url: 'https://doi.org/10.1029/2017JF004535',
+    yes: 'About 0.3 m of dry soil over blocky ice, with polygons 10 to 20 m across. A published model gives about 0.11 mm of ice loss a year.',
+    no: 'Original hourly records were not obtained. It does not show that this region has the same ice.' },
+  adv: { name: 'Adventdalen, Svalbard', where: '78.17°N, 16.06°E', url: 'https://doi.org/10.5194/tc-17-3363-2023',
+    yes: 'Radar sees an ice-like reflector near 1.5 m in polygon terrain. Core ice content reaches 20 to 50 percent where it was measured.',
+    no: 'Coordinates are not matched across the studies. Wetter and warmer than Mars.' },
+  hau: { name: 'Haughton crater, Devon Island', where: '75.37°N, 89.53°W', url: 'https://doi.org/10.1029/2012JE004053',
+    yes: 'Radar finds frozen ground 0.6 to 0.9 m down. Thaw depth in July 2019 was 0.5 to 0.7 m.',
+    no: 'A single season. It is not a ground-ice measurement.' },
+  ad1: { name: 'Adventdalen polygons (AD1), Svalbard', where: '78.18°N, 15.92°E', url: 'https://doi.pangaea.de/10.1594/PANGAEA.921087',
+    yes: '185 mapped polygons, median equivalent diameter about 18 m. The site is identified as active ice-wedge terrain.',
+    no: 'No ice volume and no matched temperature record.' }
+};
+var EARTH = {
+  'ms-01': { pts: ['uv', 'beacon'],
+    rows: [['Ice', 'yes', 'Shallow ice under dry cover is real on Earth, 8 to 42 cm down. A model puts it at 0.66 m or 0.17 m depending on summer snow. Ice depth here is still unknown.'],
+      ['Heat', 'part', 'The daily swing dies out toward the ice. Earth air temperature and the Mars surface values are different quantities.'],
+      ['Terrain', 'no', 'Earth stations give elevation only. MOLA cannot resolve 10 to 20 m polygons.'],
+      ['Dust', 'no', 'Earth has no match for column dust opacity.']] },
+  'ms-02': { pts: ['uv', 'beacon', 'adv', 'hau'],
+    rows: [['Ice', 'yes', 'Ice-cemented ground at 42 cm, buried ice at 10 to 60 cm, frozen ground 0.6 to 0.9 m down. Ice depth here is still unknown.'],
+      ['Heat', 'part', 'The damping holds on Earth. Earth air temperature and the Mars surface values are different quantities.'],
+      ['Terrain', 'part', 'Polygons and stripes of 5 to 31 m show the landform exists. No matched elevation model, so no slope comparison.'],
+      ['Dust', 'no', 'Svalbard loess is a local source. It has no meaning for column dust opacity.']] },
+  'ms-03': { pts: ['uv', 'ad1'],
+    rows: [['Ice', 'yes', 'A 2026 study at University Valley finds summer snow sets the depth to ice. Mars ice depth here is still unknown.'],
+      ['Heat', 'part', 'The damping holds on Earth. Earth air temperature and the Mars surface values are different quantities.'],
+      ['Terrain', 'part', 'About 18 m polygons exist on Earth. No matched elevation model, so no slope comparison.'],
+      ['Dust', 'no', 'No dust measure was obtained at either Earth point.']] }
+};
+var VERDICT = { yes: ['Supported', '◆'], part: ['Partly', '◇'], no: ['No match', '○'] };
+
+function dampBox() {
+  var box = h('div', 'strip');
+  box.appendChild(h('h3', null, 'Heat reaches shallow ice slowly'));
+  box.appendChild(h('p', 'unit', 'University Valley, Antarctica, 7 to 18 November 2010. Daily temperature swing at each depth, in kelvin.'));
+  var W = 420, H = 150, x0 = 118, x1 = W - 44, mx = 9;
+  var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img',
+    'aria-label': UV_DAMP.map(function (d) { return d[0] + ': ' + d[1] + ' kelvin'; }).join('; ') });
+  UV_DAMP.forEach(function (d, k) {
+    var y = 14 + k * 34, w = d[1] / mx * (x1 - x0);
+    txt(svg, x0 - 10, y + 15, d[0], { fill: '#a3a9b3', 'font-size': 12, 'text-anchor': 'end' });
+    el('rect', { x: x0, y: y, width: Math.max(w, 3), height: 22, fill: k < 2 ? '#e0a64f' : '#8ec5e8' }, svg);
+    txt(svg, x0 + Math.max(w, 3) + 8, y + 16, num(d[1], d[1] < 1 ? 2 : 1), { fill: '#fff', 'font-size': 13, 'font-weight': 700 });
+  });
+  box.appendChild(svg);
+  box.appendChild(h('p', 'read', 'The swing falls from <b>8.4 K at the surface to 0.2 K at the ice</b>. Thermal inertia and the night to day contrast in the Heat tab describe this same effect on Mars. It shows the physics holds on Earth. It cannot give the ice depth here.'));
+  return box;
+}
+
+function earthTempBox(active) {
+  var s = SITES[active], box = h('div', 'strip');
+  box.appendChild(h('h3', null, 'A cold-desert year, for scale'));
+  box.appendChild(h('p', 'unit', 'Monthly mean air temperature at University Valley, January to November 2010, in kelvin. Dashed lines: this region’s Mars night and day medians.'));
+  var W = 420, H = 190, left = 40, right = 14, top = 14, bot = 30, lo = 160, hi = 270;
+  function Y(v) { return top + (hi - v) / (hi - lo) * (H - top - bot); }
+  function X(i) { return left + i * (W - left - right) / 10; }
+  var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img',
+    'aria-label': 'University Valley monthly air temperature fell from ' + num(UV_MONTHLY_C[0] + 273.15, 0) + ' to ' + num(UV_MONTHLY_C[6] + 273.15, 0) + ' kelvin in July. ' + s.id + ' Mars night median ' + num(s.night, 0) + ' kelvin, day median ' + num(s.day, 0) + '.' });
+  [180, 200, 220, 240, 260].forEach(function (v) {
+    el('line', { x1: left, x2: W - right, y1: Y(v), y2: Y(v), stroke: '#1d2531' }, svg);
+    txt(svg, left - 8, Y(v) + 4, String(v), { fill: '#8b929d', 'font-size': 11, 'text-anchor': 'end' });
+  });
+  ['Jan', 'Apr', 'Jul', 'Oct'].forEach(function (n, k) { txt(svg, X(k * 3), H - 8, n, { fill: '#a3a9b3', 'font-size': 11, 'text-anchor': 'middle' }); });
+  [['night', 'night'], ['day', 'day']].forEach(function (d) {
+    el('line', { x1: left, x2: W - right, y1: Y(s[d[0]]), y2: Y(s[d[0]]), stroke: COLORS[active], 'stroke-width': 2, 'stroke-dasharray': '6 5' }, svg);
+    txt(svg, W - right, Y(s[d[0]]) + (d[0] === 'day' ? 16 : -6), 'Mars ' + d[1] + ' ' + num(s[d[0]], 0), { fill: COLORS[active], 'font-size': 11, 'font-weight': 600, 'text-anchor': 'end' });
+  });
+  el('polyline', { points: UV_MONTHLY_C.map(function (c, i) { return X(i) + ',' + Y(c + 273.15); }).join(' '), fill: 'none', stroke: '#ebe8e1', 'stroke-width': 2.5, 'stroke-linejoin': 'round' }, svg);
+  [0, 6].forEach(function (i) {
+    var v = UV_MONTHLY_C[i] + 273.15;
+    el('rect', { x: X(i) - 4, y: Y(v) - 4, width: 8, height: 8, fill: '#ebe8e1', stroke: '#04060a', 'stroke-width': 1.5 }, svg);
+    txt(svg, X(i), Y(v) + (i === 0 ? -10 : 18), num(v, 0), { fill: '#fff', 'font-size': 12, 'font-weight': 700, 'text-anchor': i === 0 ? 'start' : 'middle' });
+  });
+  box.appendChild(svg);
+  box.appendChild(h('p', 'read', 'Earth is air at 1.2 m. Mars is the surface. Those are different quantities, so this is <b>context, not a match</b>. Both are cold, dry, and far below freezing.'));
+  return box;
+}
+
+function checkBox(active) {
+  var e = EARTH[SITES[active].hash], box = h('div', 'strip');
+  box.appendChild(h('h3', null, 'What Earth supports'));
+  box.appendChild(h('p', 'unit', 'Four themes, checked against the Earth records. Supported means the process is seen on Earth.'));
+  var list = h('div', 'chk');
+  e.rows.forEach(function (r) {
+    var v = VERDICT[r[1]], row = h('div', 'chkrow');
+    row.appendChild(h('b', null, r[0]));
+    row.appendChild(h('span', 'chip chip-' + r[1], '<i aria-hidden="true">' + v[1] + '</i> ' + v[0]));
+    row.appendChild(h('p', null, r[2]));
+    list.appendChild(row);
+  });
+  box.appendChild(list);
+  return box;
+}
+
+function pointsBox(active) {
+  var e = EARTH[SITES[active].hash], box = h('div', 'strip');
+  box.appendChild(h('h3', null, e.pts.length === 1 ? 'Earth point' : 'Earth points used'));
+  var d = h('dl', 'facts');
+  e.pts.forEach(function (k) {
+    var p = PTS[k];
+    d.appendChild(h('dt', null, '<a href="' + p.url + '">' + p.name + '</a>'));
+    d.appendChild(h('dd', null, '<span class="where">' + p.where + '</span><br>' + p.yes + '<br><span class="no">Does not show:</span> ' + p.no));
+  });
+  box.appendChild(d);
+  box.appendChild(h('p', 'read', 'Earth records support the <b>physics</b> behind the Mars data. They do not confirm any Mars value, and none of these places is a match for this region.'));
+  return box;
+}
+
 function renderTab() {
   var p = $('tabpanel'); p.innerHTML = '';
   var i = selected; if (i < 0) return;
@@ -536,6 +654,7 @@ function renderTab() {
   else if (tab === 'heat') { p.appendChild(strip('ti', i)); p.appendChild(coverageBox(i)); p.appendChild(swingBox(i)); }
   else if (tab === 'ice') { p.appendChild(strip('swim1', i)); p.appendChild(strip('swim5', i)); }
   else if (tab === 'dust') { p.appendChild(dustBox(i)); p.appendChild(strip('p95', i)); }
+  else if (tab === 'earth') { p.appendChild(checkBox(i)); p.appendChild(dampBox()); p.appendChild(earthTempBox(i)); p.appendChild(pointsBox(i)); }
   else p.appendChild(unknowns(i));
 }
 

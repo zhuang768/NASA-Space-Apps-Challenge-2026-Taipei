@@ -1,0 +1,11 @@
+{
+  // Cloudflare Worker (static assets) for the zasa Mars ice-target site.
+  // Serves the redesigned site from outputs/integration/zasa-acceptance-20261115/web.
+  // Files listed in that folder's .assetsignore are not published.
+  "name": "nasa-space-apps-challenge-2026-taipei",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./outputs/integration/zasa-acceptance-20261115/web",
+    "not_found_handling": "single-page-application"
+  }
+}

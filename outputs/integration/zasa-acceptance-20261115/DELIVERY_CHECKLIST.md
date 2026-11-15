@@ -23,9 +23,15 @@ This checklist is a technical handoff. It is not the team-authored report or pre
 
 ## Research and site cross-check
 
-Pinned originals (unchanged): [MS-01](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/89e448dcf083f3d3dd3cdf9f8dababc020ebef5f/docs/research/MS-01/report.md), [MS-02](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/89e448dcf083f3d3dd3cdf9f8dababc020ebef5f/docs/research/MS-02/report.md), [MS-03](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/89e448dcf083f3d3dd3cdf9f8dababc020ebef5f/docs/research/MS-03/report.md). See the [integrated data and evidence index](README.md), [published Earth handoff and source boundaries](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/bd290759a80d40227fa1aab0b99e7b68edd4cc3b/docs/earth-source-handoff/README.md), and [signed-out Demo receipt](web/SHOWCASE_RECEIPT.md). The site is a scoped public demonstration, not a publication of all analyses, original data or private reports.
+Pinned originals (unchanged): [MS-01](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/89e448dcf083f3d3dd3cdf9f8dababc020ebef5f/docs/research/MS-01/report.md), [MS-02](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/89e448dcf083f3d3dd3cdf9f8dababc020ebef5f/docs/research/MS-02/report.md), [MS-03](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/89e448dcf083f3d3dd3cdf9f8dababc020ebef5f/docs/research/MS-03/report.md). See the [integrated data and evidence index](README.md), [published Earth handoff and source boundaries](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/bd290759a80d40227fa1aab0b99e7b68edd4cc3b/docs/earth-source-handoff/README.md), and [current public R4 showcase receipt](web/r4/RECEIPT.md). The site is a scoped public demonstration, not a publication of all analyses, original data or private reports.
 
 Across the three records, 18 source values (coordinates and four displayed measures per record) were checked against the candidate/model snapshots. The browser displays rounded card values; source tables retain full precision. This audit does not certify that every cited source is currently downloadable. The pre-audit GitHub Cloudflare Workers Builds check remains red; the separate production release is verified independently by public readback, not by that status.
+
+## Current data handoff
+
+- Main contains the [23,035,176-byte integrated workbook](../../consolidated/NASA_Space_Apps_2026_All_Data.xlsx) and [7,702,846-byte full screening output](../../research/mars_reselection_20261114/screened_pool.csv.gz). Older local-only notices are historical.
+- [Historical handoff snapshot](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/tree/108cbe9808f4d085497341ebf44750d71539cee7/archive/project_assets_20261114) lists 186 records: 185 payload files and one source-only reference.
+- [Private Earth-input release](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/releases/tag/earth-raw-inputs-2026-11-14) contains 221 NASA raw inputs and three handoff files. The one ESA CCI item in that 222-input inventory remains provider-link-only by design. This is not a claim that every project raw input has been mirrored.
 
 ## Recorded scientific limits
 

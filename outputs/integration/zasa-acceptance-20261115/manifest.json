@@ -340,9 +340,10 @@
   "current_asset_update": {
     "source_main": "42f55166c3a12d86b24757880c11d2be7eb2f20c",
     "scope": "Complete reference index and AI assistance links; no chart or science values changed",
-    "deployment_verified": false,
+    "deployment_verified": true,
     "science_values_changed": false,
-    "verification_receipt": "outputs/submission/final_verification.json",
-    "prior_verified_payload_commit": "e26bc0541b21f371a2ac5c8299e8d1412aeb214d"
+    "verification_receipt": "outputs/submission/public_site_verification.json",
+    "prior_verified_payload_commit": "e26bc0541b21f371a2ac5c8299e8d1412aeb214d",
+    "verified_code_commit": "cd6a9f732490179e87f4ded05eb9f25a8c3ae277"
   }
 }

@@ -11,8 +11,10 @@ Starting repository version: `42f55166c3a12d86b24757880c11d2be7eb2f20c`. This is
 | Final project | https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/ |
 | Code and evidence | https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei |
 | Complete references beyond the form's existing rows | https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/main/docs/SUBMISSION_REFERENCES.md |
-| Human team's native seven-slide demo | https://docs.google.com/presentation/d/1gR2CjO5nO1_s5Aci4MeIxZWeSDTgK1VZyKbyME2TRgI/edit |
+| Reviewed seven-page English demo PDF | https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/main/outputs/submission/team_zasa_demo.pdf |
 | AI assistance record | https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/main/docs/submission/AI_USAGE.md |
+
+The original Google Slides file was not edited. Use the PDF above for the reviewed version; [corrections and delivery limits](deck_review.md) are recorded separately.
 
 Keep the NASA sources already entered in the form. The complete index supplements them and must not turn failed acquisitions into claimed data inputs.
 
@@ -47,7 +49,8 @@ Sources: [2026 Guide](https://www.spaceappschallenge.org/resources/project-submi
 - [ ] Confirm the original-code licensing decision. The official Terms specify NASA's Apache-2.0 fallback when no specific OSI licence is chosen; this review does not grant a licence on behalf of the team.
 - [ ] Resolve or omit any material whose reuse permission is not established. In particular, the Victoria Valley/Bull Pass source is recorded as CC BY-NC 4.0; confirm its permitted use. Preserve dust ShareAlike attribution and check the Slidesgo/template/image terms.
 - [ ] Confirm the complete AI tool list and any generated-media disclosure with all contributors.
-- [ ] Use the final reviewed seven-page demo/PDF link and test it signed out. Do not submit an earlier export by mistake.
+- [x] The reviewed seven-page English PDF was rendered and inspected, with all seven source-link annotations checked.
+- [ ] Select the reviewed PDF in the actual form, not the unchanged native Slides or an earlier export; retain the final public-download verification.
 - [ ] Confirm every participant's same-event membership, required form fields and the actual Taipei local judging schedule.
 - [ ] Submit before the relevant deadline, verify the success banner/confirmation, and retain that receipt.
 

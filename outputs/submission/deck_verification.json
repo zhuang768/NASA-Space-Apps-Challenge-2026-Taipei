@@ -1,0 +1,78 @@
+{
+  "original_native_url": "https://docs.google.com/presentation/d/1gR2CjO5nO1_s5Aci4MeIxZWeSDTgK1VZyKbyME2TRgI/edit",
+  "original_native_unchanged": true,
+  "original_export_sha256": "58a7d772ad3640e22a0935b46a293db16859f269f6d8ed68a1ec569483c4903c",
+  "starting_repository_commit": "42f55166c3a12d86b24757880c11d2be7eb2f20c",
+  "output": "outputs/submission/team_zasa_demo.pdf",
+  "output_bytes": 7987602,
+  "output_sha256": "c8982aff2f42b66b28ba19df866161baac1ee5faef50080218a61c977ec5cd77",
+  "pages": 7,
+  "pages_checked": [
+    {
+      "page": 1,
+      "source_link": true,
+      "size_pt": [
+        720,
+        405
+      ]
+    },
+    {
+      "page": 2,
+      "source_link": true,
+      "size_pt": [
+        720,
+        405
+      ]
+    },
+    {
+      "page": 3,
+      "source_link": true,
+      "size_pt": [
+        720,
+        405
+      ]
+    },
+    {
+      "page": 4,
+      "source_link": true,
+      "size_pt": [
+        720,
+        405
+      ]
+    },
+    {
+      "page": 5,
+      "source_link": true,
+      "size_pt": [
+        720,
+        405
+      ]
+    },
+    {
+      "page": 6,
+      "source_link": true,
+      "size_pt": [
+        720,
+        405
+      ]
+    },
+    {
+      "page": 7,
+      "source_link": true,
+      "size_pt": [
+        720,
+        405
+      ]
+    }
+  ],
+  "original_page_visuals": "flattened 120-dpi slide backgrounds, with vector correction overlays; not an editable native presentation",
+  "source_csv_sha256": "83a03d1f4273fa7c45c0d22b5c29a8b8cfc0544e481d5f2bbca2c85812534c4e",
+  "raw_table_values": "6 fields x 3 targets, read directly from retained final_candidates.csv and rounded as labelled",
+  "visual_review": "all 7 pages inspected after composition; observed missing glyphs and image-crop contamination corrected; page 5 then re-rendered and confirmed",
+  "limitations": [
+    "Not a NASA scientific approval or submission receipt",
+    "Native update received provider403; Drive copy rejected by automatic approval review; neither changed original",
+    "No PPTX delivered",
+    "Original scientific plots are retained, not newly validated; local Mars ice remains unconfirmed"
+  ]
+}

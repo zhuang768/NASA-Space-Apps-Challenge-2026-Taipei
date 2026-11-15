@@ -8,7 +8,7 @@ TerraMatch is Team ZASA's NASA Space Apps 2026 project. We used public data to c
 
 In the Earth test, we resampled 185 mapped polygons from Adventdalen, Svalbard. At 6.11 m grid spacing, median overlap with the original outlines was 0.71. Only 8 of 185 outlines stayed above or at 0.8 overlap for every grid placement. This tells us how much sampling alone can change a shape comparison. It does not measure recognition accuracy or establish a match with MS-03.
 
-[Project demo](https://docs.google.com/presentation/d/1gR2CjO5nO1_s5Aci4MeIxZWeSDTgK1VZyKbyME2TRgI/edit?usp=sharing) · [Three-site results and how to reproduce them](outputs/research/final-comparison-20261115/README.md) · [English report](docs/REPORT.md)
+[Reviewed seven-page project demo](outputs/submission/team_zasa_demo.pdf) · [Three-site results and how to reproduce them](outputs/research/final-comparison-20261115/README.md) · [English report](docs/REPORT.md)
 
 ## What the project shows
 
@@ -64,3 +64,5 @@ All 18 region/theme combinations were operated. Desktop, phone and tablet layout
 ## Submission links and final check
 
 The [complete data, software and research references](docs/SUBMISSION_REFERENCES.md) supplement the source rows in the submission form. They distinguish used data, literature, metadata checks and unsuccessful retrievals. See the [final checklist](docs/submission/FINAL_CHECKLIST.md), [official-rule retrieval record](docs/submission/official_requirements.json) and [AI assistance record](docs/submission/AI_USAGE.md). The repository is currently public; historical private-access receipts are preserved. Final account submission and team rights decisions still require human confirmation.
+
+The final [seven-page English demo PDF](outputs/submission/team_zasa_demo.pdf) includes corrected layout, raw regional values, explicit unknown morphology, clickable references and AI-assistance credit. The original native Google Slides is unchanged; use this PDF for the reviewed demo. See the [deck review](docs/submission/deck_review.md) for actual checks and delivery limits.

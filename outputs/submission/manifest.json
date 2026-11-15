@@ -23,6 +23,38 @@
       "path": "docs/submission/AI_USAGE.md",
       "bytes": 2435,
       "sha256": "6947498a3c863c53d37fd0f194a3346df249ed3f14ea577fc0fa1f9fa1a3a1b2"
+    },
+    {
+      "path": "outputs/submission/team_zasa_demo.pdf",
+      "bytes": 7987602,
+      "sha256": "c8982aff2f42b66b28ba19df866161baac1ee5faef50080218a61c977ec5cd77"
+    },
+    {
+      "path": "outputs/submission/deck_verification.json",
+      "bytes": 2139,
+      "sha256": "791af50987c356d370215fd2e55389974507a7016c3c471e3ef6400f492cc799"
+    },
+    {
+      "path": "docs/submission/deck_review.md",
+      "bytes": 3708,
+      "sha256": "3253d1bb31ed6ae32fed3f071a06dd37f45d7290aff8e719ee5dc3d2466fec1b"
+    },
+    {
+      "path": "docs/submission/FINAL_CHECKLIST.md",
+      "bytes": 5284,
+      "sha256": "c042ec623a417ee041501001642a0418b7d502f3e8f57a4ad0f9f0f56b628ec1"
+    },
+    {
+      "path": "outputs/submission/public_site_verification.json",
+      "bytes": 4246,
+      "sha256": "0f0dc5866360b8fa31a1744bfb3fe34346ea8a783ed7c4710d2b23efe2c9dbc8"
     }
-  ]
+  ],
+  "demo": {
+    "path": "outputs/submission/team_zasa_demo.pdf",
+    "pages": 7,
+    "language": "English",
+    "native_original_unchanged": true,
+    "format": "PDF; not editable native Slides/PPTX"
+  }
 }

@@ -15,6 +15,11 @@
   ],
   "files": [
     {
+      "path": ".gitattributes",
+      "bytes": 46,
+      "sha256": "9c0388608698004dfc747bc69cae59c0b53470acb1d71b46eb64c4409498b0c4"
+    },
+    {
       "path": ".gitignore",
       "bytes": 148,
       "sha256": "5df536946f922b9acf002f1f062a91b912d40e177c6a71fb131586b54fa12842"
@@ -26,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8434,
-      "sha256": "2dddf12c6b72d03b69f02a46063ac282e94b752116e50144a967f83991e44cd6"
+      "bytes": 8772,
+      "sha256": "fc9c899eac5326d3ecacade364cf512e120d439724c1d819be6c7c069e7ae4f5"
     },
     {
       "path": "analog/__init__.py",
@@ -126,8 +131,13 @@
     },
     {
       "path": "docs/submission/FINAL_CHECKLIST.md",
-      "bytes": 4943,
-      "sha256": "ba022dde29e6b3c835b5ce512be56a1141e4288898e719aafe9331b6907cd03f"
+      "bytes": 5284,
+      "sha256": "c042ec623a417ee041501001642a0418b7d502f3e8f57a4ad0f9f0f56b628ec1"
+    },
+    {
+      "path": "docs/submission/deck_review.md",
+      "bytes": 3708,
+      "sha256": "3253d1bb31ed6ae32fed3f071a06dd37f45d7290aff8e719ee5dc3d2466fec1b"
     },
     {
       "path": "docs/submission/official_requirements.json",
@@ -221,8 +231,8 @@
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/manifest.json",
-      "bytes": 12756,
-      "sha256": "f36d29969282b8bb3ec13713fdec97a2648ef413a20909b2d02b55f542c50e66"
+      "bytes": 12833,
+      "sha256": "665079983d13fd33a23641e150fbc12a8eb3a1b4152853a990c51c291acaf42a"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/SOURCE_PROVENANCE.md",
@@ -730,9 +740,14 @@
       "sha256": "388ca89110b2a8fbb4fc6fa403994ab54cd193fd23eefd8aa5987a75e3255ba5"
     },
     {
+      "path": "outputs/submission/deck_verification.json",
+      "bytes": 2139,
+      "sha256": "791af50987c356d370215fd2e55389974507a7016c3c471e3ef6400f492cc799"
+    },
+    {
       "path": "outputs/submission/final_verification.json",
-      "bytes": 507,
-      "sha256": "03bd2a42f136732d2fc451cdf0996eaad13cf8120ade3cb69259a415c49ce5e7"
+      "bytes": 1322,
+      "sha256": "2259a16de0f77d1b0defe9bc61c01284972c9d2c9d641c4d35d28d7d254179e3"
     },
     {
       "path": "outputs/submission/link_checks.json",
@@ -741,13 +756,23 @@
     },
     {
       "path": "outputs/submission/manifest.json",
-      "bytes": 1082,
-      "sha256": "616f5bec662f6c82bd31bb51171bff7cc9734e2a81d9b9b1edc01dbc6a16f095"
+      "bytes": 2155,
+      "sha256": "b060e0ed6c26b15c779149d6ecf219e540684a5223b97d108d16664e0f48f22e"
+    },
+    {
+      "path": "outputs/submission/public_site_verification.json",
+      "bytes": 4246,
+      "sha256": "0f0dc5866360b8fa31a1744bfb3fe34346ea8a783ed7c4710d2b23efe2c9dbc8"
     },
     {
       "path": "outputs/submission/references.csv",
       "bytes": 69620,
       "sha256": "18fb8258936303b85e00d669d5b61bcde8034dc7e4d70192794718ed3aaf0557"
+    },
+    {
+      "path": "outputs/submission/team_zasa_demo.pdf",
+      "bytes": 7987602,
+      "sha256": "c8982aff2f42b66b28ba19df866161baac1ee5faef50080218a61c977ec5cd77"
     },
     {
       "path": "requirements.txt",

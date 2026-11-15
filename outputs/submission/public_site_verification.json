@@ -1,0 +1,85 @@
+{
+  "checked_at_utc": "2026-11-15T07:36:27.368142+00:00",
+  "commit": "cd6a9f732490179e87f4ded05eb9f25a8c3ae277",
+  "github_access": [
+    {
+      "url": "https://raw.githubusercontent.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/cd6a9f732490179e87f4ded05eb9f25a8c3ae277/docs/SUBMISSION_REFERENCES.md",
+      "path": "docs/SUBMISSION_REFERENCES.md",
+      "anonymous": true,
+      "remote_bytes": 92616,
+      "local_sha256": "9e09d33b9cf1a8fca4c1b25c8a2b72b35da7d298f0bf7c971b38de659042a9a6",
+      "public_sha256": "9e09d33b9cf1a8fca4c1b25c8a2b72b35da7d298f0bf7c971b38de659042a9a6",
+      "pass": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/cd6a9f732490179e87f4ded05eb9f25a8c3ae277/outputs/submission/references.csv",
+      "path": "outputs/submission/references.csv",
+      "anonymous": true,
+      "remote_bytes": 69620,
+      "local_sha256": "18fb8258936303b85e00d669d5b61bcde8034dc7e4d70192794718ed3aaf0557",
+      "public_sha256": "18fb8258936303b85e00d669d5b61bcde8034dc7e4d70192794718ed3aaf0557",
+      "pass": true
+    },
+    {
+      "url": "https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/cd6a9f732490179e87f4ded05eb9f25a8c3ae277/docs/SUBMISSION_REFERENCES.md",
+      "anonymous": true,
+      "remote_bytes": 549705,
+      "content_marker_found": true,
+      "pass": true
+    }
+  ],
+  "url": "https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/",
+  "build_id": "0c4f1a5e-1d82-48bc-83f2-046b1c6c3ad4",
+  "worker_version": "6f9bdf9b-e343-4c7a-8453-0bf78c30c1ac",
+  "build_conclusion": "success",
+  "deployment_fingerprint": {
+    "release": "zasa-terramatch-submission-references-20261115",
+    "assets_sha256": {
+      "style.css": "b4fe1a0243b7d746cf8d2ce0d2d561393d79f546da0aaa7eada5ee00a8a024c6",
+      "mola.jpg": "72a590d14106909381ab65f86b4cc0e455670a6467431a441a84216d92e9e3bb",
+      "index.html": "4ab4e20f9ea65b8c48c0448891811d86523d0c672ea46e7e87162eb5a047a9c4",
+      "app.js": "a39d1039daea51d1761ad39baf4d85eca14852501661e5c7a1a6e0afe2c7aafa"
+    },
+    "regional_metrics_research_commit": "1506ede572435588eb5e64f95f24639279b77e56",
+    "regional_metrics_blob": "2371ade1c27087efaa165acb98b7541266eaa606",
+    "model_table_sha256": "639e447ed2f074a162f73a2b804c198b7b2142945bb7530f7b3c253c780295fa",
+    "scope": "three-site research demonstrator (interactive single-screen redesign); no local ice detection; zoomed map streams NASA Trek MOLA tiles at runtime",
+    "verification_note": "Submission source-index and AI-disclosure links added; no chart values changed. Public verification is recorded in outputs/submission/final_verification.json after deployment."
+  },
+  "checks": [
+    {
+      "path": "index.html",
+      "public_bytes": 6196,
+      "public_sha256": "4ab4e20f9ea65b8c48c0448891811d86523d0c672ea46e7e87162eb5a047a9c4",
+      "local_sha256": "4ab4e20f9ea65b8c48c0448891811d86523d0c672ea46e7e87162eb5a047a9c4",
+      "fingerprint_sha256": "4ab4e20f9ea65b8c48c0448891811d86523d0c672ea46e7e87162eb5a047a9c4",
+      "pass": true
+    },
+    {
+      "path": "style.css",
+      "public_bytes": 11787,
+      "public_sha256": "b4fe1a0243b7d746cf8d2ce0d2d561393d79f546da0aaa7eada5ee00a8a024c6",
+      "local_sha256": "b4fe1a0243b7d746cf8d2ce0d2d561393d79f546da0aaa7eada5ee00a8a024c6",
+      "fingerprint_sha256": "b4fe1a0243b7d746cf8d2ce0d2d561393d79f546da0aaa7eada5ee00a8a024c6",
+      "pass": true
+    },
+    {
+      "path": "app.js",
+      "public_bytes": 55217,
+      "public_sha256": "a39d1039daea51d1761ad39baf4d85eca14852501661e5c7a1a6e0afe2c7aafa",
+      "local_sha256": "a39d1039daea51d1761ad39baf4d85eca14852501661e5c7a1a6e0afe2c7aafa",
+      "fingerprint_sha256": "a39d1039daea51d1761ad39baf4d85eca14852501661e5c7a1a6e0afe2c7aafa",
+      "pass": true
+    },
+    {
+      "path": "mola.jpg",
+      "public_bytes": 521522,
+      "public_sha256": "72a590d14106909381ab65f86b4cc0e455670a6467431a441a84216d92e9e3bb",
+      "local_sha256": "72a590d14106909381ab65f86b4cc0e455670a6467431a441a84216d92e9e3bb",
+      "fingerprint_sha256": "72a590d14106909381ab65f86b4cc0e455670a6467431a441a84216d92e9e3bb",
+      "pass": true
+    }
+  ],
+  "all_assets_match": true,
+  "redirects_followed": true
+}

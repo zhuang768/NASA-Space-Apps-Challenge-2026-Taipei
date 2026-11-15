@@ -1,13 +1,26 @@
 {
-  "status": "in_progress",
+  "status": "completed_with_human_submission_actions_pending",
   "date_taipei": "2026-11-15",
   "starting_main": "42f55166c3a12d86b24757880c11d2be7eb2f20c",
   "reference_count": 141,
   "source_record_and_local_link_checks": "passed",
   "official_details_guide_faq_terms": "retrieved",
-  "corrected_seven_page_pdf": "render_review_in_progress",
-  "public_reference_links": "verification_after_push",
+  "corrected_seven_page_pdf": "rendered_and_visually_checked",
+  "public_reference_links": "anonymous_access_and_hashes_verified",
   "account_submission_verified": false,
   "team_original_code_licence_decision": "not_confirmed",
-  "all_third_party_rights_cleared": false
+  "all_third_party_rights_cleared": false,
+  "pdf_sha256": "c8982aff2f42b66b28ba19df866161baac1ee5faef50080218a61c977ec5cd77",
+  "pdf_page_count": 7,
+  "website": "build_success;four_public_assets_match",
+  "source_dialog": "complete_reference_and_AI_links_operated_on_public_site",
+  "public_pdf_download": "verification_after_pdf_push",
+  "science_values": "unchanged",
+  "actual_submit_action": "not_performed",
+  "remaining_human_actions": [
+    "Confirm original-code licensing and applicable third-party rights, including NC data if used and the template/media terms",
+    "Confirm all AI tool roles and disclosures",
+    "Check actual same-event membership and form values; select the reviewed PDF",
+    "Click Submit for Judging before the event deadline and verify the success confirmation"
+  ]
 }

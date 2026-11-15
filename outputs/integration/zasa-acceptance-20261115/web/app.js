@@ -105,11 +105,26 @@ function loadPatch(k) {
     try {
       var d = g.getImageData(0, 0, w, hh).data;
       patch = { data: new Uint32Array(d.buffer), w: w, h: hh, lon0: c0 / 128 * 360 - 180, lon1: (c1 + 1) / 128 * 360 - 180,
-        lat0: 90 - r0 / 64 * 180, lat1: 90 - (r1 + 1) / 64 * 180 };
+        lat0: 90 - r0 / 64 * 180, lat1: 90 - (r1 + 1) / 64 * 180, gain: [1, 1, 1] };
+      matchColor(patch);
       $('hint').textContent = hintText();
       drawGlobe();
     } catch (e) { patch = null; }
   }
+}
+function matchColor(p) {
+  if (!tex) return;
+  var bs = [0, 0, 0], ps = [0, 0, 0], n = 0;
+  for (var a = 0; a < 24; a++) for (var b = 0; b < 24; b++) {
+    var fx = (a + 0.5) / 24, fy = (b + 0.5) / 24;
+    var lon = p.lon0 + fx * (p.lon1 - p.lon0), lat = p.lat0 + fy * (p.lat1 - p.lat0);
+    var u = ((lon + 360) % 360) / 360, v = (90 - lat) / 180;
+    var c = tex[Math.min(texH - 1, (v * texH) | 0) * texW + Math.min(texW - 1, (u * texW) | 0)];
+    var d = p.data[Math.min(p.h - 1, (fy * p.h) | 0) * p.w + Math.min(p.w - 1, (fx * p.w) | 0)];
+    bs[0] += c & 255; bs[1] += (c >> 8) & 255; bs[2] += (c >> 16) & 255;
+    ps[0] += d & 255; ps[1] += (d >> 8) & 255; ps[2] += (d >> 16) & 255; n++;
+  }
+  for (var k = 0; k < 3; k++) p.gain[k] = ps[k] > 0 ? Math.max(0.6, Math.min(1.8, bs[k] / ps[k])) : 1;
 }
 function hintText() {
   return 'Drag to move. Colors show elevation, blue low to red high.' + (patch ? ' Detail: 463 m per pixel.' : '');
@@ -168,7 +183,7 @@ function drawGlobe() {
         var pd = phi / RAD;
         var wx = (ld - pz.lon0) / (pz.lon1 - pz.lon0), wy = (pz.lat0 - pd) / (pz.lat0 - pz.lat1);
         if (wx > 0 && wx < 1 && wy > 0 && wy < 1) {
-          var e = Math.min(wx, 1 - wx, wy, 1 - wy) * 12; if (e > 1) e = 1;
+          var e = Math.min(wx, 1 - wx, wy, 1 - wy) * 5; if (e > 1) e = 1;
           var qx = wx * pz.w - 0.5, qy = wy * pz.h - 0.5, qx0 = Math.floor(qx), qy0 = Math.floor(qy), bx = qx - qx0, by = qy - qy0;
           if (qx0 < 0) qx0 = 0; if (qy0 < 0) qy0 = 0; if (qx0 > pz.w - 2) qx0 = pz.w - 2; if (qy0 > pz.h - 2) qy0 = pz.h - 2;
           var q = qy0 * pz.w + qx0, p00 = pz.data[q], p10 = pz.data[q + 1], p01 = pz.data[q + pz.w], p11 = pz.data[q + pz.w + 1];
@@ -176,6 +191,7 @@ function drawGlobe() {
           var pr = (p00 & 255) * v00 + (p10 & 255) * v10 + (p01 & 255) * v01 + (p11 & 255) * v11;
           var pg = ((p00 >> 8) & 255) * v00 + ((p10 >> 8) & 255) * v10 + ((p01 >> 8) & 255) * v01 + ((p11 >> 8) & 255) * v11;
           var pb = ((p00 >> 16) & 255) * v00 + ((p10 >> 16) & 255) * v10 + ((p01 >> 16) & 255) * v01 + ((p11 >> 16) & 255) * v11;
+          pr *= pz.gain[0]; pg *= pz.gain[1]; pb *= pz.gain[2];
           rr += (pr - rr) * e; gg += (pg - gg) * e; bb += (pb - bb) * e;
         }
       }

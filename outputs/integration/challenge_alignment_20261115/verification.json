@@ -31,7 +31,8 @@
     "website_static_values": {
       "status": "pass",
       "values_compared_with_final_candidates": 30,
-      "numeric_values_changed": false
+      "numeric_values_changed": false,
+      "Earth_monthly_mean_min_max_values_compared": 33
     },
     "website_units_and_semantics": {
       "status": "pass",
@@ -49,7 +50,12 @@
       "browser_error_logs": [],
       "mobile_breakpoint_check": "not_run",
       "public_deployment_check": "not_run",
-      "Earth_check_tab_scope_verified": true
+      "Earth_check_tab_scope_verified": true,
+      "Earth_matrix_click": true,
+      "matrix_check_method": "aria-pressed attribute",
+      "Mars_context_overlay_toggle": true,
+      "grayscale_toggle": true,
+      "synthetic_daily_waveforms_removed": true
     },
     "javascript_syntax": {
       "status": "pass",
@@ -65,7 +71,7 @@
     },
     "git_whitespace": {
       "status": "pass",
-      "command": "git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff --check ec3f38fd018b55b993232151d441d84286676da3 HEAD",
+      "command": "git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff --check 1a0f6ba0ac1fa003f049498b56a76b10e7d876ab HEAD",
       "note": "Standard CSV CRLF record endings retained; other trailing whitespace checks remain enabled."
     },
     "AD1_digital_grid_phase_replay": {
@@ -82,5 +88,5 @@
   "submission_completed": false,
   "public_deployment_verified": false,
   "C2C_review": "not_used;user_requested_local_verification_after_auto_review_rejection",
-  "integrated_main": "ec3f38fd018b55b993232151d441d84286676da3"
+  "integrated_main": "1a0f6ba0ac1fa003f049498b56a76b10e7d876ab"
 }

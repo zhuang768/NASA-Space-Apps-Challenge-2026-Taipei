@@ -297,29 +297,29 @@
     },
     {
       "path": "web/SOURCE_PROVENANCE.md",
-      "size": 2987,
-      "sha256": "ae09886ac03da8546089823bd0704ac7d211ee46a46db860adfacd7dee411601",
-      "git_blob": "e38db955796bdf0a64b5ce79f7b6c55e59ad3700"
+      "size": 3710,
+      "sha256": "7cdd5d193c149faea224bc653f6022c69e2edef621c45fff8928036f1bdf6c21",
+      "git_blob": "2bd24880092d7cefedbd3ce10de7b68cc4d19983"
     },
     {
       "path": "web/app.js",
-      "size": 4612,
-      "sha256": "a2f43f2f0a1600fecacc2b0c15f53f0aabded08c9cc6494a2efc3e2125572493",
-      "git_blob": "61b7cb9e24c8d61ada417bdc73640eb539e32f69",
+      "size": 47440,
+      "sha256": "3bfa172ba7e37669ba54ca79ca74d30d1ea7f965fa2209caf7fa2c729c585376",
+      "git_blob": "79419780f42d5d3f3efb39dc3429e99162ea02d7",
       "bytes": 46219
     },
     {
       "path": "web/deployment.json",
-      "size": 824,
-      "sha256": "28dff28035927a6ef27e4bfdfa399988ecb41a82f944c63e788bb7d8845514a9",
-      "git_blob": "fceda4b2ddb133c0e7e1bd42bd0d5840599adba3",
+      "size": 964,
+      "sha256": "92b9225df186a4a761be0d954dfc6fc4be9ce0bcc50a1a75e072fb62fd4bfe97",
+      "git_blob": "b45ace4c4f69077a167e49304e44ae3e6f876d24",
       "bytes": 840
     },
     {
       "path": "web/index.html",
-      "size": 6059,
-      "sha256": "cd4f9ec838fda2813e7d00c1a400bc8d2e6ddb5c94e78f55d213b8c8ab3facdb",
-      "git_blob": "d2b238e3ec5b7ce8d6a03ee23d1a4cc742e96ae3",
+      "size": 4797,
+      "sha256": "d086631aeb2e05bd33f994130cafea3fb037f99d9361a69fa41f89d0b37930d2",
+      "git_blob": "3ee23d74fbef8d6210438db9beb7c2709d866ec0",
       "bytes": 4246
     },
     {
@@ -331,10 +331,16 @@
     },
     {
       "path": "web/style.css",
-      "size": 6954,
+      "size": 8135,
       "sha256": "4c3e04a4d508357f30e2ccf983ce8ae81ea4d85500af1f9e7ecb7b88d07f7ef1",
       "git_blob": "d987a9e1ef4c0a22bfaf468c7e60f03e30cfd8d6",
       "bytes": 8135
     }
-  ]
+  ],
+  "current_asset_update": {
+    "source_main": "1a0f6ba0ac1fa003f049498b56a76b10e7d876ab",
+    "scope": "Preserved Earth matrix,interactive charts and map controls;corrected scientific labels;replaced artificial daily waves with summary bars",
+    "deployment_verified": false,
+    "science_values_changed": false
+  }
 }

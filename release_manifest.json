@@ -96,8 +96,8 @@
     },
     {
       "path": "docs/CHALLENGE_ALIGNMENT.md",
-      "bytes": 10026,
-      "sha256": "edb50ec3d6b7b1abf60890774852751fd2376b78f2648b16649108fb44b76a6f"
+      "bytes": 10528,
+      "sha256": "d367e84bc0084183a3da5f8ead3915afdbfb7d79aa79549fa9e8e3345406328e"
     },
     {
       "path": "docs/REPORT.md",
@@ -131,13 +131,13 @@
     },
     {
       "path": "outputs/integration/challenge_alignment_20261115/browser_panels.json",
-      "bytes": 1781,
-      "sha256": "1087520d3a1be3132e2560402c2a97693ad1a8c3c2e91a39a23d4f192e0f20bc"
+      "bytes": 1865,
+      "sha256": "e7ce75329c45ec1e899fcfc04735c75a05870cd2f65e82a4a1d55dcc3e931af6"
     },
     {
       "path": "outputs/integration/challenge_alignment_20261115/local_earth_labels.png",
-      "bytes": 90542,
-      "sha256": "62d231f38d70096e9d462597ec557aa2ffef4a1220717c466dbfc54736008f33"
+      "bytes": 81621,
+      "sha256": "00acf84a0e1342b947a717ea5d07d1106cc874d22283fb30d1d71a9b0f55c748"
     },
     {
       "path": "outputs/integration/challenge_alignment_20261115/local_ice_labels.png",
@@ -146,8 +146,8 @@
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/manifest.json",
-      "bytes": 12708,
-      "sha256": "4eb1288cdca60c5824e50a11c2bd6b7c76aa94c26a4e75fe29bb1537e4851812"
+      "bytes": 12651,
+      "sha256": "2a3bae4863e2d9a76f0eb739367ecdf893081f2ba08243f07a374699dfbe7499"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/SOURCE_PROVENANCE.md",
@@ -156,18 +156,18 @@
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/app.js",
-      "bytes": 42404,
-      "sha256": "83cfe7597b43393077b34539f0dc859f207000d21f4e283b5273bbd0cbea7d2e"
+      "bytes": 47440,
+      "sha256": "3bfa172ba7e37669ba54ca79ca74d30d1ea7f965fa2209caf7fa2c729c585376"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/deployment.json",
-      "bytes": 944,
-      "sha256": "7897ca099fb6341acf6bdf4f9ad49691516747dde533a122d6111c2ffd0ba6b4"
+      "bytes": 964,
+      "sha256": "92b9225df186a4a761be0d954dfc6fc4be9ce0bcc50a1a75e072fb62fd4bfe97"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/index.html",
-      "bytes": 4639,
-      "sha256": "06794fa47b882ff090e6c5d2af3f708033d9120318952444bd4468405eb4327e"
+      "bytes": 4797,
+      "sha256": "d086631aeb2e05bd33f994130cafea3fb037f99d9361a69fa41f89d0b37930d2"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/mola.jpg",
@@ -176,8 +176,8 @@
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/style.css",
-      "bytes": 7864,
-      "sha256": "3f93d30f0c9021859cf2c92e188b78dd1e34100bc7b6c60b637b28d5d58755ec"
+      "bytes": 8135,
+      "sha256": "4c3e04a4d508357f30e2ccf983ce8ae81ea4d85500af1f9e7ecb7b88d07f7ef1"
     },
     {
       "path": "outputs/research/MS-03/repository_validation_20261115/README.md",
@@ -715,5 +715,5 @@
       "sha256": "ee9650dbf8d22ed5e9f51b65c8c24ebff5c6e978bb4a57961b6fb9722646914c"
     }
   ],
-  "integrated_main": "ec3f38fd018b55b993232151d441d84286676da3"
+  "integrated_main": "1a0f6ba0ac1fa003f049498b56a76b10e7d876ab"
 }

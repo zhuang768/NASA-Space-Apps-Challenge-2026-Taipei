@@ -92,8 +92,9 @@
       "rendered": true
     }
   ],
-  "matrixCellClick": false,
+  "matrixCellClick": true,
   "marsOverlayToggle": true,
   "grayscaleToggle": true,
-  "scope": "local interaction tests;not scientific or deployment validation"
+  "scope": "local interaction tests;not scientific or deployment validation",
+  "matrixCheckMethod": "aria-pressed attribute on selected AD1 terrain button"
 }

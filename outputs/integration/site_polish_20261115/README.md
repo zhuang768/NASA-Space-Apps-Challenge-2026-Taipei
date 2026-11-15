@@ -42,4 +42,10 @@ Browser checks are recorded observations, not an automated browser-test suite. G
 
 Local Mars ice presence, depth and amount remain unconfirmed. Earth records are method references, not validated Mars matches. MS-03 fixed-window morphology remains unknown. The precise published definition of University Valley's reported temperature variation was not newly verified; the interface does not rename it daily amplitude. No generated waveform, local mineral interpretation or similarity percentage was added.
 
-Public deployment verification will be recorded separately after the push and the existing Cloudflare build.
+## Public deployment
+
+Cloudflare deployed code `e26bc0541b21f371a2ac5c8299e8d1412aeb214d` successfully. Build `da71e1cf-8869-4bce-9aaa-fbfe48445a0c`, Worker version `d186c80e-7075-4b38-93bf-b7f96f52af82`.
+
+The public fingerprint and four assets match the local files byte-for-byte. Redirects were followed: `/index.html` redirects to the canonical root. Public desktop source disclosure and mobile region/Earth-matrix selection were operated, with no horizontal overflow at 1440 px or 390 px. See [the deployment receipt](public_deployment_verification.json), [public desktop capture](public_desktop.png) and [public mobile capture](public_mobile.png).
+
+The later verification-record commit changes documentation and inventory metadata only; the deployed four-file payload is unchanged.

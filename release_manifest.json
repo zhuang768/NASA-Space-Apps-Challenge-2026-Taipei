@@ -26,8 +26,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6553,
-      "sha256": "44d8679ba75eed50893f2e2a4dc0e5f99fe7911ec8c740de3cb2c9932bd695de"
+      "bytes": 6645,
+      "sha256": "717419c807ea950c56302016e79975b38ade71ff37fa11a9d919077aa53ed4fd"
     },
     {
       "path": "analog/__init__.py",
@@ -146,8 +146,8 @@
     },
     {
       "path": "outputs/integration/site_polish_20261115/README.md",
-      "bytes": 3861,
-      "sha256": "7a806d6cd85993e0b45d3ec09367a2805e665e2ee8496e738857765517de4c57"
+      "bytes": 4539,
+      "sha256": "9a48358e6b1f7b021b7cc2d50494ad274dbcb858574cec2a96e83fac6755417b"
     },
     {
       "path": "outputs/integration/site_polish_20261115/browser_checks.json",
@@ -180,14 +180,29 @@
       "sha256": "afe3c5cc92679a844be4540ad6f1ddaf0376b418cbe67661aba09e65f9a3e743"
     },
     {
+      "path": "outputs/integration/site_polish_20261115/public_deployment_verification.json",
+      "bytes": 4004,
+      "sha256": "467ba66ffce2325c54d1e19af2d83377ec7473ff12be932f2e98befe6a1e6fb7"
+    },
+    {
+      "path": "outputs/integration/site_polish_20261115/public_desktop.png",
+      "bytes": 123100,
+      "sha256": "c339160bdbf48114092ab974c7ffc8b27df548f336f2b619656c5052c383bd08"
+    },
+    {
+      "path": "outputs/integration/site_polish_20261115/public_mobile.png",
+      "bytes": 101849,
+      "sha256": "0b80e46252c0a1864ea3d1297cd6a57f35eb4cad2d6039a6bc9e94f39e3d228d"
+    },
+    {
       "path": "outputs/integration/site_polish_20261115/value_preservation.json",
       "bytes": 944,
       "sha256": "e5fb29d4c70c49f7f1010603e502ec293dd1392a20c1d6ee1ce7478a52511db2"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/manifest.json",
-      "bytes": 12640,
-      "sha256": "b3c0b9042dac275be0f3225ab95513857c6ecda1e48a413067db0f5adcc44abb"
+      "bytes": 12819,
+      "sha256": "5eb447aade0e988f59a2d2b6ac274928c26998b57e99937c5e9dd4cf43a8718d"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/SOURCE_PROVENANCE.md",

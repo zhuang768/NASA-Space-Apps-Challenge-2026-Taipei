@@ -1,0 +1,81 @@
+{
+  "checked_at_utc": "2026-11-15T07:10:10.872791+00:00",
+  "commit": "e26bc0541b21f371a2ac5c8299e8d1412aeb214d",
+  "url": "https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/",
+  "build_id": "da71e1cf-8869-4bce-9aaa-fbfe48445a0c",
+  "worker_version": "d186c80e-7075-4b38-93bf-b7f96f52af82",
+  "build_conclusion": "success",
+  "deployment_fingerprint": {
+    "release": "zasa-terramatch-evidence-ui-20261115",
+    "assets_sha256": {
+      "style.css": "b4fe1a0243b7d746cf8d2ce0d2d561393d79f546da0aaa7eada5ee00a8a024c6",
+      "mola.jpg": "72a590d14106909381ab65f86b4cc0e455670a6467431a441a84216d92e9e3bb",
+      "index.html": "98ddbdeba0ae28241b804eff4d49e6e9a3a14ae8dedc119f32693e215140c78d",
+      "app.js": "a39d1039daea51d1761ad39baf4d85eca14852501661e5c7a1a6e0afe2c7aafa"
+    },
+    "regional_metrics_research_commit": "1506ede572435588eb5e64f95f24639279b77e56",
+    "regional_metrics_blob": "2371ade1c27087efaa165acb98b7541266eaa606",
+    "model_table_sha256": "639e447ed2f074a162f73a2b804c198b7b2142945bb7530f7b3c253c780295fa",
+    "scope": "three-site research demonstrator (interactive single-screen redesign); no local ice detection; zoomed map streams NASA Trek MOLA tiles at runtime",
+    "verification_note": "Desktop, phone and tablet local UI checks recorded in outputs/integration/site_polish_20261115; public asset verification follows the existing Cloudflare build. No scientific analogy validation."
+  },
+  "checks": [
+    {
+      "path": "index.html",
+      "remote_bytes": 5749,
+      "public_sha256": "98ddbdeba0ae28241b804eff4d49e6e9a3a14ae8dedc119f32693e215140c78d",
+      "local_sha256": "98ddbdeba0ae28241b804eff4d49e6e9a3a14ae8dedc119f32693e215140c78d",
+      "fingerprint_sha256": "98ddbdeba0ae28241b804eff4d49e6e9a3a14ae8dedc119f32693e215140c78d",
+      "pass": true,
+      "redirects_followed": true
+    },
+    {
+      "path": "style.css",
+      "remote_bytes": 11787,
+      "public_sha256": "b4fe1a0243b7d746cf8d2ce0d2d561393d79f546da0aaa7eada5ee00a8a024c6",
+      "local_sha256": "b4fe1a0243b7d746cf8d2ce0d2d561393d79f546da0aaa7eada5ee00a8a024c6",
+      "fingerprint_sha256": "b4fe1a0243b7d746cf8d2ce0d2d561393d79f546da0aaa7eada5ee00a8a024c6",
+      "pass": true,
+      "redirects_followed": true
+    },
+    {
+      "path": "app.js",
+      "remote_bytes": 55217,
+      "public_sha256": "a39d1039daea51d1761ad39baf4d85eca14852501661e5c7a1a6e0afe2c7aafa",
+      "local_sha256": "a39d1039daea51d1761ad39baf4d85eca14852501661e5c7a1a6e0afe2c7aafa",
+      "fingerprint_sha256": "a39d1039daea51d1761ad39baf4d85eca14852501661e5c7a1a6e0afe2c7aafa",
+      "pass": true,
+      "redirects_followed": true
+    },
+    {
+      "path": "mola.jpg",
+      "remote_bytes": 521522,
+      "public_sha256": "72a590d14106909381ab65f86b4cc0e455670a6467431a441a84216d92e9e3bb",
+      "local_sha256": "72a590d14106909381ab65f86b4cc0e455670a6467431a441a84216d92e9e3bb",
+      "fingerprint_sha256": "72a590d14106909381ab65f86b4cc0e455670a6467431a441a84216d92e9e3bb",
+      "pass": true,
+      "redirects_followed": true
+    }
+  ],
+  "all_assets_match": true,
+  "note": "index.html redirects to canonical root; redirects followed for every asset.",
+  "browser": {
+    "desktop": {
+      "width": 1440,
+      "documentWidth": 1440,
+      "region": "MS-03",
+      "tab": "Water / ice",
+      "sourceDisclosureOperated": true,
+      "pinnedSourceCommit": "25b0744ac3d2230803505e1679109c2c35b6204d"
+    },
+    "mobile": {
+      "phase": "after Earth matrix cell selection",
+      "documentWidth": 390,
+      "evidenceText": "Haughton crater, Devon Island, Ice: Earth evidenceBounded radar/core method reference after overburden excavation; not intact-cover validation. Published sourceUse here: a method reference. Excavated cover does not validate intact-cover detection. Separate thaw and radar records cannot be combined into one ice truth.",
+      "heading": "MS-02",
+      "headingTop": -258,
+      "selectedEarthCell": "Haughton, Ice: Earth evidence",
+      "width": 390
+    }
+  }
+}

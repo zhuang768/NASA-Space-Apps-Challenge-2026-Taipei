@@ -340,7 +340,9 @@
   "current_asset_update": {
     "source_main": "25b0744ac3d2230803505e1679109c2c35b6204d",
     "scope": "Evidence hierarchy, source-and-scale disclosure, aligned regional plots and responsive navigation; science arrays preserved",
-    "deployment_verified": false,
-    "science_values_changed": false
+    "deployment_verified": true,
+    "science_values_changed": false,
+    "verified_code_commit": "e26bc0541b21f371a2ac5c8299e8d1412aeb214d",
+    "verification_receipt": "outputs/integration/site_polish_20261115/public_deployment_verification.json"
   }
 }

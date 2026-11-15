@@ -1,0 +1,11 @@
+direction_hypothesis,origin_offset_hypothesis_m,paper_station_quoted_m,raw_trace_candidate_zero_based,within_raw_profile,assigned_B7_trace,note,raw_top_amp_signed_int32,published_top_amp,candidate_odometer_m,rawGPS_bracketed,surface_sample,published_top_pick_sample,top_relative_TWT_ns,published_interpretation_depth_m
+forward,-10,29,1900,True,NA,HYPOTHETICAL mapping; not accepted registration,552832,552832.0,19.0,False,101.0,280.0,11.537109375,0.788524477
+forward,-5,29,2400,True,NA,HYPOTHETICAL mapping; not accepted registration,189952,189952.0,24.0,False,101.0,253.0,9.796875,0.669585031
+forward,0,29,2900,True,NA,HYPOTHETICAL mapping; not accepted registration,-199872,-199872.0,29.0,False,101.0,314.0,13.728515625,0.938300076
+forward,5,29,3400,False,NA,HYPOTHETICAL mapping; not accepted registration,,,,,,,,
+forward,10,29,3900,False,NA,HYPOTHETICAL mapping; not accepted registration,,,,,,,,
+reverse,-10,29,1323,True,NA,HYPOTHETICAL mapping; not accepted registration,,,13.23,True,101.0,,,
+reverse,-5,29,823,True,NA,HYPOTHETICAL mapping; not accepted registration,902848,902848.0,8.23,True,101.0,262.0,10.376953125,0.709231513
+reverse,0,29,323,True,NA,HYPOTHETICAL mapping; not accepted registration,-916096,-916096.0,3.23,True,101.0,241.0,9.0234375,0.616723055
+reverse,5,29,-177,False,NA,HYPOTHETICAL mapping; not accepted registration,,,,,,,,
+reverse,10,29,-677,False,NA,HYPOTHETICAL mapping; not accepted registration,,,,,,,,

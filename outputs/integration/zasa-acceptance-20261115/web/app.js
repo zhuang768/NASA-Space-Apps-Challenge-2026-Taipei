@@ -77,7 +77,7 @@ function stars() {
 /* ---------- globe ---------- */
 var HOME = { lon: 157 * RAD, lat: 40 * RAD, zoom: 1 };
 var view = { lon: HOME.lon, lat: HOME.lat, zoom: 1 };
-var selected = -1;
+var selected = -1, mono = false;
 var texW = 0, texH = 0, tex = null;
 var canvas = $('globe'), ctx = canvas.getContext('2d');
 var N = canvas.width, R = N / 2;
@@ -127,7 +127,7 @@ function matchColor(p) {
   for (var k = 0; k < 3; k++) p.gain[k] = ps[k] > 0 ? Math.max(0.6, Math.min(1.8, bs[k] / ps[k])) : 1;
 }
 function hintText() {
-  return 'Drag to move. Colors show elevation, blue low to red high.' + (patch ? ' Detail: 463 m per pixel.' : '');
+  return (mono ? 'Drag to move. Gray shows relief shading only.' : 'Drag to move. Colors show elevation, blue low to red high.') + (patch ? ' Detail: 463 m per pixel.' : '');
 }
 var frame = ctx.createImageData(N, N);
 var out = new Uint32Array(frame.data.buffer);
@@ -195,6 +195,7 @@ function drawGlobe() {
           rr += (pr - rr) * e; gg += (pg - gg) * e; bb += (pb - bb) * e;
         }
       }
+      if (mono) { var lm = (rr * 0.3 + gg * 0.59 + bb * 0.11) * 1.25; rr = gg = bb = lm; }
       var ux = nx * z, uy = ny * z, ur2 = ux * ux + uy * uy;
       var unz = Math.sqrt(ur2 < 1 ? 1 - ur2 : 0);
       var lam2 = ux * L[0] + uy * L[1] + unz * L[2];
@@ -327,6 +328,10 @@ canvas.addEventListener('pointerup', function (e) {
 });
 canvas.addEventListener('pointercancel', function () { drag = null; });
 
+$('zmono').addEventListener('click', function () {
+  mono = !mono; this.setAttribute('aria-pressed', mono ? 'true' : 'false');
+  $('hint').textContent = hintText(); drawGlobe();
+});
 $('zin').addEventListener('click', function () { flyTo(view.lon, view.lat, Math.min(12, view.zoom * 1.6)); });
 $('zout').addEventListener('click', function () { flyTo(view.lon, view.lat, Math.max(2, view.zoom / 1.6)); });
 
@@ -565,99 +570,147 @@ var PTS = {
     yes: '185 mapped polygons, median equivalent diameter about 18 m. The site is identified as active ice-wedge terrain.',
     no: 'No ice volume and no matched temperature record.' }
 };
-var EARTH = {
-  'ms-01': { pts: ['uv', 'beacon'],
-    rows: [['Ice', 'yes', 'Shallow ice under dry cover is real on Earth, 8 to 42 cm down. A model puts it at 0.66 m or 0.17 m depending on summer snow. Ice depth here is still unknown.'],
-      ['Heat', 'part', 'The daily swing dies out toward the ice. Earth air temperature and the Mars surface values are different quantities.'],
-      ['Terrain', 'no', 'Earth stations give elevation only. MOLA cannot resolve 10 to 20 m polygons.'],
-      ['Dust', 'no', 'Earth has no match for column dust opacity.']] },
-  'ms-02': { pts: ['uv', 'beacon', 'adv', 'hau'],
-    rows: [['Ice', 'yes', 'Ice-cemented ground at 42 cm, buried ice at 10 to 60 cm, frozen ground 0.6 to 0.9 m down. Ice depth here is still unknown.'],
-      ['Heat', 'part', 'The damping holds on Earth. Earth air temperature and the Mars surface values are different quantities.'],
-      ['Terrain', 'part', 'Polygons and stripes of 5 to 31 m show the landform exists. No matched elevation model, so no slope comparison.'],
-      ['Dust', 'no', 'Svalbard loess is a local source. It has no meaning for column dust opacity.']] },
-  'ms-03': { pts: ['uv', 'ad1'],
-    rows: [['Ice', 'yes', 'A 2026 study at University Valley finds summer snow sets the depth to ice. Mars ice depth here is still unknown.'],
-      ['Heat', 'part', 'The damping holds on Earth. Earth air temperature and the Mars surface values are different quantities.'],
-      ['Terrain', 'part', 'About 18 m polygons exist on Earth. No matched elevation model, so no slope comparison.'],
-      ['Dust', 'no', 'No dust measure was obtained at either Earth point.']] }
+var EARTH = { 'ms-01': ['uv', 'beacon'], 'ms-02': ['uv', 'beacon', 'adv', 'hau'], 'ms-03': ['uv', 'ad1'] };
+var THEMES = [['ice', 'Ice'], ['heat', 'Heat'], ['terrain', 'Terrain'], ['dust', 'Dust']];
+var SHORT = { uv: 'University Valley', beacon: 'Beacon', adv: 'Adventdalen', hau: 'Haughton', ad1: 'AD1 polygons' };
+var LAT = { uv: -77.86, beacon: -77.82, adv: 78.17, hau: 75.37, ad1: 78.18 };
+var CELLS = {
+  uv: { ice: ['yes', 'Ice-cemented ground 8 to 42 cm down, under dry cover.'], heat: ['part', 'The daily swing fades to 0.2 K at the ice. Air temperature, not surface.'], terrain: ['no', 'Station elevations only. No slope or relief measured.'], dust: ['no', 'No dust measure obtained.'] },
+  beacon: { ice: ['yes', 'Blocky ice under about 0.3 m of dry soil.'], heat: ['part', 'Published ground-temperature model. Raw records not obtained.'], terrain: ['part', 'Polygons 10 to 20 m across. No elevation model.'], dust: ['no', 'No column-dust equivalent.'] },
+  adv: { ice: ['yes', 'Radar reflector near 1.5 m. Core ice 20 to 50 percent.'], heat: ['no', 'Borehole temperatures not read.'], terrain: ['part', 'Polygons 10 to 20 m across. No elevation model.'], dust: ['no', 'Local loess source. Not column dust.'] },
+  hau: { ice: ['yes', 'Radar finds frozen ground 0.6 to 0.9 m down.'], heat: ['part', 'Mean annual air about −15 °C, from secondary sources.'], terrain: ['part', 'Polygons and stripes 5 to 31 m. Tiny LiDAR coverage.'], dust: ['no', 'Not covered in the sources read.'] },
+  ad1: { ice: ['part', 'Active ice-wedge terrain. No ice volume measured.'], heat: ['no', 'Monitoring temperatures are not matched to the polygons.'], terrain: ['part', '185 polygons, median about 18 m across.'], dust: ['no', 'No dust measure obtained.'] }
 };
 var VERDICT = { yes: ['Supported', '◆'], part: ['Partly', '◇'], no: ['No match', '○'] };
+var UV_MIN_C = [-20.4, -28.8, -40.1, -35.5, -45.5, -40.5, -45.5, -43.1, -42.0, -36.0, -27.2];
+var UV_MAX_C = [-2.9, -9.3, -10.1, -15.7, -17.5, -18.0, -22.0, -20.1, -17.2, -12.2, -4.1];
+var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November'];
+var cellSel = { pt: 'uv', th: 'ice' }, showMars = true;
 
-function dampBox() {
-  var box = h('div', 'strip');
-  box.appendChild(h('h3', null, 'Heat reaches shallow ice slowly'));
-  box.appendChild(h('p', 'unit', 'University Valley, Antarctica, 7 to 18 November 2010. Daily temperature swing at each depth, in kelvin.'));
-  var W = 420, H = 150, x0 = 118, x1 = W - 44, mx = 9;
-  var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img',
-    'aria-label': UV_DAMP.map(function (d) { return d[0] + ': ' + d[1] + ' kelvin'; }).join('; ') });
-  UV_DAMP.forEach(function (d, k) {
-    var y = 14 + k * 34, w = d[1] / mx * (x1 - x0);
-    txt(svg, x0 - 10, y + 15, d[0], { fill: '#a3a9b3', 'font-size': 12, 'text-anchor': 'end' });
-    el('rect', { x: x0, y: y, width: Math.max(w, 3), height: 22, fill: k < 2 ? '#e0a64f' : '#8ec5e8' }, svg);
-    txt(svg, x0 + Math.max(w, 3) + 8, y + 16, num(d[1], d[1] < 1 ? 2 : 1), { fill: '#fff', 'font-size': 13, 'font-weight': 700 });
+function matrixBox(active) {
+  var pts = EARTH[SITES[active].hash], box = h('div', 'strip');
+  box.appendChild(h('h3', null, 'What Earth supports'));
+  box.appendChild(h('p', 'unit', 'Tap a cell. ◆ seen on Earth  ◇ partly  ○ no match'));
+  if (pts.indexOf(cellSel.pt) < 0) cellSel.pt = pts[0];
+  var grid = h('div', 'mx'); grid.style.setProperty('--n', pts.length);
+  grid.appendChild(h('span', 'mxh'));
+  pts.forEach(function (k) { grid.appendChild(h('span', 'mxh', SHORT[k])); });
+  var read = h('p', 'mxread'); read.setAttribute('aria-live', 'polite');
+  function show() {
+    var p = PTS[cellSel.pt], c = CELLS[cellSel.pt][cellSel.th], v = VERDICT[c[0]];
+    read.innerHTML = '<b>' + p.name + ', ' + THEMES.filter(function (t) { return t[0] === cellSel.th; })[0][1] + ': ' + v[0] + '</b><br>' + c[1] +
+      ' <a href="' + p.url + '">Source</a>';
+    Array.prototype.forEach.call(grid.querySelectorAll('button'), function (b) { b.setAttribute('aria-pressed', b.dataset.pt === cellSel.pt && b.dataset.th === cellSel.th ? 'true' : 'false'); });
+  }
+  THEMES.forEach(function (t) {
+    grid.appendChild(h('span', 'mxr', t[1]));
+    pts.forEach(function (k) {
+      var c = CELLS[k][t[0]], v = VERDICT[c[0]], b = h('button', 'mxc mxc-' + c[0], '<i aria-hidden="true">' + v[1] + '</i>');
+      b.type = 'button'; b.dataset.pt = k; b.dataset.th = t[0];
+      b.setAttribute('aria-label', SHORT[k] + ', ' + t[1] + ': ' + v[0]);
+      b.addEventListener('click', function () { cellSel = { pt: k, th: t[0] }; show(); });
+      grid.appendChild(b);
+    });
   });
+  box.appendChild(grid); box.appendChild(read); show();
+  return box;
+}
+
+function wavesBox() {
+  var box = h('div', 'strip');
+  box.appendChild(h('h3', null, 'Heat fades with depth'));
+  box.appendChild(h('p', 'unit', 'University Valley, 7 to 18 November 2010. One day of temperature at each depth, same scale.'));
+  var W = 420, H = 178, x0 = 108, x1 = W - 52, k = 2.3;
+  var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img',
+    'aria-label': 'Daily temperature swing by depth: ' + UV_DAMP.map(function (d) { return d[0] + ' ' + d[1] + ' kelvin'; }).join(', ') });
+  el('rect', { x: 0, y: 0, width: W, height: 4 * 42 - 0, fill: 'rgba(224,166,79,.07)' }, svg);
+  el('rect', { x: 0, y: 2 * 42, width: W, height: 2 * 42, fill: 'rgba(142,197,232,.12)' }, svg);
+  UV_DAMP.forEach(function (d, r) {
+    var cy = 21 + r * 42, amp = d[1] * k, pts = [];
+    for (var i = 0; i <= 60; i++) { var t = i / 60; pts.push((x0 + t * (x1 - x0)).toFixed(1) + ',' + (cy - amp * Math.sin(t * 6.2832 - 1.2)).toFixed(1)); }
+    el('line', { x1: x0, x2: x1, y1: cy, y2: cy, stroke: '#232a35' }, svg);
+    el('polyline', { points: pts.join(' '), fill: 'none', stroke: r < 2 ? '#e0a64f' : '#8ec5e8', 'stroke-width': 2.5, 'stroke-linejoin': 'round' }, svg);
+    txt(svg, x0 - 10, cy + 4, d[0], { fill: '#c7ccd4', 'font-size': 12, 'text-anchor': 'end' });
+    txt(svg, x1 + 10, cy + 4, num(d[1], d[1] < 1 ? 2 : 1) + ' K', { fill: '#fff', 'font-size': 12, 'font-weight': 700 });
+  });
+  txt(svg, 8, 14, 'dry cover', { fill: '#a3a9b3', 'font-size': 10 });
+  txt(svg, 8, 2 * 42 + 14, 'ice', { fill: '#8ec5e8', 'font-size': 10 });
   box.appendChild(svg);
-  box.appendChild(h('p', 'read', 'The swing falls from <b>8.4 K at the surface to 0.2 K at the ice</b>. Thermal inertia and the night to day contrast in the Heat tab describe this same effect on Mars. It shows the physics holds on Earth. It cannot give the ice depth here.'));
+  box.appendChild(h('p', 'read', 'Swing is half the daily range, <b>8.4 K at the surface, 0.2 K at the ice</b>.'));
   return box;
 }
 
 function earthTempBox(active) {
   var s = SITES[active], box = h('div', 'strip');
-  box.appendChild(h('h3', null, 'A cold-desert year, for scale'));
-  box.appendChild(h('p', 'unit', 'Monthly mean air temperature at University Valley, January to November 2010, in kelvin. Dashed lines: this region’s Mars night and day medians.'));
-  var W = 420, H = 190, left = 40, right = 14, top = 14, bot = 30, lo = 160, hi = 270;
+  box.appendChild(h('h3', null, 'A cold-desert year'));
+  box.appendChild(h('p', 'unit', 'University Valley air temperature, 2010, in kelvin. Move across the chart.'));
+  var seg = h('div', 'seg'), bt = h('button', null, 'Mars night and day');
+  bt.type = 'button'; bt.setAttribute('aria-pressed', showMars ? 'true' : 'false');
+  bt.addEventListener('click', function () { showMars = !showMars; renderTab(); });
+  seg.appendChild(bt); box.appendChild(seg);
+  var info = h('p', 'tip'); info.setAttribute('aria-live', 'polite');
+  var W = 420, H = 190, left = 40, right = 14, top = 12, bot = 28, lo = 160, hi = 270;
   function Y(v) { return top + (hi - v) / (hi - lo) * (H - top - bot); }
   function X(i) { return left + i * (W - left - right) / 10; }
-  var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img',
-    'aria-label': 'University Valley monthly air temperature fell from ' + num(UV_MONTHLY_C[0] + 273.15, 0) + ' to ' + num(UV_MONTHLY_C[6] + 273.15, 0) + ' kelvin in July. ' + s.id + ' Mars night median ' + num(s.night, 0) + ' kelvin, day median ' + num(s.day, 0) + '.' });
+  var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img', style: 'touch-action:pan-y',
+    'aria-label': 'University Valley monthly air temperature, ' + num(UV_MONTHLY_C[0] + 273.15, 0) + ' kelvin in January to ' + num(UV_MONTHLY_C[6] + 273.15, 0) + ' in July. ' + s.id + ' Mars night median ' + num(s.night, 0) + ', day median ' + num(s.day, 0) + '.' });
   [180, 200, 220, 240, 260].forEach(function (v) {
     el('line', { x1: left, x2: W - right, y1: Y(v), y2: Y(v), stroke: '#1d2531' }, svg);
     txt(svg, left - 8, Y(v) + 4, String(v), { fill: '#8b929d', 'font-size': 11, 'text-anchor': 'end' });
   });
-  ['Jan', 'Apr', 'Jul', 'Oct'].forEach(function (n, k) { txt(svg, X(k * 3), H - 8, n, { fill: '#a3a9b3', 'font-size': 11, 'text-anchor': 'middle' }); });
-  [['night', 'night'], ['day', 'day']].forEach(function (d) {
-    el('line', { x1: left, x2: W - right, y1: Y(s[d[0]]), y2: Y(s[d[0]]), stroke: COLORS[active], 'stroke-width': 2, 'stroke-dasharray': '6 5' }, svg);
-    txt(svg, W - right, Y(s[d[0]]) + (d[0] === 'day' ? 16 : -6), 'Mars ' + d[1] + ' ' + num(s[d[0]], 0), { fill: COLORS[active], 'font-size': 11, 'font-weight': 600, 'text-anchor': 'end' });
+  ['Jan', 'Apr', 'Jul', 'Oct'].forEach(function (n, q) { txt(svg, X(q * 3), H - 8, n, { fill: '#a3a9b3', 'font-size': 11, 'text-anchor': 'middle' }); });
+  var band = UV_MAX_C.map(function (c, i) { return X(i) + ',' + Y(c + 273.15); }).concat(UV_MIN_C.map(function (c, i) { return X(10 - i) + ',' + Y(UV_MIN_C[10 - i] + 273.15); }));
+  el('polygon', { points: band.join(' '), fill: 'rgba(235,232,225,.12)' }, svg);
+  if (showMars) ['night', 'day'].forEach(function (d) {
+    el('line', { x1: left, x2: W - right, y1: Y(s[d]), y2: Y(s[d]), stroke: COLORS[active], 'stroke-width': 2, 'stroke-dasharray': '6 5' }, svg);
+    txt(svg, W - right, Y(s[d]) + (d === 'day' ? 16 : -6), 'Mars ' + d + ' ' + num(s[d], 0), { fill: COLORS[active], 'font-size': 11, 'font-weight': 600, 'text-anchor': 'end' });
   });
   el('polyline', { points: UV_MONTHLY_C.map(function (c, i) { return X(i) + ',' + Y(c + 273.15); }).join(' '), fill: 'none', stroke: '#ebe8e1', 'stroke-width': 2.5, 'stroke-linejoin': 'round' }, svg);
-  [0, 6].forEach(function (i) {
-    var v = UV_MONTHLY_C[i] + 273.15;
-    el('rect', { x: X(i) - 4, y: Y(v) - 4, width: 8, height: 8, fill: '#ebe8e1', stroke: '#04060a', 'stroke-width': 1.5 }, svg);
-    txt(svg, X(i), Y(v) + (i === 0 ? -10 : 18), num(v, 0), { fill: '#fff', 'font-size': 12, 'font-weight': 700, 'text-anchor': i === 0 ? 'start' : 'middle' });
+  var cur = el('line', { y1: top, y2: H - bot, stroke: '#fff', 'stroke-width': 1, visibility: 'hidden' }, svg);
+  var dot = el('rect', { width: 9, height: 9, fill: '#fff', stroke: '#04060a', 'stroke-width': 1.5, visibility: 'hidden' }, svg);
+  function pick(e) {
+    var r = svg.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * W;
+    var i = Math.max(0, Math.min(10, Math.round((x - left) / ((W - left - right) / 10))));
+    var m = UV_MONTHLY_C[i] + 273.15;
+    cur.setAttribute('x1', X(i)); cur.setAttribute('x2', X(i)); cur.setAttribute('visibility', 'visible');
+    dot.setAttribute('x', X(i) - 4.5); dot.setAttribute('y', Y(m) - 4.5); dot.setAttribute('visibility', 'visible');
+    info.innerHTML = '<b>' + MONTHS[i] + '</b> mean ' + num(m, 0) + ' K, range ' + num(UV_MIN_C[i] + 273.15, 0) + ' to ' + num(UV_MAX_C[i] + 273.15, 0) + ' K';
+  }
+  svg.addEventListener('pointermove', pick); svg.addEventListener('pointerdown', pick);
+  info.innerHTML = 'Mean <b>261 K in January, 239 K in July</b>. Air at 1.2 m, not surface.';
+  box.appendChild(info); box.appendChild(svg);
+  box.appendChild(h('p', 'read', 'Different quantities from the Mars lines: context, not a match.'));
+  return box;
+}
+
+function ladderBox(active) {
+  var s = SITES[active], pts = EARTH[s.hash], box = h('div', 'strip');
+  box.appendChild(h('h3', null, 'Where the Earth points sit'));
+  box.appendChild(h('p', 'unit', 'Latitude of ' + s.id + ' and the Earth points used. Cold deserts, at very different latitudes.'));
+  var W = 420, H = 110, x0 = 16, x1 = W - 16;
+  function X(l) { return x0 + (l + 90) / 180 * (x1 - x0); }
+  var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img',
+    'aria-label': s.id + ' at ' + num(s.lat, 1) + ' degrees north. Earth points: ' + pts.map(function (k) { return SHORT[k] + ' ' + num(LAT[k], 1); }).join(', ') });
+  el('line', { x1: x0, x2: x1, y1: 56, y2: 56, stroke: '#3a4452', 'stroke-width': 2 }, svg);
+  [-90, -60, -30, 0, 30, 60, 90].forEach(function (l) {
+    el('line', { x1: X(l), x2: X(l), y1: 52, y2: 60, stroke: '#3a4452' }, svg);
+    txt(svg, X(l), 76, (l < 0 ? '−' + (-l) : l) + '°', { fill: '#8b929d', 'font-size': 10, 'text-anchor': l === -90 ? 'start' : (l === 90 ? 'end' : 'middle') });
+  });
+  var items = pts.map(function (k) { return { x: X(LAT[k]), t: SHORT[k], earth: true }; });
+  items.push({ x: X(s.lat), t: s.id + ' (Mars)', earth: false });
+  items.sort(function (a, b) { return a.x - b.x; });
+  var lanes = [{ y: 24, end: -99 }, { y: 100, end: -99 }, { y: 40, end: -99 }];
+  items.forEach(function (it, q) {
+    var wd = it.t.length * 6.4 + 8, left = it.x - wd / 2;
+    left = Math.max(2, Math.min(W - wd - 2, left));
+    var lane = lanes.filter(function (l) { return left > l.end; })[0] || lanes[q % 3];
+    lane.end = left + wd;
+    var col = it.earth ? '#ebe8e1' : COLORS[active];
+    if (it.earth) el('circle', { cx: it.x, cy: 56, r: 5, fill: '#ebe8e1', stroke: '#04060a', 'stroke-width': 1.5 }, svg);
+    else el('path', { d: 'M' + it.x + ' 49L' + (it.x + 7) + ' 56L' + it.x + ' 63L' + (it.x - 7) + ' 56Z', fill: col, stroke: '#04060a', 'stroke-width': 1.5 }, svg);
+    txt(svg, left + wd / 2, lane.y, it.t, { fill: it.earth ? '#c7ccd4' : col, 'font-size': 11, 'font-weight': it.earth ? 500 : 700, 'text-anchor': 'middle' });
   });
   box.appendChild(svg);
-  box.appendChild(h('p', 'read', 'Earth is air at 1.2 m. Mars is the surface. Those are different quantities, so this is <b>context, not a match</b>. Both are cold, dry, and far below freezing.'));
-  return box;
-}
-
-function checkBox(active) {
-  var e = EARTH[SITES[active].hash], box = h('div', 'strip');
-  box.appendChild(h('h3', null, 'What Earth supports'));
-  box.appendChild(h('p', 'unit', 'Four themes, checked against the Earth records. Supported means the process is seen on Earth.'));
-  var list = h('div', 'chk');
-  e.rows.forEach(function (r) {
-    var v = VERDICT[r[1]], row = h('div', 'chkrow');
-    row.appendChild(h('b', null, r[0]));
-    row.appendChild(h('span', 'chip chip-' + r[1], '<i aria-hidden="true">' + v[1] + '</i> ' + v[0]));
-    row.appendChild(h('p', null, r[2]));
-    list.appendChild(row);
-  });
-  box.appendChild(list);
-  return box;
-}
-
-function pointsBox(active) {
-  var e = EARTH[SITES[active].hash], box = h('div', 'strip');
-  box.appendChild(h('h3', null, e.pts.length === 1 ? 'Earth point' : 'Earth points used'));
-  var d = h('dl', 'facts');
-  e.pts.forEach(function (k) {
-    var p = PTS[k];
-    d.appendChild(h('dt', null, '<a href="' + p.url + '">' + p.name + '</a>'));
-    d.appendChild(h('dd', null, '<span class="where">' + p.where + '</span><br>' + p.yes + '<br><span class="no">Does not show:</span> ' + p.no));
-  });
-  box.appendChild(d);
-  box.appendChild(h('p', 'read', 'Earth records support the <b>physics</b> behind the Mars data. They do not confirm any Mars value, and none of these places is a match for this region.'));
   return box;
 }
 
@@ -670,7 +723,7 @@ function renderTab() {
   else if (tab === 'heat') { p.appendChild(strip('ti', i)); p.appendChild(coverageBox(i)); p.appendChild(swingBox(i)); }
   else if (tab === 'ice') { p.appendChild(strip('swim1', i)); p.appendChild(strip('swim5', i)); }
   else if (tab === 'dust') { p.appendChild(dustBox(i)); p.appendChild(strip('p95', i)); }
-  else if (tab === 'earth') { p.appendChild(checkBox(i)); p.appendChild(dampBox()); p.appendChild(earthTempBox(i)); p.appendChild(pointsBox(i)); }
+  else if (tab === 'earth') { p.appendChild(matrixBox(i)); p.appendChild(wavesBox()); p.appendChild(earthTempBox(i)); p.appendChild(ladderBox(i)); }
   else p.appendChild(unknowns(i));
 }
 

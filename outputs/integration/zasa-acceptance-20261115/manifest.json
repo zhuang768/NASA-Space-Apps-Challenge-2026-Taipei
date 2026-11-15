@@ -2,18 +2,6 @@
   "accepted_parent": "16822bb7bb39f4661abc5af964aa464f0c6aa698",
   "files": [
     {
-      "path": "README.md",
-      "size": 5176,
-      "sha256": "ced06b17ee97b5eb72567916705942cdc2767792d620983672309eea7fcb38ed",
-      "git_blob": "78c3519d9a4a6263c2d194a4c00700f9c78395bf"
-    },
-    {
-      "path": "WORKSTREAMS.md",
-      "size": 2371,
-      "sha256": "fca0cbb9d69d051904e38452fc77b666a52811d23b3a1c0a70831dae8e098fb8",
-      "git_blob": "e977bd5ac063d8389f5f7aebfa58d79d31acff2b"
-    },
-    {
       "path": "common/check.py",
       "size": 2033,
       "sha256": "523bf3c0fd2003b91ac33a56948a24756e8e665f2affe1a0ac1dde3b5c598ff0",
@@ -296,34 +284,22 @@
       "git_blob": "850e4836c87459654cd7f745fbcbaa8bfd0f5196"
     },
     {
-      "path": "web/CHECKLIST.txt",
-      "size": 3144,
-      "sha256": "45baa0d127ab772e04f8075f26b21764c76ee9f291bd3ba51acfd0c26f3e9930",
-      "git_blob": "af5bea4dbbfc874588a0570caa48d58709656784"
-    },
-    {
       "path": "web/PRODUCTION.md",
       "size": 1150,
       "sha256": "07e0c9dc81f3e9c217cdf962f41de7221f49ba48497843a819dfb897e4a2e38d",
       "git_blob": "bf8ef7cb41ba844aeebb0a8dc0c10e5588143a68"
     },
     {
-      "path": "web/R2-PASS.txt",
-      "size": 974,
-      "sha256": "84e838ba7aaaaeb8b6709114c39238fb5c11fb20c9b62463361ca2f8b95f2b20",
-      "git_blob": "c999799b0f4acb46d3e58f11c7c04735ae478d97"
-    },
-    {
       "path": "web/README.md",
-      "size": 662,
-      "sha256": "68acffdaeaed08b2f170f7f2beeb3e70ae827201f1fb021ee7616f698c5da831",
-      "git_blob": "3d048a980fbcd1af18bc8cd8888180838ebb3541"
+      "size": 1460,
+      "sha256": "a01c58004447a5d3410aecafd9fc1f55ca6bbfb3bc6987092535869e96a2d86d",
+      "git_blob": "71871b64f5c0432dad0d363540c2ab7592182af3"
     },
     {
       "path": "web/SOURCE_PROVENANCE.md",
-      "size": 3341,
-      "sha256": "f1fb52e1857be25eaade2f5caff87ae7bab26299289484c57d78e006ab6049a8",
-      "git_blob": "a52cbff0cf83216f30b6c04b2d55d09c1d538f52"
+      "size": 2987,
+      "sha256": "ae09886ac03da8546089823bd0704ac7d211ee46a46db860adfacd7dee411601",
+      "git_blob": "e38db955796bdf0a64b5ce79f7b6c55e59ad3700"
     },
     {
       "path": "web/app.js",

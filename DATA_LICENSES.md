@@ -1,6 +1,6 @@
 # Data attribution and reuse
 
-Original observations and research products remain attributable to their authors and providers. AI-assisted analysis does not change their provenance.
+Original observations and research products remain attributable to their authors and providers.
 
 - MOLA MEGDR: NASA MGS/PDS Geosciences Node; source labels and manifest retain product identity and observation periods.
 - TES thermal inertia and interpolation mask: NASA MGS/PDS Geosciences Node. Thermal inertia is not temperature or hardness.

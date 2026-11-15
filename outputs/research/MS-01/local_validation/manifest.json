@@ -647,11 +647,6 @@
       "sha256": "fbefca99b3e2116047b68b0ec1b90f494d4e6dc9ad46d1e4e533344ee94fb97e"
     },
     {
-      "path": "outputs/research/MS-01/local_validation/themis_qc/agent_attempts.json",
-      "bytes": 751,
-      "sha256": "9bdd76ece3487bf54155dbeb3a89f2a8d124e375cdaf8ad2b750385c7bf4286b"
-    },
-    {
       "path": "outputs/research/MS-01/local_validation/themis_qc/analyze_projected.py",
       "bytes": 8401,
       "sha256": "e3d676e8b33e5aec05bb1928a1f5122d8f00a5f99814ea7cf33d1a425b141b3d"

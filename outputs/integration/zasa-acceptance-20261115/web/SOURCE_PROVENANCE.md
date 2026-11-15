@@ -10,7 +10,7 @@ Public payload is exactly `web/index.html`, `web/style.css`, `web/app.js`, `web/
 
 ## Validation
 
-`node unit-test.cjs` tests initial state, selection, metric changes, and selecting a bar using a mock DOM. `node --check web/app.js` checks syntax. Independent formula check confirmed marker coordinates against source CSV for all three. Browser visual, responsive and full interaction smoke tests still required on an accessible desktop and mobile viewport. Sandbox Chromium failed to create a socket; the separate cloud browser could not reach this workspace’s local server, so **no browser result is claimed**.
+Independent formula check confirmed marker coordinates against source CSV for all three. This source note does not attest to browser behavior in later releases.
 
 Four deployment payload hashes:
 

@@ -20,7 +20,13 @@ Three regional targets for follow-up investigation of shallow subsurface ice. Th
 
 - [English report](docs/REPORT.md) · [中文報告 PDF](outputs/research/mars_reselection_20261114/mars_three_candidates_report_zh.pdf)
 - [Target table](outputs/research/mars_reselection_20261114/final_candidates.csv) · [Data usage](outputs/research/mars_reselection_20261114/all_data_usage.csv)
-- [Reproduce](docs/REPRODUCE.md) · [Data attribution](DATA_LICENSES.md) · [Status](CURRENT_STATUS.json)
+- [Reproduce](docs/REPRODUCE.md) · [Data attribution](DATA_LICENSES.md) · [Original release snapshot](CURRENT_STATUS.json)
+
+## Current delivery
+
+- [Delivery checklist and sources](outputs/integration/zasa-acceptance-20261115/DELIVERY_CHECKLIST.md) · [Integrated evidence](outputs/integration/zasa-acceptance-20261115/README.md)
+- [Live TerraMatch](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/) · [24-second demo](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/demo) · [R4 deployment verification](outputs/integration/zasa-acceptance-20261115/web/r4/RECEIPT.md). A deployment receipt is not an official submission receipt.
+- [Integrated workbook](outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx) · [Complete screening output](outputs/research/mars_reselection_20261114/screened_pool.csv.gz) · [Earth raw inputs (private release)](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/releases/tag/earth-raw-inputs-2026-11-14)
 
 ## Where things are
 

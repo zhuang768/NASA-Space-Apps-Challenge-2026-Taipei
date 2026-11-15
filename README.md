@@ -19,23 +19,15 @@ Three regional targets for follow-up investigation of shallow subsurface ice. Th
 ## Read the results
 
 - [English report](docs/REPORT.md) · [中文報告 PDF](outputs/research/mars_reselection_20261114/mars_three_candidates_report_zh.pdf)
-- [Target table](outputs/research/mars_reselection_20261114/final_candidates.csv) · [Data usage](outputs/research/mars_reselection_20261114/all_data_usage.csv)
-- [Reproduce](docs/REPRODUCE.md) · [Data attribution](DATA_LICENSES.md) · [Original release snapshot](CURRENT_STATUS.json)
-
-## Current delivery
-
-- [Delivery checklist and sources](outputs/integration/zasa-acceptance-20261115/DELIVERY_CHECKLIST.md) · [Integrated evidence](outputs/integration/zasa-acceptance-20261115/README.md)
-- [Live TerraMatch](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/) · [24-second demo](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/demo) · [R4 deployment verification](outputs/integration/zasa-acceptance-20261115/web/r4/RECEIPT.md). A deployment receipt is not an official submission receipt.
-- [Integrated workbook](outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx) · [Complete screening output](outputs/research/mars_reselection_20261114/screened_pool.csv.gz) · [Earth raw inputs (private release)](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/releases/tag/earth-raw-inputs-2026-11-14)
 
 ## Where things are
 
 | Path | Contents |
 |---|---|
-| `outputs/research/mars_reselection_20261114/` | Target selection, tables, checks |
+| `outputs/research/mars_reselection_20261114/` | Target selection: [target table](outputs/research/mars_reselection_20261114/final_candidates.csv), [data usage](outputs/research/mars_reselection_20261114/all_data_usage.csv), checks |
 | `outputs/research/MS-01/`, `MS-02/`, `MS-03/` | Per-target evidence and local validation (see [index](outputs/research/README.md)) |
 | `outputs/consolidated/` | Excel workbook of all data |
-| `docs/`, `scripts/` | Reports and reproduction code |
+| `docs/`, `scripts/` | Reports, [reproduction steps](docs/REPRODUCE.md), code; [data attribution](DATA_LICENSES.md); [status](CURRENT_STATUS.json) |
 
 Large source grids are downloaded from their providers (see the input manifest). The pre-cleanup history is in the [archive branch](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/tree/archive/pre-msr-cleanup-20261114).
 

@@ -422,7 +422,7 @@ function select(i) {
   loadPatch(i);
   flyTo(s.lon * RAD, s.lat * RAD, 5);
   $('panel').scrollTop = 0;
-  if (window.matchMedia('(max-width: 60rem)').matches && !first) $('detail').scrollIntoView({ block: 'start' });
+  if (window.matchMedia('(max-width: 60rem)').matches) $('detail').scrollIntoView({ block: 'start' });
   if (first) $('btn-back').focus({ preventScroll: true });
 }
 function home() {
@@ -433,6 +433,7 @@ function home() {
   try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
   flyTo(HOME.lon, HOME.lat, 1);
   $('panel').scrollTop = 0;
+  if (window.matchMedia('(max-width: 60rem)').matches) $('overview').scrollIntoView({ block: 'start' });
 }
 
 function renderTabs() {

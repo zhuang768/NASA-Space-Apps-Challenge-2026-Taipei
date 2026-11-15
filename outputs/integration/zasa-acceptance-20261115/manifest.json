@@ -303,16 +303,16 @@
     },
     {
       "path": "web/app.js",
-      "size": 55122,
-      "sha256": "0c0cecedf76c98e7a7e226f83961221f36442f75119c4b848e7f99403c9f1af6",
-      "git_blob": "7f9a73028a8e979b834cb62bdbfa37ec8f68c28b",
+      "size": 55217,
+      "sha256": "a39d1039daea51d1761ad39baf4d85eca14852501661e5c7a1a6e0afe2c7aafa",
+      "git_blob": "ce09a62ebfa4b1bdec8e8dcdd656e2affe28caa8",
       "bytes": 46219
     },
     {
       "path": "web/deployment.json",
       "size": 1044,
-      "sha256": "72c9329fbf257aaaa22b5d9b5c345036bc1c152207f0869327b58a26f1973fbf",
-      "git_blob": "3478303e01131d3f620c20b1471d84212fa128cf",
+      "sha256": "bf32ef4bfb9f9f6ffabfaeb98904e2a654d21c608165a1fe777ae27728c6af69",
+      "git_blob": "6a6567b00fc6ffcc37d3bbd290d06d17cb8ff480",
       "bytes": 840
     },
     {

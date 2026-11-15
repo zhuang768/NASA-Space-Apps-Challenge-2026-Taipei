@@ -146,5 +146,11 @@
   },
   "consoleErrors": [],
   "earthMatrixSelection": "AD1 Terrain selected and source/limit text updated",
-  "dustYearSwitch": "MY35 selected; labelled chart updated"
+  "dustYearSwitch": "MY35 selected; labelled chart updated",
+  "mobileNavigation": {
+    "detailTop": 16,
+    "headingTop": 76,
+    "overflow": false,
+    "width": 390
+  }
 }

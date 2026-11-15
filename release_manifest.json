@@ -151,8 +151,8 @@
     },
     {
       "path": "outputs/integration/site_polish_20261115/browser_checks.json",
-      "bytes": 3095,
-      "sha256": "36a1e878e7547e4cfb9e1e0a747855430d8e8cb51633b910c5b4f3c3000366a1"
+      "bytes": 3207,
+      "sha256": "7593296dfd8cb272f2d1bae1913ef426b62a2a22be3e3f52ec8a0c9e4596eb86"
     },
     {
       "path": "outputs/integration/site_polish_20261115/check_evidence.py",
@@ -187,7 +187,7 @@
     {
       "path": "outputs/integration/zasa-acceptance-20261115/manifest.json",
       "bytes": 12640,
-      "sha256": "7e9a252b6728f2dce13f89f17afc9b773b94e5328404d1fcbe62a4c4bcecaa22"
+      "sha256": "b3c0b9042dac275be0f3225ab95513857c6ecda1e48a413067db0f5adcc44abb"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/SOURCE_PROVENANCE.md",
@@ -196,13 +196,13 @@
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/app.js",
-      "bytes": 55122,
-      "sha256": "0c0cecedf76c98e7a7e226f83961221f36442f75119c4b848e7f99403c9f1af6"
+      "bytes": 55217,
+      "sha256": "a39d1039daea51d1761ad39baf4d85eca14852501661e5c7a1a6e0afe2c7aafa"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/deployment.json",
       "bytes": 1044,
-      "sha256": "72c9329fbf257aaaa22b5d9b5c345036bc1c152207f0869327b58a26f1973fbf"
+      "sha256": "bf32ef4bfb9f9f6ffabfaeb98904e2a654d21c608165a1fe777ae27728c6af69"
     },
     {
       "path": "outputs/integration/zasa-acceptance-20261115/web/index.html",

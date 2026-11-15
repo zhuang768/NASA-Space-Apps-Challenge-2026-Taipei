@@ -18,32 +18,19 @@ Three regional targets for follow-up investigation of shallow subsurface ice. Th
 
 ## Read the results
 
-- [English research report](docs/REPORT.md)
-- [中文報告 PDF](outputs/research/mars_reselection_20261114/mars_three_candidates_report_zh.pdf) · [中文文字版](outputs/research/mars_reselection_20261114/report.md)
-- [Three-target data table](outputs/research/mars_reselection_20261114/final_candidates.csv) · [Target footprints](outputs/research/mars_reselection_20261114/selected_targets.json)
-- [Every data product and its role](outputs/research/mars_reselection_20261114/all_data_usage.csv)
-- [Bounded prior-site checks and search scope](outputs/research/mars_reselection_20261114/bounded_prior_site_audit.json)
-- [Numerical checks](outputs/research/mars_reselection_20261114/numerical_validation.json) · [Report checks](outputs/research/mars_reselection_20261114/report_validation.json)
-- [Reproduce the analysis](docs/REPRODUCE.md) · [Data attribution and terms](DATA_LICENSES.md)
+- [English report](docs/REPORT.md) · [中文報告 PDF](outputs/research/mars_reselection_20261114/mars_three_candidates_report_zh.pdf)
+- [Target table](outputs/research/mars_reselection_20261114/final_candidates.csv) · [Data usage](outputs/research/mars_reselection_20261114/all_data_usage.csv)
+- [Reproduce](docs/REPRODUCE.md) · [Data attribution](DATA_LICENSES.md) · [Status](CURRENT_STATUS.json)
 
-## What was considered
+## Where things are
 
-MOLA elevation, slope and relief; TES thermal inertia and interpolation mask; both available SWIM depth-zone products; MY34 and MY35 dust time series, seasons, p95, maxima and reliability; MCS time-adjusted 03:00/15:00 temperature context; and the availability/quality limits of rover-local MEDA records.
+| Path | Contents |
+|---|---|
+| `outputs/research/mars_reselection_20261114/` | Target selection, tables, checks |
+| `outputs/research/MS-01/`, `MS-02/`, `MS-03/` | Per-target evidence and local validation (see [index](outputs/research/README.md)) |
+| `outputs/consolidated/` | Excel workbook of all data |
+| `docs/`, `scripts/` | Reports and reproduction code |
 
-Six directional descriptors were used for exploratory trade-offs. Other variables were retained as context or limitations instead of being forced into a scalar suitability score. Missing local wind, pressure, material, ice ground truth and fine hazards remain unknown.
+Large source grids are downloaded from their providers (see the input manifest). The pre-cleanup history is in the [archive branch](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/tree/archive/pre-msr-cleanup-20261114).
 
-All three targets are above 50°N. They do **not** meet the latitude envelope used by the cited MCOA2025 study or the current SkyFall design. This work is scoped to ice-investigation research; it does not recommend a validated crewed base or a mission-approved landing site.
-
-## Clean-code rebuild
-
-The clean package was tested from checksum-verified public source files. Its rebuilt global NetCDF is not byte-identical and has small measured floating-point differences, which are disclosed in [the rebuild comparison](outputs/research/mars_reselection_20261114/cleanup_rebuild_validation.json). Pool/front memberships and the 22 review coordinates were unchanged; 88 non-stack native numerical columns and both dust/MCS sequence files reproduced exactly. The frozen report retains its original version; active scripts use v1-clean.
-
-## Repository scope
-
-This main branch contains the selected three-target research release, its evidence and the minimum code needed to reproduce it. Large downloaded source grids are obtained from their providers and verified using the input manifest.
-
-The earlier research delivery, Earth-analog work, exploratory rankings, website and deployment history are retained in the [pre-cleanup archive](https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/tree/archive/pre-msr-cleanup-20261114). The original Earth-analog discovery objective remains separate from this Mars-target update.
-
-The PDFs and original report manifests are frozen as-produced records. Their statements about the earlier local-only delivery describe the time they were generated. The current GitHub release state is recorded in [CURRENT_STATUS.json](CURRENT_STATUS.json).
-
-This is an independent team research project, not NASA endorsement or certification. Original observations remain attributed to their providers. AI assisted code, checks and writing; actual execution used Mac CPU, without GPU acceleration or model training.
+Independent team research; not NASA endorsement or certification. Original observations remain attributed to their providers. AI assisted code, checks and writing.

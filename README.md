@@ -2,6 +2,14 @@
 
 TerraMatch is Team ZASA's NASA Space Apps 2026 project. We used public data to choose three regions on Mars for follow-up research on shallow ground ice. We then looked for places on Earth where we could test the methods we would use to study those regions.
 
+## Start here
+
+[Open the live TerraMatch explorer](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/) and select MS-03 on the Mars map. Check the source and resolution notes alongside the regional measurements. Then open the [Earth polygon comparison](outputs/research/final-comparison-20261115/ms03/adventdalen_grid_summary.csv) to see why resolution matters before comparing shapes across planets.
+
+In the Earth test, we resampled 185 mapped polygons from Adventdalen, Svalbard. At 6.11 m grid spacing, median overlap with the original outlines was 0.71. Only 8 of 185 outlines stayed above or at 0.8 overlap for every grid placement. This tells us how much sampling alone can change a shape comparison. It does not measure recognition accuracy or establish a match with MS-03.
+
+[Project demo](https://docs.google.com/presentation/d/1gR2CjO5nO1_s5Aci4MeIxZWeSDTgK1VZyKbyME2TRgI/edit?usp=sharing) · [Three-site results and how to reproduce them](outputs/research/final-comparison-20261115/README.md) · [English report](docs/REPORT.md)
+
 ## What the project shows
 
 The [TerraMatch explorer](https://nasa-space-apps-challenge-2026-taipei.ziz81503.workers.dev/) lets you compare the three Mars regions. Start with the map, then look at slope, thermal inertia and the SWIM ice consistency index. The modeled depths have their own explanation because they depend on assumptions about the material below the surface.

@@ -131,8 +131,8 @@
     },
     {
       "path": "docs/submission/FINAL_CHECKLIST.md",
-      "bytes": 5284,
-      "sha256": "c042ec623a417ee041501001642a0418b7d502f3e8f57a4ad0f9f0f56b628ec1"
+      "bytes": 5395,
+      "sha256": "461978754096fdaceaf86823564d64200cac77521738bafd463cc07062c63664"
     },
     {
       "path": "docs/submission/deck_review.md",
@@ -746,18 +746,18 @@
     },
     {
       "path": "outputs/submission/final_verification.json",
-      "bytes": 1322,
-      "sha256": "2259a16de0f77d1b0defe9bc61c01284972c9d2c9d641c4d35d28d7d254179e3"
+      "bytes": 1559,
+      "sha256": "f8469ee1bfeb042900addf62447422d5f3f83c04d2004a2ba857db9c67c92717"
     },
     {
       "path": "outputs/submission/link_checks.json",
-      "bytes": 246,
-      "sha256": "d4efafed54340767e4598faec4d2ef55017755e71e967d56a67d1a3020b7ba39"
+      "bytes": 247,
+      "sha256": "9589cafba97ccee430c51d163f0587b2b0775b5aa0cafd6c51a92f3e490e9454"
     },
     {
       "path": "outputs/submission/manifest.json",
       "bytes": 2155,
-      "sha256": "b060e0ed6c26b15c779149d6ecf219e540684a5223b97d108d16664e0f48f22e"
+      "sha256": "6e829af1bd4dc281ef2f1f437634fcc75e782e192d033a3e278c1a7984ee447b"
     },
     {
       "path": "outputs/submission/public_site_verification.json",
@@ -821,8 +821,8 @@
     },
     {
       "path": "scripts/submission/verify_submission_links.py",
-      "bytes": 2153,
-      "sha256": "8356082f262ae627c568651828798b823b78124c24f0ce7a4c6acb7f4d80734e"
+      "bytes": 2186,
+      "sha256": "d206873824fbde8746a15acd1bb922f206d40b2234b327f6af052ff699492fb4"
     },
     {
       "path": "scripts/verify_challenge_alignment.py",

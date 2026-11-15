@@ -15,7 +15,7 @@ for r in rows:
  for locator in r['evidence_path'].split(';'):
   assert (ROOT/locator.strip().split(':',1)[0]).is_file(),(r['source_id'],locator)
  assert r['source_id'] in (ROOT/'docs/SUBMISSION_REFERENCES.md').read_text(),r['source_id']
-files=['README.md','DATA_LICENSES.md','docs/REPORT.md','docs/REPRODUCE.md','docs/CHALLENGE_ALIGNMENT.md','docs/SUBMISSION_REFERENCES.md','docs/submission/FINAL_CHECKLIST.md','docs/submission/AI_USAGE.md','outputs/research/mars_reselection_20261114/README.md']
+files=['README.md','DATA_LICENSES.md','docs/REPORT.md','docs/REPRODUCE.md','docs/CHALLENGE_ALIGNMENT.md','docs/SUBMISSION_REFERENCES.md','docs/submission/FINAL_CHECKLIST.md','docs/submission/AI_USAGE.md','docs/submission/deck_review.md','outputs/research/mars_reselection_20261114/README.md']
 links=0
 for name in files:
  p=ROOT/name

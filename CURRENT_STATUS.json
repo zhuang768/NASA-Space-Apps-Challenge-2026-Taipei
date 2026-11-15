@@ -48,6 +48,9 @@
     "references": "docs/SUBMISSION_REFERENCES.md",
     "official_details_guide_terms_retrieved": true,
     "challenge_resources_list_complete": false,
-    "actual_form_submission_verified": false
+    "actual_form_submission_verified": false,
+    "reviewed_demo": "outputs/submission/team_zasa_demo.pdf",
+    "reviewed_demo_pages": 7,
+    "public_demo_download_verified": true
   }
 }

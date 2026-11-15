@@ -50,7 +50,8 @@ Sources: [2026 Guide](https://www.spaceappschallenge.org/resources/project-submi
 - [ ] Resolve or omit any material whose reuse permission is not established. In particular, the Victoria Valley/Bull Pass source is recorded as CC BY-NC 4.0; confirm its permitted use. Preserve dust ShareAlike attribution and check the Slidesgo/template/image terms.
 - [ ] Confirm the complete AI tool list and any generated-media disclosure with all contributors.
 - [x] The reviewed seven-page English PDF was rendered and inspected, with all seven source-link annotations checked.
-- [ ] Select the reviewed PDF in the actual form, not the unchanged native Slides or an earlier export; retain the final public-download verification.
+- [x] The reviewed PDF was downloaded anonymously from GitHub; all bytes match the reviewed local version and seven pages/source annotations were confirmed.
+- [ ] Select that reviewed PDF in the actual form, not the unchanged native Slides or an earlier export.
 - [ ] Confirm every participant's same-event membership, required form fields and the actual Taipei local judging schedule.
 - [ ] Submit before the relevant deadline, verify the success banner/confirmation, and retain that receipt.
 

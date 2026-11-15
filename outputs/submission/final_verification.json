@@ -14,7 +14,14 @@
   "pdf_page_count": 7,
   "website": "build_success;four_public_assets_match",
   "source_dialog": "complete_reference_and_AI_links_operated_on_public_site",
-  "public_pdf_download": "verification_after_pdf_push",
+  "public_pdf_download": {
+    "anonymous": true,
+    "verified_commit": "8a7a0a49be87891ffd3b456306a63e795bb76648",
+    "bytes": 7987602,
+    "sha256": "c8982aff2f42b66b28ba19df866161baac1ee5faef50080218a61c977ec5cd77",
+    "pages": 7,
+    "all_pages_have_source_link_annotations": true
+  },
   "science_values": "unchanged",
   "actual_submit_action": "not_performed",
   "remaining_human_actions": [

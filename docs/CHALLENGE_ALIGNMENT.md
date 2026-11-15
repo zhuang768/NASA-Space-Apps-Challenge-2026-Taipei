@@ -1,6 +1,6 @@
 # Challenge alignment and evidence checklist
 
-Reviewed 2026-11-15. Starting main: `07dbe29203504ba0ccde5e379f42ecc16e4b1b4f`. Later main integrated before publication: `ec3f38fd018b55b993232151d441d84286676da3`.
+Reviewed 2026-11-15. Starting main: `07dbe29203504ba0ccde5e379f42ecc16e4b1b4f`. Later main integrated before publication: `ec3f38fd018b55b993232151d441d84286676da3`, then `1a0f6ba0ac1fa003f049498b56a76b10e7d876ab`.
 
 **Assessment: partial challenge response.** The retained work supplies Mars candidate screening, source-scale context, an interactive map and established Earth method references. It has not established a new, validated terrestrial analogue or a qualified common-scale MS-03/Earth contour comparison.
 
@@ -49,6 +49,8 @@ Before publication, main added [final comparison tables and replay entry points]
 The AD1 geometric grid-phase experiment is executable from the stored shapefile: 185 published polygons, four spacings and 16 deterministic grid origins (11,840 cases). This update reran that program: all three output CSV hashes match the supplied expectations, and the two committed summaries match byte-for-byte. The [rerun receipt](../outputs/integration/challenge_alignment_20261115/ad1_grid_replay/receipt.json) and compressed 11,840-case table retain this check. It is digital preservation of known vector geometry, not independent Earth tracing, optical recognition or an in-box Mars contour comparison. The exploratory IoU threshold is not a mission requirement.
 
 The final-comparison receipt also mentions Cape brightness contrast and a different CTX coverage replay requiring separate projected image subsets. Those subsets and image-workflow code are not supplied by that replay entry point. Its newer table does not replace the frozen MOC/CTX support audit or its inspected-area definitions. The two versions are not averaged or described as one replay.
+
+The newer interactive Earth matrix and map display were also retained. Generated sinusoidal daily curves were replaced with bars of the reported summary values, so no synthetic timing is presented as observed data. The grayscale switch is labelled as a display conversion of the same source map, not a separate relief product. The 33 displayed Earth monthly mean/min/max values match the retained January–November table within their stated rounding.
 
 The broader MS-01/02 comparison tables are retained with their own source manifests. This update did not rerun workstreams needing the separately supplied ZIPs and does not upgrade their field truth, registration or novelty.
 

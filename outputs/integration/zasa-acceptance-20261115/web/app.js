@@ -127,7 +127,7 @@ function matchColor(p) {
   for (var k = 0; k < 3; k++) p.gain[k] = ps[k] > 0 ? Math.max(0.6, Math.min(1.8, bs[k] / ps[k])) : 1;
 }
 function hintText() {
-  return (mono ? 'Drag to move. Gray shows relief shading only.' : 'Drag to move. Colors show elevation, blue low to red high.') + (patch ? ' Detail: 463 m per pixel.' : '');
+  return (mono ? 'Drag to move. Grayscale rendering of the same MOLA color-shaded map.' : 'Drag to move. Colors show elevation, blue low to red high.') + (patch ? ' Detail: 463 m per pixel.' : '');
 }
 var frame = ctx.createImageData(N, N);
 var out = new Uint32Array(frame.data.buffer);
@@ -575,13 +575,13 @@ var THEMES = [['ice', 'Ice'], ['heat', 'Heat'], ['terrain', 'Terrain'], ['dust',
 var SHORT = { uv: 'University Valley', beacon: 'Beacon', adv: 'Adventdalen', hau: 'Haughton', ad1: 'AD1 polygons' };
 var LAT = { uv: -77.86, beacon: -77.82, adv: 78.17, hau: 75.37, ad1: 78.18 };
 var CELLS = {
-  uv: { ice: ['yes', 'Ice-cemented ground 8 to 42 cm down, under dry cover.'], heat: ['part', 'The daily swing fades to 0.2 K at the ice. Air temperature, not surface.'], terrain: ['no', 'Station elevations only. No slope or relief measured.'], dust: ['no', 'No dust measure obtained.'] },
+  uv: { ice: ['yes', 'Ice-cemented ground 8 to 42 cm down, under dry cover.'], heat: ['part', 'Published depth-response summary; different from the separate air-temperature series and Mars surface products.'], terrain: ['no', 'Station elevations only. No slope or relief measured.'], dust: ['no', 'No dust measure obtained.'] },
   beacon: { ice: ['yes', 'Blocky ice under about 0.3 m of dry soil.'], heat: ['part', 'Published ground-temperature model. Raw records not obtained.'], terrain: ['part', 'Polygons 10 to 20 m across. No elevation model.'], dust: ['no', 'No column-dust equivalent.'] },
-  adv: { ice: ['yes', 'Radar reflector near 1.5 m. Core ice 20 to 50 percent.'], heat: ['no', 'Borehole temperatures not read.'], terrain: ['part', 'Polygons 10 to 20 m across. No elevation model.'], dust: ['no', 'Local loess source. Not column dust.'] },
-  hau: { ice: ['yes', 'Radar finds frozen ground 0.6 to 0.9 m down.'], heat: ['part', 'Mean annual air about −15 °C, from secondary sources.'], terrain: ['part', 'Polygons and stripes 5 to 31 m. Tiny LiDAR coverage.'], dust: ['no', 'Not covered in the sources read.'] },
+  adv: { ice: ['yes', 'Separate radar and core studies; no established line-to-core registration or joint ice truth.'], heat: ['no', 'Borehole temperatures not read.'], terrain: ['part', 'Polygons 10 to 20 m across. No elevation model.'], dust: ['no', 'Local loess source. Not column dust.'] },
+  hau: { ice: ['yes', 'Bounded radar/core method reference after overburden excavation; not intact-cover validation.'], heat: ['part', 'Mean annual air about −15 °C, from secondary sources.'], terrain: ['part', 'Polygons and stripes 5 to 31 m. Tiny LiDAR coverage.'], dust: ['no', 'Not covered in the sources read.'] },
   ad1: { ice: ['part', 'Active ice-wedge terrain. No ice volume measured.'], heat: ['no', 'Monitoring temperatures are not matched to the polygons.'], terrain: ['part', '185 polygons, median about 18 m across.'], dust: ['no', 'No dust measure obtained.'] }
 };
-var VERDICT = { yes: ['Supported', '◆'], part: ['Partly', '◇'], no: ['No match', '○'] };
+var VERDICT = { yes: ['Earth evidence', '◆'], part: ['Partial reference', '◇'], no: ['Not comparable', '○'] };
 var UV_MIN_C = [-20.4, -28.8, -40.1, -35.5, -45.5, -40.5, -45.5, -43.1, -42.0, -36.0, -27.2];
 var UV_MAX_C = [-2.9, -9.3, -10.1, -15.7, -17.5, -18.0, -22.0, -20.1, -17.2, -12.2, -4.1];
 var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November'];
@@ -590,7 +590,7 @@ var cellSel = { pt: 'uv', th: 'ice' }, showMars = true;
 function matrixBox(active) {
   var pts = EARTH[SITES[active].hash], box = h('div', 'strip');
   box.appendChild(h('h3', null, 'What Earth supports'));
-  box.appendChild(h('p', 'unit', 'Tap a cell. ◆ seen on Earth  ◇ partly  ○ no match'));
+  box.appendChild(h('p', 'unit', 'Tap a cell. Earth-reference evidence only: ◆ Earth evidence, ◇ partial reference, ○ no comparable data. No matched Mars condition is validated.'));
   if (pts.indexOf(cellSel.pt) < 0) cellSel.pt = pts[0];
   var grid = h('div', 'mx'); grid.style.setProperty('--n', pts.length);
   grid.appendChild(h('span', 'mxh'));
@@ -618,25 +618,25 @@ function matrixBox(active) {
 
 function wavesBox() {
   var box = h('div', 'strip');
-  box.appendChild(h('h3', null, 'Heat fades with depth'));
-  box.appendChild(h('p', 'unit', 'University Valley, 7 to 18 November 2010. One day of temperature at each depth, same scale.'));
+  box.appendChild(h('h3', null, 'Published Earth depth-response summary'));
+  box.appendChild(h('p', 'unit', 'Reported variation values for University Valley, 7 to 18 November 2010 (K). Bars show published summary values, not observed daily waveforms or reconstructed timing.'));
   var W = 420, H = 178, x0 = 108, x1 = W - 52, k = 2.3;
   var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img',
-    'aria-label': 'Daily temperature swing by depth: ' + UV_DAMP.map(function (d) { return d[0] + ' ' + d[1] + ' kelvin'; }).join(', ') });
+    'aria-label': 'Published temperature-variation summary by depth: ' + UV_DAMP.map(function (d) { return d[0] + ' ' + d[1] + ' kelvin'; }).join(', ') });
   el('rect', { x: 0, y: 0, width: W, height: 4 * 42 - 0, fill: 'rgba(224,166,79,.07)' }, svg);
   el('rect', { x: 0, y: 2 * 42, width: W, height: 2 * 42, fill: 'rgba(142,197,232,.12)' }, svg);
   UV_DAMP.forEach(function (d, r) {
-    var cy = 21 + r * 42, amp = d[1] * k, pts = [];
-    for (var i = 0; i <= 60; i++) { var t = i / 60; pts.push((x0 + t * (x1 - x0)).toFixed(1) + ',' + (cy - amp * Math.sin(t * 6.2832 - 1.2)).toFixed(1)); }
+    var cy = 21 + r * 42;
+    var barWidth = d[1] / 9 * (x1 - x0);
     el('line', { x1: x0, x2: x1, y1: cy, y2: cy, stroke: '#232a35' }, svg);
-    el('polyline', { points: pts.join(' '), fill: 'none', stroke: r < 2 ? '#e0a64f' : '#8ec5e8', 'stroke-width': 2.5, 'stroke-linejoin': 'round' }, svg);
+    el('rect', { x: x0, y: cy - 8, width: barWidth, height: 16, fill: r < 2 ? '#e0a64f' : '#8ec5e8' }, svg);
     txt(svg, x0 - 10, cy + 4, d[0], { fill: '#c7ccd4', 'font-size': 12, 'text-anchor': 'end' });
     txt(svg, x1 + 10, cy + 4, num(d[1], d[1] < 1 ? 2 : 1) + ' K', { fill: '#fff', 'font-size': 12, 'font-weight': 700 });
   });
   txt(svg, 8, 14, 'dry cover', { fill: '#a3a9b3', 'font-size': 10 });
   txt(svg, 8, 2 * 42 + 14, 'ice', { fill: '#8ec5e8', 'font-size': 10 });
   box.appendChild(svg);
-  box.appendChild(h('p', 'read', 'Swing is half the daily range, <b>8.4 K at the surface, 0.2 K at the ice</b>.'));
+  box.appendChild(h('p', 'read', 'Summary values are a published Earth method reference. No sine wave, phase delay or missing time series has been generated. TES/MCS are different measurements; this does not establish the same process or ice depth on Mars.'));
   return box;
 }
 
@@ -679,7 +679,7 @@ function earthTempBox(active) {
   svg.addEventListener('pointermove', pick); svg.addEventListener('pointerdown', pick);
   info.innerHTML = 'Mean <b>261 K in January, 239 K in July</b>. Air at 1.2 m, not surface.';
   box.appendChild(info); box.appendChild(svg);
-  box.appendChild(h('p', 'read', 'Different quantities from the Mars lines: context, not a match.'));
+  box.appendChild(h('p', 'read', 'Earth air at 1.2 m and model-time-adjusted Mars surface medians have different instruments, periods and supports. These overlays are context, not a match or paired daily amplitude.'));
   return box;
 }
 

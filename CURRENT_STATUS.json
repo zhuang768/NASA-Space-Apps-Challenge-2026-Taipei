@@ -36,7 +36,7 @@
     "new_analogue_or_global_novelty_established": false,
     "official_full_requirements": "not_verified;direct_fetch_failed",
     "submission_completed_by_this_update": false,
-    "integrated_main": "ec3f38fd018b55b993232151d441d84286676da3",
+    "integrated_main": "1a0f6ba0ac1fa003f049498b56a76b10e7d876ab",
     "AD1_grid_replay_cases": 11840,
     "AD1_replay_scope": "digital_geometry_only;not_Mars_contour_validation"
   }

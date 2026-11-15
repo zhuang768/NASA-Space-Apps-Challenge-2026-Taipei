@@ -1,6 +1,5 @@
 {
-  "url": "http://127.0.0.1:8931/",
-  "integrated_main": "ec3f38fd018b55b993232151d441d84286676da3",
+  "integrated_main": "1a0f6ba0ac1fa003f049498b56a76b10e7d876ab",
   "panels": [
     {
       "site": "MS-01",
@@ -93,6 +92,8 @@
       "rendered": true
     }
   ],
-  "Earth_scope_disclaimer": true,
-  "scope": "local browser interaction checks; not deployment or scientific validation"
+  "matrixCellClick": false,
+  "marsOverlayToggle": true,
+  "grayscaleToggle": true,
+  "scope": "local interaction tests;not scientific or deployment validation"
 }

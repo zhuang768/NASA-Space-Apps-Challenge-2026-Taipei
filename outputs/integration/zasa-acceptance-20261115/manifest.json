@@ -297,29 +297,29 @@
     },
     {
       "path": "web/SOURCE_PROVENANCE.md",
-      "size": 3710,
-      "sha256": "7cdd5d193c149faea224bc653f6022c69e2edef621c45fff8928036f1bdf6c21",
-      "git_blob": "2bd24880092d7cefedbd3ce10de7b68cc4d19983"
+      "size": 4161,
+      "sha256": "5f87a060842e9d38f8e277fc94e3204cd3ae046620da5db0266317a391dc281f",
+      "git_blob": "47a970b0754d2d6c2d677d52c3417131cf7bf32d"
     },
     {
       "path": "web/app.js",
-      "size": 47440,
-      "sha256": "3bfa172ba7e37669ba54ca79ca74d30d1ea7f965fa2209caf7fa2c729c585376",
-      "git_blob": "79419780f42d5d3f3efb39dc3429e99162ea02d7",
+      "size": 55122,
+      "sha256": "0c0cecedf76c98e7a7e226f83961221f36442f75119c4b848e7f99403c9f1af6",
+      "git_blob": "7f9a73028a8e979b834cb62bdbfa37ec8f68c28b",
       "bytes": 46219
     },
     {
       "path": "web/deployment.json",
-      "size": 964,
-      "sha256": "92b9225df186a4a761be0d954dfc6fc4be9ce0bcc50a1a75e072fb62fd4bfe97",
-      "git_blob": "b45ace4c4f69077a167e49304e44ae3e6f876d24",
+      "size": 1044,
+      "sha256": "72c9329fbf257aaaa22b5d9b5c345036bc1c152207f0869327b58a26f1973fbf",
+      "git_blob": "3478303e01131d3f620c20b1471d84212fa128cf",
       "bytes": 840
     },
     {
       "path": "web/index.html",
-      "size": 4797,
-      "sha256": "d086631aeb2e05bd33f994130cafea3fb037f99d9361a69fa41f89d0b37930d2",
-      "git_blob": "3ee23d74fbef8d6210438db9beb7c2709d866ec0",
+      "size": 5749,
+      "sha256": "98ddbdeba0ae28241b804eff4d49e6e9a3a14ae8dedc119f32693e215140c78d",
+      "git_blob": "a784bcd09d9f15cbaaaa376c6e1c3aaab7a811ac",
       "bytes": 4246
     },
     {
@@ -331,15 +331,15 @@
     },
     {
       "path": "web/style.css",
-      "size": 8135,
-      "sha256": "4c3e04a4d508357f30e2ccf983ce8ae81ea4d85500af1f9e7ecb7b88d07f7ef1",
-      "git_blob": "d987a9e1ef4c0a22bfaf468c7e60f03e30cfd8d6",
+      "size": 11787,
+      "sha256": "b4fe1a0243b7d746cf8d2ce0d2d561393d79f546da0aaa7eada5ee00a8a024c6",
+      "git_blob": "f362cbb72c01b592d52b966a6680ce2cb8d1ff0a",
       "bytes": 8135
     }
   ],
   "current_asset_update": {
-    "source_main": "1a0f6ba0ac1fa003f049498b56a76b10e7d876ab",
-    "scope": "Preserved Earth matrix,interactive charts and map controls;corrected scientific labels;replaced artificial daily waves with summary bars",
+    "source_main": "25b0744ac3d2230803505e1679109c2c35b6204d",
+    "scope": "Evidence hierarchy, source-and-scale disclosure, aligned regional plots and responsive navigation; science arrays preserved",
     "deployment_verified": false,
     "science_values_changed": false
   }

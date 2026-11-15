@@ -82,10 +82,13 @@ var texW = 0, texH = 0, tex = null;
 var canvas = $('globe'), ctx = canvas.getContext('2d');
 var N = canvas.width, R = N / 2;
 var patch = null, patchFor = -1;
+var patchState = 'idle';
 var TILE = 'https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0/default/default028mm/6/';
 function loadPatch(k) {
   if (patchFor === k) return;
-  patchFor = k; patch = null;
+  patchFor = k; patch = null; patchState = 'loading';
+  if (tex) $('map-message').hidden = true;
+  $('hint').textContent = hintText();
   var s = SITES[k], lon = s.lon > 180 ? s.lon - 360 : s.lon;
   var c0 = Math.floor((lon - 10 + 180) / 360 * 128), c1 = Math.floor((lon + 10 + 180) / 360 * 128);
   var r0 = Math.floor((90 - s.lat - 5.5) / 180 * 64), r1 = Math.floor((90 - s.lat + 5.5) / 180 * 64);
@@ -98,7 +101,14 @@ function loadPatch(k) {
       g.drawImage(im, (c - c0) * 256, (r - r0) * 256);
       if (--left === 0 && !bad && patchFor === k) finish();
     };
-    im.onerror = function () { bad = true; };
+    im.onerror = function () {
+      bad = true;
+      if (patchFor === k) {
+        patchState = 'unavailable';
+        mapMessage('Detail tiles are unavailable. The base map and research data remain available.');
+        $('hint').textContent = hintText();
+      }
+    };
     left++; im.src = TILE + r + '/' + c + '.jpg';
   })(r, c);
   function finish() {
@@ -106,10 +116,11 @@ function loadPatch(k) {
       var d = g.getImageData(0, 0, w, hh).data;
       patch = { data: new Uint32Array(d.buffer), w: w, h: hh, lon0: c0 / 128 * 360 - 180, lon1: (c1 + 1) / 128 * 360 - 180,
         lat0: 90 - r0 / 64 * 180, lat1: 90 - (r1 + 1) / 64 * 180, gain: [1, 1, 1] };
+      patchState = 'ready';
       matchColor(patch);
       $('hint').textContent = hintText();
       drawGlobe();
-    } catch (e) { patch = null; }
+    } catch (e) { patch = null; patchState = 'unavailable'; mapMessage('Detail tiles could not be read. The base map remains available.'); }
   }
 }
 function matchColor(p) {
@@ -127,7 +138,11 @@ function matchColor(p) {
   for (var k = 0; k < 3; k++) p.gain[k] = ps[k] > 0 ? Math.max(0.6, Math.min(1.8, bs[k] / ps[k])) : 1;
 }
 function hintText() {
-  return (mono ? 'Drag to move. Grayscale rendering of the same MOLA color-shaded map.' : 'Drag to move. Colors show elevation, blue low to red high.') + (patch ? ' Detail: 463 m per pixel.' : '');
+  return (mono ? 'Grayscale MOLA display.' : 'MOLA elevation: blue low, red high.') + (patch ? ' Detail map: 463 m/pixel.' : (patchState === 'loading' ? ' Loading detail map…' : ' Global base map.'));
+}
+function mapMessage(message) {
+  $('map-message-text').textContent = message;
+  $('map-message').hidden = false;
 }
 var frame = ctx.createImageData(N, N);
 var out = new Uint32Array(frame.data.buffer);
@@ -337,12 +352,53 @@ $('zout').addEventListener('click', function () { flyTo(view.lon, view.lat, Math
 
 /* ---------- panel ---------- */
 var tab = 'terrain', dustYear = 34;
-var TABS = [['terrain', 'Terrain'], ['heat', 'Heat'], ['ice', 'Ice evidence'], ['dust', 'Dust'], ['earth', 'Earth check'], ['unknowns', 'Unknown']];
+var TABS = [['terrain', 'Terrain'], ['heat', 'Temperature'], ['ice', 'Water / ice'], ['dust', 'Air / dust'], ['earth', 'Earth references'], ['unknowns', 'Limits & next steps']];
+var REPO = 'https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/25b0744ac3d2230803505e1679109c2c35b6204d/';
+var RESEARCH = 'outputs/research/mars_reselection_20261114/';
+var TAB_CONTEXT = {
+  terrain: {
+    takeaway: 'Regional terrain describes the wider setting. Landing-scale obstacles remain unresolved.',
+    support: 'MOLA · 0.5° review cells',
+    method: 'Native MOLA statistics inside each nominal cell. Slope uses an approximately 3.7 km baseline; relief is the cell’s elevation range. Map display detail does not improve these analysis scales.',
+    provider: ['MOLA documentation', 'https://marsoweb.nas.nasa.gov/globalData/MOLA_notes.html']
+  },
+  heat: {
+    takeaway: 'Material response and surface temperature are different measurements. Neither confirms ice on its own.',
+    support: 'TES + MCS · different spatial supports',
+    method: 'TES native-cell means exclude infill, with valid counts shown below. MCS uses nearest 5° bins, MY29–36, at nominal 03:00 / 15:00 LTST with provider model-time adjustments. Per-bin QA, counts and uncertainties were not supplied.',
+    provider: ['TES product documentation', 'https://pds-geosciences.wustl.edu/missions/mgs/tes-timap.html'],
+    extra: ['MCS derivative source', 'https://doi.org/10.5281/zenodo.17947556']
+  },
+  ice: {
+    takeaway: 'SWIM measures consistency with ice. Local ice presence, depth and amount remain unconfirmed.',
+    support: 'SWIM 2.0 · shared evidence across depth zones',
+    method: 'The signed −1 to +1 index combines evidence that can be consistent with ice. These native-cell means are not probabilities or amounts. Both depth-zone products share inputs, so they are not independent confirmations.',
+    provider: ['SWIM 2.0 products', 'https://swim.psi.edu/SWIM2Products.php']
+  },
+  dust: {
+    takeaway: 'These reconstructed regional columns describe atmospheric context. They do not measure local visibility or deposited dust.',
+    support: 'MY34 / MY35 · nearest 3° dust cell',
+    method: 'Montabone reconstructed pressure-normalized column opacity. Each Mars year contains 669 reconstructed sols. Seasonal means use 90° Ls intervals; the percentile below uses MY34. Repeated coarse cells are not independent local measurements.',
+    provider: ['Published dust reconstruction', 'https://doi.org/10.1029/2019JE006111']
+  },
+  earth: {
+    takeaway: 'Earth observations provide method references. No matched Mars condition or new terrestrial analogue has been validated.',
+    support: 'Published Earth records · separate footprints',
+    method: 'Matrix states describe evidence at the Earth reference only. University Valley ground-response summaries, monthly air observations and Mars surface products have different periods, instruments and supports. They must not be treated as a paired experiment.',
+    provider: ['Earth evidence ledger', REPO + 'docs/earth_submission_status.csv']
+  },
+  unknowns: {
+    takeaway: 'Regional screening narrows questions. Independent local evidence is still needed to test them.',
+    support: 'Research targets · no local ice confirmation',
+    method: 'Catalogue intersection, valid pixels, inspected area and accepted measurements are different stages. The retained MS-03 fixed windows did not yield accepted closed contours; this is not proof that polygons are absent.',
+    provider: ['MS-03 retained-image audit', REPO + 'outputs/research/MS-03/repository_validation_20261115/README.md']
+  }
+};
 
 function buildOverview() {
   var host = $('regions');
   SITES.forEach(function (s, i) {
-    var b = h('button', 'rbtn', '<b>' + s.id + '  ' + s.coords + '</b><span>' + s.one + '</span>');
+    var b = h('button', 'rbtn', '<span class="region-line"><b>' + s.id + '</b><span class="region-coords">' + s.coords + '</span><svg aria-hidden="true" viewBox="0 0 20 20"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></span><span class="region-description">' + s.one + '</span>');
     b.type = 'button'; b.setAttribute('data-i', i);
     b.addEventListener('click', function () { select(i); });
     host.appendChild(b);
@@ -357,6 +413,8 @@ function select(i) {
   $('d-title').textContent = s.id;
   $('d-coords').textContent = s.coords;
   $('d-text').textContent = s.text;
+  $('region-select').value = String(i);
+  $('study-scope').textContent = '0.5° review cell · ' + num(s.lat - 0.25, 2) + '–' + num(s.lat + 0.25, 2) + '°N · ' + num(s.lon - 0.25, 2) + '–' + num(s.lon + 0.25, 2) + '°E';
   $('detail').style.setProperty('--c', COLORS[i]);
   setZoomState();
   renderTabs();
@@ -364,11 +422,13 @@ function select(i) {
   loadPatch(i);
   flyTo(s.lon * RAD, s.lat * RAD, 5);
   $('panel').scrollTop = 0;
+  if (window.matchMedia('(max-width: 60rem)').matches && !first) $('detail').scrollIntoView({ block: 'start' });
   if (first) $('btn-back').focus({ preventScroll: true });
 }
 function home() {
   selected = -1;
   $('overview').hidden = false; $('detail').hidden = true;
+  if (tex) $('map-message').hidden = true;
   setZoomState();
   try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
   flyTo(HOME.lon, HOME.lat, 1);
@@ -380,13 +440,16 @@ function renderTabs() {
   TABS.forEach(function (d) {
     var b = h('button', 'tab', d[1]);
     b.type = 'button'; b.setAttribute('role', 'tab'); b.id = 'tab-' + d[0];
+    b.setAttribute('aria-controls', 'tabpanel');
     b.setAttribute('aria-selected', d[0] === tab ? 'true' : 'false');
     b.tabIndex = d[0] === tab ? 0 : -1;
-    b.addEventListener('click', function () { tab = d[0]; renderTabs(); });
+    b.addEventListener('click', function () { tab = d[0]; renderTabs(); $('tab-' + tab).focus({ preventScroll: true }); });
     b.addEventListener('keydown', function (e) {
       var idx = TABS.map(function (x) { return x[0]; }).indexOf(d[0]), n = null;
       if (e.key === 'ArrowRight') n = (idx + 1) % TABS.length;
       if (e.key === 'ArrowLeft') n = (idx + TABS.length - 1) % TABS.length;
+      if (e.key === 'Home') n = 0;
+      if (e.key === 'End') n = TABS.length - 1;
       if (n !== null) { e.preventDefault(); tab = TABS[n][0]; renderTabs(); $('tab-' + tab).focus(); }
     });
     t.appendChild(b);
@@ -405,9 +468,9 @@ var METRICS = {
     note: 'A bigger range means more regional undulation.' },
   ti: { title: 'Thermal inertia', unit: 'J m⁻² K⁻¹ s⁻½, how slowly the surface changes temperature', dom: [0, 350], d: 0, hi: 'Highest', lo: 'Lowest',
     note: 'Thermal inertia depends on material, particle size and cementation; it does not uniquely identify hardness or ice.' },
-  swim1: { title: 'SWIM consistency, 0 to 1 m', unit: 'signed consistency index from −1 to +1', dom: [-1, 1], d: 2, hi: 'Strongest', lo: 'Weakest',
+  swim1: { title: 'SWIM consistency, 0 to 1 m', unit: 'signed consistency index from −1 to +1', dom: [-1, 1], d: 2, hi: 'Highest consistency', lo: 'Lowest consistency',
     note: 'Composite consistency with ice: −1 to +1. It is not ice amount, probability or an independent detection.' },
-  swim5: { title: 'SWIM consistency, 1 to 5 m', unit: 'signed consistency index from −1 to +1', dom: [-1, 1], d: 2, hi: 'Strongest', lo: 'Weakest',
+  swim5: { title: 'SWIM consistency, 1 to 5 m', unit: 'signed consistency index from −1 to +1', dom: [-1, 1], d: 2, hi: 'Highest consistency', lo: 'Lowest consistency',
     note: 'The two depth-zone maps share evidence; neither establishes local ice depth or an independent confirmation.' },
   p95: { title: 'Reconstructed dust, 95th percentile', unit: 'dimensionless column opacity, Mars year 34', dom: [0, 0.3], d: 3, hi: 'Higher percentile', lo: 'Lower percentile',
     note: '95th percentile across 669 reconstructed sols; not a measured peak, local visibility or surface dust deposition.' }
@@ -423,37 +486,28 @@ function rankSentence(key, i) {
 }
 
 function strip(key, active) {
-  var m = METRICS[key];
-  var box = h('div', 'strip');
+  var m = METRICS[key], box = h('div', 'strip');
   box.appendChild(h('h3', null, m.title));
   box.appendChild(h('p', 'unit', m.unit));
-  var W = 420, H = 100, x0 = 12, x1 = W - 12, ay = 44;
+  var W = 420, H = 136, x0 = 82, x1 = 318;
   var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img',
     'aria-label': m.title + ': ' + SITES.map(function (s) { return s.id + ' ' + num(s[key], m.d); }).join(', ') });
   function X(v) { return x0 + (v - m.dom[0]) / (m.dom[1] - m.dom[0]) * (x1 - x0); }
-  el('line', { x1: x0, x2: x1, y1: ay, y2: ay, stroke: '#2c3542' }, svg);
-  [m.dom[0], m.dom[1]].forEach(function (v, k) {
-    el('line', { x1: X(v), x2: X(v), y1: ay - 5, y2: ay + 5, stroke: '#2c3542' }, svg);
-    txt(svg, X(v) + (k ? 4 : -4), H - 4, num(v, m.d === 3 ? 1 : 0), { fill: '#8b929d', 'font-size': 11, 'text-anchor': k ? 'end' : 'start' });
+  if (m.dom[0] < 0 && m.dom[1] > 0) {
+    el('line', { x1: X(0), x2: X(0), y1: 10, y2: 106, stroke: '#46515f', 'stroke-dasharray': '3 4' }, svg);
+    txt(svg, X(0), 129, '0', { fill: '#a3a9b3', 'font-size': 13, 'text-anchor': 'middle' });
+  }
+  SITES.forEach(function (s, i) {
+    var y = 24 + i * 34, on = i === active, x = X(s[key]);
+    el('line', { x1: x0, x2: x1, y1: y, y2: y, stroke: '#2c3542' }, svg);
+    txt(svg, 0, y + 5, s.id, { fill: on ? COLORS[i] : '#a3a9b3', 'font-size': 14, 'font-weight': on ? 600 : 400 });
+    var r = on ? 7 : 5;
+    el('path', { d: 'M' + x + ' ' + (y-r) + 'L' + (x+r) + ' ' + y + 'L' + x + ' ' + (y+r) + 'L' + (x-r) + ' ' + y + 'Z',
+      fill: COLORS[i], opacity: on ? 1 : 0.65, stroke: '#04060a', 'stroke-width': 1.5 }, svg);
+    txt(svg, W - 2, y + 5, num(s[key], m.d), { fill: on ? '#fff' : '#a3a9b3', 'font-size': 15, 'font-weight': on ? 600 : 400, 'text-anchor': 'end' });
   });
-  var order = SITES.map(function (s, i) { return i; }).sort(function (a, b) { return SITES[a][key] - SITES[b][key]; });
-  var groups = {}, seen = {};
-  SITES.forEach(function (s) { var k = Math.round(X(s[key])); groups[k] = (groups[k] || 0) + 1; });
-  var lanes = [{ y: ay - 16, end: -1e9 }, { y: ay + 30, end: -1e9 }, { y: ay + 47, end: -1e9 }];
-  /* draw others first so the active region sits on top */
-  var draw = order.slice().sort(function (a, b) { return (a === active) - (b === active); });
-  draw.forEach(function (i) {
-    var s = SITES[i], v = s[key], x = X(v), gk = Math.round(x);
-    var tie = (seen[gk] = (seen[gk] || 0) + 1) - 1, off = groups[gk] > 1 ? (tie ? 6 : -6) : 0;
-    var on = i === active, r = on ? 8 : 6, op = on ? 1 : 0.55;
-    var d = 'M' + x + ' ' + (ay + off - r) + 'L' + (x + r) + ' ' + (ay + off) + 'L' + x + ' ' + (ay + off + r) + 'L' + (x - r) + ' ' + (ay + off) + 'Z';
-    el('path', { d: d, fill: COLORS[i], stroke: '#04060a', 'stroke-width': 2, opacity: op }, svg);
-    var label = s.id + '  ' + num(v, m.d), wd = label.length * 7.4 + 12;
-    var anchor = x > W - 70 ? 'end' : (x < 70 ? 'start' : 'middle');
-    var left = anchor === 'end' ? x - wd : (anchor === 'start' ? x : x - wd / 2);
-    var lane = lanes.filter(function (l) { return left > l.end; })[0] || lanes[2];
-    lane.end = left + wd;
-    txt(svg, x, lane.y, label, { fill: on ? '#ffffff' : '#9aa1ab', 'font-size': on ? 13 : 12, 'font-weight': on ? 700 : 500, 'text-anchor': anchor });
+  [m.dom[0], m.dom[1]].forEach(function (v, k) {
+    txt(svg, X(v), 129, num(v, m.d === 3 ? 1 : 0), { fill: '#a3a9b3', 'font-size': 13, 'text-anchor': k ? 'end' : 'start' });
   });
   box.appendChild(svg);
   box.appendChild(h('p', 'read', rankSentence(key, active) + ' ' + m.note));
@@ -504,7 +558,7 @@ function dustBox(active) {
   var seg = h('div', 'seg'); seg.setAttribute('role', 'group'); seg.setAttribute('aria-label', 'Mars year');
   [34, 35].forEach(function (y) {
     var b = h('button', null, 'Mars year ' + y); b.type = 'button'; b.setAttribute('aria-pressed', y === dustYear ? 'true' : 'false');
-    b.addEventListener('click', function () { dustYear = y; renderTab(); });
+    b.addEventListener('click', function () { dustYear = y; renderTab(); $('tabpanel').querySelector('.seg button[aria-pressed="true"]').focus({ preventScroll: true }); });
     seg.appendChild(b);
   });
   box.appendChild(seg);
@@ -542,9 +596,9 @@ function unknowns(i) {
   var s = SITES[i], d = h('dl', 'facts');
   function add(t, body) { d.appendChild(h('dt', null, t)); d.appendChild(h('dd', null, body)); }
   add('Map unit', 'The USGS global geologic map, drawn at 1:20 million, places this region in the ' + s.unit + '. That is a regional label, not a description of the rock or soil underfoot.');
-  add('Imagery', s.imagery || 'Image counts for this region are not summarized on this page.');
+  add('Image records and inspection', s.imagery || 'Image counts for this region are not summarized on this page.');
   add('Not known', 'Whether ice is there, how deep, and how much. What the ground is made of, what covers it, and how rough it is at landing scale.');
-  add('What would settle it', 'Projected high-resolution images, radar echoes, spectra, and an independent measurement on the ground. Earth sites such as University Valley and Haughton crater show how those methods work. They are not matches for this region.');
+  add('Evidence needed next', 'Check valid, registered local image pixels and independent radar, spectral or ground evidence. Each constrains a different question; no single product establishes ice presence, depth and amount. Earth sites provide method references, with separate footprints and limits.');
   return d;
 }
 
@@ -567,7 +621,7 @@ var PTS = {
     yes: 'The bounded published radar/core subcase used a short line after overburden excavation. The July 2019 thaw observations are a separate study and footprint.',
     no: 'Excavated cover does not validate intact-cover detection. Separate thaw and radar records cannot be combined into one ice truth.' },
   ad1: { name: 'Adventdalen polygons (AD1), Svalbard', where: '78.18°N, 15.92°E', url: 'https://doi.pangaea.de/10.1594/PANGAEA.921087',
-    yes: '185 mapped polygons, median equivalent diameter about 18 m. The site is identified as active ice-wedge terrain.',
+    yes: '185 mapped polygons, median equivalent-circle diameter about 18.5 m. The site is identified as active ice-wedge terrain.',
     no: 'No ice volume and no matched temperature record.' }
 };
 var EARTH = { 'ms-01': ['uv', 'beacon'], 'ms-02': ['uv', 'beacon', 'adv', 'hau'], 'ms-03': ['uv', 'ad1'] };
@@ -575,22 +629,25 @@ var THEMES = [['ice', 'Ice'], ['heat', 'Heat'], ['terrain', 'Terrain'], ['dust',
 var SHORT = { uv: 'University Valley', beacon: 'Beacon', adv: 'Adventdalen', hau: 'Haughton', ad1: 'AD1 polygons' };
 var LAT = { uv: -77.86, beacon: -77.82, adv: 78.17, hau: 75.37, ad1: 78.18 };
 var CELLS = {
-  uv: { ice: ['yes', 'Ice-cemented ground 8 to 42 cm down, under dry cover.'], heat: ['part', 'Published depth-response summary; different from the separate air-temperature series and Mars surface products.'], terrain: ['no', 'Station elevations only. No slope or relief measured.'], dust: ['no', 'No dust measure obtained.'] },
+  uv: { ice: ['yes', 'Published valley-wide interfaces 8 to 42 cm below dry cover; this range is not one W-station profile.'], heat: ['part', 'Published depth-response summary; different from the separate air-temperature series and Mars surface products.'], terrain: ['no', 'Station elevations only. No slope or relief measured.'], dust: ['no', 'No dust measure obtained.'] },
   beacon: { ice: ['yes', 'Blocky ice under about 0.3 m of dry soil.'], heat: ['part', 'Published ground-temperature model. Raw records not obtained.'], terrain: ['part', 'Polygons 10 to 20 m across. No elevation model.'], dust: ['no', 'No column-dust equivalent.'] },
   adv: { ice: ['yes', 'Separate radar and core studies; no established line-to-core registration or joint ice truth.'], heat: ['no', 'Borehole temperatures not read.'], terrain: ['part', 'Polygons 10 to 20 m across. No elevation model.'], dust: ['no', 'Local loess source. Not column dust.'] },
   hau: { ice: ['yes', 'Bounded radar/core method reference after overburden excavation; not intact-cover validation.'], heat: ['part', 'Mean annual air about −15 °C, from secondary sources.'], terrain: ['part', 'Polygons and stripes 5 to 31 m. Tiny LiDAR coverage.'], dust: ['no', 'Not covered in the sources read.'] },
-  ad1: { ice: ['part', 'Active ice-wedge terrain. No ice volume measured.'], heat: ['no', 'Monitoring temperatures are not matched to the polygons.'], terrain: ['part', '185 polygons, median about 18 m across.'], dust: ['no', 'No dust measure obtained.'] }
+  ad1: { ice: ['part', 'Active ice-wedge terrain. No ice volume measured.'], heat: ['no', 'Monitoring temperatures are not matched to the polygons.'], terrain: ['part', '185 source polygons; median equivalent-circle diameter about 18.5 m. No qualified MS-03 contours for a paired comparison.'], dust: ['no', 'No dust measure obtained.'] }
 };
 var VERDICT = { yes: ['Earth evidence', '◆'], part: ['Partial reference', '◇'], no: ['Not comparable', '○'] };
 var UV_MIN_C = [-20.4, -28.8, -40.1, -35.5, -45.5, -40.5, -45.5, -43.1, -42.0, -36.0, -27.2];
 var UV_MAX_C = [-2.9, -9.3, -10.1, -15.7, -17.5, -18.0, -22.0, -20.1, -17.2, -12.2, -4.1];
 var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November'];
 var cellSel = { pt: 'uv', th: 'ice' }, showMars = true;
+var earthThermalOpen = false, earthLocationsOpen = false;
+var uvMonth = null;
 
 function matrixBox(active) {
   var pts = EARTH[SITES[active].hash], box = h('div', 'strip');
   box.appendChild(h('h3', null, 'What Earth supports'));
-  box.appendChild(h('p', 'unit', 'Tap a cell. Earth-reference evidence only: ◆ Earth evidence, ◇ partial reference, ○ no comparable data. No matched Mars condition is validated.'));
+  box.appendChild(h('p', 'unit', 'Select a cell to inspect the Earth evidence and its limits. No matched Mars condition is validated.'));
+  box.appendChild(h('div', 'matrix-key', '<span>◆ Earth evidence</span><span>◇ Partial reference</span><span>○ No comparable data</span>'));
   if (pts.indexOf(cellSel.pt) < 0) cellSel.pt = pts[0];
   var grid = h('div', 'mx'); grid.style.setProperty('--n', pts.length);
   grid.appendChild(h('span', 'mxh'));
@@ -599,7 +656,7 @@ function matrixBox(active) {
   function show() {
     var p = PTS[cellSel.pt], c = CELLS[cellSel.pt][cellSel.th], v = VERDICT[c[0]];
     read.innerHTML = '<b>' + p.name + ', ' + THEMES.filter(function (t) { return t[0] === cellSel.th; })[0][1] + ': ' + v[0] + '</b><br>' + c[1] +
-      ' <a href="' + p.url + '">Source</a>';
+      ' <a href="' + p.url + '">Published source</a><span class="matrix-limit">Use here: a method reference. ' + p.no + '</span>';
     Array.prototype.forEach.call(grid.querySelectorAll('button'), function (b) { b.setAttribute('aria-pressed', b.dataset.pt === cellSel.pt && b.dataset.th === cellSel.th ? 'true' : 'false'); });
   }
   THEMES.forEach(function (t) {
@@ -642,11 +699,11 @@ function wavesBox() {
 
 function earthTempBox(active) {
   var s = SITES[active], box = h('div', 'strip');
-  box.appendChild(h('h3', null, 'A cold-desert year'));
-  box.appendChild(h('p', 'unit', 'University Valley air temperature, 2010, in kelvin. Move across the chart.'));
-  var seg = h('div', 'seg'), bt = h('button', null, 'Mars night and day');
+  box.appendChild(h('h3', null, 'University Valley air temperature'));
+  box.appendChild(h('p', 'unit', 'January–November 2010 · air at 1.2 m · K. Select a month for its mean and range.'));
+  var seg = h('div', 'seg'), bt = h('button', null, 'Show Mars surface context');
   bt.type = 'button'; bt.setAttribute('aria-pressed', showMars ? 'true' : 'false');
-  bt.addEventListener('click', function () { showMars = !showMars; renderTab(); });
+  bt.addEventListener('click', function () { showMars = !showMars; renderTab(); $('tabpanel').querySelector('.seg button').focus({ preventScroll: true }); });
   seg.appendChild(bt); box.appendChild(seg);
   var info = h('p', 'tip'); info.setAttribute('aria-live', 'polite');
   var W = 420, H = 190, left = 40, right = 14, top = 12, bot = 28, lo = 160, hi = 270;
@@ -668,16 +725,26 @@ function earthTempBox(active) {
   el('polyline', { points: UV_MONTHLY_C.map(function (c, i) { return X(i) + ',' + Y(c + 273.15); }).join(' '), fill: 'none', stroke: '#ebe8e1', 'stroke-width': 2.5, 'stroke-linejoin': 'round' }, svg);
   var cur = el('line', { y1: top, y2: H - bot, stroke: '#fff', 'stroke-width': 1, visibility: 'hidden' }, svg);
   var dot = el('rect', { width: 9, height: 9, fill: '#fff', stroke: '#04060a', 'stroke-width': 1.5, visibility: 'hidden' }, svg);
-  function pick(e) {
-    var r = svg.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * W;
-    var i = Math.max(0, Math.min(10, Math.round((x - left) / ((W - left - right) / 10))));
+  function pickMonth(i) {
+    uvMonth = i;
     var m = UV_MONTHLY_C[i] + 273.15;
     cur.setAttribute('x1', X(i)); cur.setAttribute('x2', X(i)); cur.setAttribute('visibility', 'visible');
     dot.setAttribute('x', X(i) - 4.5); dot.setAttribute('y', Y(m) - 4.5); dot.setAttribute('visibility', 'visible');
     info.innerHTML = '<b>' + MONTHS[i] + '</b> mean ' + num(m, 0) + ' K, range ' + num(UV_MIN_C[i] + 273.15, 0) + ' to ' + num(UV_MAX_C[i] + 273.15, 0) + ' K';
+    monthSelect.value = String(i);
   }
+  function pick(e) {
+    var r = svg.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * W;
+    pickMonth(Math.max(0, Math.min(10, Math.round((x - left) / ((W - left - right) / 10)))));
+  }
+  var monthLabel = h('label', 'month-picker', 'Month');
+  var monthSelect = h('select'); monthSelect.setAttribute('aria-label', 'University Valley month');
+  MONTHS.forEach(function (m, i) { var option = h('option', null, m); option.value = i; monthSelect.appendChild(option); });
+  monthSelect.addEventListener('change', function () { pickMonth(Number(this.value)); });
+  monthLabel.appendChild(monthSelect); box.appendChild(monthLabel);
   svg.addEventListener('pointermove', pick); svg.addEventListener('pointerdown', pick);
   info.innerHTML = 'Mean <b>261 K in January, 239 K in July</b>. Air at 1.2 m, not surface.';
+  if (uvMonth !== null) pickMonth(uvMonth);
   box.appendChild(info); box.appendChild(svg);
   box.appendChild(h('p', 'read', 'Earth air at 1.2 m and model-time-adjusted Mars surface medians have different instruments, periods and supports. These overlays are context, not a match or paired daily amplitude.'));
   return box;
@@ -719,18 +786,49 @@ function renderTab() {
   var i = selected; if (i < 0) return;
   p.style.setProperty('--c', COLORS[i]);
   $('tabs').style.setProperty('--c', COLORS[i]);
+  var context = TAB_CONTEXT[tab];
+  p.appendChild(h('p', 'panel-summary', context.takeaway));
+  p.appendChild(h('p', 'support-line', context.support));
   if (tab === 'terrain') { p.appendChild(strip('slope', i)); p.appendChild(strip('relief', i)); p.appendChild(strip('elev', i)); }
   else if (tab === 'heat') { p.appendChild(strip('ti', i)); p.appendChild(coverageBox(i)); p.appendChild(swingBox(i)); }
   else if (tab === 'ice') { p.appendChild(strip('swim1', i)); p.appendChild(strip('swim5', i)); }
   else if (tab === 'dust') { p.appendChild(dustBox(i)); p.appendChild(strip('p95', i)); }
-  else if (tab === 'earth') { p.appendChild(matrixBox(i)); p.appendChild(wavesBox()); p.appendChild(earthTempBox(i)); p.appendChild(ladderBox(i)); }
+  else if (tab === 'earth') {
+    p.appendChild(matrixBox(i));
+    var thermal = h('details', 'research-detail');
+    thermal.open = earthThermalOpen;
+    thermal.addEventListener('toggle', function () { earthThermalOpen = thermal.open; });
+    thermal.appendChild(h('summary', null, 'Explore thermal observations<span>University Valley · separate ground and air records</span>'));
+    thermal.appendChild(wavesBox()); thermal.appendChild(earthTempBox(i)); p.appendChild(thermal);
+    var locations = h('details', 'research-detail');
+    locations.open = earthLocationsOpen;
+    locations.addEventListener('toggle', function () { earthLocationsOpen = locations.open; });
+    locations.appendChild(h('summary', null, 'Compare reference locations<span>Latitude context across two planets</span>'));
+    locations.appendChild(ladderBox(i)); p.appendChild(locations);
+  }
   else p.appendChild(unknowns(i));
+  var source = h('details', 'source-details');
+  source.appendChild(h('summary', null, 'Source & scale'));
+  source.appendChild(h('p', null, context.method));
+  var links = h('ul');
+  [context.provider, context.extra, ['Retained regional values (CSV)', REPO + RESEARCH + 'final_candidates.csv'], ['Processing and scale notes', REPO + RESEARCH + 'COMPUTATION.md']].filter(Boolean).forEach(function (item) {
+    var li = h('li'); li.appendChild(h('a', null, item[0])); li.firstChild.href = item[1]; links.appendChild(li);
+  });
+  if (tab === 'earth') {
+    var li = h('li');
+    li.appendChild(h('a', null, SITES[i].id + ' Earth reference records'));
+    li.firstChild.href = REPO + 'outputs/research/' + SITES[i].id + '/candidates.csv'; links.appendChild(li);
+  }
+  source.appendChild(links);
+  source.appendChild(h('p', 'source-version', 'Repository source snapshot: 25b0744 · 15 Nov 2026. Provider observations have their own dates and footprints.'));
+  p.appendChild(source);
 }
 
 /* ---------- wiring ---------- */
 $('btn-back').addEventListener('click', home);
 $('btn-overview').addEventListener('click', home);
 $('btn-home').addEventListener('click', home);
+$('region-select').addEventListener('change', function () { select(Number(this.value)); });
 var dlg = $('sources');
 $('btn-sources').addEventListener('click', function () { if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', ''); });
 $('src-close').addEventListener('click', function () { if (dlg.close) dlg.close(); else dlg.removeAttribute('open'); });
@@ -749,9 +847,16 @@ img.onload = function () {
   o.width = texW = img.naturalWidth; o.height = texH = img.naturalHeight;
   var g = o.getContext('2d'); g.drawImage(img, 0, 0);
   tex = new Uint32Array(g.getImageData(0, 0, texW, texH).data.buffer);
+  $('map-message').hidden = true;
   drawGlobe();
 };
+img.onerror = function () { mapMessage('The base map could not load. Region controls and research data remain available.'); };
 img.src = 'mola.jpg';
+$('retry-map').addEventListener('click', function () {
+  $('map-message').hidden = true;
+  if (!tex) img.src = 'mola.jpg?retry=' + Date.now();
+  else if (selected >= 0) { patchFor = -1; loadPatch(selected); }
+});
 
 buildOverview();
 setZoomState();

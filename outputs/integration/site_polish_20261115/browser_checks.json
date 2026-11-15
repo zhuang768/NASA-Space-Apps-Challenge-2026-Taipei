@@ -1,0 +1,150 @@
+{
+  "panels": [
+    {
+      "site": "MS-01",
+      "tab": "Terrain",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-01",
+      "tab": "Temperature",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-01",
+      "tab": "Water / ice",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-01",
+      "tab": "Air / dust",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-01",
+      "tab": "Earth references",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-01",
+      "tab": "Limits & next steps",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-02",
+      "tab": "Terrain",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-02",
+      "tab": "Temperature",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-02",
+      "tab": "Water / ice",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-02",
+      "tab": "Air / dust",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-02",
+      "tab": "Earth references",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-02",
+      "tab": "Limits & next steps",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-03",
+      "tab": "Terrain",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-03",
+      "tab": "Temperature",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-03",
+      "tab": "Water / ice",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-03",
+      "tab": "Air / dust",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-03",
+      "tab": "Earth references",
+      "rendered": true,
+      "sourceControl": true
+    },
+    {
+      "site": "MS-03",
+      "tab": "Limits & next steps",
+      "rendered": true,
+      "sourceControl": true
+    }
+  ],
+  "responsive": [
+    {
+      "allTabsVisible": true,
+      "documentWidth": 320,
+      "minMatrixCell": 48.3984375,
+      "width": 320
+    },
+    {
+      "allTabsVisible": true,
+      "documentWidth": 768,
+      "minMatrixCell": 139.0390625,
+      "width": 768
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "scope": "ice tab and four-reference Earth matrix inspected"
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "documentWidth": 1440,
+      "scope": "overview and evidence charts inspected"
+    }
+  ],
+  "sourceDialog": true,
+  "keyboardEndTab": true,
+  "monthSelectionPersists": true,
+  "mapFailureFixture": {
+    "missingAsset": "mola.jpg",
+    "messageVisible": true,
+    "regionDataUsable": true,
+    "retryControlInvoked": true
+  },
+  "consoleErrors": [],
+  "earthMatrixSelection": "AD1 Terrain selected and source/limit text updated",
+  "dustYearSwitch": "MY35 selected; labelled chart updated"
+}

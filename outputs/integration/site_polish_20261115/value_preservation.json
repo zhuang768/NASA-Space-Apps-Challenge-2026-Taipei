@@ -1,0 +1,32 @@
+{
+  "base_commit": "25b0744ac3d2230803505e1679109c2c35b6204d",
+  "numeric_arrays": [
+    {
+      "array": "SITES",
+      "unchanged": true,
+      "sha256": "39f0447ab9f67acbde0197c3736e6270f35576bbd1a4a6e7cca749310ecf902b"
+    },
+    {
+      "array": "UV_MONTHLY_C",
+      "unchanged": true,
+      "sha256": "df7a2f9098695d5a45a0b1f382f3b27e4a7c32542e3195fb7fd20ddec81a3e49"
+    },
+    {
+      "array": "UV_DAMP",
+      "unchanged": true,
+      "sha256": "915074ee70431f2e4830d9037a7a0c26062603608ce558b098dd92ebfc4e04ae"
+    },
+    {
+      "array": "UV_MIN_C",
+      "unchanged": true,
+      "sha256": "3afe1f9c297b12995d442a11411a92e761d05d50a4ded8baf422fe37f6093ecf"
+    },
+    {
+      "array": "UV_MAX_C",
+      "unchanged": true,
+      "sha256": "491fab1c3223d8e69d4e27072d0669c6b75d9cc73d9d9fe8ed64d4313c992177"
+    }
+  ],
+  "protected_data_files": 5,
+  "scope": "UI source preservation only; no new ice, analogy or novelty validation"
+}

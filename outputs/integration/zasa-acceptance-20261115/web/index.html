@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Northern Mars ice targets | Team zasa</title>
-<meta name="description" content="Three northern Mars regions chosen for shallow-ice research. Open a region to zoom in and read the orbital data behind it.">
+<meta name="description" content="Explore three Mars research regions, their orbital evidence and Earth method references. Trace the data, compare scales and see what remains unknown.">
 <meta name="color-scheme" content="dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Schibsted+Grotesk:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=evidence-ui-20261115">
 </head>
 <body>
 <canvas id="stars" aria-hidden="true"></canvas>
 <a class="skip" href="#panel">Skip to the data</a>
 
 <header class="bar">
-  <button type="button" class="mark" id="btn-home">zasa</button>
+  <button type="button" class="mark" id="btn-home" aria-label="TerraMatch overview">TerraMatch <span>by zasa</span></button>
   <nav aria-label="Page">
     <button type="button" class="navbtn" id="btn-overview">Overview</button>
     <button type="button" class="navbtn" id="btn-sources">Sources</button>
@@ -33,21 +33,37 @@
     </div>
     <p class="readout" id="readout" aria-hidden="true"></p>
     <p class="hint" id="hint"></p>
+    <div class="map-message" id="map-message" hidden>
+      <p id="map-message-text" role="status"></p>
+      <button type="button" class="btn" id="retry-map">Retry map</button>
+    </div>
   </section>
 
   <section class="panel" id="panel" aria-live="polite">
     <div id="overview">
       <h1>Where on northern Mars is shallow ice worth a closer look?</h1>
-      <p class="lede">Three regions between 52°N and 58°N, picked from global orbital data. Choose one, or click its marker on the globe, to zoom in and read what the data says.</p>
+      <p class="lede">Explore three regions selected from global orbital data, then see how Earth observations can help test research methods.</p>
+      <p class="list-label">Choose a research region <span>52°–58°N</span></p>
       <div class="regions" id="regions"></div>
-      <p class="caveat">These are research targets, not confirmed ice detections or landing sites. Earth method references and proposed field tests remain unvalidated. <a href="https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/main/docs/CHALLENGE_ALIGNMENT.md">Evidence status and challenge scope</a></p>
+      <dl class="evidence-key">
+        <div><dt>Completed</dt><dd>Regional Mars screening and evidence checks.</dd></div>
+        <div><dt>Method references</dt><dd>Established Earth sites, with different scales and conditions.</dd></div>
+        <div><dt>Unverified</dt><dd>Local Mars ice, a validated Earth match and new-analogue status.</dd></div>
+      </dl>
+      <p class="caveat">Research targets, not landing sites. <a href="https://github.com/zhuang768/NASA-Space-Apps-Challenge-2026-Taipei/blob/main/docs/CHALLENGE_ALIGNMENT.md">Read the evidence and challenge checklist</a></p>
     </div>
 
     <div id="detail" hidden>
-      <button type="button" class="back" id="btn-back">All regions</button>
+      <div class="detail-nav">
+        <button type="button" class="back" id="btn-back">All regions</button>
+        <label class="region-switch" for="region-select">Region
+          <select id="region-select"><option value="0">MS-01</option><option value="1">MS-02</option><option value="2">MS-03</option></select>
+        </label>
+      </div>
       <h2 id="d-title"></h2>
       <p class="dcoords" id="d-coords"></p>
       <p class="dtext" id="d-text"></p>
+      <p class="study-scope" id="study-scope"></p>
       <div class="tabs" role="tablist" aria-label="Data" id="tabs"></div>
       <div class="tabpanel" id="tabpanel" role="tabpanel" tabindex="0"></div>
     </div>
@@ -74,6 +90,6 @@
   </div>
 </dialog>
 
-<script src="app.js"></script>
+<script src="app.js?v=evidence-ui-20261115"></script>
 </body>
 </html>

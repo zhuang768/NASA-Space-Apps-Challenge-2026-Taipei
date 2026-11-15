@@ -1,0 +1,8 @@
+{
+  "background": "#04060a",
+  "ratios": {
+    "foreground": 16.57,
+    "secondary": 9.58
+  },
+  "scope": "main text palette only; not full WCAG certification"
+}

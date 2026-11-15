@@ -1,3 +1,9 @@
+# Explorer evidence and usability refinement, 2026-11-15
+
+The current UI uses source snapshot `25b0744ac3d2230803505e1679109c2c35b6204d`. Per-tab source links and scale notes, aligned comparison rows, progressive Earth-chart disclosure and responsive controls were added. Numeric source arrays and research files are unchanged. See `outputs/integration/site_polish_20261115/` for the local review record; historical handoffs below are retained.
+
+---
+
 # Current evidence-label correction, 2026-11-15
 
 The current explorer keeps the same regional numerical values and source snapshots. Labels now use signed SWIM consistency, model-time-adjusted surface temperature and reconstructed dust percentiles. MS-03 fixed-window morphology remains unknown. The challenge/evidence ledger is linked from the overview.

@@ -12,6 +12,7 @@ The Earth work gave us specific tests. At Edson Hills we can ask how much of a t
 
 ## Files
 
+- [Final comparison results and replay instructions](outputs/research/final-comparison-20261115/README.md)
 - [Selected targets](outputs/research/mars_reselection_20261114/final_candidates.csv) and [fixed study boundaries](outputs/research/mars_reselection_20261114/selected_targets.json)
 - [Complete Mars screening results](outputs/research/mars_reselection_20261114/screened_pool.csv.gz)
 - [Integrated data workbook](outputs/consolidated/NASA_Space_Apps_2026_All_Data.xlsx)

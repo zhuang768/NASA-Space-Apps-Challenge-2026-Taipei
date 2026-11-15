@@ -23,6 +23,10 @@ files identified in those summaries.
 
 ## Replay and provenance
 
+Start with the [replay guide](replay/README.md). The SHARAD/core and AD1
+workflows use repository inputs. The MS-01 temperature and Askja workflows
+require separately supplied inputs, as listed in the guide.
+
 - Use the three original libraries' ZIPs. For MS-01 follow their embedded
   replay instructions, keeping raw input and portable subset runs separate.
   The MS-01 native Mars review uses delivered cropped cells, not a fresh
@@ -38,7 +42,7 @@ files identified in those summaries.
   `outputs/research/mars_reselection_20261114/final_candidates.csv`, and
   `outputs/research/MS-02/local_validation/radar_roi/`. Core and radar
   results have different spatial and temporal support.
-- No existing project report, website, or GitHub file was changed. No
+- The validation replay did not modify the project report or website. No
   successful Earth–Mars match or detection accuracy is claimed.
 
 ## Files in this directory

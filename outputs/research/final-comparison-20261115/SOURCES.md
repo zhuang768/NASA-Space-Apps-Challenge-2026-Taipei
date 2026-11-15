@@ -20,3 +20,5 @@ raw workbooks, radar files, polygon geometries, or images are redistributed here
   calculated gridding and overlap metrics at four spacings and 16 origins.
   Cape Blossom contrast results in the overview use the [20 cm flight](https://doi.org/10.1594/PANGAEA.962594)
   and [10 cm flight](https://doi.org/10.1594/PANGAEA.962647).
+
+- MS-02 core summary: Lotte Wendt (2024), [Ground ice contents and InSAR displacements from Adventdalen, Svalbard](https://doi.org/10.5281/zenodo.11187360), Zenodo, CC BY 4.0. Calculations summarize excess ice in intact samples per core; this is separate from the PANGAEA polygon dataset.

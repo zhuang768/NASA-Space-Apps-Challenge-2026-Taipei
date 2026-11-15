@@ -1,0 +1,79 @@
+{
+  "input_commit": "07dbe29203504ba0ccde5e379f42ecc16e4b1b4f",
+  "repository_inputs": [
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_00464501.npz",
+      "bytes": 815601,
+      "sha256": "4d08b6b9083e19a9cac7fde6415d99291fbd720df444388eff91c8d227c92608"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_00464501_geom.csv",
+      "bytes": 6548,
+      "sha256": "4f67b7e44bff52196489f2e597471c0151026349291d98e224fa18dd866d2dcc"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_01983502.npz",
+      "bytes": 827610,
+      "sha256": "198ba059c4b3c379bfeb7f492ad381461c192edc74a12c7791b60c1aedf2d90c"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_01983502_geom.csv",
+      "bytes": 6648,
+      "sha256": "24347a68e05500777fd7e217acb49100a9da487ddd8d1b94ccb2279aee05b729"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_02004601.npz",
+      "bytes": 827405,
+      "sha256": "7a3332adfadaecbe1b7273881157b99ed8162396d2b19315f0cdb3b137fb2132"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/radar_roi/s_02004601_geom.csv",
+      "bytes": 6648,
+      "sha256": "f1c806951724b0d54309993d3a0dbd78fc1638c35bdad34fd18215a128dc63aa"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/official_followup/derived/adventdalen_2023_core_overview.csv",
+      "bytes": 2483,
+      "sha256": "61fa1977395a200365535c297b1b7330f4583abd35a48af22b7b5d434bca6fa6"
+    },
+    {
+      "path": "outputs/research/MS-02/local_validation/official_followup/derived/adventdalen_2023_core_samples.csv",
+      "bytes": 34368,
+      "sha256": "6784303d853429b7b304d48f60d771d5064bb41e739b0ede490c424af17eca15"
+    },
+    {
+      "path": "outputs/research/MS-03/polygons_Act-IWS_source.zip",
+      "bytes": 57636,
+      "sha256": "c75e7568c9fbfc67898f64e9c18681e5dc7e24a1ec272ceafa12c51377b8054e"
+    },
+    {
+      "path": "outputs/research/mars_reselection_20261114/final_candidates.csv",
+      "bytes": 5897,
+      "sha256": "83a03d1f4273fa7c45c0d22b5c29a8b8cfc0544e481d5f2bbca2c85812534c4e"
+    }
+  ],
+  "team_archives": [
+    {
+      "file": "MS01_validation_20261115.zip",
+      "bytes": 3918959,
+      "sha256": "18614ed973e7d83da54ae3a32087dceecc3cb2eb1a791103380e435ec4aca347",
+      "contents": "MS-01 daily harmonics, exact temperature files and embedded Mars subset",
+      "source_reference": "https://doi.org/10.7931/pa29-rs07"
+    },
+    {
+      "file": "MS02_Askja_reproducibility.zip",
+      "bytes": 17210853,
+      "sha256": "42472af8faff0b532446c77e829ad607a0ad87630cec22913af6364c4e11298e",
+      "contents": "Askja raw line-to-line alignment and published-pick checks",
+      "source_reference": "https://doi.org/10.5066/P9QATARQ"
+    },
+    {
+      "file": "ZASA_independent_validation_20261115.zip",
+      "bytes": 8431006,
+      "sha256": "74604bcef11df103205ddc4b6f1537aabcf9927adfd25c0183189fbce8f82937",
+      "contents": "MS-01 annual analysis subset and MS-02 Askja sensitivity inputs; the AD1 source ZIP already lives in the repository",
+      "source_reference": "https://doi.org/10.1594/PANGAEA.921087"
+    }
+  ],
+  "archive_note": "These exact package files are provided separately by Team ZASA; source references are provenance, not direct downloads of the team ZIPs."
+}

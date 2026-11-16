@@ -1,0 +1,13 @@
+{
+  "publisher_zip_url": "https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S095410201200123X/resource/name/S095410201200123X.zip",
+  "zip_sha256": "773e68eb9fc63c4c1e7c771a057d2507ad0f2a237f4b1cb8f3b544bc32537517",
+  "zip_bytes": 5595,
+  "entry": "S095410201200123Xsup003.txt",
+  "entry_bytes": 10947,
+  "entry_sha256": "70c7d79fa66c967b17dce21bba31d92dd0133a9a21421d7ecc7093452000e3bc",
+  "entry_md5": "b18522a49bc39974131c29d68320f2b2",
+  "source_rows": 68,
+  "censored_lower_bounds": 6,
+  "earth_radius_m": 6371008.8,
+  "source_note": "Publisher geometry cross-check, not GPS/serial attribution or proof of relocated sensor. Separate USAP-DC file advertises another MD5; bytes were not acquired, no byte-equivalence asserted."
+}

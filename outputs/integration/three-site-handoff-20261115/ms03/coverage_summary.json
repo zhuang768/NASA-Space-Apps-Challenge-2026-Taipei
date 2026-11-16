@@ -1,0 +1,62 @@
+{
+  "cell_area_km2": 468.7107979599361,
+  "ctx_five_review_area_km2": 9.661102519520988,
+  "ctx_five_review_pct": 2.06120758505478,
+  "moc_all_retained_valid_area_approx_bounds_km2": [
+    70.91271432630687,
+    71.2714366156426
+  ],
+  "moc_all_retained_valid_area_approx_bounds_pct": [
+    15.129311002638405,
+    15.205844824964892
+  ],
+  "moc_three_review_windows_area_approx_bounds_km2": [
+    6.014189519461036,
+    6.044613172728524
+  ],
+  "moc_three_review_windows_area_approx_bounds_pct": [
+    1.2831344073227666,
+    1.2896253295289344
+  ],
+  "moc_coverage_note": "Approximate valid pixel area from min/max local stereographic Jacobian over pixel centres; ignores boundary subpixel correction. The separate image-support and visual-review bounds are not polygon-detection efficacy. Do not add CTX and MOC percentages (potential overlap).",
+  "hirise_original_label_eastmost_deg": 241.83751839088,
+  "hirise_red_label_sha256": "0ec93f75138dc57e84c80e33809ec3f352b848defb3657e45a5d976a972273f4",
+  "checks_passed": 35,
+  "checks": [
+    "CTX C inside, acquired",
+    "CTX NW inside, acquired",
+    "CTX NE inside, acquired",
+    "CTX SW inside, acquired",
+    "CTX SE inside, acquired",
+    "nonoverlap C / NW",
+    "nonoverlap C / NE",
+    "nonoverlap C / SW",
+    "nonoverlap C / SE",
+    "nonoverlap NW / NE",
+    "nonoverlap NW / SW",
+    "nonoverlap NW / SE",
+    "nonoverlap NE / SW",
+    "nonoverlap NE / SE",
+    "nonoverlap SW / SE",
+    "MOC review windows 512\u00d7512 all valid",
+    "MOC review windows disjoint",
+    "RDRV11-core.json exact echoed request",
+    "RDRV11-core.json all product records present",
+    "RDRV11-extended.json exact echoed request",
+    "RDRV11-extended.json all product records present",
+    "closed ODE WKT PSP_006864_2380_COLOR",
+    "ODE polygon entirely west: PSP_006864_2380_COLOR",
+    "closed ODE WKT PSP_006864_2380_RED",
+    "ODE polygon entirely west: PSP_006864_2380_RED",
+    "RDR4-core.json exact echoed request",
+    "RDR4-core.json all product records present",
+    "RDR4-extended.json exact echoed request",
+    "RDR4-extended.json all product records present",
+    "DTM-core.json exact echoed request",
+    "DTM-core.json all product records present",
+    "DTM-extended.json exact echoed request",
+    "DTM-extended.json all product records present",
+    "observed hit counts",
+    "original RED label independently excludes lon overlap"
+  ]
+}

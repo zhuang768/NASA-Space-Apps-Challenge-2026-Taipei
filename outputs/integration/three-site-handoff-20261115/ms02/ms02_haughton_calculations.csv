@@ -1,0 +1,20 @@
+metric,id,value,unit
+coordinate,wedge_lat,75.36833333,deg
+coordinate,wedge_lon,-89.52583333,deg
+coordinate,drill_lat,75.42086111,deg
+coordinate,drill_lon,-89.76025000,deg
+anchor_distance,drill_vs_wedge,8.79301,km
+anchor_distance,drill_vs_E04_anchor,8.58252,km
+anchor_distance,wedge_vs_E04_anchor,0.21918,km
+SHARAD_nominal_separability,epsilon_3.65,7.84593,m
+two_way_delay,epsilon_3.65_depth_0.4499824941,5.73524,ns
+two_way_delay,epsilon_3.65_depth_0.65,8.28455,ns
+two_way_delay,epsilon_3.65_depth_0.9,11.47092,ns
+SHARAD_nominal_separability,epsilon_3.9,7.59029,m
+two_way_delay,epsilon_3.9_depth_0.4499824941,5.92840,ns
+two_way_delay,epsilon_3.9_depth_0.65,8.56357,ns
+two_way_delay,epsilon_3.9_depth_0.9,11.85725,ns
+diffusivity_from_summary_means,Haughton,0.41426,mm2/s
+inertia_from_summary_means,Haughton,1042.68020,J m-2 K-1 s-0.5
+diffusivity_from_summary_means,Phoenix,0.08095,mm2/s
+inertia_from_summary_means,Phoenix,298.74738,J m-2 K-1 s-0.5

@@ -1,0 +1,27 @@
+import logging,re,json,hashlib
+from datetime import datetime,timedelta
+from statistics import mean
+from collections import Counter
+logging.getLogger('pypdf').setLevel(logging.ERROR)
+from pypdf import PdfReader
+p='/tmp/team1_earth_002/elephant2019sup.pdf';r=PdfReader(p);rows=[];bad=[]
+pat=re.compile(r'^(\d+)\s+(\d+/\d+/\d+ \d+:\d+)\s+(\d+/\d+/\d+ \d+:\d+)\s+(.+)$')
+for page,obj in enumerate(r.pages,1):
+ for line in obj.extract_text().splitlines():
+  m=pat.match(line.strip())
+  if not m:continue
+  n,t1,t2,rest=m.groups();vals=rest.split()
+  try:
+   assert len(vals) in [6,9];v=list(map(float,vals));a=datetime.strptime(t1,'%m/%d/%y %H:%M');b=datetime.strptime(t2,'%m/%d/%y %H:%M')
+  except Exception:bad.append([page,line]);continue
+  rows.append(dict(n=int(n),page=page,t=a,t2=b,v=v))
+assert not bad
+assert [x['n'] for x in rows]==list(range(1,8923))
+assert len({x['t'] for x in rows})==len(rows)
+assert all(b['t']-a['t']==timedelta(hours=1) for a,b in zip(rows,rows[1:]))
+assert all(x['t2']-x['t']==timedelta(minutes=90) for x in rows)
+annual=[x for x in rows if datetime(2017,12,1)<=x['t']<datetime(2018,12,1)]
+summer=[x for x in rows if datetime(2017,12,1)<=x['t']<datetime(2018,3,1) and len(x['v'])==9]
+result=dict(source_sha256=hashlib.sha256(open(p,'rb').read()).hexdigest(),parser='pypdf + anchored rowregex;6or9numericvalues; no imputation/clipping',pages=len(r.pages),records=len(rows),bad_records=bad,first=str(rows[0]['t']),last=str(rows[-1]['t']),row_ids_contiguous=True,hourly_first_timestamp_contiguous=True,second_timestamp_offset_minutes=90,timezone_status='printedoffsetconsistent_butUTCmeaning_unverified',records_with_3cm=sum(len(x['v'])==9 for x in rows),last_3cm=str([x for x in rows if len(x['v'])==9][-1]['t']),annual_n=len(annual),summer_paired_n=len(summer),annual_air_mean_C=mean(x['v'][0] for x in annual),annual_ice49_mean_C=mean(x['v'][3] for x in annual),summer_air_mean_C=mean(x['v'][0] for x in summer),summer_ice49_mean_C=mean(x['v'][3] for x in summer),summer_soil3_mean_C=mean(x['v'][6] for x in summer),summer_soil3_minus_ice49_mean_C=mean(x['v'][6]-x['v'][3] for x in summer),RH_ice49_corrected_above100_n=sum(x['v'][5]>100 for x in rows),limits=['NoUTC/solartimeconversion','Noannual3cmmean','Noice-depth/TIinversion','Noindependenttruthvalidation','Noice-massbalance','Digitizedpublisherdata;not sensorrecalibration'])
+
+print(json.dumps(result, indent=2))

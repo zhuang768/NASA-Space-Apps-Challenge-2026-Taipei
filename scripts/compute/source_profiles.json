@@ -1,0 +1,291 @@
+{
+  "schema_version": "1.0",
+  "requirement_version": "MR-20261114-v2",
+  "scope": "Station W temperature availability and descriptive monthly statistics; no ice-depth inversion or field-test qualification",
+  "sources": [
+    {
+      "source_id": "UV-W-CAMPBELL-2009-2010",
+      "earth_candidate_id": "EARTH-UV-001",
+      "mars_candidate_id": "I-01",
+      "latitude_deg": -77.86215,
+      "longitude_east_deg": 160.7101,
+      "spatial_support": "point anchor: meteorological station W; not a trial-area polygon or a new borehole",
+      "coordinate_source": "Team 1 CSV; Marinova et al. 2022 meteorological measurements",
+      "horizontal_datum": "not stated in inspected source",
+      "adapter": "campbell_toa5",
+      "path": "data/raw/earth/university_valley/UniversityV_09_10_Campbell_data_good_only_calibrated.txt",
+      "url": "https://zenodo.org/records/10553882/files/UniversityV_09_10_Campbell_data_good_only_calibrated.txt?download=1",
+      "dataset_doi": "10.5281/zenodo.10553882",
+      "method_url": "https://doi.org/10.1017/S0954102022000025",
+      "archive_published": "2024-01-23",
+      "expected_md5": "ae2133eac5c92c695c5f6ef93bcbbd25",
+      "source_level": "author-calibrated and author-screened archive input; not untouched logger measurements",
+      "time_standard": "not declared in text header; station-clock timestamps retained without UTC conversion",
+      "decimal_day_epoch": "2009-01-01T00:00:00",
+      "decimal_day_tolerance_days": 0.0001,
+      "sample_interval_minutes": 30,
+      "period_start": "2010-01-01T00:00:00",
+      "period_end_exclusive": "2011-01-01T00:00:00",
+      "missing_tokens": [
+        "",
+        "NaN",
+        "nan",
+        "NAN",
+        "NA"
+      ],
+      "variables": [
+        {
+          "column": "T107_air",
+          "quantity": "air_temperature",
+          "unit": "Deg C",
+          "height_above_surface_m": 1.2,
+          "scale_factor": 1.0,
+          "add_offset": 0.0,
+          "valid_range": [
+            -50.0,
+            50.0
+          ],
+          "plot_label": "Air +1.2 m"
+        },
+        {
+          "column": "T107_surf",
+          "quantity": "contact_surface_soil_temperature",
+          "unit": "Deg C",
+          "height_above_surface_m": 0.0,
+          "scale_factor": 1.0,
+          "add_offset": 0.0,
+          "valid_range": [
+            -50.0,
+            50.0
+          ],
+          "plot_label": "Contact soil surface"
+        },
+        {
+          "column": "T107_10cm",
+          "quantity": "subsurface_temperature",
+          "unit": "Deg C",
+          "height_above_surface_m": -0.1,
+          "scale_factor": 1.0,
+          "add_offset": 0.0,
+          "valid_range": [
+            -50.0,
+            50.0
+          ],
+          "plot_label": "Soil -0.10 m"
+        },
+        {
+          "column": "T107_ice42cm",
+          "quantity": "temperature_at_published_ice_interface_sensor",
+          "unit": "Deg C",
+          "height_above_surface_m": -0.42,
+          "scale_factor": 1.0,
+          "add_offset": 0.0,
+          "valid_range": [
+            -50.0,
+            50.0
+          ],
+          "plot_label": "Published interface probe -0.42 m"
+        },
+        {
+          "column": "T107_InIce49cm",
+          "quantity": "subsurface_temperature",
+          "unit": "Deg C",
+          "height_above_surface_m": -0.49,
+          "scale_factor": 1.0,
+          "add_offset": 0.0,
+          "valid_range": [
+            -50.0,
+            50.0
+          ],
+          "plot_label": "Soil -0.49 m"
+        }
+      ],
+      "timestamp_formats": [
+        "%m/%d/%Y %H:%M",
+        "%Y-%m-%d %H:%M:%S"
+      ],
+      "paired_differences": [
+        {
+          "metric_id": "surface_minus_interface_42cm",
+          "columns": [
+            "T107_surf",
+            "T107_ice42cm"
+          ]
+        },
+        {
+          "metric_id": "soil_10cm_minus_interface_42cm",
+          "columns": [
+            "T107_10cm",
+            "T107_ice42cm"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "EH2-2019-PUBLISHED-SUPPLEMENT",
+      "earth_candidate_id": "EARTH-002",
+      "mars_candidate_id": "I-02",
+      "latitude_deg": -79.820216667,
+      "longitude_east_deg": -83.314333333,
+      "spatial_support": "historical Elephant Head station point only; no plot/radius/polygon",
+      "horizontal_datum": "not stated in inspected Methods; EPSG4326 not asserted",
+      "adapter": "elephant_head_pdf",
+      "path": "data/raw/earth/elephant_head/EH2_S0954102019000269sup001.pdf",
+      "url": "https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0954102019000269/resource/name/S0954102019000269sup001.pdf",
+      "dataset_doi": "10.1017/S0954102019000269",
+      "expected_sha256": "20fe70f574bc394f05f0c720809f80a9602ac73f6ede34d322ea816cf25590d9",
+      "expected_pages": 108,
+      "expected_records": 8922,
+      "period_start": "2017-12-01T00:00:00",
+      "period_end_exclusive": "2018-12-01T00:00:00",
+      "summer_start": "2017-12-01T00:00:00",
+      "summer_end_exclusive": "2018-03-01T00:00:00",
+      "source_level": "published temperature and raw/corrected RH table, not untouched logger bytes",
+      "team2_parser_commit": "bc9fe3c0f352632a7117dbdab24df21b7450738e",
+      "team2_parser_source": "docs/research/team2_novelty_audit.md section Re-run method and numeric source",
+      "team2_reference_means": {
+        "summer:T_air_C": -10.3409,
+        "summer:T_49cm_C": -8.6302,
+        "summer:T_3cm_C": -5.3553,
+        "summer:T_3cm_minus_49cm_C": 3.2749,
+        "paper_year:T_air_C": -20.294,
+        "paper_year:T_49cm_C": -19.237
+      },
+      "paper_table_II_means": {
+        "summer:T_air_C": -10.3,
+        "summer:T_49cm_C": -8.6,
+        "summer:T_3cm_C": -5.4,
+        "paper_year:T_air_C": -20.3,
+        "paper_year:T_49cm_C": -19.2
+      },
+      "method_source": {
+        "url": "https://www.nasa.gov/wp-content/uploads/2019/09/mckay_etal_2019_dry_permafrost_ellsworth_land21.pdf",
+        "path": "data/raw/earth/elephant_head/EH1_method.pdf",
+        "sha256": "1d64eb94184a5e4fd7e8e0985a23a8c9a6e35ad2626f268ad8a3a80ffc21b6db",
+        "read_scope": "Methods PDF p2; Table II PDF p5; no full protocol novelty audit"
+      },
+      "variable_dictionary": {
+        "T_air_C": {
+          "unit": "degC",
+          "height_above_surface_m": 0.82,
+          "quantity_definition": "air",
+          "scale_factor": 1,
+          "add_offset": 0,
+          "pdf_numeric_column_1based": 1
+        },
+        "RH_air_water_pct": {
+          "unit": "percent",
+          "height_above_surface_m": 0.82,
+          "quantity_definition": "raw liquid-water-reference RH",
+          "scale_factor": 1,
+          "add_offset": 0,
+          "pdf_numeric_column_1based": 2
+        },
+        "RH_air_ice_corrected_pct": {
+          "unit": "percent",
+          "height_above_surface_m": 0.82,
+          "quantity_definition": "author-corrected RH with respect to ice",
+          "scale_factor": 1,
+          "add_offset": 0,
+          "pdf_numeric_column_1based": 3
+        },
+        "T_49cm_C": {
+          "unit": "degC",
+          "height_above_surface_m": -0.49,
+          "quantity_definition": "installed published ice-table probe temperature",
+          "scale_factor": 1,
+          "add_offset": 0,
+          "pdf_numeric_column_1based": 4
+        },
+        "RH_49cm_water_pct": {
+          "unit": "percent",
+          "height_above_surface_m": -0.49,
+          "quantity_definition": "raw liquid-water-reference RH",
+          "scale_factor": 1,
+          "add_offset": 0,
+          "pdf_numeric_column_1based": 5
+        },
+        "RH_49cm_ice_corrected_pct": {
+          "unit": "percent",
+          "height_above_surface_m": -0.49,
+          "quantity_definition": "author-corrected RH with respect to ice",
+          "scale_factor": 1,
+          "add_offset": 0,
+          "pdf_numeric_column_1based": 6
+        },
+        "T_3cm_C": {
+          "unit": "degC",
+          "height_above_surface_m": -0.03,
+          "quantity_definition": "subsurface soil temperature, not radiometric surface temperature",
+          "scale_factor": 1,
+          "add_offset": 0,
+          "pdf_numeric_column_1based": 7
+        },
+        "RH_3cm_water_pct": {
+          "unit": "percent",
+          "height_above_surface_m": -0.03,
+          "quantity_definition": "raw liquid-water-reference RH",
+          "scale_factor": 1,
+          "add_offset": 0,
+          "pdf_numeric_column_1based": 8
+        },
+        "RH_3cm_ice_corrected_pct": {
+          "unit": "percent",
+          "height_above_surface_m": -0.03,
+          "quantity_definition": "author corrected field; retain printed RH_ice <0, -2 header and Methods Appendix definition; not independently recalibrated",
+          "scale_factor": 1,
+          "add_offset": 0,
+          "pdf_numeric_column_1based": 9
+        }
+      }
+    }
+  ],
+  "pending_inputs": [
+    {
+      "product": "M2TMNXSLV",
+      "filename_pattern": "MERRA2_400.tavgM_2d_slv_Nx.2023*.nc4;2024*.nc4",
+      "expected_files": 24,
+      "period": "2023-01/2024-12",
+      "variables": "T2M;PS;U10M;V10M",
+      "units": "K;Pa;m s-1;m s-1",
+      "grid": "0.5 degree latitude x 0.625 degree longitude",
+      "source": "https://gmao.gsfc.nasa.gov/gmao-products/merra-2/",
+      "reason": "Need genuine files or a traceable crop with fill/scale/time metadata to reproduce teammate background values"
+    },
+    {
+      "product": "M2TMNXAER",
+      "filename_pattern": "MERRA2_400.tavgM_2d_aer_Nx.2023*.nc4;2024*.nc4",
+      "expected_files": 24,
+      "period": "2023-01/2024-12",
+      "variables": "DUEXTTAU",
+      "units": "dimensionless; 550 nm extinction",
+      "grid": "0.5 degree latitude x 0.625 degree longitude",
+      "source": "https://gmao.gsfc.nasa.gov/gmao-products/merra-2/",
+      "reason": "No file available in this compute case; never substitute Mars 9.3 micrometre absorption CDOD"
+    },
+    {
+      "product": "MOD11C3.061",
+      "filename_pattern": "MOD11C3.A2023*.061.*.hdf;A2024*.061.*.hdf",
+      "expected_files": 24,
+      "period": "2023-01/2024-12",
+      "variables": "LST_Day_CMG;LST_Night_CMG;QC_Day;QC_Night",
+      "units": "K after product scaling; bit flags",
+      "grid": "0.05 degree CMG; not a point measurement",
+      "source": "https://doi.org/10.5067/MODIS/MOD11C3.061",
+      "reason": "QC bytes and raw values absent; teammate 0/24 and 1/24 counts remain externally reported, not recomputed"
+    },
+    {
+      "product": "compatible Antarctic DEM",
+      "filename_pattern": "not supplied",
+      "expected_files": "unknown",
+      "period": "not supplied",
+      "variables": "elevation",
+      "units": "m; vertical datum required",
+      "grid": "CRS, pixel size, footprint and stencil required",
+      "source": "pending teammate handoff",
+      "reason": "Need compatible DEM and trial-area support before computing scale-labelled slope or relief"
+    }
+  ],
+  "requirement_source_commit": "f6d4c181d9739fe5c74b1c573b59414d63d6ec8e",
+  "execution_scope": "EARTH-002 priority per MR-v2; completed EARTH-UV-001 descriptive reference retained; EARTH-003 not activated"
+}
